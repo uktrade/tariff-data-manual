@@ -89,7 +89,36 @@
       <li>
         <ul>
           <li>
-            <a href="/tariff-data-manual/documentation/tariff-policy-training-modules/most-favoured-nation-duties.html#what-is-the-most-favoured-nation-principle"><span>What is the Most Favoured Nation principle?</span></a>
+            <a href="/tariff-data-manual/documentation/tariff-policy-training-modules/most-favoured-nation-duties.html#mfn-universal-and-the-lowest-common-denominator"><span>MFN - universal and the lowest common denominator</span></a>
+          </li>
+          <li>
+            <a href="/tariff-data-manual/documentation/tariff-policy-training-modules/most-favoured-nation-duties.html#concept-unilateral-liberalisation"><span>Concept – Unilateral liberalisation</span></a>
+          </li>
+          <li>
+            <a href="/tariff-data-manual/documentation/tariff-policy-training-modules/most-favoured-nation-duties.html#what-did-we-not-liberalise"><span>What did we not liberalise?</span></a>
+          </li>
+          <li>
+            <a href="/tariff-data-manual/documentation/tariff-policy-training-modules/most-favoured-nation-duties.html#mfn-duties-after-the-implementation-period"><span>MFN duties after the Implementation Period</span></a>
+          </li>
+          <li>
+            <a href="/tariff-data-manual/documentation/tariff-policy-training-modules/most-favoured-nation-duties.html#understanding-the-commodity-code-hierarchy-amp-impact-on-mfns"><span>Understanding the commodity code hierarchy & impact on MFNs</span></a>
+          </li>
+          <li>
+            <a href="/tariff-data-manual/documentation/tariff-policy-training-modules/most-favoured-nation-duties.html#erga-omnes"><span>Erga Omnes</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-policy-training-modules/most-favoured-nation-duties.html#authorised-use-end-use"><span>Authorised use (End use)</span></a>
+        <ul>
+          <li>
+            <a href="/tariff-data-manual/documentation/tariff-policy-training-modules/most-favoured-nation-duties.html#what-is-authorised-use"><span>What is authorised use?</span></a>
+          </li>
+          <li>
+            <a href="/tariff-data-manual/documentation/tariff-policy-training-modules/most-favoured-nation-duties.html#determining-what-goods-are-for-authorised-use"><span>Determining what goods are for ‘authorised use’</span></a>
+          </li>
+          <li>
+            <a href="/tariff-data-manual/documentation/tariff-policy-training-modules/most-favoured-nation-duties.html#the-importance-of-authorised-use-in-data-migration"><span>The importance of authorised use in data migration</span></a>
           </li>
         </ul>
       </li>
@@ -104,20 +133,98 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="most-favoured-nation-duties">Most Favoured Nation duties</h1><h3 id="what-is-the-most-favoured-nation-principle">What is the Most Favoured Nation principle?</h3>
+            <h1 id="most-favoured-nation-duties">Most Favoured Nation duties</h1><p><strong>What is the Most Favoured Nation principle?</strong>
+* Under the WTO agreements, countries cannot normally discriminate between their trading partners. Grant someone a special favour (such as a lower customs duty rate for one of their products) and you have to do the same for all other WTO members.
+* MFN duties are those that are applied globally without favour or privilege.</p>
+<p><strong>Why ‘most-favoured’?</strong>
+* This sounds like a contradiction. It suggests special treatment, but in the WTO it actually means non-discrimination — treating virtually everyone equally. Each member treats all the other members equally as “most-favoured” trading partners.
+* If a country improves the benefits that it gives to one trading partner, it has to give the same “best” treatment to all the other WTO members so that they all remain “most-favoured”.
+* There are exceptions &hellip;
+  - countries can set up a free trade agreement that applies only to goods traded within the group
+  - they can give developing countries special access to their markets GSP.
+  - a country can raise barriers against products that are considered to be traded unfairly from specific countries.
+* But the agreements only permit these exceptions under strict conditions.
+* In general, MFN means that every time a country lowers a trade barrier or opens up a market, it has to do so for the same goods or services from all its trading partners — whether rich or poor, weak or strong.</p>
+<h3 id="mfn-universal-and-the-lowest-common-denominator">MFN - universal and the lowest common denominator</h3>
 <ul>
-<li>Under the WTO agreements, countries cannot normally discriminate between their trading partners. Grant someone a special favour (such as a lower customs duty rate for one of their products) and you have to do the same for all other WTO members.</li>
-<li>MFN duties are those that are applied globally without favour or privilege.</li>
-<li>Why ‘most-favoured’?</li>
-<li>This sounds like a contradiction. It suggests special treatment, but in the WTO it actually means non-discrimination — treating virtually everyone equally. Each member treats all the other members equally as “most-favoured” trading partners.</li>
-<li>If a country improves the benefits that it gives to one trading partner, it has to give the same “best” treatment to all the other WTO members so that they all remain “most-favoured”.</li>
-<li>There are exceptions &hellip;
-&gt;  * countries can set up a free trade agreement that applies only to goods traded within the group
-&gt;  * they can give developing countries special access to their markets GSP.
-&gt;  * a country can raise barriers against products that are considered to be traded unfairly from specific countries.</li>
-<li>But the agreements only permit these exceptions under strict conditions.</li>
-<li>In general, MFN means that every time a country lowers a trade barrier or opens up a market, it has to do so for the same goods or services from all its trading partners — whether rich or poor, weak or strong.</li>
+<li>The MFN is unique, inasmuch as there must be coverage of the entire tariff with one of two measure types (or both):
+
+<ul>
+<li>103 (Third country duty)</li>
+<li>105 (Non preferential duty under end-use)</li>
+</ul></li>
+<li>There are c. 24,500 commodity codes on the Tariff, of which c. 16,500 are declarable end-lines – every single one of these end-lines has an MFN duty against it</li>
+<li>In a lot of cases, the MFN rate is 0%, but that 0% still needs to be actively set against the commodity.</li>
+<li>The MFN is what will be charged unless the trader actively takes steps to take advantage of a more preferential rate, such as a tariff preference associated with a Free Trade Agreement or a quota.</li>
+<li>It’s vital when we come to migrate data for the UK’s own MFN after the end of the Implementation Period that coverage of the commodity code base is complete (103s and 105s).
+<a href="https://user-images.githubusercontent.com/61055197/92483770-20e47480-f1e1-11ea-934c-86ba28004253.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92483770-20e47480-f1e1-11ea-934c-86ba28004253.png" alt="" /></a></li>
 </ul>
+<h3 id="concept-unilateral-liberalisation">Concept – Unilateral liberalisation</h3><p>In the run-up to the three abortive No Deal cliff-edges, the UK was prepared to launch our independent trade policy with a vastly different tariff compared to the MFN as part of the EU’s Common External Tariff (CET).</p>
+<p>The UK would have imposed ”Unilateral liberalisation” on our country’s MFN duties. The reason for this was to reduce the immediate ‘toxic shock’ of leaving the EU with no period for businesses to get used to the new (absence of) relationship with Europe.</p>
+<p>For example, any business in the UK that relied on 0% import duties of goods from the rest of Europe would find being thrust into the new reality of paying EU CET MFNs a price that could bankrupt them.</p>
+<p>Due to the MFN principle (the great leveller), we had no way of applying preferential duties solely to the EU, from where we had been importing duty-free as a member state, therefore the concept of ‘unilateral liberalisation’ was essentially the only legal route forward that protected businesses against an immediate, potentially terminal, hike in duties.</p>
+<p>This would have left duties on c. 900 lines out of the 16,500 MFNs.</p>
+<h3 id="what-did-we-not-liberalise">What did we not liberalise?</h3><p>There were <strong>three pots</strong> of commodities whose MFN duties we would not have liberalised in a No Deal scenario:</p>
+<p><strong>Trade Remedies</strong></p>
+<p>Anti-dumping and anti-subsidy duties have been calculated to provide a protectionist measure for domestic industry in such a way that the MFN and the punitive duties combined are calibrated precisely to raise the price of the goods being brought in at an illegally low price back to a level playing field.</p>
+<p>If the MFN were liberalised, then the protection is partially eroded and trading with the companies who have such duties becomes attractive again.</p>
+<p><strong>Sensitive lines</strong></p>
+<p>There are some commodities, most often in the agricultural space that were considered so sensitive to the adverse effects of liberalisation that their duties would have been retained to prevent injury to UK providers of such goods.</p>
+<p><strong>Negotiating capital</strong></p>
+<p>In order to retain some leverage for future trade agreements, there were 
+some commodities that were left with a non-liberalised MFN, such that we 
+could offer them as carrots in negotiations.</p>
+<h3 id="mfn-duties-after-the-implementation-period">MFN duties after the Implementation Period</h3><p>As of March 2020, it is not yet possible to predict precisely what will happen with the MFN duties after the end of the Transition Period, though we will know very soon.</p>
+<p>Unilateral Liberalisation was intended solely to be a temporary measure in a No Deal scenario, for 6 to 12 months, after which we would revert the MFN back to something similar to the EU’s Common External Tariff.</p>
+<p>Our approach to the MFN will depend to a degree on our negotiations with the EU on a comprehensive trade deal that removes all tariff barriers.</p>
+<p>If we get a good trade agreement, then the MFNs can effectively be whatever we like; if we get No Deal, then we are potentially back in No Deal territory and the Unilateral Liberalisation may again apply for a period.</p>
+<p>The problem with Unilateral Liberalisation is that it gives overseas trading nations largely tariff-free access to our markets without them needing to give anything in return: a number of Trade deals have foundered as a result – why would a third country sign up to a Trade Agreement when they already have everything they need?</p>
+<p>In February 2020, a public consultation launched on gov.uk. On of its purposes was to request of traders and UK business in general for feedback on the CET – to understand the drivers that may cause the UK to deviate from the EU’s duties.</p>
+<p>We got 1,300 responses and these will be revealed in last week of March.</p>
+<p>The Tariff team will need to stay close to the MFN policy leads in Trade Policy Group to understand the proposed direction.</p>
+<h3 id="understanding-the-commodity-code-hierarchy-amp-impact-on-mfns">Understanding the commodity code hierarchy &amp; impact on MFNs</h3><p>This is discussed in vastly more detail in the training guide on commodity codes, however it is useful to discuss with regard to MFN duties as well.</p>
+<p>Below is a relatively shallow hierarchy of commodities, leading to an end-line of Natural Chilean sodium nitrate (3102500010).</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92489040-3492d980-f1e7-11ea-9dc8-e96394efe1c3.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92489040-3492d980-f1e7-11ea-9dc8-e96394efe1c3.png" alt="" /></a></p>
+<p>Apart from the “section”, which is a pseudo-tier in the classification hierarchy, the MFN duty, and indeed any measure at all, cold be attached to any tier (i.e. the four listed beneath the screen grab – it will then inherit down to any child codes.</p>
+<p>MFNs are attached at all different levels in the current EU tariff and will again be so in the UK tariff – the new team will need a strategy to work out where best to attach duties to make the minimal imprint of data, while providing complete and correct coverage – how this was done previously is documented in the migration guide.</p>
+<h3 id="erga-omnes">Erga Omnes</h3>
+<ul>
+<li>Erga Omnes is a Latin phrase which means &ldquo;towards all&rdquo; or &ldquo;towards everyone&rdquo;. In trade terms, Erga Omnes is the geographical area group which covers the entire world</li>
+<li>All MFN duties (103s and 105s) are created against Erga Omnes, as are the majority of global import measures.</li>
+<li>Erga Omnes has a geographical area ID of 1011.</li>
+<li>There is an additional country group entitled “All third countries”, with ID 1008, which is used almost identically to Erga Omnes – they are practically interchangeable.</li>
+<li>The only difference between the two is that 1011 contains the European Union as a country, whereas this is excluded from 1008.</li>
+<li>There are no hard and fast rules about which should be used: Erga Omnes is used more for import measures and All third countries more for export measures, but this is by no means hard and fast.</li>
+<li>Please see the migrations guide for information on what to do with Europe, Erga Omnes and All third countries when we are no longer a part of the Union.</li>
+</ul>
+<h2 id="authorised-use-end-use">Authorised use (End use)</h2><p><a href="https://user-images.githubusercontent.com/61055197/92489786-137eb880-f1e8-11ea-8526-3f669bfc0562.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92489786-137eb880-f1e8-11ea-8526-3f669bfc0562.png" alt="" /></a></p>
+<h3 id="what-is-authorised-use">What is authorised use?</h3><p>Goods imported into the EU are regulated by a range of measures aimed at giving EU and UK businesses an equal footing with businesses elsewhere in the world. One of these is End-Use Relief (will be Authorised Use Relief).</p>
+<p>This allows a reduced or zero rate of customs duty on some goods when used for specific purposes and within a set time period. End-Use Relief does not apply to VAT or excise duties.</p>
+<p>End-Use Relief is available on certain goods imported into the EU that are to be put to a specific use within the customs territory of EU. To be eligible for End-Use Relief, products must meet defined criteria and be identified in the Trade Tariff.</p>
+<p>End-use goods include:
+* shipwork goods
+* aircraft and parts
+* hydrocarbon oil
+* marine propulsion engines
+* military equipment
+* fish
+* cheese
+* casein (used in the cheese industry)</p>
+<h3 id="determining-what-goods-are-for-authorised-use">Determining what goods are for ‘authorised use’</h3>
+<ul>
+<li>Sadly, there is nothing so simple as a flag on a commodity code to define it is intended for authorised use purposes. There are commodity codes which are:
+
+<ul>
+<li>exclusively provisioned to be used for authorised use</li>
+<li>under certain circumstances available for authorised use</li>
+</ul></li>
+<li>The simplest way to find a commodity that is designated solely for authorised use is to check for commodities that have measure type 105 (Non preferential duty under end-use) instead of 103 (Third country duty) against them. This is a small faction of the total number of commodities in the hierarchy.</li>
+<li>In addition, the descriptions will have pointers to their end-use nature, e.g. containing words such as “for use in&quot; or “for the manufacture of” etc.</li>
+<li>As always, there are exceptions: there are some commodities which have both a 103 and a 105 duty against them, as follows – there are just 5:</li>
+</ul>
+<h3 id="the-importance-of-authorised-use-in-data-migration">The importance of authorised use in data migration</h3><p>Whatever numerical duties are assigned by our MFN team for the post-Implementation period independent trade policy, it is vital that the differentiation between authorised use and standard use is observed.</p>
+<p>A trader is required to produce certificate N990 to take advantage of authorised use relief. This certificate should be present as a condition on all 105 duties (this also applies to other end-use measures).</p>
+<p>N990 is currently called “EUS - Authorisation for the use of end use procedure (Column 8c, Annex A of Delegated Regulation (EU) 2015/2446)” – a decision was taken to not rename any certificates in the lead-up to the previous EU Exit near-misses. This should be reviewed once more in the lead up to the end of the implementation period, and certificates should be updated to be UK-specific, if time permits.</p>
 
             
           </main>
