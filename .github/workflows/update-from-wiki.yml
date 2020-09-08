@@ -1,0 +1,65 @@
+name: Update static site on wiki edit
+
+on: [gollum, push]
+
+jobs:
+  update-submodule:
+    name: Update submodule
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          submodules: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update submodule
+        run: |
+          git submodule foreach git fetch --all
+          git submodule foreach git reset --hard origin/master
+
+      - name: Commit updated submodule
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updating based on latest wiki changes
+          file_pattern: wiki .gitmodules
+
+  build-static-pages:
+    name: Build static pages
+    needs: update-submodule
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          ref: master
+          submodules: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+
+      - name: Restore gems from cache
+        uses: actions/cache@v2
+        env:
+          cache-name: ruby-gems-cache
+        with:
+          path: ./.gems
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}-
+
+      - name: Install gems
+        run: bundle install --path=./.gems --jobs=9
+
+      - name: Build site
+        run: bundle exec rake
+
+      - name: Deploy to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build
