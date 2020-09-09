@@ -33,6 +33,7 @@ OUTPUT_FILES.zip(WIKI_FILES).each do |output, input|
       o.puts '---'
       o.puts "# #{title}" unless contents =~ /^#\s\S+/
       o.puts contents
+      o.puts '<%= javascript_include_tag :mermaid %>' if contents =~ /^```diagram/
     end
   end
 end
