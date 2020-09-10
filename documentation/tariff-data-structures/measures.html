@@ -176,7 +176,7 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="measures">Measures</h1><h3 id="introduction-to-measures">Introduction to measures</h3><p>A measure is the fundamental raison d’être of the tariff – every piece of trade legislation that is intended to impact the trade of goods through a country’s borders must end up in a measure (or usually more than one).</p>
+            <h1 id="measures">Measures</h1><h2 id="introduction-to-measures">Introduction to measures</h2><p>A measure is the fundamental raison d’être of the tariff – every piece of trade legislation that is intended to impact the trade of goods through a country’s borders must end up in a measure (or usually more than one).</p>
 <p>If there is no measure, then the border systems will not react.</p>
 <p>A measure is an atomic unit: according to the Tariff, it is “the application, during a certain period, of an aspect of the Union tariff and commercial legislation to goods imported from a certain origin or exported to a certain destination” which sums it up quite nicely.</p>
 <p>A measure equates to a single line on the “Trade with the UK tool” - https://www.gov.uk/get-rules-tariffs-trade-with-uk</p>
@@ -504,7 +504,229 @@ Measures of this type are being removed from the UK Tariff in Feb 2020.</p>
 <li><p>The export refund nomenclature was a specific nomenclature used for the refund on the export of some agricultural products. This nomenclature is composed of a CN code linked to a 4-digit code called &quot;Export refund additional code&quot;.</p></li>
 <li><p>This has been abandoned since 2013, so the field export_refund_nomenclature_sid should be set to null in all cases.</p></li>
 </ul>
-<h2 id="entering-duties">Entering duties</h2>
+<h2 id="entering-duties">Entering duties</h2><h3 id="duty-sentence-deconstructor">Duty sentence deconstructor</h3>
+<ul>
+<li>The Ruby application had some usability issues in terms of entering duties. See the subsequent guide to components, which deals in the specifics of measure components, but essentially the tariff manager needs to know the measure components and potentially select multiple of these components from dropdowns.</li>
+<li>While this offers a decent route to ensure that no business rules are contravened, it is problematic in terms of screen space, especially for complex conditions, where multiple duties are dependent on those conditions.</li>
+<li>In addition, it uses a lot of JavaScript, which is not great for accessibility.</li>
+<li>Therefore the approach was taken to prototype something simpler – the nattily named duty sentence deconstructor.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/92720962-44342e80-f35d-11ea-95a1-8a3cebe7c35c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92720962-44342e80-f35d-11ea-95a1-8a3cebe7c35c.png" alt="" /></a></p>
+
+<ul>
+<li>This tool is designed to allows you to copy and paste or type any kind of duty string in to a field and have it translated into an actual set of measure components, abided by all the Taric business rules (e.g. only ever using one duty expressions once against a measure).</li>
+<li>The page is unconnected at the moment, but has tested well, both in terms of its usage by policy team members and in terms of translating strings to components.</li>
+<li>The tool works via a combination of JavaScript (which is optional) and backend string replacement (in PHP, but easy to replicate in Python).</li>
+<li>The tool differentiates between supplementary unit measure types and all others – supplementary units expect to receive only a unit and in extremis a measurement unit qualifier [KGM E (per 1,000), KGM C (net of drained weight) and KGM S (of sugar with a yield in white sugar of 92%) are used] very infrequently.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/92721214-a3923e80-f35d-11ea-9693-7d680391751f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721214-a3923e80-f35d-11ea-9693-7d680391751f.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92721309-c9b7de80-f35d-11ea-82e5-eff212d4946f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721309-c9b7de80-f35d-11ea-82e5-eff212d4946f.png" alt="" /></a></p>
+
+<ul>
+<li>The MFN measure for white chocolate is on of the more complex duties on the EU tariff. The UK is unlikely to use anything so complex, but must be able to handle similar duties, in case we revert to this level of complexity. The duty is as follows:
+
+<ul>
+<li>9.10 % + 45.10 EUR / 100 kg</li>
+<li>MAX 18.90 % + 16.50 EUR / 100 kg</li>
+</ul></li>
+<li>If you copy this into the Duty field, you get a translation of it into the 4 clauses (parts field) and from there into the 4 respective measure components</li>
+<li>Most important thing to note is that actually clauses 1, 3 and 4 are effectively the same duty expression – the tool has worked out not to repeat an existing duty expression, hence 01 becomes 04, which becomes 19, so as to not repeat and break business rule ME43.</li>
+<li>The validity column to the right is just a check (adding 1, 2, 4 and 8 to make 15) that the expression is valid according to the criteria noted bottom left.</li>
+<li>The PHP is rough and ready but should be easily interpretable for translation into Python and componentisation.</li>
+</ul>
+<h2 id="screens-measures">Screens – measures</h2><h3 id="search-for-measures">Search for measures</h3><p><a href="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" alt="image" /></a></p>
+
+<ul>
+<li>The search screen is vastly cut down in comparison to the existing TAP measure search screen.</li>
+<li>This is a) to save on development time and b) because much of the functionality has not proven to be particularly useful – the original project delivered the capability to search on anything.</li>
+<li>Performance is a challenge on search results, as the data needs to be returned from multiple tables, especially re: duties and conditions, and especially where the SQL contains a LIKE clause.</li>
+<li>Search should be against at least all of the criteria on the screen to the left.</li>
+<li>In the case of commodity code and regulation, the operator dropdown should include both “is one of” and “starts with” to allow exact matches, stemmed matches and searches against multiple precise items (by request of the policy team).</li>
+<li>Use type ahead on measure type, geography and quota order number fields.</li>
+</ul>
+<h3 id="measures-search-results">Measures search results</h3><p><a href="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" alt="image" /></a></p>
+<p>Search results screen is common across most data objects – with measures (and quotas), the most important point to note is that there is no left-hand side filter capability - there is no room, as there is so much data that need to be returned. Search results table must include:
+* View of number of results returned (above and below table)
+* Link to export the entire dataset (not just the current page) to CSV
+* Button to work with selected measures (both above and below the table)
+* Table in GDS table style, but with font size shrunk to 12 point to fit the requisite volume of data.
+* Table headers with sort controls, as appropriate (no value in sorting on measure_sid, duties, exclusions, conditions, footnotes, status).
+* Tooltip controls on table headers where appropriate – on this form especially useful on the conditions column, which is complex
+* For the measure SID column, it must be possible to select all measures, for use in the “work with” functions
+* For each measure, click on the measure_sid column value to navigate to the specific measure
+* Click on data in the regulation column to navigate to that regulation.
+* Click on data in the type (measure type) column to navigate to that measure type.
+* Click on data in the additional code column to navigate to that additional code.
+* Click on data in the geography and exclusions column to navigate to that geography.
+* Click on data in the QON (Quota order number) column to navigate to that quota order number.
+* Show status as icon
+* Under table show paging – this screen grab has been doctored to show only 10 results: suggestion is 100 results per page for measures.</p>
+<h3 id="display-of-complex-conditions">Display of complex conditions</h3><p><a href="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" alt="image" /></a></p>
+<p>The data in the conditions column is potentially very complicated and needs to be represented on the search results form – especially with Trade Remedies, the duties may be held in the conditions and this is perhaps the critical piece of information being sought.</p>
+<p>The colour coding is helpful in separating out the components of a condition, all of which are important to the processing of the data in CDS, Gems and Caesar
+For each line in the conditions column, this is what is meant:
+* blue – the condition code and sequence number
+* purple – the reference price (import price greater than …)
+* red – the required certificate
+* green – the action code
+* black – the applicable duties</p>
+<p>Not all elements are likely to occur together – in fact the nature of conditions is such that there will either be a reference price or there will be a requirement for a certificate, not both, as per the example to the left. Taking the first row, against commodity 85 41 40 90 41 and additional code B845, the following data applies:</p>
+
+<ul>
+<li>Condition 1 of type A, which requires certificate D018, in which case the declared subheading is allowed</li>
+<li>Condition 2 of type A, which states that if no certificate is provided, then the declared subheading is not allowed (i.e. the counterpoint to condition 1)</li>
+<li>Condition 1 of type F, which states that if the net free at frontier price (import price) &gt; 0.35 EUR WAT, then apply the duty 0.000%</li>
+<li>Condition 2 of type F, which states that if the net free at frontier price (import price) &gt; 0.248 EUR WAT, then apply the difference between import price and duty up to 0.350%</li>
+<li>Condition 3 of type F, which states that if the net free at frontier price (import price) &gt; 0.0 EUR WAT, then apply the duty 31.300%</li>
+</ul>
+<h3 id="extreme-conditions">Extreme conditions</h3><p><a href="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" alt="image" /></a></p>
+<h3 id="view-of-tooltips-for-columns-that-need-explaining">View of tooltips for columns that need explaining</h3>
+<ul>
+<li>Two examples of tooltips where the column data benefits from more explanation – the most important one here is the conditions tooltip, where there is potentially a lot of complex data (as per previous slide).</li>
+<li>Yes, this uses colour to indicate meaning, therefore running into some challenge for colour-blind users, however it is not the only indicator of meaning.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/92722702-e2c18f00-f35f-11ea-818f-a33219791454.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722702-e2c18f00-f35f-11ea-818f-a33219791454.png" alt="image" /></a></p>
+<h3 id="footnotes-column-can-also-get-very-busy">Footnotes column – can also get very busy</h3><p><a href="https://user-images.githubusercontent.com/61055197/92722796-07b60200-f360-11ea-893d-81cdfcffa2be.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722796-07b60200-f360-11ea-893d-81cdfcffa2be.png" alt="image" /></a></p>
+<p>The image to the left shows the 99 footnotes that currently apply to the import of various dual use goods into the EU.</p>
+<p>The import control team should eventually review the complexity of this and reduce, however it is unlikely to happen for day one.</p>
+<h2 id="key-user-needs">Key user needs</h2><div class="table-container">
+        <table>
+          <tr>
+<th>As a …</th>
+<th>I want to...</th>
+<th>So that …</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>view   a list of existing measures</td>
+<td>I   can select and decide the next appropriate actions to be performed.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>create   a new (single) measure</td>
+<td>I   can keep both the Tariff Application and the downstream border systems up to   date with the latest trade position.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>create   new measures in bulk</td>
+<td>I   can keep both the Tariff Application and the downstream border systems up to   date with the latest trade position.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>edit   the properties of an existing measure      -description     -start   date     -end   date     -duties     -geographical   areas     -etc.</td>
+<td>I   can update the changes imposed and also be sent to the relevant external   systems.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>terminate   an existing measure, either individually or in bulk</td>
+<td>the   measure will not be imposed on the relevant external systems.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>have   a workflow process</td>
+<td>All   measure changes can be validated and approved before being sent to CDS.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>have   a search filter</td>
+<td>I   can find the measures I need quickly.</td>
+<td>Must   Have</td>
+</tr>
+
+        </table>
+      </div><h2 id="key-business-rules">Key business rules</h2><div class="table-container">
+        <table>
+          <tr>
+<th>#</th>
+<th>Rule</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>ME1</td>
+<td>The combination of measure type + geographical area +   goods nomenclature item id + additional code type + additional code + order   number + reduction indicator + start date must be unique.</td>
+<td>Required – extremely high priority     This is actually an understatement of the business rule.   There must be no crossover in dates (start or end date) of measures that shar   the same context (as described by the fields to the left). It is more than   just the start date. This and ME32 can be handled together: develop ME32 and   ME1 falls into place.</td>
+</tr>
+<tr>
+<td>ME2</td>
+<td>The measure type must exist.</td>
+<td>Required – low priority     Measure types will need to be selected from a dropdown   (typeahead), but this should be checked nonetheless</td>
+</tr>
+<tr>
+<td>ME3</td>
+<td>The validity period of the measure type must span the   validity period of the measure.</td>
+<td>Required – low priority     Any date related business rule should be avoided by the   Tariff managers simply not end-dating things – there is no real need to   end-date a measure type, and this should be reasserted.</td>
+</tr>
+<tr>
+<td>ME4</td>
+<td>The geographical area must exist.</td>
+<td>Required – low priority     As per the measure type, this should be avoided by   selecting from a list, however this should be checked.</td>
+</tr>
+<tr>
+<td>ME5</td>
+<td>The validity period of the geographical area must span the   validity period of the measure.</td>
+<td>Required – low priority     As per the measure type check, this is required, but can   be avoided by not end-dating geographical areas (which is unnecessary).</td>
+</tr>
+<tr>
+<td>ME6</td>
+<td>The goods code must exist.</td>
+<td>Required – high priority     Required – this should be checked on first entering the   commodity codes (goods code, commodity code, good nomenclature item id are   all synonymous)</td>
+</tr>
+<tr>
+<td>ME7</td>
+<td>The goods nomenclature code must be a product code; that   is, it may not be an intermediate line.</td>
+<td>Required – high priority     This means that the commodity code must exist with a product   line suffix of “80” and not any other value which would reflect the fact that   the commodity is an intermediate heading and nothing more.</td>
+</tr>
+<tr>
+<td>ME8</td>
+<td>The validity period of the goods code must span the   validity period of the measure.</td>
+<td>Required – high priority     This is one of the more critical rules – commodity   codes do start and end on a regular basis and there must be no commodity   codes that terminate before the end date of the assigned measure(s).     This applies equally to open-ended measures on   commodity codes that are end-dated. If a commodity code is being end-dated,   and there will be a requirement to do so, then any measures against that   commodity code must also be terminated.</td>
+</tr>
+<tr>
+<td>ME88</td>
+<td>The level of the goods code, if present, cannot exceed the   explosion level of the measure type.</td>
+<td>Required – medium priority     This is primarily aimed at export control measures,   which are set at 8-digits rather than at the 10-digits that are reserved for   import measure types. Explosion level is set against the measure type, and   not the measure itself. If the user attempts to assign a measure to a   10-digit commodity when the explosion level is set to 8, then ME88 will be   triggered (see page earlier in deck re: explosion level).</td>
+</tr>
+<tr>
+<td>ME16</td>
+<td>Integrating a measure with an additional code when an   equivalent or overlapping measures without additional code already exists and   vice-versa, should be forbidden.</td>
+<td>Required – high priority     This mostly impacts trade remedies, but also EU   additional code types (most of which will not carry forward), such as route   of ingress additional codes (see separate guide). What this means is that, if   there are measures set up against a combination of a commodity code and an   additional code, then it is not permitted to set up a measure against just   that commodity code (without the additional code).     For instance – a Trade Remedy is in place, where this   has involved creating an anti-dumping measure against a commodity code   (0102030405) and an additional code (C233 – Shanghai Industries). The duty   has been set to 25% (punitive specifically against Shanghai Industries).     It must not be possible to set up a measure for the   same time period, of the same type against just comm code 0102030405 with no   additional code. Border systems do not like ambiguity. Instead, the   additional codes presented for that context must cover the full universe of   options – e.g. residual (All other companies A999, B999, C999) codes are set   up for Trade Remedies.</td>
+</tr>
+<tr>
+<td>ME115</td>
+<td>The validity period of the referenced additional code must   span the validity period of the measure</td>
+<td>Required – medium priority     As with all similar rules, this needs to be checked but   should rarely if ever come up, as Tariff Managers should not be end-dating   additional codes.</td>
+</tr>
+<tr>
+<td>ME25</td>
+<td>If the measure’s end date is specified (implicitly or   explicitly) then the start date of the measure must be less than or equal to   the end date.</td>
+<td>Required – low priority     Should be checked as soon as the dates are entered into   the application. End date will in almost all circumstances by empty (Null)   for measures.</td>
+</tr>
+<tr>
+<td>ME32</td>
+<td>There may be no overlap in time with other measure   occurrences with a goods code in the same nomenclature hierarchy which   references the same measure type, geo area, order number, additional code and   reduction indicator. This rule is not applicable for Meursing additional   codes.</td>
+<td>Required – extremely high priority     This is the mother of all business rules and the one   that is likely to trip DDaT and Tariff Managers up more than any other. This   is an extension of the previously described ME1 to all commodity codes in the   upward hierarchy and all commodity codes in the downward hierarchy.     Therefore it is critical that the development team   works out a way of identifying a commodity’s hierarchy from the available   data. There is no concept of parent / child relationship in the database,   rather a list of sequential numbers and indents which infer the hierarchy.     This business rule is detailed on the next pages and in   the section on import control measures. There are 40+ import control   measures, all of which do broadly one of two things: prohibit goods entirely   from being traded, or require that certain provisions are taken (e.g.   documentation). There are so many measure types precisely to avoid ME32.     See next page for details…</td>
+</tr>
+
+        </table>
+      </div><h3 id="me32-and-jams-fruit-jellies-marmalades">ME32 and Jams, fruit jellies, marmalades</h3><p><a href="https://user-images.githubusercontent.com/61055197/92740913-0b548380-f376-11ea-8bb2-de09cf9d80fa.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92740913-0b548380-f376-11ea-8bb2-de09cf9d80fa.png" alt="image" /></a></p>
+
+<ul>
+<li>As a tariff manager, I have been asked to create a new measure for ERGA OMNES of type “Import control” at level 4 “with a sugar content exceeding 30% by weight” – </li>
+<li>There is already a measure of type “Import control” at level 8 “Fruit purees obtained by sieving then brought to the boil in a vacuum, the texture and chemical composition of which have not been changed by the heat treatment”</li>
+<li>ME32 says no</li>
+<li>I can either rejig the measures in the entire hierarchy to suit to new measure OR …</li>
+<li>I can invent a new measure type “Import control for sieved fruit puree” … which is what the EU has done, and which we will also need to do in the future.</li>
+</ul>
+<p>[have not included from page 60-88]
+[have not included create new measures section in this section]</p>
+
             
           </main>
 
