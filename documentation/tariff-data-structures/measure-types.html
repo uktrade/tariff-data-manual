@@ -176,22 +176,62 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            HELLO MUM!<h1 id="measure-types">Measure types</h1><div class="highlight"><pre class="highlight plaintext"><code>classDiagram
-    Measure --&gt; MeasureType
-    MeasureType --&gt; MeasureTypeDescription
+            HELLO MUM!<h1 id="measure-types">Measure types</h1><svg width="364pt" height="212pt"
+ viewBox="0.00 0.00 364.00 212.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database" class="graph" transform="scale(1 1) rotate(0) translate(4 208)">
+<title>Measure Types</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-208 360,-208 360,4 -4,4"/>
+<!-- Measure -->
+<g id="database_node1" class="node">
+<title>Measure</title>
+<polygon fill="none" stroke="#000000" points="28.5,-111.5 28.5,-203.5 157.5,-203.5 157.5,-111.5 28.5,-111.5"/>
+<text text-anchor="middle" x="93" y="-188.3" font-family="Arial" font-size="14.00" fill="#000000">Measure</text>
+<polyline fill="none" stroke="#000000" points="28.5,-180.5 157.5,-180.5 "/>
+<text text-anchor="middle" x="93" y="-165.3" font-family="Arial" font-size="14.00" fill="#000000">measure_sid</text>
+<polyline fill="none" stroke="#000000" points="28.5,-157.5 157.5,-157.5 "/>
+<text text-anchor="middle" x="93" y="-142.3" font-family="Arial" font-size="14.00" fill="#000000">measure_type_id</text>
+<polyline fill="none" stroke="#000000" points="28.5,-134.5 157.5,-134.5 "/>
+<text text-anchor="middle" x="93" y="-119.3" font-family="Arial" font-size="14.00" fill="#000000">&hellip;</text>
+</g>
+<!-- MeasureType -->
+<g id="database_node2" class="node">
+<title>MeasureType</title>
+<polygon fill="none" stroke="#000000" points="222,-43.5 222,-135.5 356,-135.5 356,-43.5 222,-43.5"/>
+<text text-anchor="middle" x="289" y="-120.3" font-family="Arial" font-size="14.00" fill="#000000">Measure Type</text>
+<polyline fill="none" stroke="#000000" points="222,-112.5 356,-112.5 "/>
+<text text-anchor="middle" x="289" y="-97.3" font-family="Arial" font-size="14.00" fill="#000000">measure_type_id</text>
+<polyline fill="none" stroke="#000000" points="222,-89.5 356,-89.5 "/>
+<text text-anchor="middle" x="289" y="-74.3" font-family="Arial" font-size="14.00" fill="#000000">validity_start_date</text>
+<polyline fill="none" stroke="#000000" points="222,-66.5 356,-66.5 "/>
+<text text-anchor="middle" x="289" y="-51.3" font-family="Arial" font-size="14.00" fill="#000000">validity_end_date</text>
+</g>
+<!-- Measure&#45;&gt;MeasureType -->
+<g id="database_edge1" class="edge">
+<title>Measure:2&#45;&gt;MeasureType:1</title>
+<path fill="none" stroke="#000000" d="M158,-145.5C188.7428,-145.5 188.1103,-110.5986 211.9898,-102.964"/>
+<polygon fill="#000000" stroke="#000000" points="212.6118,-106.4103 222,-101.5 211.5987,-99.484 212.6118,-106.4103"/>
+</g>
+<!-- MeasureTypeDescription -->
+<g id="database_node3" class="node">
+<title>MeasureTypeDescription</title>
+<polygon fill="none" stroke="#000000" points="0,-.5 0,-92.5 186,-92.5 186,-.5 0,-.5"/>
+<text text-anchor="middle" x="93" y="-77.3" font-family="Arial" font-size="14.00" fill="#000000">Measure Type Description</text>
+<polyline fill="none" stroke="#000000" points="0,-69.5 186,-69.5 "/>
+<text text-anchor="middle" x="93" y="-54.3" font-family="Arial" font-size="14.00" fill="#000000">measure_type_id</text>
+<polyline fill="none" stroke="#000000" points="0,-46.5 186,-46.5 "/>
+<text text-anchor="middle" x="93" y="-31.3" font-family="Arial" font-size="14.00" fill="#000000">language_id</text>
+<polyline fill="none" stroke="#000000" points="0,-23.5 186,-23.5 "/>
+<text text-anchor="middle" x="93" y="-8.3" font-family="Arial" font-size="14.00" fill="#000000">description</text>
+</g>
+<!-- MeasureTypeDescription&#45;&gt;MeasureType -->
+<g id="database_edge2" class="edge">
+<title>MeasureTypeDescription:1&#45;&gt;MeasureType:1</title>
+<path fill="none" stroke="#000000" d="M186,-58.5C206.6407,-58.5 200.6907,-87.989 212.1908,-98.1259"/>
+<polygon fill="#000000" stroke="#000000" points="211.4053,-101.5569 222,-101.5 213.6823,-94.9376 211.4053,-101.5569"/>
+</g>
+</g>
+</svg><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
-    Measure: measure_sid
-    Measure: measure_type_id
-    Measure: ...
-
-    MeasureType: measure_type_id
-    MeasureType: validity_start_date
-    MeasureType: validity_end_date
-
-    MeasureTypeDescription: measure_type_id
-    MeasureTypeDescription: language_id
-    MeasureTypeDescription: description
-</code></pre></div>
             
           </main>
 
