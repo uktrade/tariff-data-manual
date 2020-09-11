@@ -2,38 +2,26 @@ require 'govuk_tech_docs'
 
 GovukTechDocs.configure(self)
 
-class DiagramRenderer < GovukTechDocs::TechDocsHTMLRenderer
-  def initialize(options = {})
-    @local_options = options.dup
-    @app = @local_options[:context].app
-    super
-  end
+module RenderDotBlocks
+  DOT_ARGS = [
+    '-Tsvg',
+    '-Nfontname=Arial'
+  ]
 
   def block_code code, language
-    if language =~ /diagram/
-      "<div class=\"mermaid\">#{code}</div>"
+    if language =~ /dot/
+      svg = IO.popen(['dot', *DOT_ARGS], mode: 'r+') do |dot|
+        dot.write code
+        dot.close_write
+        dot.read
+      end
+      /<svg.*<\/svg>/m.match(svg)[0]
     else
       super code, language
     end
   end
-
-  def postprocess args
-    # Disable Smartypants
-    return args
-  end
 end
-
-set :markdown,
-  renderer: DiagramRenderer.new(
-    with_toc_data: true,
-    api: true,
-    context: self,
-    smartypants: false
-  ),
-  fenced_code_blocks: true,
-  tables: true,
-  no_intra_emphasis: true,
-  smartypants: false
+GovukTechDocs::TechDocsHTMLRenderer.prepend(RenderDotBlocks)
 
 configure :build do
   prefix = (ENV['GITHUB_REPOSITORY'] || '').partition('/')[-2..-1].join

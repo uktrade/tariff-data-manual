@@ -1,0 +1,11 @@
+svg {
+  * {
+    font-family: inherit !important;
+  }
+
+  #database {
+    .node text:first-of-type {
+      font-weight: bold !important;
+    }
+  }
+}
