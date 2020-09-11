@@ -1,0 +1,5 @@
+svg * {
+  font-family: inherit !important; }
+
+svg #database .node text:first-of-type {
+  font-weight: bold !important; }
