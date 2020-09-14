@@ -100,17 +100,7 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures-components.html#measures-components"><span>Measures components</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/workflow.html#workflow"><span>Workflow</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
   </li>
 </ul>
 <ul>
@@ -120,27 +110,7 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#regulations"><span>Regulations</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/nomenclature.html#nomenclature"><span>Nomenclature</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
   </li>
 </ul>
 <ul>
@@ -150,12 +120,12 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures-components.html#measures-components"><span>Measures components</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
   </li>
 </ul>
 <ul>
@@ -165,7 +135,37 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/workflow.html#workflow"><span>Workflow</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/nomenclature.html#nomenclature"><span>Nomenclature</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#regulations"><span>Regulations</span></a>
   </li>
 </ul>
 </li></ul>
@@ -176,7 +176,735 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="additional-codes">Additional codes</h1>
+            <h1 id="additional-codes">Additional codes</h1><h3 id="introduction-to-additional-codes">Introduction to additional codes</h3><p><strong>What is an additional code?</strong>
+* As detailed in the training manual on goods nomenclature (commodity codes), in most cases, the 10 digits of the EU commodity code hierarchy are fully sufficient to identify the product that is being traded.
+* However, there are certain scenarios where the 10-digits are not enough and an additional 4 digits are required (and sometimes 8) to communicate sufficient information to describe the trade.
+* This is where additional codes come in.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93084648-4e6f6900-f68c-11ea-8a65-5981fae25376.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93084648-4e6f6900-f68c-11ea-8a65-5981fae25376.png" alt="image" /></a></p>
+
+<ul>
+<li>Additional codes may be appended to a commodity code to make the number of (effective) digits up to 14, or possibly 18.</li>
+<li>Importantly though, there is no such thing as a 14-digit commodity code: commodity codes can be augmented by additional codes, but the two entities are managed completely separately: a single additional code can and usually is appended to multiple commodity codes through the medium of measures; similarly a single commodity code can have an association with multiple additional codes, again through measures applied to a given combination of commodity and additional code.</li>
+</ul>
+<p><strong>What are additional codes used for?</strong>
+* Additional codes are now used to manage:
+  * <strong>Meursing codes</strong> – for sugar, flour and milk duties associated with complex agricultural products
+  * <strong>Anti-dumping &amp; anti-subsidy duties</strong> – to identify the specific company to which a punitive measure is attached
+  * <strong>Pharma products</strong> – to identify that the end use of an imported good is for pharmaceutical purposes, and therefore attracts a reduced duty
+  * <strong>Differentiating product states / uses / origins</strong> (e.g. waste chemicals, underwear [!])
+  * <strong>Route of ingress</strong> – to identify the route goods (wheat &amp; other cereals) take into EU and to apply different tariff or regulatory treatment
+  * <strong>Works of art</strong> – to identify items stolen from Syria and Iraq as a result of wartime activity
+* Each of the above uses are discussed in detail on the following slides.
+* Additional codes are made up of 4 digits, which are split into two parts:
+<a href="https://user-images.githubusercontent.com/61055197/93085607-b6727f00-f68d-11ea-8e91-6da831303f6e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93085607-b6727f00-f68d-11ea-8e91-6da831303f6e.png" alt="image" /></a></p>
+<p><strong>Structure of additional codes and additional code types</strong>
+* Much like certificates and footnotes, additional codes are made up of a type and then a specific ID, which, when concatenated, form the unique ID of the additional code. .
+* For example, the additional code C233 is constructed of a type &copy; and a specific footnote ID (233) – the entire additional code is known as C233.
+* The numeric IDs, running from 001 to 999 can be reused across multiple additional code type IDs.
+* While the schema allows for us to use alphanumeric digits for additional codes, not just numeric, these are almost never used and never by the EU – there are 7 national additional codes that are used by HMRC for VAT and excise.
+* The use of the alphanumeric codes may be of great importance to the Northern Ireland protocol, subject to the way in which the solution progresses.
+* Additional code type IDs are always single alphabetical characters (those set by the EU) or single numeric characters (set as national additional code by the UK).</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93088912-72ce4400-f692-11ea-962f-066d5ab58746.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93088912-72ce4400-f692-11ea-962f-066d5ab58746.png" alt="image" /></a></p>
+<p><strong>Overview of existing additional code types</strong></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>ID</th>
+<th>Description</th>
+<th>AC count</th>
+</tr>
+<tr>
+<td>2</td>
+<td>Tariff   preference</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Prohibition/Restriction/Surveillance</td>
+<td>118</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Restrictions</td>
+<td>51</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Agricultural   Tables (Meursing)</td>
+<td>504   ***</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Anti-dumping/countervailing</td>
+<td>188</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Anti-dumping/countervailing</td>
+<td>265</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Anti-dumping/countervailing</td>
+<td>920</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Anti-dumping/countervailing</td>
+<td>483</td>
+</tr>
+<tr>
+<td>V</td>
+<td>VAT</td>
+<td>3</td>
+</tr>
+<tr>
+<td>X</td>
+<td>EXCISE</td>
+<td>66</td>
+</tr>
+
+        </table>
+      </div><p>***Meursing additional codes are special cases and stored in a different database table from the other additional codes</p>
+
+<ul>
+<li>The table above lists all of the additional code types which are currently in use, supporting active additional codes.</li>
+<li>The table below shows all of the additional code types on the database (in use or not)</li>
+<li>Additional code types cannot be reused if they are not terminated – we will need to create new additional code types for the UK to cater for UK-specific future anti-dumping and anti-subsidy cases.</li>
+<li>See section on Trade Remedies later in this document.</li>
+</ul>
+<div class="table-container">
+        <table>
+          <tr>
+<th>ID</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>2</td>
+<td>Tariff   preference</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Prohibition/Restriction/Surveillance</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Restrictions</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Agricultural   Tables (non-Meursing)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Agricultural   Tables (Meursing)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Anti-dumping/countervailing</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Export   Refunds</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Anti-dumping/countervailing</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Anti-dumping/countervailing</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Anti-dumping/countervailing</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Dual   Use</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Reference   prices fishery products</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Refund   for basic products</td>
+</tr>
+<tr>
+<td>V</td>
+<td>VAT</td>
+</tr>
+<tr>
+<td>X</td>
+<td>EXCISE</td>
+</tr>
+
+        </table>
+      </div><p><strong>Pivot table on usage of additional codes vs measure types</strong>
+<a href="https://user-images.githubusercontent.com/61055197/93089409-26cfcf00-f693-11ea-880b-cecb21ae9e06.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93089409-26cfcf00-f693-11ea-880b-cecb21ae9e06.png" alt="image" /></a></p>
+<h3 id="type-2-preference-codes">Type 2 - Preference codes</h3><p>There are only two remaining reasons in the EU tariff for using preference type additional codes – when the UK takes over ownership, there will be just one.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code(s)</th>
+<th>Description &amp; notes</th>
+</tr>
+<tr>
+<td>2   500     2   501</td>
+<td>These   two codes are used to differentiate between the duties applicable to imported   goods which may or may not be subject to reduced duties for pharmaceutical   products. In the EU, this is legislated for in Annex I of the &ldquo;Combined   Nomenclature&rdquo;, Part Three, Section II (pharmaceutical products).          In   the UK these additional codes will persist, though the specific legislative   mechanism for persisting them remains to be decided.</td>
+</tr>
+<tr>
+<td>2   550     2   551     2   552     2   553</td>
+<td>These   codes are used in the EU to apply differential duties to goods (wheat,   sorghum and other cereal goods) dependent upon their route of ingress into   the European Union.          These   will not be persisted into the UK tariff: a) because we are not carrying   forward the operationalising of the agricultural policy to apply variable   duties on cereals (though we are retaining the right to revert if required)   and b) the routes are not relevant to a newly-independent UK.</td>
+</tr>
+
+        </table>
+      </div><h3 id="type-3-p-amp-r-codes">Type 3 – P &amp; R codes</h3><p>These codes are on the surface vey similar to those used under additional code type 4 – it is not clear why one might be used in opposition to the other.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code(s)</th>
+<th>Description &amp; notes</th>
+</tr>
+<tr>
+<td>3   200     3   202     3   203     3   204     3   205     3   206     3   207     3   208     3   249</td>
+<td>These   additional codes are used to differentiate between specific states of certain   chemical compounds: if the product is in a certain state, then a different   export code restriction applies, as explained in the footnote:          “The   surveillance does not apply to mixtures and natural products which contain   scheduled substances and which are compounded in such a way that the   scheduled substances cannot be easily used or extracted by readily applicable   or economically viable means, to medicinal products as defined in point 2 of   Article 1 of Directive 2001/83/EC of the European Parliament and of the   Council and to veterinary medicinal products as defined in point 2 of Article   1 of Directive 2001/82/EC of the European Parliament and of the Council.”          The   purpose of the these codes is to provide the ability to slice multiple   commodities according to their intrinsic properties.</td>
+</tr>
+<tr>
+<td>3   601     3   602     3   603</td>
+<td>I   kid you not – this group of additional codes is to apply additional   restrictions to the import of pants and bras from North Korea. The additional   code provides an additional slide over the top of the existing commodities   without creating multiple new comm codes.</td>
+</tr>
+
+        </table>
+      </div><h3 id="type-4-restriction-codes">Type 4 – Restriction codes</h3><p>Think of this type of additional codes as a means of differentiating between:
+potential multiple uses of goods, where splitting all the codes would be inadvisable, complex, confusing, or impossible
+a way of differentiating origin / specifics, even if via several intermediary steps</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code(s)</th>
+<th>Description &amp; notes</th>
+</tr>
+<tr>
+<td>4   008 – 4 099</td>
+<td>These   codes have been instituted as a means of instituting temporary controls   (restrictions) on goods that have been plundered following the chaos in Iraq   and Syria, for example after the destruction of Palmyra. Rather than   permanently splitting existing commodity codes, typically (but not   exclusively) in chapters 97 and 98 (works of art) etc., the European   Commission has created additional codes to determine origin of goods, even if   they have passed through multiple trades prior to the entry into the EU. For   this reason, many of the controls apply not just to Iraq and Syria, but also   to Erga Omnes / All third countries (1011, 1008 respectively).          Chapters   97 and 98 are very shallow – in some cases, the definitions only go down to   HS4 without any further cleaving of codes – the EU cannot introduce codes at   6 digits, even if that was desirable, so the choice would have been: create a   very few additional codes to designate source OR create a large number of   10-digit codes to represent permanent splits.</td>
+</tr>
+<tr>
+<td>4   115 to 4 118</td>
+<td>Used   to apply controls to waste materials and ozone-depleting substances</td>
+</tr>
+<tr>
+<td>4   200 to 4 212</td>
+<td>Used   to differentiate the skins and furs of wild cats (e.g. lynxes) as well as   other mammals sometimes (illegally) used for their fur (e.g. otters &amp;   pine martens)</td>
+</tr>
+
+        </table>
+      </div><h3 id="type-7-meursing-codes">Type 7 - Meursing codes</h3>
+<ul>
+<li>Introduced in 1988 by the European Commission. Traders hate them, but we have to keep Meursing classifications or change our WTO commitments.</li>
+<li>They apply to bakery and confectionery products, etc. classed as “composite agrigoods”. Meursing allows extra set of import duties to be charged depending on how much of 4 agricultural ingredients are used to make the product: milk fat, milk proteins, starch or glucose, or various forms of sugar.</li>
+<li>The result used to be tens of thousands of categories of composite agrigoods for the purposes of charging import duties. To find the specific &lsquo;recipe&rsquo; and the duties applicable, you look it up in the Meursing table (right).</li>
+<li>Executed in the tariff as a combination of primary measures, such as tariff preferences, with complex duty expression combinations, which are then expanded when the trader select the ‘additional code’ for the specific ‘recipe’ of their product.</li>
+<li>The best description of Meursing codes and their use is drawn up by Trade expert Peter Unghpakorn on his trade beta blog: https://tradebetablog.wordpress.com/2016/08/18/eu-tariff-biscuit-annex1/</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93089955-fe94a000-f693-11ea-9d21-dea3986661fa.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93089955-fe94a000-f693-11ea-9d21-dea3986661fa.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93089966-048a8100-f694-11ea-8c7c-650e12fe3132.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93089966-048a8100-f694-11ea-8c7c-650e12fe3132.png" alt="image" /></a></p>
+<p><strong>Future of Meursing codes</strong></p>
+
+<ul>
+<li>The Meursing code is a staple of EU agrifood trade.</li>
+<li>The UK policy however is to abandon Meursing codes as an agricultural policy, due to the fact that it is universally disliked by trade and policy (Defra) alike – the tax-raising reasons for it having come into existence in the first place are not UK policy.</li>
+<li>However, as with much of the Northern Ireland protocol, there are additional implications for UK government and Northern Ireland traders with NI remaining in a special relationship with the EU’s Customs Union.</li>
+<li>Initial thoughts are that the impact of the NI protocol will not be felt for GB traders, but NI traders will continue to need to apply Meursing codes to imports of specific types if the good is considered to be at risk of being further transported to the EU.</li>
+<li>At the very least, this requires DIT policy and DDaT to retain some knowledge of the Meursing challenge, even if the majority of the UK will not be subject to the controls</li>
+</ul>
+<p><strong>Application of a Meursing code in detail – Waffles and wafers</strong>
+* Let’s take “waffles and wafers - with a water content exceeding 10% by weight”, commodity code 1905320500.
+<a href="https://user-images.githubusercontent.com/61055197/93090892-4f58c880-f695-11ea-932f-23fcf0c80bb9.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93090892-4f58c880-f695-11ea-932f-23fcf0c80bb9.png" alt="image" /></a>
+* The third country duty reads as follows:9.00% + EA MAX 20.7% + ADFM
+* This is a complex compound duty involving both a ceiling and a pair of Meursing-related placeholders. These placeholders come in three forms, which, in the EU are labelled:
+* EA – Agricultural component 
+* ADFM – Additional duty on flour
+* ADSZ – Additional duty on sugar (not shown here, but the principle applies)
+* The labels are based on French and German abbreviations (élément agricole, farine / mehl; sucre / Zucker)
+* The next section shows the breakdown – and what traders have to do</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93091003-74e5d200-f695-11ea-9b1c-2483f0b74b13.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93091003-74e5d200-f695-11ea-9b1c-2483f0b74b13.png" alt="image" /></a></p>
+<p><strong>Unpicking complex agricultural duties</strong>
+* The waffle duty 9.00% + EA MAX 20.7% + ADFM is made up of 4 measure components – please review the training manual on measure components for a detailed view of these.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Duty expression ID</th>
+<th>Duty amount</th>
+<th>Commentary</th>
+</tr>
+<tr>
+<td>01</td>
+<td>9.00</td>
+<td>Ad valorem duty</td>
+</tr>
+<tr>
+<td>12</td>
+<td>-</td>
+<td>Meursing placeholder –   agricultural component</td>
+</tr>
+<tr>
+<td>17</td>
+<td>20.7</td>
+<td>Ceiling ad valorem ( … up to a   maximum of …)</td>
+</tr>
+<tr>
+<td>27</td>
+<td>-</td>
+<td>Meursing placeholder – additional   duty on flour</td>
+</tr>
+
+        </table>
+      </div>
+<ul>
+<li>The first thing to notice is that the Meursing placeholders have no duties assigned to them – it is not possible to assign duty amounts to these measure components; they operate as placeholders that are filled in only when traders declare the content of the various delicious ingredients.</li>
+<li>The trader goes to (for example) the gov.uk URL below, enters the component %ages and then is eventually presented with a 4-digit code, such as 7364.</li>
+<li>Duties are then assigned specifically against the Meursing additional code 7364, totally independent of the hundreds of commodities that are subject to them – this is unique in the tariff database, where duties are usually against combinations of commodity codes and additional codes - not with Meursings.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93091323-d312b500-f695-11ea-8ec4-a1b1d8c15452.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93091323-d312b500-f695-11ea-8ec4-a1b1d8c15452.png" alt="image" /></a>
+https://www.gov.uk/additional-commodity-code</p>
+<p><strong>Implications for Tariffs project</strong></p>
+
+<ul>
+<li>Although it is theoretically possible that the UK will need to manage Meursing additional codes and their associated duties in the future, it is highly unlikely</li>
+<li>Recommendation would be that no interface functionality is constructed to allow for managing Meursing codes themselves, as it is hugely complex.</li>
+<li>Theoretically, if we wanted to just change the duties associated with the Meursing additional codes, this is possible: it is a matter of assigning duties direct to an additional code, rather than to a combination of commodity codes and additional codes.</li>
+</ul>
+<p><strong>Meursing table and the reduction indicator</strong></p>
+
+<ul>
+<li>There is one Meursing table but multiple layers of tariffs assigned against it</li>
+<li>The “reduction indicator” is assigned to the tariff measure on the commodity code and to the duty assigned to the additional code. The border system picks the indicator that matches to select the right duty.</li>
+<li>In use with multiple preferential agreements that reference composite agrigoods.</li>
+<li>Japan goes to town on the usage of reduction indicators, forcing the EU to change its Taric schema to accommodate another three reduction tables.</li>
+<li>By the end of the implementation period, be aware of two facts:</li>
+<li>we will have done away with the concept of Meursing codes in the UK, therefore the reduction indicator will be irrelevant</li>
+<li>we will not have a trade agreement with Japan</li>
+<li>BUT:</li>
+<li>we will need to honour the NI protocol, meaning Meursings will apply to imports of at risk goods from RoW and GB to NI, meaning DIT and DDaT need to continue to be aware of their presence.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93091623-3ef51d80-f696-11ea-9455-20db4881edc6.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93091623-3ef51d80-f696-11ea-9455-20db4881edc6.png" alt="image" /></a></p>
+<h3 id="type-8-a-b-c-anti-subsidy-anti-dumping-codes">Type 8, A, B, C – Anti-subsidy / anti-dumping codes</h3><p>A Trade Remedy is explained elsewhere, but the important thing to note is that, for the two types of trade remedy that are by some distance the most abundant, Anti-dumping duties and Anti-subsidy duties, the punitive import duties are set against specific exporting companies that are deemed to have acted unlawfully, not against entire countries.</p>
+<p>Essentially, a company is proven to have been dumping1 its goods on an overseas market (e.g. the European Union or the United Kingdom), or to have been receiving unlawful state subsidy to undercut international competitors, and this activity is found to have been damaging businesses in those overseas nations. In such cases, the nation or bloc’s Trade Remedies body, such as our own Trade Remedies Authority, is entitled to investigate and impose punitive duties specifically against the companies that have been proven to have acted unlawfully.</p>
+<p>In the case of Trade Remedies, the 4-digit additional code is set to represent the company from which the good is imported, or in some cases, a multitude of companies that have been found guilty of the same infraction.</p>
+
+<blockquote>
+<p>By way of example:
+Code C316 refers to Bengang Steel Plates Co., Ltd (Benxi, Liaoning)
+Code C333 refers to all of:
+* Aeolus Tyre Co., Ltd;
+* Aeolus Tyre (Taiyuan) Co., Ltd;
+* Qingdao Yellow Sea Rubber Co., Ltd;
+* Pirelli Tyre Co., Ltd
+To create a punitive trade remedy duty against a the import of “flat rolled steel” from “Bengang Steel Plates”, you assign a 552 measure against commodity code 7225990092 and additional code C316.</p>
+</blockquote>
+<p>When the European Commission first set up the Taric database to cater for all trade eventualities, they were somewhat guilty of short-sightedness when it came to Trade Remedies.</p>
+<p>They set up the additional type code ‘8’ in 1972 to deal with all future companies implicated in Trade Remedy cases. To be fair, this lasted until 1999, when the 1,000 possible permutations within the ‘8 ‘ type code (000 to 999) were exhausted. They then moved on to using ‘A’. In 2013, they moved on to ‘B’ and in ‘2015’ to ‘C’. By 2019, type ‘C’ was already half used up, so the expectation would be that they will move on to another additional code type within the next 2 years.</p>
+<p>‘D’ is already used for dual use codes, albeit it is currently dormant.</p>
+<p>In preparing for the multiple abortive stabs at EU Exit, the project team has (via scripts) created an additional set of additional code types (‘E’ and ‘F’) to cater for the inevitable expansion and deviation.</p>
+<p>Additional codes, according to the Taric schema may be alphabetical, as well as numeric – alpha characters have never been used by the EU, but there is no reason why we could not use them in the future in the UK.</p>
+
+<blockquote>
+<p>Additional codes used in Trade Remedies measures are essentially meaningless beyond Tariff – there is literally no reference against any international database of companies, nor any attempt to make the data set atomic and ‘cleansed’</p>
+<p>You are likely to find multiple instances of the same company cropping up in the database on multiple occasions.</p>
+<p>Be careful about the shenanigans that companies get up to evade punitive duties – most often by setting up subsidiaries in overseas nations with similar names: these are not the same company, nor the same additional code, but they may have very similar company names.</p>
+</blockquote>
+<p><strong>Additional codes cannot be applied universally …</strong>
+There is an additional many to many table within the tariff database that determines which additional code types can be used against which measure types. Currently there are 74 permutations of additional codes against measure types: there is little surprising about the alignment – e.g. you can only assign additional codes of type 8, A, B or C to measure types that are associated with Trade Remedies.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93092034-d22e5300-f696-11ea-8230-d14b200a0016.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93092034-d22e5300-f696-11ea-8230-d14b200a0016.png" alt="image" /></a></p>
+<p><strong>Additional codes, additional code types data entities</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93092047-d8243400-f696-11ea-808c-e40c6ce953cd.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93092047-d8243400-f696-11ea-808c-e40c6ce953cd.png" alt="image" /></a></p>
+<h2 id="screen-designs">Screen designs</h2><h3 id="additional-code-types">Additional code types</h3><p>[LEAVING THIS SECTION OUT AS NOT YET DECIDED WHERE THIS SECTION SHOULD BE PLACED IN THE MANUAL - REFER TO PAGES 28 - 45 ON POWERPOINT SLIDES]</p>
+<h2 id="key-user-needs-additional-codes">Key user needs – additional codes</h2><div class="table-container">
+        <table>
+          <tr>
+<th>As a …</th>
+<th>I want to &hellip;</th>
+<th>So that …</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>view a list of existing additional code   types</td>
+<td>I can select and decide the next   appropriate actions to be performed.</td>
+<td>Must Have</td>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>create a new additional code type</td>
+<td>I can present it on the system and to   be assigned to selected additional codes.</td>
+<td>Must Have</td>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>edit the description / start date of an   existing additional code type</td>
+<td>I can update the changes imposed and   also be sent to the relevant external systems.</td>
+<td>Must Have</td>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>terminate an existing additional code   type</td>
+<td>I won’t accidentally select a retired   additional code type(s) on the system.</td>
+<td>Could Have</td>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>view a list of all additional code(s)</td>
+<td>I can have a consolidated view of all   existing additional codes.</td>
+<td>Must Have</td>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>view a list of additional code   associated with a given additional code    type</td>
+<td>I can have a consolidated view of all   assigned additional codes.</td>
+<td>Should Have</td>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>create a new additional code</td>
+<td>I can present it on the system and to   be assigned to selected measures.</td>
+<td>Must Have</td>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>edit the description of an existing   additional code</td>
+<td>I can update the changes imposed and   also be sent to the relevant external systems.</td>
+<td>Must Have</td>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>terminate an existing additional code</td>
+<td>I won’t accidentally select a retired   additional code(s) on the system.</td>
+<td>Could Have</td>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>have a workflow process</td>
+<td>All certificate changes can be   validated and approved before being sent to CDS.</td>
+<td>Must Have</td>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>have the system validate relevant   business rules accordingly</td>
+<td>It won’t cause errors when validated in   CDS.</td>
+<td>Should Have</td>
+</tr>
+<tr>
+<td>UK Tariff Manager</td>
+<td>have a search filter</td>
+<td>I can find the additional codes I need   quickly.</td>
+<td>Must Have</td>
+</tr>
+
+        </table>
+      </div><h2 id="key-business-rules-additional-codes">Key business rules – additional codes</h2><div class="table-container">
+        <table>
+          <tr>
+<th>#</th>
+<th></th>
+<th></th>
+<th>Rule</th>
+<th></th>
+<th></th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>Core   additional code type rules</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CT1</td>
+<td>The additional code type must be unique.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Required     We are providing the opportunity to create new additional   code types, as these will be required to extend with regard to Trade Remedies   when additional code type ‘C’ runs out.</td>
+<td></td>
+</tr>
+<tr>
+<td>CT2</td>
+<td>The Meursing table plan can only be entered if the   additional code type has as application code &ldquo;Meursing table additional   code type&rdquo;.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Not required     This field should not be exposed in the interface – value   should always be Null</td>
+<td></td>
+</tr>
+<tr>
+<td>CT3</td>
+<td>The Meursing table plan must exist.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Not required     This field should not be exposed in the interface – value   should always be Null</td>
+<td></td>
+</tr>
+<tr>
+<td>CT4</td>
+<td>The start date must be less than or equal to the end date.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Required     Simple data comparison (if required) – however the   creation pages for all objects such as additional codes will not feature an   end date function – the edit screens will though.</td>
+<td></td>
+</tr>
+<tr>
+<td>Delete   an additional code type     We can   sidestep all of these by not allowing for the deletion of additional code   types – highly recommended.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CT6</td>
+<td>The additional code type cannot be deleted if it is   related with a non-Meursing additional code.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Not Required     We should not permit deletion of additional code types</td>
+<td></td>
+</tr>
+<tr>
+<td>CT7</td>
+<td>The additional code type cannot be deleted if it is   related with a Meursing Table plan.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Not Required     We should not permit deletion of additional code types –   The Meursing plan is 99% certain to become a thing of the past in any case.</td>
+<td></td>
+</tr>
+<tr>
+<td>CT9</td>
+<td>The additional code type cannot be deleted if it is   related with an Export refund code.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Not Required     We should not permit deletion of additional code types –   ERNs are also dead objects</td>
+<td></td>
+</tr>
+<tr>
+<td>CT10</td>
+<td>The additional code type cannot be deleted if it is   related with a measure type.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Not Required     We should not permit deletion of additional code types</td>
+<td></td>
+</tr>
+<tr>
+<td>CT11</td>
+<td>The additional code type cannot be deleted if it is   related with an Export Refund for Processed Agricultural Goods additional   code.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Not Required     We should not permit deletion of additional code types –   ERNs are also dead objects</td>
+<td></td>
+</tr>
+<tr>
+<td>#</td>
+<td>Rule</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Notes</td>
+<td></td>
+</tr>
+<tr>
+<td>ACN1</td>
+<td>The combination of additional code type + additional code   + start date must be unique.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Required     Additional codes are uniquely identified by their   additional code type and additional code fields, which in conjunction, at any   given time are unique. However code combinations can be reused over time,   hence the use of the additional code SID field – an internal identifier to   identify specific instances of these combinations, as they may be reused.   Therefore this must be checked.     In actual fact, the rule is written incorrectly here.   There must be no overlap in time between two codes both identified with the   same additional code type and additional code – you need to check for this   overlap, which is not permitted, rather than just the coincidence of the   validity start date.</td>
+<td></td>
+</tr>
+<tr>
+<td>ACN2</td>
+<td>The referenced additional code type must exist and have as   application code &ldquo;non- Meursing&rdquo; or &ldquo;Export Refund for   Processed Agricultural Goods”.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Required     See earlier in this document for more info on   additional code type application codes. The most crucial piece is to ensure   that the additional code type actually exists.</td>
+<td></td>
+</tr>
+<tr>
+<td>ACN3</td>
+<td>The start date of the additional code must be less than or   equal to the end date.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Required     Simple date comparison, which will be impacted when an   additional code is being edited – there is no option to enter an end date on   creation.</td>
+<td></td>
+</tr>
+<tr>
+<td>ACN4</td>
+<td>The validity period of the additional code must not   overlap any other additional code with the same additional code type +   additional code + start date.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Required (but see ACN1)     This is a cack-handed way of explaining ACN1 – the two   can be delivered in conjunction by using the business rule explained against   ACN1 above</td>
+<td></td>
+</tr>
+<tr>
+<td>ACN12</td>
+<td>When the additional code is used to represent an   additional code line table component then the validity period of the   additional code must span the validity period of the component.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Not required     Used for complex Meursing code applications – we are   expecting to not use Meursing codes / table.</td>
+<td></td>
+</tr>
+<tr>
+<td>ACN13</td>
+<td>When an additional code is used in an additional code   nomenclature measure then the validity period of the additional code must   span the validity period of the measure.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Required     This will be most frequently used in Trade Remedies   (anti-dumping and anti-subsidy measures). As always, this is best countered   by not putting an end date on an additional code, but should be checked   anyway.</td>
+<td></td>
+</tr>
+<tr>
+<td>ACN17</td>
+<td>The validity period of the additional code type must span   the validity period of the additional code.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Required     As above, we should simply never end-date additional   codes, but strictly–speaking, this is required.</td>
+<td></td>
+</tr>
+<tr>
+<td>#</td>
+<td>Rule</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Notes</td>
+<td></td>
+</tr>
+<tr>
+<td>Footnote   association</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ACN6</td>
+<td></td>
+<td>The footnotes that are referenced must exist.</td>
+<td></td>
+<td>Not required     There is no means of publicly viewing footnotes associated   with additional codes, therefore the feature is redundant</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ACN7</td>
+<td></td>
+<td>The start date of the footnote association must be less   than or equal to the end date of the footnote association.</td>
+<td></td>
+<td>Not required     There is no means of publicly viewing footnotes associated   with additional codes, therefore the feature is redundant</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ACN8</td>
+<td></td>
+<td>The period of the association with a footnote must be   within (inclusive) the validity period of the additional code.</td>
+<td></td>
+<td>Not required     There is no means of publicly viewing footnotes associated   with additional codes, therefore the feature is redundant</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ACN9</td>
+<td></td>
+<td>The period of the association with a footnote must be   within (inclusive) the validity period of the footnote.</td>
+<td></td>
+<td>Not required     There is no means of publicly viewing footnotes associated   with additional codes, therefore the feature is redundant</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ACN10</td>
+<td></td>
+<td>When the same footnote is associated more than once with   the same additional code then there may be no overlap in their association   periods.</td>
+<td></td>
+<td>Not required     There is no means of publicly viewing footnotes associated   with additional codes, therefore the feature is redundant</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ACN11</td>
+<td></td>
+<td>The referenced footnote must have a footnote type with   application type = &quot;non-Meursing additional code footnotes&rdquo;.</td>
+<td></td>
+<td>Not required     There is no means of publicly viewing footnotes associated   with additional codes, therefore the feature is redundant</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Additional   code description and description periods</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ACN5</td>
+<td></td>
+<td>At least one description is mandatory. The start date of   the first description period must be equal to the start date of the   additional code. No two associated description periods may have the same   start date. The start date must be less than or equal to the end date of the   additional code.</td>
+<td></td>
+<td>Required    On creating the additional code in the first instance, the first   description must commence on the same start date as the additional code. On   editing the description, this will need to be checked. We must not allow   users to delete the first applicable description.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Delete   an additional code</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ACN14</td>
+<td></td>
+<td>An additional code cannot be deleted if it is used in an   additional code nomenclature measure.</td>
+<td></td>
+<td>Required     The new project should consider not allowing additional   codes to be deleted – there will scarcely be a requirement to do so.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ACN15</td>
+<td></td>
+<td>An additional code cannot be deleted if it is used in an   additional code line table component.</td>
+<td></td>
+<td>Not Required     This refers specifically to Meursing code additional codes   – we will not be providing the capability to manage this relationship, but   most importantly, as above: we should consider not allowing additional codes   to be deleted.</td>
+<td></td>
+<td></td>
+</tr>
+
+        </table>
+      </div>
             
           </main>
 
