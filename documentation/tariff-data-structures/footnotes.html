@@ -176,7 +176,535 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="footnotes">Footnotes</h1>
+            <h1 id="footnotes">Footnotes</h1><h3 id="introduction-to-footnotes">Introduction to footnotes</h3><p><strong>Structure of footnotes &amp; footnote types</strong></p>
+
+<ul>
+<li>Much like certificates and additional codes, footnotes are made up of a type and then a specific ID, which, when concatenated, form the unique ID of the footnote.</li>
+<li>For example, the footnote CD491 is constructed of a type (CD) and a specific footnote ID (491) – the entire footnote is known as CD491.</li>
+<li>The numeric IDs, running from 001 to 999 can be reused across multiple footnote type IDs</li>
+<li>In actual fact, footnote IDs may be either 3 or 5 digits long according to the XSD – all footnotes to date have been 3 digits long and while there is no clear reason to change, as footnotes are not so voluminous that the numbers are running out in many of the current database’s footnote type, there is benefit in considering a move to 5 digits (see below)</li>
+<li>Footnote type IDs are either 2 alphabetical characters (those set by the EU) or 2 numeric characters (set as national footnotes by the UK). As with the footnote ID, there is additional redundancy here – the data schema gives an opportunity to use 3 digit footnote ID types – there should be no reason to adopt these.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93206097-c7d08f80-f750-11ea-9cbe-7a2ec4499251.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93206097-c7d08f80-f750-11ea-9cbe-7a2ec4499251.png" alt="image" /></a></p>
+<p><strong>Overview of existing footnote types</strong></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>ID</th>
+<th>Description</th>
+<th>Measure count</th>
+</tr>
+<tr>
+<td>01</td>
+<td>UK   tax type, to distinguish which applies by tax type when several Excise   measures on commodity</td>
+<td>49</td>
+</tr>
+<tr>
+<td>03</td>
+<td>UK   VAT rate, to distinguish which applies when multiple rates on same commodity</td>
+<td>4</td>
+</tr>
+<tr>
+<td>04</td>
+<td>UK footnotes_oplog on   prohibitions and restrictions</td>
+<td>14</td>
+</tr>
+<tr>
+<td>CA</td>
+<td>Additional   nomenclature - CADD</td>
+<td>6</td>
+</tr>
+<tr>
+<td>CD</td>
+<td>Conditions</td>
+<td>790</td>
+</tr>
+<tr>
+<td>CG</td>
+<td>Cultural   goods</td>
+<td>21</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>Dual   use goods</td>
+<td>635</td>
+</tr>
+<tr>
+<td>EU</td>
+<td>End   use</td>
+<td>4</td>
+</tr>
+<tr>
+<td>IS</td>
+<td>Invasive   alien species</td>
+<td>16</td>
+</tr>
+<tr>
+<td>MG</td>
+<td>Military   goods and technologies</td>
+<td>769</td>
+</tr>
+<tr>
+<td>MH</td>
+<td>Meursing   table</td>
+<td>3</td>
+</tr>
+<tr>
+<td>MX</td>
+<td>Export   refund measure</td>
+<td>47</td>
+</tr>
+<tr>
+<td>NC</td>
+<td>Combined   Nomenclature</td>
+<td>31</td>
+</tr>
+<tr>
+<td>NM</td>
+<td>CN   measure</td>
+<td>218</td>
+</tr>
+<tr>
+<td>NX</td>
+<td>Export   Refund Nomenclature</td>
+<td>63</td>
+</tr>
+<tr>
+<td>OZ</td>
+<td>Ozone-depleting   substances</td>
+<td>10</td>
+</tr>
+<tr>
+<td>PB</td>
+<td>Publication</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PN</td>
+<td>See   annex</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TM</td>
+<td>Taric   Measure</td>
+<td>907</td>
+</tr>
+<tr>
+<td>TN</td>
+<td>Taric   Nomenclature</td>
+<td>88</td>
+</tr>
+<tr>
+<td>TP</td>
+<td>Dynamic   footnote</td>
+<td>6</td>
+</tr>
+<tr>
+<td>TR</td>
+<td>Torture   and repression</td>
+<td>36</td>
+</tr>
+
+        </table>
+      </div>
+<ul>
+<li>The table lists all of the footnote types and their frequency of use in the existing tariff.</li>
+<li>This lists the number of footnotes of a given type, not the number of times these footnotes are applied to measures or commodity codes.</li>
+<li>The variety in volumes of footnotes shows the relative usefulness of the footnote type IDs.</li>
+</ul>
+<p><strong>Footnote type application codes</strong></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Application code</th>
+<th>Description</th>
+<th>Applies to  …</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>1</td>
+<td>CN   nomenclature</td>
+<td>Commodity   codes</td>
+<td>•These   two application codes are both used for footnote types that are to be linked   to commodity codes (goods nomenclatures).     •The   difference is that application code 1 limits the use of the footnote such   that it can only be applied to commodity codes where the first 8 digits are   significant (i.e. ends in “00”).     •The   footnote types associated with application code 2 can be assigned to any   commodity code (the Taric nomenclature label references the full use of all   10-digits in Taric).     •There   is no clear reason to ever create a footnote that can only be applied to   commodity codes with 8 significant digits.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>TARIC   nomenclature</td>
+<td>Commodity   codes</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Export   refund nomenclature</td>
+<td>ERNs</td>
+<td>•ERNs   are historical - ignore</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Wine   reference nomenclature</td>
+<td>n/a</td>
+<td>•Wine   references are historical - ignore</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Additional   codes</td>
+<td>Additional   codes</td>
+<td>•While   it is feasible that footnotes could be assigned to additional codes, there is   no value, as there is no public way to display them</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CN   measures</td>
+<td>Measures</td>
+<td>•These   two types share a similarity with the description of the nomenclature   application codes above.     •While   they are both applied to measures, only footnotes of application code type   ‘7’ can be applied to any measures, regardless of the tier in the code   hierarchy to which the measure is assigned     •There   is no clear reason to ever create a footnote that can only be applied to   measures with 8-digit commodity codes.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Other   measures</td>
+<td>Measures</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Meursing   Heading</td>
+<td>Meursing   headings</td>
+<td>•Meursing   codes are / will be historical - ignore</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Dynamic   footnote</td>
+<td>n/a</td>
+<td>•While   it is tempting to look at the dynamic footnote type and imagine that it can   be applied to any of the different data objects with impunity, and that may   have been the intention initially, it is pointed to note that the EU has only   ever created one type with this application code (TP – Dynamic footnote) and   the last time is was used was in 2015 – it is an answer to a question that   has not been posed, and should not be used.</td>
+</tr>
+
+        </table>
+      </div><p><strong>Proposed new footnote types</strong></p>
+
+<ul>
+<li>Footnotes are the last thing to be considered in a migration, as they are informational but not operational – the tariff will still function if the footnotes are omitted.</li>
+<li>The only exception to this rule has been the ECJU, which has been very keen to create footnotes that explain the requirement with regard to export controlled goods (such as dual use, goods for torture or sanctioned countries)</li>
+<li>Therefore, in migration, there will be very little attention paid to footnotes, unless a sea change in direction comes about during 2020.
+
+<ul>
+<li>No footnotes will be terminated</li>
+<li>No associations of footnotes to commodity codes will be terminated</li>
+<li>As EU measures are replaced by UK equivalents, in some cases the footnote assignment is not carried forward, though in like for like cases (e.g. a TAC agreement), the footnotes are carried forward like for like</li>
+<li>Even where footnotes reference specific EU legislation, the decision was taken to retain the footnotes as-is – it has been a case of ‘bigger fish to fry’.</li>
+</ul></li>
+<li>The key changes that the project team has proposed is to create three new footnote types for the benefit of the UK tariff &amp; Jersey / Guernsey</li>
+</ul>
+<div class="table-container">
+        <table>
+          <tr>
+<th>FOOTNOTE TYPE ID</th>
+<th>DESCRIPTION</th>
+<th>APPLICATION CODE</th>
+</tr>
+<tr>
+<td>FC</td>
+<td>Footnote   to be applied to goods classification</td>
+<td>2   (commodities)</td>
+</tr>
+<tr>
+<td>FM</td>
+<td>Footnote   to be applied to measures</td>
+<td>7   (measures)</td>
+</tr>
+<tr>
+<td>JG</td>
+<td>Footnote   applicable specifically to Jersey / Guernsey</td>
+<td>7   (measures)</td>
+</tr>
+
+        </table>
+      </div>
+<ul>
+<li>Our proposal is to simplify the identification of footnotes, by in the future using only 2 footnote types for the majority of entities and to extend to 5-digits for footnote IDs.</li>
+<li>The only exception could be in areas of specific interest, such as Dual Use Goods (which use the footnote type ID DU), though the preference should be for a clean slate – all footnotes use type FM for measures and type FC for commodities.</li>
+</ul>
+<p><strong>Linking tables for footnotes</strong></p>
+
+<ul>
+<li>The following is a list of all of the tables that are used to link footnotes to other entities in the Tariff database:
+
+<ul>
+<li>footnote_association_additional_codes_oplog</li>
+<li>footnote_association_erns_oplog</li>
+<li>footnote_association_goods_nomenclatures_oplog</li>
+<li>footnote_association_measures_oplog</li>
+<li>footnote_association_meursing_headings_oplog</li>
+</ul></li>
+<li>Those that are greyed out are of no interest, as there is no business requirement to link to them</li>
+<li>The other two are important</li>
+<li>Interestiung point to note here is that </li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93206655-a91ec880-f751-11ea-9693-5c2a66642bc2.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93206655-a91ec880-f751-11ea-9693-5c2a66642bc2.png" alt="image" /></a></p>
+<h3 id="key-user-needs-footnotes">Key user needs - footnotes</h3><div class="table-container">
+        <table>
+          <tr>
+<th>As a …</th>
+<th>I want to&hellip;</th>
+<th>So that …</th>
+<th>MoSCoW</th>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>create   a new footnote type</td>
+<td>I   can present it on the system and to be assigned to selected footnote.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>edit   the description of an existing footnote type</td>
+<td>I   can update the changes imposed and also be sent to the relevant external   systems.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>create   a new footnote</td>
+<td>I   can present it on the system and to be assigned to selected measures.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>edit   the description of an existing footnote</td>
+<td>I   can update the changes imposed and also be sent to the relevant external   systems.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>assign   a footnote</td>
+<td>I   can link it to one or more commodity codes on a given date.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>terminate   the assignment of a footnote to one or more commodity codes</td>
+<td>I   won’t accidentally assign a retired/incorrect footnote on the commodity code.</td>
+<td>Could   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>assign   a footnote</td>
+<td>I   can link it to one or more measure(s) on a given date.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>terminate   the assignment of a footnote to one or more measure(s)</td>
+<td>I   won’t accidentally assign a retired/incorrect footnote on the measure.</td>
+<td>Could   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>find   out the ID of the next available footnote for a given footnote type</td>
+<td>I   can be automatically be presented with a new ID generated by the system.</td>
+<td>Should   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>have   a workflow process</td>
+<td>All   certificate changes can be validated and approved before being sent to CDS.</td>
+<td>Must   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>have   the system validate relevant business rules accordingly</td>
+<td>It   won’t cause errors when validated in CDS.</td>
+<td>Should   Have</td>
+</tr>
+<tr>
+<td>Tariff   Manager</td>
+<td>have   a search filter</td>
+<td>I   can find the footnotes I need quickly.</td>
+<td>Must   Have</td>
+</tr>
+
+        </table>
+      </div><h3 id="key-business-rules-footnotes">Key business rules - footnotes</h3><div class="table-container">
+        <table>
+          <tr>
+<th>#</th>
+<th></th>
+<th>Rule</th>
+<th>Notes</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+<tr>
+<td>FOT1</td>
+<td></td>
+<td>The type of the footnote must be unique.</td>
+<td>Required – High priority</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FOT2</td>
+<td></td>
+<td>The footnote type cannot be deleted if it is used in a   footnote.</td>
+<td>Required – Low priority     Deletes are rarely required</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FOT3</td>
+<td></td>
+<td>The start date must be less than or equal to the end date.</td>
+<td>Required – Medium priority     End date should not be set</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FO1</td>
+<td></td>
+<td>The referenced footnote type must exist.</td>
+<td>Required – High priority     As the footnote type is selected from a dropdown, this   should not go wrong</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FO2</td>
+<td></td>
+<td>The combination footnote type and code must be unique.</td>
+<td>Required – High priority</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FO3</td>
+<td></td>
+<td>The start date must be less than or equal to the end date.</td>
+<td>Required – High priority</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FO4</td>
+<td></td>
+<td>At least one description record is mandatory. The start   date of the first description period must be equal to the start date of the   footnote. No two associated description periods may have the same start date.   The start date must be less than or equal to the end date of the footnote.</td>
+<td>Required – High priority    As a ‘type 2’ data object where the description can change over time, the   footnote descriptions object cannot exist without at least 1 description   record &amp; equivalent period record that starts on the same day as the   footnote record.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FO5</td>
+<td></td>
+<td>When a footnote is used in a measure the validity period   of the footnote must span the validity period of the measure.</td>
+<td>Required – High priority    End date for footnote is normally left open-ended.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FO6</td>
+<td></td>
+<td>When a footnote is used in a goods nomenclature the   validity period of the footnote must span the validity period of the   association with the goods nomenclature.</td>
+<td>Required – High priority    End date for footnote is normally left open-ended.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FO7</td>
+<td></td>
+<td>When a footnote is used in an Export refund nomenclature   code the validity period of the footnote must span the validity period of the   association with the Export refund code.</td>
+<td>Won’t Have    The use of Export Refund has been removed until further notice.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FO9</td>
+<td></td>
+<td>When a footnote is used in an Additional code the validity   period of the footnote must span the validity period of the association with   the Additional code.</td>
+<td>Won’t Have    No footnotes on additional codes</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FO10</td>
+<td></td>
+<td>When a footnote is used in a Meursing Table heading the   validity period of the footnote must span the validity period of the   association with the Meursing heading.</td>
+<td>Won’t Have    No footnotes on Meursing / Meursing likely to be dropped</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FO17</td>
+<td></td>
+<td>The validity period of the footnote type must span the   validity period of the footnote.</td>
+<td>Required – Medium priority     End date on footnotes and footnote types should not be set</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Delete   a footnote</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FO11</td>
+<td>When a footnote is used in a measure then the footnote may   not be deleted.</td>
+<td></td>
+<td></td>
+<td>Required</td>
+<td>Should Have</td>
+<td></td>
+</tr>
+<tr>
+<td>FO12</td>
+<td>When a footnote is used in a goods nomenclature then the   footnote may not be deleted.</td>
+<td></td>
+<td></td>
+<td>Required</td>
+<td>Should Have</td>
+<td></td>
+</tr>
+<tr>
+<td>FO13</td>
+<td>When a footnote is used in an Export Refund code then the   footnote may not be deleted.</td>
+<td></td>
+<td></td>
+<td>Not required</td>
+<td>Won’t Have    - The use of Export Refund Code has been removed until further notice.</td>
+<td></td>
+</tr>
+<tr>
+<td>FO15</td>
+<td>When a footnote is used in an additional code then the   footnote may not be deleted.</td>
+<td></td>
+<td></td>
+<td>Not required</td>
+<td>Won’t Have</td>
+<td></td>
+</tr>
+<tr>
+<td>FO16</td>
+<td>When a footnote is used in a Meursing Table heading then   the footnote may not be deleted.</td>
+<td></td>
+<td></td>
+<td>Not required</td>
+<td>Won’t Have    - The use of Meursing table has been removed until further notice.</td>
+<td></td>
+</tr>
+
+        </table>
+      </div>
             
           </main>
 
