@@ -230,7 +230,488 @@
 <polygon fill="#000000" stroke="#000000" points="211.4053,-101.5569 222,-101.5 213.6823,-94.9376 211.4053,-101.5569"/>
 </g>
 </g>
-</svg><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
+</svg><h3 id="introduction-to-measure-types">Introduction to measure types</h3><p><strong>Structure of measure types</strong>
+* Each measure belongs to exactly one measure type. The measure types describe to the border systems how to execute some kind of action on the trade in question (e.g. charge a duty / require a document).
+* While the data associated with a measure type is a pretty good explainer of what the measure is intended to do, there is a significant amount of work to be done by HMRC to make the measure behave as intended.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93358021-e4e08d80-f838-11ea-9279-fab13ffa86db.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93358021-e4e08d80-f838-11ea-9279-fab13ffa86db.png" alt="image" /></a></p>
+
+<ul>
+<li>This is even more important when one considers the continuing role that CHIEF will play during the dual running of the two border systems - CHIEF is unable to extend its measure type capability without programming: at least CDS can be configured to extend its measure type list.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93358003-df834300-f838-11ea-85ad-6556dfde87ce.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93358003-df834300-f838-11ea-85ad-6556dfde87ce.png" alt="image" /></a>
+Any changes to measures, additions of new measures will need to be agreed by HMRC in advance – their function cannot fully be described in Taric: see anomaly of measure type 696 (used in steel safeguards) below.</p>
+<p><strong>Regulation groups, measure types and Box 36 of the SAD form</strong>
+* In the regulation training manual, we mentioned the need for regulations to be assigned to the right regulation groups, because of the correlation required between the regulation group and what the trader enters in Box 36 on the SAD form.
+* Well the measure type falls into the same bracket – the measure types have to be actively correlated to regulation group IDs by HMRC in CDS.
+* Therefore, HMRC need to be involved in measure type creation.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93358894-ef4f5700-f839-11ea-9d85-75627fd21dd3.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93358894-ef4f5700-f839-11ea-9d85-75627fd21dd3.png" alt="image" /></a></p>
+<p><strong>Measure types &amp; responsibilities prior to the IP</strong></p>
+
+<ul>
+<li>There are c. 260 measure types in existence prior to the end of the implementation period (IP).</li>
+<li>Some of these have not been used in some time and can be considered as dead, even if they are not formally terminated on the database.</li>
+<li>c. 80 of these are VAT and excise measures that DIT will never get involved in.</li>
+<li>There remain about 100 measure types that will crop up over the course of the next year and will need to be understood, even if some of these are going to be omitted from the UK tariff (at least in the first instance).</li>
+<li>The measures that we need to manage can be broadly broken in to the following groups, with the table to the right showing the division of responsibility between the EU and the member states, represented for the UK by HMRC.</li>
+<li>These will evolve after the IP (Jan 2021).</li>
+</ul>
+<div class="table-container">
+        <table>
+          <tr>
+<th>The EU</th>
+<th>Third country (MFN) duties     Tariff preferences in Trade Agreements     Quotas in Trade Agreements     WTO quotas     Autonomous tariff quotas     Trade Remedies &amp; safeguards     Duty suspensions     Agricultural safeguards     Supplementary units     Credibility checks     Surveillance measures     Common prohibitions and restrictions</th>
+</tr>
+<tr>
+<td>The   member states (HMRC for the UK)</td>
+<td>National   prohibitions and restrictions     VAT     Excise</td>
+</tr>
+
+        </table>
+      </div><p><strong>Measure types &amp; responsibilities post-IP</strong>
+* After the IP, there will be a great degree of similarity in the applicable trade measures.
+* The major difference in responsibility will see the MTPO team in DIT’s Trade Policy Group replacing the role of the EU in co-ordinating and maintaining the measures that were previously seen as pan-European.
+* There are a number of other changes too, as per the notes column
+* These groups of measure types are detailed in subsequent pages.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93359429-81eff600-f83a-11ea-8afe-8e3178d3af69.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359429-81eff600-f83a-11ea-8afe-8e3178d3af69.png" alt="image" /></a></p>
+<p><strong>Measure type series</strong></p>
+
+<ul>
+<li>Each measure is associated with a single measure type.</li>
+<li>Each measure type is in turn associated with a single measure type series, in which additional properties of the measure type and its behaviour are stored, and the application logic for the measure types is sequenced.</li>
+<li>The measure type series are put in place to permit multiple means of overlaying measure types (and hence duties) via combination and exclusion.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93359967-135f6800-f83b-11ea-8d8e-c83987212500.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359967-135f6800-f83b-11ea-8d8e-c83987212500.png" alt="image" /></a></p>
+
+<ul>
+<li>If modifying measure types were considered dangerous, then modifying measure type series is much more dangerous – it is highly recommended that any work that DIT to represent measure types series is to present a read-only view: there should be no capability to manage the measure type series, as the impact is potentially so damaging.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93359667-c24f7400-f83a-11ea-890f-23de31d1cd8f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359667-c24f7400-f83a-11ea-890f-23de31d1cd8f.png" alt="image" /></a></p>
+<p><strong>Measure types series - measure type combination field</strong></p>
+
+<ul>
+<li>The measure type combination field determines how many measure types of a given type series can be applied on a trader’s declaration at any given time to the same context.</li>
+<li>There are just two valid options:</li>
+</ul>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>0</td>
+<td>Only   1 measure at export and 1 at import from the series</td>
+</tr>
+<tr>
+<td>1</td>
+<td>All   measure types in the series to be considered</td>
+</tr>
+
+        </table>
+      </div><p>What this does not mean
+* If measure type combination is set to 0, this does not mean that Tariff managers can only set up a single measure type from each measure types series in the same context.</p>
+<p>What this does mean
+* This does mean that a trader can only take advantage of one measure types from any given series (if combination set to 0).</p>
+<p>For example:
+* These commodities (8802110010, 8802120010, 8802200010, 8802300010, 8802400010) all have both 103 (Third country duty) and 105 (Non-preferential duty under end-use) applied to the same context1.
+* It is quite possible for a trade agreement to feature both a tariff preference and a preferential quota on the same context (commodity code), but the trader can only call on one of these, not both.
+* The measure type series identifies how different measures are applied alongside or overlaid.
+* For example, you cannot apply multiple measures from the same series (the trader must choose), but multiple measures from different series can be overlaid.
+* Hence, anti-dumping duties (series D) are overlaid on top of MFN duties (series C) - the to coexist, are additive and do not require selection by the trader.</p>
+<p>*<em>Existing measure type series *</em></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93360440-91bc0a00-f83b-11ea-8b5b-63b74d190a34.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93360440-91bc0a00-f83b-11ea-8b5b-63b74d190a34.png" alt="image" /></a></p>
+
+<ul>
+<li>This table is important in understanding how Taric-based border systems apply the measures that DIT has supplied.</li>
+<li>Firstly, the sequence matters – the alphabetical sequence of measure types series is the sequence in which CDS will look to implement the measures.</li>
+<li>Therefore, any complete prohibitions are dealt with first, via measures of type series A (Importation and/or exportation prohibited). If there is a complete prohibition that applies to the specific circumstances of the trade (e.g. the combination of commodity and origin), then that’s that – the trade cannot continue – working out anything else / checking certificates etc is of zero value.</li>
+<li>If there is no complete prohibition on the trade, then the next step is to work out if the trader has the necessary conditions in place, including certification or licensing, to allow the trade to pass (type series B). Again, if the necessary documentation or other conditions are not met, there calculating the import duty is somewhat academic.</li>
+<li>These two measure type series apply equally to imports / exports.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93360562-b617e680-f83b-11ea-9bbc-c82c043b8db9.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93360562-b617e680-f83b-11ea-9bbc-c82c043b8db9.png" alt="image" /></a></p>
+<p>Thirdly, after application of the prohibitions and restrictions, measure type series C is checked (applicable duty)
+* Series C contains the MFN duties, tariff preferences, all the quotas and all the suspensions – the trader picks one (actively)
+* Series D contains the anti-dumping and anti-subsidy duties – of these, if there are multiple that apply to a given context (for example both an anti-subsidy and anti-dumping duty on the same code for the same company), then they both apply: the trader does not get to choose the lower.
+* Series E and F contain Meursing duties, then we get to …
+* Series J is the countervailing charge series (officially) – the countervailing charge measure in this group is no longer used (since 2005), leaving just 695 (additional duties) and 696 (additional duties (safeguard)). Safeguards are the exception that prove the rule with regard to applicability duties according to measure type series sequence – this is discussed on the following pages.
+* Series M features measure types associated with agricultural safeguards, not duties (e.g. the SIV, Unit price)
+* Skipping N and O (non-duty-related), the next duty-bearing series are VAT and excise (series P and Q), which are applied over and above import duties.
+* Finally, series S contains the additional duties required by the agricultural safeguards re: chicken and other poultry goods, which are applied over and above any standard duty from series C.</p>
+<p><strong>Measure types per measure type series</strong></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Series</th>
+<th>Description</th>
+<th>Measures</th>
+<th>#</th>
+</tr>
+<tr>
+<td>A</td>
+<td>Importation   and/or exportation prohibited</td>
+<td>277, 278, 481,   485</td>
+<td>3</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Entry   into free circulation or exportation subject to conditions</td>
+<td>410, 420, 464, 465, 467, 473, 474, 475, 476,   477, 478,   479, 482, 483, 705,   706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 722,   724, 725, 728, 730, 735, 740, 745, 746, 747, 748, 749, 750, 751, 755, 760,   761,   770, 771, 772, 773, 774, AHC, AIL, ATT, CEX, CHM, COE, COI, CVD, DPO, ECM, EHC, EQC,   EWP, HOP, HSE, IWP, PHC, PRE, PRT, QRC,   SFS</td>
+<td>58</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Applicable   duty</td>
+<td>103, 105, 106, 112, 115, 117,   119, 122, 123, 140, 141, 142, 143, 144, 145,   146, 147</td>
+<td>13</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Anti-dumping   or countervailing duties</td>
+<td>551, 552, 553, 554, 555, 561,   562, 564, 565, 566, 570</td>
+<td>11</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Levies,   export refunds and other agricultural amounts</td>
+<td>674, 680, 681, 683, 684, 685, 686,   687, 688</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Additional   duty on sugar, flour</td>
+<td>672, 673</td>
+<td>2</td>
+</tr>
+<tr>
+<td>J</td>
+<td>Countervailing   charge</td>
+<td>690, 695, 696</td>
+<td>2</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Unit   price, standard import value, representative price (poultry, sugar)</td>
+<td>488, 489, 490</td>
+<td>3</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Posterior   surveillance</td>
+<td>430, 431,   440, 442,   445, 447,   450, 455, 456, 457, 460, 461, 462, 463, 468, 469, 470, 471, 472</td>
+<td>4</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Supplementary   unit</td>
+<td>109, 110</td>
+<td>2</td>
+</tr>
+<tr>
+<td>P</td>
+<td>VAT   (HMRC responsibility)</td>
+<td>305, VTA, VTE, VTS, VTZ</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>Excises   (HMRC responsibility)</td>
+<td>306, DAA, DAB, DAC, DAE, DAI,   DBA, DBB, DBC, DBE, DBI, DCA, DCC, DCE, DCH, DDA, DDB, DDC, DDD, DDE, DDF,   DDG, DDJ, DEA, DFA, DFB, DFC, DGC, DHA, DHC, DHE, EAA, EAE, EBA, EBB, EBE,   EBJ, EDA, EDB, EDE, EDJ, EEA, EEF, EFA, EFJ, EGA, EGB, EGJ, EHI, EIA, EIB,   EIC, EID, EIE, EIJ, EXA, EXB, EXC, EXD, FAA, FAE, FAI, FBC, FBG, LAA, LAE,   LBA, LBB, LBE, LBJ, LDA, LEA, LEF, LFA, LGJ</td>
+<td>♾</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Supplementary   amount</td>
+<td>651, 652, 653, 654,   655, 656, 657, 658</td>
+<td>4</td>
+</tr>
+
+        </table>
+      </div><p>This table illustrates, per measure series, the measure types that have not been actively end-dated. Bold indicates measures for which there is at last one measure in Jan 2020 (plus the provisional anti-dumping and countervailing duties, which happen to have no measures currently, but remain active).</p>
+<p><strong>Context - what does this mean?</strong>
+* First thing to say – this is a useful term invented by the project team: it is not a Taric term, but is a handy short hand for what it actually means
+* Here is a Taric sentence that helps to explain context: this is taken from Taric Business Processing rule ME1:</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93361328-a77dff00-f83c-11ea-9b72-474e5a45159b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93361328-a77dff00-f83c-11ea-9b72-474e5a45159b.png" alt="image" /></a></p>
+
+<ul>
+<li>No two measures that match on all of these fields can coexist – according to this rule, if just one field differs, then a second measure can be inserted.</li>
+<li>In fact, the stated rule is not as strict as reality – if there is any crossover of period of application (start &amp; end dates), then the measures will clash.</li>
+<li>In addition – conflict checking must also apply all the way up and down a commodity code hierarchy – this is explained below in the pages re: ME32</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93361439-c9778180-f83c-11ea-9091-fdbff7079021.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93361439-c9778180-f83c-11ea-9091-fdbff7079021.png" alt="image" /></a></p>
+<p><strong>The measure type 696 anomaly</strong></p>
+
+<ul>
+<li>Measure type 696 is the measure used to impose safeguards on imports of steel from multiple countries around the world, in an attempt to stabilise the flow of steel goods coming into the Union as a result of the USA’s imposition of similar safeguards: the upset to world trade flows caused such a glut of cheep steel to land on EU shores, that the EU had no option other than to follow suit.</li>
+<li>Safeguards are made up of two elements: a 25% safeguard additional duty, and a non-preferential quota, which essentially waives the safeguard.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93361731-18bdb200-f83d-11ea-8013-adb5c1cd7a11.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93361731-18bdb200-f83d-11ea-8013-adb5c1cd7a11.png" alt="image" /></a></p>
+
+<ul>
+<li>According to the additive rules of thumb re: measure type series, it is unclear by what mechanism the quota (type 122) can cancel out the additional duties (safeguard).</li>
+<li>The understanding is that this must have been achieved via some custom configuration in the border systems.</li>
+</ul>
+<h3 id="measure-type-fields">Measure type fields</h3><div class="table-container">
+        <table>
+          <tr>
+<th>Field</th>
+<th></th>
+</tr>
+<tr>
+<td>measure.type.id</td>
+<td>The unique ID of the measure type, as referenced in the   measure. This is always exactly 3 digits long. For measure types sourced from   the EU, this is a numeric string; for UK national measures (VAT, excise and   national P&amp;R, this is a 3-digit alphabetical string).</td>
+</tr>
+<tr>
+<td>validity.start.date</td>
+<td>The date from which a measure type is valid</td>
+</tr>
+<tr>
+<td>validity.end.date</td>
+<td>The date on which a measure type is terminated –   suggestion is that this gets left as NULL unless absolutely required to   change</td>
+</tr>
+<tr>
+<td>trade.movement.code</td>
+<td>Determines if the measure type is intended to be attached   to an import or export (or both). Possible values are:          0        Import – majority of measure types concern import, as the tariff        primarily deals with import      1        Export – most of these are export controls (e.g. sanctions)      2        Import/export – there are very few measure types which are applicable to        both import and export</td>
+</tr>
+<tr>
+<td>origin.dest.code</td>
+<td>This field is an exact duplicate of trade.movement.code   (above), but it is required in Taric. Also, ignore the definition of the   options that are listed in the Taric Elements guide: it is wrong – there are   three options that are possible, as above:          0        Import      1        Export      2        Import/export – (omitted in the Elements guide)</td>
+</tr>
+<tr>
+<td>priority.code</td>
+<td>This appears to be a redundant field, as literally all   EU-sourced measure types have a priority.code of “1” – if we are managing   measure types in the Tariff Application, we should use always set the value   to 1. There are national measure types (set in CHIEF) that have a   priority.code of 5.</td>
+</tr>
+<tr>
+<td>measure.component.applicable.code</td>
+<td>Determines if measure components (or measure condition   components) can be attached to this measure type – things like 3rd country   duty (103) and preferential tariff quota (143) require measure components,   whereas things like import / export controls must not have them (e.g.   Veterinary control 410).     This rule needs to be checked when creating measures</td>
+</tr>
+<tr>
+<td>order.number.capture.code</td>
+<td>Determines whether a quota order number should be assigned   to a measure of this type: there are two options:     1 Mandatory – e.g. 122 (Non preferential quota), 143   (Preferential quota)     2 Not permitted – e.g. 142 (Tariff preference)     This rule needs to be checked when creating measures</td>
+</tr>
+<tr>
+<td>measure.explosion.level</td>
+<td>This field determines how far down the hierarchy a measure   can be ‘exploded’ according to the less than helpful elements guide.   Essentially this means that the number of digits in the hierarchy to which   measures of this type can be assigned.     Always set this to 10 for import measures and to 8 for   export measures (in declaring exports, traders are only required to declare   at 8 digit level).</td>
+</tr>
+<tr>
+<td>measure.type.series.id</td>
+<td>The ID of the series – single alphabetical character; acts   as foreign key into the measure type series table, where additional   properties that relate to the execution of the measure types is set.</td>
+</tr>
+
+        </table>
+      </div><h3 id="logical-view-of-measure-types">Logical view of measure types</h3><p><strong>Primary duty-bearing measures – logical layout</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" alt="image" /></a></p>
+<p><strong>Trade remedy-related measures – logical layout</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" alt="image" /></a></p>
+<p><strong>SAD guidance &amp; credibility checks, monitoring</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370858-5de7e100-f849-11ea-8cb8-a11d1e854f19.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370858-5de7e100-f849-11ea-8cb8-a11d1e854f19.png" alt="image" /></a></p>
+<p><strong>Agri measures</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370873-62ac9500-f849-11ea-86d0-177fb380055d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370873-62ac9500-f849-11ea-86d0-177fb380055d.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370899-693b0c80-f849-11ea-917c-b1fd3d7d6f57.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370899-693b0c80-f849-11ea-917c-b1fd3d7d6f57.png" alt="image" /></a></p>
+<p><strong>Why there are so many import control measures … ME32</strong></p>
+
+<blockquote>
+<p>&ldquo;There may be no overlap in time with other measure occurrences with a goods code in the same nomenclature hierarchy which references the same measure type, geo area, order number, additional code and reduction indicator. This rule is not applicable for Meursing additional codes.&rdquo;</p>
+</blockquote>
+<p><strong>Jams, fruit jellies, marmalades …</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370932-75bf6500-f849-11ea-8b78-860bc4d152b1.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370932-75bf6500-f849-11ea-8b78-860bc4d152b1.png" alt="image" /></a></p>
+
+<ul>
+<li>As a tariff manager, I have been asked to create a new measure for ERGA OMNES of type “Import control” at level 4 “with a sugar content exceeding 30% by weight” – </li>
+<li>There is already a measure of type “Import control” at level 8 “Fruit purees obtained by sieving then brought to the boil in a vacuum, the texture and chemical composition of which have not been changed by the heat treatment”</li>
+<li>ME32 says no</li>
+<li>I can either rejig the measures in the entire hierarchy to suit to new measure OR …</li>
+<li>I can invent a new measure type “Import control for sieved fruit puree” … which is what the EU has done, and which we will also need to do in the future.</li>
+</ul>
+<h3 id="relationship-of-measure-types-to-additional-code-types">Relationship of measure types to additional code types</h3>
+<ul>
+<li>Relationship of measure types to additional code types</li>
+<li>The joining table additional_code_type_measure_types has been created to manage the limitations as to which additional codes can be applied to which measure types.</li>
+<li>It is not the case that additional codes can be assigned to measures of all types – these relationships have to be curated</li>
+<li>The Northern Ireland protocol is looking to bring in a revolutionary way of managing commodity codes, which may see UK commodity codes being represented as additional codes – if this is the case, then the case for this tool grows.</li>
+<li>Lists of all existing relationships of the following page.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93371576-7e646b00-f84a-11ea-8862-746dba8d1243.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93371576-7e646b00-f84a-11ea-8862-746dba8d1243.png" alt="image" /></a></p>
+<p><strong>Additional codes cannot be applied universally …</strong></p>
+<p>There is an additional many to many table within the tariff database that determines which additional code types can be used against which measure types. Currently there are 74 permutations of additional codes against measure types: there is little surprising about the alignment – e.g. you can only assign additional codes of type 8, A, B or C to measure types that are associated with Trade Remedies.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93371810-dd29e480-f84a-11ea-9ad4-672df937d192.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93371810-dd29e480-f84a-11ea-9ad4-672df937d192.png" alt="image" /></a></p>
+<p><strong>Measure types detail</strong></p>
+
+<ul>
+<li>Please see the main Tariff Manager training manual for detail on the measure types that will be used in the UK tariff.</li>
+<li>Bear in mind also that the thinking has changed slightly since that manual was written
+
+<ul>
+<li>changes to certain measure type descriptions (trade remedies)</li>
+<li>mutation of EU suspensions into UK reliefs</li>
+</ul></li>
+</ul>
+<h3 id="data-structures">Data structures</h3><p><a href="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" alt="image" /></a></p>
+<h3 id="screen-designs-footnotes">Screen designs - footnotes</h3><p>[THIS MIGHT BE MOVED TO A DIFFERENT SECTION SO HAVE NOT INCLUDED IT FOR NOW]</p>
+<h3 id="key-user-needs-footnotes">Key user needs - footnotes</h3><div class="table-container">
+        <table>
+          <tr>
+<th>UK Tariff Manager</th>
+<th>to find measure types</th>
+<th>I can view the measures associated with that measure type, view the   detail of that measure type and act as a gateway to edit the measure type.</th>
+<th>There will be very little requirement to edit the detail of measure   types, however there are c. 15 descriptions that need to be edited.</th>
+</tr>
+<tr>
+<td>UK   Tariff Manager</td>
+<td>to   create a new measure type</td>
+<td>I   can implement UK-specific trade policy</td>
+<td>This   will be required for the creation of UK-specific relief types</td>
+</tr>
+<tr>
+<td>UK   Tariff Manager</td>
+<td>to   modify the description of an existing measure type</td>
+<td>the   names of measure types, which are visible on the UK Trade Tariff Service and   the Trade with the UK service, can best reflect the needs of the UK   independent trade policy.</td>
+<td>This   will be required or modifications to certain trade remedy-related measure   types</td>
+</tr>
+<tr>
+<td>UK   Tariff Manager</td>
+<td>to   terminate an existing measure type</td>
+<td>I   can reduce clutter in the tariff management interface</td>
+<td>This   should be an extremely rare occurrence, probably never happens, therefore   could be left until later / never delivered, due to the number of business   rules that would need to be checked.</td>
+</tr>
+<tr>
+<td>UK   Tariff Manager</td>
+<td>to   protect the values of the measure type series tables</td>
+<td>I   can be sure that there is no undue impact on the safe-running of the border   systems (primarily CDS)</td>
+<td>Ideally,   measure type series would be viewable but not editable, at least until Trade   Policy requires that we edit it</td>
+</tr>
+<tr>
+<td>UK   Tariff Manager</td>
+<td>to   manage the association of measure types with additional code types</td>
+<td>any   newly created additional codes can be used against existing measure types and   any newly created measure types can be used against existing additional code   types.</td>
+<td>This   will become a relatively important piece if the work that is being undertaken   in the Northern Ireland Protocol leads to a solution where commodities are   managed via additional codes.          This   function should be managed through the additional code type function, not   through measure types.</td>
+</tr>
+<tr>
+<td>UK   Tariff Manager</td>
+<td>to   view the measures that are associated with a measure type</td>
+<td>I   can perform bulk operations / generate bulk reports or extracts on those   measure types, as required.</td>
+<td></td>
+</tr>
+
+        </table>
+      </div><h3 id="key-business-rules-footnotes">Key business rules - footnotes</h3><div class="table-container">
+        <table>
+          <tr>
+<th>#</th>
+<th>Rule</th>
+<th></th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>Measure   type series</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MTS1</td>
+<td>The measure type series must be unique.</td>
+<td>Not required     We should not be building an interface to facilitate the   management of measure type series</td>
+<td></td>
+</tr>
+<tr>
+<td>MTS2</td>
+<td>The measure type series cannot be deleted if it is   associated with a measure type.</td>
+<td>Not required     We should not be building an interface to facilitate the   management of measure type series</td>
+<td></td>
+</tr>
+<tr>
+<td>MTS3</td>
+<td>The start date must be less than or equal to the end date.</td>
+<td>Not required     We should not be building an interface to facilitate the   management of measure type series</td>
+<td></td>
+</tr>
+<tr>
+<td>Measure   types</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MT1</td>
+<td>The  measure type   code must be unique.</td>
+<td>Required     Should be checked on creation of new measure types</td>
+<td></td>
+</tr>
+<tr>
+<td>MT2</td>
+<td>The start date must be less than or equal to the end date.</td>
+<td>Required     Business users should be heavily discouraged from   terminating measure types however</td>
+<td></td>
+</tr>
+<tr>
+<td>MT3</td>
+<td>When a measure type is used in a measure then the validity   period of the measure type must span the validity period of the measure.</td>
+<td>Required     As above, business users should be heavily discouraged   from terminating measure types, making this a largely redundant rule</td>
+<td></td>
+</tr>
+<tr>
+<td>MT4</td>
+<td>The referenced measure type series must exist.</td>
+<td>Required     Measure type series should be selected from a dropdown;   and no change will be permitted to the values in the measure type series   table</td>
+<td></td>
+</tr>
+<tr>
+<td>MT7</td>
+<td>A measure type can not be deleted if it is used in a   measure.</td>
+<td>Required     This could probably be pushed into Year x – there should   be no requirement to delete measure types</td>
+<td></td>
+</tr>
+<tr>
+<td>MT10</td>
+<td>The validity period of the measure type series must span   the validity period of the measure type.</td>
+<td>Not required     All measure type series records are open-ended</td>
+<td></td>
+</tr>
+<tr>
+<td>Relationship   of additional code types to measure types</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AMT1</td>
+<td>The measure type must exist.</td>
+<td></td>
+<td>Required</td>
+</tr>
+<tr>
+<td>AMT2</td>
+<td>The additional code type must exist.</td>
+<td></td>
+<td>Required</td>
+</tr>
+<tr>
+<td>AMT3</td>
+<td>The combination of additional code type and measure type   must be unique.</td>
+<td></td>
+<td>Required</td>
+</tr>
+<tr>
+<td>AMT4</td>
+<td>The validity period of the measure type and that of the   additional code type must span the validity period of the “measure   type-additional code type” link.</td>
+<td></td>
+<td>Required</td>
+</tr>
+<tr>
+<td>AMT5</td>
+<td>The start date must be less than or equal to the end date.</td>
+<td></td>
+<td>Required</td>
+</tr>
+<tr>
+<td>AMT7</td>
+<td>The association between the additional code type and the   measure type cannot be deleted if there is an additional nomenclature measure   which uses this measure type and this additional code type.</td>
+<td></td>
+<td>Required</td>
+</tr>
+
+        </table>
+      </div><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
