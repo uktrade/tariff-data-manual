@@ -451,19 +451,22 @@ Measures of this type are being removed from the UK Tariff in Feb 2020.</p>
 <li>Even though the Taric business processing rules document states that the measure start date under certain circumstances is optional, it is wrong.</li>
 <li>The schema requires a measure start date in the format yyyy-mm-dd</li>
 </ul>
-<p><strong>Validity start dates and end dates are treated differently in the Tariff.</strong>
-* Validity start date means 00:00 at the start of the day
-* Validity end date means 00:00 at the end of the day.
-* Therefore a measure that starts on Jan 1st and also ends on Jan 1st lasts for a full 24 hours and not zero hours.
-* There is no concept of time in the tariff for ‘Taric’ measures, i.e. those that fit into the normal EU schema, which we are adopting.
-* However, for VAT and excise, the concept of time has been introduced, as this is required to time changes with budget speeches.</p>
+<p><strong>Validity start dates and end dates are treated differently in the Tariff.</strong></p>
+
+<ul>
+<li>Validity start date means 00:00 at the start of the day</li>
+<li>Validity end date means 00:00 at the end of the day.</li>
+<li>Therefore a measure that starts on Jan 1st and also ends on Jan 1st lasts for a full 24 hours and not zero hours.</li>
+<li>There is no concept of time in the tariff for ‘Taric’ measures, i.e. those that fit into the normal EU schema, which we are adopting.</li>
+<li>However, for VAT and excise, the concept of time has been introduced, as this is required to time changes with budget speeches.</li>
+</ul>
 <p><strong>Measures and regulations</strong></p>
 <p>A measure is associated to two sets of regulations, depending on its status. These are referred to as follows:</p>
 <p>Measure-generating regulations:</p>
 
 <ul>
 <li>The measure-generating regulation is mandatory for all measures.</li>
-<li>This is the regulation that gives measures their legal base. The reference to the measure-generating regulation is split into two fields
+<li><p>This is the regulation that gives measures their legal base. The reference to the measure-generating regulation is split into two fields</p>
 
 <ul>
 <li>measure_generating_regulation_role</li>
