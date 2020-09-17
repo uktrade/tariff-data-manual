@@ -12,9 +12,13 @@ WIKI_FILES   = FileList["#{INPUT_DIR}/*"]
 OUTPUT_FILES = WIKI_FILES.map {|n| File.join *n.gsub(INPUT_DIR, OUTPUT_DIR).gsub('.md','.html.md.erb').downcase.split(SEPARATOR) }
 INDEX_FILE   = File.join OUTPUT_DIR, '../', 'index.html.md.erb'
 
+TOP_LEVEL_HEADER = /^#\s+.*$/
+
 task default: :build
 
-task build: OUTPUT_FILES do
+task pages: OUTPUT_FILES
+
+task build: :pages do
   sh 'middleman', 'build', '--verbose'
 end
 
@@ -26,13 +30,15 @@ OUTPUT_FILES.zip(WIKI_FILES).each do |output, input|
     File.open(output, 'w') do |o|
       rake_output_message "echo ... > #{output}"
       contents = File.read input
+      header_line = contents.scan(TOP_LEVEL_HEADER).first || "# #{title}"
       o.puts '---'
       o.puts "title: \"#{title}\""
       o.puts "source_url: \"#{File.join 'https://github.com', GITHUB_REPO, 'wiki', input.pathmap('%n')}\""
       o.puts 'weight: 0' if output == INDEX_FILE
       o.puts '---'
-      o.puts "# #{title}" unless contents =~ /^#\s\S+/
-      o.puts contents
+      o.puts header_line
+      o.puts '<%= toc(current_page) %>'
+      o.puts contents.gsub(TOP_LEVEL_HEADER, '')
       o.puts '<%= stylesheet_link_tag :dot %>' if contents =~ /^```dot/
     end
   end
