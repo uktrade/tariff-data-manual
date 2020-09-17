@@ -189,42 +189,17 @@
 <li>
 <a href="#entering-duties">Entering duties</a>
 </li>
-</ul>
-<p></li>
 <li>
 <a href="#screens-measures">Screens – measures</a>
-<ul>
-<li>
-<a href="#search-for-measures">Search for measures</a>
-</li>
-<li>
-<a href="#measures-search-results">Measures search results</a>
-</li>
-<li>
-<a href="#display-of-complex-conditions">Display of complex conditions</a>
-</li>
-<li>
-<a href="#extreme-conditions">Extreme conditions</a>
-</li>
-<li>
-<a href="#view-of-tooltips-for-columns-that-need-explaining">View of tooltips for columns that need explaining</a>
-</li>
-<li>
-<a href="#footnotes-column-can-also-get-very-busy">Footnotes column – can also get very busy</a>
-</li>
-</ul>
 </li>
 <li>
 <a href="#key-user-needs">Key user needs</a>
 </li>
 <li>
 <a href="#key-business-rules">Key business rules</a>
-<ul>
-<li>
-<a href="#me32-and-jams-fruit-jellies-marmalades">ME32 and Jams, fruit jellies, marmalades</a>
 </li>
 </ul>
-</li>
+<p></li>
 </ul>
 </li>
 </ul></p>
@@ -671,7 +646,8 @@ Measures of this type are being removed from the UK Tariff in Feb 2020.</p>
 <li>The validity column to the right is just a check (adding 1, 2, 4 and 8 to make 15) that the expression is valid according to the criteria noted bottom left.</li>
 <li>The PHP is rough and ready but should be easily interpretable for translation into Python and componentisation.</li>
 </ul>
-<h2 id="screens-measures">Screens – measures</h2><h3 id="search-for-measures">Search for measures</h3><p><a href="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" alt="image" /></a></p>
+<h3 id="screens-measures">Screens – measures</h3><p><strong>Search for measures</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" alt="image" /></a></p>
 
 <ul>
 <li>The search screen is vastly cut down in comparison to the existing TAP measure search screen.</li>
@@ -681,32 +657,40 @@ Measures of this type are being removed from the UK Tariff in Feb 2020.</p>
 <li>In the case of commodity code and regulation, the operator dropdown should include both “is one of” and “starts with” to allow exact matches, stemmed matches and searches against multiple precise items (by request of the policy team).</li>
 <li>Use type ahead on measure type, geography and quota order number fields.</li>
 </ul>
-<h3 id="measures-search-results">Measures search results</h3><p><a href="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" alt="image" /></a></p>
-<p>Search results screen is common across most data objects – with measures (and quotas), the most important point to note is that there is no left-hand side filter capability - there is no room, as there is so much data that need to be returned. Search results table must include:
-* View of number of results returned (above and below table)
-* Link to export the entire dataset (not just the current page) to CSV
-* Button to work with selected measures (both above and below the table)
-* Table in GDS table style, but with font size shrunk to 12 point to fit the requisite volume of data.
-* Table headers with sort controls, as appropriate (no value in sorting on measure_sid, duties, exclusions, conditions, footnotes, status).
-* Tooltip controls on table headers where appropriate – on this form especially useful on the conditions column, which is complex
-* For the measure SID column, it must be possible to select all measures, for use in the “work with” functions
-* For each measure, click on the measure_sid column value to navigate to the specific measure
-* Click on data in the regulation column to navigate to that regulation.
-* Click on data in the type (measure type) column to navigate to that measure type.
-* Click on data in the additional code column to navigate to that additional code.
-* Click on data in the geography and exclusions column to navigate to that geography.
-* Click on data in the QON (Quota order number) column to navigate to that quota order number.
-* Show status as icon
-* Under table show paging – this screen grab has been doctored to show only 10 results: suggestion is 100 results per page for measures.</p>
-<h3 id="display-of-complex-conditions">Display of complex conditions</h3><p><a href="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" alt="image" /></a></p>
+<p><strong>Measures search results</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" alt="image" /></a></p>
+<p>Search results screen is common across most data objects – with measures (and quotas), the most important point to note is that there is no left-hand side filter capability - there is no room, as there is so much data that need to be returned. Search results table must include:</p>
+
+<ul>
+<li>View of number of results returned (above and below table)</li>
+<li>Link to export the entire dataset (not just the current page) to CSV</li>
+<li>Button to work with selected measures (both above and below the table)</li>
+<li>Table in GDS table style, but with font size shrunk to 12 point to fit the requisite volume of data.</li>
+<li>Table headers with sort controls, as appropriate (no value in sorting on measure_sid, duties, exclusions, conditions, footnotes, status).</li>
+<li>Tooltip controls on table headers where appropriate – on this form especially useful on the conditions column, which is complex</li>
+<li>For the measure SID column, it must be possible to select all measures, for use in the “work with” functions</li>
+<li>For each measure, click on the measure_sid column value to navigate to the specific measure</li>
+<li>Click on data in the regulation column to navigate to that regulation.</li>
+<li>Click on data in the type (measure type) column to navigate to that measure type.</li>
+<li>Click on data in the additional code column to navigate to that additional code.</li>
+<li>Click on data in the geography and exclusions column to navigate to that geography.</li>
+<li>Click on data in the QON (Quota order number) column to navigate to that quota order number.</li>
+<li>Show status as icon</li>
+<li>Under table show paging – this screen grab has been doctored to show only 10 results: suggestion is 100 results per page for measures.</li>
+</ul>
+<p><strong>Display of complex conditions</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" alt="image" /></a></p>
 <p>The data in the conditions column is potentially very complicated and needs to be represented on the search results form – especially with Trade Remedies, the duties may be held in the conditions and this is perhaps the critical piece of information being sought.</p>
-<p>The colour coding is helpful in separating out the components of a condition, all of which are important to the processing of the data in CDS, Gems and Caesar
-For each line in the conditions column, this is what is meant:
-* blue – the condition code and sequence number
-* purple – the reference price (import price greater than …)
-* red – the required certificate
-* green – the action code
-* black – the applicable duties</p>
+<p>The colour coding is helpful in separating out the components of a condition, all of which are important to the processing of the data in CDS, Gems and Caesar</p>
+<p>For each line in the conditions column, this is what is meant:</p>
+
+<ul>
+<li>blue – the condition code and sequence number</li>
+<li>purple – the reference price (import price greater than …)</li>
+<li>red – the required certificate</li>
+<li>green – the action code</li>
+<li>black – the applicable duties</li>
+</ul>
 <p>Not all elements are likely to occur together – in fact the nature of conditions is such that there will either be a reference price or there will be a requirement for a certificate, not both, as per the example to the left. Taking the first row, against commodity 85 41 40 90 41 and additional code B845, the following data applies:</p>
 
 <ul>
@@ -716,17 +700,20 @@ For each line in the conditions column, this is what is meant:
 <li>Condition 2 of type F, which states that if the net free at frontier price (import price) &gt; 0.248 EUR WAT, then apply the difference between import price and duty up to 0.350%</li>
 <li>Condition 3 of type F, which states that if the net free at frontier price (import price) &gt; 0.0 EUR WAT, then apply the duty 31.300%</li>
 </ul>
-<h3 id="extreme-conditions">Extreme conditions</h3><p><a href="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" alt="image" /></a></p>
-<h3 id="view-of-tooltips-for-columns-that-need-explaining">View of tooltips for columns that need explaining</h3>
+<p><strong>Extreme conditions</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" alt="image" /></a></p>
+<p><strong>View of tooltips for columns that need explaining</strong></p>
+
 <ul>
 <li>Two examples of tooltips where the column data benefits from more explanation – the most important one here is the conditions tooltip, where there is potentially a lot of complex data (as per previous slide).</li>
 <li>Yes, this uses colour to indicate meaning, therefore running into some challenge for colour-blind users, however it is not the only indicator of meaning.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/92722702-e2c18f00-f35f-11ea-818f-a33219791454.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722702-e2c18f00-f35f-11ea-818f-a33219791454.png" alt="image" /></a></p>
-<h3 id="footnotes-column-can-also-get-very-busy">Footnotes column – can also get very busy</h3><p><a href="https://user-images.githubusercontent.com/61055197/92722796-07b60200-f360-11ea-893d-81cdfcffa2be.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722796-07b60200-f360-11ea-893d-81cdfcffa2be.png" alt="image" /></a></p>
+<p><strong>Footnotes column – can also get very busy</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92722796-07b60200-f360-11ea-893d-81cdfcffa2be.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722796-07b60200-f360-11ea-893d-81cdfcffa2be.png" alt="image" /></a></p>
 <p>The image to the left shows the 99 footnotes that currently apply to the import of various dual use goods into the EU.</p>
 <p>The import control team should eventually review the complexity of this and reduce, however it is unlikely to happen for day one.</p>
-<h2 id="key-user-needs">Key user needs</h2><div class="table-container">
+<h3 id="key-user-needs">Key user needs</h3><div class="table-container">
         <table>
           <tr>
 <th>As a …</th>
@@ -778,7 +765,7 @@ For each line in the conditions column, this is what is meant:
 </tr>
 
         </table>
-      </div><h2 id="key-business-rules">Key business rules</h2><div class="table-container">
+      </div><h3 id="key-business-rules">Key business rules</h3><div class="table-container">
         <table>
           <tr>
 <th>#</th>
@@ -852,7 +839,8 @@ For each line in the conditions column, this is what is meant:
 </tr>
 
         </table>
-      </div><h3 id="me32-and-jams-fruit-jellies-marmalades">ME32 and Jams, fruit jellies, marmalades</h3><p><a href="https://user-images.githubusercontent.com/61055197/92740913-0b548380-f376-11ea-8bb2-de09cf9d80fa.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92740913-0b548380-f376-11ea-8bb2-de09cf9d80fa.png" alt="image" /></a></p>
+      </div><p><strong>ME32 and Jams, fruit jellies, marmalades</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92740913-0b548380-f376-11ea-8bb2-de09cf9d80fa.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92740913-0b548380-f376-11ea-8bb2-de09cf9d80fa.png" alt="image" /></a></p>
 
 <ul>
 <li>As a tariff manager, I have been asked to create a new measure for ERGA OMNES of type “Import control” at level 4 “with a sugar content exceeding 30% by weight” – </li>
