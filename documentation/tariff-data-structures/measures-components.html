@@ -145,9 +145,483 @@
 <ul>
 <li>
 <a href="#measures-components">Measures components</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#introduction-to-measure-components">Introduction to measure components</a>
+</li>
+<li>
+<a href="#managing-duties-in-tap-ii">Managing duties in TAP II</a>
+</li>
+<li>
+<a href="#supplementary-units">Supplementary units</a>
+</li>
+<li>
+<a href="#measure-condition-components">Measure condition components</a>
+</li>
+<li>
+<a href="#key-business-processing-rules">Key business processing rules</a>
 </li>
 </ul>
+<p></li>
+</ul>
+</li>
+</ul></p>
+<h3 id="introduction-to-measure-components">Introduction to measure components</h3>
+<ul>
+<li>Measure components basically equate to duties applied to tariff measures.</li>
+<li>Not all tariff measures have duties associated with them – for instance measures of type 103, 142 or 143 (third country duty, tariff preference and preferential tariff rate quota) require duties, but for others, e.g. 277 Import prohibition, measure components are not permitted.</li>
+<li>The screen grab to the right shows the duties / measure component column on the UK Trade Tariff service.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93507608-d0be8e00-f915-11ea-90f7-208e03d30913.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93507608-d0be8e00-f915-11ea-90f7-208e03d30913.png" alt="image" /></a></p>
+<p><strong>Types of duty</strong></p>
+<p>Broadly speaking, there are three kinds of duties that can be applied to a measure:</p>
 
+<ul>
+<li>Ad valorem duty, for example 0.00% or 3.60% (a percentage additional duty applied to the import duty of the goods)</li>
+<li>Specific duty, for example 4.200 EUR / KGM or 110.00 EUR / LTR (an import duty that is dependent on the weight / volume of goods being imported and not just the import price)</li>
+<li>Compound duty – a combination of the above ad valorem and compound types, e.g. 3.60% + 110 EUR / LTR</li>
+</ul>
+<p>In addition, there are ‘conjunctions’ which join multiple ‘clauses’ within the duty sentence, as follows:</p>
+<p><strong>Min (down to a minimum of …)</strong>
+<strong>Max (up to a maximum of …)</strong></p>
+<p>Fourthly, there are duty placeholders that are used to manage Meursing code inserts for complex agri-foods – though this is not a policy that the UK intends to take forward after the implementation period, it is worth bearing this in mind – this is explained in a separate document “Meursing codes”</p>
+<p>Finally, there are is a concept called “Supplementary units” which is dealt with in the ”Measurements” document but referenced here.</p>
+<p><strong>Introduction to measure components</strong>
+* A measure component is the term used in tariff management to describe the elements that make up a tariff duty.
+* The example to the right shows a screen grab of a page from the Trade Tariff Service for ‘white chocolate’
+* This is a deliberately extreme example, as the duties applied to the import of white chocolate into the European Union illustrate a number of the concepts behind management of duties and measure components.
+* The full duty applicable to the import of white chocolate (1704903000) is as follows:
+9.10 % + 45.10 EUR / 100 kg MAX 18.90 % + 16.50 EUR / 100 kg
+* This is a ferociously complex duty that is a pair of compound duties joined together by a MAX conjunction
+* The next slide illustrates how this is broken into multiple measure components.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93507687-f055b680-f915-11ea-8856-210c74c209eb.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93507687-f055b680-f915-11ea-8856-210c74c209eb.png" alt="image" /></a></p>
+<p><strong>Breaking down a duty string</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93507767-124f3900-f916-11ea-994c-21ebb8b2a923.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93507767-124f3900-f916-11ea-994c-21ebb8b2a923.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93507782-17ac8380-f916-11ea-8474-b70e2f2d96c0.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93507782-17ac8380-f916-11ea-8474-b70e2f2d96c0.png" alt="image" /></a></p>
+<p>graph &ldquo;Measures&rdquo; {
+  rankdir=LR
+  node [shape=box]</p>
+<p>measure1 [label=Measure component]
+  measure2 [label=Measure component]
+  measure3 [label=Measure component]
+  measure4 [label=Measure component]</p>
+<p>&ldquo;Measure&rdquo; &ndash; measure1
+  &ldquo;Measure&rdquo; &ndash; measure2
+  &ldquo;Measure&rdquo; &ndash; measure3
+  &ldquo;Measure&rdquo; &ndash; measure4
+}</p>
+<p><strong>Introduction to duty expressions</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93519105-b391bb80-f925-11ea-8ce6-31761d89017c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519105-b391bb80-f925-11ea-8ce6-31761d89017c.png" alt="image" /></a></p>
+
+<ul>
+<li>The table lists all of the possible duty expressions that can be used.</li>
+<li>The duty expression indicates to the border system how to treat the values that are attributed to the other columns in the measure_component table.</li>
+<li>Although there are 32 listed, very few of these are used on a regular basis. The ones that are used regularly are highlighted in yellow.</li>
+<li>Those highlighted in green are massively prevalent right now in the EU tariff, but are expected to fall away in the UK tariff after the implementation period (Meursing codes).</li>
+<li>The numbers of the duty expression IDs are essentially arbitrary, but they imbue meaning that is shared across Taric-based systems.</li>
+<li>They are immutable – we cannot change or append to these and we cannot delete any unless we want to cause significant heartache for the CDS team in HMRC.</li>
+</ul>
+<p><strong>Duty expression sequencing &amp; duality</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93519438-2c911300-f926-11ea-94d3-e60cb9a3c569.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519438-2c911300-f926-11ea-94d3-e60cb9a3c569.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93519449-3155c700-f926-11ea-9ff6-926aa8f00b63.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519449-3155c700-f926-11ea-9ff6-926aa8f00b63.png" alt="image" /></a></p>
+<p><strong>Grouping duty expressions</strong></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Requirement</th>
+<th>Use duty expression …</th>
+</tr>
+<tr>
+<td>To   add an ad valorem duty or specific duties …</td>
+<td>01,   04, 19 and 20</td>
+</tr>
+<tr>
+<td>To   add an ad valorem duty or specific duties after a MAX clause</td>
+<td>17   and 35</td>
+</tr>
+<tr>
+<td>To   add an ad valorem duty or specific duties after a MIN clause</td>
+<td>15</td>
+</tr>
+<tr>
+<td>To   add a Meursing placeholder …</td>
+<td>12,   14, 21, 25, 27 and 29</td>
+</tr>
+<tr>
+<td>To   add a supplementary unit</td>
+<td>99</td>
+</tr>
+
+        </table>
+      </div><p>And that’s pretty much it. It is not up to you to choose which of the grouped duty expressions to use:
+* use 01 in all occasions for an ad valorem duty or specific duties …
+* unless there is a compound duty, in which case use 01 followed by 04
+* etc.</p>
+<p>White chocolate’s duty string contains four elements, as per the measure components:</p>
+
+<ul>
+<li>9.10 % - a simple ad valorem (duty expression 01)</li>
+<li>45.10 EUR / 100 kg – a specific duty (duty expression 04)</li>
+<li>MAX 18.90 % - a simple ad valorem (again), introduced by a Max conjunction (duty expression 17)</li>
+<li>16.50 EUR / 100 kg – a second specific duty (duty expression 19)</li>
+</ul>
+<p>On the previous slide, we describe the duty expressions 01, 04 and 19 (and 20) as being functionally identical, however, they display differently – this is solely down to the other values in the table row.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93520618-aa551e80-f926-11ea-9151-986cdee88d2a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93520618-aa551e80-f926-11ea-9151-986cdee88d2a.png" alt="image" /></a></p>
+<p>Simply speaking, follow these rules of thumb for standard duty expressions (excluding Meursing and supplementary units):</p>
+
+<ul>
+<li>if there is a value set in the monetary unit code column, then we are looking at a specific duty; if there is no value in this column then this is an ad valorem duty. This is why the duty expression description is ”% or amount”</li>
+<li>the monetary unit will always be EUR (Euros)</li>
+<li>if the monetary unit is specified, then the measurement unit must also be specified: you cannot have a specific duty that requires the importer to pay €x per … </li>
+<li>if the measurement unit is specified, you may also apply a qualifier – this is not mandated and is in fact quite uncommon, but is used to specify measurement units such as “kilogramme net weight” or ”kilogramme gross weight” etc.</li>
+<li>The measurement unit qualifiers can only be applied to certain pre-mandated measurement units.</li>
+</ul>
+<p><strong>About measurement units</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93520800-f56f3180-f926-11ea-9788-82ad0ec18110.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93520800-f56f3180-f926-11ea-9788-82ad0ec18110.png" alt="image" /></a></p>
+
+<ul>
+<li>The tables above identify the measurement units that can be used.</li>
+<li>As with many of the Taric objects, there is a lot of historical content that has not been used for some time.</li>
+<li>The yellow highlighted cells are those measurement units that have been used in the past 10 years</li>
+<li>It may be appropriate to hide the less recently used measurement units from tariff managers.</li>
+<li>The IDs of these units are not always especially self-explanatory</li>
+<li>Pay special attention to NAR, which is very commonly used. Presumably, this is a German abbreviation (e.g. Nummer Artikeln), but it means number of items. To confuse even more, on the Trade Tariff Service and on the EU Taric Consultation, this is referred to as “p/s” (which stands for pièces / Stücke (items in FR / DE). Finally number of items is often referred to as “heads”, when referencing livestock, e.g. cattle especially in quotas. You have been warned.</li>
+</ul>
+<p><strong>About measurement unit qualifiers</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93520975-3d8e5400-f927-11ea-9619-752b32412f5e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93520975-3d8e5400-f927-11ea-9619-752b32412f5e.png" alt="image" /></a></p>
+
+<ul>
+<li>The table to above identifies the measurement unit qualifiers that can be used. Those highlighted in yellow are those that have been used since Jan 2021.</li>
+<li>The table below is used to identify which qualifiers can be used alongside which measurement codes. It’s vital that the TAP interface does not allow any combination of unit and qualifier not specified in the measurements table.</li>
+</ul>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Measurement unit</th>
+<th>Description</th>
+<th>Measurement unit qualifier</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>ASV</td>
+<td>%vol</td>
+<td>X</td>
+<td>Hectolitre</td>
+</tr>
+<tr>
+<td>DTN</td>
+<td>Hectokilogram</td>
+<td>E</td>
+<td>net of drained weight</td>
+</tr>
+<tr>
+<td>DTN</td>
+<td>Hectokilogram</td>
+<td>F</td>
+<td>of common wheat</td>
+</tr>
+<tr>
+<td>DTN</td>
+<td>Hectokilogram</td>
+<td>G</td>
+<td>Gross</td>
+</tr>
+<tr>
+<td>DTN</td>
+<td>Hectokilogram</td>
+<td>L</td>
+<td>of live weight</td>
+</tr>
+<tr>
+<td>DTN</td>
+<td>Hectokilogram</td>
+<td>M</td>
+<td>net of dry matter</td>
+</tr>
+<tr>
+<td>DTN</td>
+<td>Hectokilogram</td>
+<td>R</td>
+<td>of the standard quality</td>
+</tr>
+<tr>
+<td>DTN</td>
+<td>Hectokilogram</td>
+<td>S</td>
+<td>of sugar with a yield in white sugar of 92%</td>
+</tr>
+<tr>
+<td>DTN</td>
+<td>Hectokilogram</td>
+<td>Z</td>
+<td>per 1% by weight of sucrose</td>
+</tr>
+<tr>
+<td>KGM</td>
+<td>Kilogram</td>
+<td>A</td>
+<td>Total alcohol</td>
+</tr>
+<tr>
+<td>KGM</td>
+<td>Kilogram</td>
+<td>E</td>
+<td>net of drained weight</td>
+</tr>
+<tr>
+<td>KGM</td>
+<td>Kilogram</td>
+<td>G</td>
+<td>Gross</td>
+</tr>
+<tr>
+<td>KGM</td>
+<td>Kilogram</td>
+<td>P</td>
+<td>of lactic matter</td>
+</tr>
+<tr>
+<td>KGM</td>
+<td>Kilogram</td>
+<td>S</td>
+<td>of sugar with a yield in white sugar of 92%</td>
+</tr>
+<tr>
+<td>KGM</td>
+<td>Kilogram</td>
+<td>T</td>
+<td>of dry lactic matter</td>
+</tr>
+<tr>
+<td>LTR</td>
+<td>Litre</td>
+<td>A</td>
+<td>Total alcohol</td>
+</tr>
+<tr>
+<td>MTQ</td>
+<td>Cubic meter</td>
+<td>C</td>
+<td>1 000</td>
+</tr>
+<tr>
+<td>NAR</td>
+<td>Number of items</td>
+<td>B</td>
+<td>per flask</td>
+</tr>
+<tr>
+<td>TNE</td>
+<td>Tonne</td>
+<td>E</td>
+<td>net of drained weight</td>
+</tr>
+<tr>
+<td>TNE</td>
+<td>Tonne</td>
+<td>I</td>
+<td>of biodiesel content</td>
+</tr>
+<tr>
+<td>TNE</td>
+<td>Tonne</td>
+<td>J</td>
+<td>of fuel content (usually in form of tallow, stearin, paraffin wax or   other waxes, including the wick)</td>
+</tr>
+<tr>
+<td>TNE</td>
+<td>Tonne</td>
+<td>K</td>
+<td>of bioethanol content</td>
+</tr>
+<tr>
+<td>TNE</td>
+<td>Tonne</td>
+<td>M</td>
+<td>net of dry matter</td>
+</tr>
+<tr>
+<td>TNE</td>
+<td>Tonne</td>
+<td>R</td>
+<td>of the standard quality</td>
+</tr>
+<tr>
+<td>TNE</td>
+<td>Tonne</td>
+<td>Z</td>
+<td>per 1% by weight of sucrose</td>
+</tr>
+
+        </table>
+      </div><h3 id="managing-duties-in-tap-ii">Managing duties in TAP II</h3><p>[may be moved to a different section so have not included it yet]</p>
+<h3 id="supplementary-units">Supplementary units</h3><p>On most occasions, when a trader is declaring their goods for import, they are mandated to declare the weight of their goods in kilogrammes (KGM).</p>
+<p>However, there are times where this is not the measurement required – common measurement types might be “number of items” for livestock, volume in litres for liquid items, “number of pairs” for socks etc. (really).</p>
+<p>On such an occasion the trader is asked to complete box 41 on the SAD form (below) – the trader must enter the numeric value and the supplementary unit, e.g. 247 items (NAR) or 15,000 litres of pure alcohol (LPA).</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93506235-e763e580-f913-11ea-9fe2-3313da065e65.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93506235-e763e580-f913-11ea-9fe2-3313da065e65.png" alt="image" /></a></p>
+<p>The supplementary units are the same measurement units as described previously in this document. They are set up in the Tariff as follows – they are measures like any other:</p>
+<p>Step 1 – create a measure of type 109 or 110</p>
+
+<ul>
+<li>use 109 typically as this is a x-purpose measure type used for both imports and exports</li>
+<li>type 110 is used solely for imports</li>
+<li>there is also a type 111 for exports: it is never used </li>
+</ul>
+<p>Step 2 – create a measure component</p>
+
+<ul>
+<li>use 99 as the duty expression ID</li>
+<li>set the measurement unit code field to whichever measurement unit is to be used</li>
+<li>you may also set a measurement qualifier unit, however this is extremely rare.</li>
+</ul>
+<p><strong>Measure component data structures</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93506190-d4511580-f913-11ea-878a-924132f86482.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93506190-d4511580-f913-11ea-878a-924132f86482.png" alt="image" /></a></p>
+<h3 id="measure-condition-components">Measure condition components</h3><p><a href="https://user-images.githubusercontent.com/61055197/93506182-cf8c6180-f913-11ea-8a06-49b983015b3d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93506182-cf8c6180-f913-11ea-8a06-49b983015b3d.png" alt="image" /></a></p>
+<p>Measure conditions may be attached to conditions instead of to measures themselves.
+It is important that one does not double up and apply measure condition components AND measure components - this will break the business processing rules of Taric and fail to load on CDS.
+The data structures concerning measure condition components are almost identical to those for measure components – the only real difference being that they are attached to the condition and not the measure itself.</p>
+<h3 id="key-business-processing-rules">Key business processing rules</h3><div class="table-container">
+        <table>
+          <tr>
+<th>#</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td>ME40</td>
+<td>If the flag &ldquo;duty expression&rdquo; on measure type is   &ldquo;mandatory&rdquo; then at least one measure component or measure   condition component record must be specified.    If the flag is set &ldquo;not permitted&rdquo; then no measure component or   measure condition component must exist.    Measure components and measure condition components are mutually exclusive. A   measure can have either components or condition components (if the ‘duty   expression’ flag is ‘mandatory’ or ‘optional’) but not both.</td>
+<td>Required     This describes the fact that measures of certain types   MUST have components (duties) assigned to them, whereas others must not.     Please note the sub-clause also – if the value of the   field “Component applicable” is set to 1 (Mandatory) on a measure type, then   when the measure is created, there must be either measure components or   measure condition components assigned to the measure, but not both. CDS will   generate errors if either of these conditions are not met.</td>
+</tr>
+<tr>
+<td>ME41</td>
+<td>The referenced duty expression must exist.</td>
+<td>Required     There is a specified list of duty expressions that can be   used in TAP / CDS. We must not use any duty expressions that are not valid.</td>
+</tr>
+<tr>
+<td>ME42</td>
+<td>The validity period of the duty expression must span the   validity period of the measure.</td>
+<td>Required     There are a number of duty expressions that are no longer   valid – they have been end dated (in 1996 and 2016 primarily). We must not   use these.</td>
+</tr>
+<tr>
+<td>ME43</td>
+<td>The same duty expression can only be used once with the   same measure.</td>
+<td>Required     Even if an expression that (in English) reads the same needs   to be used more than once in a measure, we must use a different expression   ID, never the same one twice.</td>
+</tr>
+<tr>
+<td>ME45</td>
+<td>If the flag &ldquo;amount&rdquo; on duty expression is   &ldquo;mandatory&rdquo; then an amount must be specified. If the flag is set   &ldquo;not permitted&rdquo; then no amount may be entered.</td>
+<td>Required     The three possible values for this field on the   duty_expressions table are:     0 - Permitted     1 - Mandatory     2 - Not permitted     These values must be observed – By the way, we should not   allows users to modify the data associated with duty expressions, as the   knock on impact will be too significant.</td>
+</tr>
+<tr>
+<td>#</td>
+<td>Description</td>
+<td>Notes</td>
+</tr>
+<tr>
+<td>ME46</td>
+<td>If the flag &ldquo;monetary unit&rdquo; on duty expression   is &ldquo;mandatory&rdquo; then a monetary unit must be specified. If the flag   is set &ldquo;not permitted&rdquo; then no monetary unit may be entered.</td>
+<td>Required     The three possible values for this field on the   duty_expressions table are:     0 - Permitted     1 - Mandatory     2 - Not permitted     These values must be observed – As above, we should not   allows users to modify the data associated with duty expressions.</td>
+</tr>
+<tr>
+<td>ME47</td>
+<td>If the flag &ldquo;measurement unit&rdquo; on duty   expression is &ldquo;mandatory&rdquo; then a measurement unit must be   specified. If the flag is set &ldquo;not permitted&rdquo; then no measurement   unit may be entered.</td>
+<td>Required     The three possible values for this field on the   duty_expressions table are:     0 - Permitted     1 - Mandatory     2 - Not permitted     These values must be observed – As above, we should not   allows users to modify the data associated with duty expressions.</td>
+</tr>
+<tr>
+<td>ME48</td>
+<td>The referenced monetary unit must exist.</td>
+<td>Debatable     Although this is a required rule, we will use GBP or   EUR as the currency unit – likely GBP – it will simply be a matter of setting   up the currency unit once only; the validation check may be unnecessary</td>
+</tr>
+<tr>
+<td>ME49</td>
+<td>The validity period of the referenced monetary unit must   span the validity period of the measure.</td>
+<td>Debatable     As above</td>
+</tr>
+<tr>
+<td>ME50</td>
+<td>The combination measurement unit + measurement unit   qualifier must exist.</td>
+<td>Required     The relationship between a measurement_unit and any   qualifer that can be used against that measurement unit is defined in the   table “measurements” – this needs to be observed fully or CDS will generate   an error. Measurements have start and end dates against them, and these also   need to be observed.</td>
+</tr>
+<tr>
+<td>ME51</td>
+<td>The validity period of the measurement unit must span the   validity period of the measure.</td>
+<td>Required     Measurement units have start dates end dates – we need   to observe these start and end dates in the creation of measures. We are not   offering a tool to manage measurement units in the first instance.</td>
+</tr>
+<tr>
+<td>ME52</td>
+<td>The validity period of the measurement unit qualifier must   span the validity period of the measure.</td>
+<td>Required     Measurement unit qualifiers have start dates end dates   – we need to observe these start and end dates in the creation of measures.   We are not offering a tool to manage qualifiers in the first instance.</td>
+</tr>
+<tr>
+<td>#</td>
+<td>Description</td>
+<td>Notes</td>
+</tr>
+<tr>
+<td>ME53</td>
+<td>The referenced measure condition must exist.</td>
+<td>Required     All measure condition components are referenced back to   the measure_condition that engenders them and not the measure itself.</td>
+</tr>
+<tr>
+<td>ME54</td>
+<td>The validity period of the referenced measure condition   must span the validity period of the measure.</td>
+<td>Not required - disregard     As far as we can see, this is an erroneous business   rule: the measure condition table does not have a start and end date field.   The condition adopts the start and end dates of the parent measure.   Similarly, there are no start and end dates associated with a measure   condition component (or for that matter a measure component). They all adopt   the date constraints of the parent measure.</td>
+</tr>
+<tr>
+<td>ME55</td>
+<td>A measure condition refers to a measure condition or to a   condition + certificate or to a condition + amount specifications.</td>
+<td>Disregard     This has been written so vaguely that there are no   rules to be gleaned from it</td>
+</tr>
+<tr>
+<td>ME60</td>
+<td>The referenced monetary unit must exist.</td>
+<td>Required      Conditions are put in place to respond either to the   provision of some sort of document / license or to respond to a minimum   threshold import price – if the latter then there is a requirement to specify   a valid monetary unit, which is always likely to be GBP.</td>
+</tr>
+<tr>
+<td>ME61</td>
+<td>The validity period of the referenced monetary unit must   span the validity period of the measure.</td>
+<td>Required - debatable     The unit will always be GBP or EUR – all we need to do   is to ensure that the units are not end-dated</td>
+</tr>
+<tr>
+<td>#</td>
+<td>Description</td>
+<td>Notes</td>
+</tr>
+<tr>
+<td>ME105</td>
+<td>The referenced duty expression must exist.</td>
+<td>Required     Notes as per measure components</td>
+</tr>
+<tr>
+<td>ME106</td>
+<td>The VP of the duty expression must span the VP of the   measure.</td>
+<td>Required     Notes as per measure components</td>
+</tr>
+<tr>
+<td>ME108</td>
+<td>The same duty expression can only be used once within   condition components of the same condition of the same measure. (i.e. it can   be re-used in other conditions, no matter what condition type, of the same   measure)</td>
+<td>Required     Notes as per measure components</td>
+</tr>
+<tr>
+<td>ME109</td>
+<td>If the flag &lsquo;amount&rsquo; on duty expression is &lsquo;mandatory&rsquo;   then an amount must be specified. If the flag is set to &lsquo;not permitted&rsquo; then   no amount may be entered.</td>
+<td>Required     Notes as per measure components</td>
+</tr>
+<tr>
+<td>ME110</td>
+<td>If the flag &lsquo;monetary unit&rsquo; on duty expression is   &lsquo;mandatory&rsquo; then a monetary unit must be specified. If the flag is set to   &lsquo;not permitted&rsquo; then no monetary unit may be entered.</td>
+<td>Required     Notes as per measure components</td>
+</tr>
+<tr>
+<td>ME111</td>
+<td>If the flag &lsquo;measurement unit&rsquo; on duty expression is   &lsquo;mandatory&rsquo; then a measurement unit must be specified. If the flag is set to   &lsquo;not permitted&rsquo; then no measurement unit may be entered.</td>
+<td>Required     Notes as per measure components</td>
+</tr>
+
+        </table>
+      </div>
             
           </main>
 
