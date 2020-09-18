@@ -13,6 +13,7 @@
 
 Graph 1: 
 1. This graph looks like this: 
+
 ![image](https://user-images.githubusercontent.com/61055197/93594831-7f161200-f9ae-11ea-8eec-3480c9a78ae1.png)
 
 2. You can add a graph like this by using the following format: 
@@ -32,6 +33,7 @@ Graph 1:
 
 Graph 2: 
 1. This graph looks like this: 
+
 ![image](https://user-images.githubusercontent.com/61055197/93596740-c651d200-f9b1-11ea-8321-211ecb6d575a.png)
 
 2. You can add a graph like this by using the following format: 
