@@ -12,10 +12,12 @@
 **How to add graphs:** 
 
 Graph 1: 
-1. This graph looks like this: ![image](https://user-images.githubusercontent.com/61055197/93594831-7f161200-f9ae-11ea-8eec-3480c9a78ae1.png)
+1. This graph looks like this: 
+![image](https://user-images.githubusercontent.com/61055197/93594831-7f161200-f9ae-11ea-8eec-3480c9a78ae1.png)
+
 2. You can add a graph like this by using the following format: 
 
-digraph "Measure Types" {
+`digraph "Measure Types" {
     rankdir=LR
     graph [id=database]
     node [shape=record]
@@ -26,13 +28,15 @@ digraph "Measure Types" {
 
     Measure:2 -> MeasureType:1
     MeasureTypeDescription:1 -> MeasureType:1
-}
+}`
 
 Graph 2: 
-1. This graph looks like this: ![image](https://user-images.githubusercontent.com/61055197/93596740-c651d200-f9b1-11ea-8321-211ecb6d575a.png)
+1. This graph looks like this: 
+![image](https://user-images.githubusercontent.com/61055197/93596740-c651d200-f9b1-11ea-8321-211ecb6d575a.png)
+
 2. You can add a graph like this by using the following format: 
 
-graph "Measures and Regulations" {
+`graph "Measures and Regulations" {
   rankdir=LR
   node [shape=box]
 
@@ -45,7 +49,7 @@ graph "Measures and Regulations" {
   "Regulation" -- measure2
   "Regulation" -- measure3
   "Regulation" -- measure4
-}
+}`
 
 **A few things that we need to consider:**
 - We need to put a 'back to the top' button at the end of each page 
