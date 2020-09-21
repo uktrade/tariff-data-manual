@@ -145,9 +145,577 @@
 <ul>
 <li>
 <a href="#measures-conditions">Measures conditions</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#introduction-to-measure-conditions">Introduction to measure conditions</a>
+</li>
+<li>
+<a href="#condition-codes">Condition codes</a>
+</li>
+<li>
+<a href="#action-codes">Action codes</a>
+</li>
+<li>
+<a href="#detailed-overview-of-condition-codes">Detailed overview of condition codes</a>
 </li>
 </ul>
-<p>Measures conditions</p>
+<p></li>
+</ul>
+</li>
+</ul></p>
+<h3 id="introduction-to-measure-conditions">Introduction to measure conditions</h3>
+<ul>
+<li>Not all measures apply in all circumstances – approximately half of all the measures on the EU database are usable by traders only under certain conditions – for example, the presentation of a document.</li>
+<li>The screen grab to the right (top) show ‘bison carcasses’ on the UK Trade Tariff Service.</li>
+<li>The highlighted column indicates all the conditions that apply to the import of the good under certain circumstances.</li>
+<li>Below shows the detail of the condition for veterinary control – an EU wide measure that ensures that animal product is checked by the relevant professionals before ingress to the EU to protect against lower standards.</li>
+<li>The pages below identify
+
+<ul>
+<li>the nature of conditions (what data they require)</li>
+<li>the types of conditions</li>
+<li>etc &hellip;</li>
+</ul></li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93779091-83486680-fc1e-11ea-8e12-695e654b9516.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93779091-83486680-fc1e-11ea-8e12-695e654b9516.png" alt="image" /></a></p>
+<p>Any comment re: the difference between the EU and UK tariffs needs to be considered in the context of the NI Protocol, which means that the EU tariff continues to apply to a part of the EU’s customs territory.Even if we do not use the condition code in the UK, DIT needs to be aware of its function.</p>
+<p><strong>Anatomy of a condition</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93779468-f2be5600-fc1e-11ea-951a-f4944b9eb40a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93779468-f2be5600-fc1e-11ea-951a-f4944b9eb40a.png" alt="image" /></a></p>
+<p>The diagram to above illustrates the primary data fields associated with a measure condition, as follows:</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th><br>Field</th>
+<th><br>Data type</th>
+<th><br>Description</th>
+</tr>
+<tr>
+<td><br>oid</td>
+<td><br>integer   (PK)</td>
+<td><br>primary   key of the individul record – see document on keys</td>
+</tr>
+<tr>
+<td><br>measure_condition_sid</td>
+<td><br>integer</td>
+<td><br>Unique   identifier for the measure condition</td>
+</tr>
+<tr>
+<td><br>measure_sid</td>
+<td><br>integer   (FK)</td>
+<td><br>Foreign   key to the measure table via its unique identifier. A condition is only ever   related to a single measure and not shared across multiple measures</td>
+</tr>
+<tr>
+<td><br>condition_code</td>
+<td><br>varchar(255)</td>
+<td><br>Despite   the 255 character length, this is actually a 1-digit character code, as per   slide “Condition codes currently in use” above</td>
+</tr>
+<tr>
+<td><br>component_sequence_number</td>
+<td><br>integer</td>
+<td><br>The   sequence in which the conditions are to be listed – is most important with   sequentially listed condition types, such as V (Entry Price System).</td>
+</tr>
+<tr>
+<td><br>condition_duty_amount</td>
+<td><br>float</td>
+<td><br>The   trigger price that causes a give condition to take effect – see below</td>
+</tr>
+<tr>
+<td><br>condition_monetary_unit_code</td>
+<td><br>varchar(255)   (FK)</td>
+<td><br>The   monetary unit of that trigger price</td>
+</tr>
+<tr>
+<td><br>condition_measurement_<br>     unit_code</td>
+<td><br>varchar(3)   (FK)<br>   <br></td>
+<td><br>The   measurement unit of that trigger price</td>
+</tr>
+<tr>
+<td><br>condition_measurement_<br>     unit_qualifier_code</td>
+<td><br>varchar(1)   (FK)</td>
+<td><br>The   measurement unit qualifier of that trigger price</td>
+</tr>
+<tr>
+<td><br>action_code</td>
+<td><br>varchar(255)   (FK)</td>
+<td><br>The   action to take in response to a condition being met – see below</td>
+</tr>
+<tr>
+<td><br>certificate_type_code</td>
+<td><br>varchar(1)   (FK)</td>
+<td><br>The   type of certificate required (if needed)</td>
+</tr>
+<tr>
+<td><br>certificate_code</td>
+<td><br>varchar(3)   (FK)</td>
+<td><br>The   specific certificate required (if needed)</td>
+</tr>
+
+        </table>
+      </div><p><strong>Conditions - relationships</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" alt="image" /></a></p>
+
+<ul>
+<li>This is a simplified view of the relationships of the measure_conditions with other data entities, for example all description tables are omitted.</li>
+<li>Of the tables noted here, pay special attention to measure_conditions, measures and measure_condition_components, as the rest are just foreign key tables.</li>
+<li>It is key to understand the apparent duality of some of the fields in the measure_conditions and measure_condition_components tables (as highlighted by the marquees on the diagram).</li>
+</ul>
+<h3 id="condition-codes">Condition codes</h3><p><strong>Condition codes currently in use</strong></p>
+<p>A condition code identifies what sort of condition is to be fulfilled in order for the action to be carried out. The table below identifies the condition codes that are currently in use (12.01.20) in the EU Tariff. This is not all possible condition codes – there are a number that have been used in the past that are no longer in use. The highlighted rows are those that are in use most frequently, and, importantly are likely to be used most frequently in the UK tariff.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93781194-066abc00-fc21-11ea-9aad-4691067d9f91.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781194-066abc00-fc21-11ea-9aad-4691067d9f91.png" alt="image" /></a></p>
+<p><strong>Measure conditions and condition components</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93781575-6cefda00-fc21-11ea-859e-6d27c3c1cd0e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781575-6cefda00-fc21-11ea-859e-6d27c3c1cd0e.png" alt="image" /></a></p>
+
+<ul>
+<li>Going back to the list of condition codes, there are a number of condition codes which make reference to a minimum or maximum import price, otherwise known as a reference price (or trigger price). These are highlighted in blue to the left.</li>
+<li>The most frequent &amp; volatile example of this in the EU tariff is condition type V – this is used to manage the Entry Price System (detailed later).</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93781509-5b0e3700-fc21-11ea-9229-629cd227fe9b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781509-5b0e3700-fc21-11ea-9229-629cd227fe9b.png" alt="image" /></a></p>
+
+<ul>
+<li>In this case, and the other condition codes that follow the same pattern, the fields in the measure condition code table (that start condition_) represent the trigger price: the fields in the measure_condition_components table represent the duties that will be payable a a result of the trigger condition having been met.</li>
+<li>Example overleaf …</li>
+</ul>
+<p><strong>Conditions and condition components – cherry tomatoes</strong></p>
+<p>If there is a complex mechanism to be demonstrated, it is a fair bet that it can be highlighted using cherry tomatoes, which attract most complexities - tomatoes plus another c. 30 commodities are subject (in the EU) to the Entry Price System.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93781973-e687c800-fc21-11ea-96bb-1f5ec52a3bbe.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781973-e687c800-fc21-11ea-96bb-1f5ec52a3bbe.png" alt="image" /></a></p>
+<p>In the diagram above (taken from the Trade Tariff Service), the measure condition trigger fields are highlighted in the red marquee.</p>
+<p>The payable duty amounts are highlighted in blue – if the trigger condition is met (in this case if a consignment of tomatoes comes into the country at a price lower than or equal to a given threshold (trigger price), then the duty charged will be increased.</p>
+<p><strong>Boiling it down, there are only really 2 condition mechanics</strong></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th><br>Does the trader have the right documentation?</th>
+<th></th>
+</tr>
+<tr>
+<td><br>A</td>
+<td><br>Presentation   of an anti-dumping/countervailing document</td>
+</tr>
+<tr>
+<td><br>B</td>
+<td><br>Presentation   of a certificate/licence/document</td>
+</tr>
+<tr>
+<td><br>C</td>
+<td><br>Presentation   of a certificate/licence/document</td>
+</tr>
+<tr>
+<td><br>H</td>
+<td><br>Presentation   of a certificate/licence/document</td>
+</tr>
+<tr>
+<td><br>Q</td>
+<td><br>Presentation   of an endorsed certificate/licence</td>
+</tr>
+<tr>
+<td><br>Y</td>
+<td><br>Other   conditions</td>
+</tr>
+<tr>
+<td><br>Z</td>
+<td><br>Presentation   of more than one certificate</td>
+</tr>
+
+        </table>
+      </div><div class="table-container">
+        <table>
+          <tr>
+<th><br>Is the price higher than a reference price?</th>
+<th></th>
+</tr>
+<tr>
+<td><br>E</td>
+<td><br>The   quantity or the price per unit declared, as appropriate, is equal or less   than the specified maximum, or presentation of the required document</td>
+</tr>
+<tr>
+<td><br>I</td>
+<td><br>The   quantity or the price per unit declared, as appropriate, is equal or less   than the specified maximum, or presentation of the required document</td>
+</tr>
+<tr>
+<td><br>F</td>
+<td><br>The   net free at frontier price before duty must be equal to or greater than the   minimum price (see components)</td>
+</tr>
+<tr>
+<td><br>L</td>
+<td><br>CIF   price must be higher than the minimum price (see components)</td>
+</tr>
+<tr>
+<td><br>M</td>
+<td><br>Declared   price must be equal to or greater than the minimum price/reference price (see   components)</td>
+</tr>
+<tr>
+<td><br>R</td>
+<td><br>Ratio   &ldquo;net weight/supplementary unit&rdquo; is equal to or higher than the   condition amount</td>
+</tr>
+<tr>
+<td><br>U</td>
+<td><br>Ratio   &ldquo;declared value/supplementary unit&rdquo; should be higher than the   condition amount</td>
+</tr>
+<tr>
+<td><br>V</td>
+<td><br>Import   price must be equal to or greater than the entry price (see components)</td>
+</tr>
+
+        </table>
+      </div><p>The different varieties of condition code are really just variations on two themes:
+* is documentation right?
+* is the price &gt; x?</p>
+<h3 id="action-codes">Action codes</h3>
+<ul>
+<li>If the condition code identifies the type of condition that has to be met, then the action code identifies the type of action that will be taken in response.</li>
+<li>The table to the right lists the action codes that can be associated with a condition</li>
+<li>The action code is mandatory – there is no value in a condition if there is no action to be taken on the back of it.</li>
+<li>The list to the right is initially daunting – it is simplified when one observes that most action codes have a positive / negative variant: most action codes come in pairs</li>
+</ul>
+<div class="table-container">
+        <table>
+          <tr>
+<th>ID</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>01</td>
+<td>Apply the amount of the action (see components)</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Apply the difference between the amount of the action (see components) and the price at import</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Apply the difference between the amount of the action (see components) and CIF price</td>
+</tr>
+<tr>
+<td>04</td>
+<td>The entry into free circulation is not allowed</td>
+</tr>
+<tr>
+<td>05</td>
+<td>Export is not allowed</td>
+</tr>
+<tr>
+<td>06</td>
+<td>Import is not allowed</td>
+</tr>
+<tr>
+<td>07</td>
+<td>Measure not applicable</td>
+</tr>
+<tr>
+<td>08</td>
+<td>Declared subheading not allowed</td>
+</tr>
+<tr>
+<td>09</td>
+<td>Import/export not allowed after control</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Declaration to be corrected - box 33, 37, 38, 41 or 46 incorrect</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Apply the difference between the amount of the action (see components) and the free at frontier price before duty</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Apply the difference between the amount of the action (see components) and the CIF price before duty</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Apply the difference between the amount of the action (see components) and the CIF price augmented with the duty to be paid per tonne</td>
+</tr>
+<tr>
+<td>14</td>
+<td>The exemption/reduction of the anti-dumping duty is not applicable</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Apply the difference between the amount of the action (see components) and the price augmented with the countervailing duty (3,8%)</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Export refund not applicable</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Entry into free circulation allowed</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Export allowed</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Import allowed</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Apply the mentioned duty</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Declared subheading allowed</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Import/export allowed after control</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Suspicious case</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Apply exemption/reduction of the anti-dumping duty</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Apply export refund</td>
+</tr>
+
+        </table>
+      </div><p><strong>Action codes that go together</strong></p>
+<p>Many of the action codes are actually part of an action code pair. The smaller of the two is usually the negative action and the larger is the complementary positive action (e.g. x is not allowed vs x is allowed).</p>
+<p>The following pairs of action codes always go together:</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th><br>Pair</th>
+<th><br>Description</th>
+</tr>
+<tr>
+<td><br>04   is paired with 24</td>
+<td><br>The   entry into free circulation is not allowed / Entry into free circulation   allowed</td>
+</tr>
+<tr>
+<td><br>05   is paired with 25</td>
+<td><br>Export   is not allowed / Export allowed</td>
+</tr>
+<tr>
+<td><br>06   is paired with 26</td>
+<td><br>Import   is not allowed / Import is allowed</td>
+</tr>
+<tr>
+<td><br>07   is paired with 27</td>
+<td><br>Measure   not applicable / Apply the mentioned duty</td>
+</tr>
+<tr>
+<td><br>08   is paired with 28</td>
+<td><br>Declared   subheading not allowed / Declared subheading allowed</td>
+</tr>
+<tr>
+<td><br>09   is paired with 29</td>
+<td><br>Import   / export not allowed after control / Import/export allowed after control</td>
+</tr>
+<tr>
+<td><br>14   is paired with 34</td>
+<td><br>The   exemption / reduction of the anti-dumping duty is not applicable / Apply   exemption / reduction of the anti-dumping duty</td>
+</tr>
+<tr>
+<td><br>16   is paired with 36</td>
+<td><br>Export   refund not applicable / Apply export refund</td>
+</tr>
+
+        </table>
+      </div><p><strong>Example of a pos / neg dual action code</strong></p>
+
+<ul>
+<li>These codes are typically used for restrictions that require some sort of documentation (certificate or license), although they may be used in all kids of circumstance (e.g. setting tiered duties for Trade Remedies).</li>
+<li>Here is an example on the UK Trade Tariff Service of a pair of conditions with pos / neg action codes – the positive being condition 1, the negative condition 2.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93787405-58fba680-fc28-11ea-956c-b8de9fb412bf.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93787405-58fba680-fc28-11ea-956c-b8de9fb412bf.png" alt="image" /></a></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th><br></th>
+<th><br>Condition 1</th>
+<th><br>Condition 2</th>
+</tr>
+<tr>
+<td><br>measure_condition_sid</td>
+<td><br>1248652</td>
+<td><br>1248653</td>
+</tr>
+<tr>
+<td><br>measure_sid</td>
+<td><br>3604666</td>
+<td><br>3604666</td>
+</tr>
+<tr>
+<td><br>condition_code</td>
+<td><br>B</td>
+<td><br>B</td>
+</tr>
+<tr>
+<td><br>component_sequence_number</td>
+<td><br>1</td>
+<td><br>2</td>
+</tr>
+<tr>
+<td><br>condition_duty_amount</td>
+<td><br>null</td>
+<td><br>null</td>
+</tr>
+<tr>
+<td><br>condition_monetary_unit_code</td>
+<td><br>null</td>
+<td><br>null</td>
+</tr>
+<tr>
+<td><br>condition_measurement_unit_code</td>
+<td><br>null</td>
+<td><br>null</td>
+</tr>
+<tr>
+<td><br>condition_measurement_unit_qualifier_code</td>
+<td><br>null</td>
+<td><br>null</td>
+</tr>
+<tr>
+<td><br>action_code</td>
+<td><br>27</td>
+<td><br>7</td>
+</tr>
+<tr>
+<td><br>certificate_type_code</td>
+<td><br>Y</td>
+<td><br>null</td>
+</tr>
+<tr>
+<td><br>certificate_code</td>
+<td><br>085</td>
+<td><br>null</td>
+</tr>
+
+        </table>
+      </div>
+<ul>
+<li>Condition code B means “Presentation of a certificate/licence/document” and is common to both conditions.</li>
+<li>There is no trigger price (hence 4 * null fields across both conditions).</li>
+<li>Action codes are complementary (27 and 7) – the 27 is the positive and the 7 is the negative.</li>
+<li>The certificate required to effect the positive action is Y085</li>
+</ul>
+<p><strong>AND / OR logic for condition codes</strong></p>
+
+<ul>
+<li>Conditions are grouped together according to their condition code.</li>
+<li>Within that group, the individual conditions are grouped together in an OR relationship, for example, in the conditions associated with the B condition code to the right, only one of the three noted goods needs to be provided, however it must be provided alongside one of the other conditions from block E being met (provision of a document or the weight of the imported good being below 2kg).</li>
+<li>In this way, an additional tier is added to the logical condition model via the condition code grouping.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93788939-23a38880-fc29-11ea-9aa4-4496f37639f9.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788939-23a38880-fc29-11ea-9aa4-4496f37639f9.png" alt="image" /></a></p>
+<p><strong>Volumes of conditions</strong></p>
+
+<ul>
+<li>Do not underestimate the complexity of measure conditions – there are up to 26 conditions on measures, as per the example here on commodity code 0308110000 (Aquatic invertebrates other than crustaceans and molluscs, live, fresh, chilled, frozen, dried, salted or in brine; smoked aquatic invertebrates other than crustaceans and molluscs, whether or not cooked before or during the smoking process; flours, meals and pellets of aquatic invertebrates other than crustaceans and molluscs, fit for human consumption)against the EU (measure_sid 3566626)</li>
+<li>In this case, the conditions are aligned against 2 condition codes:
+
+<ul>
+<li>within condition code B and E respectively, any of the positive conditions will result in an acceptance of the trade.</li>
+<li>at least one condition needs to be fulfilled within each of the two condition code groups.</li>
+</ul></li>
+<li>The intellectual knowledge of certification is a huge challenge in DIT, Defra and HMG as a whole - over the implementation period, significant effort in DIT and Defra should be expended in looking to understand certification.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93791467-2d7abb00-fc2c-11ea-82af-8f6faa45858a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93791467-2d7abb00-fc2c-11ea-82af-8f6faa45858a.png" alt="image" /></a></p>
+<h3 id="detailed-overview-of-condition-codes">Detailed overview of condition codes</h3><p>Condition code A – Scenario 1</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" alt="image" /></a></p>
+
+<ul>
+<li>This condition code is used to modify the circumstances of an anti-dumping or anti-subsidy duty depending on the conditions stated.</li>
+<li>There are three scenarios in which this condition code is used, two of which have 2 related (and opposite action codes)
+
+<ul>
+<li>Scenario 1 – apply conditional duties depending on supply of document</li>
+<li>Scenario 2 – determine if the trade can go ahead</li>
+<li>Scenario 3 - determining applicability of exemption/reduction of the anti-dumping duty</li>
+</ul></li>
+</ul>
+<p>Scenario 1 – apply conditional duties depending on supply of document
+This is by far the most common application of conditional duties for trade remedy-related measures
+The applicable duty can be conditional on the supply of a document: if the document is supplied then the duty is reduced
+This scenario is executed by:
+setting multiple (usually two) measure conditions with condition code A
+then assigning action code 01, which states ”Apply the amount of the action”
+and to each condition then assigning an applicable duty
+The documents used in the EU, presumably to be followed in the UK are as follows:
+D005 - Commercial invoice within the framework of undertakings
+D008 - Invoice with a signed declaration
+D017 - Commercial invoice within the framework of undertakings and Export Undertaking Certificate
+D018 - Invoice for transactions which are not exempted from countervailing/anti-dumping duties</p>
+<p><strong>Condition code A – Scenario 2</strong></p>
+<p>Scenario 2 – determine if the trade can go ahead at all
+Features a pair of action codes which are always supplied together and are opposites of each other
+08 - Declared subheading not allowed
+The trade will be rejected in CDS
+This is always associated with no document being specified, therefore not presented with the trade
+28 - Declared subheading allowed
+This is always associated with a document being specified, therefore presented with the trade and hence, the trade being permitted
+There is only one certificate that has been used in conjunction with this condition code / action code permutation
+D020 - Commercial invoice and mill certificate as defined in Regulation 2015/1953
+This scenario is not currently in use, but it has been used in the past</p>
+<p>Condition code A – Scenario 3</p>
+<p>Scenario 3 – determining applicability of exemption/reduction of the anti-dumping duty
+As with scenario 2, this features a pair of conditions with complementing action codes that are always found together
+Though not completely defunct, this is used only three times in current measures by the EU
+The two action codes are:
+34 - Apply exemption/reduction of the anti-dumping duty
+14 - The exemption/reduction of the anti-dumping duty is not applicable
+This basically means that the antidumping duty will be waived entirely or reduced according to the legislation. There are no conditional duties set however, therefore it is not 100% clear where the duty calculation will get its raw data from
+The conditions should be applied in the sequence 34 then 14, i.e. positive followed by negative
+There is only one current certificate in use that is used with this condition code / action code combination
+D008 - Invoice with a signed declaration</p>
+
+<blockquote>
+<p>Conditions B, C and H are identical in meaning</p>
+<p>C and H are used when multiple condition sets using the same mechanic need to be applied to the same measure.</p>
+</blockquote>
+<p>Condition codes B, C &amp; H</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" alt="image" /></a></p>
+
+<ul>
+<li>Codes B, C and H require a certificate or other document to be presented in order for the requirement to be fulfilled.</li>
+<li>Condition codes C &amp; H are identical to condition code B, and there is no overt reason as to why C / H might be used instead of B – they are however sometimes used alongside code B.</li>
+<li>Commodity code 8418690091 provides the answer as to why there are two types of condition that are ostensibly identical, i.e. there is a desire to apply multiple conditions sets to the same measure (in this case Import control of fluorinated greenhouse gases).</li>
+<li>If just B had been used, it would not have been possible to apply the AND logic of the two condition groups.</li>
+<li>H is used only 41 times (Jan 2020); C is used c. 5,000 times whereas B is vastly more prevalent (c. 24,000 occurrences).</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797534-45eed380-fc34-11ea-8123-3dd56caaba5b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797534-45eed380-fc34-11ea-8123-3dd56caaba5b.png" alt="image" /></a></p>
+<p><strong>Condition code E</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797650-6c147380-fc34-11ea-9127-79c54dfd1288.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797650-6c147380-fc34-11ea-9127-79c54dfd1288.png" alt="image" /></a></p>
+
+<ul>
+<li>This condition code is a combination of a quantitative restriction plus a documentation requirement, i.e. a trade will be allowed provided the volume of goods is lower than the defined threshold weight (or other unit), or a document is provided that permits the trade in a larger volume of goods.</li>
+<li>The criteria that define these two conditions are set in the measure condition data.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797793-9b2ae500-fc34-11ea-9fd0-7d12b8d3f17e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797793-9b2ae500-fc34-11ea-9fd0-7d12b8d3f17e.png" alt="image" /></a></p>
+<p><strong>Condition code I</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797859-aed64b80-fc34-11ea-9716-a0c6df520ece.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797859-aed64b80-fc34-11ea-9716-a0c6df520ece.png" alt="image" /></a></p>
+
+<ul>
+<li>These condition codes are currently used uniquely with measure types 751 and 755 (import and export control of waste)</li>
+<li>They are functionally identical to condition code E (see above).</li>
+<li>Type I is only ever used in conjunction with type E to present a send condition set of the same type, never on its own</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797871-b269d280-fc34-11ea-90fd-3bc10f0322e0.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797871-b269d280-fc34-11ea-90fd-3bc10f0322e0.png" alt="image" /></a></p>
+<p><strong>Condition code F</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797962-cf9ea100-fc34-11ea-9f04-8637fdf12c11.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797962-cf9ea100-fc34-11ea-9f04-8637fdf12c11.png" alt="image" /></a></p>
+
+<ul>
+<li>These conditions allow duties to be charged against imported goods subject to Trade Remedies (Anti dumping or anti subsidy duties) that are dependent upon the unit price of the import.</li>
+<li>This is significantly less commonly used than condition code A, which is also used to apply conditional logic to the trade of a good subject to an AD / AS duty, but remains an option for the TRA: there are 119 such conditions against 17,000 + of type A.</li>
+<li>In the example to the right on measure 3571830 on commodity 2933610000 (melamine), there are two F-type conditions, which are dependent on the import price: the duties are set accordingly.</li>
+<li>What these conditions say is:
+
+<ul>
+<li>if the goods is imported at a price of higher than €1153 per tonne, then apply zero additional punitive duty (condition 1)</li>
+<li>BUT if the import of the good is at a lower price, apply the difference between the import price and the punitive duty</li>
+</ul></li>
+<li>This essentially sets a minimum import </li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" alt="image" /></a></p>
 
             
           </main>
