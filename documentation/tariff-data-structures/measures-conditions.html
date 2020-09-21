@@ -160,6 +160,12 @@
 <li>
 <a href="#detailed-overview-of-condition-codes">Detailed overview of condition codes</a>
 </li>
+<li>
+<a href="#key-business-processing-rules">Key business processing rules</a>
+</li>
+<li>
+<a href="#comparing-null-dates">Comparing null dates</a>
+</li>
 </ul>
 <p></li>
 </ul>
@@ -359,9 +365,12 @@
 </tr>
 
         </table>
-      </div><p>The different varieties of condition code are really just variations on two themes:
-* is documentation right?
-* is the price &gt; x?</p>
+      </div><p>The different varieties of condition code are really just variations on two themes:</p>
+
+<ul>
+<li>is documentation right?</li>
+<li>is the price &gt; x?</li>
+</ul>
 <h3 id="action-codes">Action codes</h3>
 <ul>
 <li>If the condition code identifies the type of condition that has to be met, then the action code identifies the type of action that will be taken in response.</li>
@@ -620,7 +629,7 @@
 <li>The intellectual knowledge of certification is a huge challenge in DIT, Defra and HMG as a whole - over the implementation period, significant effort in DIT and Defra should be expended in looking to understand certification.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93791467-2d7abb00-fc2c-11ea-82af-8f6faa45858a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93791467-2d7abb00-fc2c-11ea-82af-8f6faa45858a.png" alt="image" /></a></p>
-<h3 id="detailed-overview-of-condition-codes">Detailed overview of condition codes</h3><p>Condition code A – Scenario 1</p>
+<h3 id="detailed-overview-of-condition-codes">Detailed overview of condition codes</h3><p><strong>Condition code A</strong></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" alt="image" /></a></p>
 
 <ul>
@@ -633,46 +642,71 @@
 <li>Scenario 3 - determining applicability of exemption/reduction of the anti-dumping duty</li>
 </ul></li>
 </ul>
-<p>Scenario 1 – apply conditional duties depending on supply of document
-This is by far the most common application of conditional duties for trade remedy-related measures
-The applicable duty can be conditional on the supply of a document: if the document is supplied then the duty is reduced
-This scenario is executed by:
-setting multiple (usually two) measure conditions with condition code A
-then assigning action code 01, which states ”Apply the amount of the action”
-and to each condition then assigning an applicable duty
-The documents used in the EU, presumably to be followed in the UK are as follows:
-D005 - Commercial invoice within the framework of undertakings
-D008 - Invoice with a signed declaration
-D017 - Commercial invoice within the framework of undertakings and Export Undertaking Certificate
-D018 - Invoice for transactions which are not exempted from countervailing/anti-dumping duties</p>
-<p><strong>Condition code A – Scenario 2</strong></p>
-<p>Scenario 2 – determine if the trade can go ahead at all
-Features a pair of action codes which are always supplied together and are opposites of each other
-08 - Declared subheading not allowed
-The trade will be rejected in CDS
-This is always associated with no document being specified, therefore not presented with the trade
-28 - Declared subheading allowed
-This is always associated with a document being specified, therefore presented with the trade and hence, the trade being permitted
-There is only one certificate that has been used in conjunction with this condition code / action code permutation
-D020 - Commercial invoice and mill certificate as defined in Regulation 2015/1953
-This scenario is not currently in use, but it has been used in the past</p>
-<p>Condition code A – Scenario 3</p>
-<p>Scenario 3 – determining applicability of exemption/reduction of the anti-dumping duty
-As with scenario 2, this features a pair of conditions with complementing action codes that are always found together
-Though not completely defunct, this is used only three times in current measures by the EU
-The two action codes are:
-34 - Apply exemption/reduction of the anti-dumping duty
-14 - The exemption/reduction of the anti-dumping duty is not applicable
-This basically means that the antidumping duty will be waived entirely or reduced according to the legislation. There are no conditional duties set however, therefore it is not 100% clear where the duty calculation will get its raw data from
-The conditions should be applied in the sequence 34 then 14, i.e. positive followed by negative
-There is only one current certificate in use that is used with this condition code / action code combination
-D008 - Invoice with a signed declaration</p>
+<p><em>Scenario 1 – apply conditional duties depending on supply of document</em></p>
+
+<ul>
+<li>This is by far the most common application of conditional duties for trade remedy-related measures</li>
+<li>The applicable duty can be conditional on the supply of a document: if the document is supplied then the duty is reduced</li>
+<li>This scenario is executed by:
+
+<ul>
+<li>setting multiple (usually two) measure conditions with condition code A</li>
+<li>then assigning action code 01, which states ”Apply the amount of the action”</li>
+<li>and to each condition then assigning an applicable duty</li>
+</ul></li>
+<li>The documents used in the EU, presumably to be followed in the UK are as follows:
+
+<ul>
+<li>D005 - Commercial invoice within the framework of undertakings</li>
+<li>D008 - Invoice with a signed declaration</li>
+<li>D017 - Commercial invoice within the framework of undertakings and Export Undertaking Certificate</li>
+<li>D018 - Invoice for transactions which are not exempted from countervailing/anti-dumping duties</li>
+</ul></li>
+</ul>
+<p><em>Scenario 2 – determine if the trade can go ahead at all</em></p>
+
+<ul>
+<li>Features a pair of action codes which are always supplied together and are opposites of each other
+
+<ul>
+<li>08 - Declared subheading not allowed</li>
+<li>The trade will be rejected in CDS</li>
+<li>This is always associated with no document being specified, therefore not presented with the trade</li>
+<li>28 - Declared subheading allowed</li>
+<li>This is always associated with a document being specified, therefore presented with the trade and hence, the trade being permitted</li>
+</ul></li>
+<li>There is only one certificate that has been used in conjunction with this condition code / action code permutation
+
+<ul>
+<li>D020 - Commercial invoice and mill certificate as defined in Regulation 2015/1953</li>
+</ul></li>
+<li>This scenario is not currently in use, but it has been used in the past</li>
+</ul>
+<p><em>Scenario 3 – determining applicability of exemption/reduction of the anti-dumping duty</em></p>
+
+<ul>
+<li>As with scenario 2, this features a pair of conditions with complementing action codes that are always found together</li>
+<li>Though not completely defunct, this is used only three times in current measures by the EU</li>
+<li>The two action codes are:
+
+<ul>
+<li>34 - Apply exemption/reduction of the anti-dumping duty</li>
+<li>14 - The exemption/reduction of the anti-dumping duty is not applicable</li>
+</ul></li>
+<li>This basically means that the antidumping duty will be waived entirely or reduced according to the legislation. There are no conditional duties set however, therefore it is not 100% clear where the duty calculation will get its raw data from</li>
+<li>The conditions should be applied in the sequence 34 then 14, i.e. positive followed by negative</li>
+<li>There is only one current certificate in use that is used with this condition code / action code combination
+
+<ul>
+<li>D008 - Invoice with a signed declaration</li>
+</ul></li>
+</ul>
 
 <blockquote>
 <p>Conditions B, C and H are identical in meaning</p>
 <p>C and H are used when multiple condition sets using the same mechanic need to be applied to the same measure.</p>
 </blockquote>
-<p>Condition codes B, C &amp; H</p>
+<p><strong>Condition codes B, C &amp; H</strong></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" alt="image" /></a></p>
 
 <ul>
@@ -716,6 +750,216 @@ D008 - Invoice with a signed declaration</p>
 <li>This essentially sets a minimum import </li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" alt="image" /></a></p>
+<p>Condition code L</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93821295-48622500-fc56-11ea-9b0b-ef497953d502.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821295-48622500-fc56-11ea-9b0b-ef497953d502.png" alt="image" /></a></p>
+
+<ul>
+<li>This is currently used only 30 times and is always applied to measures of type 652 - Additional duty based on cif price</li>
+<li>This measure type is used in managing a complex agricultural duty called “Representative prices for chicken”, which in the EU tariff is applied to certain poultry products that are being traded from Argentina, Brazil, Chile and Thailand – the most aggressive of chicken traders.</li>
+<li>The UK is not going to be taking on this policy, unless plans change between now and the end of 2020.</li>
+<li>The policy is far too complex to describe here, but is described in detail in the general training manual.</li>
+</ul>
+<p>*<em>Condition code M *</em></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93821499-852e1c00-fc56-11ea-9f43-33ec45d62b84.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821499-852e1c00-fc56-11ea-9f43-33ec45d62b84.png" alt="image" /></a></p>
+
+<ul>
+<li>Condition code M is used in two circumstances:
+
+<ul>
+<li>The first circumstance is the in managing EU supplied credibility checks of type:</li>
+<li>430 Control of particulars of the declaration (suspicious value/net weight or value/supplementary unit)</li>
+<li>483 Declaration of subheading submitted to restrictions (value)</li>
+</ul></li>
+<li>A credibility check is a mechanism that is employed in a border system to attempt to reduce errors in declarations by enforcing a check on (for example) the weight versus item count ratio of a declaration.</li>
+<li>430 and 483 are measures (along with 431) that are used by the EU to ensure that discrepancies are avoided.</li>
+<li>The EU provides these across the whole of the EU because they are trying to ensure consistency and reduce errors (that they have to fix for all 28 member states).</li>
+<li>After EU Exit, the UK will provide its own credibility checks – the EU’s measures will be terminated</li>
+<li>In reality, the EU’s credibility checks are a small subset of the overall number of checks that are carried out. CHIEF and CDS are replete with many UK-specific credibility checks as well. In the future, these will all be managed by HMRC, not by DIT MTPO, therefore are out of scope for DIT (albeit there is nothing to prevent TAP from creating these).</li>
+<li>The second circumstance will continue after EU Exit, as it deals with Trade Remedies. The existing conditions of this type are against measure type ID 552 Definitive anti-dumping duty, but there is no reason why this would not also be assigned to measure types 551, 553 and 554.</li>
+<li>This follows a similar pattern to other threshold-based commodities previously noted</li>
+<li>There are currently (Jan 2020) 84 instances of condition code M.</li>
+<li>In the examples to the right, there are two conditions which behave more or less the same as condition type F, where the applicable punitive duty is dependent the declared price [F depends on net free at frontier price before duty].</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93821534-970fbf00-fc56-11ea-9ded-0909e536e23d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821534-970fbf00-fc56-11ea-9ded-0909e536e23d.png" alt="image" /></a></p>
+<p><strong>Condition code Q</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93822545-48632480-fc58-11ea-9248-e7d404094fdd.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822545-48632480-fc58-11ea-9248-e7d404094fdd.png" alt="image" /></a></p>
+
+<ul>
+<li>Condition type Q is used in all cases where a measure is put in place to represent a licensed quota. And in all cases it refers to the single license Y100 (Special entries on the import licence AGRIM). It is used in measures of type:
+
+<ul>
+<li>122  Non preferential tariff quota</li>
+<li>123  Non preferential tariff quota under end-use</li>
+<li>142  Tariff preference</li>
+<li>143  Preferential tariff quota</li>
+</ul></li>
+<li>It is only used for licensed quotas; it is never used for FCFS quotas.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93822572-5618aa00-fc58-11ea-9b8d-4556b8066802.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822572-5618aa00-fc58-11ea-9b8d-4556b8066802.png" alt="image" /></a></p>
+<p><strong>Condition code R</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93822667-75afd280-fc58-11ea-9afb-28fda63aca2e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822667-75afd280-fc58-11ea-9afb-28fda63aca2e.png" alt="image" /></a></p>
+
+<ul>
+<li>As per scenario 1 for condition code M, this is used to apply conditions to credibility checks to ensure that the weight ‘looks right’ against the number of declared goods. The supplementary unit identifies what additional unit beyond the KGM weight must be supplied by the trader on declaring their import.</li>
+<li>Again, as per condition code M, the UK will be abandoning the practise of managing credibility checks in the Taric file after EU Exit.</li>
+</ul>
+<p><strong>Condition code U</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93822928-ddfeb400-fc58-11ea-843a-dd13f7ca6416.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822928-ddfeb400-fc58-11ea-843a-dd13f7ca6416.png" alt="image" /></a></p>
+
+<ul>
+<li>As per scenario 1 for condition codes M &amp; R, this is used to apply conditions to credibility checks to ensure that the declared value ‘looks right’ against the number of declared goods.</li>
+<li>The supplementary unit identifies what additional unit beyond the KGM weight must be supplied by the trader on declaring their import.</li>
+<li>As per condition codes M &amp; R, the UK will be abandoning the practise of managing credibility checks in the Taric file after EU Exit.</li>
+</ul>
+<p><strong>Condition code V – The Entry price System</strong></p>
+
+<ul>
+<li>The Entry Price System (EPS) is a complex mechanism to apply tiered duties to 31 agricultural products, primarily fruit.</li>
+<li>The EPS is described in detail elsewhere, so this page will not go into that much detail, especially as the UK will be abandoning the Entry Price System. It supports growers of (primarily) citrus fruits in Southern Europe: the UK’s less sunny climes do not lend themselves to industrial-scale citriculture.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93823127-359d1f80-fc59-11ea-91c2-5c72639d322e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823127-359d1f80-fc59-11ea-91c2-5c72639d322e.png" alt="image" /></a></p>
+
+<ul>
+<li>The screen above is captured from the third country duty for cherry tomatoes – this shows the EPS in action.</li>
+<li>The duties that are applicable depend on the import price: the cheaper the import, the more expensive the duty</li>
+<li>The purpose of this is to protect domestic growers in s. Europe from influxes of very cheap goods</li>
+</ul>
+<p><strong>Condition code V</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93823300-7eed6f00-fc59-11ea-9028-2e0929b5b66a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823300-7eed6f00-fc59-11ea-9028-2e0929b5b66a.png" alt="image" /></a></p>
+<p>The data for EPS-related measures is as per the example to the right – just one row (marquee below).</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93823436-b825df00-fc59-11ea-8bea-46fc0806bdb8.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823436-b825df00-fc59-11ea-8bea-46fc0806bdb8.png" alt="image" /></a></p>
+<p>In the example above, each row is a price threshold: if the import price falls below a given threshold, then the duty from the row below is charged.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93823318-8876d700-fc59-11ea-8a7d-c415132558cf.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823318-8876d700-fc59-11ea-8a7d-c415132558cf.png" alt="image" /></a></p>
+<p>This is, as its name suggests a catch all that can be used to manage effectively any condition not specifically covered by the other condition codes. In practice, this seems to have been used in the past by the EU for managing certificates, much in the vein of conditions with code B, C or H. But the real reason for using this is for non-specific conditions that are not associated with a specific document.</p>
+<p>These miscellaneous conditions are linked to in much the same way that certificates are referenced, using the certificate type code and certificate code fields. Here are a few examples of conditions that are referenced by condition code Y. None of these are documents per se: they reference properties of goods or activities undertaken by traders outside of the core declaration flow.</p>
+<p>For example:
+* Y019  Request for preferential treatment for Iceland
+* Y021  Request for EEA preferential treatment
+* Y034  Derogation from export prohibition by virtue of Article 4.1 of Council Regulation (EU) 2017/1509
+* Y037  Goods exempted from the prohibition – biathlon equipment</p>
+<p>None of the conditions linked to via the condition code ‘Y’ utilise the price threshold fields.</p>
+<p>Condition code Z</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93824173-e6f08500-fc5a-11ea-966a-dd3ecf50b2ad.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93824173-e6f08500-fc5a-11ea-966a-dd3ecf50b2ad.png" alt="image" /></a></p>
+<p>Condition code Z is used solely on national P &amp; R measures currently, though it is by no means a stipulation that this has to be so. Indeed, all the national P &amp; R will become homogenised with the measures inherited from the EU after EU Exit – though the management of measures to support the NI Protocol may influence the specific approach.</p>
+<p>These are the measure types where Z is used:</p>
+
+<ul>
+<li>ATT   Attestation Document (horticulture and potatoes)</li>
+<li>CEX   DCMS Open General Export Licence</li>
+<li>COE   Home Office Controlled Drugs (export)</li>
+<li>COI   HMI Conformity Certificate (fruit and veg) issued in UK</li>
+<li>EQC   Certificate of Conformity</li>
+<li>HOP   Home Office pre-cursor chemical authorisation</li>
+<li>PRE   Home Office Pre-cursor chemicals</li>
+<li>PRT   Home Office Controlled Drugs (import)</li>
+</ul>
+<p>There is no reason why this condition code should be used in preference to B, C or H. Indeed there are occasions where the Z type is used, but only one positive condition is included, which seems to make the condition type pretty redundant (e.g. with EQC measures).</p>
+<p>The advice to tariff managers would be to always use condition code B, then C then H before resorting to Z.</p>
+<h3 id="key-business-processing-rules">Key business processing rules</h3><div class="table-container">
+        <table>
+          <tr>
+<th><br>#</th>
+<th><br>Rule</th>
+<th><br>Notes</th>
+</tr>
+<tr>
+<td><br>ME53</td>
+<td><br>The referenced measure condition must exist.</td>
+<td><br>Required<br>   <br>This applies when assigning conditions components to   conditions A measure obvs has to be in existence too for a measure condition   to be generated in the first place.</td>
+</tr>
+<tr>
+<td><br>ME54</td>
+<td><br>The validity period of the referenced measure condition   must span the validity period of the measure.</td>
+<td><br>Not required - disregard<br>   <br>As far as we can see, this is an erroneous business rule:   the measure condition table does not have a start and end date field. The   condition adopts the start and end dates of the parent measure. Similarly,   there are no start and end dates associated with a measure condition   component (or for that matter a measure component). They all adopt the date   constraints of the parent measure.</td>
+</tr>
+<tr>
+<td><br>ME55</td>
+<td><br>A measure condition refers to a measure condition or to a condition   + certificate or to a condition + amount specifications.</td>
+<td><br>Disregard<br>   <br>This has been written so vaguely that there are no rules   to be gleaned from it</td>
+</tr>
+<tr>
+<td><br>ME56</td>
+<td><br>The referenced certificate must exist.</td>
+<td><br>Required<br>   <br>A certificate must exist before being assigned to a   condition – match must be made on the 2 clustered primary key fields of   certificate type code and certificate code</td>
+</tr>
+<tr>
+<td><br>ME57</td>
+<td><br>The validity period of the referenced certificate must   span the validity period of the measure.</td>
+<td><br>Required<br>   <br>The optimal way for us to handle this is to NEVER expire   certificates – there is literally no need. However the validity start dates   and end dates of the measure and the certificate need to be checked. See note   at the foot of this document as to how null end dates have been dealt with in   terms of comparing extents – to reduce code</td>
+</tr>
+<tr>
+<td><br>ME58</td>
+<td><br>The same certificate can only be referenced once by the   same measure and the same condition type.</td>
+<td><br>Required<br>   <br>There should never be a requirement to apply a certificate   more than once, but it needs to be checked. Again – use the 2 pronged cluster   primary key.</td>
+</tr>
+<tr>
+<td><br>ME59</td>
+<td><br>The referenced action code must exist.</td>
+<td><br>Debatable<br>   <br>The measure action table should remain fixed – by making   any modifications to this table, we are creating a lot of work for downstream   systems which need to be adjusted to cater for the change (CDS, Gems,   Caesar).</td>
+</tr>
+<tr>
+<td><br>ME60</td>
+<td><br>The referenced monetary unit must exist.</td>
+<td><br>Required <br>   <br>Conditions are put in place to respond either to the   provision of some sort of document / license or to respond to a minimum   threshold import price – if the latter then there is a requirement to specify   a valid monetary unit, which is always likely to be GBP.</td>
+</tr>
+<tr>
+<td><br>ME61</td>
+<td><br>The validity period of the referenced monetary unit must   span the validity period of the measure.</td>
+<td><br>Required - debatable<br>   <br>The unit will always be GBP or EUR – all we need to do is   to ensure that the units are not end-dated</td>
+</tr>
+<tr>
+<td><br>ME61</td>
+<td><br>The validity period of the referenced monetary unit must   span the validity period of the measure.</td>
+<td><br>Required - debatable<br>   <br>The unit will always be GBP or EUR – all we need to do   is to ensure that the units are not end-dated</td>
+</tr>
+<tr>
+<td><br>ME62</td>
+<td><br>The combination measurement unit + measurement unit   qualifier must exist.</td>
+<td><br>Required<br>   <br>The relationship between a measurement_unit and any   qualifer that can be used against that measurement unit is defined in the   table “measurements” – this needs to be observed fully or CDS will generate   an error. Measurements have start and end dates against them, and these also   need to be observed.</td>
+</tr>
+<tr>
+<td><br>ME63</td>
+<td><br>The validity period of the measurement unit must span the   validity period of the measure.</td>
+<td><br>Required<br>   <br>Measurement units have start dates end dates – we need   to observe these start and end dates in the creation of measures. We are not   offering a tool to manage measurement units in the first instance.</td>
+</tr>
+<tr>
+<td><br>ME64</td>
+<td><br>The validity period of the measurement unit qualifier must   span the validity period of the measure.</td>
+<td><br>Required<br>   <br>Measurement unit qualifiers have start dates end dates   – we need to observe these start and end dates in the creation of measures.   We are not offering a tool to manage qualifiers in the first instance.</td>
+</tr>
+<tr>
+<td><br>ME105</td>
+<td><br>The referenced duty expression must exist.</td>
+<td><br>Required<br>   <br>There is a specified list of duty expressions that can   be used in TAP / CDS. We must not use any duty expressions that are not   valid.</td>
+</tr>
+<tr>
+<td><br>ME106</td>
+<td><br>The VP of the duty expression must span the VP of the   measure.</td>
+<td><br>Required<br>   <br>There are a number of duty expressions that are no   longer valid – they have been end dated (in 1996 and 2016 primarily). We must   not use these.</td>
+</tr>
+<tr>
+<td><br>ME108</td>
+<td><br>The same duty expression can only be used once within   condition components of the same condition of the same measure. (i.e. it can   be re-used in other conditions, no matter what condition type, of the same   measure)</td>
+<td><br>Required<br>   <br>Even if an expression that (in English) reads the same   needs to be used more than once in a measure, we must use a different   expression ID, never the same one twice.</td>
+</tr>
+<tr>
+<td><br>ME109</td>
+<td><br>If the flag &lsquo;amount&rsquo; on duty expression is &lsquo;mandatory&rsquo;   then an amount must be specified. If the flag is set to &lsquo;not permitted&rsquo; then   no amount may be entered.</td>
+<td><br>Required<br>   <br>The three possible values for this field on the   duty_expressions table are:<br>   <br>0 - Permitted<br>   <br>1 - Mandatory<br>   <br>2 - Not permitted<br>   <br>These values must be observed – By the way, we should   not allows users to modify the data associated with duty expressions, as the   knock on impact will be too significant.</td>
+</tr>
+<tr>
+<td><br>ME110</td>
+<td><br>If the flag &lsquo;monetary unit&rsquo; on duty expression is   &lsquo;mandatory&rsquo; then a monetary unit must be specified. If the flag is set to   &lsquo;not permitted&rsquo; then no monetary unit may be entered.</td>
+<td><br>Required<br>   <br>The three possible values for this field on the   duty_expressions table are:<br>   <br>0 - Permitted<br>   <br>1 - Mandatory<br>   <br>2 - Not permitted<br>   <br>These values must be observed – As above, we should not   allows users to modify the data associated with duty expressions.</td>
+</tr>
+<tr>
+<td><br>ME111</td>
+<td><br>If the flag &lsquo;measurement unit&rsquo; on duty expression is   &lsquo;mandatory&rsquo; then a measurement unit must be specified. If the flag is set to   &lsquo;not permitted&rsquo; then no measurement unit may be entered.</td>
+<td><br>Required<br>   <br>The three possible values for this field on the   duty_expressions table are:<br>   <br>0 - Permitted<br>   <br>1 - Mandatory<br>   <br>2 - Not permitted<br>   <br>These values must be observed – As above, we should not   allows users to modify the data associated with duty expressions.</td>
+</tr>
+
+        </table>
+      </div><h3 id="comparing-null-dates">Comparing null dates</h3><p>coalesce(validity_end_date, TO_DATE(&lsquo;2999-12-31&rsquo;, &lsquo;YYYY-MM-DD&rsquo;))</p>
 
             
           </main>
