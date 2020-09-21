@@ -20,7 +20,9 @@
 
 2. You can add a graph like this by using the following format: 
 
-````digraph "Measure Types" {
+````
+```dot
+digraph "Measure Types" {
     rankdir=LR
     graph [id=database]
     node [shape=record]
@@ -31,7 +33,8 @@
 
     Measure:2 -> MeasureType:1
     MeasureTypeDescription:1 -> MeasureType:1
-} 
+}
+```
 ````
 
 **Graph 2:** 
@@ -41,7 +44,9 @@
 
 2. You can add a graph like this by using the following format: 
 
-````graph "Measures and Regulations" {
+````
+```dot
+graph "Measures and Regulations" {
   rankdir=LR
   node [shape=box]
 
@@ -55,6 +60,7 @@
   "Regulation" -- measure3
   "Regulation" -- measure4
 }
+```
 ````
 
 ### A few things that we need to consider:
