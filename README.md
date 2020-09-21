@@ -7,7 +7,7 @@
 **How to add tables:**
 1. visit this website: https://www.tablesgenerator.com/markdown_tables# 
 2. Go to file > paste table data > load > generate > copy to clipboard 
-3. You can put line breaks in your table as <br> 
+3. You can put line breaks in your table as `<br>`
 
 **How to add graphs:** 
 
@@ -18,7 +18,7 @@ Graph 1:
 
 2. You can add a graph like this by using the following format: 
 
-`digraph "Measure Types" {
+````digraph "Measure Types" {
     rankdir=LR
     graph [id=database]
     node [shape=record]
@@ -29,7 +29,7 @@ Graph 1:
 
     Measure:2 -> MeasureType:1
     MeasureTypeDescription:1 -> MeasureType:1
-}`
+}````
 
 Graph 2: 
 1. This graph looks like this: 
@@ -38,7 +38,7 @@ Graph 2:
 
 2. You can add a graph like this by using the following format: 
 
-`graph "Measures and Regulations" {
+````graph "Measures and Regulations" {
   rankdir=LR
   node [shape=box]
 
@@ -51,7 +51,7 @@ Graph 2:
   "Regulation" -- measure2
   "Regulation" -- measure3
   "Regulation" -- measure4
-}`
+}````
 
 **A few things that we need to consider:**
 - We need to put a 'back to the top' button at the end of each page 
