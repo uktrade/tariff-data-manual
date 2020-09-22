@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Nomenclature - Tariff Data Manual</title>
+
+    <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/nomenclature.html">
+
+
+      <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta property="og:site_name" content="Tariff Data Manual" />
+      <meta property="og:title" content="Nomenclature" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/nomenclature.html" />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:domain" content="uktrade.github.io" />
+      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta property="twitter:title" content="Nomenclature - Tariff Data Manual" />
+      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/nomenclature.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="https://uktrade.github.io/tariff-data-manual/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          Tariff Data Manual
+        </span>
+      </a>
+        <strong class="govuk-tag">Alpha</strong>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
+                      <ul>
+  <li>
+    <a href="/tariff-data-manual/#home"><span>Home</span></a>
+  </li>
+</ul>
+<ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/wto-quotas-and-atqs.html#wto-quotas-and-atqs"><span>WTO Quotas and ATQs</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
+  </li>
+</ul>
+</li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures-components.html#measures-components"><span>Measures components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures-conditions.html#measures-conditions"><span>Measures conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/nomenclature.html#nomenclature"><span>Nomenclature</span></a>
+  </li>
+</ul>
+</li></ul>
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="nomenclature">Nomenclature</h1>
+<ul>
+<li>
+<a href="#nomenclature">Nomenclature</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#managing-goods-classification-user-needs">Managing goods classification – user needs</a>
+</li>
+<li>
+<a href="#key-business-rules">Key business rules</a>
+</li>
+</ul>
+<p></li>
+</ul>
+</li>
+</ul></p>
+<p>Combined Nomenclature, Harmonised System - Structure</p>
+<p>HS - Harmonised System</p>
+
+<ul>
+<li>The first six digits of the code numbers of the tariff or TARIC have been regulated by the World Customs Organization (WCO) in the form of the HS nomenclature world-wide since 1988.</li>
+<li>HS is currently used in 176 countries. A revision takes place regularly, roughly every 5 years (so far, 1996, 2002, 2007, 2012, 2017). Next change anticipated in 2022.</li>
+</ul>
+<p>CN - Combined Nomenclature</p>
+
+<ul>
+<li>The &ldquo;Combined Nomenclature&rdquo; is published in the Official Journal of the European Community in October each year and specifies the first eight digits of the Tariff/Taric, as well as third country tariff rates for the following year. This eight-digit nomenclature can not be changed over a period of one year and applies both in the EU and the Associated States (BG, RO, TR, etc.).</li>
+</ul>
+<p>TARIC - Tarif Intégré Communautaire / Tarif intégré des Communautés européennes</p>
+
+<ul>
+<li>Taric, the tariff rate of the European Communities, is the same as the CN in the first eight digits. There is, therefore, a uniform marking for customs purposes and statistics. The Taric is subdivided however by the Taric sub-positions (from the ninth place) more deeply.</li>
+<li>As the combined nomenclature is not sufficiently detailed to support the community tariff and commercial legislation, the 8-digit codes can be broken down into 10-digit codes called &ldquo;TARIC codes&rdquo;. </li>
+<li>These codes are created at any time, according to the legislative needs.</li>
+</ul>
+<p>image</p>
+<p><strong>Harmonised system sections</strong></p>
+
+<ul>
+<li>The Harmonised System is categorised into sections and chapters</li>
+<li>The section is a logical grouping that is not reflected in the nomenclature.</li>
+<li>Each chapter, which is a subdivision of a section, is fully self-contained within the logical section.</li>
+<li>Sections are represented by Roman numerals (1 to 21 / I to XXI)</li>
+</ul>
+<p>image</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th><br>ID</th>
+<th><br>Description</th>
+</tr>
+<tr>
+<td><br>I</td>
+<td><br>Live   animals; animal products (chapter 1 - 5)</td>
+</tr>
+<tr>
+<td><br>II</td>
+<td><br>Vegetable   products (chapter 6 - 14)</td>
+</tr>
+<tr>
+<td><br>III</td>
+<td><br>Animal   or vegetable fats and oils and their cleavage products; prepared edible fats;   animal or vegetable waxes (chapter 15)</td>
+</tr>
+<tr>
+<td><br>IV</td>
+<td><br>Prepared   foodstuffs; beverages, spirits and vinegar; tobacco and manufactured tobacco   substitutes (chapter 16 - 24)</td>
+</tr>
+<tr>
+<td><br>V</td>
+<td><br>Mineral   products (chapter 25 - 27)</td>
+</tr>
+<tr>
+<td><br>VI</td>
+<td><br>Products   of the chemical or allied industries (chapter 28 - 38)</td>
+</tr>
+<tr>
+<td><br>VII</td>
+<td><br>Plastics   and articles thereof; rubber and articles thereof (chapter 39 - 40)</td>
+</tr>
+<tr>
+<td><br>VIII</td>
+<td><br>Raw   hides and skins, leather, furskins and articles thereof; saddlery and   harness; travel goods, handbags and similar containers; articles of animal   gut (other than silkworm gut) (chapter 41 - 43)</td>
+</tr>
+<tr>
+<td><br>IX</td>
+<td><br>Wood   and articles of wood; wood charcoal; cork and articles of cork; manufactures   of straw, of esparto or of other plaiting materials; basketware and   wickerwork (chapter 44 - 46)</td>
+</tr>
+<tr>
+<td><br>X</td>
+<td><br>Pulp   of wood or of other fibrous cellulosic material; recovered (waste and scrap)   paper or paperboard; paper and paperboard and articles thereof (chapter   (chapter 47 - 49)</td>
+</tr>
+<tr>
+<td><br>XI</td>
+<td><br>Textiles   and textile articles (chapter 50 - 63)</td>
+</tr>
+
+        </table>
+      </div><div class="table-container">
+        <table>
+          <tr>
+<th><br>ID</th>
+<th><br>Description</th>
+</tr>
+<tr>
+<td><br>XII</td>
+<td><br>Footwear,   headgear, umbrellas, sun umbrellas, walking-sticks, seat-sticks, whips,   riding-crops and parts thereof; prepared feathers and articles made   therewith; artificial flowers; articles of human hair (chapter 64 - 67)</td>
+</tr>
+<tr>
+<td><br>XIII</td>
+<td><br>Articles   of stone, plaster, cement, asbestos, mica or similar materials; ceramic   products; glass and glassware (chapter 68 - 70)</td>
+</tr>
+<tr>
+<td><br>XIV</td>
+<td><br>Natural   or cultured pearls, precious or semi-precious stones, precious metals, metals   clad with precious metal and articles thereof; imitation jewellery; coins   (chapter 71)</td>
+</tr>
+<tr>
+<td><br>XV</td>
+<td><br>Base   metals and articles of base metal (chapter 72 - 83)</td>
+</tr>
+<tr>
+<td><br>XVI</td>
+<td><br>Machinery   and mechanical appliances; electrical equipment; parts thereof, sound   recorders and reproducers, television image and sound recorders and   reproducers, and parts and accessories of such articles (chapter 84 - 85)</td>
+</tr>
+<tr>
+<td><br>XVII</td>
+<td><br>Vehicles,   aircraft, vessels and associated transport equipment (chapter 86 - 89)</td>
+</tr>
+<tr>
+<td><br>XVIII</td>
+<td><br>Optical,   photographic, cinematographic, measuring, checking, precision, medical or   surgical instruments and apparatus; clocks and watches; musical instruments;   parts and accessories thereof (chapter 90 - 92)</td>
+</tr>
+<tr>
+<td><br>XIX</td>
+<td><br>Arms   and ammunition; parts and accessories thereof (chapter 93)</td>
+</tr>
+<tr>
+<td><br>XX</td>
+<td><br>Miscellaneous   manufactured articles (chapter 94 - 96)</td>
+</tr>
+<tr>
+<td><br>XXI</td>
+<td><br>Works   of art, collectors&rsquo; pieces and antiques (chapter 97 - 99)</td>
+</tr>
+
+        </table>
+      </div><p><strong>Concept definition &amp; terminology 2</strong></p>
+
+<ul>
+<li>The UK refers to the full list of products in the UK Tariff as the Goods Classification – this is synonymous with the broad name for the full list of products: goods nomenclature or just nomenclature.</li>
+<li>In the EU, this is referred to under multiple names: often the EU refers to the Tariff as the “Combined Nomenclature” (CN), though officially this refers only to the first 8 digits of the code.</li>
+<li>Within the broader body, the individual elements referring to specific products are called commodity codes.</li>
+<li>The commodity code is what is entered into the SAD (C88) form – the Single Administrative Document that acts as the import declaration form – see ringed box to the right.</li>
+<li>There is a total of 24,504 commodity codes (as of 1st December 2019): of these 15,887 are declarable end-lines (see definition later).</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93874914-fd82f480-fccb-11ea-86f0-d5afa1ac5272.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93874914-fd82f480-fccb-11ea-86f0-d5afa1ac5272.png" alt="image" /></a></p>
+<p><strong>Concept definition &amp; terminology 2</strong></p>
+<p>There are three key concepts to understand in this section. All of these have a significant impact on the measures that can be defined and managed by Tariff Managers:</p>
+
+<ul>
+<li>commodity codes</li>
+<li>product line suffixes</li>
+<li>indents</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93875068-38852800-fccc-11ea-89f5-175beb19cb7a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93875068-38852800-fccc-11ea-89f5-175beb19cb7a.png" alt="image" /></a></p>
+<p><strong>Commodity codes, product line suffixes and indents in practice</strong></p>
+
+<ul>
+<li>The schematic to the right illustrates a ‘hierarchy’ starting from the very first commodity code in the Tariff (0100 00 00 00) down to the last end-line under the 1st major HS heading branch (0101 90 00 00), i.e. Live horses, asses, mules and hinnies</li>
+<li>This shows the commodity codes, split into segments for ease of reading, the product line suffix and the indent, as well as the current description of the commodity code.</li>
+<li>The physical indent on the description matches the indent field.</li>
+<li>Hence, Horses is a ‘child’ of ‘Live horses, asses, mules and hinnies’ and ‘Pure-bred breeding animals’ is a child of ‘Horses’ – however these relationships are inferred, not explicit.</li>
+<li>You will notice that there are two zeroes at the start of the tree – this is a slightly bewildering treatment from the EU, but we need to work with it: the HS chapter and the HS heading both use an indent of 0. This will not be of huge immediate interest, as these codes will not change until the lead-up to January 2022.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93875201-75e9b580-fccc-11ea-86b6-7f6917067959.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93875201-75e9b580-fccc-11ea-86b6-7f6917067959.png" alt="image" /></a></p>
+<p>If one were to try and print out the whole commodity tree (c. 24,500 lines), you would:</p>
+
+<ul>
+<li>select the commodity codes with current validity</li>
+<li>sort them by commodity code and then product line suffix</li>
+<li>indent them using the indent field</li>
+</ul>
+<p><strong>Declarability and measure assignment</strong></p>
+
+<ul>
+<li>A SAD form requires that the trader enter the most detailed description possible for the good that is being traded, not something vague like ‘Horses’</li>
+<li>There are two rules that define whether or not a good is declarable, i.e. whether or not it can be entered onto a SAD form:</li>
+<li>first, a good must have a product line suffix (PLS) of “80”: anything else cannot be traded – these commodity codes are in the database purely as structural fillers</li>
+<li>second, a good must be an end-line aka a leaf. i.e. it must not have any children.</li>
+<li>In the example to the left, the declarable commodities are those with a      against them</li>
+<li>Although 0101 29 00 00, 01010 00 00 00 and 0101 00 00 00 all have a PLS of “80”, they all have child codes underneath them, therefore cannot be declared.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93875556-18099d80-fccd-11ea-9413-83b915134c58.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93875556-18099d80-fccd-11ea-9413-83b915134c58.png" alt="image" /></a></p>
+
+<ul>
+<li>In the example above (red marquee), it is interesting to note (and this is key in understanding where a product line suffix other than “80” is used), that there are two items with the commodity code 0101 21 00 00.</li>
+<li>One has a PLS of 10, the other has a PLS of 80.</li>
+<li>This is common and is likely to be a treatment we need to get used to in the UK for future change.</li>
+</ul>
+<p><strong>Jams and jellies are very complex</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93875615-32dc1200-fccd-11ea-8384-78c564883f46.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93875615-32dc1200-fccd-11ea-8384-78c564883f46.png" alt="image" /></a></p>
+
+<ul>
+<li>The image above shows the complexity of certain hierarchies.</li>
+<li>The indent numbers have been doctored slightly to show the true number of indents, ignoring the double zero noted previously.</li>
+<li>There are actually 14 tiers of data in certain points in the hierarchy, as shown here</li>
+<li>This is exceptional however</li>
+<li>Please also note the apparently inconsistent use of product line suffixes: why has 2007 99 39 00 got a PLS of “80” when it is clearly an intermediate code?</li>
+<li>The answer seems to be that the non-80 code is used where there is a need to insert a structural heading with the same commodity code as the subsequent code, presumably due to space restrictions in the hierarchy.</li>
+</ul>
+<p><strong>Smashing preconceptions on hierarchical inheritance</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93876229-63707b80-fcce-11ea-951f-2357ec18703f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93876229-63707b80-fcce-11ea-951f-2357ec18703f.png" alt="image" /></a></p>
+
+<ul>
+<li>This is undoubtedly an unusually complex tree, however it does illustrate well a concept that needs to be understood, to help the Tariff management team to grasp the idea of inheritance, which is critical in measure management.</li>
+<li>The 10-digit commodity code is divided into 5 pairs of digits.</li>
+<li>While it is alluring to consider that these two digit pairs provide enough information to work out the hierarchy, this is coincidental, though, certainly at the top of the hierarchy, frequently true.</li>
+</ul>
+<p><strong>There are five main reasons why new commodities are required</strong></p>
+<p><strong>New commodities - examples</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93876504-dd086980-fcce-11ea-88a8-28d93c0f7d83.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93876504-dd086980-fcce-11ea-88a8-28d93c0f7d83.png" alt="image" /></a></p>
+<p><strong>Do not underestimate WCO changes</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93876547-ee517600-fcce-11ea-91b2-4eaeb49a4fcc.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93876547-ee517600-fcce-11ea-91b2-4eaeb49a4fcc.png" alt="image" /></a></p>
+
+<ul>
+<li>The graph to the left shows the peaks and troughs of nomenclature management over the last 10 years</li>
+<li>The 2 big peaks are on 1st Jan 2012 and 1st Jan 2017, the to dates in the last 10 years where the WCO has made alterations to their HS6 structures.</li>
+<li>Every non-WCO year follows a similar peak / trough structure</li>
+<li>Big peak in Jan (annual CN code changes, smaller peak in July (new suspension), ad hoc for the rest of the year</li>
+<li>2019 has been an outlier, as commodity code changes have taken place throughout the year</li>
+</ul>
+<p><strong>January 2022 will require a lot of preparation</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93876853-6750cd80-fccf-11ea-8181-f029f52f80dc.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93876853-6750cd80-fccf-11ea-8181-f029f52f80dc.png" alt="image" /></a></p>
+<p><strong>WCO 5-year changes are significant</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93876945-90715e00-fccf-11ea-9ec4-9c36eda766d6.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93876945-90715e00-fccf-11ea-9ec4-9c36eda766d6.png" alt="image" /></a></p>
+
+<ul>
+<li>This shows the change from 31st December to 2nd January on just a small branch 0305 59 00</li>
+<li>Most of these changes were deletions, not creations.</li>
+<li>The spike of 2,334 was more like 4,500 actual changes</li>
+</ul>
+<p><strong>WCO HS correlation tables</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93877034-b434a400-fccf-11ea-87d3-84e0f4ebc4c6.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93877034-b434a400-fccf-11ea-87d3-84e0f4ebc4c6.png" alt="image" /></a></p>
+
+<ul>
+<li>Here is a page from a 60-page correlation table document, comparing the HS systems of 2012 and 2017</li>
+<li>The WCO specify the changes that are made to the 4 and 6 digit codes that they master.</li>
+<li>But … the majority of the change is felt lower down the hierarchy.</li>
+<li>You move a parent, you have to move the children.</li>
+<li>And in moving a child, you have to give it a new commodity code, due to the need to sequence by comm code and pls.</li>
+<li>This really means ending an old comm code and creating a new </li>
+</ul>
+
+<blockquote>
+<p>How will we decide on new commodity codes? How will we facilitate alignment with the EU?The answer has to be that we follow the EU’s changed precisely</p>
+<p>There are two additional concepts that are useful to know, but play a far smaller part in the management of goods classification. Origins and successorsare intended to create an audit trail when commodity codes change</p>
+</blockquote>
+<p><strong>Origins</strong></p>
+<p>Origins</p>
+
+<ul>
+<li>An origin defines the commodity code from which a new commodity code was derived.</li>
+<li>When a commodity code is split into two, the ‘origin’ of the two (or more) new commodity codes is the parent commodity code.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93879845-640c1080-fcd4-11ea-83cb-562502505133.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93879845-640c1080-fcd4-11ea-83cb-562502505133.png" alt="image" /></a></p>
+
+<ul>
+<li>In the example above, a successor will have been created for codes 2001 90 70 10 and 2001 90 70 90 of2001 90 70 00.</li>
+<li>It is mandatory that at least one origin is created for every new commodity code</li>
+<li>However, this data is of zero value to the Tariff Application</li>
+</ul>
+<p>Successors</p>
+
+<ul>
+<li>An successor defines the commodity code into which an existing commodity code has been absorbed.</li>
+<li>It is not mandatory for a successor code to be created, though they may be created.</li>
+</ul>
+<p><strong>Residual codes</strong></p>
+
+<ul>
+<li>The sweet peppers example can also be used to exemplify residual codes.</li>
+<li>A residual code is the code usually labelled ’Other’ which is created when a code is split into a specific and remainder part.</li>
+<li>In this example 2001 90 70 00 is split into 2 child codes.
+
+<ul>
+<li>The specific code is assigned 10 as the final 2 digits.</li>
+<li>The residual code is assigned 90 as the final 2 digits.</li>
+<li>If in future more child codes as added to the parent as siblings to 10 and 90, then these are assigned 20, 30, 40 etc as the final 2 digits, while space remains.</li>
+</ul></li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93880032-b0575080-fcd4-11ea-96bf-cbb88dda7cf1.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93880032-b0575080-fcd4-11ea-96bf-cbb88dda7cf1.png" alt="image" /></a></p>
+
+<ul>
+<li>If a code is split on the last digit, rather than the last 2 digits, it is usually split into 1 and 9, for example:</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93880078-c6651100-fcd4-11ea-8b82-f1c79cdad628.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93880078-c6651100-fcd4-11ea-8b82-f1c79cdad628.png" alt="image" /></a></p>
+
+<ul>
+<li>There are more than 6,500 residual codes in the database </li>
+</ul>
+<h3 id="managing-goods-classification-user-needs">Managing goods classification – user needs</h3><div class="table-container">
+        <table>
+          <tr>
+<th><br>As a …</th>
+<th><br>I   want to &hellip;</th>
+<th><br>So   that …</th>
+<th><br>Notes</th>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>browse through the commodity code hierarchy to find   commodity codes</td>
+<td><br>I can locate a commodity to perform actions on it or to   review the data associated with it</td>
+<td><br>Must be able to navigate down through the commodity code   hierarchy through the following tiers:<br>   <br>    <br>Section<br>    <br>HS        chapter<br>    <br>HS        heading<br>    <br>HS        subheading<br>    <br>CN        heading<br>    <br>Taric        code   <br>   <br>These names may change over time, but refer to the   section, 2, 4, 6, 8 and 10-digit codes.</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>change the date forwards or backwards in time when   browsing / finding commodity codes</td>
+<td><br>I can see the result of future changes on the goods   classification or review the state of the hierarchy at a previous time</td>
+<td><br>Date selected must be valid and should look no further   back than 1st Jan 1972, which is when the first commodity codes   came into existence.</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>view the core details of a current commodity code</td>
+<td><br>I can determine core info such as end date and identify   next operational steps on this commodity code</td>
+<td><br>Must show:<br>   <br>    <br>10-digit        commodity code<br>    <br>Current        commodity code description<br>    <br>SID<br>    <br>Indent<br>    <br>product        line suffix<br>    <br>Validity        start date<br>    <br>Validity        end date   <br>   <br>Do not show:<br>   <br>    <br>Statistical        indicator field</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>view the current and historical descriptions of a   commodity code</td>
+<td><br>I can review past descriptions for accountability and   audit purposes and so that I can make a judgement on future changes to those   descriptions</td>
+<td><br>For each description, show the following:<br>   <br>    <br>Date        from which the description is valid – there is no concept of end date        for description periods<br>    <br>The        textual description – decision will be needed on whether the show the        description with the odd EU characters removed: preference would be to        say yes<br>    <br>Actions        as follows:<br>    <br>     <br>Delete         description – only for future descriptions<br>     <br>Edit         description – only for future descriptions       <br>   <br>Show also a “Create new description” function</td>
+</tr>
+<tr>
+<td><br>As a …</td>
+<td><br>I want to &hellip;</td>
+<td><br>So that …</td>
+<td><br>Notes</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>view the position of a commodity code within the hierarchy   for a given date</td>
+<td><br>I can assess the activities that will be required when   creating measures on or around the selected commodity (e.g. for business rule   violations)</td>
+<td><br>    <br>Show        the full hierarchy leading all the way up to the HS chapter (not        required to show the section)<br>    <br>Show        also the full hierarchy downwards, including all subsidiary comm codes        on all branches.<br>    <br>For        each commodity code in the hierarchy, show:<br>    <br>     <br>10         digit commodity code<br>     <br>product         line suffix<br>     <br>number         of indents<br>     <br>Description<br>     <br>End         line (Yes or No) [aka leaf]    <br>    <br>Highlight        the currently selected comm code</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>view the origins / successors for a given commodity code</td>
+<td><br>see the code(s) from which the selected code is derived,   or in the case of a terminated comm code, I can see which comm code has   absorbed (or replaced) the selected comm code</td>
+<td><br>For each origin / successor, show:<br>   <br>    <br>commodity        code<br>    <br>product        line suffix<br>    <br>description</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>view the measures assigned to a give commodity code</td>
+<td><br>I can assess the activities that will be required when   creating measures on or around the selected commodity (e.g. for business rule   violations)</td>
+<td><br>For each measure, show:<br>   <br>    <br>measure        SID<br>    <br>commodity        code (me)<br>    <br>Measure        type ID and description<br>    <br>Geographical        area<br>    <br>Additional        code<br>    <br>Regulation        (measure-generating)<br>    <br>Start        date / end date<br>    <br>Quota        order number<br>    <br>Duty</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>view the measures inherited down to a given commodity code</td>
+<td><br>I can assess the activities that will be required when   creating measures on or around the selected commodity (e.g. for business rule   violations)</td>
+<td><br>For each measure, show:<br>   <br>    <br>measure        SID<br>    <br>commodity        code (me)<br>    <br>Measure        type ID and description<br>    <br>Geographical        area<br>    <br>Additional        code<br>    <br>Regulation        (measure-generating)<br>    <br>Start        date / end date<br>    <br>Quota        order number<br>    <br>Duty</td>
+</tr>
+<tr>
+<td><br>As a …</td>
+<td><br>I want to &hellip;</td>
+<td><br>So that …</td>
+<td><br>Notes</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>view footnotes assigned to a given commodity code</td>
+<td><br>I can decide on the actions that I need to perform with   this commodity code’s footnotes, for example add, delete footnotes</td>
+<td><br>For each footnote, show:<br>   <br>    <br>compound        of footnote type ID and footnote ID<br>    <br>Description        of footnote<br>    <br>Start        date of association with comm code<br>    <br>End        date of association with comm code<br>    <br>Actions:<br>    <br>Delete        association – only for associations that are yet to start<br>    <br>Terminate        association – for any association that is unterminated</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>add a new description to a commodity code</td>
+<td><br>I can ensure that the description of the commodity code is   fully correct, for example to map to the UK / EU (in the case of the NIP)   legal requirements for the comm code</td>
+<td><br>User must be able to supply:<br>   <br>    <br>The        start date of the new description<br>    <br>The        description itself (there is no formal limit, though 10,000 characters        easily covers the max. requirement)</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>modify an existing description for a commodity code</td>
+<td><br>I can ensure that the description of the commodity code is   fully correct, for example to map to the UK / EU (in the case of the NIP)   legal requirements for the comm code</td>
+<td><br>Should only be possible for descriptions that are yet to   start, to retain accountability for all descriptions that had previously been   in the public domain.<br>   <br>User must be able to supply:<br>   <br>    <br>The        start date of the new description<br>    <br>The        description itself (there is no formal limit, though 10,000 characters        easily covers the max. requirement)</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>delete an existing description for a commodity code</td>
+<td><br>I can ensure that the description of the commodity code is   fully correct, for example to map to the UK / EU (in the case of the NIP)   legal requirements for the comm code</td>
+<td><br>Can only delete a future description, not one that has   already started</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>terminate a commodity code</td>
+<td><br>I can ensure that the goods classification is fully   reflective of any required change, such as modifications to the WCO’s 6-digit   comm codes on a 5-yearly basis</td>
+<td><br>By applying an end date to a commodity code. There are a   lot of business rules that need to be adhered to with this function – see   section on business rules below.</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>delete a commodity code</td>
+<td><br>I can correct mistakes in generating commodity codes</td>
+<td><br>Should only be possible for commodity codes which:<br>   <br>    <br>have        yet to start (validity start date has not been reached)<br>    <br>have        never had measures assigned to them<br>    <br>have        never had footnotes assigned to them</td>
+</tr>
+<tr>
+<td><br>As a …</td>
+<td><br>I want to &hellip;</td>
+<td><br>So that …</td>
+<td><br>Notes</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>create a new commodity code</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>‘move’ commodity codes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>delete a relationship with a footnote</td>
+<td><br>The public-facing display of the commodity code can be   reflective of the explanatory requirement</td>
+<td><br>Only possible on future associations (not yet started)</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>terminate a relationship with a footnote</td>
+<td><br>The public-facing display of the commodity code can be   reflective of the explanatory requirement</td>
+<td><br>Only possible on current associations (not yet terminated)</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>create a relationship with a footnote</td>
+<td><br>The public-facing display of the commodity code can be   reflective of the explanatory requirement</td>
+<td></td>
+</tr>
+
+        </table>
+      </div><h3 id="key-business-rules">Key business rules</h3><div class="table-container">
+        <table>
+          <tr>
+<th><br>#</th>
+<th><br>Rule</th>
+<th><br>Notes</th>
+</tr>
+<tr>
+<td><br>NIG1</td>
+<td><br>The validity period of the goods nomenclature must not   overlap any other goods nomenclature with the same goods code. Two   nomenclatures overlap if they have the same goods code and a time overlap in   their validity periods.</td>
+<td><br>Mandatory – priority high<br>   <br>Commodity codes are uniquely identified by their SID value.   There cannot be more than one entity with the same SID. There can however be   more than one entity with the same compound key of commodity code and product   line suffix, provided the multiple items do not coexist concurrently. The use   case here is that a commodity code has previously been terminated, and then   reinstituted at a later date with the same commodity code and product line   suffix. This rule states that there must be no crossover in the dates of   these entities that shar the same commodity code and product line suffix.</td>
+</tr>
+<tr>
+<td><br>NIG2</td>
+<td><br>The validity period of the goods nomenclature must be   within (inclusive) the validity period of the product line above in the   hierarchy.</td>
+<td><br>Mandatory – priority high<br>   <br>If terminating a commodity code, you must have already   done the same to the child commodity codes.</td>
+</tr>
+<tr>
+<td><br>NIG3</td>
+<td><br>For lines having a product line suffix equal to   &ldquo;80&rdquo;, the validity period of the goods nomenclature must span the   validity period of the line(s) below in the hierarchy.</td>
+<td><br>Mandatory – priority high<br>   <br>This is essentially the same as NIG2</td>
+</tr>
+<tr>
+<td><br>NIG4</td>
+<td><br>The start date of the goods nomenclature must be less than   or equal to the end date.</td>
+<td><br>Mandatory – priority high<br>   <br>As per rule description</td>
+</tr>
+<tr>
+<td><br></td>
+<td><br>Goods   nomenclature origin</td>
+<td></td>
+</tr>
+<tr>
+<td><br>NIG5</td>
+<td><br>When creating a goods nomenclature code, at least one   &ldquo;derived from&rdquo;&lsquo; code must be created.<br>   This rule is only applicable to update extractions.</td>
+<td><br>Mandatory – priority high<br>   <br>The origin should be the code from which the commodity is   derived (i.e. its parent) if the use case id the creation of a new commodity   code from a parent, e.g. for splitting a commodity code into two.<br>   <br>If the use case concerns moving chunks of or single   commodity codes from one place in the hierarchy to another , then the   requirement is that the origin should be the identifier of the code which   used to represent the commodity in question</td>
+</tr>
+<tr>
+<td><br>NIG7</td>
+<td><br>The &ldquo;derived from&rdquo; code, if entered, must be a   goods nomenclature which exists and is applicable the day before the start   date of the new code entered.</td>
+<td><br>Mandatory – priority high<br>   <br>as per rule</td>
+</tr>
+<tr>
+<td><br></td>
+<td><br>Goods   nomenclature successor</td>
+<td></td>
+</tr>
+<tr>
+<td><br>NIG10</td>
+<td><br>The &ldquo;absorbed by&rdquo; code, if entered, must be a   goods nomenclature which exists and is applicable the day after the closing   date.</td>
+<td><br>Mandatory – priority high<br>   <br>as per rule, however there are no rules which state that   successors must be entered, though it remains a good idea to do so</td>
+</tr>
+<tr>
+<td><br></td>
+<td><br>Goods nomenclature indent</td>
+<td></td>
+</tr>
+<tr>
+<td><br>NIG11</td>
+<td><br>At least one indent record is mandatory. The start date of   the first indentation must be equal to the start date of the nomenclature. No   two associated indentations may have the same start date. The start date must   be less than or equal to the end date of the nomenclature.</td>
+<td><br>Mandatory – priority high<br>   <br>as per rule</td>
+</tr>
+<tr>
+<td><br></td>
+<td><br>Goods description and description periods</td>
+<td></td>
+</tr>
+<tr>
+<td><br>NIG12</td>
+<td><br>At least one description is mandatory. The start date of   the first description period must be equal to the start date of the   nomenclature. No two associated description periods may have the same start   date. The start date must be less than or equal to the end date of the   nomenclature.</td>
+<td><br>Mandatory – priority high<br>   <br>as per rule</td>
+</tr>
+<tr>
+<td><br></td>
+<td><br>Nomenclature group membership</td>
+<td></td>
+</tr>
+<tr>
+<td><br>NIG13</td>
+<td><br>The nomenclature groups that are referenced must exist.</td>
+<td><br>Not required<br>   <br>We will not be using nomenclature groups</td>
+</tr>
+<tr>
+<td><br>NIG14</td>
+<td><br>The start date of the group association must be less than   or equal to the end date.</td>
+<td><br>Not required<br>   <br>We will not be using nomenclature groups</td>
+</tr>
+<tr>
+<td><br>NIG15</td>
+<td><br>The period of the association with a nomenclature group   must be within (inclusive) the validity period of the nomenclature.</td>
+<td><br>Not required<br>   <br>We will not be using nomenclature groups</td>
+</tr>
+<tr>
+<td><br>NIG16</td>
+<td><br>The period of the association with a nomenclature group   must be within (inclusive) the validity period of the nomenclature group.</td>
+<td><br>Not required<br>   <br>We will not be using nomenclature groups</td>
+</tr>
+<tr>
+<td><br>NIG17</td>
+<td><br>When the same goods nomenclature occurs more than once as   a member of the same group then there must be no overlap in their membership   periods.</td>
+<td><br>Not required<br>   <br>We will not be using nomenclature groups</td>
+</tr>
+<tr>
+<td><br>NIG50</td>
+<td><br>If the referenced nomenclature group is an ERN   nomenclature group (group code = ‘X’), then the nomenclature   code must be a CN (level 8 or higher).</td>
+<td><br>Not required<br>   <br>We will not be using nomenclature groups</td>
+</tr>
+<tr>
+<td><br></td>
+<td><br>Footnote association</td>
+<td></td>
+</tr>
+<tr>
+<td><br>NIG18</td>
+<td><br>Footnotes with a footnote type for which the application   type = &ldquo;CN footnotes&rdquo; must be linked to CN lines (all codes up to 8   digits).</td>
+<td><br>Mandatory – priority low<br>   <br>This is a peculiarity that should be consigned to   history – we should imply not use footnotes of this type in the future. The   proposal is for all future footnotes to belong to the new footnote type of “FC”,   which will assignable to any commodity code, regardless of ‘depth’, so that   daft rules such as this do not need to be run - see the notes on new footnote   types in the footnotes manual.</td>
+</tr>
+<tr>
+<td><br>NIG19</td>
+<td><br>Footnotes with a footnote type for which the application   type = &ldquo;TARIC footnotes&rdquo; can be associated at any level.</td>
+<td><br>Mandatory – priority low<br>   <br>The “FC” type, mentioned above would be of a type with   the application code “Taric footnotes”, therefore can be assigned to any   commodity code, regardless of its depth.</td>
+</tr>
+<tr>
+<td><br>NIG20</td>
+<td><br>Footnotes that are referenced must exist.</td>
+<td><br>Mandatory – priority high<br>   <br>User must only be able to select existing footnotes</td>
+</tr>
+<tr>
+<td><br>NIG21</td>
+<td><br>The start date of the association with a footnote  must be less than or equal to the end date   of the association.</td>
+<td><br>Mandatory – priority medium<br>   <br>as per rule, but in most cases there is no need to   end-date a footnote to commodity code association.</td>
+</tr>
+<tr>
+<td><br>NIG22</td>
+<td><br>The period of the association with a footnote must be   within (inclusive) the validity period of the nomenclature.</td>
+<td><br>Mandatory – priority medium<br>   <br>as per rule, but in most cases there is no need to   end-date a footnote to commodity code association.</td>
+</tr>
+<tr>
+<td><br>NIG23</td>
+<td><br>The period of the association with a footnote must be   within (inclusive) the validity period of the footnote.</td>
+<td><br>Mandatory – priority medium<br>   <br>as per rule, but in most cases there is no need to   end-date a footnote to commodity code association.</td>
+</tr>
+<tr>
+<td><br>NIG24</td>
+<td><br>When the same footnote is associated more than once with   the same nomenclature then there may be no overlap in their association   periods.</td>
+<td><br>Mandatory – priority medium<br>   <br>as per rule, but in most cases there is no need to   end-date a footnote to commodity code association.</td>
+</tr>
+<tr>
+<td><br>NIG37</td>
+<td><br>The validity period of the footnote type must span the   validity period of the footnote association.</td>
+<td><br>Optional<br>   <br>Footnote types typically do not get end-dated and we   should retain that maxim</td>
+</tr>
+<tr>
+<td><br></td>
+<td><br>Relation with measures</td>
+<td></td>
+</tr>
+<tr>
+<td><br>NIG30</td>
+<td><br>When a goods nomenclature is used in a goods measure then   the validity period of the goods nomenclature    must span the validity period of the goods measure.</td>
+<td><br>Mandatory – priority high<br>   <br>as per rule</td>
+</tr>
+<tr>
+<td><br>NIG31</td>
+<td><br>When a goods nomenclature is used in an additional   nomenclature measure then the validity period of the goods nomenclature must   span the validity period of the additional nomenclature measure (the   additional nomenclature measure links together a goods nomenclature and an   additional code).</td>
+<td><br>Mandatory – priority high<br>   <br>as per rule – this concerns (primarily) trade remedy   measures (anti-dumping and anti-subsidy measures) that feature both a   commodity code and an additional code.</td>
+</tr>
+<tr>
+<td><br></td>
+<td><br>Relation with Export Refund codes (ERNs)</td>
+<td></td>
+</tr>
+<tr>
+<td><br>NIG32</td>
+<td><br>When a goods nomenclature is used in an Export Refund   nomenclature then the validity period of the goods nomenclature must span the   validity period of the Export Refund nomenclature.</td>
+<td><br>Not required<br>   <br>We will not be using ERNs</td>
+</tr>
+<tr>
+<td><br></td>
+<td><br>Delete a goods nomenclature code</td>
+<td></td>
+</tr>
+<tr>
+<td><br>NIG34</td>
+<td><br>A goods nomenclature cannot be deleted if it is used in a   goods measure.</td>
+<td><br>Mandatory – priority medium<br>   <br>as per rule, though we should honestly not be deleting   commodity codes, just terminating them</td>
+</tr>
+<tr>
+<td><br>NIG35</td>
+<td><br>A goods nomenclature cannot be deleted if it is used in an   additional nomenclature measure.</td>
+<td><br>Mandatory – priority medium<br>   <br>as per rule, though we should honestly not be deleting   commodity codes, just terminating them</td>
+</tr>
+<tr>
+<td><br>NIG36</td>
+<td><br>A goods nomenclature cannot be deleted if it is used in an   Export refund nomenclature.</td>
+<td><br>Mandatory – priority low<br>   <br>as per rule, though we should honestly not be deleting   commodity codes, just terminating them. Even though we are not using ERNs,   this rule could trip us up.</td>
+</tr>
+
+        </table>
+      </div>
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Tariff-Data-Structures;-Nomenclature">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Nomenclature'&amp;body=Problem%20with%20'Nomenclature'%20(https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/nomenclature.html)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="/tariff-data-manual/javascripts/application.js"></script>
+  </body>
+</html>
