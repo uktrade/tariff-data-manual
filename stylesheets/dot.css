@@ -1,5 +1,23 @@
 svg * {
   font-family: inherit !important; }
 
-svg #database .node text:first-of-type {
-  font-weight: bold !important; }
+svg .graph[id^='database'] > polygon {
+  fill: none; }
+
+svg [id^='database'] .node[id^='table'] text:first-of-type {
+  font-weight: bold; }
+
+svg [id^='database'] .node[id^='table'] polygon:first-of-type {
+  fill: #c0c0c0; }
+
+svg [id^='database'] .node[id^='table'] :last-of-type {
+  stroke: none; }
+
+svg [id^='database'] .node[id^='table']:first-of-type polygon:first-of-type {
+  fill: #7ea6e0; }
+
+svg [id^='database'] .node[id^='note'] polygon {
+  fill: #e0d37d; }
+
+svg [id^='database'] .node[id^='note'] text {
+  font-weight: normal; }
