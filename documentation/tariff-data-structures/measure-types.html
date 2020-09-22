@@ -157,8 +157,6 @@
 <a href="#measure-types">Measure types</a>
 <ul>
 <li>
-<ul>
-<li>
 <a href="#introduction-to-measure-types">Introduction to measure types</a>
 </li>
 <li>
@@ -184,64 +182,8 @@
 </li>
 </ul>
 <p></li>
-</ul>
-</li>
 </ul></p>
-<svg width="364pt" height="212pt"
- viewBox="0.00 0.00 364.00 212.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database" class="graph" transform="scale(1 1) rotate(0) translate(4 208)">
-<title>Measure Types</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-208 360,-208 360,4 -4,4"/>
-<!-- Measure -->
-<g id="database_node1" class="node">
-<title>Measure</title>
-<polygon fill="none" stroke="#000000" points="28.5,-111.5 28.5,-203.5 157.5,-203.5 157.5,-111.5 28.5,-111.5"/>
-<text text-anchor="middle" x="93" y="-188.3" font-family="Arial" font-size="14.00" fill="#000000">Measure</text>
-<polyline fill="none" stroke="#000000" points="28.5,-180.5 157.5,-180.5 "/>
-<text text-anchor="middle" x="93" y="-165.3" font-family="Arial" font-size="14.00" fill="#000000">measure_sid</text>
-<polyline fill="none" stroke="#000000" points="28.5,-157.5 157.5,-157.5 "/>
-<text text-anchor="middle" x="93" y="-142.3" font-family="Arial" font-size="14.00" fill="#000000">measure_type_id</text>
-<polyline fill="none" stroke="#000000" points="28.5,-134.5 157.5,-134.5 "/>
-<text text-anchor="middle" x="93" y="-119.3" font-family="Arial" font-size="14.00" fill="#000000">&hellip;</text>
-</g>
-<!-- MeasureType -->
-<g id="database_node2" class="node">
-<title>MeasureType</title>
-<polygon fill="none" stroke="#000000" points="222,-43.5 222,-135.5 356,-135.5 356,-43.5 222,-43.5"/>
-<text text-anchor="middle" x="289" y="-120.3" font-family="Arial" font-size="14.00" fill="#000000">Measure Type</text>
-<polyline fill="none" stroke="#000000" points="222,-112.5 356,-112.5 "/>
-<text text-anchor="middle" x="289" y="-97.3" font-family="Arial" font-size="14.00" fill="#000000">measure_type_id</text>
-<polyline fill="none" stroke="#000000" points="222,-89.5 356,-89.5 "/>
-<text text-anchor="middle" x="289" y="-74.3" font-family="Arial" font-size="14.00" fill="#000000">validity_start_date</text>
-<polyline fill="none" stroke="#000000" points="222,-66.5 356,-66.5 "/>
-<text text-anchor="middle" x="289" y="-51.3" font-family="Arial" font-size="14.00" fill="#000000">validity_end_date</text>
-</g>
-<!-- Measure&#45;&gt;MeasureType -->
-<g id="database_edge1" class="edge">
-<title>Measure:2&#45;&gt;MeasureType:1</title>
-<path fill="none" stroke="#000000" d="M158,-145.5C188.7428,-145.5 188.1103,-110.5986 211.9898,-102.964"/>
-<polygon fill="#000000" stroke="#000000" points="212.6118,-106.4103 222,-101.5 211.5987,-99.484 212.6118,-106.4103"/>
-</g>
-<!-- MeasureTypeDescription -->
-<g id="database_node3" class="node">
-<title>MeasureTypeDescription</title>
-<polygon fill="none" stroke="#000000" points="0,-.5 0,-92.5 186,-92.5 186,-.5 0,-.5"/>
-<text text-anchor="middle" x="93" y="-77.3" font-family="Arial" font-size="14.00" fill="#000000">Measure Type Description</text>
-<polyline fill="none" stroke="#000000" points="0,-69.5 186,-69.5 "/>
-<text text-anchor="middle" x="93" y="-54.3" font-family="Arial" font-size="14.00" fill="#000000">measure_type_id</text>
-<polyline fill="none" stroke="#000000" points="0,-46.5 186,-46.5 "/>
-<text text-anchor="middle" x="93" y="-31.3" font-family="Arial" font-size="14.00" fill="#000000">language_id</text>
-<polyline fill="none" stroke="#000000" points="0,-23.5 186,-23.5 "/>
-<text text-anchor="middle" x="93" y="-8.3" font-family="Arial" font-size="14.00" fill="#000000">description</text>
-</g>
-<!-- MeasureTypeDescription&#45;&gt;MeasureType -->
-<g id="database_edge2" class="edge">
-<title>MeasureTypeDescription:1&#45;&gt;MeasureType:1</title>
-<path fill="none" stroke="#000000" d="M186,-58.5C206.6407,-58.5 200.6907,-87.989 212.1908,-98.1259"/>
-<polygon fill="#000000" stroke="#000000" points="211.4053,-101.5569 222,-101.5 213.6823,-94.9376 211.4053,-101.5569"/>
-</g>
-</g>
-</svg><h3 id="introduction-to-measure-types">Introduction to measure types</h3><p><strong>Structure of measure types</strong></p>
+<h2 id="introduction-to-measure-types">Introduction to measure types</h2><p><strong>Structure of measure types</strong></p>
 
 <ul>
 <li>Each measure belongs to exactly one measure type. The measure types describe to the border systems how to execute some kind of action on the trade in question (e.g. charge a duty / require a document).</li>
@@ -489,7 +431,7 @@
 <li>According to the additive rules of thumb re: measure type series, it is unclear by what mechanism the quota (type 122) can cancel out the additional duties (safeguard).</li>
 <li>The understanding is that this must have been achieved via some custom configuration in the border systems.</li>
 </ul>
-<h3 id="measure-type-fields">Measure type fields</h3><div class="table-container">
+<h2 id="measure-type-fields">Measure type fields</h2><div class="table-container">
         <table>
           <tr>
 <th>Field</th>
@@ -537,7 +479,7 @@
 </tr>
 
         </table>
-      </div><h3 id="logical-view-of-measure-types">Logical view of measure types</h3><p><strong>Primary duty-bearing measures – logical layout</strong></p>
+      </div><h2 id="logical-view-of-measure-types">Logical view of measure types</h2><p><strong>Primary duty-bearing measures – logical layout</strong></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" alt="image" /></a></p>
 <p><strong>Trade remedy-related measures – logical layout</strong></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" alt="image" /></a></p>
@@ -561,7 +503,7 @@
 <li>I can either rejig the measures in the entire hierarchy to suit to new measure OR …</li>
 <li>I can invent a new measure type “Import control for sieved fruit puree” … which is what the EU has done, and which we will also need to do in the future.</li>
 </ul>
-<h3 id="relationship-of-measure-types-to-additional-code-types">Relationship of measure types to additional code types</h3>
+<h2 id="relationship-of-measure-types-to-additional-code-types">Relationship of measure types to additional code types</h2>
 <ul>
 <li>Relationship of measure types to additional code types</li>
 <li>The joining table additional_code_type_measure_types has been created to manage the limitations as to which additional codes can be applied to which measure types.</li>
@@ -569,8 +511,159 @@
 <li>The Northern Ireland protocol is looking to bring in a revolutionary way of managing commodity codes, which may see UK commodity codes being represented as additional codes – if this is the case, then the case for this tool grows.</li>
 <li>Lists of all existing relationships of the following page.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93371576-7e646b00-f84a-11ea-8862-746dba8d1243.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93371576-7e646b00-f84a-11ea-8862-746dba8d1243.png" alt="image" /></a></p>
-<p><strong>Additional codes cannot be applied universally …</strong></p>
+<svg width="456pt" height="323pt"
+ viewBox="0.00 0.00 456.00 323.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_790" class="graph" transform="scale(1 1) rotate(0) translate(4 319)">
+<title>Database</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-319 452,-319 452,4 -4,4"/>
+<!-- Measure Types -->
+<g id="table_230" class="node">
+<title>Measure Types</title>
+<polygon fill="none" stroke="#000000" points="222.5,-294 222.5,-310 439.5,-310 439.5,-294 222.5,-294"/>
+<text text-anchor="start" x="299.5" y="-299.8" font-family="Arial" font-size="9.00" fill="#000000">Measure Types</text>
+<polygon fill="none" stroke="#000000" points="222.5,-278 222.5,-294 395.5,-294 395.5,-278 222.5,-278"/>
+<text text-anchor="start" x="273" y="-283.8" font-family="Arial" font-size="9.00" fill="#000000">measure_type_id</text>
+<polygon fill="none" stroke="#000000" points="395.5,-278 395.5,-294 420.5,-294 420.5,-278 395.5,-278"/>
+<text text-anchor="start" x="403" y="-283.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="420.5,-278 420.5,-294 439.5,-294 439.5,-278 420.5,-278"/>
+<text text-anchor="start" x="423.5" y="-283.8" font-family="Arial" font-size="9.00" fill="#000000">PK</text>
+<polygon fill="none" stroke="#000000" points="222.5,-262 222.5,-278 395.5,-278 395.5,-262 222.5,-262"/>
+<text text-anchor="start" x="271.5" y="-267.8" font-family="Arial" font-size="9.00" fill="#000000">validity_start_date</text>
+<polygon fill="none" stroke="#000000" points="395.5,-262 395.5,-278 420.5,-278 420.5,-262 395.5,-262"/>
+<text text-anchor="start" x="398.5" y="-267.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
+<polygon fill="none" stroke="#000000" points="420.5,-262 420.5,-278 439.5,-278 439.5,-262 420.5,-262"/>
+<polygon fill="none" stroke="#000000" points="222.5,-246 222.5,-262 395.5,-262 395.5,-246 222.5,-246"/>
+<text text-anchor="start" x="272.5" y="-251.8" font-family="Arial" font-size="9.00" fill="#000000">validity_end_date</text>
+<polygon fill="none" stroke="#000000" points="395.5,-246 395.5,-262 420.5,-262 420.5,-246 395.5,-246"/>
+<text text-anchor="start" x="398.5" y="-251.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
+<polygon fill="none" stroke="#000000" points="420.5,-246 420.5,-262 439.5,-262 439.5,-246 420.5,-246"/>
+<polygon fill="none" stroke="#000000" points="222.5,-230 222.5,-246 395.5,-246 395.5,-230 222.5,-230"/>
+<text text-anchor="start" x="261.5" y="-235.8" font-family="Arial" font-size="9.00" fill="#000000">trade_movement_code</text>
+<polygon fill="none" stroke="#000000" points="395.5,-230 395.5,-246 420.5,-246 420.5,-230 395.5,-230"/>
+<text text-anchor="start" x="403" y="-235.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="420.5,-230 420.5,-246 439.5,-246 439.5,-230 420.5,-230"/>
+<polygon fill="none" stroke="#000000" points="222.5,-214 222.5,-230 395.5,-230 395.5,-214 222.5,-214"/>
+<text text-anchor="start" x="282" y="-219.8" font-family="Arial" font-size="9.00" fill="#000000">priority_code</text>
+<polygon fill="none" stroke="#000000" points="395.5,-214 395.5,-230 420.5,-230 420.5,-214 395.5,-214"/>
+<text text-anchor="start" x="403" y="-219.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="420.5,-214 420.5,-230 439.5,-230 439.5,-214 420.5,-214"/>
+<polygon fill="none" stroke="#000000" points="222.5,-198 222.5,-214 395.5,-214 395.5,-198 222.5,-198"/>
+<text text-anchor="start" x="225.5" y="-203.8" font-family="Arial" font-size="9.00" fill="#000000">measure_component_applicability_code</text>
+<polygon fill="none" stroke="#000000" points="395.5,-198 395.5,-214 420.5,-214 420.5,-198 395.5,-198"/>
+<text text-anchor="start" x="403" y="-203.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="420.5,-198 420.5,-214 439.5,-214 439.5,-198 420.5,-198"/>
+<polygon fill="none" stroke="#000000" points="222.5,-182 222.5,-198 395.5,-198 395.5,-182 222.5,-182"/>
+<text text-anchor="start" x="273" y="-187.8" font-family="Arial" font-size="9.00" fill="#000000">origin_dest_code</text>
+<polygon fill="none" stroke="#000000" points="395.5,-182 395.5,-198 420.5,-198 420.5,-182 395.5,-182"/>
+<text text-anchor="start" x="403" y="-187.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="420.5,-182 420.5,-198 439.5,-198 439.5,-182 420.5,-182"/>
+<polygon fill="none" stroke="#000000" points="222.5,-166 222.5,-182 395.5,-182 395.5,-166 222.5,-166"/>
+<text text-anchor="start" x="248.5" y="-171.8" font-family="Arial" font-size="9.00" fill="#000000">order_number_capture_code</text>
+<polygon fill="none" stroke="#000000" points="395.5,-166 395.5,-182 420.5,-182 420.5,-166 395.5,-166"/>
+<text text-anchor="start" x="403" y="-171.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="420.5,-166 420.5,-182 439.5,-182 439.5,-166 420.5,-166"/>
+<polygon fill="none" stroke="#000000" points="222.5,-150 222.5,-166 395.5,-166 395.5,-150 222.5,-150"/>
+<text text-anchor="start" x="256" y="-155.8" font-family="Arial" font-size="9.00" fill="#000000">measure_explosion_level</text>
+<polygon fill="none" stroke="#000000" points="395.5,-150 395.5,-166 420.5,-166 420.5,-150 395.5,-150"/>
+<text text-anchor="start" x="403" y="-155.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="420.5,-150 420.5,-166 439.5,-166 439.5,-150 420.5,-150"/>
+<polygon fill="none" stroke="#000000" points="222.5,-134 222.5,-150 395.5,-150 395.5,-134 222.5,-134"/>
+<text text-anchor="start" x="258" y="-139.8" font-family="Arial" font-size="9.00" fill="#000000">measure_type_series_id</text>
+<polygon fill="none" stroke="#000000" points="395.5,-134 395.5,-150 420.5,-150 420.5,-134 395.5,-134"/>
+<text text-anchor="start" x="403" y="-139.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="420.5,-134 420.5,-150 439.5,-150 439.5,-134 420.5,-134"/>
+<text text-anchor="start" x="424" y="-139.8" font-family="Arial" font-size="9.00" fill="#000000">FK</text>
+<polygon fill="none" stroke="#000000" points="221,-133 221,-311 440,-311 440,-133 221,-133"/>
+</g>
+<!-- Additional Code Type Measure Types -->
+<g id="table_194" class="node">
+<title>Additional Code Type Measure Types</title>
+<polygon fill="none" stroke="#000000" points="9.5,-208 9.5,-224 168.5,-224 168.5,-208 9.5,-208"/>
+<text text-anchor="start" x="12.5" y="-213.8" font-family="Arial" font-size="9.00" fill="#000000">Additional Code Type Measure Types</text>
+<polygon fill="none" stroke="#000000" points="9.5,-192 9.5,-208 121.5,-208 121.5,-192 9.5,-192"/>
+<text text-anchor="start" x="29.5" y="-197.8" font-family="Arial" font-size="9.00" fill="#000000">measure_type_id</text>
+<polygon fill="none" stroke="#000000" points="121.5,-192 121.5,-208 148.5,-208 148.5,-192 121.5,-192"/>
+<text text-anchor="start" x="130" y="-197.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="148.5,-192 148.5,-208 168.5,-208 168.5,-192 148.5,-192"/>
+<text text-anchor="start" x="152.5" y="-197.8" font-family="Arial" font-size="9.00" fill="#000000">FK</text>
+<polygon fill="none" stroke="#000000" points="9.5,-176 9.5,-192 121.5,-192 121.5,-176 9.5,-176"/>
+<text text-anchor="start" x="14.5" y="-181.8" font-family="Arial" font-size="9.00" fill="#000000">additional_code_type_id</text>
+<polygon fill="none" stroke="#000000" points="121.5,-176 121.5,-192 148.5,-192 148.5,-176 121.5,-176"/>
+<text text-anchor="start" x="130" y="-181.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="148.5,-176 148.5,-192 168.5,-192 168.5,-176 148.5,-176"/>
+<text text-anchor="start" x="152.5" y="-181.8" font-family="Arial" font-size="9.00" fill="#000000">FK</text>
+<polygon fill="none" stroke="#000000" points="9.5,-160 9.5,-176 121.5,-176 121.5,-160 9.5,-160"/>
+<text text-anchor="start" x="28" y="-165.8" font-family="Arial" font-size="9.00" fill="#000000">validity_start_date</text>
+<polygon fill="none" stroke="#000000" points="121.5,-160 121.5,-176 148.5,-176 148.5,-160 121.5,-160"/>
+<text text-anchor="start" x="125.5" y="-165.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
+<polygon fill="none" stroke="#000000" points="148.5,-160 148.5,-176 168.5,-176 168.5,-160 148.5,-160"/>
+<polygon fill="none" stroke="#000000" points="9.5,-144 9.5,-160 121.5,-160 121.5,-144 9.5,-144"/>
+<text text-anchor="start" x="29" y="-149.8" font-family="Arial" font-size="9.00" fill="#000000">validity_end_date</text>
+<polygon fill="none" stroke="#000000" points="121.5,-144 121.5,-160 148.5,-160 148.5,-144 121.5,-144"/>
+<text text-anchor="start" x="125.5" y="-149.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
+<polygon fill="none" stroke="#000000" points="148.5,-144 148.5,-160 168.5,-160 168.5,-144 148.5,-144"/>
+<polygon fill="none" stroke="#000000" points="8,-143 8,-225 169,-225 169,-143 8,-143"/>
+</g>
+<!-- Additional Code Type Measure Types&#45;&gt;Measure Types -->
+<g id="database_790_edge2" class="edge">
+<title>Additional Code Type Measure Types:e&#45;&gt;Measure Types:w</title>
+<path fill="none" stroke="#000000" d="M168.5,-200C210.8117,-200 181.5827,-275.5859 214.9518,-285.0342"/>
+<polygon fill="#000000" stroke="#000000" points="214.7275,-287.6518 222.5,-286 215.3938,-282.4443 214.7275,-287.6518"/>
+</g>
+<!-- Additional Code Types -->
+<g id="table_484" class="node">
+<title>Additional Code Types</title>
+<polygon fill="none" stroke="#000000" points="254.5,-90 254.5,-106 406.5,-106 406.5,-90 254.5,-90"/>
+<text text-anchor="start" x="284" y="-95.8" font-family="Arial" font-size="9.00" fill="#000000">Additional Code Types</text>
+<polygon fill="none" stroke="#000000" points="254.5,-74 254.5,-90 362.5,-90 362.5,-74 254.5,-74"/>
+<text text-anchor="start" x="257.5" y="-79.8" font-family="Arial" font-size="9.00" fill="#000000">additional_code_type_id</text>
+<polygon fill="none" stroke="#000000" points="362.5,-74 362.5,-90 387.5,-90 387.5,-74 362.5,-74"/>
+<text text-anchor="start" x="370" y="-79.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="387.5,-74 387.5,-90 406.5,-90 406.5,-74 387.5,-74"/>
+<text text-anchor="start" x="390.5" y="-79.8" font-family="Arial" font-size="9.00" fill="#000000">PK</text>
+<polygon fill="none" stroke="#000000" points="254.5,-58 254.5,-74 362.5,-74 362.5,-58 254.5,-58"/>
+<text text-anchor="start" x="271" y="-63.8" font-family="Arial" font-size="9.00" fill="#000000">validity_start_date</text>
+<polygon fill="none" stroke="#000000" points="362.5,-58 362.5,-74 387.5,-74 387.5,-58 362.5,-58"/>
+<text text-anchor="start" x="365.5" y="-63.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
+<polygon fill="none" stroke="#000000" points="387.5,-58 387.5,-74 406.5,-74 406.5,-58 387.5,-58"/>
+<polygon fill="none" stroke="#000000" points="254.5,-42 254.5,-58 362.5,-58 362.5,-42 254.5,-42"/>
+<text text-anchor="start" x="272" y="-47.8" font-family="Arial" font-size="9.00" fill="#000000">validity_end_date</text>
+<polygon fill="none" stroke="#000000" points="362.5,-42 362.5,-58 387.5,-58 387.5,-42 362.5,-42"/>
+<text text-anchor="start" x="365.5" y="-47.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
+<polygon fill="none" stroke="#000000" points="387.5,-42 387.5,-58 406.5,-58 406.5,-42 387.5,-42"/>
+<polygon fill="none" stroke="#000000" points="254.5,-26 254.5,-42 362.5,-42 362.5,-26 254.5,-26"/>
+<text text-anchor="start" x="273" y="-31.8" font-family="Arial" font-size="9.00" fill="#000000">application_code</text>
+<polygon fill="none" stroke="#000000" points="362.5,-26 362.5,-42 387.5,-42 387.5,-26 362.5,-26"/>
+<text text-anchor="start" x="370" y="-31.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="387.5,-26 387.5,-42 406.5,-42 406.5,-26 387.5,-26"/>
+<polygon fill="none" stroke="#000000" points="254.5,-10 254.5,-26 362.5,-26 362.5,-10 254.5,-10"/>
+<text text-anchor="start" x="258.5" y="-15.8" font-family="Arial" font-size="9.00" fill="#000000">meursing_table_plan_id</text>
+<polygon fill="none" stroke="#000000" points="362.5,-10 362.5,-26 387.5,-26 387.5,-10 362.5,-10"/>
+<text text-anchor="start" x="370" y="-15.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="387.5,-10 387.5,-26 406.5,-26 406.5,-10 387.5,-10"/>
+<polygon fill="none" stroke="#000000" points="253.5,-9 253.5,-107 407.5,-107 407.5,-9 253.5,-9"/>
+</g>
+<!-- Additional Code Type Measure Types&#45;&gt;Additional Code Types -->
+<g id="database_790_edge3" class="edge">
+<title>Additional Code Type Measure Types:e&#45;&gt;Additional Code Types:w</title>
+<path fill="none" stroke="#000000" d="M168.5,-184C203.1446,-184 190.1954,-146.0806 213,-120 227.5327,-103.3796 229.2588,-86.489 246.6704,-82.7585"/>
+<polygon fill="#000000" stroke="#000000" points="247.2881,-85.336 254.5,-82 246.7818,-80.1105 247.2881,-85.336"/>
+</g>
+<!-- meursing_table_plan_id Note -->
+<g id="note_354" class="node">
+<title>meursing_table_plan_id Note</title>
+<polygon fill="none" stroke="#000000" points="136,-36 35,-36 35,0 142,0 142,-30 136,-36"/>
+<polyline fill="none" stroke="#000000" points="136,-36 136,-30 "/>
+<polyline fill="none" stroke="#000000" points="142,-30 136,-30 "/>
+<text text-anchor="middle" x="88.5" y="-15.8" font-family="Arial" font-size="9.00" fill="#000000">Always null in UK tariff</text>
+</g>
+<!-- meursing_table_plan_id Note&#45;&gt;Additional Code Types -->
+<g id="database_790_edge1" class="edge">
+<title>meursing_table_plan_id Note&#45;&gt;Additional Code Types:meursing_table_plan_id_name</title>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M142.3271,-18C174.8131,-18 217.0347,-18 254.5,-18"/>
+</g>
+</g>
+</svg><p><strong>Additional codes cannot be applied universally …</strong></p>
 <p>There is an additional many to many table within the tariff database that determines which additional code types can be used against which measure types. Currently there are 74 permutations of additional codes against measure types: there is little surprising about the alignment – e.g. you can only assign additional codes of type 8, A, B or C to measure types that are associated with Trade Remedies.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93374350-7eff0080-f84e-11ea-93cc-10957a58d5bf.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93374350-7eff0080-f84e-11ea-93cc-10957a58d5bf.png" alt="image" /></a></p>
 <p><strong>Measure types detail</strong></p>
@@ -584,9 +677,9 @@
 <li>mutation of EU suspensions into UK reliefs</li>
 </ul></li>
 </ul>
-<h3 id="data-structures">Data structures</h3><p><a href="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" alt="image" /></a></p>
-<h3 id="screen-designs-footnotes">Screen designs - footnotes</h3><p>[THIS MIGHT BE MOVED TO A DIFFERENT SECTION SO HAVE NOT INCLUDED IT FOR NOW]</p>
-<h3 id="key-user-needs-footnotes">Key user needs - footnotes</h3><div class="table-container">
+<h2 id="data-structures">Data structures</h2><p><a href="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" alt="image" /></a></p>
+<h2 id="screen-designs-footnotes">Screen designs - footnotes</h2><p>[THIS MIGHT BE MOVED TO A DIFFERENT SECTION SO HAVE NOT INCLUDED IT FOR NOW]</p>
+<h2 id="key-user-needs-footnotes">Key user needs - footnotes</h2><div class="table-container">
         <table>
           <tr>
 <th>UK Tariff Manager</th>
@@ -632,7 +725,7 @@
 </tr>
 
         </table>
-      </div><h3 id="key-business-rules-footnotes">Key business rules - footnotes</h3><div class="table-container">
+      </div><h2 id="key-business-rules-footnotes">Key business rules - footnotes</h2><div class="table-container">
         <table>
           <tr>
 <th>#</th>
