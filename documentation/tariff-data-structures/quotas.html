@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Quotas - Tariff Data Manual</title>
+
+    <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quotas.html">
+
+
+      <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta property="og:site_name" content="Tariff Data Manual" />
+      <meta property="og:title" content="Quotas" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quotas.html" />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:domain" content="uktrade.github.io" />
+      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta property="twitter:title" content="Quotas - Tariff Data Manual" />
+      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quotas.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="https://uktrade.github.io/tariff-data-manual/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          Tariff Data Manual
+        </span>
+      </a>
+        <strong class="govuk-tag">Alpha</strong>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
+                      <ul>
+  <li>
+    <a href="/tariff-data-manual/#home"><span>Home</span></a>
+  </li>
+</ul>
+<ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/wto-quotas-and-atqs.html#wto-quotas-and-atqs"><span>WTO Quotas and ATQs</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
+  </li>
+</ul>
+</li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures-components.html#measures-components"><span>Measures components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures-conditions.html#measures-conditions"><span>Measures conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas-2"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/nomenclature.html#nomenclature"><span>Nomenclature</span></a>
+  </li>
+</ul>
+</li></ul>
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="quotas">Quotas</h1>
+<ul>
+<li>
+<a href="#quotas">Quotas</a>
+</li>
+<li>
+<a href="#quotas">Quotas</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#introduction-to-quotas">Introduction to quotas</a>
+</li>
+<li>
+<a href="#first-come-first-served-quotas">First Come, First Served Quotas</a>
+</li>
+</ul>
+<p></li>
+</ul>
+</li>
+</ul></p>
+<h1 id="quotas-2">Quotas</h1><h3 id="introduction-to-quotas">Introduction to quotas</h3>
+<ul>
+<li>A quota is used as a means of controlling the flow of goods into a country in order to create a balance between:
+
+<ul>
+<li>the needs of consumers or manufacturing industries that would use the item as a component or ingredient in producing something else in the importing countries and</li>
+<li>domestic producers of the good, whose livelihood depends on producing and selling a product to domestic customers at full market price.</li>
+</ul></li>
+<li>For example, tomatoes are imported into the European Union from Mediterranean countries and other places with temperate climates in order to satiate the needs of European citizens for tomatoes and sauces containing tomatoes. In Southern Europe, there are tomato growers for whom the overseas suppliers are rivals that threaten their livelihood.</li>
+<li>In the UK, sheep farmers depend on selling their goods to a UK market hungry for lamb and lamb products; but there is not enough lamb in the UK to satisfy our needs, hence the need to import lamb from New Zealand and other countries.</li>
+<li>This is a fine balance that needs to be managed carefully in order to support the needs of the two contrasting needs: the need for the nation to consume and need for domestic suppliers to make a living.</li>
+<li>This is where quotas come in.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93907690-91b58180-fcf5-11ea-92a9-6e0b56eb58b4.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93907690-91b58180-fcf5-11ea-92a9-6e0b56eb58b4.png" alt="image" /></a></p>
+<p><strong>Get to know Peter Ungphakorn</strong></p>
+
+<ul>
+<li>Peter Ungphakorn was a senior information officer with the WTO Secretariat until 2015.</li>
+<li>Since then he has moved into journalism, focusing mainly on international trade rules, agreements and institutions and fortunately making his knowledge available to the public via his Trade Beta Blog.</li>
+<li>This blog contains very good, simple explainers (for seven and a half year-olds) on a number of topics, including quotas.</li>
+</ul>
+<p><a href="https://tradebetablog.wordpress.com/2018/09/08/beginners-guide-tariff-quotas/" target="_blank" rel="noopener noreferrer"><img src="https://tradebetablog.wordpress.com/2018/09/08/beginners-guide-tariff-quotas/" alt="https://tradebetablog.wordpress.com/2018/09/08/beginners-guide-tariff-quotas/" /></a></p>
+
+<ul>
+<li>Read above about Tariff Rate Quotas (TRQs) (less so quantitative restrictions)</li>
+<li>See also his blog on Meursing tables which simplifies an incredibly complex subject.</li>
+</ul>
+<p><strong>What is a quota?</strong></p>
+
+<ul>
+<li>A quota allows a certain volume of goods to be imported into a country at a reduced duty rate.</li>
+<li>Once that volume has been imported, then the quota is considered to be exhausted and is no longer available to draw down against.</li>
+<li>At that point, all importers will be forced to import the goods at the full (or less preferential duty rate).</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93908775-f32a2000-fcf6-11ea-849e-b27e68095ee6.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93908775-f32a2000-fcf6-11ea-849e-b27e68095ee6.png" alt="image" /></a></p>
+<p><strong>What properties does a quota have?</strong></p>
+
+<ul>
+<li>Returning to the lamb quota on the previous screen, clicking on the term “092016” shows more detail of the quota.</li>
+<li>“092016” is the quota order number. If any trader wants to take advantage of the preferential duties associated with a quota, then they need to quote that 6-digit quota order number on their import declaration. A quota1 has properties such as those shown here</li>
+<li>These properties are described on the following pages</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93908974-2c629000-fcf7-11ea-9b8e-edf2fc383743.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93908974-2c629000-fcf7-11ea-9b8e-edf2fc383743.png" alt="image" /></a></p>
+<p><strong>Defining quotas</strong></p>
+<p>There are multiple ways of defining and grouping quotas, all of which will be relevant to the delivery of the next iteration of the Tariff Application:</p>
+
+<ul>
+<li>Administration mechanism:
+
+<ul>
+<li>First come first served </li>
+<li>Licensed</li>
+</ul></li>
+<li>Legislative mechanism:
+
+<ul>
+<li>WTO quota</li>
+<li>ATQ</li>
+<li>preferential quota as part of an FTA </li>
+<li>safeguard quota</li>
+</ul></li>
+<li>Origin quota: 
+
+<ul>
+<li>Yes</li>
+<li>No</li>
+</ul></li>
+</ul>
+<p>If you were to draw a Venn-style diagram of how these slices fit together, it would look a bit like this:</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93910896-a3992380-fcf9-11ea-936c-f6e5c1ea09dc.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93910896-a3992380-fcf9-11ea-936c-f6e5c1ea09dc.png" alt="image" /></a></p>
+<p><strong>Preferential vs Non-Preferential quotas</strong></p>
+<p>Preferential quotas</p>
+
+<ul>
+<li>The term preferential means that a single country or bloc is afforded treatment that provides better market access / lower duties than other countries.</li>
+<li>In practical terms, preferential tariff duties and quotas are almost always made available via (Free) Trade Agreements. The quota is agreed as part of the bilateral negotiation between the two parties that provides each with mutual benefits.</li>
+<li>Preferential quotas are always applied at a specific country or small group of countries.</li>
+<li>Within the EU, there are a very small number of quotas which are applied to multiple countries (e.g. a wine quota available for imports from multiple W. Balkan countries), but most are aimed explicitly at one country or bloc.</li>
+<li>Among the few exceptions, Greenland benefits from preferential quotas on seafoods outside of a formal Trade Agreement</li>
+</ul>
+<p>Non-Preferential quotas</p>
+
+<ul>
+<li>Non-preferential quotas are aimed at maintaining the balance of trade flows on critical goods by opening up a specific volume of market access to all overseas nations – in most cases, the non-preferential quotas are assigned to ERGA OMNES1 (the country group that includes all countries).</li>
+<li>There are very few officially non-preferential quotas that have been opened up to specific countries only, where there is a need to maintain global trade flows with a less blunt instrument than a global non-preferential quota applied to the entire world, especially where there are trade titans in a particular commodity</li>
+<li>Lamb is again a great example of this – there is a non-preferential quota for Erga Omnes (small volume) and much larger non-prefs for specific countries like Chile, Australia and New Zealand – each of which is a dominant player in the lamb trade.</li>
+</ul>
+<p><strong>Ways of administering quotas</strong></p>
+<p>There are two methods of administering a quota:</p>
+<p>First Come First Served quotas</p>
+
+<ul>
+<li>These are by far the most common of the two types of quota.</li>
+<li>As the name suggests, a FCFS quota involves making a pot available to traders: whoever claims against that pot first gets to take advantage of the reduced rate.</li>
+<li>If you’re not quick enough, you miss the opportunity and pay the non-preferential rate.</li>
+</ul>
+<p>Licensed quotas</p>
+
+<ul>
+<li>The purpose of a licensed quota is the same as a FCFS quota: to protect the fine balance of trade flows, however the mechanism for applying for usage is very different.</li>
+<li>For each quota, periods of the year are opened up for importers to apply for licenses from the Rural Payments Agency (RPA) - a division of Defra.</li>
+<li>During this period, the RPA accepts these license requests and issues licenses according to the specific rules of the quota</li>
+<li>In the EU tariff, all licensed quotas’ 6-digit quota order numbers begin with “094”.</li>
+</ul>
+<p><strong>Origin quotas</strong></p>
+<p>Some quotas identify as Origin Quotas (about 25%)
+Origin quotas allow for specific quantities of some products to receive preferential tariff treatment if the products meet certain conditions, for example a proof of origin can be provided to prove that the goods do in fact come from the specific country.
+Origin quotas are always preferential in nature.
+For a good example of an origin quota, please see the cat &amp; dog food quota in place with Canada, where a proof of origin certificate is explicitly required.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93911539-6da86f00-fcfa-11ea-90c2-e659b80f333c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93911539-6da86f00-fcfa-11ea-90c2-e659b80f333c.png" alt="image" /></a></p>
+<p>The reason why this is important is that a quota’s origin status is displayed on the reference documents that accompany a trade agreements (as a schedule to the primary SI).</p>
+<p><strong>WTO quotas</strong></p>
+
+<ul>
+<li>The UK declares a tariff “schedule of concessions” to the WTO which is made up of multiple elements – what interests us most here is:</li>
+<li>the tariff schedule</li>
+<li>the schedules for tariff quotas on agricultural and non-agricultural products</li>
+<li>The quota schedules list the concessions that we will make to overseas nations to provide greater market access to our market than would have been afforded by adopting the MFN rate alone.</li>
+<li>In most cases, WTO quotas are assigned to the whole world (ERGA OMNES), but in certain cases (e.g. with lamb), the quota concessions are made available to individual countries which major in a certain trade (e.g. New Zealand for lamb).</li>
+<li>Almost all WTO quotas are agricultural goods (this also applies to the other kinds of quota).</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/93915223-9848f680-fcff-11ea-8462-86bd6133032d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93915223-9848f680-fcff-11ea-8462-86bd6133032d.png" alt="image" /></a></p>
+<p><strong>Autonomous quotas (ATQs)</strong></p>
+
+<ul>
+<li>Autonomous quotas are represented in the tariff as simple “Non-preferential quotas”. These are particularly applicable within the fishing industry. There is contention within the fishing industry between the catching sector and the food and processing sector.</li>
+<li>For highly consumed goods, such as cod, pollock and prawns, the UK / EU catching industry cannot catch sufficient product to satisfy the needs of the home and international market. Therefore the processing industry needs access to low or zero duty for such products, while the catching industry needs protection by retaining at least some maximum import threshold above which normal tariff duties apply.</li>
+<li>The autonomous tariff rate quota (ATQ) facilitates this compromise – a quantity of goods can be imported into the EU at zero or low rate, until exhausted, at which point the duty reverts to the third country rate</li>
+<li>ATQs are set on a three year cycle: the ATQ duty rate cannot be changed in the course of that 3 year cycle, however the starting balance for each year can be assessed at the start of each year.</li>
+<li>For fisheries ATQs, there is an additional point of interest, that, if 80% or more of the quota has been exhausted by the end of September in any given year, then the balance of the quota is increased by 20%</li>
+<li>Autonomous Quotas so called, as the EU unilaterally decides to open a quota – there is no requirement for recourse to WTO approval to open an ATQ.</li>
+<li>It is anticipated that the ATQs will continue to operate post-Brexit as they are favoured within the Defra ministry and offer a compromise to the different parts of the industry.</li>
+</ul>
+<p><strong>What products are covered by quotas?</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93915448-f544ac80-fcff-11ea-852e-8f3e3ee74b01.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93915448-f544ac80-fcff-11ea-852e-8f3e3ee74b01.png" alt="image" /></a></p>
+<p><strong>Identifying quota types</strong></p>
+
+<ul>
+<li>Unfortunately, it is not a simple matter to take a quota order number and determine what kind of quota is being used. In the EU Tariff:
+
+<ul>
+<li>All current EU quota order numbers begin with 09 without exception</li>
+<li>“094” means licensed quota</li>
+<li>Autonomous agriculture quotas begin 0977</li>
+<li>Autonomous fisheries quotas begin 0987</li>
+</ul></li>
+<li>Apart from that, there are few obvious rules that define the EU’s use of quotas.</li>
+<li>The system for identifying quotas in the UK tariff will be determined in the course of 2020.</li>
+</ul>
+<p><strong>Managing quota order numbers</strong></p>
+
+<ul>
+<li>DIT must take the lead in managing quota order numbers – this process has been introduced but not properly observed.</li>
+<li>It needs to be a consultative process between DIT, HMRC and Defra to avoid errors and confusion, e.g. reusing existing quota order numbers</li>
+<li>How quotas get set up is dependent on what they have been used for previously – we have inadvertently selected quota order numbers that were a cross section of closed and open quota order numbers, which have caused management challenges in previous migrations.</li>
+<li>As of March 26th, the likelihood is that quota order numbers in the UK will be using ”08” as their first two digits to differentiate from the EU, with specific challenges around the dual Tariff in Northern Ireland being the primary cause. This remains to be agreed and properly analysed however.</li>
+</ul>
+<p><strong>Quotas in reference documents</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93915925-a5b2b080-fd00-11ea-880c-87679308f90f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93915925-a5b2b080-fd00-11ea-880c-87679308f90f.png" alt="image" /></a></p>
+
+<ul>
+<li>To the left is a sample of the quota section of a reference document – it lists the quotas that are applicable to a given country or trading bloc (here is a mocked-up reference document for the ESA1 trading bloc).</li>
+<li>The three highlighted data elements (with largely made up data for illustration purposes only), are data fields over and above what the Taric requires: these are not data that is needed by the HMRC systems, but is of benefit to creating reference documents.</li>
+<li>In TAPv1, the reference document creation service had been created as a totally separate application (using Python / Django), whereas in round 2, it needs to be integrated.</li>
+<li>Please see the training document on reference documents for more information</li>
+</ul>
+<h3 id="first-come-first-served-quotas">First Come, First Served Quotas</h3>
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Tariff-Data-Structures;-Quotas">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Quotas'&amp;body=Problem%20with%20'Quotas'%20(https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quotas.html)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="/tariff-data-manual/javascripts/application.js"></script>
+  </body>
+</html>
