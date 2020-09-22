@@ -16,24 +16,32 @@
 **Graph 1:** 
 1. This graph looks like this: 
 
-![image](https://user-images.githubusercontent.com/61055197/93594831-7f161200-f9ae-11ea-8eec-3480c9a78ae1.png)
+![image](https://user-images.githubusercontent.com/4951176/93916372-5ae56880-fd01-11ea-96ec-fbf9daf77c76.png)
 
-2. You can add a graph like this by using the following format: 
+2. You can add a graph like this by adding a block of [Database Markup Language (DBML)](https://www.dbml.org):
 
 ````
-```dot
-digraph "Measure Types" {
-    rankdir=LR
-    graph [id=database]
-    node [shape=record]
-    
-    Measure [label="Measure|<1>measure_sid|<2>measure_type_id|<3>..."]
-    MeasureType [label="Measure Type|<1>measure_type_id|<2>validity_start_date|<3>validity_end_date"]
-    MeasureTypeDescription [label="Measure Type Description|<1>measure_type_id|<2>language_id|<3>description"]
-
-    Measure:2 -> MeasureType:1
-    MeasureTypeDescription:1 -> MeasureType:1
+```dbml
+Table "Measure Type" {
+    measure_type_id int [pk]
+    validity_start_date date
+    validity_end_date date
 }
+
+Table Measures {
+    measure_sid int [pk]
+    measure_type_id int [fk]
+    "..." ...  // Put dots in quotes for column names
+}
+
+Table "Measure Type Description" {
+    measure_type_id int [fk]
+    language_id char(2)
+    description char(500)
+}
+
+Ref: Measures.measure_type_id > "Measure Type".measure_type_id
+Ref: "Measure Type Description".measure_type_id > "Measure Type".measure_type_id
 ```
 ````
 

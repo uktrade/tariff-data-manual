@@ -1,21 +1,15 @@
 require 'govuk_tech_docs'
+require_relative 'lib/dot'
+require_relative 'lib/dbml'
 
 GovukTechDocs.configure(self)
 
 module RenderDotBlocks
-  DOT_ARGS = [
-    '-Tsvg',
-    '-Nfontname=Arial'
-  ]
-
   def block_code code, language
     if language =~ /dot/
-      svg = IO.popen(['dot', *DOT_ARGS], mode: 'r+') do |dot|
-        dot.write code
-        dot.close_write
-        dot.read
-      end
-      /<svg.*<\/svg>/m.match(svg)[0]
+      dot_to_svg code
+    elsif language =~ /dbml/
+      dbml_to_svg code
     else
       super code, language
     end

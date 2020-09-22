@@ -3,9 +3,37 @@ svg {
     font-family: inherit !important;
   }
 
-  #database {
-    .node text:first-of-type {
-      font-weight: bold !important;
+  [id^='database'] {
+    &.graph > polygon {
+      fill: none;
+    }
+
+    .node[id^='table'] {
+      text:first-of-type {
+        font-weight: bold;
+      }
+
+      polygon:first-of-type {
+        fill: #c0c0c0;
+      }
+
+      :last-of-type {
+        stroke: none;
+      }
+
+      &:first-of-type polygon:first-of-type {
+        fill: #7ea6e0;
+      }
+    }
+
+    .node[id^='note'] {
+      polygon {
+        fill: #e0d37d;
+      }
+
+      text {
+        font-weight: normal;
+      }
     }
   }
 }

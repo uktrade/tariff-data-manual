@@ -39,7 +39,7 @@ OUTPUT_FILES.zip(WIKI_FILES).each do |output, input|
       o.puts header_line
       o.puts '<%= toc(current_page) %>'
       o.puts contents.gsub(TOP_LEVEL_HEADER, '')
-      o.puts '<%= stylesheet_link_tag :dot %>' if contents =~ /^```dot/
+      o.puts '<%= stylesheet_link_tag :dot %>' if contents =~ /^```dot/ || contents =~ /^```dbml/
     end
   end
 end

@@ -34,6 +34,8 @@ GEM
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.1.7)
     contracts (0.13.0)
+    dbml (0.2.0)
+      rsec (~> 1.0)
     dotenv (2.7.6)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -155,6 +157,7 @@ GEM
     redcarpet (3.5.0)
     rexml (3.2.4)
     rouge (3.22.0)
+    rsec (1.0.0)
     ruby-enum (0.8.0)
       i18n
     sass (3.4.25)
@@ -180,6 +183,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  dbml (>= 0.2)
   govuk_tech_docs
   rake
   tzinfo-data
