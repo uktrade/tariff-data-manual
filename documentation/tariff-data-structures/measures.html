@@ -251,11 +251,8 @@
 <path fill="none" stroke="#000000" d="M69.0327,-80.822C88.1369,-67.482 113.9704,-49.4431 133.0542,-36.1173"/>
 </g>
 </g>
-</svg><p><strong>The UK tariff is currently a combination of EU and national measures</strong></p>
-<p>Until the end of the Transition Period, we remain a part of the EU’s customs union. As a result of this, we do not get to determine our own trade policy: we cannot enforce our own trade agreements (though we can begin to negotiate them); we cannot impose punitive anti-dumping duties, nor can we decide our own MFN duties.</p>
-<p>But we can manage certain aspects of the duties &amp; regulatory controls that are applied to imports and exports.</p>
-<p>The EU build all of their measures in their Taric application and then export them overnight for common application across all of the 28 member states (including us). This will continue until (at the earliest) Jan 1st 2021.</p>
-<p>Meanwhile, the UK (and all of the other members states) as permitted to manage some aspects that influence trade policy, namely:</p>
+</svg><p>The EU build all of their measures in their Taric application and then export them overnight for common application across all of the 28 member states (including us). This will continue until (at the earliest) Jan 1st 2021.</p>
+<p>Meanwhile, all of the other members states are permitted to manage some aspects that influence trade policy, namely:</p>
 
 <ul>
 <li>VAT</li>
@@ -266,7 +263,7 @@
 <p><strong>The Tariff is a big relational database centred around the measure</strong></p>
 <p>There are training packs dedicated to each of these areas, so this is just a very brief introduction.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/92616842-9d955280-f2b6-11ea-850a-14bb2c5767ef.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92616842-9d955280-f2b6-11ea-850a-14bb2c5767ef.png" alt="" /></a></p>
-<p><strong>Measure types &amp; responsibilities prior to the TP</strong></p>
+<p>*<em>Measure types &amp; responsibilities</em></p>
 
 <ul>
 <li>There are c. 260 measure types in existence prior to the end of the Transition Period (TP).</li>
@@ -274,17 +271,13 @@
 <li>c. 80 of these are VAT and excise measures that DIT will never get involved in</li>
 <li>There remain about 85 measure types that will crop up over the course of the next year and will need to be understood, even if some of these are going to be omitted from the UK tariff (in the first instance).</li>
 <li>The measure types can be broadly broken in to the following groups, with the table to the right showing the division of responsibility between the EU and the member states, represented for the UK by HMRC.</li>
-<li>These will evolve after the TP (Jan 2021).</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93492809-26d60600-f903-11ea-9e0e-983b4d4db74a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93492809-26d60600-f903-11ea-9e0e-983b4d4db74a.png" alt="image" /></a></p>
-<p><strong>Measure types &amp; responsibilities post-TP</strong></p>
 <p>After the Transition Period, there will be a great degree of similarity in the applicable trade measures. The UK is not revolutionising the types of trade measures that are to be imposed.</p>
-<p>The major difference in responsibility will see the MTPO team in DIT’s Trade Policy Group replacing the role of the EU in co-ordinating and maintaining the measures that were previously seen as pan-European.</p>
-<p>There are a number of other changes too, as per the notes column
-These groups of measure types are detailed in subsequent pages.</p>
+<p>These groups of measure types are detailed in subsequent pages.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93492680-fc844880-f902-11ea-886c-ec0a2e3be277.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93492680-fc844880-f902-11ea-886c-ec0a2e3be277.png" alt="image" /></a></p>
 <p><strong>National P&amp;R</strong></p>
-<p>There are c. 14 national prohibition and restriction type measures that are currently managed by the HMRC tariff management team. In the future, these will be translation into standard measures managed by the MTPO. After the Transition Period, there will be no differentiation between measures formerly provided by the EU and national P&amp;R.</p>
+<p>There are c. 14 national prohibition and restriction type measures. After the Transition Period, there will be no differentiation between measures formerly provided by the EU and national P&amp;R.</p>
 <div class="table-container">
         <table>
           <tr>
@@ -379,8 +372,7 @@ These groups of measure types are detailed in subsequent pages.</p>
 </tr>
 
         </table>
-      </div><p>The CVD measure type is a complete duplicate of measure type 410 (Veterinary control) applied in the Taric measures.
-Measures of this type are being removed from the UK Tariff in Feb 2020.</p>
+      </div><p>The CVD measure type is a complete duplicate of measure type 410 (Veterinary control) applied in the Taric measures.</p>
 <p><strong>Measures and geographical areas</strong></p>
 <p>The data model allows a single measure to be attached to a single geographical area.</p>
 <p>In this context a geographical area can mean:</p>
@@ -587,7 +579,6 @@ Measures of this type are being removed from the UK Tariff in Feb 2020.</p>
 <h3 id="entering-duties">Entering duties</h3><p><strong>Duty sentence deconstructor</strong></p>
 
 <ul>
-<li>The Ruby application had some usability issues in terms of entering duties. See the subsequent guide to components, which deals in the specifics of measure components, but essentially the tariff manager needs to know the measure components and potentially select multiple of these components from dropdowns.</li>
 <li>While this offers a decent route to ensure that no business rules are contravened, it is problematic in terms of screen space, especially for complex conditions, where multiple duties are dependent on those conditions.</li>
 <li>In addition, it uses a lot of JavaScript, which is not great for accessibility.</li>
 <li>Therefore the approach was taken to prototype something simpler – the nattily named duty sentence deconstructor.</li>
