@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+      <meta name="robots" content="noindex">
+
+    <title>Quota blocking - Tariff Data Manual</title>
+
+    <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html">
+
+
+      <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta property="og:site_name" content="Tariff Data Manual" />
+      <meta property="og:title" content="Quota blocking" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html" />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:domain" content="uktrade.github.io" />
+      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta property="twitter:title" content="Quota blocking - Tariff Data Manual" />
+      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="https://uktrade.github.io/tariff-data-manual/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          Tariff Data Manual
+        </span>
+      </a>
+        <strong class="govuk-tag">Alpha</strong>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
+                      <ul>
+  <li>
+    <a href="/tariff-data-manual/#home"><span>Home</span></a>
+  </li>
+</ul>
+<ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/wto-quotas-and-atqs.html#wto-quotas-and-atqs"><span>WTO Quotas and ATQs</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
+  </li>
+</ul>
+</li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota Suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures-components.html#measures-components"><span>Measures components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures-conditions.html#measures-conditions"><span>Measures conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/nomenclature.html#nomenclature"><span>Nomenclature</span></a>
+  </li>
+</ul>
+</li></ul>
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="quota-blocking">Quota blocking</h1>
+<ul>
+<li>
+<a href="#quota-blocking">Quota blocking</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#managing-blocking-periods-on-tap">Managing blocking periods on TAP</a>
+</li>
+<li>
+<a href="#key-user-needs">Key user needs</a>
+</li>
+<li>
+<a href="#key-business-rules">Key business rules</a>
+</li>
+</ul>
+<p></li>
+</ul>
+</li>
+</ul></p>
+
+<blockquote>
+<p>Please read the discussion on blocking quotas before reading this … the introduction to quotas is useful and the concepts are very similar</p>
+<p>As with suspensions, quota blocking periods are applicable only to First Come First Serve quotas</p>
+</blockquote>
+<p><strong>Why are quotas blocked?</strong></p>
+
+<ul>
+<li>Quota blocks are placed on quotas for a limited period of time to prevent allocations from being taken.</li>
+<li>Unlike suspensions, which effectively invalidate a quota (as if it does not exist and is suspended in law), all a blocking period does is to prevent allocations from being made: it does not prevent declarations from being made against a quota: it just postpones any allocation decision.</li>
+<li>A quota blocking period usually coincides with the start of a definition period, though not always; for instance, a common blocking reason is to protect the re-opening of a quota after significant returns</li>
+<li>This effect of a quota blocking period is to give HMRC an opportunity to assess the demand for a quota and potentially give an opportunity for them to make subjective decisions on allocations, e.g. to prevent a single large business from using up an entire allocation before smaller players have got their act together.</li>
+<li>277 of the 455 blocking periods created in 2019 coincided with the start of definition period.</li>
+<li>In these cases, it is most likely that the block will last c. 2 or 3 weeks</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94176716-687d2880-fe90-11ea-9828-4bb36fe20c4e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94176716-687d2880-fe90-11ea-9828-4bb36fe20c4e.png" alt="image" /></a></p>
+<p><strong>Quota blocking reasons</strong></p>
+<p>Unlike with suspensions, where the Tariff Manager can only enter descriptive text to describe a suspension period, blocking periods include a field which describe the reason for the blocking period.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th><br>ID</th>
+<th><br>Reason</th>
+<th><br>Count</th>
+</tr>
+<tr>
+<td><br>1</td>
+<td><br>Block   the allocations for a quota due to a late publication.</td>
+<td><br>1637</td>
+</tr>
+<tr>
+<td><br>2</td>
+<td><br>Block   the allocations for a quota after its reopening due to a volume increase.</td>
+<td><br>82</td>
+</tr>
+<tr>
+<td><br>3</td>
+<td><br>Block   the allocations for a quota after its reopening due to the reception of quota   return requests.</td>
+<td><br>1665</td>
+</tr>
+<tr>
+<td><br>4</td>
+<td><br>Block   the allocations for a quota due to the modification of the validity period   after receiving quota return requests.</td>
+<td><br>7</td>
+</tr>
+<tr>
+<td><br>5</td>
+<td><br>Block   the allocations for a quota on request of a MSA.</td>
+<td><br>3</td>
+</tr>
+<tr>
+<td><br>6</td>
+<td><br>Block   the allocations for a quota due to an end-user decision.</td>
+<td><br>69</td>
+</tr>
+<tr>
+<td><br>7</td>
+<td><br>Block   the allocations for a quota due to an exceptional condition.</td>
+<td><br>178</td>
+</tr>
+<tr>
+<td><br>8</td>
+<td><br>Block   the allocations for a quota after its reopening due to a balance transfer.</td>
+<td><br>8</td>
+</tr>
+
+        </table>
+      </div><p>Options 1 and 3 are the most common – option 1 actually seems more by design that just accidental late publication</p>
+<p><strong>Logical model of a quota blocking period</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94176888-a67a4c80-fe90-11ea-9b23-328f3d15931d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94176888-a67a4c80-fe90-11ea-9b23-328f3d15931d.png" alt="image" /></a></p>
+<p>A quota starts on Jan 1st and runs throughout the year
+The decision is taken to place a block on the quota for the first 15 days, to allow HMRC to make an assessment on potential usage of the quota, by taking allocation requests, but not actually allocating / decrementing the opening balance
+This gives smaller traders and new entrants an opportunity to take advantage of the reduced rate</p>
+<p><strong>Simplified quotas data model (as applies to blocking periods)</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94176946-bb56e000-fe90-11ea-93c9-0d1911caa7b7.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94176946-bb56e000-fe90-11ea-93c9-0d1911caa7b7.png" alt="image" /></a></p>
+<p><strong>Quota blocking data object in detail</strong></p>
+<p>As with suspension periods, the quota blocking object is not one of the more complex objects in the database: there are few fields, in fact there are only three that you need to actively define.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94177037-df1a2600-fe90-11ea-9bb5-a972e1814a40.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177037-df1a2600-fe90-11ea-9bb5-a972e1814a40.png" alt="image" /></a></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th><br>Field</th>
+<th><br>Description</th>
+</tr>
+<tr>
+<td><br>quota_blocking_period_sid</td>
+<td><br>Unique   identifier, automatically generated by the application when a new suspension   period is created – you do not create this yourself</td>
+</tr>
+<tr>
+<td><br>quota_definition_sid</td>
+<td><br>The   quota definition to which the suspension is to be attached – you do not need   to enter the ID of the definition: you select it from a list (as will be   demonstrated)</td>
+</tr>
+<tr>
+<td><br>blocking_start_date</td>
+<td><br>The   start date of the suspension blocking period – i.e. 00:00 at the start of the   chosen day</td>
+</tr>
+<tr>
+<td><br>blocking_end_date</td>
+<td><br>The   end date of the suspension blocking period – i.e. 00:00 at the end of the   chosen day</td>
+</tr>
+<tr>
+<td><br>blocking_periods_type</td>
+<td><br>One   of the 8 options noted previously – largely options 1 or 3</td>
+</tr>
+<tr>
+<td><br>description</td>
+<td><br>An   optional field, up to 500 characters in length, that helps to define the   blocking period and the reasons for it.</td>
+</tr>
+
+        </table>
+      </div><p><a href="https://user-images.githubusercontent.com/61055197/94177095-f35e2300-fe90-11ea-85ca-2be70cf3bbc8.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177095-f35e2300-fe90-11ea-85ca-2be70cf3bbc8.png" alt="image" /></a></p>
+<p><strong>A blocking period must fit within a definition period</strong></p>
+<p>The critical point is that a quota blocking period is defined against a quota definition period: the blocking period MUST NOT straddle the boundary of the definition – in the rare occasion you need to straddle a boundary, create 2 blocking periods</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94177179-12f54b80-fe91-11ea-9a95-59fd7fdaac68.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177179-12f54b80-fe91-11ea-9a95-59fd7fdaac68.png" alt="image" /></a></p>
+<h3 id="managing-blocking-periods-on-tap">Managing blocking periods on TAP</h3><p>[Not yet sure if this will go in a different section so I have omitted this from this page for now - This section is covered in pages 11-19 in the powerpoint]</p>
+<h3 id="key-user-needs">Key user needs</h3><div class="table-container">
+        <table>
+          <tr>
+<th><br>As a …</th>
+<th><br>I want to&hellip;</th>
+<th><br>So that …</th>
+<th><br>MoSCoW</th>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>view a list of all active quota   blocking periods</td>
+<td><br>I can select and decide the next   appropriate actions to be performed.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>create a new quota blocking period</td>
+<td><br>I can present it on the system for   future blocking purposes.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>select a quota definition period</td>
+<td><br>I can assign it to the correct blocking   period.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>only view &amp; select future quota   definition period</td>
+<td><br>the system won’t fail business rules.</td>
+<td><br>Should Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>edit an active quota blocking period</td>
+<td><br>I can reassign the blocking period   accurately.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>delete an active quota blocking period</td>
+<td><br>the system will not block a quota   incorrectly.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>have a workflow process</td>
+<td><br>All quota blocking changes   can be validated and approved before being sent to CDS.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>have the system validate relevant   business rules accordingly</td>
+<td><br>It won’t cause errors when validated in   CDS.</td>
+<td><br>Should Have</td>
+</tr>
+
+        </table>
+      </div><h3 id="key-business-rules">Key business rules</h3><div class="table-container">
+        <table>
+          <tr>
+<th><br>#</th>
+<th><br>Rule</th>
+<th><br>Notes</th>
+<th><br>MoSCoW</th>
+</tr>
+<tr>
+<td><br> Quota Blocking Period</td>
+<td></td>
+<td></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br>QBP1</td>
+<td><br>The quota definition SID must   exist.</td>
+<td><br>Required</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>QBP2</td>
+<td><br>The start date of the quota   blocking period must be later than or equal to the start date of the quota   validity period.</td>
+<td><br>Required</td>
+<td><br>Must   Have<br>     - User will need a valid quota   period initially before it can be blocked.</td>
+</tr>
+<tr>
+<td><br>QBP3</td>
+<td><br>The end date of the quota   blocking period must be later than the start date of the quota blocking   period.</td>
+<td><br>Required</td>
+<td><br>Must   Have<br>     - User can’t start blocking a   quota before it starts.</td>
+</tr>
+<tr>
+<td><br> Quota unblocking event</td>
+<td></td>
+<td></td>
+<td><br></td>
+</tr>
+<tr>
+<td><br>QUBLE1</td>
+<td><br>The quota definition SID must   exist.</td>
+<td><br>Required</td>
+<td><br>Must   Have</td>
+</tr>
+<tr>
+<td><br>QUBLE2</td>
+<td><br>There may be only one unblocking   event with the same occurrence timestamp for a given quota.</td>
+<td><br>Not Required</td>
+<td><br>Wont Have<br>     - User can put an earlier end date   to the initial quota blocking period.</td>
+</tr>
+
+        </table>
+      </div>
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Tariff-Data-Structures;-Quota-blocking">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Quota%20blocking'&amp;body=Problem%20with%20'Quota%20blocking'%20(https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="/tariff-data-manual/javascripts/application.js"></script>
+  </body>
+</html>
