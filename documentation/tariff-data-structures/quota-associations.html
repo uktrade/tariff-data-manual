@@ -183,6 +183,15 @@
 <li>
 <a href="#key-examples-normal-associations-nm">Key examples - Normal associations (NM)</a>
 </li>
+<li>
+<a href="#managing-quota-associations-in-tap">Managing quota associations in TAP</a>
+</li>
+<li>
+<a href="#key-user-needs-quota-associations">Key user needs – quota associations</a>
+</li>
+<li>
+<a href="#key-business-rules-quota-associations">Key business rules – quota associations</a>
+</li>
 </ul>
 <p></li>
 </ul>
@@ -343,20 +352,23 @@ Quota associations are used:</p>
 </ul>
 <p><strong>Main quota = 09.2201, sub quota = 09.2202 Regulation R0481/12 – Beef (AR, CA, US, UY, AU, NZ)</strong></p>
 <p>COMMISSION IMPLEMENTING REGULATION (EU) No 481/2012 of 7 June 2012 laying down rules for the management of a tariff quota for high-quality beef.</p>
-<p>*<em>Article 2 - Management of the tariff quota *</em></p>
+
+<ins>Article 2 - Management of the tariff quota</ins>
 
 <ol>
 <li>The tariff quota shall be managed on a first-come, first- served basis in accordance with Articles 308a and 308b and Article 308c(1) of Regulation (EEC) No 2454/93. No import licences shall be required. </li>
 <li>The tariff quota shall be managed as a parent tariff quota under order number 09.2201 with four quarterly sub-tariff quotas under order number 09.2202.  The benefit from the tariff quota can be granted only by applying for order number 09.2202 referring to the sub-tariff quotas. </li>
 <li>The drawings on the sub-tariff quotas until 30 September, 31 December and 31 March shall be stopped respectively on the fifth working day of the Commission in November, February and May. Their unused balances shall be added to the quantities for the quarterly sub-tariff quotas starting respectively on 1 October, 1 January and 1 April. No unused balance at the end of a quota year shall be transferred to another quota year. </li>
 </ol>
-<p><strong>Parent quota order number and definitions</strong></p>
+
+<ins>Parent quota order number and definitions</ins>
 
 <ul>
 <li>Original quota order number 09.2201 was set up from 1st July 2012 with an empty validity end date</li>
 <li>Parent quota 09.2201 set up with definition periods one per year, running from 1st July to 30th June – for some reason this only started in 2015, not 2012.</li>
 </ul>
-<p><strong>Child quota order number and definitions</strong></p>
+
+<ins>Child quota order number and definitions</ins>
 
 <ul>
 <li>Original child quota order number 09.2202 also set up from 1st July 2012 with an empty validity end date</li>
@@ -377,14 +389,284 @@ Quota associations are used:</p>
 <li>The 4 sub-quota definition periods are associated with the single annual parent quota definition (repeated [marketing]-yearly – July to June)</li>
 <li>This year, a total volume of 45000000.00 KGM is assigned to the parent: this is split into 4 equal chunks of 11250000.00 KGM for each sub-quota period</li>
 </ul>
-<p>Main quota definition (parent)</p>
+
+<ins>Main quota definition (parent)</ins>
+<p><a href="https://user-images.githubusercontent.com/61055197/94283911-8ce90b80-ff49-11ea-8853-a6a357de4f4a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94283911-8ce90b80-ff49-11ea-8853-a6a357de4f4a.png" alt="image" /></a></p>
 
 <ins>Sub quota definitions (child)</ins>
-<p>All measures are set against the sub quota 09.2202
-As per the regulation, the benefit from the tariff quota can be granted only by applying for order number 09.2202 referring to the sub-tariff quotas.
-There are no measures against the parent quota 09.2201.
-The start and end dates of the measures line up with the start and end dates of the quota definitions</p>
 
+<ul>
+<li>All measures are set against the sub quota 09.2202</li>
+<li>As per the regulation, the benefit from the tariff quota can be granted only by applying for order number 09.2202 referring to the sub-tariff quotas.</li>
+<li>There are no measures against the parent quota 09.2201.</li>
+<li>The start and end dates of the measures line up with the start and end dates of the quota definitions</li>
+</ul>
+<p><strong>Purpose of beef quota associations</strong></p>
+
+<ul>
+<li>The purpose of the beef quota associations is to ensure that any balance left over at the end of a quota definition period is made available to the subsequent definition period within that marketing year.</li>
+<li>For example balance from quarter 1 can be carried forward into quarter 2, from Q2 into Q3 and from Q3 into Q4</li>
+<li>Balance may not be carried forward from year to year however.</li>
+<li>Although it may seem that this function is thematically detached from the nature of the quota association, this is just how the border systems function in response: QAM (HMRC’s border system’s Quota Allocation Module) has been constructed to allow for this specific functionality</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94284216-f701b080-ff49-11ea-97c3-7d1740895d4f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284216-f701b080-ff49-11ea-97c3-7d1740895d4f.png" alt="image" /></a></p>
+<p>Orange juice from Israel</p>
+
+<ul>
+<li>The Israel orange juice quota association is designed to limit the import of a certain range of orange juice commodity codes into the EU (and in future the UK). As per the diagram to the right, taken from the EU’s regulation 1154/2009, main quota 09.1331 is set up to accept a large volume (35,000 tonnes) of all orange juice commodities</li>
+<li>Sub quota 09.1333 is set up to allow a max of 21,280 tonnnes of juice in smaller containers</li>
+<li>Due to the association, when a trader brings in goods against either of the quotas, the main quota is decremented: when the sub quota (small containers) is exhausted, traders may still continue to bring goods in on the main quota, provided they are not the commodities that identify small containers of orange juice.</li>
+<li>This quota is set up with relation type NM (Normal – restrictive to main quota), such that a quantitive limit is applied to the sub quota</li>
+<li>The coefficient is set to 1.00000, meaning that drawing down 1kg on the subquota will also draw down 1kg on the parent with no equivalence calculation.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94284360-27e1e580-ff4a-11ea-990b-96a223bae37f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284360-27e1e580-ff4a-11ea-990b-96a223bae37f.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94284407-36c89800-ff4a-11ea-904e-a5c6f0fbad81.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284407-36c89800-ff4a-11ea-904e-a5c6f0fbad81.png" alt="image" /></a></p>
+<p><strong>Steel safeguards – most of the world</strong></p>
+<p></ins>Background to steel safeguards</ins></p>
+
+<ul>
+<li>In 2017, POTUS applied a swingeing import duty on steel, aluminium and tin goods coming into the USA from most overseas countries, in an avowed attempt to save the US steel industry from ‘dumping’ of cheap steel from abroad. This duty remains in place to this day.</li>
+<li>The impact on global steel trade has been dramatic – suddenly, all the steel which would have found a buyer on the US market could not be sold, and traders needed to find a buyer. This therefore led to an immediate and hugely distorted over-supply of goods from overseas onto the EU market.</li>
+<li>Therefore the EU introduced similar measures, in the first year a replica of the US charges, but in the second, as it became clear that the balance of trade was complex to introduce, as well as facing into a potential trade dispute from nations that had done no wrong, the EU introduced a complex quota-based system to ensure that the volume of such goods coming into the Union was appropriately balanced.</li>
+<li>This quota system has since become even more nuanced, resulting in the new measures introduced in October 2019, on which the UK will be basing our response.</li>
+</ul>
+<p><strong>Steel safeguards and quota associations</strong></p>
+
+<ul>
+<li>The steel safeguards are broken into 28 product categories, of which c. 20 will be carried over into the UK’s safeguard response.</li>
+<li>Categories 1, 13 and 16 are special and require quota associations to ensure that the policy is executed to its fullest.</li>
+<li>Before detailing this, it is worth reiterating how the DIT and HMRC systems connect and how this changes from the current setup with the EU.</li>
+<li>The important piece to note here is that the UK will be allocating its own quotas after EU Exit, and not the EU.</li>
+<li>HMRC has introduced a new system called QAM (Quota Allocation Module) which allocates quota requests on importers’ declarations.</li>
+<li>Any new functionality needs to be coded from scratch in the UK: safeguard quotas are such new functionality: as it stands (Dec 19), CDS is not yet ready to allocate this kind of quota association.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94284583-7db68d80-ff4a-11ea-93fb-1908764f4cf0.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284583-7db68d80-ff4a-11ea-93fb-1908764f4cf0.png" alt="image" /></a></p>
+<p><strong>What’s special about steel safeguards?</strong></p>
+<p>The EU introduced a new concept for steel safeguards that ensures that a maximum volume is assigned to imports from individual countries; i.e. a single country cannot dominate a quota to the exclusion of all others – the purpose is to maintain some kind of equitable trade flow across the globe.</p>
+
+<ins>How does this work?</ins>
+
+<ul>
+<li>A main quota is set up with a large, globally available volume;</li>
+<li>Multiple sub-quotas are set up with volumes that are a specific percentage of the parent (but in total add up to significantly more that the parent’s total)</li>
+<li>In this real example (EU category 13), imports from no country are allowed to exceed 33.33%; hence the main quota is set up with 100% (141,103,760.00 KGM), and 6 sub-quotas are set up with 33.33% (42,331,128.00 KGM)</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94284870-e30a7e80-ff4a-11ea-9f25-df4474cadbaf.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284870-e30a7e80-ff4a-11ea-9f25-df4474cadbaf.png" alt="image" /></a></p>
+
+<blockquote>
+<p>Safeguard national limits are artificial – they cannot be applied to every single countryThey are applied solely to those countries that are liable to exceed the mandated threshold via a NM-type sub quota association</p>
+</blockquote>
+<p><strong>UK interpretation of steel safeguards</strong></p>
+<p>The UK is likely to interpret the steel safeguards regulation as follows:</p>
+
+<ins>Category 1 - Non Alloy and Other Alloy Hot Rolled Sheets and Strips</ins> 
+
+<ul>
+<li>All year round, there will be a limit of 75% max per country limit applied to quotas applied to category 1.</li>
+<li>The expectation is that the EU will be the only bloc that threatens to get near this 75% limit.</li>
+</ul>
+
+<ins>Category 13 - Rebars & Category 16 - Non Alloy and Other Alloy Wire Rod</ins>
+ 
+
+<ul>
+<li>The steel safeguard year runs from July 1st to June 30th. The year is typically broken into 4 quarters (July to Sep, Oct to Dec, Jan to Mar, Apr to Jun).</li>
+<li>For these categories, there will be no association of quotas, as the max does not apply, however on quarter 4, Apr to Jun, the ‘global’ quota will be opened up to other large exporters which will have a maximum 30% threshold applied, as per the EU example 2 slides prior to this.</li>
+<li>As previously described, this cannot yet be managed via allocation in QAM, though the solution is in delivery.</li>
+<li>The UK will set up quota associations in the same way as the EU does once the functionality has been delivered.</li>
+</ul>
+<p><strong>C. America quota of quotas</strong></p>
+<p>Quota of quota – clothes from C. America</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94289888-52836c80-ff51-11ea-9675-9973cfeaf43b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94289888-52836c80-ff51-11ea-9675-9973cfeaf43b.png" alt="image" /></a></p>
+
+<ul>
+<li>Applicable to Nicaragua and El Salvador, a function known as a ‘quota of quotas’ has been implemented to apply a maximum import volume across multiple quotas.</li>
+<li>The intent is expressed as follows:For the tariff quotas with quota order numbers from 09.7105 to 09.7138, the global yearly quota volume may not exceed the following number of items (pairs) for the respective calendar year.with a table beneath it expressing the maximum overall volume across multiple quotas.</li>
+<li>There are two such quotas of quotas for Nicaragua and a single quota of quota for El Salvador.</li>
+<li>Please note – this requirement is more theoretical than practical: it has not been implemented in the EU tariff since 2015, and although the data appears to be present for 2020, it may yet be removed as unnecessary - i.e. it is understood as a regulatory requirement, however the legislated volumes are never even close to being met, therefore the function is disabled.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94290009-852d6500-ff51-11ea-9e92-ccb119e1a1e8.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94290009-852d6500-ff51-11ea-9e92-ccb119e1a1e8.png" alt="image" /></a></p>
+
+<ul>
+<li>There is a single quota (or quota of quotas) to which a master overall volume is assigned. For 2020, the volumes are 12,687,500 items of clothing from Nicaragua.</li>
+<li>Crucially, this is purely a blanket quota exercising a maximum threshold: there are no commodities applied to the master quota: traders are also not expected to reference 09.7104 on their declarations.</li>
+<li>The quota then has a NM type relationship with the 34 individual quotas that are afforded a threshold by the main quota. On the diagram, there is only one line, but there are 34 individual associations.</li>
+<li>Quota volumes are applied to the individual quotas, as are related commodities.</li>
+<li>For 2020, according to legislation, the sum of the initial quota volumes for the 34 quotas is 28,854,000.00 items (the overall Quota of Quota maximum is c. 43% of this).</li>
+</ul>
+<p><strong>Tomatoes from Morocco &amp; Western Sahara – a little bit special</strong></p>
+
+<ul>
+<li>The EU’s COMMISSION IMPLEMENTING REGULATION (EU) No 812/2012 of 12 September 2012 amending Council Regulation (EC) No 747/2001 as regards tariff quotas of the Union for certain agricultural and processed agricultural products originating in Morocco introduced legislation that caused a great deal of complexity with regard to quota associations that has no parallel in the Tariff.</li>
+<li>It has been decided to not carry this over into the UK Tariff, as the complexities of adminstering the quotas are not warranted: the UK’s tomato agriculture is far less vital to the economy than equivalents in Southern Europe, which were served by this policy.</li>
+<li>There are two main features of the Moroccan quotas which are rarely replicated elsewhere:
+
+<ul>
+<li>firstly, there are multiple subquotas to a single main quota, described on the screens below</li>
+<li>secondly, a unique ‘topup’ mechanism exists to feed one quota with balance from another quota, if such a remainder exists</li>
+</ul></li>
+<li>If that were not complex enough, it also uses the Entry Price System to work out the applicable in quota duties.</li>
+<li>The legislation is documented in detail on the following pages.</li>
+</ul>
+<p><strong>Regulation R0812/12 – Tomatoes (Morocco)</strong></p>
+<p>COMMISSION IMPLEMENTING REGULATION (EU) No 812/2012 of 12 September 2012 amending Council Regulation (EC) No 747/2001 as regards tariff quotas of the Union for certain agricultural and processed agricultural products originating in Morocco</p>
+
+<ins>Article 3a - Special provisions for the tariff quotas for tomatoes originating in Morocco (and later Western Sahara)</ins>
+<p>For tomatoes of CN code 0702 00 00 placed into free circulation in every period from 1 October to 31 May (hereinafter “marketing year”), drawings on the monthly tariff quotas laid down in Annex II under order number 09.1104 from 1 October to 31 December and from 1 January to 31 March respectively, shall be stopped each year on 15 January and on the second working day in the Commission following 1 April.</p>
+<p>On the following working day in the Commission, the Commission services will determine the unused balance of each of these tariff quotas and will make available that unused balance within the additional tariff quota applicable for that marketing year under the order number 09.1112.</p>
+<p>From the dates on which the monthly tariff quotas are stopped, any retroactive drawings from any of the stopped monthly tariff quotas applicable during the months of November, December and January to March, and any returns of unused volumes to any of the stopped monthly tariff quotas shall be made on the additional tariff quota applicable under the order number 09.1112 for that marketing year.</p>
+
+<ins>Master quota order number</ins>
+
+<ul>
+<li>Quota order number 09.1104 is set up from June 2005 with 8 definition periods running from start of November to end of May (1 month each)</li>
+</ul>
+
+<ins>Parent quota order number and definitions</ins>
+
+<ul>
+<li>Original quota order number 09.1112 was set up from 1st Nov 2003. This was superseded in the following years but effectively has been live since then with no validity end date</li>
+<li>Parent quota 09.1112 has been set up with definition periods one per year, running for 7 months each from 1st Nov to 31st May ever since 2004.</li>
+</ul>
+
+<ins>Child quota order number and definitions</ins>
+
+<ul>
+<li>Child quota order number 09.1193 was set up on 1st November 2012 – single record only</li>
+<li>Child order number 09.1193 has 7 order definitions per marketing year (start of Nov to end of May) – these are all monthly, running in these periods:
+
+<ul>
+<li>1st Nov to 30th Nov</li>
+<li>1st Dec to 31st Dec</li>
+<li>1st Jan to 31st Jan</li>
+<li>1st Feb to 28th Feb (or 29th)</li>
+<li>1st Mar to 31st Mar</li>
+<li>1st Apr to 30th Apr</li>
+<li>1st May to 31st May</li>
+</ul></li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94295262-e0168a80-ff58-11ea-9c08-19f59e1dea1d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94295262-e0168a80-ff58-11ea-9c08-19f59e1dea1d.png" alt="image" /></a></p>
+
+<ins>Quota associations</ins>
+<p>For marketing year 1st Nov 2017 to 31st May 2018 (and replicated thereafter), each of the sub-quota’s definitions (from 09.1193) are associated to the parent definition (09.1112) for that year.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94296371-a5aded00-ff5a-11ea-81bf-6573a65f83fd.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94296371-a5aded00-ff5a-11ea-81bf-6573a65f83fd.png" alt="image" /></a></p>
+
+<blockquote>
+<p>We will be abandoning this complexity, as the import of tomatoes into the UK is not as emotive or so vital for UK tomato growers’ ability to flourish.
+We will continue to use two quotas, but both without associations, 09.1104 and 09.1193 running for 8 and 7 months respectively with single definition periods (and hence a single quota volume each accessible throughout that entire period)</p>
+</blockquote>
+<h3 id="managing-quota-associations-in-tap">Managing quota associations in TAP</h3><p>[Not yet sure if this will go in a different section so I have omitted this from this page for now - This section is covered in pages 13-19 in the powerpoint]</p>
+<h3 id="key-user-needs-quota-associations">Key user needs – quota associations</h3><div class="table-container">
+        <table>
+          <tr>
+<th><br>As a …</th>
+<th><br>I want to&hellip;</th>
+<th><br>So that …</th>
+<th><br>MoSCoW</th>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>view a list of all active quota   associations</td>
+<td><br>I can select and decide the next   appropriate actions to be performed.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>create a new quota associations</td>
+<td><br>I can present it on the system for   future association purposes.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>only view &amp; select future quota   associations</td>
+<td><br>I can’t edit quota associations that   has already been triggered.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>delete a future quota associations</td>
+<td><br>the system will not activate the   associated quota definitions incorrectly.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>have a workflow process</td>
+<td><br>all quota blocking changes can be   validated and approved before being sent to CDS.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>have the system validate relevant   business rules accordingly</td>
+<td><br>It won’t cause errors when validated in   CDS.</td>
+<td><br>Should Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>be able to view all available parent   and child definitions</td>
+<td><br>I can create new quota associations   easily and quickly.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>be able to enter/select the correct   relation type values</td>
+<td><br>the correct weighting is reflected on   the respective products.</td>
+<td><br>Must Have</td>
+</tr>
+<tr>
+<td><br>UK Tariff Manager</td>
+<td><br>only view quota definitions in the last   2 years</td>
+<td><br>I won’t inundated with too much   information.</td>
+<td><br>Should Have</td>
+</tr>
+
+        </table>
+      </div><h3 id="key-business-rules-quota-associations">Key business rules – quota associations</h3><div class="table-container">
+        <table>
+          <tr>
+<th><br>#</th>
+<th><br>Rule</th>
+<th><br>Notes</th>
+<th><br>MoSCoW</th>
+</tr>
+<tr>
+<td><br>QA1</td>
+<td><br>The association between two quota   definitions must be unique.</td>
+<td><br>Required</td>
+<td><br>Must   Have<br>     - This is in order that the sub   quota will only be drawn down once by a trader.</td>
+</tr>
+<tr>
+<td><br>QA2</td>
+<td><br>The sub-quota’s validity period   must be entirely enclosed within the validity period of the main quota.</td>
+<td><br>Required</td>
+<td><br>Must   Have<br>     -    User will need an active main quota in order for association to be   assigned to it.</td>
+</tr>
+<tr>
+<td><br>QA3</td>
+<td><br>When converted to the measurement   unit of the main quota, the volume of a sub-quota must always be lower than   or equal to the volume of the main quota.</td>
+<td><br>Required</td>
+<td><br>Must   Have<br>     - The main quota is designed to   have the max volume which will be drawdown-ed by the subs.</td>
+</tr>
+<tr>
+<td><br>QA4</td>
+<td><br>Whenever a sub-quota receives a   coefficient, this has to be a strictly positive decimal number. When it is   not specified a value of 1 is always assumed.</td>
+<td><br>Not Required</td>
+<td><br>Won’t Have</td>
+</tr>
+<tr>
+<td><br>QA5</td>
+<td><br>Whenever a sub-quota is defined   with the ‘equivalent’ type, it must have the same volume as the ones   associated with the parent quota. Moreover it must be defined with a   coefficient not equal to 1.</td>
+<td><br>Required</td>
+<td><br>Should   Have<br>     - Only NM can be set to 1. EQ   must be anything but set to 1.</td>
+</tr>
+<tr>
+<td><br>QA6</td>
+<td><br>Sub-quotas associated with the   same main quota must have the same relation type.</td>
+<td><br>Not   Required</td>
+<td><br>Won’t   Have</td>
+</tr>
+
+        </table>
+      </div>
             
           </main>
 
