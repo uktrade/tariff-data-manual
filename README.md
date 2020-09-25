@@ -11,6 +11,9 @@
 2. Go to file > paste table data > load > generate > copy to clipboard 
 3. You can put line breaks in your table as `<br>`
 
+### How to underline text:
+Use this format: <ins>text</ins>
+
 ### How to add graphs: 
 
 **Graph 1:** 
