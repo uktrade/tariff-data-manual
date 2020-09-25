@@ -12,7 +12,7 @@
 3. You can put line breaks in your table as `<br>`
 
 ### How to underline text:
-Use this format: <ins>text</ins>
+Use this format: `<ins>text</ins>`
 
 ### How to add graphs: 
 
