@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+      <meta name="robots" content="noindex">
+
+    <title>Quota associations - Tariff Data Manual</title>
+
+    <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-associations.html">
+
+
+      <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta property="og:site_name" content="Tariff Data Manual" />
+      <meta property="og:title" content="Quota associations" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-associations.html" />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:domain" content="uktrade.github.io" />
+      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta property="twitter:title" content="Quota associations - Tariff Data Manual" />
+      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-associations.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="https://uktrade.github.io/tariff-data-manual/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          Tariff Data Manual
+        </span>
+      </a>
+        <strong class="govuk-tag">Alpha</strong>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search">
+    <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
+                      <ul>
+  <li>
+    <a href="/tariff-data-manual/#home"><span>Home</span></a>
+  </li>
+</ul>
+<ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/wto-quotas-and-atqs.html#wto-quotas-and-atqs"><span>WTO Quotas and ATQs</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
+  </li>
+</ul>
+</li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota Suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures-components.html#measures-components"><span>Measures components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measures-conditions.html#measures-conditions"><span>Measures conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/nomenclature.html#nomenclature"><span>Nomenclature</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+</li></ul>
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="quota-associations">Quota associations</h1>
+<ul>
+<li>
+<a href="#quota-associations">Quota associations</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#key-data-fields-for-associations">Key data fields for associations</a>
+</li>
+<li>
+<a href="#key-examples-equivalence-associations-eq">Key examples - Equivalence associations (EQ)</a>
+</li>
+<li>
+<a href="#key-examples-normal-associations-nm">Key examples - Normal associations (NM)</a>
+</li>
+</ul>
+<p></li>
+</ul>
+</li>
+</ul></p>
+<p><strong>What are quota associations?</strong></p>
+
+<ul>
+<li>A quota association is used as a mechanism in Taric to link together quotas in such a way that the drawing down on that quota by a trader will then have an impact on another.</li>
+<li>The detail of the trade instruments that necessitate and make use of this function are described in detail below.</li>
+<li>The quota association links together two or more quotas’ quota definitions, which are time-bound periods, often of exactly one year, but sometimes shorter.</li>
+<li>The association defines the link between one and only one main quota and one or more sub quotas. These are sometimes referred to respectively as parent and child quotas, though main and sub are the traditional Taric terms.</li>
+<li>There are currently 28 main quotas that are linked to sub quotas via their definitions.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" alt="image" /></a></p>
+<p><strong>Where are quota associations used?</strong></p>
+<p>In the EU tariff, there are a number of key product areas where quota associations are used (or potentially could be used if such policy were adopted):</p>
+<p>How we choose to adopt these in the UK tariff will depend on the emerging UK trade policy, for example there are a number of quota associations that are:</p>
+
+<ul>
+<li>part of trade agreements that we are yet to transition or</li>
+<li>have been provisionally written out of the UK equivalent.</li>
+</ul>
+<p>These instances are discussed in detail on subsequent pages.</p>
+<p><em>Live from Day One</em></p>
+
+<ul>
+<li>Lamb, sheep and goat meat (WTO quota)</li>
+<li>Beef (WTO quota)</li>
+<li>Orange juice (Israel)</li>
+</ul>
+<p><em>Live from Day One in theory</em></p>
+
+<ul>
+<li>Steel (safeguards)*</li>
+<li>Clothing (C. America quota of quotas)**</li>
+</ul>
+<p><em>Agreements not yet transitioned</em></p>
+
+<ul>
+<li>Bison meat (Canada)</li>
+<li>Eggs and egg albumin (Mexico)</li>
+</ul>
+<p><em>No longer required</em></p>
+
+<ul>
+<li>Tomatoes (Morocco)</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94258655-11756300-ff25-11ea-896a-b62226ecb8f5.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258655-11756300-ff25-11ea-896a-b62226ecb8f5.png" alt="image" /></a></p>
+<h3 id="key-data-fields-for-associations">Key data fields for associations</h3><p><strong>Quota associations – key data fields</strong></p>
+<p>The data model, if not the underlying concepts for quota associations, is simple.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94258844-69ac6500-ff25-11ea-8f39-8233cf4212a3.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258844-69ac6500-ff25-11ea-8f39-8233cf4212a3.png" alt="image" /></a></p>
+<p>The key fields are defined in the box surrounded by the red dashed marquee in the diagram above.</p>
+
+<ul>
+<li>an association links to a single main (parent) quota definition and a single sub (child) definition: these definitions define the quota order number, which is a property of the definition as well as the time extent: the association will last as long as the definitions. In most cases, the definitions of main and sub quota are equally long, however Moroccan tomatoes is the exception: while the complex Moroccan tomato quota will not be carried forward into the UK tariff, it deserves and receives some explanation in this training pack.</li>
+<li>an association then has a relation type, defined below, and a coefficient, also explained below.</li>
+</ul>
+<p><strong>2 relation types: EQ and NM</strong></p>
+<p>There are two relation type values that are used to define quota associations: EQ (equivalent to main quota and NM normal). The two relation types define the two main uses of quota associations.
+Quota associations are used:</p>
+
+<ul>
+<li>to provide the opportunity to spread a quota balance across multiple order numbers and to apply a weighting to the weight or volume of the individual products (relation type EQ). The weighting is defined in the corresponding coefficient field</li>
+<li>to apply a maximum quota volume to subsidiary products (or periods) within a parent group’s volume (relation type NM)</li>
+<li><p>to allow goods to be traded evenly across multiple in-year definition periods and for balances to be transferred into a future period.</p></li>
+<li><p>The TARIC3 IDS Elements guide document (essential reading) describes the possible relation types as per the screen grab to below.</p></li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94259011-b3954b00-ff25-11ea-97e8-fb523a9f6a9d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94259011-b3954b00-ff25-11ea-97e8-fb523a9f6a9d.png" alt="image" /></a></p>
+
+<ul>
+<li>These different types were first introduced in 2010. The following rules apply:
+
+<ul>
+<li>the value assigned to the coefficient field is always 1.00 where the relation type is “NM”.</li>
+<li>the values assigned to the coefficient field is always something other than 1.00 where the relation type is “EQ”.</li>
+</ul></li>
+<li>Therefore, EQ is used to relate quota order numbers where volume or weight is to be interpreted differently via a simple co-efficient.</li>
+<li>NM is used where weight or volume is the same across each related definition, however a maximum weight / volume is applied to specific commodity codes in the sub-quota, or in the case of beef WTO quotas, to allow balance to be shared equitably across an entire year (see below).</li>
+</ul>
+<h3 id="key-examples-equivalence-associations-eq">Key examples - Equivalence associations (EQ)</h3><p><strong>Sheep and goat meat – WTO quota</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94262290-294fe580-ff2b-11ea-99ae-b382ca6224fb.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262290-294fe580-ff2b-11ea-99ae-b382ca6224fb.png" alt="image" /></a></p>
+
+<ul>
+<li>This is the poster boy for quota associations – the most crucial for trade of the remaining associations, given the emotional importance of the commodities involved and the number of countries impacted.</li>
+<li>The details of the trade in sheep and goat meat are set out in the EU’s Regulation 1354 of 2011 and subsequent documents which cover the opening annual WTO Union tariff quotas for sheepmeat and goatmeat – the mechanism is copied into the UK tariff.</li>
+<li>The reason why equivalence associations are used in this set of quotas is that there are three types of products to be traded (each represented by multiple commodities) whose imports are to be treated different, depending on what product they are</li>
+<li>It is considered that 1kg of meat off the bone is to count less than 1kg of meat on the bone when determining quota allocations.</li>
+<li>In the EU, this covers imports from Greenland, Argentina, Australia, Chile, Faroe Islands, Iceland, Norway, New Zealand, Turkey, Uruguay, WTO Member states and Erga Omnes.</li>
+<li>In the UK, additional countries will be added to this list dependent on whether the trade deals with those countries have gone through, e.g. Bosnia-Herzegovina.</li>
+<li>Please be aware also of Chile, where the volumes are shared with a preferential quota.</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94262386-513f4900-ff2b-11ea-886d-f591beebd9f7.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262386-513f4900-ff2b-11ea-886d-f591beebd9f7.png" alt="image" /></a></p>
+
+<ul>
+<li>Page 3 of the noted regulation shows the effect and implementation of quota associations (EQ type).</li>
+<li>The red marquee to the left shows the details of this specific sheep and goat meat quota for New Zealand (the same applies to other countries).</li>
+<li>The EU is allowed to import 228,254 tonnes of meat from New Zealand annually. The notes above the final column are instrumental – “in tonnes of carcase weight equivalent” illustrates there is a calculation to undertake for goods of various different types in order to determine “what constitutes a tonne”.</li>
+<li>In this case bone-in carcases are counted as 1 tonne, boneless mutton / sheep counts as 1.81 tonnes and boneless lamb counts as 1.67 tonnes. These values are reflected in the coefficients on the printed regulation and also in the quota associations table in the database (orange marquee). This setup is echoed with Bison meat (Canada).</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94262245-15a47f00-ff2b-11ea-9ba4-e64ac71b692f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262245-15a47f00-ff2b-11ea-9ba4-e64ac71b692f.png" alt="image" /></a></p>
+<p><strong>Preferential beef quotas</strong></p>
+
+<ul>
+<li>There are also beef quotas that behave somewhat similarly to the lamb quotas already defined, though not precisely the same – please take care also to note the differences between these quotas and the core WTO beef quotas described later in this document that behave quite differently and use associations for very different purposes.</li>
+<li>The quotas used in the EUs are:
+
+<ul>
+<li>097308 and 097300 (Central America)</li>
+<li>097314 and 097315 (Nicaragua)</li>
+<li>097209 and 097210 (Peru)</li>
+</ul></li>
+<li>Using the C. America quotas as an example, the following data is set up – replicated for Nicaragua and Peru, though the Peru commodity codes are more specific:</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94262507-821f7e00-ff2b-11ea-981e-aa584a5d2e71.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262507-821f7e00-ff2b-11ea-981e-aa584a5d2e71.png" alt="image" /></a></p>
+<p>In summary</p>
+<p>This effectively means that every single good imported on these three quotas is treated as being 1.421 times its actual weight – other than convention, it is not clear why the quota volumes were just not set differently in the first place. Each of the underlying regulations features a footnote re: beef products as follows:
+“Expressed in carcase weight equivalent as follows: 100 kg of bone-in meat shall be equivalent to 70 kg1 of boneless meat.”</p>
+<p><strong>Eggs from Mexico (TBC)</strong></p>
+
+<ul>
+<li>There are two EU main quotas related to egg products currently in place, that utilise an equivalent association to determine the declarable weight of goods, depending on the commodity type.</li>
+<li>The two main quotas  09.1832 and 09.1869, respectively for egg yolks or eggs not in shell and egg albumin, use the equivalence association to calculate egg weights according to the UCC code calculation</li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94263815-8d73a900-ff2d-11ea-8045-94838d8fe44b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94263815-8d73a900-ff2d-11ea-8045-94838d8fe44b.png" alt="image" /></a></p>
+<p><strong>Bison from Canada (TBC)</strong></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94263878-a7ad8700-ff2d-11ea-8584-00f114ea51d7.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94263878-a7ad8700-ff2d-11ea-8584-00f114ea51d7.png" alt="image" /></a></p>
+
+<ul>
+<li>The arrangement that the EU has for the importation of bison from Canada is very similar to that used on WTO quotas from multiple countries worldwide</li>
+<li>Please note that, at the time of writing, the Canada (CETA) trade agreement has not been carried over to the UK Tariff and is not imminent.</li>
+<li>The idea is to differentiate between different cuts of meat: those considered of higher value and those considered of lower value</li>
+<li>Quota associations are applied to provide an equivalence for the various product types, as follows: </li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94263871-a3816980-ff2d-11ea-9135-f1e943180cb0.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94263871-a3816980-ff2d-11ea-9135-f1e943180cb0.png" alt="image" /></a></p>
+<h3 id="key-examples-normal-associations-nm">Key examples - Normal associations (NM)</h3><p><strong>Beef WTO quotas</strong></p>
+
+<ul>
+<li>There are a number of quotas that have been set up to facilitate the trade in beef products according to the EU’s WTO schedule.</li>
+<li><p>The primary quota arrangement caters for imports from the following origins:</p>
+
+<ul>
+<li>Argentina</li>
+<li>Australia</li>
+<li>Canada</li>
+<li>New Zealand</li>
+<li>United States of America</li>
+<li>Uruguay</li>
+</ul></li>
+<li><p>The quota is an annual quota split into 4 equal quarters running from:</p>
+
+<ul>
+<li>1st July to 30th September</li>
+<li>1st October to 31st December</li>
+<li>1st January to 31st March</li>
+<li>1st April to 30th June</li>
+</ul></li>
+</ul>
+<p><strong>Main quota = 09.2201, sub quota = 09.2202 Regulation R0481/12 – Beef (AR, CA, US, UY, AU, NZ)</strong></p>
+<p>COMMISSION IMPLEMENTING REGULATION (EU) No 481/2012 of 7 June 2012 laying down rules for the management of a tariff quota for high-quality beef.</p>
+<p>*<em>Article 2 - Management of the tariff quota *</em></p>
+
+<ol>
+<li>The tariff quota shall be managed on a first-come, first- served basis in accordance with Articles 308a and 308b and Article 308c(1) of Regulation (EEC) No 2454/93. No import licences shall be required. </li>
+<li>The tariff quota shall be managed as a parent tariff quota under order number 09.2201 with four quarterly sub-tariff quotas under order number 09.2202.  The benefit from the tariff quota can be granted only by applying for order number 09.2202 referring to the sub-tariff quotas. </li>
+<li>The drawings on the sub-tariff quotas until 30 September, 31 December and 31 March shall be stopped respectively on the fifth working day of the Commission in November, February and May. Their unused balances shall be added to the quantities for the quarterly sub-tariff quotas starting respectively on 1 October, 1 January and 1 April. No unused balance at the end of a quota year shall be transferred to another quota year. </li>
+</ol>
+<p><strong>Parent quota order number and definitions</strong></p>
+
+<ul>
+<li>Original quota order number 09.2201 was set up from 1st July 2012 with an empty validity end date</li>
+<li>Parent quota 09.2201 set up with definition periods one per year, running from 1st July to 30th June – for some reason this only started in 2015, not 2012.</li>
+</ul>
+<p><strong>Child quota order number and definitions</strong></p>
+
+<ul>
+<li>Original child quota order number 09.2202 also set up from 1st July 2012 with an empty validity end date</li>
+<li>4 definitions per year on 09.2202, running from:
+
+<ul>
+<li>1st July to 30th September</li>
+<li>1st October to 31st December</li>
+<li>1st January to 31st March</li>
+<li>1st April to 30th June</li>
+</ul></li>
+</ul>
+<p><a href="https://user-images.githubusercontent.com/61055197/94264223-39b58f80-ff2e-11ea-946a-6c741dad0845.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94264223-39b58f80-ff2e-11ea-946a-6c741dad0845.png" alt="image" /></a></p>
+
+<ul>
+<li>There are quota associations between the parent 09.2201 and child 09.2202 quota definitions</li>
+<li>These associations are made on each quota definition with type NM (normal) and coefficient of 1.0000</li>
+<li>The 4 sub-quota definition periods are associated with the single annual parent quota definition (repeated [marketing]-yearly – July to June)</li>
+<li>This year, a total volume of 45000000.00 KGM is assigned to the parent: this is split into 4 equal chunks of 11250000.00 KGM for each sub-quota period</li>
+</ul>
+<p>Main quota definition (parent)</p>
+
+<ins>Sub quota definitions (child)</ins>
+<p>All measures are set against the sub quota 09.2202
+As per the regulation, the benefit from the tariff quota can be granted only by applying for order number 09.2202 referring to the sub-tariff quotas.
+There are no measures against the parent quota 09.2201.
+The start and end dates of the measures line up with the start and end dates of the quota definitions</p>
+
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Tariff-Data-Structures;-Quota-associations">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Quota%20associations'&amp;body=Problem%20with%20'Quota%20associations'%20(https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-associations.html)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="/tariff-data-manual/javascripts/application.js"></script>
+  </body>
+</html>
