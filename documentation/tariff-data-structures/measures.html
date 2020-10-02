@@ -313,7 +313,7 @@
 <p><strong>The Tariff is a big relational database centred around the measure</strong></p>
 <p>There are training packs dedicated to each of these areas, so this is just a very brief introduction.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/92616842-9d955280-f2b6-11ea-850a-14bb2c5767ef.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92616842-9d955280-f2b6-11ea-850a-14bb2c5767ef.png" alt="" /></a></p>
-<p>*<em>Measure types &amp; responsibilities</em></p>
+<p><strong>Measure types &amp; responsibilities</strong></p>
 
 <ul>
 <li>There are c. 260 measure types in existence prior to the end of the Transition Period (TP).</li>
@@ -452,17 +452,23 @@
 </ul>
 <p><strong>Measures and additional codes</strong></p>
 <p>A measure can be assigned to a single additional code only.</p>
-<p>As with commodity codes, there are multiple fields used to link the measure to the single additional code:
-* additional_code_type_id
-* additional_code_id
-* additional_code_sid</p>
+<p>As with commodity codes, there are multiple fields used to link the measure to the single additional code:</p>
+
+<ul>
+<li>additional_code_type_id</li>
+<li>additional_code_id</li>
+<li>additional_code_sid</li>
+</ul>
 <p>Unlike commodity codes, there is no concept of inheritance with additional codes – the code is given meaning solely by the additional code type (single digit); the additional code ID (three digits) is essentially a meaningless sequentially sourced number.</p>
-<p>An additional code is assigned to a measure for multiple reasons, which could potentially be extended in the future:
-* to reference a specific company which will be assigned anti-dumping or anti-subsidy duties
-* to reference the route of ingress into the Union (wheat &amp; other cereals)
-* to reference product usage (e.g. pharmaceutical usage gets a reduced import duty)
-* to reference goods pillaged from Syria &amp; Iraq
-* to reference the %age content of sugar, flour or milk fats/solids.</p>
+<p>An additional code is assigned to a measure for multiple reasons, which could potentially be extended in the future:</p>
+
+<ul>
+<li>to reference a specific company which will be assigned anti-dumping or anti-subsidy duties</li>
+<li>to reference the route of ingress into the Union (wheat &amp; other cereals)</li>
+<li>to reference product usage (e.g. pharmaceutical usage gets a reduced import duty)</li>
+<li>to reference goods pillaged from Syria &amp; Iraq</li>
+<li>to reference the %age content of sugar, flour or milk fats/solids.</li>
+</ul>
 <p>See the additional codes training manual for more information on why additional codes are used.</p>
 <p><strong>Measures and time periods</strong></p>
 
@@ -485,7 +491,8 @@
 </ul>
 <p><strong>Measures and regulations</strong></p>
 <p>A measure is associated to two sets of regulations, depending on its status. These are referred to as follows:</p>
-<p>Measure-generating regulations:</p>
+
+<ins>Measure-generating regulations:</ins>
 
 <ul>
 <li>The measure-generating regulation is mandatory for all measures.</li>
@@ -496,7 +503,8 @@
 <li>measure_generating_regulation_id</li>
 </ul></li>
 </ul>
-<p>Justification regulations:</p>
+
+<ins>Justification regulations:</ins>
 
 <ul>
 <li>The term “justification” regulation is short-hand for “justification for closing” – it is used to identify the legal base that causes the regulation to be terminated in the EU. The UK does not have a similar kind of legislative function – we will not be using the justification regulation as a way of formally auditing the closure of regulations. But there are business rules that make this piece of data critical.</li>
@@ -531,13 +539,15 @@
 <li>conditionally assigned to the measure in certain conditions</li>
 </ul></li>
 </ul>
-<p><em>Directly-assigned duties</em></p>
+
+<ins>Directly-assigned duties</ins>
 
 <ul>
 <li>Directly-assigned duties are assigned to measures via the measure_components table</li>
 <li>A duty (direct- or conditionally-assigned) is often made up of more than one component, which are sequenced in ascending order, according to their duty_expression ID</li>
 </ul>
-<p><em>Conditionally-assigned duties</em></p>
+
+<ins>Conditionally-assigned duties</ins>
 
 <ul>
 <li>Conditionally-assigned duties are assigned to measures via the measure_condition_components table, via the measure_conditions table.</li>
@@ -859,8 +869,7 @@
 <li>I can either rejig the measures in the entire hierarchy to suit to new measure OR …</li>
 <li>I can invent a new measure type “Import control for sieved fruit puree” … which is what the EU has done, and which we will also need to do in the future.</li>
 </ul>
-<p>[have not included from page 60-88]
-[have not included create new measures section in this section]
+<p>[have not included &lsquo;create new measures&rsquo; section - pages 60-88 in powerpoint]
 <link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
