@@ -218,21 +218,7 @@
 <a href="#introduction-to-geographical-areas">Introduction to geographical areas</a>
 </li>
 <li>
-<a href="#identifying-geographical-areas">Identifying geographical areas</a>
-</li>
-<li>
-<a href="#about-country-groups">About country groups</a>
-</li>
-</ul>
-<p></li>
-<li>
 <a href="#geographical-area-membership">Geographical area membership</a>
-<ul>
-<li>
-<a href="#relationship-of-measures-to-geographical-areas">Relationship of measures to geographical areas</a>
-</li>
-<li>
-<a href="#relationship-of-quotas-to-geographical-areas">Relationship of quotas to geographical areas</a>
 </li>
 <li>
 <a href="#key-user-needs-geographical-area">Key user needs – geographical area</a>
@@ -241,7 +227,7 @@
 <a href="#key-business-processing-rules-geographical-areas">Key business processing rules – geographical areas</a>
 </li>
 </ul>
-</li>
+<p></li>
 </ul>
 </li>
 </ul></p>
@@ -259,7 +245,8 @@ fully incorporated, like Kosovo, which remains partially recognised.</li>
 <li>A quota though may be assigned to multiple geographical area entities. While this is the case in the EU, the UK is trying to abandon this, for example there is a wine quota (09.1530) in use for the West Balkan countries1 that is going to be split into 6 individual quotas post-implementation period.</li>
 <li>A geographical area that is defined as being a country group will have one or more countries (or regions) designated as members of that country group.</li>
 </ul>
-<h3 id="identifying-geographical-areas">Identifying geographical areas</h3>
+<p><strong>Identifying geographical areas</strong></p>
+
 <ul>
 <li>An identifier for a country group (geographical_area_id) is structured depending on the type of area in question.</li>
 <li>The geographical code field dictates what type of geographical area is involved:
@@ -282,16 +269,18 @@ fully incorporated, like Kosovo, which remains partially recognised.</li>
 <li>For nationally setup groups (historically managed by HMRC), the groups are alpha-numeric, for example F006 (Phytosanitary certificates)</li>
 </ul></li>
 </ul>
-<h3 id="about-country-groups">About country groups</h3><p>The last example on the previous page (F006 Phytosanitary certificates) shows that the country groups do not have to align to an enshrined globally understood trading entity like EU (1011), CARIFORUM (1033) or GSP LDC (2005).</p>
+<p><strong>About country groups</strong></p>
+<p>The last example on the previous page (F006 Phytosanitary certificates) shows that the country groups do not have to align to an enshrined globally understood trading entity like EU (1011), CARIFORUM (1033) or GSP LDC (2005).</p>
 <p>Because the meat and drink of Taric and TAP is to produce measures, which can be connected to just one single geographical area, it is often simpler just to create a group of countries and apply the measure to the group and not the individual countries.</p>
 <p>This can often be at the expense of making total sense however. For example, to execute the regulations associated with handloomed products, a group has been set up to accommodate the countries to which a quota applies for such products – the name of the group is “Silk or cotton handloom products”.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/92506166-eee10b80-f1fc-11ea-9d9a-ef1157fad306.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92506166-eee10b80-f1fc-11ea-9d9a-ef1157fad306.png" alt="" /></a></p>
-<h2 id="geographical-area-membership">Geographical area membership</h2><p>Geographical areas that represent country groups (area code 1) are designed to include member countries</p>
+<h3 id="geographical-area-membership">Geographical area membership</h3><p>Geographical areas that represent country groups (area code 1) are designed to include member countries</p>
 <p>A geographical area group can only contain regions or countries (area codes 0 and 2), not other geographical area groups – any attempt to assign a country group to another country group as a member must not be permitted and cause a business rule failure at HMRC. A geographical area’s membership of a country group is bookended by a start date and potentially and end date, where absolutely required.</p>
 <p>While geographical areas are absolutely not a volatile area within the application, and the changes are few and far between, there are a number of use cases where membership does change, albeit infrequently. For example, countries move in and out of GSP tiers from year to year as their progress or decline economically.</p>
 <p>Steel safeguards work on country groups created specifically for the purpose of applying punitive duties against large numbers of countries; these groups tend to change from year to year, as we learn more about the impact of the punitive duties on trade flows.</p>
 <p>The UK may choose to create country groups to apply specific regulatory controls.</p>
-<h3 id="relationship-of-measures-to-geographical-areas">Relationship of measures to geographical areas</h3>
+<p><strong>Relationship of measures to geographical areas</strong></p>
+
 <ul>
 <li>All measures are assigned to precisely one geographical area.</li>
 <li>That area may be a country, region (non-incorporated country) or a group of countries.</li>
@@ -299,7 +288,8 @@ fully incorporated, like Kosovo, which remains partially recognised.</li>
 <li>The excluded country must be a member of that group.</li>
 <li>Please note: both the excluded_geographical_area and geographical_area_id fields refer to the excluded country, not the group.</li>
 </ul>
-<h3 id="relationship-of-quotas-to-geographical-areas">Relationship of quotas to geographical areas</h3>
+<p><strong>Relationship of quotas to geographical areas</strong></p>
+
 <ul>
 <li>All quotas need to be represented both as measures and within the structures related to quotas.</li>
 <li>With licensed quotas, these are only represented by quotas.</li>
