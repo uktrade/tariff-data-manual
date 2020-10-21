@@ -7,6 +7,9 @@ module TableOfContents
     # remove YAML frontmatter
     file = file.gsub(/^(---\s*\n.*?\n?)^(---\s*$\n?)/m,'')
 
+    # remove top level headings
+    file = file.gsub(/^#/,'')
+
     html_toc.render file
   end
 end
