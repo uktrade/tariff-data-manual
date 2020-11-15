@@ -238,76 +238,151 @@
 </ul></li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93779091-83486680-fc1e-11ea-8e12-695e654b9516.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93779091-83486680-fc1e-11ea-8e12-695e654b9516.png" alt="image" /></a></p>
-<p>Any comment re: the difference between the EU and UK tariffs needs to be considered in the context of the NI Protocol, which means that the EU tariff continues to apply to a part of the EU’s customs territory.Even if we do not use the condition code in the UK, DIT needs to be aware of its function.</p>
 <p><strong>Anatomy of a condition</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93779468-f2be5600-fc1e-11ea-951a-f4944b9eb40a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93779468-f2be5600-fc1e-11ea-951a-f4944b9eb40a.png" alt="image" /></a></p>
-<p>The diagram to above illustrates the primary data fields associated with a measure condition, as follows:</p>
+<svg width="308pt" height="210pt"
+ viewBox="0.00 0.00 308.00 210.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_245" class="graph" transform="scale(1 1) rotate(0) translate(4 206)">
+<title>Database</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-206 304,-206 304,4 -4,4"/>
+<!-- Measure Conditions -->
+<g id="table_631" class="node">
+<title>Measure Conditions</title>
+<polygon fill="none" stroke="#000000" points="9,-181 9,-197 291,-197 291,-181 9,-181"/>
+<text text-anchor="start" x="108.5" y="-186.8" font-family="Arial" font-size="9.00" fill="#000000">Measure Conditions</text>
+<polygon fill="none" stroke="#000000" points="9,-165 9,-181 199,-181 199,-165 9,-165"/>
+<text text-anchor="start" x="55.5" y="-170.8" font-family="Arial" font-size="9.00" fill="#000000">measure_condition_sid</text>
+<polygon fill="none" stroke="#000000" points="199,-165 199,-181 258,-181 258,-165 199,-165"/>
+<text text-anchor="start" x="223.5" y="-170.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="258,-165 258,-181 291,-181 291,-165 258,-165"/>
+<text text-anchor="start" x="269.5" y="-170.8" font-family="Arial" font-size="9.00" fill="#000000">pk</text>
+<polygon fill="none" stroke="#000000" points="9,-149 9,-165 199,-165 199,-149 9,-149"/>
+<text text-anchor="start" x="77" y="-154.8" font-family="Arial" font-size="9.00" fill="#000000">measure_sid</text>
+<polygon fill="none" stroke="#000000" points="199,-149 199,-165 258,-165 258,-149 199,-149"/>
+<text text-anchor="start" x="223.5" y="-154.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="258,-149 258,-165 291,-165 291,-149 258,-149"/>
+<text text-anchor="start" x="271" y="-154.8" font-family="Arial" font-size="9.00" fill="#000000">fk</text>
+<polygon fill="none" stroke="#000000" points="9,-133 9,-149 199,-149 199,-133 9,-133"/>
+<text text-anchor="start" x="72" y="-138.8" font-family="Arial" font-size="9.00" fill="#000000">condition_code</text>
+<polygon fill="none" stroke="#000000" points="199,-133 199,-149 258,-149 258,-133 199,-133"/>
+<text text-anchor="start" x="202" y="-138.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(255)</text>
+<polygon fill="none" stroke="#000000" points="258,-133 258,-149 291,-149 291,-133 258,-133"/>
+<polygon fill="none" stroke="#000000" points="9,-117 9,-133 199,-133 199,-117 9,-117"/>
+<text text-anchor="start" x="39.5" y="-122.8" font-family="Arial" font-size="9.00" fill="#000000">component_sequence_number</text>
+<polygon fill="none" stroke="#000000" points="199,-117 199,-133 258,-133 258,-117 199,-117"/>
+<text text-anchor="start" x="223.5" y="-122.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
+<polygon fill="none" stroke="#000000" points="258,-117 258,-133 291,-133 291,-117 258,-117"/>
+<polygon fill="none" stroke="#000000" points="9,-101 9,-117 199,-117 199,-101 9,-101"/>
+<text text-anchor="start" x="55.5" y="-106.8" font-family="Arial" font-size="9.00" fill="#000000">condition_duty_amount</text>
+<polygon fill="none" stroke="#000000" points="199,-101 199,-117 258,-117 258,-101 199,-101"/>
+<text text-anchor="start" x="219.5" y="-106.8" font-family="Arial" font-size="9.00" fill="#000000">float</text>
+<polygon fill="none" stroke="#000000" points="258,-101 258,-117 291,-117 291,-101 258,-101"/>
+<text text-anchor="start" x="266.5" y="-106.8" font-family="Arial" font-size="9.00" fill="#000000">null</text>
+<polygon fill="none" stroke="#000000" points="9,-85 9,-101 199,-101 199,-85 9,-85"/>
+<text text-anchor="start" x="40.5" y="-90.8" font-family="Arial" font-size="9.00" fill="#000000">condition_monetary_unit_code</text>
+<polygon fill="none" stroke="#000000" points="199,-85 199,-101 258,-101 258,-85 199,-85"/>
+<text text-anchor="start" x="207" y="-90.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(3)</text>
+<polygon fill="none" stroke="#000000" points="258,-85 258,-101 291,-101 291,-85 258,-85"/>
+<text text-anchor="start" x="261" y="-90.8" font-family="Arial" font-size="9.00" fill="#000000">fk, null</text>
+<polygon fill="none" stroke="#000000" points="9,-69 9,-85 199,-85 199,-69 9,-69"/>
+<text text-anchor="start" x="31.5" y="-74.8" font-family="Arial" font-size="9.00" fill="#000000">condition_measurement_unit_code</text>
+<polygon fill="none" stroke="#000000" points="199,-69 199,-85 258,-85 258,-69 199,-69"/>
+<text text-anchor="start" x="207" y="-74.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(3)</text>
+<polygon fill="none" stroke="#000000" points="258,-69 258,-85 291,-85 291,-69 258,-69"/>
+<text text-anchor="start" x="261" y="-74.8" font-family="Arial" font-size="9.00" fill="#000000">fk, null</text>
+<polygon fill="none" stroke="#000000" points="9,-53 9,-69 199,-69 199,-53 9,-53"/>
+<text text-anchor="start" x="12" y="-58.8" font-family="Arial" font-size="9.00" fill="#000000">condition_meausrement_unit_qualifier_code</text>
+<polygon fill="none" stroke="#000000" points="199,-53 199,-69 258,-69 258,-53 199,-53"/>
+<text text-anchor="start" x="207" y="-58.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(1)</text>
+<polygon fill="none" stroke="#000000" points="258,-53 258,-69 291,-69 291,-53 258,-53"/>
+<text text-anchor="start" x="261" y="-58.8" font-family="Arial" font-size="9.00" fill="#000000">fk, null</text>
+<polygon fill="none" stroke="#000000" points="9,-37 9,-53 199,-53 199,-37 9,-37"/>
+<text text-anchor="start" x="78.5" y="-42.8" font-family="Arial" font-size="9.00" fill="#000000">action_code</text>
+<polygon fill="none" stroke="#000000" points="199,-37 199,-53 258,-53 258,-37 199,-37"/>
+<text text-anchor="start" x="202" y="-42.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(255)</text>
+<polygon fill="none" stroke="#000000" points="258,-37 258,-53 291,-53 291,-37 258,-37"/>
+<text text-anchor="start" x="271" y="-42.8" font-family="Arial" font-size="9.00" fill="#000000">fk</text>
+<polygon fill="none" stroke="#000000" points="9,-21 9,-37 199,-37 199,-21 9,-21"/>
+<text text-anchor="start" x="60" y="-26.8" font-family="Arial" font-size="9.00" fill="#000000">certificate_type_code</text>
+<polygon fill="none" stroke="#000000" points="199,-21 199,-37 258,-37 258,-21 199,-21"/>
+<text text-anchor="start" x="207" y="-26.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(1)</text>
+<polygon fill="none" stroke="#000000" points="258,-21 258,-37 291,-37 291,-21 258,-21"/>
+<text text-anchor="start" x="261" y="-26.8" font-family="Arial" font-size="9.00" fill="#000000">fk, null</text>
+<polygon fill="none" stroke="#000000" points="9,-5 9,-21 199,-21 199,-5 9,-5"/>
+<text text-anchor="start" x="71.5" y="-10.8" font-family="Arial" font-size="9.00" fill="#000000">certificate_code</text>
+<polygon fill="none" stroke="#000000" points="199,-5 199,-21 258,-21 258,-5 199,-5"/>
+<text text-anchor="start" x="207" y="-10.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(3)</text>
+<polygon fill="none" stroke="#000000" points="258,-5 258,-21 291,-21 291,-5 258,-5"/>
+<text text-anchor="start" x="261" y="-10.8" font-family="Arial" font-size="9.00" fill="#000000">fk, null</text>
+<polygon fill="none" stroke="#000000" points="8,-4 8,-198 292,-198 292,-4 8,-4"/>
+</g>
+</g>
+</svg><p>The diagram to above illustrates the primary data fields associated with a measure condition, as follows:</p>
 <div class="table-container">
         <table>
           <tr>
-<th><br>Field</th>
-<th><br>Data type</th>
-<th><br>Description</th>
+<th>Field</th>
+<th>Data type</th>
+<th>Description</th>
 </tr>
 <tr>
-<td><br>oid</td>
-<td><br>integer   (PK)</td>
-<td><br>primary   key of the individul record – see document on keys</td>
+<td>oid</td>
+<td>integer   (PK)</td>
+<td>primary   key of the individul record – see document on keys</td>
 </tr>
 <tr>
-<td><br>measure_condition_sid</td>
-<td><br>integer</td>
-<td><br>Unique   identifier for the measure condition</td>
+<td>measure_condition_sid</td>
+<td>integer</td>
+<td>Unique   identifier for the measure condition</td>
 </tr>
 <tr>
-<td><br>measure_sid</td>
-<td><br>integer   (FK)</td>
-<td><br>Foreign   key to the measure table via its unique identifier. A condition is only ever   related to a single measure and not shared across multiple measures</td>
+<td>measure_sid</td>
+<td>integer   (FK)</td>
+<td>Foreign   key to the measure table via its unique identifier. A condition is only ever   related to a single measure and not shared across multiple measures</td>
 </tr>
 <tr>
-<td><br>condition_code</td>
-<td><br>varchar(255)</td>
-<td><br>Despite   the 255 character length, this is actually a 1-digit character code, as per   slide “Condition codes currently in use” above</td>
+<td>condition_code</td>
+<td>varchar(255)</td>
+<td>Despite   the 255 character length, this is actually a 1-digit character code, as per   slide “Condition codes currently in use” above</td>
 </tr>
 <tr>
-<td><br>component_sequence_number</td>
-<td><br>integer</td>
-<td><br>The   sequence in which the conditions are to be listed – is most important with   sequentially listed condition types, such as V (Entry Price System).</td>
+<td>component_sequence_number</td>
+<td>integer</td>
+<td>The sequence in which the conditions are to be listed – is most important with sequentially listed condition types, such as V (Entry Price System). Note that the sequence starts from 1 for each condition code (so that to get final order, sort both by condition code and component sequence number).</td>
 </tr>
 <tr>
-<td><br>condition_duty_amount</td>
-<td><br>float</td>
-<td><br>The   trigger price that causes a give condition to take effect – see below</td>
+<td>condition_duty_amount</td>
+<td>float</td>
+<td>The   trigger price that causes a give condition to take effect – see below</td>
 </tr>
 <tr>
-<td><br>condition_monetary_unit_code</td>
-<td><br>varchar(255)   (FK)</td>
-<td><br>The   monetary unit of that trigger price</td>
+<td>condition_monetary_unit_code</td>
+<td>varchar(255)   (FK)</td>
+<td>The   monetary unit of that trigger price</td>
 </tr>
 <tr>
-<td><br>condition_measurement_<br>     unit_code</td>
-<td><br>varchar(3)   (FK)<br>   <br></td>
-<td><br>The   measurement unit of that trigger price</td>
+<td>condition_measurement_unit_code</td>
+<td>varchar(3)   (FK)</td>
+<td>The   measurement unit of that trigger price</td>
 </tr>
 <tr>
-<td><br>condition_measurement_<br>     unit_qualifier_code</td>
-<td><br>varchar(1)   (FK)</td>
-<td><br>The   measurement unit qualifier of that trigger price</td>
+<td>condition_measurement_unit_qualifier_code</td>
+<td>varchar(1)   (FK)</td>
+<td>The   measurement unit qualifier of that trigger price</td>
 </tr>
 <tr>
-<td><br>action_code</td>
-<td><br>varchar(255)   (FK)</td>
-<td><br>The   action to take in response to a condition being met – see below</td>
+<td>action_code</td>
+<td>varchar(255)   (FK)</td>
+<td>The   action to take in response to a condition being met – see below</td>
 </tr>
 <tr>
-<td><br>certificate_type_code</td>
-<td><br>varchar(1)   (FK)</td>
-<td><br>The   type of certificate required (if needed)</td>
+<td>certificate_type_code</td>
+<td>varchar(1)   (FK)</td>
+<td>The   type of certificate required (if needed)</td>
 </tr>
 <tr>
-<td><br>certificate_code</td>
-<td><br>varchar(3)   (FK)</td>
-<td><br>The   specific certificate required (if needed)</td>
+<td>certificate_code</td>
+<td>varchar(3)   (FK)</td>
+<td>The   specific certificate required (if needed)</td>
 </tr>
 
         </table>
@@ -344,76 +419,76 @@
 <div class="table-container">
         <table>
           <tr>
-<th><br>Does the trader have the right documentation?</th>
+<th>Does the trader have the right documentation?</th>
 <th></th>
 </tr>
 <tr>
-<td><br>A</td>
-<td><br>Presentation   of an anti-dumping/countervailing document</td>
+<td>A</td>
+<td>Presentation   of an anti-dumping/countervailing document</td>
 </tr>
 <tr>
-<td><br>B</td>
-<td><br>Presentation   of a certificate/licence/document</td>
+<td>B</td>
+<td>Presentation   of a certificate/licence/document</td>
 </tr>
 <tr>
-<td><br>C</td>
-<td><br>Presentation   of a certificate/licence/document</td>
+<td>C</td>
+<td>Presentation   of a certificate/licence/document</td>
 </tr>
 <tr>
-<td><br>H</td>
-<td><br>Presentation   of a certificate/licence/document</td>
+<td>H</td>
+<td>Presentation   of a certificate/licence/document</td>
 </tr>
 <tr>
-<td><br>Q</td>
-<td><br>Presentation   of an endorsed certificate/licence</td>
+<td>Q</td>
+<td>Presentation   of an endorsed certificate/licence</td>
 </tr>
 <tr>
-<td><br>Y</td>
-<td><br>Other   conditions</td>
+<td>Y</td>
+<td>Other   conditions</td>
 </tr>
 <tr>
-<td><br>Z</td>
-<td><br>Presentation   of more than one certificate</td>
+<td>Z</td>
+<td>Presentation   of more than one certificate</td>
 </tr>
 
         </table>
       </div><div class="table-container">
         <table>
           <tr>
-<th><br>Is the price higher than a reference price?</th>
+<th>Is the price higher than a reference price?</th>
 <th></th>
 </tr>
 <tr>
-<td><br>E</td>
-<td><br>The   quantity or the price per unit declared, as appropriate, is equal or less   than the specified maximum, or presentation of the required document</td>
+<td>E</td>
+<td>The   quantity or the price per unit declared, as appropriate, is equal or less   than the specified maximum, or presentation of the required document</td>
 </tr>
 <tr>
-<td><br>I</td>
-<td><br>The   quantity or the price per unit declared, as appropriate, is equal or less   than the specified maximum, or presentation of the required document</td>
+<td>I</td>
+<td>The   quantity or the price per unit declared, as appropriate, is equal or less   than the specified maximum, or presentation of the required document</td>
 </tr>
 <tr>
-<td><br>F</td>
-<td><br>The   net free at frontier price before duty must be equal to or greater than the   minimum price (see components)</td>
+<td>F</td>
+<td>The   net free at frontier price before duty must be equal to or greater than the   minimum price (see components)</td>
 </tr>
 <tr>
-<td><br>L</td>
-<td><br>CIF   price must be higher than the minimum price (see components)</td>
+<td>L</td>
+<td>CIF   price must be higher than the minimum price (see components)</td>
 </tr>
 <tr>
-<td><br>M</td>
-<td><br>Declared   price must be equal to or greater than the minimum price/reference price (see   components)</td>
+<td>M</td>
+<td>Declared   price must be equal to or greater than the minimum price/reference price (see   components)</td>
 </tr>
 <tr>
-<td><br>R</td>
-<td><br>Ratio   &ldquo;net weight/supplementary unit&rdquo; is equal to or higher than the   condition amount</td>
+<td>R</td>
+<td>Ratio   &ldquo;net weight/supplementary unit&rdquo; is equal to or higher than the   condition amount</td>
 </tr>
 <tr>
-<td><br>U</td>
-<td><br>Ratio   &ldquo;declared value/supplementary unit&rdquo; should be higher than the   condition amount</td>
+<td>U</td>
+<td>Ratio   &ldquo;declared value/supplementary unit&rdquo; should be higher than the   condition amount</td>
 </tr>
 <tr>
-<td><br>V</td>
-<td><br>Import   price must be equal to or greater than the entry price (see components)</td>
+<td>V</td>
+<td>Import   price must be equal to or greater than the entry price (see components)</td>
 </tr>
 
         </table>
@@ -544,40 +619,40 @@
 <div class="table-container">
         <table>
           <tr>
-<th><br>Pair</th>
-<th><br>Description</th>
+<th>Pair</th>
+<th>Description</th>
 </tr>
 <tr>
-<td><br>04   is paired with 24</td>
-<td><br>The   entry into free circulation is not allowed / Entry into free circulation   allowed</td>
+<td>04   is paired with 24</td>
+<td>The   entry into free circulation is not allowed / Entry into free circulation   allowed</td>
 </tr>
 <tr>
-<td><br>05   is paired with 25</td>
-<td><br>Export   is not allowed / Export allowed</td>
+<td>05   is paired with 25</td>
+<td>Export   is not allowed / Export allowed</td>
 </tr>
 <tr>
-<td><br>06   is paired with 26</td>
-<td><br>Import   is not allowed / Import is allowed</td>
+<td>06   is paired with 26</td>
+<td>Import   is not allowed / Import is allowed</td>
 </tr>
 <tr>
-<td><br>07   is paired with 27</td>
-<td><br>Measure   not applicable / Apply the mentioned duty</td>
+<td>07   is paired with 27</td>
+<td>Measure   not applicable / Apply the mentioned duty</td>
 </tr>
 <tr>
-<td><br>08   is paired with 28</td>
-<td><br>Declared   subheading not allowed / Declared subheading allowed</td>
+<td>08   is paired with 28</td>
+<td>Declared   subheading not allowed / Declared subheading allowed</td>
 </tr>
 <tr>
-<td><br>09   is paired with 29</td>
-<td><br>Import   / export not allowed after control / Import/export allowed after control</td>
+<td>09   is paired with 29</td>
+<td>Import   / export not allowed after control / Import/export allowed after control</td>
 </tr>
 <tr>
-<td><br>14   is paired with 34</td>
-<td><br>The   exemption / reduction of the anti-dumping duty is not applicable / Apply   exemption / reduction of the anti-dumping duty</td>
+<td>14   is paired with 34</td>
+<td>The   exemption / reduction of the anti-dumping duty is not applicable / Apply   exemption / reduction of the anti-dumping duty</td>
 </tr>
 <tr>
-<td><br>16   is paired with 36</td>
-<td><br>Export   refund not applicable / Apply export refund</td>
+<td>16   is paired with 36</td>
+<td>Export   refund not applicable / Apply export refund</td>
 </tr>
 
         </table>
@@ -591,64 +666,64 @@
 <div class="table-container">
         <table>
           <tr>
-<th><br></th>
-<th><br>Condition 1</th>
-<th><br>Condition 2</th>
+<th></th>
+<th>Condition 1</th>
+<th>Condition 2</th>
 </tr>
 <tr>
-<td><br>measure_condition_sid</td>
-<td><br>1248652</td>
-<td><br>1248653</td>
+<td>measure_condition_sid</td>
+<td>1248652</td>
+<td>1248653</td>
 </tr>
 <tr>
-<td><br>measure_sid</td>
-<td><br>3604666</td>
-<td><br>3604666</td>
+<td>measure_sid</td>
+<td>3604666</td>
+<td>3604666</td>
 </tr>
 <tr>
-<td><br>condition_code</td>
-<td><br>B</td>
-<td><br>B</td>
+<td>condition_code</td>
+<td>B</td>
+<td>B</td>
 </tr>
 <tr>
-<td><br>component_sequence_number</td>
-<td><br>1</td>
-<td><br>2</td>
+<td>component_sequence_number</td>
+<td>1</td>
+<td>2</td>
 </tr>
 <tr>
-<td><br>condition_duty_amount</td>
-<td><br>null</td>
-<td><br>null</td>
+<td>condition_duty_amount</td>
+<td>null</td>
+<td>null</td>
 </tr>
 <tr>
-<td><br>condition_monetary_unit_code</td>
-<td><br>null</td>
-<td><br>null</td>
+<td>condition_monetary_unit_code</td>
+<td>null</td>
+<td>null</td>
 </tr>
 <tr>
-<td><br>condition_measurement_unit_code</td>
-<td><br>null</td>
-<td><br>null</td>
+<td>condition_measurement_unit_code</td>
+<td>null</td>
+<td>null</td>
 </tr>
 <tr>
-<td><br>condition_measurement_unit_qualifier_code</td>
-<td><br>null</td>
-<td><br>null</td>
+<td>condition_measurement_unit_qualifier_code</td>
+<td>null</td>
+<td>null</td>
 </tr>
 <tr>
-<td><br>action_code</td>
-<td><br>27</td>
-<td><br>7</td>
+<td>action_code</td>
+<td>27</td>
+<td>7</td>
 </tr>
 <tr>
-<td><br>certificate_type_code</td>
-<td><br>Y</td>
-<td><br>null</td>
+<td>certificate_type_code</td>
+<td>Y</td>
+<td>null</td>
 </tr>
 <tr>
-<td><br>certificate_code</td>
-<td><br>085</td>
-<td><br>null</td>
+<td>certificate_code</td>
+<td>085</td>
+<td>null</td>
 </tr>
 
         </table>
@@ -909,108 +984,109 @@
 <h3 id="key-business-processing-rules">Key business processing rules</h3><div class="table-container">
         <table>
           <tr>
-<th><br>#</th>
-<th><br>Rule</th>
-<th><br>Notes</th>
+<th>#</th>
+<th>Rule</th>
+<th>Notes</th>
 </tr>
 <tr>
-<td><br>ME53</td>
-<td><br>The referenced measure condition must exist.</td>
-<td><br>Required<br>   <br>This applies when assigning conditions components to   conditions A measure obvs has to be in existence too for a measure condition   to be generated in the first place.</td>
+<td>ME53</td>
+<td>The referenced measure condition must exist.</td>
+<td>Required   This applies when assigning conditions components to   conditions A measure obvs has to be in existence too for a measure condition   to be generated in the first place.</td>
 </tr>
 <tr>
-<td><br>ME54</td>
-<td><br>The validity period of the referenced measure condition   must span the validity period of the measure.</td>
-<td><br>Not required - disregard<br>   <br>As far as we can see, this is an erroneous business rule:   the measure condition table does not have a start and end date field. The   condition adopts the start and end dates of the parent measure. Similarly,   there are no start and end dates associated with a measure condition   component (or for that matter a measure component). They all adopt the date   constraints of the parent measure.</td>
+<td>ME54</td>
+<td>The validity period of the referenced measure condition   must span the validity period of the measure.</td>
+<td>Not required - disregard   As far as we can see, this is an erroneous business rule:   the measure condition table does not have a start and end date field. The   condition adopts the start and end dates of the parent measure. Similarly,   there are no start and end dates associated with a measure condition   component (or for that matter a measure component). They all adopt the date   constraints of the parent measure.</td>
 </tr>
 <tr>
-<td><br>ME55</td>
-<td><br>A measure condition refers to a measure condition or to a condition   + certificate or to a condition + amount specifications.</td>
-<td><br>Disregard<br>   <br>This has been written so vaguely that there are no rules   to be gleaned from it</td>
+<td>ME55</td>
+<td>A measure condition refers to a measure condition or to a condition   + certificate or to a condition + amount specifications.</td>
+<td>Disregard   This has been written so vaguely that there are no rules   to be gleaned from it</td>
 </tr>
 <tr>
-<td><br>ME56</td>
-<td><br>The referenced certificate must exist.</td>
-<td><br>Required<br>   <br>A certificate must exist before being assigned to a   condition – match must be made on the 2 clustered primary key fields of   certificate type code and certificate code</td>
+<td>ME56</td>
+<td>The referenced certificate must exist.</td>
+<td>Required   A certificate must exist before being assigned to a   condition – match must be made on the 2 clustered primary key fields of   certificate type code and certificate code</td>
 </tr>
 <tr>
-<td><br>ME57</td>
-<td><br>The validity period of the referenced certificate must   span the validity period of the measure.</td>
-<td><br>Required<br>   <br>The optimal way for us to handle this is to NEVER expire   certificates – there is literally no need. However the validity start dates   and end dates of the measure and the certificate need to be checked. See note   at the foot of this document as to how null end dates have been dealt with in   terms of comparing extents – to reduce code</td>
+<td>ME57</td>
+<td>The validity period of the referenced certificate must   span the validity period of the measure.</td>
+<td>Required   The optimal way for us to handle this is to NEVER expire   certificates – there is literally no need. However the validity start dates   and end dates of the measure and the certificate need to be checked. See note   at the foot of this document as to how null end dates have been dealt with in   terms of comparing extents – to reduce code</td>
 </tr>
 <tr>
-<td><br>ME58</td>
-<td><br>The same certificate can only be referenced once by the   same measure and the same condition type.</td>
-<td><br>Required<br>   <br>There should never be a requirement to apply a certificate   more than once, but it needs to be checked. Again – use the 2 pronged cluster   primary key.</td>
+<td>ME58</td>
+<td>The same certificate can only be referenced once by the   same measure and the same condition type.</td>
+<td>Required   There should never be a requirement to apply a certificate   more than once, but it needs to be checked. Again – use the 2 pronged cluster   primary key.</td>
 </tr>
 <tr>
-<td><br>ME59</td>
-<td><br>The referenced action code must exist.</td>
-<td><br>Debatable<br>   <br>The measure action table should remain fixed – by making   any modifications to this table, we are creating a lot of work for downstream   systems which need to be adjusted to cater for the change (CDS, Gems,   Caesar).</td>
+<td>ME59</td>
+<td>The referenced action code must exist.</td>
+<td>Debatable   The measure action table should remain fixed – by making   any modifications to this table, we are creating a lot of work for downstream   systems which need to be adjusted to cater for the change (CDS, Gems,   Caesar).</td>
 </tr>
 <tr>
-<td><br>ME60</td>
-<td><br>The referenced monetary unit must exist.</td>
-<td><br>Required <br>   <br>Conditions are put in place to respond either to the   provision of some sort of document / license or to respond to a minimum   threshold import price – if the latter then there is a requirement to specify   a valid monetary unit, which is always likely to be GBP.</td>
+<td>ME60</td>
+<td>The referenced monetary unit must exist.</td>
+<td>Required    Conditions are put in place to respond either to the   provision of some sort of document / license or to respond to a minimum   threshold import price – if the latter then there is a requirement to specify   a valid monetary unit, which is always likely to be GBP.</td>
 </tr>
 <tr>
-<td><br>ME61</td>
-<td><br>The validity period of the referenced monetary unit must   span the validity period of the measure.</td>
-<td><br>Required - debatable<br>   <br>The unit will always be GBP or EUR – all we need to do is   to ensure that the units are not end-dated</td>
+<td>ME61</td>
+<td>The validity period of the referenced monetary unit must   span the validity period of the measure.</td>
+<td>Required - debatable   The unit will always be GBP or EUR – all we need to do is   to ensure that the units are not end-dated</td>
 </tr>
 <tr>
-<td><br>ME61</td>
-<td><br>The validity period of the referenced monetary unit must   span the validity period of the measure.</td>
-<td><br>Required - debatable<br>   <br>The unit will always be GBP or EUR – all we need to do   is to ensure that the units are not end-dated</td>
+<td>ME61</td>
+<td>The validity period of the referenced monetary unit must   span the validity period of the measure.</td>
+<td>Required - debatable   The unit will always be GBP or EUR – all we need to do   is to ensure that the units are not end-dated</td>
 </tr>
 <tr>
-<td><br>ME62</td>
-<td><br>The combination measurement unit + measurement unit   qualifier must exist.</td>
-<td><br>Required<br>   <br>The relationship between a measurement_unit and any   qualifer that can be used against that measurement unit is defined in the   table “measurements” – this needs to be observed fully or CDS will generate   an error. Measurements have start and end dates against them, and these also   need to be observed.</td>
+<td>ME62</td>
+<td>The combination measurement unit + measurement unit   qualifier must exist.</td>
+<td>Required   The relationship between a measurement_unit and any   qualifer that can be used against that measurement unit is defined in the   table “measurements” – this needs to be observed fully or CDS will generate   an error. Measurements have start and end dates against them, and these also   need to be observed.</td>
 </tr>
 <tr>
-<td><br>ME63</td>
-<td><br>The validity period of the measurement unit must span the   validity period of the measure.</td>
-<td><br>Required<br>   <br>Measurement units have start dates end dates – we need   to observe these start and end dates in the creation of measures. We are not   offering a tool to manage measurement units in the first instance.</td>
+<td>ME63</td>
+<td>The validity period of the measurement unit must span the   validity period of the measure.</td>
+<td>Required   Measurement units have start dates end dates – we need   to observe these start and end dates in the creation of measures. We are not   offering a tool to manage measurement units in the first instance.</td>
 </tr>
 <tr>
-<td><br>ME64</td>
-<td><br>The validity period of the measurement unit qualifier must   span the validity period of the measure.</td>
-<td><br>Required<br>   <br>Measurement unit qualifiers have start dates end dates   – we need to observe these start and end dates in the creation of measures.   We are not offering a tool to manage qualifiers in the first instance.</td>
+<td>ME64</td>
+<td>The validity period of the measurement unit qualifier must   span the validity period of the measure.</td>
+<td>Required   Measurement unit qualifiers have start dates end dates   – we need to observe these start and end dates in the creation of measures.   We are not offering a tool to manage qualifiers in the first instance.</td>
 </tr>
 <tr>
-<td><br>ME105</td>
-<td><br>The referenced duty expression must exist.</td>
-<td><br>Required<br>   <br>There is a specified list of duty expressions that can   be used in TAP / CDS. We must not use any duty expressions that are not   valid.</td>
+<td>ME105</td>
+<td>The referenced duty expression must exist.</td>
+<td>Required   There is a specified list of duty expressions that can   be used in TAP / CDS. We must not use any duty expressions that are not   valid.</td>
 </tr>
 <tr>
-<td><br>ME106</td>
-<td><br>The VP of the duty expression must span the VP of the   measure.</td>
-<td><br>Required<br>   <br>There are a number of duty expressions that are no   longer valid – they have been end dated (in 1996 and 2016 primarily). We must   not use these.</td>
+<td>ME106</td>
+<td>The VP of the duty expression must span the VP of the   measure.</td>
+<td>Required   There are a number of duty expressions that are no   longer valid – they have been end dated (in 1996 and 2016 primarily). We must   not use these.</td>
 </tr>
 <tr>
-<td><br>ME108</td>
-<td><br>The same duty expression can only be used once within   condition components of the same condition of the same measure. (i.e. it can   be re-used in other conditions, no matter what condition type, of the same   measure)</td>
-<td><br>Required<br>   <br>Even if an expression that (in English) reads the same   needs to be used more than once in a measure, we must use a different   expression ID, never the same one twice.</td>
+<td>ME108</td>
+<td>The same duty expression can only be used once within   condition components of the same condition of the same measure. (i.e. it can   be re-used in other conditions, no matter what condition type, of the same   measure)</td>
+<td>Required   Even if an expression that (in English) reads the same   needs to be used more than once in a measure, we must use a different   expression ID, never the same one twice.</td>
 </tr>
 <tr>
-<td><br>ME109</td>
-<td><br>If the flag &lsquo;amount&rsquo; on duty expression is &lsquo;mandatory&rsquo;   then an amount must be specified. If the flag is set to &lsquo;not permitted&rsquo; then   no amount may be entered.</td>
-<td><br>Required<br>   <br>The three possible values for this field on the   duty_expressions table are:<br>   <br>0 - Permitted<br>   <br>1 - Mandatory<br>   <br>2 - Not permitted<br>   <br>These values must be observed – By the way, we should   not allows users to modify the data associated with duty expressions, as the   knock on impact will be too significant.</td>
+<td>ME109</td>
+<td>If the flag &lsquo;amount&rsquo; on duty expression is &lsquo;mandatory&rsquo;   then an amount must be specified. If the flag is set to &lsquo;not permitted&rsquo; then   no amount may be entered.</td>
+<td>Required   The three possible values for this field on the   duty_expressions table are:   0 - Permitted   1 - Mandatory   2 - Not permitted   These values must be observed – By the way, we should   not allows users to modify the data associated with duty expressions, as the   knock on impact will be too significant.</td>
 </tr>
 <tr>
-<td><br>ME110</td>
-<td><br>If the flag &lsquo;monetary unit&rsquo; on duty expression is   &lsquo;mandatory&rsquo; then a monetary unit must be specified. If the flag is set to   &lsquo;not permitted&rsquo; then no monetary unit may be entered.</td>
-<td><br>Required<br>   <br>The three possible values for this field on the   duty_expressions table are:<br>   <br>0 - Permitted<br>   <br>1 - Mandatory<br>   <br>2 - Not permitted<br>   <br>These values must be observed – As above, we should not   allows users to modify the data associated with duty expressions.</td>
+<td>ME110</td>
+<td>If the flag &lsquo;monetary unit&rsquo; on duty expression is   &lsquo;mandatory&rsquo; then a monetary unit must be specified. If the flag is set to   &lsquo;not permitted&rsquo; then no monetary unit may be entered.</td>
+<td>Required   The three possible values for this field on the   duty_expressions table are:   0 - Permitted   1 - Mandatory   2 - Not permitted   These values must be observed – As above, we should not   allows users to modify the data associated with duty expressions.</td>
 </tr>
 <tr>
-<td><br>ME111</td>
-<td><br>If the flag &lsquo;measurement unit&rsquo; on duty expression is   &lsquo;mandatory&rsquo; then a measurement unit must be specified. If the flag is set to   &lsquo;not permitted&rsquo; then no measurement unit may be entered.</td>
-<td><br>Required<br>   <br>The three possible values for this field on the   duty_expressions table are:<br>   <br>0 - Permitted<br>   <br>1 - Mandatory<br>   <br>2 - Not permitted<br>   <br>These values must be observed – As above, we should not   allows users to modify the data associated with duty expressions.</td>
+<td>ME111</td>
+<td>If the flag &lsquo;measurement unit&rsquo; on duty expression is   &lsquo;mandatory&rsquo; then a measurement unit must be specified. If the flag is set to   &lsquo;not permitted&rsquo; then no measurement unit may be entered.</td>
+<td>Required   The three possible values for this field on the   duty_expressions table are:   0 - Permitted   1 - Mandatory   2 - Not permitted   These values must be observed – As above, we should not   allows users to modify the data associated with duty expressions.</td>
 </tr>
 
         </table>
       </div><h3 id="comparing-null-dates">Comparing null dates</h3><p>coalesce(validity_end_date, TO_DATE(&lsquo;2999-12-31&rsquo;, &lsquo;YYYY-MM-DD&rsquo;))</p>
+<p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
