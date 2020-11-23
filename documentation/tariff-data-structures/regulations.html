@@ -572,14 +572,32 @@ The correlation tables allow traders to make specific declarations against the c
 <li>These are then combined into the <code>information_text</code> field in the XML, separated by pipe characters (<code>|</code>):
 <code>&lt;oub:information.text&gt;Regulation title|Public identifier|https://url&lt;/oub.information.text&gt;</code></li>
 </ol>
-<h2 id="identifying-regulations">Identifying regulations</h2><p>Under EU jurisdiction, the identification of the legal act is composed of four elements:
-|     Char(s)    |     Usage                                                                                                                                                                                                                |
-|&mdash;&mdash;&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|
-|     1          |     To   contain the alphabetic regulation type identifier as listed below.                                                                                                                                              |
-|     2-3        |     To   contain a 2-digit reference to the year (e.g. 21, 22).                                                                                                                                                          |
-|     4-7        |     To   contain a sequential identifier starting at 0000. Ideally this would, where   possible equate to the public identifier of the regulation (e.g. for statutory instrument SI 2012/1312, this would be 1312).                                            |
-|     8          |     The suffix: this is used to split regulations logically although they have been published as one piece of legislation (for instance, for supporting different validity periods within the one regulation or allowing the same publication to be used in mutliple regulation groups). The value here is usually “0”, but documents in EU legislation can be very complex, and this digit may extend through the numerical digits.    |</p>
-<p>In the tariff database, to translate regulation identifiers into database IDs, it’s necessary to transpose the characters as follows:</p>
+<h2 id="identifying-regulations">Identifying regulations</h2><p>Under EU jurisdiction, the identification of the legal act is composed of four elements:</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Char(s)</th>
+<th>Usage</th>
+</tr>
+<tr>
+<td>1</td>
+<td>To   contain the alphabetic regulation type identifier as listed below.</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>To   contain a 2-digit reference to the year (e.g. 21, 22).</td>
+</tr>
+<tr>
+<td>4-7</td>
+<td>To   contain a sequential identifier starting at 0000. Ideally this would, where   possible equate to the public identifier of the regulation (e.g. for statutory instrument SI 2012/1312, this would be 1312).</td>
+</tr>
+<tr>
+<td>8</td>
+<td>The suffix: this is used to split regulations logically although they have been published as one piece of legislation (for instance, for supporting different validity periods within the one regulation or allowing the same publication to be used in mutliple regulation groups). The value here is usually “0”, but documents in EU legislation can be very complex, and this digit may extend through the numerical digits.</td>
+</tr>
+
+        </table>
+      </div><p>In the tariff database, to translate regulation identifiers into database IDs, it’s necessary to transpose the characters as follows:</p>
 <p><a href="https://user-images.githubusercontent.com/4951176/100006275-27d35a00-2dc2-11eb-8177-08b7ee9a4a94.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/4951176/100006275-27d35a00-2dc2-11eb-8177-08b7ee9a4a94.png" alt="" /></a></p>
 <p>The UK and the EU have very different ways of managing legislation, meaning that the way in which the EU has decided to structure its regulation IDs is not suited to the UK: we do not distinguish between regulations, decisions, agreements etc, therefore the prefix convention is less than useful to the UK.</p>
 <p>In fact, the only prefix definition that we will carry forward is ‘C’: this is used to denote a draft regulation, i.e. one where the measures do not yet take legal effect. This is the only one of 6 subdivisions of regulations that has actual functional effect: the others are labels only.</p>
