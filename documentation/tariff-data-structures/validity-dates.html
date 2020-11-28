@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
       <meta name="robots" content="noindex">
 
-    <title>Miscellaneous measures - Tariff Data Manual</title>
+    <title>Validity dates - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/validity-dates.html">
 
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Miscellaneous measures" />
+      <meta property="og:title" content="Validity dates" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/validity-dates.html" />
       <meta property="twitter:card" content="summary" />
       <meta property="twitter:domain" content="uktrade.github.io" />
       <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
-      <meta property="twitter:title" content="Miscellaneous measures - Tariff Data Manual" />
-      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html" />
+      <meta property="twitter:title" content="Validity dates - Tariff Data Manual" />
+      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/validity-dates.html" />
 
     
   </head>
@@ -212,82 +212,37 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="miscellaneous-measures">Miscellaneous measures</h1>
+            <h1 id="validity-dates">Validity dates</h1>
 <ul>
 <li>
-<a href="#supplementary-units">Supplementary units</a>
+<a href="#validity-dates-on-descriptions">Validity dates on descriptions</a>
 </li>
 <li>
-<a href="#credibility-checks">Credibility checks</a>
-</li>
-<li>
-<a href="#surveillance-measures">Surveillance measures</a>
+<a href="#validity-date-of-measures">Validity date of measures</a>
 </li>
 </ul>
-<p><strong>SAD guidance &amp; credibility checks, monitoring measure types</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94955712-e8377280-04e2-11eb-85ac-e535ab0c0e34.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94955712-e8377280-04e2-11eb-85ac-e535ab0c0e34.png" alt="image" /></a></p>
+<p>The tariff database implements a version control system that specifies which elements of the tariff are live on the border on a given day. Most elements use a pair of <strong>validity dates</strong>: the element is live after the validity start date and before the validity end date.</p>
+<p>If the validity end date is blank then the element is live indefinitely. Validity dates can be modified after the initial creation of an element, so an element that initially has a blank end date can be updated to subsequently add one.</p>
+<p>Start and end validity dates are inclusive – meaning that the element is live from the beginning of the start date to the end of the end date. An element with the same start and end date is therefore live for 1 day.</p>
+<h2 id="validity-dates-on-descriptions">Validity dates on descriptions</h2><p>Description elements have a requirement that there must always be one live description at any time. For this reason, descriptions do not have end dates and only have start dates. The description is live up until the start date of the next description record.</p>
+<h2 id="validity-date-of-measures">Validity date of measures</h2><p>There are four ways in which measures can get end dated:</p>
 
-<ul>
-<li>These measures are not responsible for imposing duties or prohibitions of restrictions, but they are critical to the monitoring of the EU tariff.</li>
-<li><ins>Supplementary units</ins> are set up to ensure that traders define the ‘quantity / size’ of their trade in more than just kilogrammes, which is the default. This information is then used for statistical purposes and for credibility checks.</li>
-<li><ins>Credibility checks</ins> are set up by the EU to ensure that traders do not submit incorrect declarations, by picking up on frequently made errors and blocking such erroneous declarations</li>
-<li><ins>Surveillance and monitoring</ins> is carried out for multiple reasons, e.g. for statistical analysis of trade flows</li>
-</ul>
-<h3 id="supplementary-units">Supplementary units</h3>
-<ul>
-<li>There are three measure types which are used to define the additional unit that traders must include on their declaration form, if this is specified in the Tariff.</li>
-<li>These are required to be specified for statistical tracking  purposes and / or to ensure that certain credibility checks are undertaken.</li>
-<li>The following measure types are available:
-
-<ul>
-<li>109 Supplementary unit</li>
-<li>110 Supplementary unit (import)</li>
-<li>111 Supplementary unit (export)</li>
-</ul></li>
-<li>111 has never been used, while the others have been used extensively. 109 is by far the more common of the two, and is used when the unit is to be applied to both imports and exports.</li>
-<li>110 is applied when the unit is to be applied solely to the import of goods.</li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94966989-24280300-04f6-11eb-85c0-926e8e9a028c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94966989-24280300-04f6-11eb-85c0-926e8e9a028c.png" alt="image" /></a></p>
-<p>Supplementary unit will continue after the end of the Implementation period and will remain the responsibility of DIT MTPO.</p>
-<p><strong>Supplementary units - detail</strong></p>
-<p>Supplementary units are non-volatile, unique and simple. Such a measure, of any of the three types, is set up as follows:</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94956032-685dd800-04e3-11eb-9ca3-6f789ab112ac.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94956032-685dd800-04e3-11eb-9ca3-6f789ab112ac.png" alt="image" /></a></p>
-
-<ul>
-<li>The three data items highlighted in yellow above are critical here.</li>
-<li>The duty_expression_ID field has a value of 99, which means that the expression is a supplementary unit</li>
-<li>The measure type ID in the measures table identifies that this is a supplementary unit: it will nearly always be of type 109.</li>
-<li>The measurement_unit_code field in the measure_components table will identify the unit that the trader has to submit on their declaration form – here, NAR means “Number of items”, which also applies to other ‘semantically’ similar units, such as number of head for cattle.</li>
-<li>The measurement_unit_qualifier_code field is almost always null, but may be used to qualify the primary unit (e.g. KGM E)</li>
-</ul>
-<h3 id="credibility-checks">Credibility checks</h3>
-<ul>
-<li>The EU Commission was not satisfied that the Member States were applying the right quality of checks on the declarations coming into their countries, so they centrally imposed measures to help assure quality – and imposed measures to check on the member states. These are called credibility checks.</li>
-<li>These checks are ‘blocking’ checks, inasmuch as they cause the declaration to be rejected if the check is failed.</li>
-<li>An example of a credibility check measure is measure type 482, which requests that a country’s border system compares the weight of a good against the submitted ‘supplementary unit’, for example number of head of cattle.</li>
-<li>The credibility checks that were created by the European Commission are a tiny subset of what HMRC have created on CHIEF, which performs a large number of checks on data quality within declarations,</li>
-<li>When CDS goes live, it will also feature a large number of data quality rules which will supersede these credibility checks. and, will transfer to CDS.</li>
-<li>It is the role of HMRC in conjunction with Border Force to impose quality measures on the border systems, and therefore it is unlikely any new measures of this type will be created and it may be the case that the measures of this type that already exist will no longer be used post-Brexit</li>
-<li>However we need to ensure we keep the existing measures in place until there is no doubt that we are fully extricated from Europe</li>
-<li>If there is a requirement to create new credibility checks measures in the future, then it is anticipated that these will be communicated via offline methods to HMRC from the instituting source (e.g. Defra / DIT) and then entered directly into the risking module that is part of CDS, rather than being passed through the DIT Tariff Application</li>
-<li>However, as with a number of things at the moment, the requirements of the Northern Ireland Protocol may scupper this desire to remove credibility checks entirely.</li>
-</ul>
-<h3 id="surveillance-measures">Surveillance measures</h3><p><a href="https://user-images.githubusercontent.com/61055197/94956177-9e9b5780-04e3-11eb-95a4-e06060cf83b1.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94956177-9e9b5780-04e3-11eb-95a4-e06060cf83b1.png" alt="image" /></a></p>
-
-<ul>
-<li>These measure types are not going to be carried forward in the UK tariff, but are used by the EU to monitor trade.</li>
-<li>These are not to be confused with Trade Remedies-related surveillance measures, which are put in place in order to track the trade in goods that are being investigated for Trade Remedy infraction.</li>
-<li>These trade remedy measures are also not to be carried forward.</li>
-<li>In all cases, there are better ways of surveilling and reporting on trade. The only purpose for these measure types is to ensure that the EU can centrally impose surveillance measures across each of the 28 member states.</li>
-</ul>
+<ol>
+<li>Where the measure is given an explicit end date on the measure record itself</li>
+<li>Where the measure&rsquo;s generating regulation is a base regulation, and the base regulation is end-dated</li>
+<li>Where the measure&rsquo;s generating regulation is a modification regulation, and the modification regulation is end-dated</li>
+<li>Where the measure&rsquo;s generating regulation is a modification regulation, and the base regulation that it modifies is end-dated</li>
+</ol>
+<p>Numbers 2–4 also have to take account of the &ldquo;effective end date&rdquo; which if set should be used over any explicit date. The effective end date is set when other types of regulations are used (abrogation, prorogation, etc).</p>
+<p>In the UK tariff, we will not be using regulation end dates and will only ever stop measures by adding end dates explicitly.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Tariff-Policy;-Miscellaneous-measures">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Miscellaneous%20measures'&amp;body=Problem%20with%20'Miscellaneous%20measures'%20(https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Tariff-Data-Structures;-Validity-dates">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Validity%20dates'&amp;body=Problem%20with%20'Validity%20dates'%20(https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/validity-dates.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
