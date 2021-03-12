@@ -14,11 +14,24 @@ INDEX_FILE   = File.join OUTPUT_DIR, '../', 'index.html.md.erb'
 
 TOP_LEVEL_HEADER = /^#\s+.*$/
 
+def patch relative_path, patch_filename
+  full_path = Gem.find_files(relative_path).first
+  sh 'patch', full_path, '-i', patch_filename
+  return full_path
+end
+
 task default: :build
 
 task pages: OUTPUT_FILES
 
-task build: :pages do
+task :patches do
+  patch("middleman-search/search-index-resource.rb", "gem-patches/search-index-resource.rb.patch")
+  patch("assets/javascripts/_modules/search.js", "gem-patches/search.js.patch")
+  full_path = Gem.find_files("assets/javascripts/_modules/search.js").first
+  sh 'mv', full_path, full_path + ".erb"
+end
+
+task build: [:pages, :patches] do
   sh 'middleman', 'build', '--verbose'
 end
 
