@@ -25,7 +25,6 @@ task default: :build
 task pages: OUTPUT_FILES
 
 task :patches do
-  patch("middleman-search/search-index-resource.rb", "gem-patches/search-index-resource.rb.patch")
   patch("assets/javascripts/_modules/search.js", "gem-patches/search.js.patch")
   full_path = Gem.find_files("assets/javascripts/_modules/search.js").first
   sh 'mv', full_path, full_path + ".erb"
