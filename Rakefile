@@ -16,8 +16,10 @@ TOP_LEVEL_HEADER = /^#\s+.*$/
 
 def patch relative_path, patch_filename
   full_path = Gem.find_files(relative_path).first
-  sh 'patch', full_path, '-i', patch_filename
-  return full_path
+  unless full_path.nil?
+    sh 'patch', full_path, '-i', patch_filename
+    full_path
+  end
 end
 
 task default: :build
@@ -25,9 +27,10 @@ task default: :build
 task pages: OUTPUT_FILES
 
 task :patches do
-  patch("assets/javascripts/_modules/search.js", "gem-patches/search.js.patch")
-  full_path = Gem.find_files("assets/javascripts/_modules/search.js").first
-  sh 'mv', full_path, full_path + ".erb"
+  full_path = patch("assets/javascripts/_modules/search.js", "gem-patches/search.js.patch")
+  unless full_path.nil?
+    mv full_path, full_path + ".erb"
+  end
 end
 
 task build: [:pages, :patches] do
