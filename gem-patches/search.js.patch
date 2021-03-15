@@ -4,7 +4,7 @@
        updateTitle('Loading search index')
        $.ajax({
 -        url: '/search.json',
-+        url: '<%= ENV["ROOT_DOCPATH"] %>/search.json',
++        url: '<%= (ENV['GITHUB_REPOSITORY'] || '').partition('/')[-2..-1].join %>/search.json',
          cache: true,
          method: 'GET',
          success: function (data) {
