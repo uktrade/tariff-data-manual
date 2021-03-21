@@ -1,0 +1,15 @@
+$prefix: "<%= (ENV['GITHUB_REPOSITORY'] || '').partition('/')[-2..-1].join %>";
+
+@function add-github-prefix-fonts($filename) {
+  @return url($prefix + $govuk-fonts-path + $filename)
+}
+$govuk-font-url-function: add-github-prefix-fonts;
+
+@function add-github-prefix-images($filename) {
+  @return url($prefix + $govuk-images-path + $filename)
+}
+$govuk-image-url-function: add-github-prefix-images;
+
+$is-print: true;
+
+@import "govuk_tech_docs";
