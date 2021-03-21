@@ -4,7 +4,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="robots" content="noindex">
 
     <title>Trade remedies - Tariff Data Manual</title>
 
@@ -12,17 +11,18 @@
 
     <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/trade-remedies.html">
 
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="uktrade.github.io" />
+      <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta name="twitter:title" content="Trade remedies - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/trade-remedies.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
       <meta property="og:title" content="Trade remedies" />
       <meta property="og:type" content="object" />
       <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/trade-remedies.html" />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:domain" content="uktrade.github.io" />
-      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
-      <meta property="twitter:title" content="Trade remedies - Tariff Data Manual" />
-      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/trade-remedies.html" />
 
     
   </head>
@@ -50,32 +50,38 @@
       </div>
 
         <div id="toc-heading" class="toc-show fixedsticky">
-          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
             Table of contents <span class="toc-show__icon"></span>
-          </a>
+          </button>
         </div>
 
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
-            <div class="toc" data-module="table-of-contents">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
               <div class="search" data-module="search">
-  <form action="https://www.google.co.uk/search" method="get" role="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
-    <label class="govuk-label search__label" for="search">
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
       Search (via Google)
     </label>
-    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="govuk-button search__button">Search</button>
   </form>
   <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
     <div class="search-results__inner">
       <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
       <div class="search-results__content"></div>
     </div>
   </div>
 </div>
 
-              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
@@ -85,7 +91,7 @@
 <ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
   </li>
 </ul>
 <ul>
@@ -95,52 +101,17 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
   </li>
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-2"><span>Measure types</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
   </li>
 </ul>
 <ul>
@@ -158,20 +129,50 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
   </li>
 </ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-2"><span>Measure types</span></a>
+  </li>
+</ul>
 </li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 <ul>
@@ -181,12 +182,17 @@
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
   </li>
 </ul>
 <ul>
@@ -196,12 +202,12 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 </li></ul>
@@ -260,8 +266,8 @@
 <li>While at the end of the investigation, the TRA would construct a document containing recommended punitive tariff duties to be forwarded to the DIT Secretary of State for a yes / no decision, this is effectively offline: a document is constructed with a management summary, leading then to a public notice which is then posted on gov.uk.</li>
 <li>The TRA will be expected to complete a pro-forma (essentially an Excel spreadsheet) describing to the MTPO team the duties they have agreed to impose</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94561088-74376900-025b-11eb-8ab3-298bda487137.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94561088-74376900-025b-11eb-8ab3-298bda487137.png" alt="image" /></a></p>
-<h3 id="anti-dumping-amp-anti-subsidy-duties">Anti-dumping &amp; anti-subsidy duties</h3><p><a href="https://user-images.githubusercontent.com/61055197/94584035-09475b80-0276-11eb-9911-7223f826815a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94584035-09475b80-0276-11eb-9911-7223f826815a.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94561088-74376900-025b-11eb-8ab3-298bda487137.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94561088-74376900-025b-11eb-8ab3-298bda487137.png" alt="image" /></a></p>
+<h3 id="anti-dumping-amp-anti-subsidy-duties">Anti-dumping &amp; anti-subsidy duties</h3><p><a href="https://user-images.githubusercontent.com/61055197/94584035-09475b80-0276-11eb-9911-7223f826815a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94584035-09475b80-0276-11eb-9911-7223f826815a.png" alt="image" /></a></p>
 <p><strong>Trade Remedies cases</strong></p>
 <p>Trade Remedies cases are rare, but when they happen, they are significant chunks of work, both for the investigating authority and, ultimately, for the Tariff Manager. As an average, in the EU, there are c. 10 new Trade Remedies cases investigated through to conclusion annually, which sounds small – but the impact on the tariff is drastic.</p>
 
@@ -332,88 +338,132 @@
 <li>These criteria also apply when considering the migration of trade remedy cases from the EU to the UK. At the end of the implementation period, we will only transition the cases that meet these thresholds and which are seen to be in the public interest to maintain.</li>
 </ul>
 <p><strong>Anti-dumping processes</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94716589-fbadd680-0346-11eb-978e-69f187e7c96a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94716589-fbadd680-0346-11eb-978e-69f187e7c96a.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94716589-fbadd680-0346-11eb-978e-69f187e7c96a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94716589-fbadd680-0346-11eb-978e-69f187e7c96a.png" alt="image" /></a></p>
 <p><strong>Trade remedy measures - overview</strong></p>
 <div class="table-container">
         <table>
           <tr>
-<th><br>ID</th>
-<th><br>Measure type</th>
-<th><br># Regulations</th>
-<th><br># Measures</th>
-<th><br># Goods impacted</th>
+<th>
+<br>ID</th>
+<th>
+<br>Measure type</th>
+<th>
+<br># Regulations</th>
+<th>
+<br># Measures</th>
+<th>
+<br># Goods impacted</th>
+</tr><tr>
+<td>
+<br>552</td>
+<td>
+<br>Definitive anti-dumping</td>
+<td>
+<br>136</td>
+<td>
+<br>17,912</td>
+<td>
+<br>18,767</td>
+</tr><tr>
+<td>
+<br>554</td>
+<td>
+<br>Definitive countervailing duty</td>
+<td>
+<br>22</td>
+<td>
+<br>9,453</td>
+<td>
+<br>9,647</td>
+</tr><tr>
+<td>
+<br>570</td>
+<td>
+<br>Anti-dumping / countervailing duty –   Control</td>
+<td>
+<br>22</td>
+<td>
+<br>451</td>
+<td>
+<br>478</td>
+</tr><tr>
+<td>
+<br>566</td>
+<td>
+<br>Anti-dumping / countervailing statistic</td>
+<td>
+<br>1</td>
+<td>
+<br>434</td>
+<td>
+<br>453</td>
+</tr><tr>
+<td>
+<br>551</td>
+<td>
+<br>Provisional anti-dumping duty</td>
+<td>
+<br>2</td>
+<td>
+<br>276</td>
+<td>
+<br>276</td>
+</tr><tr>
+<td>
+<br>555</td>
+<td>
+<br>Anti-dumping/countervailing duty -   Pending collection</td>
+<td>
+<br>2</td>
+<td>
+<br>143</td>
+<td>
+<br>143</td>
+</tr><tr>
+<td>
+<br>565</td>
+<td>
+<br>Anti-dumping / countervailing review</td>
+<td>
+<br>13</td>
+<td>
+<br>86</td>
+<td>
+<br>96</td>
+</tr><tr>
+<td>
+<br>564</td>
+<td>
+<br>Anti-dumping or countervailing   registration</td>
+<td>
+<br>6</td>
+<td>
+<br>48</td>
+<td>
+<br>48</td>
+</tr><tr>
+<td>
+<br>562</td>
+<td>
+<br>Suspended anti-dumping or duty</td>
+<td>
+<br>1</td>
+<td>
+<br>26</td>
+<td>
+<br>26</td>
+</tr><tr>
+<td>
+<br>561</td>
+<td>
+<br>Notice of initiation of an anti-dumping   or countervailing proceeding</td>
+<td>
+<br>4</td>
+<td>
+<br>13</td>
+<td>
+<br>19</td>
 </tr>
-<tr>
-<td><br>552</td>
-<td><br>Definitive anti-dumping</td>
-<td><br>136</td>
-<td><br>17,912</td>
-<td><br>18,767</td>
-</tr>
-<tr>
-<td><br>554</td>
-<td><br>Definitive countervailing duty</td>
-<td><br>22</td>
-<td><br>9,453</td>
-<td><br>9,647</td>
-</tr>
-<tr>
-<td><br>570</td>
-<td><br>Anti-dumping / countervailing duty –   Control</td>
-<td><br>22</td>
-<td><br>451</td>
-<td><br>478</td>
-</tr>
-<tr>
-<td><br>566</td>
-<td><br>Anti-dumping / countervailing statistic</td>
-<td><br>1</td>
-<td><br>434</td>
-<td><br>453</td>
-</tr>
-<tr>
-<td><br>551</td>
-<td><br>Provisional anti-dumping duty</td>
-<td><br>2</td>
-<td><br>276</td>
-<td><br>276</td>
-</tr>
-<tr>
-<td><br>555</td>
-<td><br>Anti-dumping/countervailing duty -   Pending collection</td>
-<td><br>2</td>
-<td><br>143</td>
-<td><br>143</td>
-</tr>
-<tr>
-<td><br>565</td>
-<td><br>Anti-dumping / countervailing review</td>
-<td><br>13</td>
-<td><br>86</td>
-<td><br>96</td>
-</tr>
-<tr>
-<td><br>564</td>
-<td><br>Anti-dumping or countervailing   registration</td>
-<td><br>6</td>
-<td><br>48</td>
-<td><br>48</td>
-</tr>
-<tr>
-<td><br>562</td>
-<td><br>Suspended anti-dumping or duty</td>
-<td><br>1</td>
-<td><br>26</td>
-<td><br>26</td>
-</tr>
-<tr>
-<td><br>561</td>
-<td><br>Notice of initiation of an anti-dumping   or countervailing proceeding</td>
-<td><br>4</td>
-<td><br>13</td>
-<td><br>19</td>
-</tr>
-
         </table>
       </div>
 <ul>
@@ -511,61 +561,83 @@
 <div class="table-container">
         <table>
           <tr>
-<th><br>MEASURE TYPE ID</th>
-<th><br>DESCRIPTION (EU CURRENT)</th>
-<th><br>DESCRIPTION (UK FUTURE)</th>
+<th>
+<br>MEASURE TYPE ID</th>
+<th>
+<br>DESCRIPTION (EU CURRENT)</th>
+<th>
+<br>DESCRIPTION (UK FUTURE)</th>
+</tr><tr>
+<td>
+<br>552</td>
+<td>
+<br>Definitive   anti-dumping duty</td>
+<td>
+<br>Final   anti-dumping duty</td>
+</tr><tr>
+<td>
+<br>553</td>
+<td>
+<br>Provisional   countervailing duty</td>
+<td>
+<br>Provisional   anti-subsidy duty</td>
+</tr><tr>
+<td>
+<br>554</td>
+<td>
+<br>Definitive   countervailing duty</td>
+<td>
+<br>Final   anti-subsidy duty</td>
+</tr><tr>
+<td>
+<br>555</td>
+<td>
+<br>Anti-dumping   / countervailing duty - Pending collection</td>
+<td>
+<br>Anti-dumping   / anti-subsidy duty - Pending collection</td>
+</tr><tr>
+<td>
+<br>561</td>
+<td>
+<br>Notice   of initiation of an anti-dumping or countervailing proceeding</td>
+<td>
+<br>Notice   of initiation of an anti-dumping or anti-subsidy proceeding</td>
+</tr><tr>
+<td>
+<br>562</td>
+<td>
+<br>Suspended   anti-dumping or countervailing duty</td>
+<td>
+<br>Suspended   anti-dumping or anti-subsidy duty</td>
+</tr><tr>
+<td>
+<br>564</td>
+<td>
+<br>Anti-dumping   or countervailing registration</td>
+<td>
+<br>Anti-dumping   or anti-subsidy registration</td>
+</tr><tr>
+<td>
+<br>565</td>
+<td>
+<br>Anti-dumping   / countervailing review</td>
+<td>
+<br>Anti-dumping   / anti-subsidy review</td>
+</tr><tr>
+<td>
+<br>566</td>
+<td>
+<br>Anti-dumping   / countervailing statistic</td>
+<td>
+<br>Anti-dumping   / anti-subsidy statistic</td>
+</tr><tr>
+<td>
+<br>570</td>
+<td>
+<br>Anti-dumping   / countervailing duty – Control</td>
+<td>
+<br>Anti-dumping   / anti-subsidy duty – Control</td>
 </tr>
-<tr>
-<td><br>552</td>
-<td><br>Definitive   anti-dumping duty</td>
-<td><br>Final   anti-dumping duty</td>
-</tr>
-<tr>
-<td><br>553</td>
-<td><br>Provisional   countervailing duty</td>
-<td><br>Provisional   anti-subsidy duty</td>
-</tr>
-<tr>
-<td><br>554</td>
-<td><br>Definitive   countervailing duty</td>
-<td><br>Final   anti-subsidy duty</td>
-</tr>
-<tr>
-<td><br>555</td>
-<td><br>Anti-dumping   / countervailing duty - Pending collection</td>
-<td><br>Anti-dumping   / anti-subsidy duty - Pending collection</td>
-</tr>
-<tr>
-<td><br>561</td>
-<td><br>Notice   of initiation of an anti-dumping or countervailing proceeding</td>
-<td><br>Notice   of initiation of an anti-dumping or anti-subsidy proceeding</td>
-</tr>
-<tr>
-<td><br>562</td>
-<td><br>Suspended   anti-dumping or countervailing duty</td>
-<td><br>Suspended   anti-dumping or anti-subsidy duty</td>
-</tr>
-<tr>
-<td><br>564</td>
-<td><br>Anti-dumping   or countervailing registration</td>
-<td><br>Anti-dumping   or anti-subsidy registration</td>
-</tr>
-<tr>
-<td><br>565</td>
-<td><br>Anti-dumping   / countervailing review</td>
-<td><br>Anti-dumping   / anti-subsidy review</td>
-</tr>
-<tr>
-<td><br>566</td>
-<td><br>Anti-dumping   / countervailing statistic</td>
-<td><br>Anti-dumping   / anti-subsidy statistic</td>
-</tr>
-<tr>
-<td><br>570</td>
-<td><br>Anti-dumping   / countervailing duty – Control</td>
-<td><br>Anti-dumping   / anti-subsidy duty – Control</td>
-</tr>
-
         </table>
       </div><p><strong>Additional duties (695)</strong></p>
 

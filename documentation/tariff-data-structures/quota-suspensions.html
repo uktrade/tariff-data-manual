@@ -4,7 +4,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="robots" content="noindex">
 
     <title>Quota suspensions - Tariff Data Manual</title>
 
@@ -12,17 +11,18 @@
 
     <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html">
 
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="uktrade.github.io" />
+      <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta name="twitter:title" content="Quota suspensions - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
       <meta property="og:title" content="Quota suspensions" />
       <meta property="og:type" content="object" />
       <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html" />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:domain" content="uktrade.github.io" />
-      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
-      <meta property="twitter:title" content="Quota suspensions - Tariff Data Manual" />
-      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html" />
 
     
   </head>
@@ -50,32 +50,38 @@
       </div>
 
         <div id="toc-heading" class="toc-show fixedsticky">
-          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
             Table of contents <span class="toc-show__icon"></span>
-          </a>
+          </button>
         </div>
 
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
-            <div class="toc" data-module="table-of-contents">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
               <div class="search" data-module="search">
-  <form action="https://www.google.co.uk/search" method="get" role="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
-    <label class="govuk-label search__label" for="search">
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
       Search (via Google)
     </label>
-    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="govuk-button search__button">Search</button>
   </form>
   <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
     <div class="search-results__inner">
       <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
       <div class="search-results__content"></div>
     </div>
   </div>
 </div>
 
-              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
@@ -85,7 +91,7 @@
 <ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
   </li>
 </ul>
 <ul>
@@ -95,52 +101,17 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
   </li>
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
   </li>
 </ul>
 <ul>
@@ -158,20 +129,50 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
   </li>
 </ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
 </li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 <ul>
@@ -181,12 +182,17 @@
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
   </li>
 </ul>
 <ul>
@@ -196,12 +202,12 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 </li></ul>
@@ -235,7 +241,7 @@
 <li>Once the volume has exhausted, the quota is no longer available and the out-of-quota-rate is then payable.</li>
 <li>A quota can be managed via two regimes, as follows: First Come First Served (FCFS) and Licensed.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94132397-28e61a80-fe57-11ea-9f14-9ab5fd34d051.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94132397-28e61a80-fe57-11ea-9f14-9ab5fd34d051.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94132397-28e61a80-fe57-11ea-9f14-9ab5fd34d051.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94132397-28e61a80-fe57-11ea-9f14-9ab5fd34d051.png" alt="image" /></a></p>
 
 <blockquote>
 <p>Quota suspensions are applicable only to First Come First Serve quotas</p>
@@ -251,9 +257,9 @@
 <li>e.g. for fishing quotas, a quota is applicable only while overall catch volumes do not exceed a given amount.</li>
 </ul></li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94133161-35b73e00-fe58-11ea-8e5f-5c80d579475a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94133161-35b73e00-fe58-11ea-8e5f-5c80d579475a.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94133161-35b73e00-fe58-11ea-8e5f-5c80d579475a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94133161-35b73e00-fe58-11ea-8e5f-5c80d579475a.png" alt="image" /></a></p>
 <p><strong>Logical model of a quota suspension</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94136249-90529900-fe5c-11ea-9565-43f42f1f9f9c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136249-90529900-fe5c-11ea-9565-43f42f1f9f9c.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94136249-90529900-fe5c-11ea-9565-43f42f1f9f9c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136249-90529900-fe5c-11ea-9565-43f42f1f9f9c.png" alt="image" /></a></p>
 
 <ul>
 <li>Using the herrings example from the previous page, quota 09.0792 runs annually from January 1st to December 31st and is applied to commodity code 0303510000.</li>
@@ -263,49 +269,55 @@
 <p><strong>When is a quota not a quota?</strong></p>
 <p>A quota suspension can be thought of as an antidote to a quota; a nullification of its effects; during the period of the suspension, it is as if the quota is not there; a trader cannot request an allocation against that quota and it is invisible on the Trade Tariff Service, as follows:</p>
 <p>For 1st July 2019, after the suspension, the quota is visible <a href="https://www.trade-tariff.service.gov.uk/commodities/0303510010?currency=EUR&amp;day=1&amp;month=7&amp;year=2019#import">https://www.trade-tariff.service.gov.uk/commodities/0303510010?currency=EUR&amp;day=1&amp;month=7&amp;year=2019#import</a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94136322-aceed100-fe5c-11ea-923a-67bb22db98da.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136322-aceed100-fe5c-11ea-923a-67bb22db98da.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94136322-aceed100-fe5c-11ea-923a-67bb22db98da.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136322-aceed100-fe5c-11ea-923a-67bb22db98da.png" alt="image" /></a></p>
 <p>For 1st March, during the suspension, the quota is hidden<a href="https://www.trade-tariff.service.gov.uk/commodities/0303510010?currency=EUR&amp;day=1&amp;month=7&amp;year=2019#import">https://www.trade-tariff.service.gov.uk/commodities/0303510010?currency=EUR&amp;day=1&amp;month=7&amp;year=2019#import</a></p>
 <p>It is important to note however that there a many ways to skin a cat: in this example, the EU has also made the quota measures last from 16th June to 14th Feb and not all year long.</p>
 <p><strong>Simplified quotas data model (as applies to suspension periods)</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94136612-17a00c80-fe5d-11ea-8089-bdc32b48108b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136612-17a00c80-fe5d-11ea-8089-bdc32b48108b.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94136612-17a00c80-fe5d-11ea-8089-bdc32b48108b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136612-17a00c80-fe5d-11ea-8089-bdc32b48108b.png" alt="image" /></a></p>
 <p><strong>A quota order number is made up of many quota definition periods</strong></p>
 <p>When setting up quotas, it’s important to understand that a single quota order number record is made up of many definition periods: these periods may be of any length (no longer than a year, with the most typical lengths being annual and quarterly, as well as a number of custom periods, especially re: agricultural goods &amp; seasonal marketing periods).</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94136529-f9d2a780-fe5c-11ea-8260-8f3c10b010bc.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136529-f9d2a780-fe5c-11ea-8260-8f3c10b010bc.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94136529-f9d2a780-fe5c-11ea-8260-8f3c10b010bc.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136529-f9d2a780-fe5c-11ea-8260-8f3c10b010bc.png" alt="image" /></a></p>
 <p><strong>Quota suspension data object in detail</strong></p>
 <p>The quota suspension object is not one of the more complex objects in the database: there are few fields, in fact there are only three that you need to actively define.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94136623-1cfd5700-fe5d-11ea-9315-1d1f408a6ba2.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136623-1cfd5700-fe5d-11ea-9315-1d1f408a6ba2.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94136623-1cfd5700-fe5d-11ea-9315-1d1f408a6ba2.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136623-1cfd5700-fe5d-11ea-9315-1d1f408a6ba2.png" alt="image" /></a></p>
 <div class="table-container">
         <table>
           <tr>
-<th><br>Field</th>
-<th><br>Description</th>
+<th>
+<br>Field</th>
+<th>
+<br>Description</th>
+</tr><tr>
+<td>
+<br>quota_suspension_period_sid</td>
+<td>
+<br>Unique   identifier, automatically generated by the application when a new suspension   period is created – you do no create this yourself</td>
+</tr><tr>
+<td>
+<br>quota_definition_sid</td>
+<td>
+<br>The   quota definition to which the suspension is to be attached – you do not need   to enter the ID of the definition: you select it from a list (as will be   demonstrated)</td>
+</tr><tr>
+<td>
+<br>suspension_start_date</td>
+<td>
+<br>The   start date of the suspension blocking period – i.e. 00:00 at the start of the   chosen day</td>
+</tr><tr>
+<td>
+<br>suspension_end_date</td>
+<td>
+<br>The   end date of the suspension blocking period – i.e. 00:00 at the end of the   chosen day</td>
+</tr><tr>
+<td>
+<br>description</td>
+<td>
+<br>An   optional field, up to 500 characters in length, that helps to define the   suspension and the reasons for it: the EU has been deeply unhelpful /   non-descriptive in its suspension descriptions and we may choose to be more   expressive post-EU Exit</td>
 </tr>
-<tr>
-<td><br>quota_suspension_period_sid</td>
-<td><br>Unique   identifier, automatically generated by the application when a new suspension   period is created – you do no create this yourself</td>
-</tr>
-<tr>
-<td><br>quota_definition_sid</td>
-<td><br>The   quota definition to which the suspension is to be attached – you do not need   to enter the ID of the definition: you select it from a list (as will be   demonstrated)</td>
-</tr>
-<tr>
-<td><br>suspension_start_date</td>
-<td><br>The   start date of the suspension blocking period – i.e. 00:00 at the start of the   chosen day</td>
-</tr>
-<tr>
-<td><br>suspension_end_date</td>
-<td><br>The   end date of the suspension blocking period – i.e. 00:00 at the end of the   chosen day</td>
-</tr>
-<tr>
-<td><br>description</td>
-<td><br>An   optional field, up to 500 characters in length, that helps to define the   suspension and the reasons for it: the EU has been deeply unhelpful /   non-descriptive in its suspension descriptions and we may choose to be more   expressive post-EU Exit</td>
-</tr>
-
         </table>
-      </div><p><a href="https://user-images.githubusercontent.com/61055197/94136641-238bce80-fe5d-11ea-8f68-25a487b7e7a1.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136641-238bce80-fe5d-11ea-8f68-25a487b7e7a1.png" alt="image" /></a></p>
+      </div><p><a href="https://user-images.githubusercontent.com/61055197/94136641-238bce80-fe5d-11ea-8f68-25a487b7e7a1.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136641-238bce80-fe5d-11ea-8f68-25a487b7e7a1.png" alt="image" /></a></p>
 <p><strong>A suspension period must fit within a definition period</strong></p>
 <p>The critical point is that a quota suspension is defined against a quota definition period: the suspension period MUST NOT straddle the boundary of the definition – in the rare occasion you need to straddle a boundary, create 2 suspension</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94136831-6a79c400-fe5d-11ea-90c2-ebcf8a9a45d9.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136831-6a79c400-fe5d-11ea-90c2-ebcf8a9a45d9.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94136831-6a79c400-fe5d-11ea-90c2-ebcf8a9a45d9.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136831-6a79c400-fe5d-11ea-90c2-ebcf8a9a45d9.png" alt="image" /></a></p>
 <p><strong>Dates on TAP</strong></p>
 
 <ul>
@@ -332,112 +344,157 @@
 <h3 id="key-user-needs">Key user needs</h3><div class="table-container">
         <table>
           <tr>
-<th><br>As a …</th>
-<th><br>I want to&hellip;</th>
-<th><br>So that …</th>
-<th><br>MoSCoW</th>
+<th>
+<br>As a …</th>
+<th>
+<br>I want to&hellip;</th>
+<th>
+<br>So that …</th>
+<th>
+<br>MoSCoW</th>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>view a list of all active quota   suspension periods</td>
+<td>
+<br>I can select and decide the next   appropriate actions to be performed.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>create a new quota suspension period</td>
+<td>
+<br>I can present it on the system for   future suspension purposes.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>select a quota definition period</td>
+<td>
+<br>I can assign it to the correct   suspension period.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>view &amp; select active quota   definition period</td>
+<td>
+<br>the system won’t fail business rules.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>view &amp; edit quota definition period   that has not ended</td>
+<td>
+<br>the system won’t fail business rules.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>edit a quota suspension period that has   not finished</td>
+<td>
+<br>I can reassign the suspension period   accurately.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>delete a quota suspension period that   has not started</td>
+<td>
+<br>the system will not suspend a quota   incorrectly.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>have a workflow process</td>
+<td>
+<br>All quota suspension changes can be   validated and approved before being sent to CDS.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>have the system validate relevant   business rules accordingly</td>
+<td>
+<br>It won’t cause errors when validated in   CDS.</td>
+<td>
+<br>Should Have</td>
 </tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>view a list of all active quota   suspension periods</td>
-<td><br>I can select and decide the next   appropriate actions to be performed.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>create a new quota suspension period</td>
-<td><br>I can present it on the system for   future suspension purposes.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>select a quota definition period</td>
-<td><br>I can assign it to the correct   suspension period.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>view &amp; select active quota   definition period</td>
-<td><br>the system won’t fail business rules.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>view &amp; edit quota definition period   that has not ended</td>
-<td><br>the system won’t fail business rules.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>edit a quota suspension period that has   not finished</td>
-<td><br>I can reassign the suspension period   accurately.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>delete a quota suspension period that   has not started</td>
-<td><br>the system will not suspend a quota   incorrectly.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>have a workflow process</td>
-<td><br>All quota suspension changes can be   validated and approved before being sent to CDS.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>have the system validate relevant   business rules accordingly</td>
-<td><br>It won’t cause errors when validated in   CDS.</td>
-<td><br>Should Have</td>
-</tr>
-
         </table>
       </div><h3 id="key-business-rules">Key business rules</h3><div class="table-container">
         <table>
           <tr>
-<th><br>#</th>
-<th><br>Rule</th>
-<th><br>Notes</th>
-<th><br>MoSCoW</th>
-</tr>
-<tr>
-<td><br> Quota Suspension Period</td>
+<th>
+<br>#</th>
+<th>
+<br>Rule</th>
+<th>
+<br>Notes</th>
+<th>
+<br>MoSCoW</th>
+</tr><tr>
+<td>
+<br> Quota Suspension Period</td>
 <td></td>
 <td></td>
 <td><br></td>
-</tr>
-<tr>
-<td><br>QSP1</td>
-<td><br>The quota definition SID must   exist.</td>
-<td><br>Required</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>QSP2</td>
-<td><br>The validity period of the quota   must span the quota suspension period.</td>
-<td><br>Required</td>
-<td><br>Must   Have<br>     -    User will need an active quota in order for suspension period   to be assigned to   it.</td>
-</tr>
-<tr>
-<td><br> Quota unsuspension event</td>
+</tr><tr>
+<td>
+<br>QSP1</td>
+<td>
+<br>The quota definition SID must   exist.</td>
+<td>
+<br>Required</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>QSP2</td>
+<td>
+<br>The validity period of the quota   must span the quota suspension period.</td>
+<td>
+<br>Required</td>
+<td>
+<br>Must   Have<br>     -    User will need an active quota in order for suspension period   to be assigned to   it.</td>
+</tr><tr>
+<td>
+<br> Quota unsuspension event</td>
 <td></td>
 <td></td>
 <td><br></td>
+</tr><tr>
+<td>
+<br>QUSE1</td>
+<td>
+<br>The quota definition SID must   exist.</td>
+<td>
+<br>Required</td>
+<td>
+<br>Must   Have</td>
+</tr><tr>
+<td>
+<br>QUSE2</td>
+<td>
+<br>There may be only one   unsuspension event with the same occurrence timestamp for a given quota.</td>
+<td>
+<br>Not Required</td>
+<td>
+<br>Won’t Have<br>     - User can put an end date to the   suspension period which will create the same behaviour.</td>
 </tr>
-<tr>
-<td><br>QUSE1</td>
-<td><br>The quota definition SID must   exist.</td>
-<td><br>Required</td>
-<td><br>Must   Have</td>
-</tr>
-<tr>
-<td><br>QUSE2</td>
-<td><br>There may be only one   unsuspension event with the same occurrence timestamp for a given quota.</td>
-<td><br>Not Required</td>
-<td><br>Won’t Have<br>     - User can put an end date to the   suspension period which will create the same behaviour.</td>
-</tr>
-
         </table>
       </div>
             

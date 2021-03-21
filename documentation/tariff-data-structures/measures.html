@@ -4,7 +4,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="robots" content="noindex">
 
     <title>Measures - Tariff Data Manual</title>
 
@@ -12,17 +11,18 @@
 
     <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measures.html">
 
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="uktrade.github.io" />
+      <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta name="twitter:title" content="Measures - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measures.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
       <meta property="og:title" content="Measures" />
       <meta property="og:type" content="object" />
       <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measures.html" />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:domain" content="uktrade.github.io" />
-      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
-      <meta property="twitter:title" content="Measures - Tariff Data Manual" />
-      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measures.html" />
 
     
   </head>
@@ -50,32 +50,38 @@
       </div>
 
         <div id="toc-heading" class="toc-show fixedsticky">
-          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
             Table of contents <span class="toc-show__icon"></span>
-          </a>
+          </button>
         </div>
 
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
-            <div class="toc" data-module="table-of-contents">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
               <div class="search" data-module="search">
-  <form action="https://www.google.co.uk/search" method="get" role="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
-    <label class="govuk-label search__label" for="search">
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
       Search (via Google)
     </label>
-    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="govuk-button search__button">Search</button>
   </form>
   <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
     <div class="search-results__inner">
       <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
       <div class="search-results__content"></div>
     </div>
   </div>
 </div>
 
-              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
@@ -85,7 +91,7 @@
 <ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
   </li>
 </ul>
 <ul>
@@ -95,52 +101,17 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
   </li>
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
   </li>
 </ul>
 <ul>
@@ -158,20 +129,50 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
   </li>
 </ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
 </li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 <ul>
@@ -181,12 +182,17 @@
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
   </li>
 </ul>
 <ul>
@@ -196,12 +202,12 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 </li></ul>
@@ -240,65 +246,65 @@
 <p>A measure equates to a single line on the “Trade with the UK tool” - <a href="https://www.gov.uk/get-rules-tariffs-trade-with-uk">https://www.gov.uk/get-rules-tariffs-trade-with-uk</a></p>
 <p>A measure equates to a single line on the Trade Tariff Service (UKTT) - <a href="https://www.trade-tariff.service.gov.uk/sections">https://www.trade-tariff.service.gov.uk/sections</a></p>
 <p>Below is a page from the UKTT for Asses (the animal) – each alternating grey &amp; white line is a single measure. Some commodity codes can have hundreds of measures assigned to them.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92616091-bbae8300-f2b5-11ea-8997-8fe2a54ffee7.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92616091-bbae8300-f2b5-11ea-8997-8fe2a54ffee7.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92616091-bbae8300-f2b5-11ea-8997-8fe2a54ffee7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92616091-bbae8300-f2b5-11ea-8997-8fe2a54ffee7.png" alt="" /></a></p>
 <p><strong>What a measure is not!</strong></p>
 <p>The tariff is a sea of intermingled terminologies – terms are used in different senses by different policy areas.</p>
 <p>For instance, in Trade Remedies, the term ‘measure’ may be synonymous with ‘case’, e.g. an investigation launched by the TRA against multiple companies/countries. In this case, the ‘case’ will of followed through to its conclusion, result in a number of measures, a Tariff would refer to them – in the case of Trade Remedies, this could result in many thousands of Tariff measures.</p>
 <p>A measure is not an overarching policy or specific enactment of that policy: in Tariff terms, that is a regulation.</p>
-<svg width="204pt" height="206pt"
- viewBox="0.00 0.00 204.00 206.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="195pt" height="206pt"
+ viewBox="0.00 0.00 195.00 206.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 202)">
 <title>Measures and Regulations</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-202 200,-202 200,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-202 191,-202 191,4 -4,4"/>
 <!-- measure1 -->
 <g id="node1" class="node">
 <title>measure1</title>
-<polygon fill="none" stroke="#000000" points="196,-198 122,-198 122,-162 196,-162 196,-198"/>
-<text text-anchor="middle" x="159" y="-176.3" font-family="Arial" font-size="14.00" fill="#000000">Measure</text>
+<polygon fill="none" stroke="black" points="187,-198 117,-198 117,-162 187,-162 187,-198"/>
+<text text-anchor="middle" x="152" y="-176.3" font-family="Arial" font-size="14.00">Measure</text>
 </g>
 <!-- measure2 -->
 <g id="node2" class="node">
 <title>measure2</title>
-<polygon fill="none" stroke="#000000" points="196,-144 122,-144 122,-108 196,-108 196,-144"/>
-<text text-anchor="middle" x="159" y="-122.3" font-family="Arial" font-size="14.00" fill="#000000">Measure</text>
+<polygon fill="none" stroke="black" points="187,-144 117,-144 117,-108 187,-108 187,-144"/>
+<text text-anchor="middle" x="152" y="-122.3" font-family="Arial" font-size="14.00">Measure</text>
 </g>
 <!-- measure3 -->
 <g id="node3" class="node">
 <title>measure3</title>
-<polygon fill="none" stroke="#000000" points="196,-90 122,-90 122,-54 196,-54 196,-90"/>
-<text text-anchor="middle" x="159" y="-68.3" font-family="Arial" font-size="14.00" fill="#000000">Measure</text>
+<polygon fill="none" stroke="black" points="187,-90 117,-90 117,-54 187,-54 187,-90"/>
+<text text-anchor="middle" x="152" y="-68.3" font-family="Arial" font-size="14.00">Measure</text>
 </g>
 <!-- measure4 -->
 <g id="node4" class="node">
 <title>measure4</title>
-<polygon fill="none" stroke="#000000" points="196,-36 122,-36 122,0 196,0 196,-36"/>
-<text text-anchor="middle" x="159" y="-14.3" font-family="Arial" font-size="14.00" fill="#000000">Measure</text>
+<polygon fill="none" stroke="black" points="187,-36 117,-36 117,0 187,0 187,-36"/>
+<text text-anchor="middle" x="152" y="-14.3" font-family="Arial" font-size="14.00">Measure</text>
 </g>
 <!-- Regulation -->
 <g id="node5" class="node">
 <title>Regulation</title>
-<polygon fill="none" stroke="#000000" points="86,-117 0,-117 0,-81 86,-81 86,-117"/>
-<text text-anchor="middle" x="43" y="-95.3" font-family="Arial" font-size="14.00" fill="#000000">Regulation</text>
+<polygon fill="none" stroke="black" points="81,-117 0,-117 0,-81 81,-81 81,-117"/>
+<text text-anchor="middle" x="40.5" y="-95.3" font-family="Arial" font-size="14.00">Regulation</text>
 </g>
 <!-- Regulation&#45;&#45;measure1 -->
 <g id="edge1" class="edge">
 <title>Regulation&#45;&#45;measure1</title>
-<path fill="none" stroke="#000000" d="M69.0327,-117.178C88.1369,-130.518 113.9704,-148.5569 133.0542,-161.8827"/>
+<path fill="none" stroke="black" d="M66.07,-117.18C84.11,-130.52 108.49,-148.56 126.51,-161.88"/>
 </g>
 <!-- Regulation&#45;&#45;measure2 -->
 <g id="edge2" class="edge">
 <title>Regulation&#45;&#45;measure2</title>
-<path fill="none" stroke="#000000" d="M86.1941,-109.0538C97.9176,-111.7826 110.5061,-114.7126 121.8632,-117.3561"/>
+<path fill="none" stroke="black" d="M81.03,-108.75C92.79,-111.65 105.57,-114.8 116.95,-117.61"/>
 </g>
 <!-- Regulation&#45;&#45;measure3 -->
 <g id="edge3" class="edge">
 <title>Regulation&#45;&#45;measure3</title>
-<path fill="none" stroke="#000000" d="M86.1941,-88.9462C97.9176,-86.2174 110.5061,-83.2874 121.8632,-80.6439"/>
+<path fill="none" stroke="black" d="M81.03,-89.25C92.79,-86.35 105.57,-83.2 116.95,-80.39"/>
 </g>
 <!-- Regulation&#45;&#45;measure4 -->
 <g id="edge4" class="edge">
 <title>Regulation&#45;&#45;measure4</title>
-<path fill="none" stroke="#000000" d="M69.0327,-80.822C88.1369,-67.482 113.9704,-49.4431 133.0542,-36.1173"/>
+<path fill="none" stroke="black" d="M66.07,-80.82C84.11,-67.48 108.49,-49.44 126.51,-36.12"/>
 </g>
 </g>
 </svg><p>The EU build all of their measures in their Taric application and then export them overnight for common application across all of the 28 member states (including us). This will continue until (at the earliest) Jan 1st 2021.</p>
@@ -309,10 +315,10 @@
 <li>Excise</li>
 <li>National prohibitions and restrictions</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/92616495-32e41700-f2b6-11ea-93b3-06889de94145.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92616495-32e41700-f2b6-11ea-93b3-06889de94145.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92616495-32e41700-f2b6-11ea-93b3-06889de94145.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92616495-32e41700-f2b6-11ea-93b3-06889de94145.png" alt="" /></a></p>
 <p><strong>The Tariff is a big relational database centred around the measure</strong></p>
 <p>There are training packs dedicated to each of these areas, so this is just a very brief introduction.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92616842-9d955280-f2b6-11ea-850a-14bb2c5767ef.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92616842-9d955280-f2b6-11ea-850a-14bb2c5767ef.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92616842-9d955280-f2b6-11ea-850a-14bb2c5767ef.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92616842-9d955280-f2b6-11ea-850a-14bb2c5767ef.png" alt="" /></a></p>
 <p><strong>Measure types &amp; responsibilities</strong></p>
 
 <ul>
@@ -322,10 +328,10 @@
 <li>There remain about 85 measure types that will crop up over the course of the next year and will need to be understood, even if some of these are going to be omitted from the UK tariff (in the first instance).</li>
 <li>The measure types can be broadly broken in to the following groups, with the table below showing the division of responsibility between the EU and the member states, represented for the UK by HMRC.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93492809-26d60600-f903-11ea-9e0e-983b4d4db74a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93492809-26d60600-f903-11ea-9e0e-983b4d4db74a.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93492809-26d60600-f903-11ea-9e0e-983b4d4db74a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93492809-26d60600-f903-11ea-9e0e-983b4d4db74a.png" alt="image" /></a></p>
 <p>After the Transition Period, there will be a great degree of similarity in the applicable trade measures. The UK is not revolutionising the types of trade measures that are to be imposed.</p>
 <p>These groups of measure types are detailed in subsequent pages.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93492680-fc844880-f902-11ea-886c-ec0a2e3be277.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93492680-fc844880-f902-11ea-886c-ec0a2e3be277.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93492680-fc844880-f902-11ea-886c-ec0a2e3be277.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93492680-fc844880-f902-11ea-886c-ec0a2e3be277.png" alt="image" /></a></p>
 <p><strong>National P&amp;R</strong></p>
 <p>There are c. 14 national prohibition and restriction type measures. After the Transition Period, there will be no differentiation between measures formerly provided by the EU and national P&amp;R.</p>
 <div class="table-container">
@@ -335,92 +341,77 @@
 <th>Description</th>
 <th>Measure count (Jan 20)</th>
 <th>UK measure type</th>
-</tr>
-<tr>
+</tr><tr>
 <td>AHC</td>
 <td>Animal Health Certificate</td>
 <td>2433</td>
 <td>350</td>
-</tr>
-<tr>
+</tr><tr>
 <td>AIL</td>
 <td>Health and Safety Executive Import Licensing Firearms and Ammunition</td>
 <td>55</td>
 <td>351</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ATT</td>
 <td>Attestation Document (horticulture and potatoes)</td>
 <td>12</td>
 <td>352</td>
-</tr>
-<tr>
+</tr><tr>
 <td>CEX</td>
 <td>DCMS Open General Export Licence</td>
 <td>7</td>
 <td>353</td>
-</tr>
-<tr>
+</tr><tr>
 <td>COE</td>
 <td>Home Office Controlled Drugs (export)</td>
 <td>46</td>
 <td>354</td>
-</tr>
-<tr>
+</tr><tr>
 <td>COI</td>
 <td>HMI Conformity Certificate (fruit and veg) issued in UK</td>
 <td>30</td>
 <td>355</td>
-</tr>
-<tr>
+</tr><tr>
 <td>CVD</td>
 <td>Common Veterinary Entry Document (CVED)</td>
 <td>2176</td>
 <td>356</td>
-</tr>
-<tr>
+</tr><tr>
 <td>EQC</td>
 <td>Certificate of Conformity</td>
 <td>34</td>
 <td>357</td>
-</tr>
-<tr>
+</tr><tr>
 <td>HOP</td>
 <td>Home Office pre-cursor chemical authorisation</td>
 <td>12</td>
 <td>358</td>
-</tr>
-<tr>
+</tr><tr>
 <td>HSE</td>
 <td>Health and Safety Executive (imports)</td>
 <td>12</td>
 <td>359</td>
-</tr>
-<tr>
+</tr><tr>
 <td>PHC</td>
 <td>Phytosanitary Certificate (import)</td>
 <td>174</td>
 <td>360</td>
-</tr>
-<tr>
+</tr><tr>
 <td>PRE</td>
 <td>Home Office Pre-cursor chemicals</td>
 <td>86</td>
 <td>361</td>
-</tr>
-<tr>
+</tr><tr>
 <td>PRT</td>
 <td>Home Office Controlled Drugs (import)</td>
 <td>405</td>
 <td>362</td>
-</tr>
-<tr>
+</tr><tr>
 <td>QRC</td>
 <td>Quarantine Release Certificate</td>
 <td>78</td>
 <td>363</td>
 </tr>
-
         </table>
       </div><p>The CVD measure type is a complete duplicate of measure type 410 (Veterinary control) applied in the Taric measures.</p>
 <p><strong>Measures and geographical areas</strong></p>
@@ -434,7 +425,7 @@
 <p>The group of countries may be a formal trading bloc, like the EU or CARIFORUM (Caribbean Trading Nations)</p>
 <p>In the geography is a group, then individual countries within that group may also be excluded.</p>
 <p>For example, while Haiti is a part of CARIFORUM (both officially and in the Tariff), it is excluded from all preferential measures of the Caribbean EPA (Economic Partnership Agreement), as it has yet to ratify the treaty.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93493651-0fe3e380-f904-11ea-9138-fc330c55aec2.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93493651-0fe3e380-f904-11ea-9138-fc330c55aec2.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93493651-0fe3e380-f904-11ea-9138-fc330c55aec2.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93493651-0fe3e380-f904-11ea-9138-fc330c55aec2.png" alt="image" /></a></p>
 <p><strong>Measures and commodity codes</strong></p>
 
 <ul>
@@ -525,7 +516,7 @@
 <li>A footnote is connected to the measure by a linking table (many-to-many) called footnote_association_measures.</li>
 <li>Footnotes are linked to measures for the entirety of the measure’s duration – the association does not have its own start and end dates – which differs from footnotes’ association with commodity codes, which are dated.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93493734-2722d100-f904-11ea-8be2-6abee348e61b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93493734-2722d100-f904-11ea-8be2-6abee348e61b.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93493734-2722d100-f904-11ea-8be2-6abee348e61b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93493734-2722d100-f904-11ea-8be2-6abee348e61b.png" alt="image" /></a></p>
 <p><strong>Measures and duties</strong></p>
 
 <ul>
@@ -555,7 +546,7 @@
 <li>These relationships are described in full in the measure components training manual.</li>
 </ul>
 <p><strong>Measure components and measure condition components</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93494129-96002a00-f904-11ea-9907-935378ced1a8.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93494129-96002a00-f904-11ea-9907-935378ced1a8.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93494129-96002a00-f904-11ea-9907-935378ced1a8.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93494129-96002a00-f904-11ea-9907-935378ced1a8.png" alt="image" /></a></p>
 <p><strong>Measures, conditions and certificates</strong></p>
 
 <ul>
@@ -568,14 +559,14 @@
 <li>There is no limit to the number of conditions that can be assigned to a single measure, though the current max (Feb 2020) is 26 conditions.</li>
 <li>Please see the detailed “measure conditions” guide for a full overview of conditions in all their different flavours.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93494567-14f56280-f905-11ea-83a5-d24ddd9940c1.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93494567-14f56280-f905-11ea-83a5-d24ddd9940c1.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93494567-14f56280-f905-11ea-83a5-d24ddd9940c1.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93494567-14f56280-f905-11ea-83a5-d24ddd9940c1.png" alt="image" /></a></p>
 <p><strong>Relationship between measures and quotas</strong></p>
 
 <ul>
 <li>While First Come, First Served (FCFS) quotas are entirely separate objects on the database, it is not possible to allow traders to declare against quotas unless there is a quota measure exposing its presence to the trader – all trade instruments that are to be executed in CHIEF or CDS need measures to make them work.</li>
 <li>Similarly, licensed quotas are operated via measures, though they do not have the additional quota data structures associated with them that are used by FCFS quotas.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93494596-1c1c7080-f905-11ea-9aa7-b11dd6767b1d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93494596-1c1c7080-f905-11ea-9aa7-b11dd6767b1d.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93494596-1c1c7080-f905-11ea-9aa7-b11dd6767b1d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93494596-1c1c7080-f905-11ea-9aa7-b11dd6767b1d.png" alt="image" /></a></p>
 
 <ul>
 <li>The quota structures are linked to the measures via the use of the ordernumber field. This field takes a 6-digit quota order number and is the same data that is managed in the quota_order_number_id field of the quota_order_number table and similar.</li>
@@ -606,7 +597,7 @@
 <li>In the UK we are not using this, however be aware that the stopped flag is mandatory.</li>
 <li>Please always set the stopped flag to false in all cases.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/92634413-2ff42100-f2cc-11ea-81d0-3d589cc452e0.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92634413-2ff42100-f2cc-11ea-81d0-3d589cc452e0.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92634413-2ff42100-f2cc-11ea-81d0-3d589cc452e0.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92634413-2ff42100-f2cc-11ea-81d0-3d589cc452e0.png" alt="" /></a></p>
 <p><strong>Explosion level</strong></p>
 
 <ul>
@@ -620,7 +611,7 @@
 <li>Measures of a measure type that is set to an explosion level of 10 can be assigned to literally any commodity code.</li>
 <li>This impacts business rule ME88 (see below).</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/92635147-451d7f80-f2cd-11ea-86d4-4f8e224f1906.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92635147-451d7f80-f2cd-11ea-86d4-4f8e224f1906.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92635147-451d7f80-f2cd-11ea-86d4-4f8e224f1906.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92635147-451d7f80-f2cd-11ea-86d4-4f8e224f1906.png" alt="" /></a></p>
 <p><strong>The reduction indicator</strong></p>
 
 <ul>
@@ -628,7 +619,7 @@
 <li>The field is not mandatory and in most countries is set to null.</li>
 <li>Alternative values are 1 to 6, which specify the reduction level to be applied to Meursing placeholders. </li>
 <li>This is discussed in the agricultural duties training manual.
-<a href="https://user-images.githubusercontent.com/61055197/92635079-2cad6500-f2cd-11ea-9d4b-713b85d04f59.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92635079-2cad6500-f2cd-11ea-9d4b-713b85d04f59.png" alt="" /></a></li>
+<a href="https://user-images.githubusercontent.com/61055197/92635079-2cad6500-f2cd-11ea-9d4b-713b85d04f59.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92635079-2cad6500-f2cd-11ea-9d4b-713b85d04f59.png" alt="" /></a></li>
 </ul>
 <p><strong>Export refunds</strong></p>
 
@@ -643,7 +634,7 @@
 <li>In addition, it uses a lot of JavaScript, which is not great for accessibility.</li>
 <li>Therefore the approach was taken to prototype something simpler – the nattily named duty sentence deconstructor.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/92720962-44342e80-f35d-11ea-95a1-8a3cebe7c35c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92720962-44342e80-f35d-11ea-95a1-8a3cebe7c35c.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92720962-44342e80-f35d-11ea-95a1-8a3cebe7c35c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92720962-44342e80-f35d-11ea-95a1-8a3cebe7c35c.png" alt="" /></a></p>
 
 <ul>
 <li>This tool is designed to allows you to copy and paste or type any kind of duty string in to a field and have it translated into an actual set of measure components, abided by all the Taric business rules (e.g. only ever using one duty expressions once against a measure).</li>
@@ -651,8 +642,8 @@
 <li>The tool works via a combination of JavaScript (which is optional) and backend string replacement (in PHP, but easy to replicate in Python).</li>
 <li>The tool differentiates between supplementary unit measure types and all others – supplementary units expect to receive only a unit and in extremis a measurement unit qualifier [KGM E (per 1,000), KGM C (net of drained weight) and KGM S (of sugar with a yield in white sugar of 92%) are used] very infrequently.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/92721214-a3923e80-f35d-11ea-9693-7d680391751f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721214-a3923e80-f35d-11ea-9693-7d680391751f.png" alt="" /></a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92721309-c9b7de80-f35d-11ea-82e5-eff212d4946f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721309-c9b7de80-f35d-11ea-82e5-eff212d4946f.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92721214-a3923e80-f35d-11ea-9693-7d680391751f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721214-a3923e80-f35d-11ea-9693-7d680391751f.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92721309-c9b7de80-f35d-11ea-82e5-eff212d4946f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721309-c9b7de80-f35d-11ea-82e5-eff212d4946f.png" alt="" /></a></p>
 
 <ul>
 <li>The MFN measure for white chocolate is on of the more complex duties on the EU tariff. The UK is unlikely to use anything so complex, but must be able to handle similar duties, in case we revert to this level of complexity. The duty is as follows:
@@ -667,7 +658,7 @@
 <li>The PHP is rough and ready but should be easily interpretable for translation into Python and componentisation.</li>
 </ul>
 <h3 id="screens-measures">Screens – measures</h3><p><strong>Search for measures</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" alt="image" /></a></p>
 
 <ul>
 <li>The search screen is vastly cut down in comparison to the existing TAP measure search screen.</li>
@@ -678,7 +669,7 @@
 <li>Use type ahead on measure type, geography and quota order number fields.</li>
 </ul>
 <p><strong>Measures search results</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" alt="image" /></a></p>
 <p>Search results screen is common across most data objects – with measures (and quotas), the most important point to note is that there is no left-hand side filter capability - there is no room, as there is so much data that need to be returned. Search results table must include:</p>
 
 <ul>
@@ -699,7 +690,7 @@
 <li>Under table show paging – this screen grab has been doctored to show only 10 results: suggestion is 100 results per page for measures.</li>
 </ul>
 <p><strong>Display of complex conditions</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" alt="image" /></a></p>
 <p>The data in the conditions column is potentially very complicated and needs to be represented on the search results form – especially with Trade Remedies, the duties may be held in the conditions and this is perhaps the critical piece of information being sought.</p>
 <p>The colour coding is helpful in separating out the components of a condition, all of which are important to the processing of the data in CDS, Gems and Caesar</p>
 <p>For each line in the conditions column, this is what is meant:</p>
@@ -721,16 +712,16 @@
 <li>Condition 3 of type F, which states that if the net free at frontier price (import price) &gt; 0.0 EUR WAT, then apply the duty 31.300%</li>
 </ul>
 <p><strong>Extreme conditions</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" alt="image" /></a></p>
 <p><strong>View of tooltips for columns that need explaining</strong></p>
 
 <ul>
 <li>Two examples of tooltips where the column data benefits from more explanation – the most important one here is the conditions tooltip, where there is potentially a lot of complex data (as per previous slide).</li>
 <li>Yes, this uses colour to indicate meaning, therefore running into some challenge for colour-blind users, however it is not the only indicator of meaning.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/92722702-e2c18f00-f35f-11ea-818f-a33219791454.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722702-e2c18f00-f35f-11ea-818f-a33219791454.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92722702-e2c18f00-f35f-11ea-818f-a33219791454.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722702-e2c18f00-f35f-11ea-818f-a33219791454.png" alt="image" /></a></p>
 <p><strong>Footnotes column – can also get very busy</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92722796-07b60200-f360-11ea-893d-81cdfcffa2be.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722796-07b60200-f360-11ea-893d-81cdfcffa2be.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92722796-07b60200-f360-11ea-893d-81cdfcffa2be.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722796-07b60200-f360-11ea-893d-81cdfcffa2be.png" alt="image" /></a></p>
 <p>The image to the above shows the 99 footnotes that currently apply to the import of various dual use goods into the EU.</p>
 <p>The import control team should eventually review the complexity of this and reduce, however it is unlikely to happen for day one.</p>
 <h3 id="key-user-needs">Key user needs</h3><div class="table-container">
@@ -740,50 +731,42 @@
 <th>I want to&hellip;</th>
 <th>So that …</th>
 <th>Notes</th>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff   Manager</td>
 <td>view   a list of existing measures</td>
 <td>I   can select and decide the next appropriate actions to be performed.</td>
 <td>Must   Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff   Manager</td>
 <td>create   a new (single) measure</td>
 <td>I   can keep both the Tariff Application and the downstream border systems up to   date with the latest trade position.</td>
 <td>Must   Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff   Manager</td>
 <td>create   new measures in bulk</td>
 <td>I   can keep both the Tariff Application and the downstream border systems up to   date with the latest trade position.</td>
 <td>Must   Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff   Manager</td>
 <td>edit   the properties of an existing measure      -description     -start   date     -end   date     -duties     -geographical   areas     -etc.</td>
 <td>I   can update the changes imposed and also be sent to the relevant external   systems.</td>
 <td>Must   Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff   Manager</td>
 <td>terminate   an existing measure, either individually or in bulk</td>
 <td>the   measure will not be imposed on the relevant external systems.</td>
 <td>Must   Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff   Manager</td>
 <td>have   a workflow process</td>
 <td>All   measure changes can be validated and approved before being sent to CDS.</td>
 <td>Must   Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff   Manager</td>
 <td>have   a search filter</td>
 <td>I   can find the measures I need quickly.</td>
 <td>Must   Have</td>
 </tr>
-
         </table>
       </div><h3 id="key-business-rules">Key business rules</h3><div class="table-container">
         <table>
@@ -791,76 +774,62 @@
 <th>#</th>
 <th>Rule</th>
 <th>Notes</th>
-</tr>
-<tr>
+</tr><tr>
 <td>ME1</td>
 <td>The combination of measure type + geographical area +   goods nomenclature item id + additional code type + additional code + order   number + reduction indicator + start date must be unique.</td>
 <td>Required – extremely high priority     This is actually an understatement of the business rule.   There must be no crossover in dates (start or end date) of measures that shar   the same context (as described by the fields to the left). It is more than   just the start date. This and ME32 can be handled together: develop ME32 and   ME1 falls into place.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME2</td>
 <td>The measure type must exist.</td>
 <td>Required – low priority     Measure types will need to be selected from a dropdown   (typeahead), but this should be checked nonetheless</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME3</td>
 <td>The validity period of the measure type must span the   validity period of the measure.</td>
 <td>Required – low priority     Any date related business rule should be avoided by the   Tariff managers simply not end-dating things – there is no real need to   end-date a measure type, and this should be reasserted.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME4</td>
 <td>The geographical area must exist.</td>
 <td>Required – low priority     As per the measure type, this should be avoided by   selecting from a list, however this should be checked.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME5</td>
 <td>The validity period of the geographical area must span the   validity period of the measure.</td>
 <td>Required – low priority     As per the measure type check, this is required, but can   be avoided by not end-dating geographical areas (which is unnecessary).</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME6</td>
 <td>The goods code must exist.</td>
 <td>Required – high priority     Required – this should be checked on first entering the   commodity codes (goods code, commodity code, good nomenclature item id are   all synonymous)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME7</td>
 <td>The goods nomenclature code must be a product code; that   is, it may not be an intermediate line.</td>
 <td>Required – high priority     This means that the commodity code must exist with a product   line suffix of “80” and not any other value which would reflect the fact that   the commodity is an intermediate heading and nothing more.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME8</td>
 <td>The validity period of the goods code must span the   validity period of the measure.</td>
 <td>Required – high priority     This is one of the more critical rules – commodity   codes do start and end on a regular basis and there must be no commodity   codes that terminate before the end date of the assigned measure(s).     This applies equally to open-ended measures on   commodity codes that are end-dated. If a commodity code is being end-dated,   and there will be a requirement to do so, then any measures against that   commodity code must also be terminated.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME88</td>
 <td>The level of the goods code, if present, cannot exceed the   explosion level of the measure type.</td>
 <td>Required – medium priority     This is primarily aimed at export control measures,   which are set at 8-digits rather than at the 10-digits that are reserved for   import measure types. Explosion level is set against the measure type, and   not the measure itself. If the user attempts to assign a measure to a   10-digit commodity when the explosion level is set to 8, then ME88 will be   triggered (see page earlier in deck re: explosion level).</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME16</td>
 <td>Integrating a measure with an additional code when an   equivalent or overlapping measures without additional code already exists and   vice-versa, should be forbidden.</td>
 <td>Required – high priority     This mostly impacts trade remedies, but also EU   additional code types (most of which will not carry forward), such as route   of ingress additional codes (see separate guide). What this means is that, if   there are measures set up against a combination of a commodity code and an   additional code, then it is not permitted to set up a measure against just   that commodity code (without the additional code).     For instance – a Trade Remedy is in place, where this   has involved creating an anti-dumping measure against a commodity code   (0102030405) and an additional code (C233 – Shanghai Industries). The duty   has been set to 25% (punitive specifically against Shanghai Industries).     It must not be possible to set up a measure for the   same time period, of the same type against just comm code 0102030405 with no   additional code. Border systems do not like ambiguity. Instead, the   additional codes presented for that context must cover the full universe of   options – e.g. residual (All other companies A999, B999, C999) codes are set   up for Trade Remedies.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME115</td>
 <td>The validity period of the referenced additional code must   span the validity period of the measure</td>
 <td>Required – medium priority     As with all similar rules, this needs to be checked but   should rarely if ever come up, as Tariff Managers should not be end-dating   additional codes.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME25</td>
 <td>If the measure’s end date is specified (implicitly or   explicitly) then the start date of the measure must be less than or equal to   the end date.</td>
 <td>Required – low priority     Should be checked as soon as the dates are entered into   the application. End date will in almost all circumstances by empty (Null)   for measures.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME32</td>
 <td>There may be no overlap in time with other measure   occurrences with a goods code in the same nomenclature hierarchy which   references the same measure type, geo area, order number, additional code and   reduction indicator. This rule is not applicable for Meursing additional   codes.</td>
 <td>Required – extremely high priority     This is the mother of all business rules and the one   that is likely to trip DDaT and Tariff Managers up more than any other. This   is an extension of the previously described ME1 to all commodity codes in the   upward hierarchy and all commodity codes in the downward hierarchy.     Therefore it is critical that the development team   works out a way of identifying a commodity’s hierarchy from the available   data. There is no concept of parent / child relationship in the database,   rather a list of sequential numbers and indents which infer the hierarchy.     This business rule is detailed on the next pages and in   the section on import control measures. There are 40+ import control   measures, all of which do broadly one of two things: prohibit goods entirely   from being traded, or require that certain provisions are taken (e.g.   documentation). There are so many measure types precisely to avoid ME32.     See next page for details…</td>
 </tr>
-
         </table>
       </div><p><strong>ME32 and Jams, fruit jellies, marmalades</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92740913-0b548380-f376-11ea-8bb2-de09cf9d80fa.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92740913-0b548380-f376-11ea-8bb2-de09cf9d80fa.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92740913-0b548380-f376-11ea-8bb2-de09cf9d80fa.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92740913-0b548380-f376-11ea-8bb2-de09cf9d80fa.png" alt="image" /></a></p>
 
 <ul>
 <li>As a tariff manager, I have been asked to create a new measure for ERGA OMNES of type “Import control” at level 4 “with a sugar content exceeding 30% by weight” – </li>

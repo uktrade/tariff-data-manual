@@ -4,7 +4,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="robots" content="noindex">
 
     <title>Quota associations - Tariff Data Manual</title>
 
@@ -12,17 +11,18 @@
 
     <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-associations.html">
 
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="uktrade.github.io" />
+      <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta name="twitter:title" content="Quota associations - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-associations.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
       <meta property="og:title" content="Quota associations" />
       <meta property="og:type" content="object" />
       <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-associations.html" />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:domain" content="uktrade.github.io" />
-      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
-      <meta property="twitter:title" content="Quota associations - Tariff Data Manual" />
-      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/quota-associations.html" />
 
     
   </head>
@@ -50,32 +50,38 @@
       </div>
 
         <div id="toc-heading" class="toc-show fixedsticky">
-          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
             Table of contents <span class="toc-show__icon"></span>
-          </a>
+          </button>
         </div>
 
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
-            <div class="toc" data-module="table-of-contents">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
               <div class="search" data-module="search">
-  <form action="https://www.google.co.uk/search" method="get" role="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
-    <label class="govuk-label search__label" for="search">
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
       Search (via Google)
     </label>
-    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="govuk-button search__button">Search</button>
   </form>
   <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
     <div class="search-results__inner">
       <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
       <div class="search-results__content"></div>
     </div>
   </div>
 </div>
 
-              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
@@ -85,7 +91,7 @@
 <ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
   </li>
 </ul>
 <ul>
@@ -95,52 +101,17 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
   </li>
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
   </li>
 </ul>
 <ul>
@@ -158,20 +129,50 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
   </li>
 </ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
 </li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 <ul>
@@ -181,12 +182,17 @@
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
   </li>
 </ul>
 <ul>
@@ -196,12 +202,12 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 </li></ul>
@@ -246,7 +252,7 @@
 <li>The association defines the link between one and only one main quota and one or more sub quotas. These are sometimes referred to respectively as parent and child quotas, though main and sub are the traditional Taric terms.</li>
 <li>There are currently 28 main quotas that are linked to sub quotas via their definitions.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" alt="image" /></a></p>
 <p><strong>Where are quota associations used?</strong></p>
 <p>In the EU tariff, there are a number of key product areas where quota associations are used (or potentially could be used if such policy were adopted):</p>
 <p>How we choose to adopt these in the UK tariff will depend on the emerging UK trade policy, for example there are a number of quota associations that are:</p>
@@ -284,10 +290,10 @@
 <ul>
 <li>Tomatoes (Morocco)</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94258655-11756300-ff25-11ea-896a-b62226ecb8f5.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258655-11756300-ff25-11ea-896a-b62226ecb8f5.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94258655-11756300-ff25-11ea-896a-b62226ecb8f5.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258655-11756300-ff25-11ea-896a-b62226ecb8f5.png" alt="image" /></a></p>
 <h3 id="key-data-fields-for-associations">Key data fields for associations</h3><p><strong>Quota associations – key data fields</strong></p>
 <p>The data model, if not the underlying concepts for quota associations, is simple.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94258844-69ac6500-ff25-11ea-8f39-8233cf4212a3.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258844-69ac6500-ff25-11ea-8f39-8233cf4212a3.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94258844-69ac6500-ff25-11ea-8f39-8233cf4212a3.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258844-69ac6500-ff25-11ea-8f39-8233cf4212a3.png" alt="image" /></a></p>
 <p>The key fields are defined in the box surrounded by the red dashed marquee in the diagram above.</p>
 
 <ul>
@@ -304,7 +310,7 @@ Quota associations are used:</p>
 <li><p>to allow goods to be traded evenly across multiple in-year definition periods and for balances to be transferred into a future period.</p></li>
 <li><p>The TARIC3 IDS Elements guide document (essential reading) describes the possible relation types as per the screen grab to below.</p></li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94259011-b3954b00-ff25-11ea-97e8-fb523a9f6a9d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94259011-b3954b00-ff25-11ea-97e8-fb523a9f6a9d.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94259011-b3954b00-ff25-11ea-97e8-fb523a9f6a9d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94259011-b3954b00-ff25-11ea-97e8-fb523a9f6a9d.png" alt="image" /></a></p>
 
 <ul>
 <li>These different types were first introduced in 2010. The following rules apply:
@@ -317,7 +323,7 @@ Quota associations are used:</p>
 <li>NM is used where weight or volume is the same across each related definition, however a maximum weight / volume is applied to specific commodity codes in the sub-quota, or in the case of beef WTO quotas, to allow balance to be shared equitably across an entire year (see below).</li>
 </ul>
 <h3 id="key-examples-equivalence-associations-eq">Key examples - Equivalence associations (EQ)</h3><p><strong>Sheep and goat meat – WTO quota</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94262290-294fe580-ff2b-11ea-99ae-b382ca6224fb.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262290-294fe580-ff2b-11ea-99ae-b382ca6224fb.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94262290-294fe580-ff2b-11ea-99ae-b382ca6224fb.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262290-294fe580-ff2b-11ea-99ae-b382ca6224fb.png" alt="image" /></a></p>
 
 <ul>
 <li>This is the poster boy for quota associations – the most crucial for trade of the remaining associations, given the emotional importance of the commodities involved and the number of countries impacted.</li>
@@ -328,7 +334,7 @@ Quota associations are used:</p>
 <li>In the UK, additional countries will be added to this list dependent on whether the trade deals with those countries have gone through, e.g. Bosnia-Herzegovina.</li>
 <li>Please be aware also of Chile, where the volumes are shared with a preferential quota.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94262386-513f4900-ff2b-11ea-886d-f591beebd9f7.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262386-513f4900-ff2b-11ea-886d-f591beebd9f7.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94262386-513f4900-ff2b-11ea-886d-f591beebd9f7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262386-513f4900-ff2b-11ea-886d-f591beebd9f7.png" alt="image" /></a></p>
 
 <ul>
 <li>Page 3 of the noted regulation shows the effect and implementation of quota associations (EQ type).</li>
@@ -336,7 +342,7 @@ Quota associations are used:</p>
 <li>The EU is allowed to import 228,254 tonnes of meat from New Zealand annually. The notes above the final column are instrumental – “in tonnes of carcase weight equivalent” illustrates there is a calculation to undertake for goods of various different types in order to determine “what constitutes a tonne”.</li>
 <li>In this case bone-in carcases are counted as 1 tonne, boneless mutton / sheep counts as 1.81 tonnes and boneless lamb counts as 1.67 tonnes. These values are reflected in the coefficients on the printed regulation and also in the quota associations table in the database (orange marquee). This setup is echoed with Bison meat (Canada).</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94262245-15a47f00-ff2b-11ea-9ba4-e64ac71b692f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262245-15a47f00-ff2b-11ea-9ba4-e64ac71b692f.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94262245-15a47f00-ff2b-11ea-9ba4-e64ac71b692f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262245-15a47f00-ff2b-11ea-9ba4-e64ac71b692f.png" alt="image" /></a></p>
 <p><strong>Preferential beef quotas</strong></p>
 
 <ul>
@@ -350,7 +356,7 @@ Quota associations are used:</p>
 </ul></li>
 <li>Using the C. America quotas as an example, the following data is set up – replicated for Nicaragua and Peru, though the Peru commodity codes are more specific:</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94262507-821f7e00-ff2b-11ea-981e-aa584a5d2e71.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262507-821f7e00-ff2b-11ea-981e-aa584a5d2e71.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94262507-821f7e00-ff2b-11ea-981e-aa584a5d2e71.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94262507-821f7e00-ff2b-11ea-981e-aa584a5d2e71.png" alt="image" /></a></p>
 <p>In summary</p>
 <p>This effectively means that every single good imported on these three quotas is treated as being 1.421 times its actual weight – other than convention, it is not clear why the quota volumes were just not set differently in the first place. Each of the underlying regulations features a footnote re: beef products as follows:
 “Expressed in carcase weight equivalent as follows: 100 kg of bone-in meat shall be equivalent to 70 kg1 of boneless meat.”</p>
@@ -360,9 +366,9 @@ Quota associations are used:</p>
 <li>There are two EU main quotas related to egg products currently in place, that utilise an equivalent association to determine the declarable weight of goods, depending on the commodity type.</li>
 <li>The two main quotas  09.1832 and 09.1869, respectively for egg yolks or eggs not in shell and egg albumin, use the equivalence association to calculate egg weights according to the UCC code calculation</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94263815-8d73a900-ff2d-11ea-8045-94838d8fe44b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94263815-8d73a900-ff2d-11ea-8045-94838d8fe44b.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94263815-8d73a900-ff2d-11ea-8045-94838d8fe44b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94263815-8d73a900-ff2d-11ea-8045-94838d8fe44b.png" alt="image" /></a></p>
 <p><strong>Bison from Canada (TBC)</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94263878-a7ad8700-ff2d-11ea-8584-00f114ea51d7.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94263878-a7ad8700-ff2d-11ea-8584-00f114ea51d7.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94263878-a7ad8700-ff2d-11ea-8584-00f114ea51d7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94263878-a7ad8700-ff2d-11ea-8584-00f114ea51d7.png" alt="image" /></a></p>
 
 <ul>
 <li>The arrangement that the EU has for the importation of bison from Canada is very similar to that used on WTO quotas from multiple countries worldwide</li>
@@ -370,7 +376,7 @@ Quota associations are used:</p>
 <li>The idea is to differentiate between different cuts of meat: those considered of higher value and those considered of lower value</li>
 <li>Quota associations are applied to provide an equivalence for the various product types, as follows: </li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94263871-a3816980-ff2d-11ea-9135-f1e943180cb0.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94263871-a3816980-ff2d-11ea-9135-f1e943180cb0.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94263871-a3816980-ff2d-11ea-9135-f1e943180cb0.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94263871-a3816980-ff2d-11ea-9135-f1e943180cb0.png" alt="image" /></a></p>
 <h3 id="key-examples-normal-associations-nm">Key examples - Normal associations (NM)</h3><p><strong>Beef WTO quotas</strong></p>
 
 <ul>
@@ -425,7 +431,7 @@ Quota associations are used:</p>
 <li>1st April to 30th June</li>
 </ul></li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94264223-39b58f80-ff2e-11ea-946a-6c741dad0845.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94264223-39b58f80-ff2e-11ea-946a-6c741dad0845.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94264223-39b58f80-ff2e-11ea-946a-6c741dad0845.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94264223-39b58f80-ff2e-11ea-946a-6c741dad0845.png" alt="image" /></a></p>
 
 <ul>
 <li>There are quota associations between the parent 09.2201 and child 09.2202 quota definitions</li>
@@ -435,7 +441,7 @@ Quota associations are used:</p>
 </ul>
 
 <ins>Main quota definition (parent)</ins>
-<p><a href="https://user-images.githubusercontent.com/61055197/94283911-8ce90b80-ff49-11ea-8853-a6a357de4f4a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94283911-8ce90b80-ff49-11ea-8853-a6a357de4f4a.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94283911-8ce90b80-ff49-11ea-8853-a6a357de4f4a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94283911-8ce90b80-ff49-11ea-8853-a6a357de4f4a.png" alt="image" /></a></p>
 
 <ins>Sub quota definitions (child)</ins>
 
@@ -453,7 +459,7 @@ Quota associations are used:</p>
 <li>Balance may not be carried forward from year to year however.</li>
 <li>Although it may seem that this function is thematically detached from the nature of the quota association, this is just how the border systems function in response: QAM (HMRC’s border system’s Quota Allocation Module) has been constructed to allow for this specific functionality</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94284216-f701b080-ff49-11ea-97c3-7d1740895d4f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284216-f701b080-ff49-11ea-97c3-7d1740895d4f.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94284216-f701b080-ff49-11ea-97c3-7d1740895d4f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284216-f701b080-ff49-11ea-97c3-7d1740895d4f.png" alt="image" /></a></p>
 <p>Orange juice from Israel</p>
 
 <ul>
@@ -463,8 +469,8 @@ Quota associations are used:</p>
 <li>This quota is set up with relation type NM (Normal – restrictive to main quota), such that a quantitive limit is applied to the sub quota</li>
 <li>The coefficient is set to 1.00000, meaning that drawing down 1kg on the subquota will also draw down 1kg on the parent with no equivalence calculation.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94284360-27e1e580-ff4a-11ea-990b-96a223bae37f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284360-27e1e580-ff4a-11ea-990b-96a223bae37f.png" alt="image" /></a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94284407-36c89800-ff4a-11ea-904e-a5c6f0fbad81.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284407-36c89800-ff4a-11ea-904e-a5c6f0fbad81.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94284360-27e1e580-ff4a-11ea-990b-96a223bae37f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284360-27e1e580-ff4a-11ea-990b-96a223bae37f.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94284407-36c89800-ff4a-11ea-904e-a5c6f0fbad81.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284407-36c89800-ff4a-11ea-904e-a5c6f0fbad81.png" alt="image" /></a></p>
 <p><strong>Steel safeguards – most of the world</strong></p>
 <p></ins>Background to steel safeguards</ins></p>
 
@@ -484,7 +490,7 @@ Quota associations are used:</p>
 <li>HMRC has introduced a new system called QAM (Quota Allocation Module) which allocates quota requests on importers’ declarations.</li>
 <li>Any new functionality needs to be coded from scratch in the UK: safeguard quotas are such new functionality: as it stands (Dec 19), CDS is not yet ready to allocate this kind of quota association.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94284583-7db68d80-ff4a-11ea-93fb-1908764f4cf0.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284583-7db68d80-ff4a-11ea-93fb-1908764f4cf0.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94284583-7db68d80-ff4a-11ea-93fb-1908764f4cf0.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284583-7db68d80-ff4a-11ea-93fb-1908764f4cf0.png" alt="image" /></a></p>
 <p><strong>What’s special about steel safeguards?</strong></p>
 <p>The EU introduced a new concept for steel safeguards that ensures that a maximum volume is assigned to imports from individual countries; i.e. a single country cannot dominate a quota to the exclusion of all others – the purpose is to maintain some kind of equitable trade flow across the globe.</p>
 
@@ -495,7 +501,7 @@ Quota associations are used:</p>
 <li>Multiple sub-quotas are set up with volumes that are a specific percentage of the parent (but in total add up to significantly more that the parent’s total)</li>
 <li>In this real example (EU category 13), imports from no country are allowed to exceed 33.33%; hence the main quota is set up with 100% (141,103,760.00 KGM), and 6 sub-quotas are set up with 33.33% (42,331,128.00 KGM)</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94284870-e30a7e80-ff4a-11ea-9f25-df4474cadbaf.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284870-e30a7e80-ff4a-11ea-9f25-df4474cadbaf.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94284870-e30a7e80-ff4a-11ea-9f25-df4474cadbaf.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94284870-e30a7e80-ff4a-11ea-9f25-df4474cadbaf.png" alt="image" /></a></p>
 
 <blockquote>
 <p>Safeguard national limits are artificial – they cannot be applied to every single countryThey are applied solely to those countries that are liable to exceed the mandated threshold via a NM-type sub quota association</p>
@@ -521,7 +527,7 @@ Quota associations are used:</p>
 </ul>
 <p><strong>C. America quota of quotas</strong></p>
 <p>Quota of quota – clothes from C. America</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94289888-52836c80-ff51-11ea-9675-9973cfeaf43b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94289888-52836c80-ff51-11ea-9675-9973cfeaf43b.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94289888-52836c80-ff51-11ea-9675-9973cfeaf43b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94289888-52836c80-ff51-11ea-9675-9973cfeaf43b.png" alt="image" /></a></p>
 
 <ul>
 <li>Applicable to Nicaragua and El Salvador, a function known as a ‘quota of quotas’ has been implemented to apply a maximum import volume across multiple quotas.</li>
@@ -529,7 +535,7 @@ Quota associations are used:</p>
 <li>There are two such quotas of quotas for Nicaragua and a single quota of quota for El Salvador.</li>
 <li>Please note – this requirement is more theoretical than practical: it has not been implemented in the EU tariff since 2015, and although the data appears to be present for 2020, it may yet be removed as unnecessary - i.e. it is understood as a regulatory requirement, however the legislated volumes are never even close to being met, therefore the function is disabled.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94290009-852d6500-ff51-11ea-9e92-ccb119e1a1e8.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94290009-852d6500-ff51-11ea-9e92-ccb119e1a1e8.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94290009-852d6500-ff51-11ea-9e92-ccb119e1a1e8.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94290009-852d6500-ff51-11ea-9e92-ccb119e1a1e8.png" alt="image" /></a></p>
 
 <ul>
 <li>There is a single quota (or quota of quotas) to which a master overall volume is assigned. For 2020, the volumes are 12,687,500 items of clothing from Nicaragua.</li>
@@ -589,11 +595,11 @@ Quota associations are used:</p>
 <li>1st May to 31st May</li>
 </ul></li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94295262-e0168a80-ff58-11ea-9c08-19f59e1dea1d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94295262-e0168a80-ff58-11ea-9c08-19f59e1dea1d.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94295262-e0168a80-ff58-11ea-9c08-19f59e1dea1d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94295262-e0168a80-ff58-11ea-9c08-19f59e1dea1d.png" alt="image" /></a></p>
 
 <ins>Quota associations</ins>
 <p>For marketing year 1st Nov 2017 to 31st May 2018 (and replicated thereafter), each of the sub-quota’s definitions (from 09.1193) are associated to the parent definition (09.1112) for that year.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94296371-a5aded00-ff5a-11ea-81bf-6573a65f83fd.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94296371-a5aded00-ff5a-11ea-81bf-6573a65f83fd.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94296371-a5aded00-ff5a-11ea-81bf-6573a65f83fd.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94296371-a5aded00-ff5a-11ea-81bf-6573a65f83fd.png" alt="image" /></a></p>
 
 <blockquote>
 <p>We will be abandoning this complexity, as the import of tomatoes into the UK is not as emotive or so vital for UK tomato growers’ ability to flourish.
@@ -603,112 +609,163 @@ We will continue to use two quotas, but both without associations, 09.1104 and 0
 <h3 id="key-user-needs-quota-associations">Key user needs – quota associations</h3><div class="table-container">
         <table>
           <tr>
-<th><br>As a …</th>
-<th><br>I want to&hellip;</th>
-<th><br>So that …</th>
-<th><br>MoSCoW</th>
+<th>
+<br>As a …</th>
+<th>
+<br>I want to&hellip;</th>
+<th>
+<br>So that …</th>
+<th>
+<br>MoSCoW</th>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>view a list of all active quota   associations</td>
+<td>
+<br>I can select and decide the next   appropriate actions to be performed.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>create a new quota associations</td>
+<td>
+<br>I can present it on the system for   future association purposes.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>only view &amp; select future quota   associations</td>
+<td>
+<br>I can’t edit quota associations that   has already been triggered.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>delete a future quota associations</td>
+<td>
+<br>the system will not activate the   associated quota definitions incorrectly.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>have a workflow process</td>
+<td>
+<br>all quota blocking changes can be   validated and approved before being sent to CDS.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>have the system validate relevant   business rules accordingly</td>
+<td>
+<br>It won’t cause errors when validated in   CDS.</td>
+<td>
+<br>Should Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>be able to view all available parent   and child definitions</td>
+<td>
+<br>I can create new quota associations   easily and quickly.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>be able to enter/select the correct   relation type values</td>
+<td>
+<br>the correct weighting is reflected on   the respective products.</td>
+<td>
+<br>Must Have</td>
+</tr><tr>
+<td>
+<br>UK Tariff Manager</td>
+<td>
+<br>only view quota definitions in the last   2 years</td>
+<td>
+<br>I won’t inundated with too much   information.</td>
+<td>
+<br>Should Have</td>
 </tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>view a list of all active quota   associations</td>
-<td><br>I can select and decide the next   appropriate actions to be performed.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>create a new quota associations</td>
-<td><br>I can present it on the system for   future association purposes.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>only view &amp; select future quota   associations</td>
-<td><br>I can’t edit quota associations that   has already been triggered.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>delete a future quota associations</td>
-<td><br>the system will not activate the   associated quota definitions incorrectly.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>have a workflow process</td>
-<td><br>all quota blocking changes can be   validated and approved before being sent to CDS.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>have the system validate relevant   business rules accordingly</td>
-<td><br>It won’t cause errors when validated in   CDS.</td>
-<td><br>Should Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>be able to view all available parent   and child definitions</td>
-<td><br>I can create new quota associations   easily and quickly.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>be able to enter/select the correct   relation type values</td>
-<td><br>the correct weighting is reflected on   the respective products.</td>
-<td><br>Must Have</td>
-</tr>
-<tr>
-<td><br>UK Tariff Manager</td>
-<td><br>only view quota definitions in the last   2 years</td>
-<td><br>I won’t inundated with too much   information.</td>
-<td><br>Should Have</td>
-</tr>
-
         </table>
       </div><h3 id="key-business-rules-quota-associations">Key business rules – quota associations</h3><div class="table-container">
         <table>
           <tr>
-<th><br>#</th>
-<th><br>Rule</th>
-<th><br>Notes</th>
-<th><br>MoSCoW</th>
+<th>
+<br>#</th>
+<th>
+<br>Rule</th>
+<th>
+<br>Notes</th>
+<th>
+<br>MoSCoW</th>
+</tr><tr>
+<td>
+<br>QA1</td>
+<td>
+<br>The association between two quota   definitions must be unique.</td>
+<td>
+<br>Required</td>
+<td>
+<br>Must   Have<br>     - This is in order that the sub   quota will only be drawn down once by a trader.</td>
+</tr><tr>
+<td>
+<br>QA2</td>
+<td>
+<br>The sub-quota’s validity period   must be entirely enclosed within the validity period of the main quota.</td>
+<td>
+<br>Required</td>
+<td>
+<br>Must   Have<br>     -    User will need an active main quota in order for association to be   assigned to it.</td>
+</tr><tr>
+<td>
+<br>QA3</td>
+<td>
+<br>When converted to the measurement   unit of the main quota, the volume of a sub-quota must always be lower than   or equal to the volume of the main quota.</td>
+<td>
+<br>Required</td>
+<td>
+<br>Must   Have<br>     - The main quota is designed to   have the max volume which will be drawdown-ed by the subs.</td>
+</tr><tr>
+<td>
+<br>QA4</td>
+<td>
+<br>Whenever a sub-quota receives a   coefficient, this has to be a strictly positive decimal number. When it is   not specified a value of 1 is always assumed.</td>
+<td>
+<br>Not Required</td>
+<td>
+<br>Won’t Have</td>
+</tr><tr>
+<td>
+<br>QA5</td>
+<td>
+<br>Whenever a sub-quota is defined   with the ‘equivalent’ type, it must have the same volume as the ones   associated with the parent quota. Moreover it must be defined with a   coefficient not equal to 1.</td>
+<td>
+<br>Required</td>
+<td>
+<br>Should   Have<br>     - Only NM can be set to 1. EQ   must be anything but set to 1.</td>
+</tr><tr>
+<td>
+<br>QA6</td>
+<td>
+<br>Sub-quotas associated with the   same main quota must have the same relation type.</td>
+<td>
+<br>Not   Required</td>
+<td>
+<br>Won’t   Have</td>
 </tr>
-<tr>
-<td><br>QA1</td>
-<td><br>The association between two quota   definitions must be unique.</td>
-<td><br>Required</td>
-<td><br>Must   Have<br>     - This is in order that the sub   quota will only be drawn down once by a trader.</td>
-</tr>
-<tr>
-<td><br>QA2</td>
-<td><br>The sub-quota’s validity period   must be entirely enclosed within the validity period of the main quota.</td>
-<td><br>Required</td>
-<td><br>Must   Have<br>     -    User will need an active main quota in order for association to be   assigned to it.</td>
-</tr>
-<tr>
-<td><br>QA3</td>
-<td><br>When converted to the measurement   unit of the main quota, the volume of a sub-quota must always be lower than   or equal to the volume of the main quota.</td>
-<td><br>Required</td>
-<td><br>Must   Have<br>     - The main quota is designed to   have the max volume which will be drawdown-ed by the subs.</td>
-</tr>
-<tr>
-<td><br>QA4</td>
-<td><br>Whenever a sub-quota receives a   coefficient, this has to be a strictly positive decimal number. When it is   not specified a value of 1 is always assumed.</td>
-<td><br>Not Required</td>
-<td><br>Won’t Have</td>
-</tr>
-<tr>
-<td><br>QA5</td>
-<td><br>Whenever a sub-quota is defined   with the ‘equivalent’ type, it must have the same volume as the ones   associated with the parent quota. Moreover it must be defined with a   coefficient not equal to 1.</td>
-<td><br>Required</td>
-<td><br>Should   Have<br>     - Only NM can be set to 1. EQ   must be anything but set to 1.</td>
-</tr>
-<tr>
-<td><br>QA6</td>
-<td><br>Sub-quotas associated with the   same main quota must have the same relation type.</td>
-<td><br>Not   Required</td>
-<td><br>Won’t   Have</td>
-</tr>
-
         </table>
       </div>
             

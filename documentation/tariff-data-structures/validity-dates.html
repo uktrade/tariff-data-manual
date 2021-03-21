@@ -4,7 +4,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="robots" content="noindex">
 
     <title>Validity dates - Tariff Data Manual</title>
 
@@ -12,17 +11,18 @@
 
     <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/validity-dates.html">
 
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="uktrade.github.io" />
+      <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta name="twitter:title" content="Validity dates - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/validity-dates.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
       <meta property="og:title" content="Validity dates" />
       <meta property="og:type" content="object" />
       <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/validity-dates.html" />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:domain" content="uktrade.github.io" />
-      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
-      <meta property="twitter:title" content="Validity dates - Tariff Data Manual" />
-      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/validity-dates.html" />
 
     
   </head>
@@ -50,32 +50,38 @@
       </div>
 
         <div id="toc-heading" class="toc-show fixedsticky">
-          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
             Table of contents <span class="toc-show__icon"></span>
-          </a>
+          </button>
         </div>
 
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
-            <div class="toc" data-module="table-of-contents">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
               <div class="search" data-module="search">
-  <form action="https://www.google.co.uk/search" method="get" role="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
-    <label class="govuk-label search__label" for="search">
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
       Search (via Google)
     </label>
-    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="govuk-button search__button">Search</button>
   </form>
   <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
     <div class="search-results__inner">
       <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
       <div class="search-results__content"></div>
     </div>
   </div>
 </div>
 
-              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
@@ -85,7 +91,7 @@
 <ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
   </li>
 </ul>
 <ul>
@@ -95,52 +101,17 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
   </li>
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
   </li>
 </ul>
 <ul>
@@ -158,20 +129,50 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
   </li>
 </ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
 </li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 <ul>
@@ -181,12 +182,17 @@
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
   </li>
 </ul>
 <ul>
@@ -196,12 +202,12 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 </li></ul>

@@ -4,7 +4,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="robots" content="noindex">
 
     <title>Measure types - Tariff Data Manual</title>
 
@@ -12,17 +11,18 @@
 
     <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measure-types.html">
 
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="uktrade.github.io" />
+      <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta name="twitter:title" content="Measure types - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measure-types.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
       <meta property="og:title" content="Measure types" />
       <meta property="og:type" content="object" />
       <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measure-types.html" />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:domain" content="uktrade.github.io" />
-      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
-      <meta property="twitter:title" content="Measure types - Tariff Data Manual" />
-      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measure-types.html" />
 
     
   </head>
@@ -50,32 +50,38 @@
       </div>
 
         <div id="toc-heading" class="toc-show fixedsticky">
-          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
             Table of contents <span class="toc-show__icon"></span>
-          </a>
+          </button>
         </div>
 
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
-            <div class="toc" data-module="table-of-contents">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
               <div class="search" data-module="search">
-  <form action="https://www.google.co.uk/search" method="get" role="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
-    <label class="govuk-label search__label" for="search">
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
       Search (via Google)
     </label>
-    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="govuk-button search__button">Search</button>
   </form>
   <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
     <div class="search-results__inner">
       <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
       <div class="search-results__content"></div>
     </div>
   </div>
 </div>
 
-              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
@@ -85,7 +91,7 @@
 <ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
   </li>
 </ul>
 <ul>
@@ -95,52 +101,17 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
   </li>
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
   </li>
 </ul>
 <ul>
@@ -158,20 +129,50 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
   </li>
 </ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
 </li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 <ul>
@@ -181,12 +182,17 @@
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
   </li>
 </ul>
 <ul>
@@ -196,12 +202,12 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 </li></ul>
@@ -261,7 +267,7 @@
 <ul>
 <li>This is even more important when one considers the continuing role that CHIEF will play during the dual running of the two border systems - CHIEF is unable to extend its measure type capability without programming: at least CDS can be configured to extend its measure type list.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93358003-df834300-f838-11ea-85ad-6556dfde87ce.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93358003-df834300-f838-11ea-85ad-6556dfde87ce.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93358003-df834300-f838-11ea-85ad-6556dfde87ce.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93358003-df834300-f838-11ea-85ad-6556dfde87ce.png" alt="image" /></a></p>
 <p>Any changes to measures, additions of new measures will need to be agreed by HMRC in advance – their function cannot fully be described in Taric: see anomaly of measure type 696 (used in steel safeguards) below.</p>
 <p><strong>Regulation groups, measure types and Box 36 of the SAD form</strong></p>
 
@@ -270,7 +276,7 @@
 <li>Well the measure type falls into the same bracket – the measure types have to be actively correlated to regulation group IDs by HMRC in CDS.</li>
 <li>Therefore, HMRC need to be involved in measure type creation.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93358894-ef4f5700-f839-11ea-9d85-75627fd21dd3.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93358894-ef4f5700-f839-11ea-9d85-75627fd21dd3.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93358894-ef4f5700-f839-11ea-9d85-75627fd21dd3.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93358894-ef4f5700-f839-11ea-9d85-75627fd21dd3.png" alt="image" /></a></p>
 <p><strong>Measure types &amp; responsibilities prior to the IP</strong></p>
 
 <ul>
@@ -286,16 +292,13 @@
           <tr>
 <th>Responsibility</th>
 <th>Instrument</th>
-</tr>
-<tr>
+</tr><tr>
 <td>The EU</td>
 <td>Third country (MFN) duties <br>    Tariff preferences in Trade Agreements  <br>   Quotas in Trade Agreements  <br>   WTO quotas  <br>   Autonomous tariff quotas  <br>   Trade Remedies &amp; safeguards   <br>  Duty suspensions <br>    Agricultural safeguards  <br>   Supplementary units     Credibility checks  <br>   Surveillance measures  <br>   Common prohibitions and restrictions</td>
-</tr>
-<tr>
+</tr><tr>
 <td>The   member states (HMRC for the UK)</td>
 <td>National   prohibitions and restrictions  <br>   VAT  <br>   Excise</td>
 </tr>
-
         </table>
       </div><p><strong>Measure types &amp; responsibilities post-IP</strong></p>
 
@@ -305,7 +308,7 @@
 <li>There are a number of other changes too, as per the notes column</li>
 <li>These groups of measure types are detailed in subsequent pages.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93359429-81eff600-f83a-11ea-8afe-8e3178d3af69.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359429-81eff600-f83a-11ea-8afe-8e3178d3af69.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93359429-81eff600-f83a-11ea-8afe-8e3178d3af69.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359429-81eff600-f83a-11ea-8afe-8e3178d3af69.png" alt="image" /></a></p>
 <p><strong>Measure type series</strong></p>
 
 <ul>
@@ -313,12 +316,12 @@
 <li>Each measure type is in turn associated with a single measure type series, in which additional properties of the measure type and its behaviour are stored, and the application logic for the measure types is sequenced.</li>
 <li>The measure type series are put in place to permit multiple means of overlaying measure types (and hence duties) via combination and exclusion.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93359967-135f6800-f83b-11ea-8d8e-c83987212500.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359967-135f6800-f83b-11ea-8d8e-c83987212500.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93359967-135f6800-f83b-11ea-8d8e-c83987212500.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359967-135f6800-f83b-11ea-8d8e-c83987212500.png" alt="image" /></a></p>
 
 <ul>
 <li>If modifying measure types were considered dangerous, then modifying measure type series is much more dangerous – it is highly recommended that any work that DIT to represent measure types series is to present a read-only view: there should be no capability to manage the measure type series, as the impact is potentially so damaging.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93359667-c24f7400-f83a-11ea-890f-23de31d1cd8f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359667-c24f7400-f83a-11ea-890f-23de31d1cd8f.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93359667-c24f7400-f83a-11ea-890f-23de31d1cd8f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359667-c24f7400-f83a-11ea-890f-23de31d1cd8f.png" alt="image" /></a></p>
 <p><strong>Measure types series - measure type combination field</strong></p>
 
 <ul>
@@ -330,16 +333,13 @@
           <tr>
 <th>Option</th>
 <th>Description</th>
-</tr>
-<tr>
+</tr><tr>
 <td>0</td>
 <td>Only   1 measure at export and 1 at import from the series</td>
-</tr>
-<tr>
+</tr><tr>
 <td>1</td>
 <td>All   measure types in the series to be considered</td>
 </tr>
-
         </table>
       </div><p><em>What this does not mean</em></p>
 
@@ -361,7 +361,7 @@
 <li>Hence, anti-dumping duties (series D) are overlaid on top of MFN duties (series C) - the to coexist, are additive and do not require selection by the trader.</li>
 </ul>
 <p><strong>Existing measure type series</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93360440-91bc0a00-f83b-11ea-8b5b-63b74d190a34.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93360440-91bc0a00-f83b-11ea-8b5b-63b74d190a34.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93360440-91bc0a00-f83b-11ea-8b5b-63b74d190a34.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93360440-91bc0a00-f83b-11ea-8b5b-63b74d190a34.png" alt="image" /></a></p>
 
 <ul>
 <li>This table is important in understanding how Taric-based border systems apply the measures that DIT has supplied.</li>
@@ -370,7 +370,7 @@
 <li>If there is no complete prohibition on the trade, then the next step is to work out if the trader has the necessary conditions in place, including certification or licensing, to allow the trade to pass (type series B). Again, if the necessary documentation or other conditions are not met, there calculating the import duty is somewhat academic.</li>
 <li>These two measure type series apply equally to imports / exports.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93360562-b617e680-f83b-11ea-9bbc-c82c043b8db9.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93360562-b617e680-f83b-11ea-9bbc-c82c043b8db9.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93360562-b617e680-f83b-11ea-9bbc-c82c043b8db9.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93360562-b617e680-f83b-11ea-9bbc-c82c043b8db9.png" alt="image" /></a></p>
 <p>Thirdly, after application of the prohibitions and restrictions, measure type series C is checked (applicable duty)</p>
 
 <ul>
@@ -390,86 +390,72 @@
 <th>Description</th>
 <th>Measures</th>
 <th>#</th>
-</tr>
-<tr>
+</tr><tr>
 <td>A</td>
 <td>Importation   and/or exportation prohibited</td>
 <td>277, 278, 481,   485</td>
 <td>3</td>
-</tr>
-<tr>
+</tr><tr>
 <td>B</td>
 <td>Entry   into free circulation or exportation subject to conditions</td>
 <td>410, 420, 464, 465, 467, 473, 474, 475, 476,   477, 478,   479, 482, 483, 705,   706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 722,   724, 725, 728, 730, 735, 740, 745, 746, 747, 748, 749, 750, 751, 755, 760,   761,   770, 771, 772, 773, 774, AHC, AIL, ATT, CEX, CHM, COE, COI, CVD, DPO, ECM, EHC, EQC,   EWP, HOP, HSE, IWP, PHC, PRE, PRT, QRC,   SFS</td>
 <td>58</td>
-</tr>
-<tr>
+</tr><tr>
 <td>C</td>
 <td>Applicable   duty</td>
 <td>103, 105, 106, 112, 115, 117,   119, 122, 123, 140, 141, 142, 143, 144, 145,   146, 147</td>
 <td>13</td>
-</tr>
-<tr>
+</tr><tr>
 <td>D</td>
 <td>Anti-dumping   or countervailing duties</td>
 <td>551, 552, 553, 554, 555, 561,   562, 564, 565, 566, 570</td>
 <td>11</td>
-</tr>
-<tr>
+</tr><tr>
 <td>E</td>
 <td>Levies,   export refunds and other agricultural amounts</td>
 <td>674, 680, 681, 683, 684, 685, 686,   687, 688</td>
 <td>1</td>
-</tr>
-<tr>
+</tr><tr>
 <td>F</td>
 <td>Additional   duty on sugar, flour</td>
 <td>672, 673</td>
 <td>2</td>
-</tr>
-<tr>
+</tr><tr>
 <td>J</td>
 <td>Countervailing   charge</td>
 <td>690, 695, 696</td>
 <td>2</td>
-</tr>
-<tr>
+</tr><tr>
 <td>M</td>
 <td>Unit   price, standard import value, representative price (poultry, sugar)</td>
 <td>488, 489, 490</td>
 <td>3</td>
-</tr>
-<tr>
+</tr><tr>
 <td>N</td>
 <td>Posterior   surveillance</td>
 <td>430, 431,   440, 442,   445, 447,   450, 455, 456, 457, 460, 461, 462, 463, 468, 469, 470, 471, 472</td>
 <td>4</td>
-</tr>
-<tr>
+</tr><tr>
 <td>O</td>
 <td>Supplementary   unit</td>
 <td>109, 110</td>
 <td>2</td>
-</tr>
-<tr>
+</tr><tr>
 <td>P</td>
 <td>VAT   (HMRC responsibility)</td>
 <td>305, VTA, VTE, VTS, VTZ</td>
 <td>5</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Q</td>
 <td>Excises   (HMRC responsibility)</td>
 <td>306, DAA, DAB, DAC, DAE, DAI,   DBA, DBB, DBC, DBE, DBI, DCA, DCC, DCE, DCH, DDA, DDB, DDC, DDD, DDE, DDF,   DDG, DDJ, DEA, DFA, DFB, DFC, DGC, DHA, DHC, DHE, EAA, EAE, EBA, EBB, EBE,   EBJ, EDA, EDB, EDE, EDJ, EEA, EEF, EFA, EFJ, EGA, EGB, EGJ, EHI, EIA, EIB,   EIC, EID, EIE, EIJ, EXA, EXB, EXC, EXD, FAA, FAE, FAI, FBC, FBG, LAA, LAE,   LBA, LBB, LBE, LBJ, LDA, LEA, LEF, LFA, LGJ</td>
 <td>♾</td>
-</tr>
-<tr>
+</tr><tr>
 <td>S</td>
 <td>Supplementary   amount</td>
 <td>651, 652, 653, 654,   655, 656, 657, 658</td>
 <td>4</td>
 </tr>
-
         </table>
       </div><p>This table illustrates, per measure series, the measure types that have not been actively end-dated. Bold indicates measures for which there is at last one measure in Jan 2020 (plus the provisional anti-dumping and countervailing duties, which happen to have no measures currently, but remain active).</p>
 <p><strong>Context - what does this mean?</strong></p>
@@ -478,21 +464,21 @@
 <li>First thing to say – this is a useful term invented by the project team: it is not a Taric term, but is a handy short hand for what it actually means</li>
 <li>Here is a Taric sentence that helps to explain context: this is taken from Taric Business Processing rule ME1:</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93361328-a77dff00-f83c-11ea-9b72-474e5a45159b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93361328-a77dff00-f83c-11ea-9b72-474e5a45159b.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93361328-a77dff00-f83c-11ea-9b72-474e5a45159b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93361328-a77dff00-f83c-11ea-9b72-474e5a45159b.png" alt="image" /></a></p>
 
 <ul>
 <li>No two measures that match on all of these fields can coexist – according to this rule, if just one field differs, then a second measure can be inserted.</li>
 <li>In fact, the stated rule is not as strict as reality – if there is any crossover of period of application (start &amp; end dates), then the measures will clash.</li>
 <li>In addition – conflict checking must also apply all the way up and down a commodity code hierarchy – this is explained below in the pages re: ME32</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93361439-c9778180-f83c-11ea-9091-fdbff7079021.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93361439-c9778180-f83c-11ea-9091-fdbff7079021.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93361439-c9778180-f83c-11ea-9091-fdbff7079021.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93361439-c9778180-f83c-11ea-9091-fdbff7079021.png" alt="image" /></a></p>
 <p><strong>The measure type 696 anomaly</strong></p>
 
 <ul>
 <li>Measure type 696 is the measure used to impose safeguards on imports of steel from multiple countries around the world, in an attempt to stabilise the flow of steel goods coming into the Union as a result of the USA’s imposition of similar safeguards: the upset to world trade flows caused such a glut of cheep steel to land on EU shores, that the EU had no option other than to follow suit.</li>
 <li>Safeguards are made up of two elements: a 25% safeguard additional duty, and a non-preferential quota, which essentially waives the safeguard.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93361731-18bdb200-f83d-11ea-8013-adb5c1cd7a11.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93361731-18bdb200-f83d-11ea-8013-adb5c1cd7a11.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93361731-18bdb200-f83d-11ea-8013-adb5c1cd7a11.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93361731-18bdb200-f83d-11ea-8013-adb5c1cd7a11.png" alt="image" /></a></p>
 
 <ul>
 <li>According to the additive rules of thumb re: measure type series, it is unclear by what mechanism the quota (type 122) can cancel out the additional duties (safeguard).</li>
@@ -503,65 +489,54 @@
           <tr>
 <th>Field</th>
 <th></th>
-</tr>
-<tr>
+</tr><tr>
 <td>measure.type.id</td>
 <td>The unique ID of the measure type, as referenced in the   measure. This is always exactly 3 digits long. For measure types sourced from   the EU, this is a numeric string; for UK national measures (VAT, excise and   national P&amp;R, this is a 3-digit alphabetical string).</td>
-</tr>
-<tr>
+</tr><tr>
 <td>validity.start.date</td>
 <td>The date from which a measure type is valid</td>
-</tr>
-<tr>
+</tr><tr>
 <td>validity.end.date</td>
 <td>The date on which a measure type is terminated –   suggestion is that this gets left as NULL unless absolutely required to   change</td>
-</tr>
-<tr>
+</tr><tr>
 <td>trade.movement.code</td>
 <td>Determines if the measure type is intended to be attached   to an import or export (or both). Possible values are:          0        Import – majority of measure types concern import, as the tariff        primarily deals with import      1        Export – most of these are export controls (e.g. sanctions)      2        Import/export – there are very few measure types which are applicable to        both import and export</td>
-</tr>
-<tr>
+</tr><tr>
 <td>origin.dest.code</td>
 <td>This field is an exact duplicate of trade.movement.code   (above), but it is required in Taric. Also, ignore the definition of the   options that are listed in the Taric Elements guide: it is wrong – there are   three options that are possible, as above:          0        Import      1        Export      2        Import/export – (omitted in the Elements guide)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>priority.code</td>
 <td>This appears to be a redundant field, as literally all   EU-sourced measure types have a priority.code of “1” – if we are managing   measure types in the Tariff Application, we should use always set the value   to 1. There are national measure types (set in CHIEF) that have a   priority.code of 5.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>measure.component.applicable.code</td>
 <td>Determines if measure components (or measure condition   components) can be attached to this measure type – things like 3rd country   duty (103) and preferential tariff quota (143) require measure components,   whereas things like import / export controls must not have them (e.g.   Veterinary control 410).     This rule needs to be checked when creating measures</td>
-</tr>
-<tr>
+</tr><tr>
 <td>order.number.capture.code</td>
 <td>Determines whether a quota order number should be assigned   to a measure of this type: there are two options:     1 Mandatory – e.g. 122 (Non preferential quota), 143   (Preferential quota)     2 Not permitted – e.g. 142 (Tariff preference)     This rule needs to be checked when creating measures</td>
-</tr>
-<tr>
+</tr><tr>
 <td>measure.explosion.level</td>
 <td>This field determines how far down the hierarchy a measure   can be ‘exploded’ according to the less than helpful elements guide.   Essentially this means that the number of digits in the hierarchy to which   measures of this type can be assigned.     Always set this to 10 for import measures and to 8 for   export measures (in declaring exports, traders are only required to declare   at 8 digit level).</td>
-</tr>
-<tr>
+</tr><tr>
 <td>measure.type.series.id</td>
 <td>The ID of the series – single alphabetical character; acts   as foreign key into the measure type series table, where additional   properties that relate to the execution of the measure types is set.</td>
 </tr>
-
         </table>
       </div><h2 id="logical-view-of-measure-types">Logical view of measure types</h2><p><strong>Primary duty-bearing measures – logical layout</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" alt="image" /></a></p>
 <p><strong>Trade remedy-related measures – logical layout</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" alt="image" /></a></p>
 <p><strong>SAD guidance &amp; credibility checks, monitoring</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93370858-5de7e100-f849-11ea-8cb8-a11d1e854f19.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370858-5de7e100-f849-11ea-8cb8-a11d1e854f19.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370858-5de7e100-f849-11ea-8cb8-a11d1e854f19.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370858-5de7e100-f849-11ea-8cb8-a11d1e854f19.png" alt="image" /></a></p>
 <p><strong>Agri measures</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93370873-62ac9500-f849-11ea-86d0-177fb380055d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370873-62ac9500-f849-11ea-86d0-177fb380055d.png" alt="image" /></a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93370899-693b0c80-f849-11ea-917c-b1fd3d7d6f57.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370899-693b0c80-f849-11ea-917c-b1fd3d7d6f57.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370873-62ac9500-f849-11ea-86d0-177fb380055d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370873-62ac9500-f849-11ea-86d0-177fb380055d.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370899-693b0c80-f849-11ea-917c-b1fd3d7d6f57.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370899-693b0c80-f849-11ea-917c-b1fd3d7d6f57.png" alt="image" /></a></p>
 <p><strong>Why there are so many import control measures … ME32</strong></p>
 
 <blockquote>
 <p>&ldquo;There may be no overlap in time with other measure occurrences with a goods code in the same nomenclature hierarchy which references the same measure type, geo area, order number, additional code and reduction indicator. This rule is not applicable for Meursing additional codes.&rdquo;</p>
 </blockquote>
 <p><strong>Jams, fruit jellies, marmalades …</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93370932-75bf6500-f849-11ea-8b78-860bc4d152b1.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370932-75bf6500-f849-11ea-8b78-860bc4d152b1.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93370932-75bf6500-f849-11ea-8b78-860bc4d152b1.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370932-75bf6500-f849-11ea-8b78-860bc4d152b1.png" alt="image" /></a></p>
 
 <ul>
 <li>As a tariff manager, I have been asked to create a new measure for ERGA OMNES of type “Import control” at level 4 “with a sugar content exceeding 30% by weight” – </li>
@@ -578,161 +553,161 @@
 <li>The Northern Ireland protocol is looking to bring in a revolutionary way of managing commodity codes, which may see UK commodity codes being represented as additional codes – if this is the case, then the case for this tool grows.</li>
 <li>Lists of all existing relationships of the following page.</li>
 </ul>
-<svg width="456pt" height="323pt"
- viewBox="0.00 0.00 456.00 323.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_151" class="graph" transform="scale(1 1) rotate(0) translate(4 319)">
+<svg width="457pt" height="323pt"
+ viewBox="0.00 0.00 457.00 323.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_212" class="graph" transform="scale(1 1) rotate(0) translate(4 319)">
 <title>Database</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-319 452,-319 452,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-319 453,-319 453,4 -4,4"/>
 <!-- Measure Types -->
-<g id="table_212" class="node">
+<g id="table_444" class="node">
 <title>Measure Types</title>
-<polygon fill="none" stroke="#000000" points="222.5,-294 222.5,-310 439.5,-310 439.5,-294 222.5,-294"/>
-<text text-anchor="start" x="299.5" y="-299.8" font-family="Arial" font-size="9.00" fill="#000000">Measure Types</text>
-<polygon fill="none" stroke="#000000" points="222.5,-278 222.5,-294 395.5,-294 395.5,-278 222.5,-278"/>
-<text text-anchor="start" x="273" y="-283.8" font-family="Arial" font-size="9.00" fill="#000000">measure_type_id</text>
-<polygon fill="none" stroke="#000000" points="395.5,-278 395.5,-294 420.5,-294 420.5,-278 395.5,-278"/>
-<text text-anchor="start" x="403" y="-283.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="420.5,-278 420.5,-294 439.5,-294 439.5,-278 420.5,-278"/>
-<text text-anchor="start" x="423.5" y="-283.8" font-family="Arial" font-size="9.00" fill="#000000">PK</text>
-<polygon fill="none" stroke="#000000" points="222.5,-262 222.5,-278 395.5,-278 395.5,-262 222.5,-262"/>
-<text text-anchor="start" x="271.5" y="-267.8" font-family="Arial" font-size="9.00" fill="#000000">validity_start_date</text>
-<polygon fill="none" stroke="#000000" points="395.5,-262 395.5,-278 420.5,-278 420.5,-262 395.5,-262"/>
-<text text-anchor="start" x="398.5" y="-267.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
-<polygon fill="none" stroke="#000000" points="420.5,-262 420.5,-278 439.5,-278 439.5,-262 420.5,-262"/>
-<polygon fill="none" stroke="#000000" points="222.5,-246 222.5,-262 395.5,-262 395.5,-246 222.5,-246"/>
-<text text-anchor="start" x="272.5" y="-251.8" font-family="Arial" font-size="9.00" fill="#000000">validity_end_date</text>
-<polygon fill="none" stroke="#000000" points="395.5,-246 395.5,-262 420.5,-262 420.5,-246 395.5,-246"/>
-<text text-anchor="start" x="398.5" y="-251.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
-<polygon fill="none" stroke="#000000" points="420.5,-246 420.5,-262 439.5,-262 439.5,-246 420.5,-246"/>
-<polygon fill="none" stroke="#000000" points="222.5,-230 222.5,-246 395.5,-246 395.5,-230 222.5,-230"/>
-<text text-anchor="start" x="261.5" y="-235.8" font-family="Arial" font-size="9.00" fill="#000000">trade_movement_code</text>
-<polygon fill="none" stroke="#000000" points="395.5,-230 395.5,-246 420.5,-246 420.5,-230 395.5,-230"/>
-<text text-anchor="start" x="403" y="-235.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="420.5,-230 420.5,-246 439.5,-246 439.5,-230 420.5,-230"/>
-<polygon fill="none" stroke="#000000" points="222.5,-214 222.5,-230 395.5,-230 395.5,-214 222.5,-214"/>
-<text text-anchor="start" x="282" y="-219.8" font-family="Arial" font-size="9.00" fill="#000000">priority_code</text>
-<polygon fill="none" stroke="#000000" points="395.5,-214 395.5,-230 420.5,-230 420.5,-214 395.5,-214"/>
-<text text-anchor="start" x="403" y="-219.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="420.5,-214 420.5,-230 439.5,-230 439.5,-214 420.5,-214"/>
-<polygon fill="none" stroke="#000000" points="222.5,-198 222.5,-214 395.5,-214 395.5,-198 222.5,-198"/>
-<text text-anchor="start" x="225.5" y="-203.8" font-family="Arial" font-size="9.00" fill="#000000">measure_component_applicability_code</text>
-<polygon fill="none" stroke="#000000" points="395.5,-198 395.5,-214 420.5,-214 420.5,-198 395.5,-198"/>
-<text text-anchor="start" x="403" y="-203.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="420.5,-198 420.5,-214 439.5,-214 439.5,-198 420.5,-198"/>
-<polygon fill="none" stroke="#000000" points="222.5,-182 222.5,-198 395.5,-198 395.5,-182 222.5,-182"/>
-<text text-anchor="start" x="273" y="-187.8" font-family="Arial" font-size="9.00" fill="#000000">origin_dest_code</text>
-<polygon fill="none" stroke="#000000" points="395.5,-182 395.5,-198 420.5,-198 420.5,-182 395.5,-182"/>
-<text text-anchor="start" x="403" y="-187.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="420.5,-182 420.5,-198 439.5,-198 439.5,-182 420.5,-182"/>
-<polygon fill="none" stroke="#000000" points="222.5,-166 222.5,-182 395.5,-182 395.5,-166 222.5,-166"/>
-<text text-anchor="start" x="248.5" y="-171.8" font-family="Arial" font-size="9.00" fill="#000000">order_number_capture_code</text>
-<polygon fill="none" stroke="#000000" points="395.5,-166 395.5,-182 420.5,-182 420.5,-166 395.5,-166"/>
-<text text-anchor="start" x="403" y="-171.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="420.5,-166 420.5,-182 439.5,-182 439.5,-166 420.5,-166"/>
-<polygon fill="none" stroke="#000000" points="222.5,-150 222.5,-166 395.5,-166 395.5,-150 222.5,-150"/>
-<text text-anchor="start" x="256" y="-155.8" font-family="Arial" font-size="9.00" fill="#000000">measure_explosion_level</text>
-<polygon fill="none" stroke="#000000" points="395.5,-150 395.5,-166 420.5,-166 420.5,-150 395.5,-150"/>
-<text text-anchor="start" x="403" y="-155.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="420.5,-150 420.5,-166 439.5,-166 439.5,-150 420.5,-150"/>
-<polygon fill="none" stroke="#000000" points="222.5,-134 222.5,-150 395.5,-150 395.5,-134 222.5,-134"/>
-<text text-anchor="start" x="258" y="-139.8" font-family="Arial" font-size="9.00" fill="#000000">measure_type_series_id</text>
-<polygon fill="none" stroke="#000000" points="395.5,-134 395.5,-150 420.5,-150 420.5,-134 395.5,-134"/>
-<text text-anchor="start" x="403" y="-139.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="420.5,-134 420.5,-150 439.5,-150 439.5,-134 420.5,-134"/>
-<text text-anchor="start" x="424" y="-139.8" font-family="Arial" font-size="9.00" fill="#000000">FK</text>
-<polygon fill="none" stroke="#000000" points="221,-133 221,-311 440,-311 440,-133 221,-133"/>
+<polygon fill="none" stroke="black" points="223.5,-294 223.5,-310 440.5,-310 440.5,-294 223.5,-294"/>
+<text text-anchor="start" x="300" y="-299.8" font-family="Arial" font-size="9.00">Measure Types</text>
+<polygon fill="none" stroke="black" points="223.5,-278 223.5,-294 396.5,-294 396.5,-278 223.5,-278"/>
+<text text-anchor="start" x="274" y="-283.8" font-family="Arial" font-size="9.00">measure_type_id</text>
+<polygon fill="none" stroke="black" points="396.5,-278 396.5,-294 421.5,-294 421.5,-278 396.5,-278"/>
+<text text-anchor="start" x="404" y="-283.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="421.5,-278 421.5,-294 440.5,-294 440.5,-278 421.5,-278"/>
+<text text-anchor="start" x="424.5" y="-283.8" font-family="Arial" font-size="9.00">PK</text>
+<polygon fill="none" stroke="black" points="223.5,-262 223.5,-278 396.5,-278 396.5,-262 223.5,-262"/>
+<text text-anchor="start" x="272.5" y="-267.8" font-family="Arial" font-size="9.00">validity_start_date</text>
+<polygon fill="none" stroke="black" points="396.5,-262 396.5,-278 421.5,-278 421.5,-262 396.5,-262"/>
+<text text-anchor="start" x="399.5" y="-267.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="421.5,-262 421.5,-278 440.5,-278 440.5,-262 421.5,-262"/>
+<polygon fill="none" stroke="black" points="223.5,-246 223.5,-262 396.5,-262 396.5,-246 223.5,-246"/>
+<text text-anchor="start" x="273.5" y="-251.8" font-family="Arial" font-size="9.00">validity_end_date</text>
+<polygon fill="none" stroke="black" points="396.5,-246 396.5,-262 421.5,-262 421.5,-246 396.5,-246"/>
+<text text-anchor="start" x="399.5" y="-251.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="421.5,-246 421.5,-262 440.5,-262 440.5,-246 421.5,-246"/>
+<polygon fill="none" stroke="black" points="223.5,-230 223.5,-246 396.5,-246 396.5,-230 223.5,-230"/>
+<text text-anchor="start" x="262.5" y="-235.8" font-family="Arial" font-size="9.00">trade_movement_code</text>
+<polygon fill="none" stroke="black" points="396.5,-230 396.5,-246 421.5,-246 421.5,-230 396.5,-230"/>
+<text text-anchor="start" x="404" y="-235.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="421.5,-230 421.5,-246 440.5,-246 440.5,-230 421.5,-230"/>
+<polygon fill="none" stroke="black" points="223.5,-214 223.5,-230 396.5,-230 396.5,-214 223.5,-214"/>
+<text text-anchor="start" x="283" y="-219.8" font-family="Arial" font-size="9.00">priority_code</text>
+<polygon fill="none" stroke="black" points="396.5,-214 396.5,-230 421.5,-230 421.5,-214 396.5,-214"/>
+<text text-anchor="start" x="404" y="-219.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="421.5,-214 421.5,-230 440.5,-230 440.5,-214 421.5,-214"/>
+<polygon fill="none" stroke="black" points="223.5,-198 223.5,-214 396.5,-214 396.5,-198 223.5,-198"/>
+<text text-anchor="start" x="226.5" y="-203.8" font-family="Arial" font-size="9.00">measure_component_applicability_code</text>
+<polygon fill="none" stroke="black" points="396.5,-198 396.5,-214 421.5,-214 421.5,-198 396.5,-198"/>
+<text text-anchor="start" x="404" y="-203.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="421.5,-198 421.5,-214 440.5,-214 440.5,-198 421.5,-198"/>
+<polygon fill="none" stroke="black" points="223.5,-182 223.5,-198 396.5,-198 396.5,-182 223.5,-182"/>
+<text text-anchor="start" x="274" y="-187.8" font-family="Arial" font-size="9.00">origin_dest_code</text>
+<polygon fill="none" stroke="black" points="396.5,-182 396.5,-198 421.5,-198 421.5,-182 396.5,-182"/>
+<text text-anchor="start" x="404" y="-187.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="421.5,-182 421.5,-198 440.5,-198 440.5,-182 421.5,-182"/>
+<polygon fill="none" stroke="black" points="223.5,-166 223.5,-182 396.5,-182 396.5,-166 223.5,-166"/>
+<text text-anchor="start" x="249.5" y="-171.8" font-family="Arial" font-size="9.00">order_number_capture_code</text>
+<polygon fill="none" stroke="black" points="396.5,-166 396.5,-182 421.5,-182 421.5,-166 396.5,-166"/>
+<text text-anchor="start" x="404" y="-171.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="421.5,-166 421.5,-182 440.5,-182 440.5,-166 421.5,-166"/>
+<polygon fill="none" stroke="black" points="223.5,-150 223.5,-166 396.5,-166 396.5,-150 223.5,-150"/>
+<text text-anchor="start" x="257" y="-155.8" font-family="Arial" font-size="9.00">measure_explosion_level</text>
+<polygon fill="none" stroke="black" points="396.5,-150 396.5,-166 421.5,-166 421.5,-150 396.5,-150"/>
+<text text-anchor="start" x="404" y="-155.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="421.5,-150 421.5,-166 440.5,-166 440.5,-150 421.5,-150"/>
+<polygon fill="none" stroke="black" points="223.5,-134 223.5,-150 396.5,-150 396.5,-134 223.5,-134"/>
+<text text-anchor="start" x="259" y="-139.8" font-family="Arial" font-size="9.00">measure_type_series_id</text>
+<polygon fill="none" stroke="black" points="396.5,-134 396.5,-150 421.5,-150 421.5,-134 396.5,-134"/>
+<text text-anchor="start" x="404" y="-139.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="421.5,-134 421.5,-150 440.5,-150 440.5,-134 421.5,-134"/>
+<text text-anchor="start" x="425" y="-139.8" font-family="Arial" font-size="9.00">FK</text>
+<polygon fill="none" stroke="black" points="222,-133 222,-311 441,-311 441,-133 222,-133"/>
 </g>
 <!-- Additional Code Type Measure Types -->
-<g id="table_928" class="node">
+<g id="table_747" class="node">
 <title>Additional Code Type Measure Types</title>
-<polygon fill="none" stroke="#000000" points="9.5,-208 9.5,-224 168.5,-224 168.5,-208 9.5,-208"/>
-<text text-anchor="start" x="12.5" y="-213.8" font-family="Arial" font-size="9.00" fill="#000000">Additional Code Type Measure Types</text>
-<polygon fill="none" stroke="#000000" points="9.5,-192 9.5,-208 121.5,-208 121.5,-192 9.5,-192"/>
-<text text-anchor="start" x="29.5" y="-197.8" font-family="Arial" font-size="9.00" fill="#000000">measure_type_id</text>
-<polygon fill="none" stroke="#000000" points="121.5,-192 121.5,-208 148.5,-208 148.5,-192 121.5,-192"/>
-<text text-anchor="start" x="130" y="-197.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="148.5,-192 148.5,-208 168.5,-208 168.5,-192 148.5,-192"/>
-<text text-anchor="start" x="152.5" y="-197.8" font-family="Arial" font-size="9.00" fill="#000000">FK</text>
-<polygon fill="none" stroke="#000000" points="9.5,-176 9.5,-192 121.5,-192 121.5,-176 9.5,-176"/>
-<text text-anchor="start" x="14.5" y="-181.8" font-family="Arial" font-size="9.00" fill="#000000">additional_code_type_id</text>
-<polygon fill="none" stroke="#000000" points="121.5,-176 121.5,-192 148.5,-192 148.5,-176 121.5,-176"/>
-<text text-anchor="start" x="130" y="-181.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="148.5,-176 148.5,-192 168.5,-192 168.5,-176 148.5,-176"/>
-<text text-anchor="start" x="152.5" y="-181.8" font-family="Arial" font-size="9.00" fill="#000000">FK</text>
-<polygon fill="none" stroke="#000000" points="9.5,-160 9.5,-176 121.5,-176 121.5,-160 9.5,-160"/>
-<text text-anchor="start" x="28" y="-165.8" font-family="Arial" font-size="9.00" fill="#000000">validity_start_date</text>
-<polygon fill="none" stroke="#000000" points="121.5,-160 121.5,-176 148.5,-176 148.5,-160 121.5,-160"/>
-<text text-anchor="start" x="125.5" y="-165.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
-<polygon fill="none" stroke="#000000" points="148.5,-160 148.5,-176 168.5,-176 168.5,-160 148.5,-160"/>
-<polygon fill="none" stroke="#000000" points="9.5,-144 9.5,-160 121.5,-160 121.5,-144 9.5,-144"/>
-<text text-anchor="start" x="29" y="-149.8" font-family="Arial" font-size="9.00" fill="#000000">validity_end_date</text>
-<polygon fill="none" stroke="#000000" points="121.5,-144 121.5,-160 148.5,-160 148.5,-144 121.5,-144"/>
-<text text-anchor="start" x="125.5" y="-149.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
-<polygon fill="none" stroke="#000000" points="148.5,-144 148.5,-160 168.5,-160 168.5,-144 148.5,-144"/>
-<polygon fill="none" stroke="#000000" points="8,-143 8,-225 169,-225 169,-143 8,-143"/>
+<polygon fill="none" stroke="black" points="9,-208 9,-224 169,-224 169,-208 9,-208"/>
+<text text-anchor="start" x="12" y="-213.8" font-family="Arial" font-size="9.00">Additional Code Type Measure Types</text>
+<polygon fill="none" stroke="black" points="9,-192 9,-208 121,-208 121,-192 9,-192"/>
+<text text-anchor="start" x="29" y="-197.8" font-family="Arial" font-size="9.00">measure_type_id</text>
+<polygon fill="none" stroke="black" points="121,-192 121,-208 148,-208 148,-192 121,-192"/>
+<text text-anchor="start" x="129.5" y="-197.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="148,-192 148,-208 169,-208 169,-192 148,-192"/>
+<text text-anchor="start" x="152.5" y="-197.8" font-family="Arial" font-size="9.00">FK</text>
+<polygon fill="none" stroke="black" points="9,-176 9,-192 121,-192 121,-176 9,-176"/>
+<text text-anchor="start" x="14" y="-181.8" font-family="Arial" font-size="9.00">additional_code_type_id</text>
+<polygon fill="none" stroke="black" points="121,-176 121,-192 148,-192 148,-176 121,-176"/>
+<text text-anchor="start" x="129.5" y="-181.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="148,-176 148,-192 169,-192 169,-176 148,-176"/>
+<text text-anchor="start" x="152.5" y="-181.8" font-family="Arial" font-size="9.00">FK</text>
+<polygon fill="none" stroke="black" points="9,-160 9,-176 121,-176 121,-160 9,-160"/>
+<text text-anchor="start" x="27.5" y="-165.8" font-family="Arial" font-size="9.00">validity_start_date</text>
+<polygon fill="none" stroke="black" points="121,-160 121,-176 148,-176 148,-160 121,-160"/>
+<text text-anchor="start" x="125" y="-165.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="148,-160 148,-176 169,-176 169,-160 148,-160"/>
+<polygon fill="none" stroke="black" points="9,-144 9,-160 121,-160 121,-144 9,-144"/>
+<text text-anchor="start" x="28.5" y="-149.8" font-family="Arial" font-size="9.00">validity_end_date</text>
+<polygon fill="none" stroke="black" points="121,-144 121,-160 148,-160 148,-144 121,-144"/>
+<text text-anchor="start" x="125" y="-149.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="148,-144 148,-160 169,-160 169,-144 148,-144"/>
+<polygon fill="none" stroke="black" points="8,-143 8,-225 170,-225 170,-143 8,-143"/>
 </g>
 <!-- Additional Code Type Measure Types&#45;&gt;Measure Types -->
-<g id="database_151_edge2" class="edge">
+<g id="database_212_edge2" class="edge">
 <title>Additional Code Type Measure Types:e&#45;&gt;Measure Types:w</title>
-<path fill="none" stroke="#000000" d="M168.5,-200C210.8117,-200 181.5827,-275.5859 214.9518,-285.0342"/>
-<polygon fill="#000000" stroke="#000000" points="214.7275,-287.6518 222.5,-286 215.3938,-282.4443 214.7275,-287.6518"/>
+<path fill="none" stroke="black" d="M170,-200C211.98,-200 182.03,-275.59 215.02,-285.03"/>
+<polygon fill="black" stroke="black" points="214.73,-287.64 222.5,-286 215.4,-282.44 214.73,-287.64"/>
 </g>
 <!-- Additional Code Types -->
-<g id="table_505" class="node">
+<g id="table_528" class="node">
 <title>Additional Code Types</title>
-<polygon fill="none" stroke="#000000" points="254.5,-90 254.5,-106 406.5,-106 406.5,-90 254.5,-90"/>
-<text text-anchor="start" x="284" y="-95.8" font-family="Arial" font-size="9.00" fill="#000000">Additional Code Types</text>
-<polygon fill="none" stroke="#000000" points="254.5,-74 254.5,-90 362.5,-90 362.5,-74 254.5,-74"/>
-<text text-anchor="start" x="257.5" y="-79.8" font-family="Arial" font-size="9.00" fill="#000000">additional_code_type_id</text>
-<polygon fill="none" stroke="#000000" points="362.5,-74 362.5,-90 387.5,-90 387.5,-74 362.5,-74"/>
-<text text-anchor="start" x="370" y="-79.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="387.5,-74 387.5,-90 406.5,-90 406.5,-74 387.5,-74"/>
-<text text-anchor="start" x="390.5" y="-79.8" font-family="Arial" font-size="9.00" fill="#000000">PK</text>
-<polygon fill="none" stroke="#000000" points="254.5,-58 254.5,-74 362.5,-74 362.5,-58 254.5,-58"/>
-<text text-anchor="start" x="271" y="-63.8" font-family="Arial" font-size="9.00" fill="#000000">validity_start_date</text>
-<polygon fill="none" stroke="#000000" points="362.5,-58 362.5,-74 387.5,-74 387.5,-58 362.5,-58"/>
-<text text-anchor="start" x="365.5" y="-63.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
-<polygon fill="none" stroke="#000000" points="387.5,-58 387.5,-74 406.5,-74 406.5,-58 387.5,-58"/>
-<polygon fill="none" stroke="#000000" points="254.5,-42 254.5,-58 362.5,-58 362.5,-42 254.5,-42"/>
-<text text-anchor="start" x="272" y="-47.8" font-family="Arial" font-size="9.00" fill="#000000">validity_end_date</text>
-<polygon fill="none" stroke="#000000" points="362.5,-42 362.5,-58 387.5,-58 387.5,-42 362.5,-42"/>
-<text text-anchor="start" x="365.5" y="-47.8" font-family="Arial" font-size="9.00" fill="#000000">date</text>
-<polygon fill="none" stroke="#000000" points="387.5,-42 387.5,-58 406.5,-58 406.5,-42 387.5,-42"/>
-<polygon fill="none" stroke="#000000" points="254.5,-26 254.5,-42 362.5,-42 362.5,-26 254.5,-26"/>
-<text text-anchor="start" x="273" y="-31.8" font-family="Arial" font-size="9.00" fill="#000000">application_code</text>
-<polygon fill="none" stroke="#000000" points="362.5,-26 362.5,-42 387.5,-42 387.5,-26 362.5,-26"/>
-<text text-anchor="start" x="370" y="-31.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="387.5,-26 387.5,-42 406.5,-42 406.5,-26 387.5,-26"/>
-<polygon fill="none" stroke="#000000" points="254.5,-10 254.5,-26 362.5,-26 362.5,-10 254.5,-10"/>
-<text text-anchor="start" x="258.5" y="-15.8" font-family="Arial" font-size="9.00" fill="#000000">meursing_table_plan_id</text>
-<polygon fill="none" stroke="#000000" points="362.5,-10 362.5,-26 387.5,-26 387.5,-10 362.5,-10"/>
-<text text-anchor="start" x="370" y="-15.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="387.5,-10 387.5,-26 406.5,-26 406.5,-10 387.5,-10"/>
-<polygon fill="none" stroke="#000000" points="253.5,-9 253.5,-107 407.5,-107 407.5,-9 253.5,-9"/>
+<polygon fill="none" stroke="black" points="255.5,-90 255.5,-106 407.5,-106 407.5,-90 255.5,-90"/>
+<text text-anchor="start" x="284.5" y="-95.8" font-family="Arial" font-size="9.00">Additional Code Types</text>
+<polygon fill="none" stroke="black" points="255.5,-74 255.5,-90 363.5,-90 363.5,-74 255.5,-74"/>
+<text text-anchor="start" x="258.5" y="-79.8" font-family="Arial" font-size="9.00">additional_code_type_id</text>
+<polygon fill="none" stroke="black" points="363.5,-74 363.5,-90 388.5,-90 388.5,-74 363.5,-74"/>
+<text text-anchor="start" x="371" y="-79.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="388.5,-74 388.5,-90 407.5,-90 407.5,-74 388.5,-74"/>
+<text text-anchor="start" x="391.5" y="-79.8" font-family="Arial" font-size="9.00">PK</text>
+<polygon fill="none" stroke="black" points="255.5,-58 255.5,-74 363.5,-74 363.5,-58 255.5,-58"/>
+<text text-anchor="start" x="272" y="-63.8" font-family="Arial" font-size="9.00">validity_start_date</text>
+<polygon fill="none" stroke="black" points="363.5,-58 363.5,-74 388.5,-74 388.5,-58 363.5,-58"/>
+<text text-anchor="start" x="366.5" y="-63.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="388.5,-58 388.5,-74 407.5,-74 407.5,-58 388.5,-58"/>
+<polygon fill="none" stroke="black" points="255.5,-42 255.5,-58 363.5,-58 363.5,-42 255.5,-42"/>
+<text text-anchor="start" x="273" y="-47.8" font-family="Arial" font-size="9.00">validity_end_date</text>
+<polygon fill="none" stroke="black" points="363.5,-42 363.5,-58 388.5,-58 388.5,-42 363.5,-42"/>
+<text text-anchor="start" x="366.5" y="-47.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="388.5,-42 388.5,-58 407.5,-58 407.5,-42 388.5,-42"/>
+<polygon fill="none" stroke="black" points="255.5,-26 255.5,-42 363.5,-42 363.5,-26 255.5,-26"/>
+<text text-anchor="start" x="274" y="-31.8" font-family="Arial" font-size="9.00">application_code</text>
+<polygon fill="none" stroke="black" points="363.5,-26 363.5,-42 388.5,-42 388.5,-26 363.5,-26"/>
+<text text-anchor="start" x="371" y="-31.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="388.5,-26 388.5,-42 407.5,-42 407.5,-26 388.5,-26"/>
+<polygon fill="none" stroke="black" points="255.5,-10 255.5,-26 363.5,-26 363.5,-10 255.5,-10"/>
+<text text-anchor="start" x="259.5" y="-15.8" font-family="Arial" font-size="9.00">meursing_table_plan_id</text>
+<polygon fill="none" stroke="black" points="363.5,-10 363.5,-26 388.5,-26 388.5,-10 363.5,-10"/>
+<text text-anchor="start" x="371" y="-15.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="388.5,-10 388.5,-26 407.5,-26 407.5,-10 388.5,-10"/>
+<polygon fill="none" stroke="black" points="254.5,-9 254.5,-107 408.5,-107 408.5,-9 254.5,-9"/>
 </g>
 <!-- Additional Code Type Measure Types&#45;&gt;Additional Code Types -->
-<g id="database_151_edge3" class="edge">
+<g id="database_212_edge3" class="edge">
 <title>Additional Code Type Measure Types:e&#45;&gt;Additional Code Types:w</title>
-<path fill="none" stroke="#000000" d="M168.5,-184C203.1446,-184 190.1954,-146.0806 213,-120 227.5327,-103.3796 229.2588,-86.489 246.6704,-82.7585"/>
-<polygon fill="#000000" stroke="#000000" points="247.2881,-85.336 254.5,-82 246.7818,-80.1105 247.2881,-85.336"/>
+<path fill="none" stroke="black" d="M170,-184C204.52,-184 191.51,-146.18 214,-120 228.2,-103.47 229.66,-86.51 246.78,-82.76"/>
+<polygon fill="black" stroke="black" points="247.29,-85.35 254.5,-82 246.78,-80.13 247.29,-85.35"/>
 </g>
 <!-- meursing_table_plan_id Note -->
-<g id="note_830" class="node">
+<g id="note_23" class="node">
 <title>meursing_table_plan_id Note</title>
-<polygon fill="none" stroke="#000000" points="136,-36 35,-36 35,0 142,0 142,-30 136,-36"/>
-<polyline fill="none" stroke="#000000" points="136,-36 136,-30 "/>
-<polyline fill="none" stroke="#000000" points="142,-30 136,-30 "/>
-<text text-anchor="middle" x="88.5" y="-15.8" font-family="Arial" font-size="9.00" fill="#000000">Always null in UK tariff</text>
+<polygon fill="none" stroke="black" points="136.5,-36 35.5,-36 35.5,0 142.5,0 142.5,-30 136.5,-36"/>
+<polyline fill="none" stroke="black" points="136.5,-36 136.5,-30 "/>
+<polyline fill="none" stroke="black" points="142.5,-30 136.5,-30 "/>
+<text text-anchor="middle" x="89" y="-15.8" font-family="Arial" font-size="9.00">Always null in UK tariff</text>
 </g>
 <!-- meursing_table_plan_id Note&#45;&gt;Additional Code Types -->
-<g id="database_151_edge1" class="edge">
+<g id="database_212_edge1" class="edge">
 <title>meursing_table_plan_id Note&#45;&gt;Additional Code Types:meursing_table_plan_id_name</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M142.3271,-18C174.8131,-18 217.0347,-18 254.5,-18"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M142.6,-18C174.89,-18 217.09,-18 254.5,-18"/>
 </g>
 </g>
 </svg><p><strong>Additional codes cannot be applied universally …</strong></p>
 <p>There is an additional many to many table within the tariff database that determines which additional code types can be used against which measure types. Currently there are 74 permutations of additional codes against measure types: there is little surprising about the alignment – e.g. you can only assign additional codes of type 8, A, B or C to measure types that are associated with Trade Remedies.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93374350-7eff0080-f84e-11ea-93cc-10957a58d5bf.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93374350-7eff0080-f84e-11ea-93cc-10957a58d5bf.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93374350-7eff0080-f84e-11ea-93cc-10957a58d5bf.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93374350-7eff0080-f84e-11ea-93cc-10957a58d5bf.png" alt="image" /></a></p>
 <p><strong>Measure types detail</strong></p>
 
 <ul>
@@ -744,7 +719,7 @@
 <li>mutation of EU suspensions into UK reliefs</li>
 </ul></li>
 </ul>
-<h2 id="data-structures">Data structures</h2><p><a href="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" alt="image" /></a></p>
+<h2 id="data-structures">Data structures</h2><p><a href="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" alt="image" /></a></p>
 <h2 id="screen-designs-footnotes">Screen designs - footnotes</h2><p>[THIS MIGHT BE MOVED TO A DIFFERENT SECTION SO HAVE NOT INCLUDED IT FOR NOW]</p>
 <h2 id="key-user-needs-footnotes">Key user needs - footnotes</h2><div class="table-container">
         <table>
@@ -753,44 +728,37 @@
 <th>to find measure types</th>
 <th>I can view the measures associated with that measure type, view the   detail of that measure type and act as a gateway to edit the measure type.</th>
 <th>There will be very little requirement to edit the detail of measure   types, however there are c. 15 descriptions that need to be edited.</th>
-</tr>
-<tr>
+</tr><tr>
 <td>UK   Tariff Manager</td>
 <td>to   create a new measure type</td>
 <td>I   can implement UK-specific trade policy</td>
 <td>This   will be required for the creation of UK-specific relief types</td>
-</tr>
-<tr>
+</tr><tr>
 <td>UK   Tariff Manager</td>
 <td>to   modify the description of an existing measure type</td>
 <td>the   names of measure types, which are visible on the UK Trade Tariff Service and   the Trade with the UK service, can best reflect the needs of the UK   independent trade policy.</td>
 <td>This   will be required or modifications to certain trade remedy-related measure   types</td>
-</tr>
-<tr>
+</tr><tr>
 <td>UK   Tariff Manager</td>
 <td>to   terminate an existing measure type</td>
 <td>I   can reduce clutter in the tariff management interface</td>
 <td>This   should be an extremely rare occurrence, probably never happens, therefore   could be left until later / never delivered, due to the number of business   rules that would need to be checked.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>UK   Tariff Manager</td>
 <td>to   protect the values of the measure type series tables</td>
 <td>I   can be sure that there is no undue impact on the safe-running of the border   systems (primarily CDS)</td>
 <td>Ideally,   measure type series would be viewable but not editable, at least until Trade   Policy requires that we edit it</td>
-</tr>
-<tr>
+</tr><tr>
 <td>UK   Tariff Manager</td>
 <td>to   manage the association of measure types with additional code types</td>
 <td>any   newly created additional codes can be used against existing measure types and   any newly created measure types can be used against existing additional code   types.</td>
 <td>This   will become a relatively important piece if the work that is being undertaken   in the Northern Ireland Protocol leads to a solution where commodities are   managed via additional codes.          This   function should be managed through the additional code type function, not   through measure types.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>UK   Tariff Manager</td>
 <td>to   view the measures that are associated with a measure type</td>
 <td>I   can perform bulk operations / generate bulk reports or extracts on those   measure types, as required.</td>
 <td></td>
 </tr>
-
         </table>
       </div><h2 id="key-business-rules-footnotes">Key business rules - footnotes</h2><div class="table-container">
         <table>
@@ -799,116 +767,97 @@
 <th>Rule</th>
 <th></th>
 <th>Notes</th>
-</tr>
-<tr>
+</tr><tr>
 <td>Measure   type series</td>
 <td></td>
 <td></td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>MTS1</td>
 <td>The measure type series must be unique.</td>
 <td>Not required     We should not be building an interface to facilitate the   management of measure type series</td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>MTS2</td>
 <td>The measure type series cannot be deleted if it is   associated with a measure type.</td>
 <td>Not required     We should not be building an interface to facilitate the   management of measure type series</td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>MTS3</td>
 <td>The start date must be less than or equal to the end date.</td>
 <td>Not required     We should not be building an interface to facilitate the   management of measure type series</td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>Measure   types</td>
 <td></td>
 <td></td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>MT1</td>
 <td>The  measure type   code must be unique.</td>
 <td>Required     Should be checked on creation of new measure types</td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>MT2</td>
 <td>The start date must be less than or equal to the end date.</td>
 <td>Required     Business users should be heavily discouraged from   terminating measure types however</td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>MT3</td>
 <td>When a measure type is used in a measure then the validity   period of the measure type must span the validity period of the measure.</td>
 <td>Required     As above, business users should be heavily discouraged   from terminating measure types, making this a largely redundant rule</td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>MT4</td>
 <td>The referenced measure type series must exist.</td>
 <td>Required     Measure type series should be selected from a dropdown;   and no change will be permitted to the values in the measure type series   table</td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>MT7</td>
 <td>A measure type can not be deleted if it is used in a   measure.</td>
 <td>Required     This could probably be pushed into Year x – there should   be no requirement to delete measure types</td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>MT10</td>
 <td>The validity period of the measure type series must span   the validity period of the measure type.</td>
 <td>Not required     All measure type series records are open-ended</td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>Relationship   of additional code types to measure types</td>
 <td></td>
 <td></td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>AMT1</td>
 <td>The measure type must exist.</td>
 <td></td>
 <td>Required</td>
-</tr>
-<tr>
+</tr><tr>
 <td>AMT2</td>
 <td>The additional code type must exist.</td>
 <td></td>
 <td>Required</td>
-</tr>
-<tr>
+</tr><tr>
 <td>AMT3</td>
 <td>The combination of additional code type and measure type   must be unique.</td>
 <td></td>
 <td>Required</td>
-</tr>
-<tr>
+</tr><tr>
 <td>AMT4</td>
 <td>The validity period of the measure type and that of the   additional code type must span the validity period of the “measure   type-additional code type” link.</td>
 <td></td>
 <td>Required</td>
-</tr>
-<tr>
+</tr><tr>
 <td>AMT5</td>
 <td>The start date must be less than or equal to the end date.</td>
 <td></td>
 <td>Required</td>
-</tr>
-<tr>
+</tr><tr>
 <td>AMT7</td>
 <td>The association between the additional code type and the   measure type cannot be deleted if there is an additional nomenclature measure   which uses this measure type and this additional code type.</td>
 <td></td>
 <td>Required</td>
 </tr>
-
         </table>
       </div><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 

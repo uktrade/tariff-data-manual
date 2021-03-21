@@ -4,7 +4,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="robots" content="noindex">
 
     <title>Agricultural instruments - Tariff Data Manual</title>
 
@@ -12,17 +11,18 @@
 
     <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html">
 
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="uktrade.github.io" />
+      <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta name="twitter:title" content="Agricultural instruments - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
       <meta property="og:title" content="Agricultural instruments" />
       <meta property="og:type" content="object" />
       <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html" />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:domain" content="uktrade.github.io" />
-      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
-      <meta property="twitter:title" content="Agricultural instruments - Tariff Data Manual" />
-      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html" />
 
     
   </head>
@@ -50,32 +50,38 @@
       </div>
 
         <div id="toc-heading" class="toc-show fixedsticky">
-          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
             Table of contents <span class="toc-show__icon"></span>
-          </a>
+          </button>
         </div>
 
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
-            <div class="toc" data-module="table-of-contents">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
               <div class="search" data-module="search">
-  <form action="https://www.google.co.uk/search" method="get" role="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
-    <label class="govuk-label search__label" for="search">
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
       Search (via Google)
     </label>
-    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="govuk-button search__button">Search</button>
   </form>
   <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
     <div class="search-results__inner">
       <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
       <div class="search-results__content"></div>
     </div>
   </div>
 </div>
 
-              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
@@ -85,7 +91,7 @@
 <ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
   </li>
 </ul>
 <ul>
@@ -95,52 +101,17 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
   </li>
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
   </li>
 </ul>
 <ul>
@@ -158,20 +129,50 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
   </li>
 </ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
 </li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 <ul>
@@ -181,12 +182,17 @@
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
   </li>
 </ul>
 <ul>
@@ -196,12 +202,12 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 </li></ul>
@@ -260,11 +266,11 @@
 <li>The trader works out the constituent parts of sugar, butter etc, looks for the correct cell in the table below for their product’s recipe.</li>
 <li>The then declares this number, prefaced by the Meursing identifier “7”, on their import declaration form, after which the duty is calculated in the border system.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94799734-7fb19e00-03db-11eb-98ea-d0f286d96b97.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94799734-7fb19e00-03db-11eb-98ea-d0f286d96b97.png" alt="image" /></a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94799771-91934100-03db-11eb-8346-7ce62074cd7d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94799771-91934100-03db-11eb-8346-7ce62074cd7d.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94799734-7fb19e00-03db-11eb-98ea-d0f286d96b97.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94799734-7fb19e00-03db-11eb-98ea-d0f286d96b97.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94799771-91934100-03db-11eb-8346-7ce62074cd7d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94799771-91934100-03db-11eb-8346-7ce62074cd7d.png" alt="image" /></a></p>
 <p><a href="https://www.gov.uk/additional-commodity-code">https://www.gov.uk/additional-commodity-code</a></p>
 <p><strong>Working out your Meursing code</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94800417-7412a700-03dc-11eb-8061-59d2dd906c2f.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94800417-7412a700-03dc-11eb-8061-59d2dd906c2f.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94800417-7412a700-03dc-11eb-8061-59d2dd906c2f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94800417-7412a700-03dc-11eb-8061-59d2dd906c2f.png" alt="image" /></a></p>
 <p><strong>How do Meursing codes impact duty calculations?</strong></p>
 
 <ul>
@@ -280,7 +286,7 @@
 <li>The trader can then look up the milk / butter content’s Meursing code, either by looking at the table, or by using the UK gov online service, and then work out the full duty.</li>
 <li>Actually the EU’s Taric consultation is the best (until the end of the Implementation period), as the Meursing tool is semi-integrated into the standard tariff lookup.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94800799-01ee9200-03dd-11eb-991f-4c99e123c02d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94800799-01ee9200-03dd-11eb-991f-4c99e123c02d.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94800799-01ee9200-03dd-11eb-991f-4c99e123c02d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94800799-01ee9200-03dd-11eb-991f-4c99e123c02d.png" alt="image" /></a></p>
 <p>Showing 3rd country (MFN) duty for  product 1901200000 (Malt extract) on the Trade Tariff Service</p>
 <p>The duty is not just a simple ad valorem or a specific duty based on a weight (or other unit). Instead, the import duties will depend on the %age content of milk protein &amp; milk fat.</p>
 <p><a href="https://www.trade-tariff.service.gov.uk/commodities/1901200000">https://www.trade-tariff.service.gov.uk/commodities/1901200000</a></p>
@@ -291,7 +297,7 @@
 <li>Type 7 codes are stored in a different table from all other additional codes: it is not clear why</li>
 <li>Duties are assigned to the Meursing additional codes, not the commodities that might use them in their measures.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94800960-424e1000-03dd-11eb-9f50-78b840ad1669.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94800960-424e1000-03dd-11eb-9f50-78b840ad1669.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94800960-424e1000-03dd-11eb-9f50-78b840ad1669.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94800960-424e1000-03dd-11eb-9f50-78b840ad1669.png" alt="image" /></a></p>
 <p><strong>How the EU Taric Consultation facilitates Meursing</strong></p>
 
 <ul>
@@ -301,7 +307,7 @@
 <li>This then refreshes the page (picture 2) with an expanded duty. The specific duty of 117.85 EUR/100kg has been inserted to replace the “EA” placeholder</li>
 <li>BTW – the (1) in brackets refers to something called the reduction indicator – see later</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94801643-3d3d9080-03de-11eb-9603-d7bd35687c24.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94801643-3d3d9080-03de-11eb-9603-d7bd35687c24.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94801643-3d3d9080-03de-11eb-9603-d7bd35687c24.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94801643-3d3d9080-03de-11eb-9603-d7bd35687c24.png" alt="image" /></a></p>
 <h3 id="the-future-of-meursing-mixed">The future of Meursing … mixed</h3><p>This is an extremely complex process for traders, and almost impossible to marshal for Border Force, therefore the UK had taken the decision to abandon the Meursing system for No Deal – this may be reversed for the end of the Implementation period.</p>
 <p>Caveat 1 - While having no Meursing codes helps to simplify the UK tariff, it is only a partial saving grace, as there remains a requirement to include Meursing-related information in the reference document.</p>
 <p>This is hugely problematic, as it defeats the point of using the actual UK tariff as the source for the reference document: the Meursing data needs to come from elsewhere – in this case from the live EU database. Perversely, if Meursings were to return, this would simplify document production.</p>
@@ -317,7 +323,7 @@
 <li>First, these are the sole instances in the tariff of duties (measures and measure components) being assigned against an additional code alone, and not against a combination of commodity code and additional code.</li>
 <li>The image below shows the absence of commodity code (goods_nomenclature_item_id) but presence of the Meursing additional code (7012)</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/96895115-f6463680-1483-11eb-8fcf-ded6cf5a7117.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/96895115-f6463680-1483-11eb-8fcf-ded6cf5a7117.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/96895115-f6463680-1483-11eb-8fcf-ded6cf5a7117.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/96895115-f6463680-1483-11eb-8fcf-ded6cf5a7117.png" alt="image" /></a></p>
 
 <ul>
 <li>The measure type of 674 indicates that this duty, once calculated with the specific ingredient percentages, will insert a duty to replace an EA (agricultural component) placeholder.</li>
@@ -325,7 +331,7 @@
 <li>Read more about this in the measure components guide, which explains what all these fields mean in detail.</li>
 <li>Basically this means “add a duty equal to 17.18 Euros per 100kg (1 decitonne)” to any measure that includes an EA placeholder, regardless of the commodity code.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/96895174-0bbb6080-1484-11eb-9092-e29541314c0c.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/96895174-0bbb6080-1484-11eb-9092-e29541314c0c.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/96895174-0bbb6080-1484-11eb-9092-e29541314c0c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/96895174-0bbb6080-1484-11eb-9092-e29541314c0c.png" alt="image" /></a></p>
 <p><strong>Calculating Meursing duties on complex duties</strong></p>
 
 <ul>
@@ -340,27 +346,27 @@
 <li>At this point the trader does not know the values that will replace EA and ADSZ, so they look up their ingredient %ages and come up with a Meursing additional code 7507.</li>
 <li>The trader sends comm code 1704905500 and additional code 7507 to CDS / CHIEF and they replace the EA &amp; ADSZ placeholders with real specific duties (which they all are).</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94802706-0ec0b500-03e0-11eb-8dcf-475bc2f108ff.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94802706-0ec0b500-03e0-11eb-8dcf-475bc2f108ff.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94802706-0ec0b500-03e0-11eb-8dcf-475bc2f108ff.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94802706-0ec0b500-03e0-11eb-8dcf-475bc2f108ff.png" alt="image" /></a></p>
 <p>Hence, 0.00% + EA up to a MAX of 18.70% +ADSZ</p>
 <p>becomes</p>
 <p>0.00% + 18.87 €/100kg up to a MAX of 18.70% + 99.88 €/100kg</p>
 <p>when the recipe is added. To reiterate: Meursing duties are applicable to the recipe, not the commodity; but they are only chargeable when replacing the placeholders in comm code duties.</p>
 <p><strong>Meursing measure types &amp; duty expressions</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94803190-db325a80-03e0-11eb-8f36-5691b75a6ef9.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94803190-db325a80-03e0-11eb-8f36-5691b75a6ef9.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94803190-db325a80-03e0-11eb-8f36-5691b75a6ef9.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94803190-db325a80-03e0-11eb-8f36-5691b75a6ef9.png" alt="image" /></a></p>
 <p><strong>The reduction indicator and geographical areas</strong></p>
 
 <ul>
 <li>Meursing code measures are typically assigned to the geographical area ID 1011 (Erga Omnes, the whole world).</li>
 <li>However, they can be assigned to other countries: in fact the following countries / groups have Meursing measures, allowing the EU to tailor duties to the individual countries:</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94803778-bd192a00-03e1-11eb-8ab4-5fbee2a9ff40.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94803778-bd192a00-03e1-11eb-8ab4-5fbee2a9ff40.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94803778-bd192a00-03e1-11eb-8ab4-5fbee2a9ff40.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94803778-bd192a00-03e1-11eb-8ab4-5fbee2a9ff40.png" alt="image" /></a></p>
 
 <ul>
 <li>So geographical areas add a further dimension to the management of Meursing-related duties.</li>
 <li>Just when you thought it could not get any more complex, along comes the reduction indicator.</li>
 <li>The table on the previous page showed a pair of duty expressions that can be related to a Meursing-type measure</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94803603-70cdea00-03e1-11eb-94ce-0ff873c37674.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94803603-70cdea00-03e1-11eb-94ce-0ff873c37674.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94803603-70cdea00-03e1-11eb-94ce-0ff873c37674.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94803603-70cdea00-03e1-11eb-94ce-0ff873c37674.png" alt="image" /></a></p>
 
 <ul>
 <li>The second of these pairs (reduced additional duty on sugar / flour / agricultural component) allows the EU to assign effectively a different Meursing table</li>
@@ -371,46 +377,61 @@
 <div class="table-container">
         <table>
           <tr>
-<th><br>Row Labels</th>
-<th><br>Measure count</th>
-<th><br>Table / axis count (measure count / 504)</th>
-</tr>
-<tr>
-<td><br>1</td>
-<td><br>12899</td>
-<td><br>25+</td>
-</tr>
-<tr>
-<td><br>2</td>
-<td><br>5040</td>
-<td><br>10</td>
-</tr>
-<tr>
-<td><br>3</td>
-<td><br>2016</td>
-<td><br>4</td>
-</tr>
-<tr>
-<td><br>4</td>
-<td><br>504</td>
-<td><br>1</td>
-</tr>
-<tr>
-<td><br>5</td>
-<td><br>504</td>
-<td><br>1</td>
-</tr>
-<tr>
-<td><br>6</td>
-<td><br>504</td>
-<td><br>1</td>
-</tr>
-<tr>
-<td><br>Grand   Total</td>
-<td><br>21467</td>
+<th>
+<br>Row Labels</th>
+<th>
+<br>Measure count</th>
+<th>
+<br>Table / axis count (measure count / 504)</th>
+</tr><tr>
+<td>
+<br>1</td>
+<td>
+<br>12899</td>
+<td>
+<br>25+</td>
+</tr><tr>
+<td>
+<br>2</td>
+<td>
+<br>5040</td>
+<td>
+<br>10</td>
+</tr><tr>
+<td>
+<br>3</td>
+<td>
+<br>2016</td>
+<td>
+<br>4</td>
+</tr><tr>
+<td>
+<br>4</td>
+<td>
+<br>504</td>
+<td>
+<br>1</td>
+</tr><tr>
+<td>
+<br>5</td>
+<td>
+<br>504</td>
+<td>
+<br>1</td>
+</tr><tr>
+<td>
+<br>6</td>
+<td>
+<br>504</td>
+<td>
+<br>1</td>
+</tr><tr>
+<td>
+<br>Grand   Total</td>
+<td>
+<br>21467</td>
 <td><br></td>
 </tr>
-
         </table>
       </div>
 <ins>Meursing measures sliced by reduction indicator</ins>
@@ -423,71 +444,96 @@
 <div class="table-container">
         <table>
           <tr>
-<th><br>Geo area ID</th>
-<th><br>Measure count</th>
-<th><br>Table / axis count (measure count / 504)</th>
-</tr>
-<tr>
-<td><br>1011</td>
-<td><br>1512</td>
-<td><br>3</td>
-</tr>
-<tr>
-<td><br>2012</td>
-<td><br>1512</td>
-<td><br>3</td>
-</tr>
-<tr>
-<td><br>2200</td>
-<td><br>1008</td>
-<td><br>2</td>
-</tr>
-<tr>
-<td><br>CH</td>
-<td><br>299</td>
-<td><br>??</td>
-</tr>
-<tr>
-<td><br>EC</td>
-<td><br>504</td>
-<td><br>1</td>
-</tr>
-<tr>
-<td><br>EG</td>
-<td><br>1512</td>
-<td><br>3</td>
-</tr>
-<tr>
-<td><br>IL</td>
-<td><br>4536</td>
-<td><br>9</td>
-</tr>
-<tr>
-<td><br>IS</td>
-<td><br>3024</td>
-<td><br>6</td>
-</tr>
-<tr>
-<td><br>JP</td>
-<td><br>3024</td>
-<td><br>6</td>
-</tr>
-<tr>
-<td><br>NO</td>
-<td><br>1512</td>
-<td><br>3</td>
-</tr>
-<tr>
-<td><br>SG</td>
-<td><br>3024</td>
-<td><br>6</td>
-</tr>
-<tr>
-<td><br>Grand   Total</td>
-<td><br>21467</td>
+<th>
+<br>Geo area ID</th>
+<th>
+<br>Measure count</th>
+<th>
+<br>Table / axis count (measure count / 504)</th>
+</tr><tr>
+<td>
+<br>1011</td>
+<td>
+<br>1512</td>
+<td>
+<br>3</td>
+</tr><tr>
+<td>
+<br>2012</td>
+<td>
+<br>1512</td>
+<td>
+<br>3</td>
+</tr><tr>
+<td>
+<br>2200</td>
+<td>
+<br>1008</td>
+<td>
+<br>2</td>
+</tr><tr>
+<td>
+<br>CH</td>
+<td>
+<br>299</td>
+<td>
+<br>??</td>
+</tr><tr>
+<td>
+<br>EC</td>
+<td>
+<br>504</td>
+<td>
+<br>1</td>
+</tr><tr>
+<td>
+<br>EG</td>
+<td>
+<br>1512</td>
+<td>
+<br>3</td>
+</tr><tr>
+<td>
+<br>IL</td>
+<td>
+<br>4536</td>
+<td>
+<br>9</td>
+</tr><tr>
+<td>
+<br>IS</td>
+<td>
+<br>3024</td>
+<td>
+<br>6</td>
+</tr><tr>
+<td>
+<br>JP</td>
+<td>
+<br>3024</td>
+<td>
+<br>6</td>
+</tr><tr>
+<td>
+<br>NO</td>
+<td>
+<br>1512</td>
+<td>
+<br>3</td>
+</tr><tr>
+<td>
+<br>SG</td>
+<td>
+<br>3024</td>
+<td>
+<br>6</td>
+</tr><tr>
+<td>
+<br>Grand   Total</td>
+<td>
+<br>21467</td>
 <td><br></td>
 </tr>
-
         </table>
       </div>
 <ins>Meursing measures sliced by geographical area</ins>
@@ -499,174 +545,256 @@ It is not clear what is going on with Switzerland (CH), why there is just a subs
 <div class="table-container">
         <table>
           <tr>
-<th><br>unique_code</th>
-<th><br>Reduction Indicator 1</th>
-<th><br>Reduction Indicator 2</th>
-<th><br>%age</th>
-<th><br>rounded</th>
-</tr>
-<tr>
-<td><br>672000</td>
-<td><br>0</td>
-<td><br>0</td>
+<th>
+<br>unique_code</th>
+<th>
+<br>Reduction Indicator 1</th>
+<th>
+<br>Reduction Indicator 2</th>
+<th>
+<br>%age</th>
+<th>
+<br>rounded</th>
+</tr><tr>
+<td>
+<br>672000</td>
+<td>
+<br>0</td>
+<td>
+<br>0</td>
 <td><br></td>
 <td><br></td>
-</tr>
-<tr>
-<td><br>672001</td>
-<td><br>8.38</td>
-<td><br>7.54</td>
-<td><br>0.89976134</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672002</td>
-<td><br>15.72</td>
-<td><br>14.15</td>
-<td><br>0.90012723</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672003</td>
-<td><br>22.7</td>
-<td><br>20.43</td>
-<td><br>0.9</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672004</td>
-<td><br>32.49</td>
-<td><br>29.24</td>
-<td><br>0.89996922</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672005</td>
-<td><br>0</td>
-<td><br>0</td>
+</tr><tr>
+<td>
+<br>672001</td>
+<td>
+<br>8.38</td>
+<td>
+<br>7.54</td>
+<td>
+<br>0.89976134</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672002</td>
+<td>
+<br>15.72</td>
+<td>
+<br>14.15</td>
+<td>
+<br>0.90012723</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672003</td>
+<td>
+<br>22.7</td>
+<td>
+<br>20.43</td>
+<td>
+<br>0.9</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672004</td>
+<td>
+<br>32.49</td>
+<td>
+<br>29.24</td>
+<td>
+<br>0.89996922</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672005</td>
+<td>
+<br>0</td>
+<td>
+<br>0</td>
 <td><br></td>
 <td><br></td>
-</tr>
-<tr>
-<td><br>672006</td>
-<td><br>8.38</td>
-<td><br>7.54</td>
-<td><br>0.89976134</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672007</td>
-<td><br>15.72</td>
-<td><br>14.15</td>
-<td><br>0.90012723</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672008</td>
-<td><br>22.7</td>
-<td><br>20.43</td>
-<td><br>0.9</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672009</td>
-<td><br>32.49</td>
-<td><br>29.24</td>
-<td><br>0.89996922</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672010</td>
-<td><br>0</td>
-<td><br>0</td>
+</tr><tr>
+<td>
+<br>672006</td>
+<td>
+<br>8.38</td>
+<td>
+<br>7.54</td>
+<td>
+<br>0.89976134</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672007</td>
+<td>
+<br>15.72</td>
+<td>
+<br>14.15</td>
+<td>
+<br>0.90012723</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672008</td>
+<td>
+<br>22.7</td>
+<td>
+<br>20.43</td>
+<td>
+<br>0.9</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672009</td>
+<td>
+<br>32.49</td>
+<td>
+<br>29.24</td>
+<td>
+<br>0.89996922</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672010</td>
+<td>
+<br>0</td>
+<td>
+<br>0</td>
 <td><br></td>
 <td><br></td>
-</tr>
-<tr>
-<td><br>672011</td>
-<td><br>8.38</td>
-<td><br>7.54</td>
-<td><br>0.89976134</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672012</td>
-<td><br>15.72</td>
-<td><br>14.15</td>
-<td><br>0.90012723</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672013</td>
-<td><br>22.7</td>
-<td><br>20.43</td>
-<td><br>0.9</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672015</td>
-<td><br>0</td>
-<td><br>0</td>
+</tr><tr>
+<td>
+<br>672011</td>
+<td>
+<br>8.38</td>
+<td>
+<br>7.54</td>
+<td>
+<br>0.89976134</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672012</td>
+<td>
+<br>15.72</td>
+<td>
+<br>14.15</td>
+<td>
+<br>0.90012723</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672013</td>
+<td>
+<br>22.7</td>
+<td>
+<br>20.43</td>
+<td>
+<br>0.9</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672015</td>
+<td>
+<br>0</td>
+<td>
+<br>0</td>
 <td><br></td>
 <td><br></td>
-</tr>
-<tr>
-<td><br>672016</td>
-<td><br>8.38</td>
-<td><br>7.54</td>
-<td><br>0.89976134</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672017</td>
-<td><br>15.72</td>
-<td><br>14.15</td>
-<td><br>0.90012723</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672020</td>
-<td><br>0</td>
-<td><br>0</td>
+</tr><tr>
+<td>
+<br>672016</td>
+<td>
+<br>8.38</td>
+<td>
+<br>7.54</td>
+<td>
+<br>0.89976134</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672017</td>
+<td>
+<br>15.72</td>
+<td>
+<br>14.15</td>
+<td>
+<br>0.90012723</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672020</td>
+<td>
+<br>0</td>
+<td>
+<br>0</td>
 <td><br></td>
 <td><br></td>
-</tr>
-<tr>
-<td><br>672021</td>
-<td><br>8.38</td>
-<td><br>7.54</td>
-<td><br>0.89976134</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672022</td>
-<td><br>15.72</td>
-<td><br>14.15</td>
-<td><br>0.90012723</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672023</td>
-<td><br>22.7</td>
-<td><br>20.43</td>
-<td><br>0.9</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>672024</td>
-<td><br>32.49</td>
-<td><br>29.24</td>
-<td><br>0.89996922</td>
-<td><br>0.9</td>
-</tr>
-<tr>
-<td><br>etc.</td>
+</tr><tr>
+<td>
+<br>672021</td>
+<td>
+<br>8.38</td>
+<td>
+<br>7.54</td>
+<td>
+<br>0.89976134</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672022</td>
+<td>
+<br>15.72</td>
+<td>
+<br>14.15</td>
+<td>
+<br>0.90012723</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672023</td>
+<td>
+<br>22.7</td>
+<td>
+<br>20.43</td>
+<td>
+<br>0.9</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>672024</td>
+<td>
+<br>32.49</td>
+<td>
+<br>29.24</td>
+<td>
+<br>0.89996922</td>
+<td>
+<br>0.9</td>
+</tr><tr>
+<td>
+<br>etc.</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-
         </table>
       </div>
 <ul>
@@ -683,7 +811,7 @@ It is not clear what is going on with Switzerland (CH), why there is just a subs
 <li>And the principle applies for every trade agreement, though the %ages will vary according to what has been agreed</li>
 </ul>
 <p><strong>Japan has 6 reduction indicators on milk / milk fat content</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94836178-915e6a00-040a-11eb-87a6-5268a33d3cce.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94836178-915e6a00-040a-11eb-87a6-5268a33d3cce.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94836178-915e6a00-040a-11eb-87a6-5268a33d3cce.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94836178-915e6a00-040a-11eb-87a6-5268a33d3cce.png" alt="image" /></a></p>
 
 <ul>
 <li>Japan’s FTA has these 6 reduction indicators that allow for differential %age to be reduced against different commodity codes.</li>
@@ -692,7 +820,7 @@ It is not clear what is going on with Switzerland (CH), why there is just a subs
 <li>And the final bizarre thing: there are only 16 products that have Meursing duty expression, but more than 3,000 unique duties are set up.</li>
 </ul>
 <p><strong>Meursing tables – data structure</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94836258-b18e2900-040a-11eb-89be-144dcb3d99c3.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94836258-b18e2900-040a-11eb-89be-144dcb3d99c3.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94836258-b18e2900-040a-11eb-89be-144dcb3d99c3.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94836258-b18e2900-040a-11eb-89be-144dcb3d99c3.png" alt="image" /></a></p>
 <p>Meursing appears to have been tacked on to the basic tariff, as a lot of the principles that apply across the board otherwise have been abandoned.
 Most importantly, although they are treated as additional codes in assigning measures, they are stored in separate tables from all other such codes (and transmitted to HMRC as such).
 The standard “type 1” naming convention &amp; data structure has also been eschewed: 
@@ -757,7 +885,7 @@ Member States may round upwards or downwards to the nearest decimal point the su
 <li>It is also not 100% clear as to what the future of the SIV in the UK will be, not for that matter the Entry Price System as a whole.</li>
 <li>The EPS was designed as a protectionist measure for EU growers – during growing season they had to sell their goods or see them rot: outside that season, the EPS is not applied. The UK does not have the same climate, nor therefore the same agricultural sensibilities.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94836888-6a546800-040b-11eb-9ff8-8aaf85abef29.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94836888-6a546800-040b-11eb-9ff8-8aaf85abef29.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94836888-6a546800-040b-11eb-9ff8-8aaf85abef29.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94836888-6a546800-040b-11eb-9ff8-8aaf85abef29.png" alt="image" /></a></p>
 
 <ul>
 <li>Therefore the expectation is that the EPS will be abandoned in the UK (needs to be validated, and may well change through the Transition Period).</li>
@@ -783,7 +911,7 @@ Member States may round upwards or downwards to the nearest decimal point the su
 <li>The two pivot tables below show the usage of SPVs and SIVs throughout a year on commodity code 0805102200 (Sweet oranges).</li>
 <li>The tables show that the SIV applies while the EPS is running (in the EU) and the SPV applies when it does not, according to European growing (marketing) seasons. SPV and SIV are never concurrent on the same commodity code.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94838284-3ed27d00-040d-11eb-8e29-feeb7834b4a8.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94838284-3ed27d00-040d-11eb-8e29-feeb7834b4a8.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94838284-3ed27d00-040d-11eb-8e29-feeb7834b4a8.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94838284-3ed27d00-040d-11eb-8e29-feeb7834b4a8.png" alt="image" /></a></p>
 <p><strong>SIVs and key origins</strong></p>
 
 <ul>
@@ -793,8 +921,8 @@ Member States may round upwards or downwards to the nearest decimal point the su
 <li>The following slide shows the countries which have their own SIV values (2019 Jan 1st onwards).</li>
 <li>Erga Omnes (1011) has full coverage, while other nations’ SIVs are very specific, e.g. for Australia, the EU has SIVs solely for apples</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94838732-ea7bcd00-040d-11eb-8b8a-a037421b7388.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94838732-ea7bcd00-040d-11eb-8b8a-a037421b7388.png" alt="image" /></a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94838935-36c70d00-040e-11eb-9734-e4d294ad4805.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94838935-36c70d00-040e-11eb-9734-e4d294ad4805.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94838732-ea7bcd00-040d-11eb-8b8a-a037421b7388.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94838732-ea7bcd00-040d-11eb-8b8a-a037421b7388.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94838935-36c70d00-040e-11eb-9734-e4d294ad4805.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94838935-36c70d00-040e-11eb-9734-e4d294ad4805.png" alt="image" /></a></p>
 <p><strong>The Entry Price System in Action</strong></p>
 
 <ul>
@@ -803,8 +931,8 @@ Member States may round upwards or downwards to the nearest decimal point the su
 <li>Secondly, the third country duty – in most cases, a third country duty is not conditional: it is applicable to all trades in goods from non-preferential zones.</li>
 <li>On goods where the EPS applies, the third country duty is dependent on the import price, which, if the good is brought in on consignment, may be determined by the SIV.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94839126-7db50280-040e-11eb-9531-2dcc642ec60d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839126-7db50280-040e-11eb-9531-2dcc642ec60d.png" alt="image" /></a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94839177-8e657880-040e-11eb-9d80-197aa376e5f9.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839177-8e657880-040e-11eb-9d80-197aa376e5f9.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94839126-7db50280-040e-11eb-9531-2dcc642ec60d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839126-7db50280-040e-11eb-9531-2dcc642ec60d.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94839177-8e657880-040e-11eb-9d80-197aa376e5f9.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839177-8e657880-040e-11eb-9d80-197aa376e5f9.png" alt="image" /></a></p>
 
 <ul>
 <li>Clicking on “Conditions” shows the condition mechanic – this is described in more detail in the guide on measure conditions, but the meaning of this page is as per the preamble on the workings of the EPS.</li>
@@ -812,7 +940,7 @@ Member States may round upwards or downwards to the nearest decimal point the su
 <li>The duty is expressed in terms of a flat ad valorem and a specific: typically it is just the specific duty which changes, though here, if the good is imported at a very low price, then the duties are waived entirely.</li>
 <li>The system is tightly balanced, showing the precarious nature of Southern European agri-business, with the thresholds being respectively 98, 96, 92, 90, 88 and 86% of the zero-duty reference price.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94839210-97564a00-040e-11eb-9dff-c52786bfd286.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839210-97564a00-040e-11eb-9dff-c52786bfd286.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94839210-97564a00-040e-11eb-9dff-c52786bfd286.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839210-97564a00-040e-11eb-9dff-c52786bfd286.png" alt="image" /></a></p>
 <h3 id="representative-prices-for-poultry">Representative prices for poultry</h3>
 <ul>
 <li>Representative Prices for Poultry are a type of special agricultural safeguard, protecting the domestic market from influx of cheap imports of poultry products at high volume.</li>
@@ -829,12 +957,12 @@ Member States may round upwards or downwards to the nearest decimal point the su
 <li>All 5 of these measures contribute to the duties and securities that will be required of a chicken importer.</li>
 <li>Under a No Deal, this trade safeguard would have been abandoned in the UK, but it is potentially back on the table.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94839406-ddaba900-040e-11eb-8685-2cf94040742a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839406-ddaba900-040e-11eb-8685-2cf94040742a.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94839406-ddaba900-040e-11eb-8685-2cf94040742a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839406-ddaba900-040e-11eb-8685-2cf94040742a.png" alt="image" /></a></p>
 
 <ul>
 <li>The first measure to be looked at is the representative price measure itself (measure type 489).</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94839511-0338b280-040f-11eb-806a-9a65b155bb5e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839511-0338b280-040f-11eb-806a-9a65b155bb5e.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94839511-0338b280-040f-11eb-806a-9a65b155bb5e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839511-0338b280-040f-11eb-806a-9a65b155bb5e.png" alt="image" /></a></p>
 
 <ul>
 <li>This is similar in purpose to the Standard Import Value measure (490) used for fruit &amp; veg – it sets an expected acceptable import price for a good.</li>
@@ -852,7 +980,7 @@ Member States may round upwards or downwards to the nearest decimal point the su
 <li>The importer must lodge a security (deposit)  equal to the amount of additional duty which he would have paid if the calculation of the additional duty had been made on the basis of the representative price applicable to the product in question.</li>
 <li>So here is the second of the five measures explained (measure type 653):</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94839476-f61bc380-040e-11eb-826b-cce16308f908.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839476-f61bc380-040e-11eb-826b-cce16308f908.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94839476-f61bc380-040e-11eb-826b-cce16308f908.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94839476-f61bc380-040e-11eb-826b-cce16308f908.png" alt="image" /></a></p>
 
 <ul>
 <li><p>Essentially, border authorities do not trust that the goods being brought in are going to be sold at the value documented on the purchasing contract: securities are lodged until the importer can prove that they are not lying.</p></li>
@@ -871,14 +999,14 @@ Member States may round upwards or downwards to the nearest decimal point the su
 <li>is greater than 75 % of the trigger price, the additional duty shall equal 90 % of the amount by which the difference exceeds 75 %, plus the additional duties allowed under (b), &copy; and (d).</li>
 <li>So here is the third measure that is applied – measure type 652, Additional duty based on cif price.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94840011-b1dcf300-040f-11eb-9071-a7d1254d2f17.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94840011-b1dcf300-040f-11eb-9071-a7d1254d2f17.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94840011-b1dcf300-040f-11eb-9071-a7d1254d2f17.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94840011-b1dcf300-040f-11eb-9071-a7d1254d2f17.png" alt="image" /></a></p>
 <p>We actually do not need to worry too much about this calculation, but at least it helps to clarify the stepped thresholds applied on such conditional measures.</p>
 
 <ins>Duty calculation using measure conditions</ins>
 <p>The five thresholds that were noted on the previous page (derived from the controlling EU regulation) are represented by measure conditions with price thresholds.
 The mechanisms are almost identical to the Entry Price’s thresholds (which use condition code V). These use condition code L, which essentially references the CIF price instead.
 Duties are then applied in inverse relation to the declared import price.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94840369-37f93980-0410-11eb-917d-4a6415d264e4.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94840369-37f93980-0410-11eb-917d-4a6415d264e4.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94840369-37f93980-0410-11eb-917d-4a6415d264e4.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94840369-37f93980-0410-11eb-917d-4a6415d264e4.png" alt="image" /></a></p>
 <p><strong>Reducing representative prices under quota</strong></p>
 
 <ul>
@@ -886,7 +1014,7 @@ Duties are then applied in inverse relation to the declared import price.</p>
 <li>This sets a further threshold whereby the representative price and associated securities do not kick in until the quota is exhausted / licences allocated and used.</li>
 <li>These quotas behave much in the way of existing quotas, but do use specialised measure types (653 and 654)</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94840452-5b23e900-0410-11eb-874d-9ec179535a39.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94840452-5b23e900-0410-11eb-874d-9ec179535a39.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94840452-5b23e900-0410-11eb-874d-9ec179535a39.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94840452-5b23e900-0410-11eb-874d-9ec179535a39.png" alt="image" /></a></p>
 <p><strong>Prognosis for representative prices</strong></p>
 
 <ul>
@@ -910,7 +1038,7 @@ The Commission carry out a daily calculation, though the rate fixes if not chang
 <li>In fact, variable duties for cereals exists in name &amp; (dormant) legislative power only – the EU has not operationalised these powers for some time, and the UK has (at the last count) no intention of operationalising it.</li>
 <li>As always with agri measures, please keep close to the situation in case it changes. We are likely to legislate for this, but not use it in anger.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94840713-c53c8e00-0410-11eb-84c1-189fd53595c6.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94840713-c53c8e00-0410-11eb-84c1-189fd53595c6.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94840713-c53c8e00-0410-11eb-84c1-189fd53595c6.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94840713-c53c8e00-0410-11eb-84c1-189fd53595c6.png" alt="image" /></a></p>
 <p><strong>Variable duty for rice</strong></p>
 
 <ins>Situation in the EU</ins>

@@ -4,7 +4,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="robots" content="noindex">
 
     <title>Regulations - Tariff Data Manual</title>
 
@@ -12,17 +11,18 @@
 
     <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/regulations.html">
 
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="uktrade.github.io" />
+      <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta name="twitter:title" content="Regulations - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/regulations.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
       <meta property="og:title" content="Regulations" />
       <meta property="og:type" content="object" />
       <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/regulations.html" />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:domain" content="uktrade.github.io" />
-      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
-      <meta property="twitter:title" content="Regulations - Tariff Data Manual" />
-      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/regulations.html" />
 
     
   </head>
@@ -50,32 +50,38 @@
       </div>
 
         <div id="toc-heading" class="toc-show fixedsticky">
-          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
             Table of contents <span class="toc-show__icon"></span>
-          </a>
+          </button>
         </div>
 
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
-            <div class="toc" data-module="table-of-contents">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
               <div class="search" data-module="search">
-  <form action="https://www.google.co.uk/search" method="get" role="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
-    <label class="govuk-label search__label" for="search">
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
       Search (via Google)
     </label>
-    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="govuk-button search__button">Search</button>
   </form>
   <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
     <div class="search-results__inner">
       <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
       <div class="search-results__content"></div>
     </div>
   </div>
 </div>
 
-              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
@@ -85,7 +91,7 @@
 <ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
   </li>
 </ul>
 <ul>
@@ -95,52 +101,17 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
   </li>
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
   </li>
 </ul>
 <ul>
@@ -158,20 +129,50 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
   </li>
 </ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
 </li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 <ul>
@@ -181,12 +182,17 @@
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
   </li>
 </ul>
 <ul>
@@ -196,12 +202,12 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 </li></ul>
@@ -280,115 +286,115 @@
 </blockquote>
 <h3 id="introduction-to-measure-generating-regulations">Introduction to measure generating regulations</h3><p>Every measure entered into the Tariff database must be associated with a regulation. The purpose of this is to ensure that there is a ‘legal base’ for all tariff and regulatory activity, without which the measures could not be traced back to the initial purpose for their existence.</p>
 <p>The requirement for a regulation is built into the the schema for TARIC files and is a mandatory field for the measure table.</p>
-<svg width="344pt" height="260pt"
- viewBox="0.00 0.00 344.00 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="326pt" height="260pt"
+ viewBox="0.00 0.00 326.00 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
 <title>G</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-256 340,-256 340,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-256 322,-256 322,4 -4,4"/>
 <!-- measure1 -->
 <g id="node1" class="node">
 <title>measure1</title>
-<polygon fill="none" stroke="#000000" points="100,-180 26,-180 26,-144 100,-144 100,-180"/>
-<text text-anchor="middle" x="63" y="-158.3" font-family="Arial" font-size="14.00" fill="#000000">Measure</text>
+<polygon fill="none" stroke="black" points="94,-180 24,-180 24,-144 94,-144 94,-180"/>
+<text text-anchor="middle" x="59" y="-158.3" font-family="Arial" font-size="14.00">Measure</text>
 </g>
 <!-- conditions1 -->
 <g id="node5" class="node">
 <title>conditions1</title>
-<polygon fill="none" stroke="#000000" points="99,-108 13,-108 13,-72 99,-72 99,-108"/>
-<text text-anchor="middle" x="56" y="-86.3" font-family="Arial" font-size="14.00" fill="#000000">Conditions</text>
+<polygon fill="none" stroke="black" points="93,-108 13,-108 13,-72 93,-72 93,-108"/>
+<text text-anchor="middle" x="53" y="-86.3" font-family="Arial" font-size="14.00">Conditions</text>
 </g>
 <!-- measure1&#45;&#45;conditions1 -->
 <g id="edge4" class="edge">
 <title>measure1&#45;&#45;conditions1</title>
-<path fill="none" stroke="#000000" d="M61.2336,-143.8314C60.1806,-133 58.8474,-119.2876 57.7902,-108.4133"/>
+<path fill="none" stroke="black" d="M57.52,-143.7C56.59,-132.85 55.39,-118.92 54.47,-108.1"/>
 </g>
 <!-- measure2 -->
 <g id="node2" class="node">
 <title>measure2</title>
-<polygon fill="none" stroke="#000000" points="205,-180 131,-180 131,-144 205,-144 205,-180"/>
-<text text-anchor="middle" x="168" y="-158.3" font-family="Arial" font-size="14.00" fill="#000000">Measure</text>
+<polygon fill="none" stroke="black" points="194,-180 124,-180 124,-144 194,-144 194,-180"/>
+<text text-anchor="middle" x="159" y="-158.3" font-family="Arial" font-size="14.00">Measure</text>
 </g>
 <!-- conditions2 -->
 <g id="node6" class="node">
 <title>conditions2</title>
-<polygon fill="none" stroke="#000000" points="211,-108 125,-108 125,-72 211,-72 211,-108"/>
-<text text-anchor="middle" x="168" y="-86.3" font-family="Arial" font-size="14.00" fill="#000000">Conditions</text>
+<polygon fill="none" stroke="black" points="199,-108 119,-108 119,-72 199,-72 199,-108"/>
+<text text-anchor="middle" x="159" y="-86.3" font-family="Arial" font-size="14.00">Conditions</text>
 </g>
 <!-- measure2&#45;&#45;conditions2 -->
 <g id="edge5" class="edge">
 <title>measure2&#45;&#45;conditions2</title>
-<path fill="none" stroke="#000000" d="M168,-143.8314C168,-133 168,-119.2876 168,-108.4133"/>
+<path fill="none" stroke="black" d="M159,-143.7C159,-132.85 159,-118.92 159,-108.1"/>
 </g>
 <!-- measure3 -->
 <g id="node3" class="node">
 <title>measure3</title>
-<polygon fill="none" stroke="#000000" points="306,-180 232,-180 232,-144 306,-144 306,-180"/>
-<text text-anchor="middle" x="269" y="-158.3" font-family="Arial" font-size="14.00" fill="#000000">Measure</text>
+<polygon fill="none" stroke="black" points="290,-180 220,-180 220,-144 290,-144 290,-180"/>
+<text text-anchor="middle" x="255" y="-158.3" font-family="Arial" font-size="14.00">Measure</text>
 </g>
 <!-- conditions3 -->
 <g id="node7" class="node">
 <title>conditions3</title>
-<polygon fill="none" stroke="#000000" points="322,-108 236,-108 236,-72 322,-72 322,-108"/>
-<text text-anchor="middle" x="279" y="-86.3" font-family="Arial" font-size="14.00" fill="#000000">Conditions</text>
+<polygon fill="none" stroke="black" points="304,-108 224,-108 224,-72 304,-72 304,-108"/>
+<text text-anchor="middle" x="264" y="-86.3" font-family="Arial" font-size="14.00">Conditions</text>
 </g>
 <!-- measure3&#45;&#45;conditions3 -->
 <g id="edge6" class="edge">
 <title>measure3&#45;&#45;conditions3</title>
-<path fill="none" stroke="#000000" d="M271.5234,-143.8314C273.0278,-133 274.9323,-119.2876 276.4426,-108.4133"/>
+<path fill="none" stroke="black" d="M257.22,-143.7C258.62,-132.85 260.41,-118.92 261.8,-108.1"/>
 </g>
 <!-- Regulation -->
 <g id="node4" class="node">
 <title>Regulation</title>
-<polygon fill="none" stroke="#000000" points="211,-252 125,-252 125,-216 211,-216 211,-252"/>
-<text text-anchor="middle" x="168" y="-230.3" font-family="Arial" font-size="14.00" fill="#000000">Regulation</text>
+<polygon fill="none" stroke="black" points="199.5,-252 118.5,-252 118.5,-216 199.5,-216 199.5,-252"/>
+<text text-anchor="middle" x="159" y="-230.3" font-family="Arial" font-size="14.00">Regulation</text>
 </g>
 <!-- Regulation&#45;&#45;measure1 -->
 <g id="edge1" class="edge">
 <title>Regulation&#45;&#45;measure1</title>
-<path fill="none" stroke="#000000" d="M141.5041,-215.8314C125.5869,-204.9167 105.4032,-191.0764 89.4875,-180.1628"/>
+<path fill="none" stroke="black" d="M134.54,-215.88C119.04,-205.03 99.07,-191.05 83.56,-180.19"/>
 </g>
 <!-- Regulation&#45;&#45;measure2 -->
 <g id="edge2" class="edge">
 <title>Regulation&#45;&#45;measure2</title>
-<path fill="none" stroke="#000000" d="M168,-215.8314C168,-205 168,-191.2876 168,-180.4133"/>
+<path fill="none" stroke="black" d="M159,-215.7C159,-204.85 159,-190.92 159,-180.1"/>
 </g>
 <!-- Regulation&#45;&#45;measure3 -->
 <g id="edge3" class="edge">
 <title>Regulation&#45;&#45;measure3</title>
-<path fill="none" stroke="#000000" d="M193.4866,-215.8314C208.7974,-204.9167 228.2122,-191.0764 243.5216,-180.1628"/>
+<path fill="none" stroke="black" d="M182.73,-215.7C197.61,-204.85 216.71,-190.92 231.54,-180.1"/>
 </g>
 <!-- components1 -->
 <g id="node8" class="node">
 <title>components1</title>
-<polygon fill="none" stroke="#000000" points="100,-36 0,-36 0,0 100,0 100,-36"/>
-<text text-anchor="middle" x="50" y="-14.3" font-family="Arial" font-size="14.00" fill="#000000">Components</text>
+<polygon fill="none" stroke="black" points="94,-36 0,-36 0,0 94,0 94,-36"/>
+<text text-anchor="middle" x="47" y="-14.3" font-family="Arial" font-size="14.00">Components</text>
 </g>
 <!-- conditions1&#45;&#45;components1 -->
 <g id="edge7" class="edge">
 <title>conditions1&#45;&#45;components1</title>
-<path fill="none" stroke="#000000" d="M54.4859,-71.8314C53.5833,-61 52.4406,-47.2876 51.5344,-36.4133"/>
+<path fill="none" stroke="black" d="M51.52,-71.7C50.59,-60.85 49.39,-46.92 48.47,-36.1"/>
 </g>
 <!-- components2 -->
 <g id="node9" class="node">
 <title>components2</title>
-<polygon fill="none" stroke="#000000" points="218,-36 118,-36 118,0 218,0 218,-36"/>
-<text text-anchor="middle" x="168" y="-14.3" font-family="Arial" font-size="14.00" fill="#000000">Components</text>
+<polygon fill="none" stroke="black" points="206,-36 112,-36 112,0 206,0 206,-36"/>
+<text text-anchor="middle" x="159" y="-14.3" font-family="Arial" font-size="14.00">Components</text>
 </g>
 <!-- conditions2&#45;&#45;components2 -->
 <g id="edge8" class="edge">
 <title>conditions2&#45;&#45;components2</title>
-<path fill="none" stroke="#000000" d="M168,-71.8314C168,-61 168,-47.2876 168,-36.4133"/>
+<path fill="none" stroke="black" d="M159,-71.7C159,-60.85 159,-46.92 159,-36.1"/>
 </g>
 <!-- components3 -->
 <g id="node10" class="node">
 <title>components3</title>
-<polygon fill="none" stroke="#000000" points="336,-36 236,-36 236,0 336,0 336,-36"/>
-<text text-anchor="middle" x="286" y="-14.3" font-family="Arial" font-size="14.00" fill="#000000">Components</text>
+<polygon fill="none" stroke="black" points="318,-36 224,-36 224,0 318,0 318,-36"/>
+<text text-anchor="middle" x="271" y="-14.3" font-family="Arial" font-size="14.00">Components</text>
 </g>
 <!-- conditions3&#45;&#45;components3 -->
 <g id="edge9" class="edge">
 <title>conditions3&#45;&#45;components3</title>
-<path fill="none" stroke="#000000" d="M280.7664,-71.8314C281.8194,-61 283.1526,-47.2876 284.2098,-36.4133"/>
+<path fill="none" stroke="black" d="M265.73,-71.7C266.82,-60.85 268.21,-46.92 269.29,-36.1"/>
 </g>
 </g>
 </svg><p>Each regulation may have any number of measures associated with it and every measure is associated with just one measure-generating regulation. This terminology “measure-generating” is critical, as there is another regulation that is associated with measures’ terminations, which is called the “justification regulation”.</p>
@@ -418,35 +424,29 @@ PTS regulations are not introduced as independent TARIC objects, only their refe
           <tr>
 <th>Regulation type</th>
 <th>Alternative</th>
-</tr>
-<tr>
+</tr><tr>
 <td>Modification   tables</td>
 <td>UK   law will see a brand new piece of legislation coming in to replace an   existing regulation: we will simply use a new base regulation</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Prorogation   regulations</td>
 <td>We   will in most cases, unless explicitly required to do otherwise, leave   regulations and measures open-ended. The case for prorogation is therefore   massively watered down. Even if a measure is explicitly end-dated, the   measure’s end dates can simply be extended. We have checked with the European   Commission and there is no difference between modifying the end dates of a   measure and proroguing the measure-generating regulation.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Complete   abrogations</td>
 <td>A   complete abrogation can only take place on a future regulation: if the   measures belonging to a regulation have already started, then it is not   possible to ‘just pretend they never existed’. If the regulation and any   associated measures are in the future, then they can just be deleted to   achieve the same aim. A complete abrogation is only ever used to correct an   error.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Explicit   abrogations</td>
 <td>While   an explicit abrogation signals an earlier than expected end to a regulation,   this is a) infrequent as we will not be applying end dates to regulations in   general and b) replaced by simply terminating the associated measures.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Full   &amp; temporary stops</td>
 <td>The   policy intent that sits behind these simply does not exist in the UK – there   is no recourse to temporarily pause a regulation. The only similar case on   point concerns the use of quota suspensions: these can be achieved by apply   quota suspension periods – see document on managing quotas.</td>
 </tr>
-
         </table>
       </div><h2 id="regulation-groups">Regulation groups</h2><p>Every base regulation on the system (and we will only care in the future about base regulations) references a single regulation group. Modification regulations do not themselves have regulation groups – instead they reference the regulation group of the parent base regulation.</p>
 <p>The regulation group represents a way of categorising regulations according to their purpose: it is much more than just a neat way of grouping regulations together: the groups mean something and if the tariff manager selects the wrong group, then the associated measures may not behave in the expected way.</p>
 <p>There is a correlation table, listed on pages 124++ of the Taric user guide (revision 2) that links regulation group identifiers to the fields that need to be declared in Box 36 (Preference) on the SAD form, and by extension the measure types that can be used in those regulations.
 The correlation tables allow traders to make specific declarations against the correct preferential duty / quota e.g. enter 100 to claim against a tariff preference.</p>
 <p>The first thing to point out about this table is that it should be taken ever so slightly with a pinch of salt – it is wrong in a lot of places (though probably right at the time of writing), as will be evidenced below.</p>
-<p><a href="https://user-images.githubusercontent.com/4951176/100004743-daee8400-2dbf-11eb-93b2-96823b3c3738.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/4951176/100004743-daee8400-2dbf-11eb-93b2-96823b3c3738.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/4951176/100004743-daee8400-2dbf-11eb-93b2-96823b3c3738.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/4951176/100004743-daee8400-2dbf-11eb-93b2-96823b3c3738.png" alt="" /></a></p>
 <p>The marqueed line here shows that if a trader were to enter the term 123 into Box 36 of their declaration, then they would be able to take advantage of measure type 122 (non-preferential quota)  (as well as 464, which is just a notification that the product has been submitted to end use).</p>
 <p>It also shows that those measures must have been entered against a regulation of type KON (non-preferential quotas). This IS enforced and tariff managers need to be aware of this when setting up regulations, otherwise the intended effect of the measure may not be achieved.</p>
 <p>The regulation group data point is very sensitive – we should not build tools to allow tariff managers to modify this data, however we should review and adjust the content of the data, as it is critical to put across the genuine meaning, which is sometimes obfuscated in the EU’s descriptions.</p>
@@ -455,60 +455,46 @@ The correlation tables allow traders to make specific declarations against the c
           <tr>
 <th>Group</th>
 <th>Proposed UK description</th>
-</tr>
-<tr>
+</tr><tr>
 <td>CIT</td>
 <td>CITES</td>
-</tr>
-<tr>
+</tr><tr>
 <td>DNC</td>
 <td>Third   country duties (MFNs)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>DUM</td>
 <td>Trade remedies (Anti-dumping and   anti-subsidy duties)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>FTA</td>
 <td>FTA   (preferences and quotas)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>KON</td>
 <td>Non-preferential   quotas (WTO, ATQ and safeguards)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>MLA</td>
 <td>Import   and export restrictions</td>
-</tr>
-<tr>
+</tr><tr>
 <td>PRF</td>
 <td>Preferential   duties outside of FTAs</td>
-</tr>
-<tr>
+</tr><tr>
 <td>PRS</td>
 <td>Import and export prohibitions</td>
-</tr>
-<tr>
+</tr><tr>
 <td>SPG</td>
 <td>Generalised   system of preferences (GSP)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>SUS</td>
 <td>Tariff   suspensions and reliefs</td>
-</tr>
-<tr>
+</tr><tr>
 <td>TXC</td>
 <td>Retaliatory   and safeguard duties</td>
-</tr>
-<tr>
+</tr><tr>
 <td>UTS</td>
 <td>Supplementary   units</td>
-</tr>
-<tr>
+</tr><tr>
 <td>VAU</td>
 <td>Unit   price (SPV), standard import value (SIV)</td>
 </tr>
-
         </table>
       </div><h2 id="regulation-role-types">Regulation role types</h2><p>These are used purely for the purposes of linking regulations in the TARIC application.</p>
 <p>Changing the end date of a regulation is identical to prorogating / abrogating in terms of its impact on the border systems and so we will not need to use them. However, they are used to illustrate the link between regulations and those that replace them (abrogation) and to show the justification for extending (prorogating).</p>
@@ -518,40 +504,31 @@ The correlation tables allow traders to make specific declarations against the c
           <tr>
 <th>ID</th>
 <th>Description</th>
-</tr>
-<tr>
+</tr><tr>
 <td>1</td>
 <td>Base   regulation</td>
-</tr>
-<tr>
+</tr><tr>
 <td>2</td>
 <td>Provisional   anti-dumping/countervailing duty</td>
-</tr>
-<tr>
+</tr><tr>
 <td>3</td>
 <td>Definitive   anti-dumping/countervailing duty</td>
-</tr>
-<tr>
+</tr><tr>
 <td>4</td>
 <td>Modification</td>
-</tr>
-<tr>
+</tr><tr>
 <td>5</td>
 <td>Prorogation</td>
-</tr>
-<tr>
+</tr><tr>
 <td>6</td>
 <td>Complete   abrogation</td>
-</tr>
-<tr>
+</tr><tr>
 <td>7</td>
 <td>Explicit   abrogation</td>
-</tr>
-<tr>
+</tr><tr>
 <td>8</td>
 <td>Regulation   which temporarily suspends all another regulation (FTS - Full Temporary Stop)</td>
 </tr>
-
         </table>
       </div><h2 id="linking-to-regulations">Linking to regulations</h2><p>The process of ‘ratifying’ a piece of legislation differs depending on the type of legislation involved. The majority of regulations that will impact the usage of the UK tariff are published as secondary legislation (statutory instruments or SIs). This applies to the setting of the MFN duties, managing annual quotas, trade agreements etc.</p>
 <p>The only real outlier is with Trade Remedies anti-dumping (AD) and anti-subsidy (AS) regulation – these are typically published as Taxation Notices (tertiary legislation).</p>
@@ -563,10 +540,10 @@ The correlation tables allow traders to make specific declarations against the c
 * <code>officialjournal_number</code>
 * <code>officialjournal_page</code>
 * &hellip;as well as the year of the regulation</p>
-<p><a href="https://user-images.githubusercontent.com/4951176/100005358-ba72f980-2dc0-11eb-9bab-262081bb1295.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/4951176/100005358-ba72f980-2dc0-11eb-9bab-262081bb1295.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/4951176/100005358-ba72f980-2dc0-11eb-9bab-262081bb1295.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/4951176/100005358-ba72f980-2dc0-11eb-9bab-262081bb1295.png" alt="" /></a></p>
 <p>To note – the diagram above shows two regulations that are applicable to a measure. This is (first) the modification regulation R1006/11 overlaid on top of the original base regulation R2658/97.</p>
 <p>This shows that the regulation’s box official journal number is L 282 and the official journal page is 0001. The year of the regulation is 2011. These three fields are then inserted into a boilerplate URL structure as follows:</p>
-<div class="highlight"><pre class="highlight plaintext"><code>http://eur-lex.europa.eu/search.html?whOJ=NO_OJ%3D282,YEAR_OJ%3D2011,PAGE_FIRST%3D0001&amp;DB_COLL_OJ=oj-l&amp;type=advanced&amp;lang=en
+<div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>http://eur-lex.europa.eu/search.html?whOJ=NO_OJ%3D282,YEAR_OJ%3D2011,PAGE_FIRST%3D0001&amp;DB_COLL_OJ=oj-l&amp;type=advanced&amp;lang=en
 </code></pre></div><p>This then gives a search result on EUR-LEX which surfaces the necessary OJ entry according to the criteria specified against that regualtion.</p>
 <h3 id="in-the-uk">In the UK</h3><p>Clearly the OJ journal and page and the URL on EUR-LEX are of no value to future UK legislation URLs. An alternative means of providing the data to the Trade Tariff Service needs to be implemented, as follows:</p>
 
@@ -592,27 +569,22 @@ The correlation tables allow traders to make specific declarations against the c
           <tr>
 <th>Char(s)</th>
 <th>Usage</th>
-</tr>
-<tr>
+</tr><tr>
 <td>1</td>
 <td>To   contain the alphabetic regulation type identifier as listed below.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>2-3</td>
 <td>To   contain a 2-digit reference to the year (e.g. 21, 22).</td>
-</tr>
-<tr>
+</tr><tr>
 <td>4-7</td>
 <td>To   contain a sequential identifier starting at 0000. Ideally this would, where   possible equate to the public identifier of the regulation (e.g. for statutory instrument SI 2012/1312, this would be 1312).</td>
-</tr>
-<tr>
+</tr><tr>
 <td>8</td>
 <td>The suffix: this is used to split regulations logically although they have been published as one piece of legislation (for instance, for supporting different validity periods within the one regulation or allowing the same publication to be used in mutliple regulation groups). The value here is usually “0”, but documents in EU legislation can be very complex, and this digit may extend through the numerical digits.</td>
 </tr>
-
         </table>
       </div><p>In the tariff database, to translate regulation identifiers into database IDs, it’s necessary to transpose the characters as follows:</p>
-<p><a href="https://user-images.githubusercontent.com/4951176/100006275-27d35a00-2dc2-11eb-8177-08b7ee9a4a94.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/4951176/100006275-27d35a00-2dc2-11eb-8177-08b7ee9a4a94.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/4951176/100006275-27d35a00-2dc2-11eb-8177-08b7ee9a4a94.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/4951176/100006275-27d35a00-2dc2-11eb-8177-08b7ee9a4a94.png" alt="" /></a></p>
 <p>The UK and the EU have very different ways of managing legislation, meaning that the way in which the EU has decided to structure its regulation IDs is not suited to the UK: we do not distinguish between regulations, decisions, agreements etc, therefore the prefix convention is less than useful to the UK.</p>
 <p>In fact, the only prefix definition that we will carry forward is ‘C’: this is used to denote a draft regulation, i.e. one where the measures do not yet take legal effect. This is the only one of 6 subdivisions of regulations that has actual functional effect: the others are labels only.</p>
 <p>The table identifies how the UK will structure its regulation identifiers – please note: this is an internal identifier only. It is not intended to be displayed to members of the public. Thr <code>public_identifier</code> field is used to provide a public facing identifier for the regulation. It is critical that every regulation is provided a regulation identifier of exactly 8 digits (not 7 not 9).</p>
@@ -621,44 +593,34 @@ The correlation tables allow traders to make specific declarations against the c
           <tr>
 <th>Prefix</th>
 <th>Usage</th>
-</tr>
-<tr>
+</tr><tr>
 <td>C</td>
 <td>Draft   regulation</td>
-</tr>
-<tr>
+</tr><tr>
 <td>P</td>
 <td>Preferential   Trade Agreement / FTA</td>
-</tr>
-<tr>
+</tr><tr>
 <td>U</td>
 <td>Unilateral   preferences (GSP)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>S</td>
 <td>Suspensions   and reliefs</td>
-</tr>
-<tr>
+</tr><tr>
 <td>X</td>
 <td>Import   and Export control</td>
-</tr>
-<tr>
+</tr><tr>
 <td>N</td>
 <td>Trade   remedies</td>
-</tr>
-<tr>
+</tr><tr>
 <td>M</td>
 <td>MFN</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Q</td>
 <td>Quotas</td>
-</tr>
-<tr>
+</tr><tr>
 <td>A</td>
 <td>Agri   measures</td>
 </tr>
-
         </table>
       </div><h3 id="example-trade-agreement-regulation-in-2-parts-p2113720-p2113721">Example – Trade agreement regulation in 2 parts (P2113720 / P2113721)</h3><p>This would be referenced with a public identifier of 2021 No. 1372.</p>
 <div class="table-container">
@@ -666,48 +628,38 @@ The correlation tables allow traders to make specific declarations against the c
           <tr>
 <th>Char(s)</th>
 <th>Meaning</th>
-</tr>
-<tr>
+</tr><tr>
 <td>P</td>
 <td>Preferential   Trade Agreement / FTA</td>
-</tr>
-<tr>
+</tr><tr>
 <td>21</td>
 <td>from   2021</td>
-</tr>
-<tr>
+</tr><tr>
 <td>1372</td>
 <td>The   unique identifier of the SI</td>
-</tr>
-<tr>
+</tr><tr>
 <td>0</td>
 <td>Document   part 0 (maybe used for tariff preference measures &amp; quotas)</td>
 </tr>
-
         </table>
       </div><div class="table-container">
         <table>
           <tr>
 <th>Char(s)</th>
 <th>Meaning</th>
-</tr>
-<tr>
+</tr><tr>
 <td>P</td>
 <td>Preferential   Trade Agreement / FTA</td>
-</tr>
-<tr>
+</tr><tr>
 <td>21</td>
 <td>from   2021</td>
-</tr>
-<tr>
+</tr><tr>
 <td>1372</td>
 <td>The   unique identifier of the SI</td>
-</tr>
-<tr>
+</tr><tr>
 <td>1</td>
 <td>Document   part 1 (maybe used for supplementary units)</td>
 </tr>
-
         </table>
       </div><h2 id="draft-regulations">Draft regulations</h2><p>Draft regulations are unique, inasmuch as they are ‘live’ but the measures that are associates with them do not take effect – they have no executive power and will not show up as active measures in the border systems or on the trade tariff service</p>
 <p>Draft regulations are identified by the prefix ‘C’ – we are continuing to use these draft regulations in the UK tariff because of the special properties that they have.</p>

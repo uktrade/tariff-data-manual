@@ -4,7 +4,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="robots" content="noindex">
 
     <title>Measure conditions - Tariff Data Manual</title>
 
@@ -12,17 +11,18 @@
 
     <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html">
 
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="uktrade.github.io" />
+      <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta name="twitter:title" content="Measure conditions - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
       <meta property="og:title" content="Measure conditions" />
       <meta property="og:type" content="object" />
       <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html" />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:domain" content="uktrade.github.io" />
-      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
-      <meta property="twitter:title" content="Measure conditions - Tariff Data Manual" />
-      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html" />
 
     
   </head>
@@ -50,32 +50,38 @@
       </div>
 
         <div id="toc-heading" class="toc-show fixedsticky">
-          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
             Table of contents <span class="toc-show__icon"></span>
-          </a>
+          </button>
         </div>
 
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
-            <div class="toc" data-module="table-of-contents">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
               <div class="search" data-module="search">
-  <form action="https://www.google.co.uk/search" method="get" role="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
-    <label class="govuk-label search__label" for="search">
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
       Search (via Google)
     </label>
-    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="govuk-button search__button">Search</button>
   </form>
   <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
     <div class="search-results__inner">
       <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
       <div class="search-results__content"></div>
     </div>
   </div>
 </div>
 
-              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
@@ -85,7 +91,7 @@
 <ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
   </li>
 </ul>
 <ul>
@@ -95,52 +101,17 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
   </li>
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
   </li>
 </ul>
 <ul>
@@ -158,20 +129,50 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
   </li>
 </ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
 </li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 <ul>
@@ -181,12 +182,17 @@
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
   </li>
 </ul>
 <ul>
@@ -196,12 +202,12 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 </li></ul>
@@ -251,83 +257,83 @@
 <li>etc &hellip;</li>
 </ul></li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93779091-83486680-fc1e-11ea-8e12-695e654b9516.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93779091-83486680-fc1e-11ea-8e12-695e654b9516.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93779091-83486680-fc1e-11ea-8e12-695e654b9516.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93779091-83486680-fc1e-11ea-8e12-695e654b9516.png" alt="image" /></a></p>
 <p><strong>Anatomy of a condition</strong></p>
 <svg width="308pt" height="210pt"
  viewBox="0.00 0.00 308.00 210.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_648" class="graph" transform="scale(1 1) rotate(0) translate(4 206)">
+<g id="database_83" class="graph" transform="scale(1 1) rotate(0) translate(4 206)">
 <title>Database</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-206 304,-206 304,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-206 304,-206 304,4 -4,4"/>
 <!-- Measure Conditions -->
-<g id="table_491" class="node">
+<g id="table_600" class="node">
 <title>Measure Conditions</title>
-<polygon fill="none" stroke="#000000" points="9,-181 9,-197 291,-197 291,-181 9,-181"/>
-<text text-anchor="start" x="108.5" y="-186.8" font-family="Arial" font-size="9.00" fill="#000000">Measure Conditions</text>
-<polygon fill="none" stroke="#000000" points="9,-165 9,-181 199,-181 199,-165 9,-165"/>
-<text text-anchor="start" x="55.5" y="-170.8" font-family="Arial" font-size="9.00" fill="#000000">measure_condition_sid</text>
-<polygon fill="none" stroke="#000000" points="199,-165 199,-181 258,-181 258,-165 199,-165"/>
-<text text-anchor="start" x="223.5" y="-170.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="258,-165 258,-181 291,-181 291,-165 258,-165"/>
-<text text-anchor="start" x="269.5" y="-170.8" font-family="Arial" font-size="9.00" fill="#000000">pk</text>
-<polygon fill="none" stroke="#000000" points="9,-149 9,-165 199,-165 199,-149 9,-149"/>
-<text text-anchor="start" x="77" y="-154.8" font-family="Arial" font-size="9.00" fill="#000000">measure_sid</text>
-<polygon fill="none" stroke="#000000" points="199,-149 199,-165 258,-165 258,-149 199,-149"/>
-<text text-anchor="start" x="223.5" y="-154.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="258,-149 258,-165 291,-165 291,-149 258,-149"/>
-<text text-anchor="start" x="271" y="-154.8" font-family="Arial" font-size="9.00" fill="#000000">fk</text>
-<polygon fill="none" stroke="#000000" points="9,-133 9,-149 199,-149 199,-133 9,-133"/>
-<text text-anchor="start" x="72" y="-138.8" font-family="Arial" font-size="9.00" fill="#000000">condition_code</text>
-<polygon fill="none" stroke="#000000" points="199,-133 199,-149 258,-149 258,-133 199,-133"/>
-<text text-anchor="start" x="202" y="-138.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(255)</text>
-<polygon fill="none" stroke="#000000" points="258,-133 258,-149 291,-149 291,-133 258,-133"/>
-<polygon fill="none" stroke="#000000" points="9,-117 9,-133 199,-133 199,-117 9,-117"/>
-<text text-anchor="start" x="39.5" y="-122.8" font-family="Arial" font-size="9.00" fill="#000000">component_sequence_number</text>
-<polygon fill="none" stroke="#000000" points="199,-117 199,-133 258,-133 258,-117 199,-117"/>
-<text text-anchor="start" x="223.5" y="-122.8" font-family="Arial" font-size="9.00" fill="#000000">int</text>
-<polygon fill="none" stroke="#000000" points="258,-117 258,-133 291,-133 291,-117 258,-117"/>
-<polygon fill="none" stroke="#000000" points="9,-101 9,-117 199,-117 199,-101 9,-101"/>
-<text text-anchor="start" x="55.5" y="-106.8" font-family="Arial" font-size="9.00" fill="#000000">condition_duty_amount</text>
-<polygon fill="none" stroke="#000000" points="199,-101 199,-117 258,-117 258,-101 199,-101"/>
-<text text-anchor="start" x="219.5" y="-106.8" font-family="Arial" font-size="9.00" fill="#000000">float</text>
-<polygon fill="none" stroke="#000000" points="258,-101 258,-117 291,-117 291,-101 258,-101"/>
-<text text-anchor="start" x="266.5" y="-106.8" font-family="Arial" font-size="9.00" fill="#000000">null</text>
-<polygon fill="none" stroke="#000000" points="9,-85 9,-101 199,-101 199,-85 9,-85"/>
-<text text-anchor="start" x="40.5" y="-90.8" font-family="Arial" font-size="9.00" fill="#000000">condition_monetary_unit_code</text>
-<polygon fill="none" stroke="#000000" points="199,-85 199,-101 258,-101 258,-85 199,-85"/>
-<text text-anchor="start" x="207" y="-90.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(3)</text>
-<polygon fill="none" stroke="#000000" points="258,-85 258,-101 291,-101 291,-85 258,-85"/>
-<text text-anchor="start" x="261" y="-90.8" font-family="Arial" font-size="9.00" fill="#000000">fk, null</text>
-<polygon fill="none" stroke="#000000" points="9,-69 9,-85 199,-85 199,-69 9,-69"/>
-<text text-anchor="start" x="31.5" y="-74.8" font-family="Arial" font-size="9.00" fill="#000000">condition_measurement_unit_code</text>
-<polygon fill="none" stroke="#000000" points="199,-69 199,-85 258,-85 258,-69 199,-69"/>
-<text text-anchor="start" x="207" y="-74.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(3)</text>
-<polygon fill="none" stroke="#000000" points="258,-69 258,-85 291,-85 291,-69 258,-69"/>
-<text text-anchor="start" x="261" y="-74.8" font-family="Arial" font-size="9.00" fill="#000000">fk, null</text>
-<polygon fill="none" stroke="#000000" points="9,-53 9,-69 199,-69 199,-53 9,-53"/>
-<text text-anchor="start" x="12" y="-58.8" font-family="Arial" font-size="9.00" fill="#000000">condition_meausrement_unit_qualifier_code</text>
-<polygon fill="none" stroke="#000000" points="199,-53 199,-69 258,-69 258,-53 199,-53"/>
-<text text-anchor="start" x="207" y="-58.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(1)</text>
-<polygon fill="none" stroke="#000000" points="258,-53 258,-69 291,-69 291,-53 258,-53"/>
-<text text-anchor="start" x="261" y="-58.8" font-family="Arial" font-size="9.00" fill="#000000">fk, null</text>
-<polygon fill="none" stroke="#000000" points="9,-37 9,-53 199,-53 199,-37 9,-37"/>
-<text text-anchor="start" x="78.5" y="-42.8" font-family="Arial" font-size="9.00" fill="#000000">action_code</text>
-<polygon fill="none" stroke="#000000" points="199,-37 199,-53 258,-53 258,-37 199,-37"/>
-<text text-anchor="start" x="202" y="-42.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(255)</text>
-<polygon fill="none" stroke="#000000" points="258,-37 258,-53 291,-53 291,-37 258,-37"/>
-<text text-anchor="start" x="271" y="-42.8" font-family="Arial" font-size="9.00" fill="#000000">fk</text>
-<polygon fill="none" stroke="#000000" points="9,-21 9,-37 199,-37 199,-21 9,-21"/>
-<text text-anchor="start" x="60" y="-26.8" font-family="Arial" font-size="9.00" fill="#000000">certificate_type_code</text>
-<polygon fill="none" stroke="#000000" points="199,-21 199,-37 258,-37 258,-21 199,-21"/>
-<text text-anchor="start" x="207" y="-26.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(1)</text>
-<polygon fill="none" stroke="#000000" points="258,-21 258,-37 291,-37 291,-21 258,-21"/>
-<text text-anchor="start" x="261" y="-26.8" font-family="Arial" font-size="9.00" fill="#000000">fk, null</text>
-<polygon fill="none" stroke="#000000" points="9,-5 9,-21 199,-21 199,-5 9,-5"/>
-<text text-anchor="start" x="71.5" y="-10.8" font-family="Arial" font-size="9.00" fill="#000000">certificate_code</text>
-<polygon fill="none" stroke="#000000" points="199,-5 199,-21 258,-21 258,-5 199,-5"/>
-<text text-anchor="start" x="207" y="-10.8" font-family="Arial" font-size="9.00" fill="#000000">varchar(3)</text>
-<polygon fill="none" stroke="#000000" points="258,-5 258,-21 291,-21 291,-5 258,-5"/>
-<text text-anchor="start" x="261" y="-10.8" font-family="Arial" font-size="9.00" fill="#000000">fk, null</text>
-<polygon fill="none" stroke="#000000" points="8,-4 8,-198 292,-198 292,-4 8,-4"/>
+<polygon fill="none" stroke="black" points="9,-181 9,-197 291,-197 291,-181 9,-181"/>
+<text text-anchor="start" x="108.5" y="-186.8" font-family="Arial" font-size="9.00">Measure Conditions</text>
+<polygon fill="none" stroke="black" points="9,-165 9,-181 199,-181 199,-165 9,-165"/>
+<text text-anchor="start" x="55.5" y="-170.8" font-family="Arial" font-size="9.00">measure_condition_sid</text>
+<polygon fill="none" stroke="black" points="199,-165 199,-181 258,-181 258,-165 199,-165"/>
+<text text-anchor="start" x="223.5" y="-170.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="258,-165 258,-181 291,-181 291,-165 258,-165"/>
+<text text-anchor="start" x="269.5" y="-170.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="9,-149 9,-165 199,-165 199,-149 9,-149"/>
+<text text-anchor="start" x="77" y="-154.8" font-family="Arial" font-size="9.00">measure_sid</text>
+<polygon fill="none" stroke="black" points="199,-149 199,-165 258,-165 258,-149 199,-149"/>
+<text text-anchor="start" x="223.5" y="-154.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="258,-149 258,-165 291,-165 291,-149 258,-149"/>
+<text text-anchor="start" x="271" y="-154.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="9,-133 9,-149 199,-149 199,-133 9,-133"/>
+<text text-anchor="start" x="72" y="-138.8" font-family="Arial" font-size="9.00">condition_code</text>
+<polygon fill="none" stroke="black" points="199,-133 199,-149 258,-149 258,-133 199,-133"/>
+<text text-anchor="start" x="202" y="-138.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="258,-133 258,-149 291,-149 291,-133 258,-133"/>
+<polygon fill="none" stroke="black" points="9,-117 9,-133 199,-133 199,-117 9,-117"/>
+<text text-anchor="start" x="39.5" y="-122.8" font-family="Arial" font-size="9.00">component_sequence_number</text>
+<polygon fill="none" stroke="black" points="199,-117 199,-133 258,-133 258,-117 199,-117"/>
+<text text-anchor="start" x="223.5" y="-122.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="258,-117 258,-133 291,-133 291,-117 258,-117"/>
+<polygon fill="none" stroke="black" points="9,-101 9,-117 199,-117 199,-101 9,-101"/>
+<text text-anchor="start" x="55.5" y="-106.8" font-family="Arial" font-size="9.00">condition_duty_amount</text>
+<polygon fill="none" stroke="black" points="199,-101 199,-117 258,-117 258,-101 199,-101"/>
+<text text-anchor="start" x="219.5" y="-106.8" font-family="Arial" font-size="9.00">float</text>
+<polygon fill="none" stroke="black" points="258,-101 258,-117 291,-117 291,-101 258,-101"/>
+<text text-anchor="start" x="266.5" y="-106.8" font-family="Arial" font-size="9.00">null</text>
+<polygon fill="none" stroke="black" points="9,-85 9,-101 199,-101 199,-85 9,-85"/>
+<text text-anchor="start" x="40.5" y="-90.8" font-family="Arial" font-size="9.00">condition_monetary_unit_code</text>
+<polygon fill="none" stroke="black" points="199,-85 199,-101 258,-101 258,-85 199,-85"/>
+<text text-anchor="start" x="207" y="-90.8" font-family="Arial" font-size="9.00">varchar(3)</text>
+<polygon fill="none" stroke="black" points="258,-85 258,-101 291,-101 291,-85 258,-85"/>
+<text text-anchor="start" x="261" y="-90.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="9,-69 9,-85 199,-85 199,-69 9,-69"/>
+<text text-anchor="start" x="31.5" y="-74.8" font-family="Arial" font-size="9.00">condition_measurement_unit_code</text>
+<polygon fill="none" stroke="black" points="199,-69 199,-85 258,-85 258,-69 199,-69"/>
+<text text-anchor="start" x="207" y="-74.8" font-family="Arial" font-size="9.00">varchar(3)</text>
+<polygon fill="none" stroke="black" points="258,-69 258,-85 291,-85 291,-69 258,-69"/>
+<text text-anchor="start" x="261" y="-74.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="9,-53 9,-69 199,-69 199,-53 9,-53"/>
+<text text-anchor="start" x="12" y="-58.8" font-family="Arial" font-size="9.00">condition_meausrement_unit_qualifier_code</text>
+<polygon fill="none" stroke="black" points="199,-53 199,-69 258,-69 258,-53 199,-53"/>
+<text text-anchor="start" x="207" y="-58.8" font-family="Arial" font-size="9.00">varchar(1)</text>
+<polygon fill="none" stroke="black" points="258,-53 258,-69 291,-69 291,-53 258,-53"/>
+<text text-anchor="start" x="261" y="-58.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="9,-37 9,-53 199,-53 199,-37 9,-37"/>
+<text text-anchor="start" x="78.5" y="-42.8" font-family="Arial" font-size="9.00">action_code</text>
+<polygon fill="none" stroke="black" points="199,-37 199,-53 258,-53 258,-37 199,-37"/>
+<text text-anchor="start" x="202" y="-42.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="258,-37 258,-53 291,-53 291,-37 258,-37"/>
+<text text-anchor="start" x="271" y="-42.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="9,-21 9,-37 199,-37 199,-21 9,-21"/>
+<text text-anchor="start" x="60" y="-26.8" font-family="Arial" font-size="9.00">certificate_type_code</text>
+<polygon fill="none" stroke="black" points="199,-21 199,-37 258,-37 258,-21 199,-21"/>
+<text text-anchor="start" x="207" y="-26.8" font-family="Arial" font-size="9.00">varchar(1)</text>
+<polygon fill="none" stroke="black" points="258,-21 258,-37 291,-37 291,-21 258,-21"/>
+<text text-anchor="start" x="261" y="-26.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="9,-5 9,-21 199,-21 199,-5 9,-5"/>
+<text text-anchor="start" x="71.5" y="-10.8" font-family="Arial" font-size="9.00">certificate_code</text>
+<polygon fill="none" stroke="black" points="199,-5 199,-21 258,-21 258,-5 199,-5"/>
+<text text-anchor="start" x="207" y="-10.8" font-family="Arial" font-size="9.00">varchar(3)</text>
+<polygon fill="none" stroke="black" points="258,-5 258,-21 291,-21 291,-5 258,-5"/>
+<text text-anchor="start" x="261" y="-10.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="8,-4 8,-198 292,-198 292,-4 8,-4"/>
 </g>
 </g>
 </svg><p>The diagram to above illustrates the primary data fields associated with a measure condition, as follows:</p>
@@ -337,71 +343,58 @@
 <th>Field</th>
 <th>Data type</th>
 <th>Description</th>
-</tr>
-<tr>
+</tr><tr>
 <td>oid</td>
 <td>integer   (PK)</td>
 <td>primary   key of the individul record – see document on keys</td>
-</tr>
-<tr>
+</tr><tr>
 <td>measure_condition_sid</td>
 <td>integer</td>
 <td>Unique   identifier for the measure condition</td>
-</tr>
-<tr>
+</tr><tr>
 <td>measure_sid</td>
 <td>integer   (FK)</td>
 <td>Foreign   key to the measure table via its unique identifier. A condition is only ever   related to a single measure and not shared across multiple measures</td>
-</tr>
-<tr>
+</tr><tr>
 <td>condition_code</td>
 <td>varchar(255)</td>
 <td>Despite   the 255 character length, this is actually a 1-digit character code, as per   slide “Condition codes currently in use” above</td>
-</tr>
-<tr>
+</tr><tr>
 <td>component_sequence_number</td>
 <td>integer</td>
 <td>The sequence in which the conditions are to be listed – is most important with sequentially listed condition types, such as V (Entry Price System). Note that the sequence starts from 1 for each condition code (so that to get final order, sort both by condition code and component sequence number).</td>
-</tr>
-<tr>
+</tr><tr>
 <td>condition_duty_amount</td>
 <td>float</td>
 <td>The   trigger price that causes a give condition to take effect – see below</td>
-</tr>
-<tr>
+</tr><tr>
 <td>condition_monetary_unit_code</td>
 <td>varchar(255)   (FK)</td>
 <td>The   monetary unit of that trigger price</td>
-</tr>
-<tr>
+</tr><tr>
 <td>condition_measurement_unit_code</td>
 <td>varchar(3)   (FK)</td>
 <td>The   measurement unit of that trigger price</td>
-</tr>
-<tr>
+</tr><tr>
 <td>condition_measurement_unit_qualifier_code</td>
 <td>varchar(1)   (FK)</td>
 <td>The   measurement unit qualifier of that trigger price</td>
-</tr>
-<tr>
+</tr><tr>
 <td>action_code</td>
 <td>varchar(255)   (FK)</td>
 <td>The   action to take in response to a condition being met – see below</td>
-</tr>
-<tr>
+</tr><tr>
 <td>certificate_type_code</td>
 <td>varchar(1)   (FK)</td>
 <td>The   type of certificate required (if needed)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>certificate_code</td>
 <td>varchar(3)   (FK)</td>
 <td>The   specific certificate required (if needed)</td>
 </tr>
-
         </table>
       </div><p><strong>Conditions - relationships</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" alt="image" /></a></p>
 
 <ul>
 <li>This is a simplified view of the relationships of the measure_conditions with other data entities, for example all description tables are omitted.</li>
@@ -410,15 +403,15 @@
 </ul>
 <h3 id="condition-codes">Condition codes</h3><p><strong>Condition codes currently in use</strong></p>
 <p>A condition code identifies what sort of condition is to be fulfilled in order for the action to be carried out. The table below identifies the condition codes that are currently in use (12.01.20) in the EU Tariff. This is not all possible condition codes – there are a number that have been used in the past that are no longer in use. The highlighted rows are those that are in use most frequently, and, importantly are likely to be used most frequently in the UK tariff.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93781194-066abc00-fc21-11ea-9aad-4691067d9f91.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781194-066abc00-fc21-11ea-9aad-4691067d9f91.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93781194-066abc00-fc21-11ea-9aad-4691067d9f91.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781194-066abc00-fc21-11ea-9aad-4691067d9f91.png" alt="image" /></a></p>
 <p><strong>Measure conditions and condition components</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93781575-6cefda00-fc21-11ea-859e-6d27c3c1cd0e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781575-6cefda00-fc21-11ea-859e-6d27c3c1cd0e.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93781575-6cefda00-fc21-11ea-859e-6d27c3c1cd0e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781575-6cefda00-fc21-11ea-859e-6d27c3c1cd0e.png" alt="image" /></a></p>
 
 <ul>
 <li>Going back to the list of condition codes, there are a number of condition codes which make reference to a minimum or maximum import price, otherwise known as a reference price (or trigger price). These are highlighted in blue above.</li>
 <li>The most frequent &amp; volatile example of this in the EU tariff is condition type V – this is used to manage the Entry Price System (detailed later).</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93781509-5b0e3700-fc21-11ea-9229-629cd227fe9b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781509-5b0e3700-fc21-11ea-9229-629cd227fe9b.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93781509-5b0e3700-fc21-11ea-9229-629cd227fe9b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781509-5b0e3700-fc21-11ea-9229-629cd227fe9b.png" alt="image" /></a></p>
 
 <ul>
 <li>In this case, and the other condition codes that follow the same pattern, the fields in the measure condition code table (that start condition_) represent the trigger price: the fields in the measure_condition_components table represent the duties that will be payable a a result of the trigger condition having been met.</li>
@@ -426,7 +419,7 @@
 </ul>
 <p><strong>Conditions and condition components – cherry tomatoes</strong></p>
 <p>If there is a complex mechanism to be demonstrated, it is a fair bet that it can be highlighted using cherry tomatoes, which attract most complexities - tomatoes plus another c. 30 commodities are subject (in the EU) to the Entry Price System.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93781973-e687c800-fc21-11ea-96bb-1f5ec52a3bbe.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781973-e687c800-fc21-11ea-96bb-1f5ec52a3bbe.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93781973-e687c800-fc21-11ea-96bb-1f5ec52a3bbe.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781973-e687c800-fc21-11ea-96bb-1f5ec52a3bbe.png" alt="image" /></a></p>
 <p>In the diagram above (taken from the Trade Tariff Service), the measure condition trigger fields are highlighted in the red marquee.</p>
 <p>The payable duty amounts are highlighted in blue – if the trigger condition is met (in this case if a consignment of tomatoes comes into the country at a price lower than or equal to a given threshold (trigger price), then the duty charged will be increased.</p>
 <p><strong>Boiling it down, there are only really 2 condition mechanics</strong></p>
@@ -435,76 +428,59 @@
           <tr>
 <th>Does the trader have the right documentation?</th>
 <th></th>
-</tr>
-<tr>
+</tr><tr>
 <td>A</td>
 <td>Presentation   of an anti-dumping/countervailing document</td>
-</tr>
-<tr>
+</tr><tr>
 <td>B</td>
 <td>Presentation   of a certificate/licence/document</td>
-</tr>
-<tr>
+</tr><tr>
 <td>C</td>
 <td>Presentation   of a certificate/licence/document</td>
-</tr>
-<tr>
+</tr><tr>
 <td>H</td>
 <td>Presentation   of a certificate/licence/document</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Q</td>
 <td>Presentation   of an endorsed certificate/licence</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Y</td>
 <td>Other   conditions</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Z</td>
 <td>Presentation   of more than one certificate</td>
 </tr>
-
         </table>
       </div><div class="table-container">
         <table>
           <tr>
 <th>Is the price higher than a reference price?</th>
 <th></th>
-</tr>
-<tr>
+</tr><tr>
 <td>E</td>
 <td>The   quantity or the price per unit declared, as appropriate, is equal or less   than the specified maximum, or presentation of the required document</td>
-</tr>
-<tr>
+</tr><tr>
 <td>I</td>
 <td>The   quantity or the price per unit declared, as appropriate, is equal or less   than the specified maximum, or presentation of the required document</td>
-</tr>
-<tr>
+</tr><tr>
 <td>F</td>
 <td>The   net free at frontier price before duty must be equal to or greater than the   minimum price (see components)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>L</td>
 <td>CIF   price must be higher than the minimum price (see components)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>M</td>
 <td>Declared   price must be equal to or greater than the minimum price/reference price (see   components)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>R</td>
 <td>Ratio   &ldquo;net weight/supplementary unit&rdquo; is equal to or higher than the   condition amount</td>
-</tr>
-<tr>
+</tr><tr>
 <td>U</td>
 <td>Ratio   &ldquo;declared value/supplementary unit&rdquo; should be higher than the   condition amount</td>
-</tr>
-<tr>
+</tr><tr>
 <td>V</td>
 <td>Import   price must be equal to or greater than the entry price (see components)</td>
 </tr>
-
         </table>
       </div><p>The different varieties of condition code are really just variations on two themes:</p>
 
@@ -524,108 +500,82 @@
           <tr>
 <th>ID</th>
 <th>Description</th>
-</tr>
-<tr>
+</tr><tr>
 <td>01</td>
 <td>Apply the amount of the action (see components)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>02</td>
 <td>Apply the difference between the amount of the action (see components) and the price at import</td>
-</tr>
-<tr>
+</tr><tr>
 <td>03</td>
 <td>Apply the difference between the amount of the action (see components) and CIF price</td>
-</tr>
-<tr>
+</tr><tr>
 <td>04</td>
 <td>The entry into free circulation is not allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>05</td>
 <td>Export is not allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>06</td>
 <td>Import is not allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>07</td>
 <td>Measure not applicable</td>
-</tr>
-<tr>
+</tr><tr>
 <td>08</td>
 <td>Declared subheading not allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>09</td>
 <td>Import/export not allowed after control</td>
-</tr>
-<tr>
+</tr><tr>
 <td>10</td>
 <td>Declaration to be corrected - box 33, 37, 38, 41 or 46 incorrect</td>
-</tr>
-<tr>
+</tr><tr>
 <td>11</td>
 <td>Apply the difference between the amount of the action (see components) and the free at frontier price before duty</td>
-</tr>
-<tr>
+</tr><tr>
 <td>12</td>
 <td>Apply the difference between the amount of the action (see components) and the CIF price before duty</td>
-</tr>
-<tr>
+</tr><tr>
 <td>13</td>
 <td>Apply the difference between the amount of the action (see components) and the CIF price augmented with the duty to be paid per tonne</td>
-</tr>
-<tr>
+</tr><tr>
 <td>14</td>
 <td>The exemption/reduction of the anti-dumping duty is not applicable</td>
-</tr>
-<tr>
+</tr><tr>
 <td>15</td>
 <td>Apply the difference between the amount of the action (see components) and the price augmented with the countervailing duty (3,8%)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>16</td>
 <td>Export refund not applicable</td>
-</tr>
-<tr>
+</tr><tr>
 <td>24</td>
 <td>Entry into free circulation allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>25</td>
 <td>Export allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>26</td>
 <td>Import allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>27</td>
 <td>Apply the mentioned duty</td>
-</tr>
-<tr>
+</tr><tr>
 <td>28</td>
 <td>Declared subheading allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>29</td>
 <td>Import/export allowed after control</td>
-</tr>
-<tr>
+</tr><tr>
 <td>30</td>
 <td>Suspicious case</td>
-</tr>
-<tr>
+</tr><tr>
 <td>34</td>
 <td>Apply exemption/reduction of the anti-dumping duty</td>
-</tr>
-<tr>
+</tr><tr>
 <td>36</td>
 <td>Apply export refund</td>
 </tr>
-
         </table>
       </div><p><strong>Action codes that go together</strong></p>
 <p>Many of the action codes are actually part of an action code pair. The smaller of the two is usually the negative action and the larger is the complementary positive action (e.g. x is not allowed vs x is allowed).</p>
@@ -635,40 +585,31 @@
           <tr>
 <th>Pair</th>
 <th>Description</th>
-</tr>
-<tr>
+</tr><tr>
 <td>04   is paired with 24</td>
 <td>The   entry into free circulation is not allowed / Entry into free circulation   allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>05   is paired with 25</td>
 <td>Export   is not allowed / Export allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>06   is paired with 26</td>
 <td>Import   is not allowed / Import is allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>07   is paired with 27</td>
 <td>Measure   not applicable / Apply the mentioned duty</td>
-</tr>
-<tr>
+</tr><tr>
 <td>08   is paired with 28</td>
 <td>Declared   subheading not allowed / Declared subheading allowed</td>
-</tr>
-<tr>
+</tr><tr>
 <td>09   is paired with 29</td>
 <td>Import   / export not allowed after control / Import/export allowed after control</td>
-</tr>
-<tr>
+</tr><tr>
 <td>14   is paired with 34</td>
 <td>The   exemption / reduction of the anti-dumping duty is not applicable / Apply   exemption / reduction of the anti-dumping duty</td>
-</tr>
-<tr>
+</tr><tr>
 <td>16   is paired with 36</td>
 <td>Export   refund not applicable / Apply export refund</td>
 </tr>
-
         </table>
       </div><p><strong>Example of a pos / neg dual action code</strong></p>
 
@@ -676,70 +617,58 @@
 <li>These codes are typically used for restrictions that require some sort of documentation (certificate or license), although they may be used in all kids of circumstance (e.g. setting tiered duties for Trade Remedies).</li>
 <li>Here is an example on the UK Trade Tariff Service of a pair of conditions with pos / neg action codes – the positive being condition 1, the negative condition 2.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93787405-58fba680-fc28-11ea-956c-b8de9fb412bf.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93787405-58fba680-fc28-11ea-956c-b8de9fb412bf.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93787405-58fba680-fc28-11ea-956c-b8de9fb412bf.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93787405-58fba680-fc28-11ea-956c-b8de9fb412bf.png" alt="image" /></a></p>
 <div class="table-container">
         <table>
           <tr>
 <th></th>
 <th>Condition 1</th>
 <th>Condition 2</th>
-</tr>
-<tr>
+</tr><tr>
 <td>measure_condition_sid</td>
 <td>1248652</td>
 <td>1248653</td>
-</tr>
-<tr>
+</tr><tr>
 <td>measure_sid</td>
 <td>3604666</td>
 <td>3604666</td>
-</tr>
-<tr>
+</tr><tr>
 <td>condition_code</td>
 <td>B</td>
 <td>B</td>
-</tr>
-<tr>
+</tr><tr>
 <td>component_sequence_number</td>
 <td>1</td>
 <td>2</td>
-</tr>
-<tr>
+</tr><tr>
 <td>condition_duty_amount</td>
 <td>null</td>
 <td>null</td>
-</tr>
-<tr>
+</tr><tr>
 <td>condition_monetary_unit_code</td>
 <td>null</td>
 <td>null</td>
-</tr>
-<tr>
+</tr><tr>
 <td>condition_measurement_unit_code</td>
 <td>null</td>
 <td>null</td>
-</tr>
-<tr>
+</tr><tr>
 <td>condition_measurement_unit_qualifier_code</td>
 <td>null</td>
 <td>null</td>
-</tr>
-<tr>
+</tr><tr>
 <td>action_code</td>
 <td>27</td>
 <td>7</td>
-</tr>
-<tr>
+</tr><tr>
 <td>certificate_type_code</td>
 <td>Y</td>
 <td>null</td>
-</tr>
-<tr>
+</tr><tr>
 <td>certificate_code</td>
 <td>085</td>
 <td>null</td>
 </tr>
-
         </table>
       </div>
 <ul>
@@ -755,8 +684,8 @@
 <li>Within that group, the individual conditions are grouped together in an OR relationship, for example, in the conditions associated with the B condition code below, only one of the three noted goods needs to be provided, however it must be provided alongside one of the other conditions from block E being met (provision of a document or the weight of the imported good being below 2kg).</li>
 <li>In this way, an additional tier is added to the logical condition model via the condition code grouping.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" alt="image" /></a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93788939-23a38880-fc29-11ea-9aa4-4496f37639f9.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788939-23a38880-fc29-11ea-9aa4-4496f37639f9.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93788939-23a38880-fc29-11ea-9aa4-4496f37639f9.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788939-23a38880-fc29-11ea-9aa4-4496f37639f9.png" alt="image" /></a></p>
 <p><strong>Volumes of conditions</strong></p>
 
 <ul>
@@ -769,9 +698,9 @@
 </ul></li>
 <li>The intellectual knowledge of certification is a huge challenge in DIT, Defra and HMG as a whole - over the implementation period, significant effort in DIT and Defra should be expended in looking to understand certification.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93791467-2d7abb00-fc2c-11ea-82af-8f6faa45858a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93791467-2d7abb00-fc2c-11ea-82af-8f6faa45858a.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93791467-2d7abb00-fc2c-11ea-82af-8f6faa45858a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93791467-2d7abb00-fc2c-11ea-82af-8f6faa45858a.png" alt="image" /></a></p>
 <h3 id="detailed-overview-of-condition-codes">Detailed overview of condition codes</h3><p><strong>Condition code A</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" alt="image" /></a></p>
 
 <ul>
 <li>This condition code is used to modify the circumstances of an anti-dumping or anti-subsidy duty depending on the conditions stated.</li>
@@ -848,7 +777,7 @@
 <p>C and H are used when multiple condition sets using the same mechanic need to be applied to the same measure.</p>
 </blockquote>
 <p><strong>Condition codes B, C &amp; H</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" alt="image" /></a></p>
 
 <ul>
 <li>Codes B, C and H require a certificate or other document to be presented in order for the requirement to be fulfilled.</li>
@@ -857,26 +786,26 @@
 <li>If just B had been used, it would not have been possible to apply the AND logic of the two condition groups.</li>
 <li>H is used only 41 times (Jan 2020); C is used c. 5,000 times whereas B is vastly more prevalent (c. 24,000 occurrences).</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797534-45eed380-fc34-11ea-8123-3dd56caaba5b.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797534-45eed380-fc34-11ea-8123-3dd56caaba5b.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797534-45eed380-fc34-11ea-8123-3dd56caaba5b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797534-45eed380-fc34-11ea-8123-3dd56caaba5b.png" alt="image" /></a></p>
 <p><strong>Condition code E</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797650-6c147380-fc34-11ea-9127-79c54dfd1288.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797650-6c147380-fc34-11ea-9127-79c54dfd1288.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797650-6c147380-fc34-11ea-9127-79c54dfd1288.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797650-6c147380-fc34-11ea-9127-79c54dfd1288.png" alt="image" /></a></p>
 
 <ul>
 <li>This condition code is a combination of a quantitative restriction plus a documentation requirement, i.e. a trade will be allowed provided the volume of goods is lower than the defined threshold weight (or other unit), or a document is provided that permits the trade in a larger volume of goods.</li>
 <li>The criteria that define these two conditions are set in the measure condition data.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797793-9b2ae500-fc34-11ea-9fd0-7d12b8d3f17e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797793-9b2ae500-fc34-11ea-9fd0-7d12b8d3f17e.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797793-9b2ae500-fc34-11ea-9fd0-7d12b8d3f17e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797793-9b2ae500-fc34-11ea-9fd0-7d12b8d3f17e.png" alt="image" /></a></p>
 <p><strong>Condition code I</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797859-aed64b80-fc34-11ea-9716-a0c6df520ece.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797859-aed64b80-fc34-11ea-9716-a0c6df520ece.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797859-aed64b80-fc34-11ea-9716-a0c6df520ece.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797859-aed64b80-fc34-11ea-9716-a0c6df520ece.png" alt="image" /></a></p>
 
 <ul>
 <li>These condition codes are currently used uniquely with measure types 751 and 755 (import and export control of waste)</li>
 <li>They are functionally identical to condition code E (see above).</li>
 <li>Type I is only ever used in conjunction with type E to present a send condition set of the same type, never on its own</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797871-b269d280-fc34-11ea-90fd-3bc10f0322e0.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797871-b269d280-fc34-11ea-90fd-3bc10f0322e0.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797871-b269d280-fc34-11ea-90fd-3bc10f0322e0.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797871-b269d280-fc34-11ea-90fd-3bc10f0322e0.png" alt="image" /></a></p>
 <p><strong>Condition code F</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797962-cf9ea100-fc34-11ea-9f04-8637fdf12c11.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797962-cf9ea100-fc34-11ea-9f04-8637fdf12c11.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797962-cf9ea100-fc34-11ea-9f04-8637fdf12c11.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797962-cf9ea100-fc34-11ea-9f04-8637fdf12c11.png" alt="image" /></a></p>
 
 <ul>
 <li>These conditions allow duties to be charged against imported goods subject to Trade Remedies (Anti dumping or anti subsidy duties) that are dependent upon the unit price of the import.</li>
@@ -890,9 +819,9 @@
 </ul></li>
 <li>This essentially sets a minimum import </li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" alt="image" /></a></p>
 <p><strong>Condition code L</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93821295-48622500-fc56-11ea-9b0b-ef497953d502.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821295-48622500-fc56-11ea-9b0b-ef497953d502.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93821295-48622500-fc56-11ea-9b0b-ef497953d502.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821295-48622500-fc56-11ea-9b0b-ef497953d502.png" alt="image" /></a></p>
 
 <ul>
 <li>This is currently used only 30 times and is always applied to measures of type 652 - Additional duty based on cif price</li>
@@ -901,7 +830,7 @@
 <li>The policy is far too complex to describe here, but is described in detail in the general training manual.</li>
 </ul>
 <p><strong>Condition code M</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93821499-852e1c00-fc56-11ea-9f43-33ec45d62b84.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821499-852e1c00-fc56-11ea-9f43-33ec45d62b84.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93821499-852e1c00-fc56-11ea-9f43-33ec45d62b84.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821499-852e1c00-fc56-11ea-9f43-33ec45d62b84.png" alt="image" /></a></p>
 
 <ul>
 <li>Condition code M is used in two circumstances:
@@ -921,9 +850,9 @@
 <li>There are currently (Jan 2020) 84 instances of condition code M.</li>
 <li>In the examples below, there are two conditions which behave more or less the same as condition type F, where the applicable punitive duty is dependent the declared price [F depends on net free at frontier price before duty].</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93821534-970fbf00-fc56-11ea-9ded-0909e536e23d.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821534-970fbf00-fc56-11ea-9ded-0909e536e23d.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93821534-970fbf00-fc56-11ea-9ded-0909e536e23d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821534-970fbf00-fc56-11ea-9ded-0909e536e23d.png" alt="image" /></a></p>
 <p><strong>Condition code Q</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93822545-48632480-fc58-11ea-9248-e7d404094fdd.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822545-48632480-fc58-11ea-9248-e7d404094fdd.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93822545-48632480-fc58-11ea-9248-e7d404094fdd.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822545-48632480-fc58-11ea-9248-e7d404094fdd.png" alt="image" /></a></p>
 
 <ul>
 <li>Condition type Q is used in all cases where a measure is put in place to represent a licensed quota. And in all cases it refers to the single license Y100 (Special entries on the import licence AGRIM). It is used in measures of type:
@@ -936,16 +865,16 @@
 </ul></li>
 <li>It is only used for licensed quotas; it is never used for FCFS quotas.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93822572-5618aa00-fc58-11ea-9b8d-4556b8066802.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822572-5618aa00-fc58-11ea-9b8d-4556b8066802.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93822572-5618aa00-fc58-11ea-9b8d-4556b8066802.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822572-5618aa00-fc58-11ea-9b8d-4556b8066802.png" alt="image" /></a></p>
 <p><strong>Condition code R</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93822667-75afd280-fc58-11ea-9afb-28fda63aca2e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822667-75afd280-fc58-11ea-9afb-28fda63aca2e.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93822667-75afd280-fc58-11ea-9afb-28fda63aca2e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822667-75afd280-fc58-11ea-9afb-28fda63aca2e.png" alt="image" /></a></p>
 
 <ul>
 <li>As per scenario 1 for condition code M, this is used to apply conditions to credibility checks to ensure that the weight ‘looks right’ against the number of declared goods. The supplementary unit identifies what additional unit beyond the KGM weight must be supplied by the trader on declaring their import.</li>
 <li>Again, as per condition code M, the UK will be abandoning the practise of managing credibility checks in the Taric file after EU Exit.</li>
 </ul>
 <p><strong>Condition code U</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93822928-ddfeb400-fc58-11ea-843a-dd13f7ca6416.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822928-ddfeb400-fc58-11ea-843a-dd13f7ca6416.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93822928-ddfeb400-fc58-11ea-843a-dd13f7ca6416.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822928-ddfeb400-fc58-11ea-843a-dd13f7ca6416.png" alt="image" /></a></p>
 
 <ul>
 <li>As per scenario 1 for condition codes M &amp; R, this is used to apply conditions to credibility checks to ensure that the declared value ‘looks right’ against the number of declared goods.</li>
@@ -953,23 +882,23 @@
 <li>As per condition codes M &amp; R, the UK will be abandoning the practise of managing credibility checks in the Taric file after EU Exit.</li>
 </ul>
 <p><strong>Condition code V – The Entry price System</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93823300-7eed6f00-fc59-11ea-9028-2e0929b5b66a.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823300-7eed6f00-fc59-11ea-9028-2e0929b5b66a.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93823300-7eed6f00-fc59-11ea-9028-2e0929b5b66a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823300-7eed6f00-fc59-11ea-9028-2e0929b5b66a.png" alt="image" /></a></p>
 
 <ul>
 <li>The Entry Price System (EPS) is a complex mechanism to apply tiered duties to 31 agricultural products, primarily fruit.</li>
 <li>The EPS is described in detail elsewhere, so this page will not go into that much detail, especially as the UK will be abandoning the Entry Price System. It supports growers of (primarily) citrus fruits in Southern Europe: the UK’s less sunny climes do not lend themselves to industrial-scale citriculture.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93823127-359d1f80-fc59-11ea-91c2-5c72639d322e.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823127-359d1f80-fc59-11ea-91c2-5c72639d322e.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93823127-359d1f80-fc59-11ea-91c2-5c72639d322e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823127-359d1f80-fc59-11ea-91c2-5c72639d322e.png" alt="image" /></a></p>
 
 <ul>
 <li>The screen above is captured from the third country duty for cherry tomatoes – this shows the EPS in action.</li>
 <li>The duties that are applicable depend on the import price: the cheaper the import, the more expensive the duty</li>
 <li>The purpose of this is to protect domestic growers in s. Europe from influxes of very cheap goods.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93823436-b825df00-fc59-11ea-8bea-46fc0806bdb8.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823436-b825df00-fc59-11ea-8bea-46fc0806bdb8.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93823436-b825df00-fc59-11ea-8bea-46fc0806bdb8.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823436-b825df00-fc59-11ea-8bea-46fc0806bdb8.png" alt="image" /></a></p>
 <p>In the example above, each row is a price threshold: if the import price falls below a given threshold, then the duty from the row below is charged.</p>
 <p>The data for EPS-related measures is as per the example to the below – just one row (marquee below).</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93823318-8876d700-fc59-11ea-8a7d-c415132558cf.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823318-8876d700-fc59-11ea-8a7d-c415132558cf.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93823318-8876d700-fc59-11ea-8a7d-c415132558cf.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823318-8876d700-fc59-11ea-8a7d-c415132558cf.png" alt="image" /></a></p>
 <p>This is, as its name suggests a catch all that can be used to manage effectively any condition not specifically covered by the other condition codes. In practice, this seems to have been used in the past by the EU for managing certificates, much in the vein of conditions with code B, C or H. But the real reason for using this is for non-specific conditions that are not associated with a specific document.</p>
 <p>These miscellaneous conditions are linked to in much the same way that certificates are referenced, using the certificate type code and certificate code fields. Here are a few examples of conditions that are referenced by condition code Y. None of these are documents per se: they reference properties of goods or activities undertaken by traders outside of the core declaration flow.</p>
 <p>For example:
@@ -979,7 +908,7 @@
 * Y037  Goods exempted from the prohibition – biathlon equipment</p>
 <p>None of the conditions linked to via the condition code ‘Y’ utilise the price threshold fields.</p>
 <p>Condition code Z</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93824173-e6f08500-fc5a-11ea-966a-dd3ecf50b2ad.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93824173-e6f08500-fc5a-11ea-966a-dd3ecf50b2ad.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93824173-e6f08500-fc5a-11ea-966a-dd3ecf50b2ad.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93824173-e6f08500-fc5a-11ea-966a-dd3ecf50b2ad.png" alt="image" /></a></p>
 <p>Condition code Z is used solely on national P &amp; R measures currently, though it is by no means a stipulation that this has to be so. Indeed, all the national P &amp; R will become homogenised with the measures inherited from the EU after EU Exit – though the management of measures to support the NI Protocol may influence the specific approach.</p>
 <p>These are the measure types where Z is used:</p>
 
@@ -1001,103 +930,83 @@
 <th>#</th>
 <th>Rule</th>
 <th>Notes</th>
-</tr>
-<tr>
+</tr><tr>
 <td>ME53</td>
 <td>The referenced measure condition must exist.</td>
 <td>Required   This applies when assigning conditions components to   conditions A measure obvs has to be in existence too for a measure condition   to be generated in the first place.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME54</td>
 <td>The validity period of the referenced measure condition   must span the validity period of the measure.</td>
 <td>Not required - disregard   As far as we can see, this is an erroneous business rule:   the measure condition table does not have a start and end date field. The   condition adopts the start and end dates of the parent measure. Similarly,   there are no start and end dates associated with a measure condition   component (or for that matter a measure component). They all adopt the date   constraints of the parent measure.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME55</td>
 <td>A measure condition refers to a measure condition or to a condition   + certificate or to a condition + amount specifications.</td>
 <td>Disregard   This has been written so vaguely that there are no rules   to be gleaned from it</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME56</td>
 <td>The referenced certificate must exist.</td>
 <td>Required   A certificate must exist before being assigned to a   condition – match must be made on the 2 clustered primary key fields of   certificate type code and certificate code</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME57</td>
 <td>The validity period of the referenced certificate must   span the validity period of the measure.</td>
 <td>Required   The optimal way for us to handle this is to NEVER expire   certificates – there is literally no need. However the validity start dates   and end dates of the measure and the certificate need to be checked. See note   at the foot of this document as to how null end dates have been dealt with in   terms of comparing extents – to reduce code</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME58</td>
 <td>The same certificate can only be referenced once by the   same measure and the same condition type.</td>
 <td>Required   There should never be a requirement to apply a certificate   more than once, but it needs to be checked. Again – use the 2 pronged cluster   primary key.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME59</td>
 <td>The referenced action code must exist.</td>
 <td>Debatable   The measure action table should remain fixed – by making   any modifications to this table, we are creating a lot of work for downstream   systems which need to be adjusted to cater for the change (CDS, Gems,   Caesar).</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME60</td>
 <td>The referenced monetary unit must exist.</td>
 <td>Required    Conditions are put in place to respond either to the   provision of some sort of document / license or to respond to a minimum   threshold import price – if the latter then there is a requirement to specify   a valid monetary unit, which is always likely to be GBP.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME61</td>
 <td>The validity period of the referenced monetary unit must   span the validity period of the measure.</td>
 <td>Required - debatable   The unit will always be GBP or EUR – all we need to do is   to ensure that the units are not end-dated</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME61</td>
 <td>The validity period of the referenced monetary unit must   span the validity period of the measure.</td>
 <td>Required - debatable   The unit will always be GBP or EUR – all we need to do   is to ensure that the units are not end-dated</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME62</td>
 <td>The combination measurement unit + measurement unit   qualifier must exist.</td>
 <td>Required   The relationship between a measurement_unit and any   qualifer that can be used against that measurement unit is defined in the   table “measurements” – this needs to be observed fully or CDS will generate   an error. Measurements have start and end dates against them, and these also   need to be observed.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME63</td>
 <td>The validity period of the measurement unit must span the   validity period of the measure.</td>
 <td>Required   Measurement units have start dates end dates – we need   to observe these start and end dates in the creation of measures. We are not   offering a tool to manage measurement units in the first instance.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME64</td>
 <td>The validity period of the measurement unit qualifier must   span the validity period of the measure.</td>
 <td>Required   Measurement unit qualifiers have start dates end dates   – we need to observe these start and end dates in the creation of measures.   We are not offering a tool to manage qualifiers in the first instance.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME105</td>
 <td>The referenced duty expression must exist.</td>
 <td>Required   There is a specified list of duty expressions that can   be used in TAP / CDS. We must not use any duty expressions that are not   valid.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME106</td>
 <td>The VP of the duty expression must span the VP of the   measure.</td>
 <td>Required   There are a number of duty expressions that are no   longer valid – they have been end dated (in 1996 and 2016 primarily). We must   not use these.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME108</td>
 <td>The same duty expression can only be used once within   condition components of the same condition of the same measure. (i.e. it can   be re-used in other conditions, no matter what condition type, of the same   measure)</td>
 <td>Required   Even if an expression that (in English) reads the same   needs to be used more than once in a measure, we must use a different   expression ID, never the same one twice.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME109</td>
 <td>If the flag &lsquo;amount&rsquo; on duty expression is &lsquo;mandatory&rsquo;   then an amount must be specified. If the flag is set to &lsquo;not permitted&rsquo; then   no amount may be entered.</td>
 <td>Required   The three possible values for this field on the   duty_expressions table are:   0 - Permitted   1 - Mandatory   2 - Not permitted   These values must be observed – By the way, we should   not allows users to modify the data associated with duty expressions, as the   knock on impact will be too significant.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME110</td>
 <td>If the flag &lsquo;monetary unit&rsquo; on duty expression is   &lsquo;mandatory&rsquo; then a monetary unit must be specified. If the flag is set to   &lsquo;not permitted&rsquo; then no monetary unit may be entered.</td>
 <td>Required   The three possible values for this field on the   duty_expressions table are:   0 - Permitted   1 - Mandatory   2 - Not permitted   These values must be observed – As above, we should not   allows users to modify the data associated with duty expressions.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>ME111</td>
 <td>If the flag &lsquo;measurement unit&rsquo; on duty expression is   &lsquo;mandatory&rsquo; then a measurement unit must be specified. If the flag is set to   &lsquo;not permitted&rsquo; then no measurement unit may be entered.</td>
 <td>Required   The three possible values for this field on the   duty_expressions table are:   0 - Permitted   1 - Mandatory   2 - Not permitted   These values must be observed – As above, we should not   allows users to modify the data associated with duty expressions.</td>
 </tr>
-
         </table>
       </div><h3 id="comparing-null-dates">Comparing null dates</h3><p>coalesce(validity_end_date, TO_DATE(&lsquo;2999-12-31&rsquo;, &lsquo;YYYY-MM-DD&rsquo;))</p>
 <p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>

@@ -4,7 +4,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="robots" content="noindex">
 
     <title>Geographical areas - Tariff Data Manual</title>
 
@@ -12,17 +11,18 @@
 
     <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html">
 
+      <meta name="robots" content="noindex" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="uktrade.github.io" />
+      <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
+      <meta name="twitter:title" content="Geographical areas - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
       <meta property="og:title" content="Geographical areas" />
       <meta property="og:type" content="object" />
       <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html" />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:domain" content="uktrade.github.io" />
-      <meta property="twitter:image" content="https://uktrade.github.io/tariff-data-manual//images/govuk-large.png" />
-      <meta property="twitter:title" content="Geographical areas - Tariff Data Manual" />
-      <meta property="twitter:url" content="https://uktrade.github.io/tariff-data-manual//tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html" />
 
     
   </head>
@@ -50,32 +50,38 @@
       </div>
 
         <div id="toc-heading" class="toc-show fixedsticky">
-          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
             Table of contents <span class="toc-show__icon"></span>
-          </a>
+          </button>
         </div>
 
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
-            <div class="toc" data-module="table-of-contents">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
               <div class="search" data-module="search">
-  <form action="https://www.google.co.uk/search" method="get" role="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual/"/>
-    <label class="govuk-label search__label" for="search">
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
       Search (via Google)
     </label>
-    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="govuk-button search__button">Search</button>
   </form>
   <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
     <div class="search-results__inner">
       <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
       <div class="search-results__content"></div>
     </div>
   </div>
 </div>
 
-              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
@@ -85,7 +91,7 @@
 <ul><li><a href="/tariff-data-manual/documentation/tariff-data-structures.html"><span>Tariff data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
   </li>
 </ul>
 <ul>
@@ -95,52 +101,17 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
   </li>
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures"><span>Measures</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
   </li>
 </ul>
 <ul>
@@ -158,20 +129,50 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
   </li>
 </ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+  </li>
+</ul>
 </li></ul><ul><li><a href="/tariff-data-manual/documentation/tariff-policy.html"><span>Tariff policy</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most Favoured Nation duties</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
-  </li>
-</ul>
-<ul>
-  <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 <ul>
@@ -181,12 +182,17 @@
 </ul>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
     <a href="/tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#miscellaneous-measures"><span>Miscellaneous measures</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
   </li>
 </ul>
 <ul>
@@ -196,12 +202,12 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
   </li>
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-policy/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-policy/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
   </li>
 </ul>
 </li></ul>
@@ -273,7 +279,7 @@ fully incorporated, like Kosovo, which remains partially recognised.</li>
 <p>The last example on the previous page (F006 Phytosanitary certificates) shows that the country groups do not have to align to an enshrined globally understood trading entity like EU (1011), CARIFORUM (1033) or GSP LDC (2005).</p>
 <p>Because the meat and drink of Taric and TAP is to produce measures, which can be connected to just one single geographical area, it is often simpler just to create a group of countries and apply the measure to the group and not the individual countries.</p>
 <p>This can often be at the expense of making total sense however. For example, to execute the regulations associated with handloomed products, a group has been set up to accommodate the countries to which a quota applies for such products – the name of the group is “Silk or cotton handloom products”.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92506166-eee10b80-f1fc-11ea-9d9a-ef1157fad306.png" target="_blank" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92506166-eee10b80-f1fc-11ea-9d9a-ef1157fad306.png" alt="" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/92506166-eee10b80-f1fc-11ea-9d9a-ef1157fad306.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92506166-eee10b80-f1fc-11ea-9d9a-ef1157fad306.png" alt="" /></a></p>
 <h3 id="geographical-area-membership">Geographical area membership</h3><p>Geographical areas that represent country groups (area code 1) are designed to include member countries</p>
 <p>A geographical area group can only contain regions or countries (area codes 0 and 2), not other geographical area groups – any attempt to assign a country group to another country group as a member must not be permitted and cause a business rule failure at HMRC. A geographical area’s membership of a country group is bookended by a start date and potentially and end date, where absolutely required.</p>
 <p>While geographical areas are absolutely not a volatile area within the application, and the changes are few and far between, there are a number of use cases where membership does change, albeit infrequently. For example, countries move in and out of GSP tiers from year to year as their progress or decline economically.</p>
@@ -303,80 +309,67 @@ fully incorporated, like Kosovo, which remains partially recognised.</li>
 <th>I want to &hellip;</th>
 <th>So that …</th>
 <th>Notes</th>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>create a new geographical area of type country or region</td>
 <td>I can assign duties or regulatory measures specifically to that country or region</td>
 <td>MUST HAVE This will be an extremely infrequent activity; very few new countries spring up. Fields required: -Start date -Geographical area ID -Description -Area code (0 or 2)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>create a new geographical area of type ‘country group’</td>
 <td>I can implement measures or quotas against more than one country via the same action</td>
 <td>MUST HAVE Expected to be required up to 10 times a year (max) Fields required: -Start date -Geographical area ID -Description -Area code (1)</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>update the description of a country group or country or region</td>
 <td>the description best reflects the current status of that country</td>
 <td>MUST HAVE Countries change name vey irregularly; in the outset, there are c. 40 changes required for countries whose descriptions are not ISO-compliant. After that, countries change name no more than c. one instance per year Fields required: -Start date -Description</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>add a member country or region to a country group from a given start date</td>
 <td>the country group can best reflect the policy requirement</td>
 <td>MUST HAVE</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>terminate a country or region’s membership of a country group</td>
 <td>I won’t accidentally assign a retired/incorrect membership.</td>
 <td>SHOULD HAVE This id a rare scenario to happen. Can also use end-dates to achieve the same outcome.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>assign measure(s) to a geographical area of any of the given types</td>
 <td>Only the correct county/region will be affected.</td>
 <td>SHOULD HAVE This can be done through the measure creation initially.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>exclude one or more countries from a measure, where that measure is assigned to a group of countries</td>
 <td>Only the correct county will be affected.</td>
 <td>MUST HAVE</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>assign quota order number(s) to a geographical area of any of the given types</td>
 <td>Only the correct quota order number(s) will be affected.</td>
 <td>SHOULD HAVE This can be done through the quota creation initially.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>exclude one or more countries from a quota (order number), where that measure is assigned to a group of countries</td>
 <td>Only the correct county will be affected.</td>
 <td>SHOULD HAVE This can be done through the quota creation initially.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>have a workflow process</td>
 <td>All certificate changes can be validated and approved before being sent to CDS.</td>
 <td>Must Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>have the system validate relevant business rules accordingly</td>
 <td>It won’t cause errors when validated in CDS.</td>
 <td>Should Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Tariff Manager</td>
 <td>have a search filter</td>
 <td>I can find the geographical areas I need quickly.</td>
 <td>Must Have</td>
 </tr>
-
         </table>
       </div><h3 id="key-business-processing-rules-geographical-areas">Key business processing rules – geographical areas</h3><div class="table-container">
         <table>
@@ -385,158 +378,132 @@ fully incorporated, like Kosovo, which remains partially recognised.</li>
 <th>Rule</th>
 <th>Notes</th>
 <th>MoSCoW</th>
-</tr>
-<tr>
+</tr><tr>
 <td>GA1</td>
 <td>The combination geographical area id + validity start date must be unique.</td>
 <td>Required</td>
 <td>Must Have - While it is theoretically possible for there to be two areas with the same ID, and different start dates it has never happened. This rule should nonetheless be checked on the creation and update of a country group</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA2</td>
 <td>The start date must be less than or equal to the end date.</td>
 <td>Required</td>
 <td>Must Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA3</td>
 <td>At least one description record is mandatory. The start date of the first description period must be equal to the start date of the geographical area. Two descriptions may not have the same start date. The start date of the description must be less than or equal to the end date of the geographical area.</td>
 <td>Required</td>
 <td>Must Have - As a ‘type 2’ data object where the description can change over time (e.g. Western Samoa), the geographical_area object cannot exist without at least 1 description record &amp; equivalent period record that starts on the same day as the geographical area record.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA4</td>
 <td>The referenced parent geographical area group must be an existing geographical area with area code = 1 (geographical area group).</td>
 <td>Not required</td>
 <td>Won’t Have - The simplest and best way to deal with any business rules regarding parent geographical areas is to not set them up: TAP should set this field to null for all new geographical areas – the field is redundant, but still has business rules associated with it – to manage memberships, use the geographical_area_memberships many to many table.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA5</td>
 <td>If a geographical area has a parent geographical area group then the validity period of the parent geographical area group must span the validity period of the geographical area.</td>
 <td>Not required</td>
 <td>Won’t Have - As above</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Relationship with measures</td>
 <td></td>
 <td></td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA6</td>
 <td>Loops in the parent relation between geographical areas and parent geographical area groups are not allowed. If a geographical area A is a parent geographical area group of B then B cannot be a parent geographical area group of A (loops can also exist on more than two levels, e.g. level 3; If A is a parent of B and B is a parent of C then C cannot be a parent of A).</td>
 <td>Not required</td>
 <td>Won’t Have - As above</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA7</td>
 <td>The validity period of geographical area must not overlap any other geographical area with the same geographical area id.</td>
 <td>Required This should be handled at the same time as GA1 (above)</td>
 <td>Won’t Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA10</td>
 <td>When a geographical area is referenced in a measure then the validity period of the geographical area must span the validity period of the measure.</td>
 <td>Required</td>
 <td>Must Have - Unless explicitly required, a geographical area should be left open-ended to avoid this error – there is rarely a need to terminate a country group, especially as there is no public-facing aspect to this: however, in certain cases, e.g. a regularly refreshed pseudo-group (like used for steel safeguards) or countries whose borders have shifted as a result of wars (Serbia and Montenegro), this is still required. It is vital however that end dates are applied sparingly.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA11</td>
 <td>If a geographical area is referenced as an excluded geographical area in a measure then the membership period of the (excluded) geographical area must span the validity period of the measure.</td>
 <td>Required</td>
 <td>Must Have - As above – this is typically avoided by NOT end-dating geographical areas</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Relation with geographical area membership</td>
 <td></td>
 <td></td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA12</td>
 <td>The referenced geographical area id (member) must exist.</td>
 <td>Required</td>
 <td>Must Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA13</td>
 <td>The referenced geographical area id (member) can only be linked to a country or region (area code = 0 or 2).</td>
 <td>Required</td>
 <td>Must Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA14</td>
 <td>The referenced geographical area group id must exist.</td>
 <td>Required</td>
 <td>Must Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA15</td>
 <td>The membership start date must be less than or equal to the membership end date.</td>
 <td>Required</td>
 <td>Must Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA16</td>
 <td>The validity period of the geographical area group must span all membership periods of its members.</td>
 <td>Required</td>
 <td>Must Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA17</td>
 <td>The membership period of a geographical area (member) must be within (inclusive) the validity period of the geographical area group (geographical area’s start and end date).</td>
 <td>Required</td>
 <td>Must Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA18</td>
 <td>When a geographical area is more than once member of the same group then there may be no overlap in their membership periods.</td>
 <td>Required</td>
 <td>Must Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA19</td>
 <td>If the associated geographical area group has a parent geographical area group then all the members of the geographical area group must also be members of the parent geographical area group.</td>
 <td>Required</td>
 <td>Must Have - But avoid creating parent groups, or terminating existing parent groups</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA20</td>
 <td>If the associated geographical area group has a parent geographical area group then the membership period of each member of the parent group must span the membership period of the same geographical area in the geographical area group.</td>
 <td>Required</td>
 <td>Must Have But avoid creating parent groups, or terminating existing parent groups</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Delete a geographical area</td>
 <td></td>
 <td></td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA21</td>
 <td>If a geographical area is referenced in a measure then it may not be deleted1.</td>
 <td>Required</td>
 <td>Must Have - Though we should never be deleting geographical areas.</td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA22</td>
 <td>A geographical area cannot be deleted if it is referenced as a parent geographical area group.</td>
 <td>Required</td>
 <td>Must Have</td>
-</tr>
-<tr>
+</tr><tr>
 <td>Delete a geographical area membership</td>
 <td></td>
 <td></td>
 <td></td>
-</tr>
-<tr>
+</tr><tr>
 <td>GA23</td>
 <td>If a geographical area is referenced as an excluded geographical area in a measure, the membership association with the measure geographical area group cannot be deleted.</td>
 <td>Required</td>
 <td>Must Have</td>
 </tr>
-
         </table>
       </div>
             
