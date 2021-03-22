@@ -3,6 +3,7 @@ require 'yaml'
 
 CONFIG = YAML.load_file 'config/tech-docs.yml'
 GITHUB_REPO = CONFIG['github_repo']
+PREFIX = (ENV['GITHUB_REPOSITORY'] || '').partition('/')[-2..-1].join
 
 INPUT_DIR  = 'wiki'
 OUTPUT_DIR = 'source/documentation'
@@ -35,6 +36,7 @@ end
 
 task build: [:pages, :patches] do
   sh 'middleman', 'build', '--verbose'
+  sh 'sed', '-i', "s:url(\"/images/:url(\"#{PREFIX}/images/:", *Dir.glob('build/stylesheets/*.css')
 end
 
 OUTPUT_FILES.zip(WIKI_FILES).each do |output, input|
