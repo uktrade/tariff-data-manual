@@ -9,7 +9,7 @@ INPUT_DIR  = 'wiki'
 OUTPUT_DIR = 'source/documentation'
 SEPARATOR  = ';-'
 
-WIKI_FILES   = FileList["#{INPUT_DIR}/*"]
+WIKI_FILES   = FileList["#{INPUT_DIR}/*.md"]
 OUTPUT_FILES = WIKI_FILES.map {|n| File.join *n.gsub(INPUT_DIR, OUTPUT_DIR).gsub('.md','.html.md.erb').downcase.split(SEPARATOR) }
 INDEX_FILE   = File.join OUTPUT_DIR, '../', 'index.html.md.erb'
 
