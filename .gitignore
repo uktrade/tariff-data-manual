@@ -11,6 +11,7 @@
 # Ignore the build directory
 /build
 /source/documentation
+/source/images
 /source/*.html.md.erb
 
 # Ignore cache

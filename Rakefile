@@ -7,11 +7,15 @@ PREFIX = (ENV['GITHUB_REPOSITORY'] || '').partition('/')[-2..-1].join
 
 INPUT_DIR  = 'wiki'
 OUTPUT_DIR = 'source/documentation'
+IMAGES_DIR = 'source/images'
 SEPARATOR  = ';-'
 
 WIKI_FILES   = FileList["#{INPUT_DIR}/*.md"]
 OUTPUT_FILES = WIKI_FILES.map {|n| File.join *n.gsub(INPUT_DIR, OUTPUT_DIR).gsub('.md','.html.md.erb').downcase.split(SEPARATOR) }
 INDEX_FILE   = File.join OUTPUT_DIR, '../', 'index.html.md.erb'
+
+IMAGE_FILES = FileList["#{INPUT_DIR}/images/*.*"]
+OUTPUT_IMAGES = IMAGE_FILES.map {|n| File.join IMAGES_DIR, n.pathmap('%f') }
 
 TOP_LEVEL_HEADER = /^#\s+.*$/
 
@@ -27,6 +31,8 @@ task default: :build
 
 task pages: OUTPUT_FILES
 
+task images: OUTPUT_IMAGES
+
 task :patches do
   full_path = patch("assets/javascripts/_modules/search.js", "gem-patches/search.js.patch")
   unless full_path.nil?
@@ -34,7 +40,7 @@ task :patches do
   end
 end
 
-task build: [:pages, :patches] do
+task build: [:pages, :images, :patches] do
   sh 'middleman', 'build', '--verbose'
   sh 'sed', '-i', "s:url(\"/images/:url(\"#{PREFIX}/images/:", *Dir.glob('build/stylesheets/*.css')
 end
@@ -58,6 +64,13 @@ OUTPUT_FILES.zip(WIKI_FILES).each do |output, input|
       o.puts contents.gsub(TOP_LEVEL_HEADER, '')
       o.puts '<%= stylesheet_link_tag :dot %>' if contents =~ /^```dot/ || contents =~ /^```dbml/
     end
+  end
+end
+
+OUTPUT_IMAGES.zip(IMAGE_FILES).each do |output, input|
+  directory File.dirname(output)
+  file output => [input, File.dirname(output)] do
+    cp input, output
   end
 end
 
