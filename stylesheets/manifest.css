@@ -3354,5 +3354,8 @@ html.has-search-results-open {
 .fixedsticky-on + .fixedsticky-dummy {
   display: block; }
 
+html {
+  overflow-y: hidden; }
+
 
 
