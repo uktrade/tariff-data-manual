@@ -3354,7 +3354,7 @@ html.has-search-results-open {
 .fixedsticky-on + .fixedsticky-dummy {
   display: block; }
 
-html {
+.govuk-template {
   overflow-y: hidden; }
 
 
