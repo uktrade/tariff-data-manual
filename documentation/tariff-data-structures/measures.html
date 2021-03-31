@@ -224,11 +224,87 @@
 <a href="#introduction-to-measures">Introduction to measures</a>
 </li>
 <li>
-<a href="#entering-duties">Entering duties</a>
+<a href="#what-a-measure-is-not">What a measure is not!</a>
 </li>
 <li>
-<a href="#screens-measures">Screens – measures</a>
+<a href="#the-tariff-is-a-big-relational-database-centred-around-the-measure">The Tariff is a big relational database centred around the measure</a>
 </li>
+<li>
+<a href="#measure-types">Measure types & responsibilities</a>
+</li>
+<li>
+<a href="#national-p">National P&R</a>
+</li>
+<li>
+<a href="#measures-and-geographical-areas">Measures and geographical areas</a>
+</li>
+<li>
+<a href="#measures-and-commodity-codes">Measures and commodity codes</a>
+</li>
+<li>
+<a href="#measures-and-additional-codes">Measures and additional codes</a>
+</li>
+<li>
+<a href="#measures-and-time-periods">Measures and time periods</a>
+</li>
+<li>
+<a href="#measures-and-regulations">Measures and regulations</a>
+</li>
+<li>
+<a href="#measures-and-footnotes">Measures and footnotes</a>
+</li>
+<li>
+<a href="#measures-and-duties">Measures and duties</a>
+</li>
+<li>
+<a href="#measure-components-and-measure-condition-components">Measure components and measure condition components</a>
+</li>
+<li>
+<a href="#measures-conditions-and-certificates">Measures, conditions and certificates</a>
+</li>
+<li>
+<a href="#relationship-between-measures-and-quotas">Relationship between measures and quotas</a>
+</li>
+<li>
+<a href="#modifying-measures">Modifying measures</a>
+</li>
+<li>
+<a href="#the-stopped-flag">The stopped flag</a>
+</li>
+<li>
+<a href="#explosion-level">Explosion level</a>
+</li>
+<li>
+<a href="#the-reduction-indicator">The reduction indicator</a>
+</li>
+<li>
+<a href="#export-refunds">Export refunds</a>
+</li>
+<li>
+<a href="#entering-duties">Entering duties</a>
+<ul>
+<li>
+<a href="#duty-sentence-deconstructor">Duty sentence deconstructor</a>
+</li>
+</ul>
+<p></li>
+<li>
+<a href="#screens-measures">Screens – measures</a>
+<ul>
+<li>
+<a href="#search-for-measures">Search for measures</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#measures-search-results">Measures search results</a>
+</li>
+<li>
+<a href="#display-of-complex-conditions">Display of complex conditions</a>
+</li>
+<li>
+<a href="#extreme-conditions">Extreme conditions</a>
+<ul>
 <li>
 <a href="#key-user-needs">Key user needs</a>
 </li>
@@ -236,19 +312,20 @@
 <a href="#key-business-rules">Key business rules</a>
 </li>
 </ul>
+</li>
+</ul></p>
 
 <blockquote>
 <p>Measures are the fundamental building blocks of the tariff, they link everything together, and each piece of trade legislation that impacts the trade of goods must be translated into one or more measures.</p>
 </blockquote>
-<h3 id="introduction-to-measures">Introduction to measures</h3><p>A measure is the fundamental raison d’être of the tariff – every piece of trade legislation that is intended to impact the trade of goods through a country’s borders must end up in a measure (or usually more than one).</p>
+<h2 id="introduction-to-measures">Introduction to measures</h2><p>A measure is the fundamental raison d’être of the tariff – every piece of trade legislation that is intended to impact the trade of goods through a country’s borders must end up in a measure (or usually more than one).</p>
 <p>If there is no measure, then the border systems will not react.</p>
 <p>A measure is an atomic unit: according to the Tariff, it is “the application, during a certain period, of an aspect of the Union tariff and commercial legislation to goods imported from a certain origin or exported to a certain destination” which sums it up quite nicely.</p>
 <p>A measure equates to a single line on the “Trade with the UK tool” - <a href="https://www.gov.uk/get-rules-tariffs-trade-with-uk">https://www.gov.uk/get-rules-tariffs-trade-with-uk</a></p>
 <p>A measure equates to a single line on the Trade Tariff Service (UKTT) - <a href="https://www.trade-tariff.service.gov.uk/sections">https://www.trade-tariff.service.gov.uk/sections</a></p>
 <p>Below is a page from the UKTT for Asses (the animal) – each alternating grey &amp; white line is a single measure. Some commodity codes can have hundreds of measures assigned to them.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/92616091-bbae8300-f2b5-11ea-8997-8fe2a54ffee7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92616091-bbae8300-f2b5-11ea-8997-8fe2a54ffee7.png" alt="" /></a></p>
-<p><strong>What a measure is not!</strong></p>
-<p>The tariff is a sea of intermingled terminologies – terms are used in different senses by different policy areas.</p>
+<h2 id="what-a-measure-is-not">What a measure is not!</h2><p>The tariff is a sea of intermingled terminologies – terms are used in different senses by different policy areas.</p>
 <p>For instance, in Trade Remedies, the term ‘measure’ may be synonymous with ‘case’, e.g. an investigation launched by the TRA against multiple companies/countries. In this case, the ‘case’ will of followed through to its conclusion, result in a number of measures, a Tariff would refer to them – in the case of Trade Remedies, this could result in many thousands of Tariff measures.</p>
 <p>A measure is not an overarching policy or specific enactment of that policy: in Tariff terms, that is a regulation.</p>
 <svg width="195pt" height="206pt"
@@ -316,11 +393,9 @@
 <li>National prohibitions and restrictions</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/92616495-32e41700-f2b6-11ea-93b3-06889de94145.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92616495-32e41700-f2b6-11ea-93b3-06889de94145.png" alt="" /></a></p>
-<p><strong>The Tariff is a big relational database centred around the measure</strong></p>
-<p>There are training packs dedicated to each of these areas, so this is just a very brief introduction.</p>
+<h2 id="the-tariff-is-a-big-relational-database-centred-around-the-measure">The Tariff is a big relational database centred around the measure</h2><p>There are training packs dedicated to each of these areas, so this is just a very brief introduction.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/92616842-9d955280-f2b6-11ea-850a-14bb2c5767ef.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92616842-9d955280-f2b6-11ea-850a-14bb2c5767ef.png" alt="" /></a></p>
-<p><strong>Measure types &amp; responsibilities</strong></p>
-
+<h2 id="measure-types-amp-responsibilities">Measure types &amp; responsibilities</h2>
 <ul>
 <li>There are c. 260 measure types in existence prior to the end of the Transition Period (TP).</li>
 <li>Some of these have not been used in some time and can be considered as dead, even if they are not formally terminated on the database.</li>
@@ -332,8 +407,7 @@
 <p>After the Transition Period, there will be a great degree of similarity in the applicable trade measures. The UK is not revolutionising the types of trade measures that are to be imposed.</p>
 <p>These groups of measure types are detailed in subsequent pages.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93492680-fc844880-f902-11ea-886c-ec0a2e3be277.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93492680-fc844880-f902-11ea-886c-ec0a2e3be277.png" alt="image" /></a></p>
-<p><strong>National P&amp;R</strong></p>
-<p>There are c. 14 national prohibition and restriction type measures. After the Transition Period, there will be no differentiation between measures formerly provided by the EU and national P&amp;R.</p>
+<h2 id="national-p-amp-r">National P&amp;R</h2><p>There are c. 14 national prohibition and restriction type measures. After the Transition Period, there will be no differentiation between measures formerly provided by the EU and national P&amp;R.</p>
 <div class="table-container">
         <table>
           <tr>
@@ -414,8 +488,7 @@
 </tr>
         </table>
       </div><p>The CVD measure type is a complete duplicate of measure type 410 (Veterinary control) applied in the Taric measures.</p>
-<p><strong>Measures and geographical areas</strong></p>
-<p>The data model allows a single measure to be attached to a single geographical area.</p>
+<h2 id="measures-and-geographical-areas">Measures and geographical areas</h2><p>The data model allows a single measure to be attached to a single geographical area.</p>
 <p>In this context a geographical area can mean:</p>
 
 <ul>
@@ -426,8 +499,7 @@
 <p>In the geography is a group, then individual countries within that group may also be excluded.</p>
 <p>For example, while Haiti is a part of CARIFORUM (both officially and in the Tariff), it is excluded from all preferential measures of the Caribbean EPA (Economic Partnership Agreement), as it has yet to ratify the treaty.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93493651-0fe3e380-f904-11ea-9138-fc330c55aec2.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93493651-0fe3e380-f904-11ea-9138-fc330c55aec2.png" alt="image" /></a></p>
-<p><strong>Measures and commodity codes</strong></p>
-
+<h2 id="measures-and-commodity-codes">Measures and commodity codes</h2>
 <ul>
 <li>A measure is applied to a single commodity code only</li>
 <li>While a trade instrument (FTA, import restriction etc.) may and is likely to cover multiple commodity codes, this results in the creation of many individual measures.</li>
@@ -441,8 +513,7 @@
 <li>A commodity code or goods nomenclature item is assigned to a measure via two fields, both of which point to the same data item (goods_nomenclature_item_id and goods_nomenclature_sid).</li>
 <li>While a commodity code is fully characterised also by its productline_suffix (in places misspelled as producline_suffix), all measures must be assigned to commodity codes with a productline_suffix of 80, therefore this data would be superfluous on the the measure table.</li>
 </ul>
-<p><strong>Measures and additional codes</strong></p>
-<p>A measure can be assigned to a single additional code only.</p>
+<h2 id="measures-and-additional-codes">Measures and additional codes</h2><p>A measure can be assigned to a single additional code only.</p>
 <p>As with commodity codes, there are multiple fields used to link the measure to the single additional code:</p>
 
 <ul>
@@ -461,8 +532,7 @@
 <li>to reference the %age content of sugar, flour or milk fats/solids.</li>
 </ul>
 <p>See the additional codes training manual for more information on why additional codes are used.</p>
-<p><strong>Measures and time periods</strong></p>
-
+<h2 id="measures-and-time-periods">Measures and time periods</h2>
 <ul>
 <li>Like most (but not all) objects on the tariff database, measures come with validity_start_date and validity_end_date fields.</li>
 <li>For measures, validity start dates are mandatory, whereas validity end dates are optional and usually left blank.</li>
@@ -471,7 +541,7 @@
 <li>Even though the Taric business processing rules document states that the measure start date under certain circumstances is optional, it is wrong.</li>
 <li>The schema requires a measure start date in the format yyyy-mm-dd</li>
 </ul>
-<p><strong>Validity start dates and end dates are treated differently in the Tariff.</strong></p>
+<p><em>Validity start dates and end dates are treated differently in the Tariff.</em></p>
 
 <ul>
 <li>Validity start date means 00:00 at the start of the day</li>
@@ -480,8 +550,7 @@
 <li>There is no concept of time in the tariff for ‘Taric’ measures, i.e. those that fit into the normal EU schema, which we are adopting.</li>
 <li>However, for VAT and excise, the concept of time has been introduced, as this is required to time changes with budget speeches.</li>
 </ul>
-<p><strong>Measures and regulations</strong></p>
-<p>A measure is associated to two sets of regulations, depending on its status. These are referred to as follows:</p>
+<h2 id="measures-and-regulations">Measures and regulations</h2><p>A measure is associated to two sets of regulations, depending on its status. These are referred to as follows:</p>
 
 <ins>Measure-generating regulations:</ins>
 
@@ -508,8 +577,7 @@
 </ul></li>
 <li>When we end-date measures in TAP, we always use the measure-generating regulation as the justification regulation.</li>
 </ul>
-<p><strong>Measures and footnotes</strong></p>
-
+<h2 id="measures-and-footnotes">Measures and footnotes</h2>
 <ul>
 <li>It is possible to apply footnotes to both commodity codes and to measures.</li>
 <li>As with anything else associated to the measure, the footnote is inherited down to child comm codes – therefore if a measure with a footnote is assigned at HS chapter, then both the measure and the footnote are inherited down to all comm codes in that chapter.</li>
@@ -517,8 +585,7 @@
 <li>Footnotes are linked to measures for the entirety of the measure’s duration – the association does not have its own start and end dates – which differs from footnotes’ association with commodity codes, which are dated.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93493734-2722d100-f904-11ea-8be2-6abee348e61b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93493734-2722d100-f904-11ea-8be2-6abee348e61b.png" alt="image" /></a></p>
-<p><strong>Measures and duties</strong></p>
-
+<h2 id="measures-and-duties">Measures and duties</h2>
 <ul>
 <li>Duties are applicable to some, but not all measures. If the measure type is set up with data on the “measure_component_applicable_code” field of “0” or “1”, then a component may / must be applied. If the value of this field is “2”, then the component is not permitted.</li>
 <li>Examples of where a duty is mandatory are 103 (Third country duty (MFN)) and 142 (Tariff preference)</li>
@@ -545,10 +612,8 @@
 <li>These state that a certain condition needs to be fulfilled for the duty to apply, e.g. a certain entry price or supply of a certificate.</li>
 <li>These relationships are described in full in the measure components training manual.</li>
 </ul>
-<p><strong>Measure components and measure condition components</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93494129-96002a00-f904-11ea-9907-935378ced1a8.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93494129-96002a00-f904-11ea-9907-935378ced1a8.png" alt="image" /></a></p>
-<p><strong>Measures, conditions and certificates</strong></p>
-
+<h2 id="measure-components-and-measure-condition-components">Measure components and measure condition components</h2><p><a href="https://user-images.githubusercontent.com/61055197/93494129-96002a00-f904-11ea-9907-935378ced1a8.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93494129-96002a00-f904-11ea-9907-935378ced1a8.png" alt="image" /></a></p>
+<h2 id="measures-conditions-and-certificates">Measures, conditions and certificates</h2>
 <ul>
 <li>A measure can be assigned any number of conditions. These are described in full in the measure conditions training manual, but are used to describe to the border systems:
 
@@ -560,8 +625,7 @@
 <li>Please see the detailed “measure conditions” guide for a full overview of conditions in all their different flavours.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93494567-14f56280-f905-11ea-83a5-d24ddd9940c1.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93494567-14f56280-f905-11ea-83a5-d24ddd9940c1.png" alt="image" /></a></p>
-<p><strong>Relationship between measures and quotas</strong></p>
-
+<h2 id="relationship-between-measures-and-quotas">Relationship between measures and quotas</h2>
 <ul>
 <li>While First Come, First Served (FCFS) quotas are entirely separate objects on the database, it is not possible to allow traders to declare against quotas unless there is a quota measure exposing its presence to the trader – all trade instruments that are to be executed in CHIEF or CDS need measures to make them work.</li>
 <li>Similarly, licensed quotas are operated via measures, though they do not have the additional quota data structures associated with them that are used by FCFS quotas.</li>
@@ -572,8 +636,7 @@
 <li>The quota structures are linked to the measures via the use of the ordernumber field. This field takes a 6-digit quota order number and is the same data that is managed in the quota_order_number_id field of the quota_order_number table and similar.</li>
 <li>For licensed quotas, the data is also entered into this field as a 6-digit code, but always starts ”094”.</li>
 </ul>
-<p><strong>Modifying measures</strong></p>
-
+<h2 id="modifying-measures">Modifying measures</h2>
 <ul>
 <li>In most cases, making a change to a measure is not actually a case of actually modifying that measure entity, nor the ancillary objects (such as conditions and components).</li>
 <li>Most fundamental changes to a measure are achieved by terminating the measure and replacing with an alternative from the date on which the change is scheduled to happen – otherwise, you run the risk of making changes to measures which have already been active and possibly declared against by traders: to change already live data, e.g. the commodity code or the applicable duties is simply not done.</li>
@@ -589,8 +652,7 @@
 <li><p>In addition, changing fundamental details of the measure, such as the quota order number or the reduction indicator are to be achieved via replacing the measure.</p></li>
 <li><p>If the user is wanting to modify the assigned footnotes, then there is no need to clone the measure: adding a footnote to the existing measure is fine.</p></li>
 </ul>
-<p><strong>The stopped flag</strong></p>
-
+<h2 id="the-stopped-flag">The stopped flag</h2>
 <ul>
 <li>The stopped flag is set to ‘true’ when a regulation ends a measure using a specific function called ‘abrogation’.</li>
 <li>This both sets the effective end date in the regulation and the stopped flag in the measures table.</li>
@@ -598,8 +660,7 @@
 <li>Please always set the stopped flag to false in all cases.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/92634413-2ff42100-f2cc-11ea-81d0-3d589cc452e0.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92634413-2ff42100-f2cc-11ea-81d0-3d589cc452e0.png" alt="" /></a></p>
-<p><strong>Explosion level</strong></p>
-
+<h2 id="explosion-level">Explosion level</h2>
 <ul>
 <li>While this is a field that pertains to the measure type and not the measure itself, it is worth bringing it up here. The explosion level field can formally take 5 values, as per the XSD to the right, however in practice, only the values “8” and “10” are used.</li>
 <li>The explosion level indicates how far down the goods classification hierarchy a measure can be assigned and the explosion level corresponds to the significant digits in the comm code. Treating comm codes as being 5 pairs of 2 digits …</li>
@@ -612,8 +673,7 @@
 <li>This impacts business rule ME88 (see below).</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/92635147-451d7f80-f2cd-11ea-86d4-4f8e224f1906.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92635147-451d7f80-f2cd-11ea-86d4-4f8e224f1906.png" alt="" /></a></p>
-<p><strong>The reduction indicator</strong></p>
-
+<h2 id="the-reduction-indicator">The reduction indicator</h2>
 <ul>
 <li>This field is used to apply preferential Meursing tables to measures.</li>
 <li>The field is not mandatory and in most countries is set to null.</li>
@@ -621,14 +681,12 @@
 <li>This is discussed in the agricultural duties training manual.
 <a href="https://user-images.githubusercontent.com/61055197/92635079-2cad6500-f2cd-11ea-9d4b-713b85d04f59.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92635079-2cad6500-f2cd-11ea-9d4b-713b85d04f59.png" alt="" /></a></li>
 </ul>
-<p><strong>Export refunds</strong></p>
-
+<h2 id="export-refunds">Export refunds</h2>
 <ul>
 <li><p>The export refund nomenclature was a specific nomenclature used for the refund on the export of some agricultural products. This nomenclature is composed of a CN code linked to a 4-digit code called &ldquo;Export refund additional code&rdquo;.</p></li>
 <li><p>This has been abandoned since 2013, so the field export_refund_nomenclature_sid should be set to null in all cases.</p></li>
 </ul>
-<h3 id="entering-duties">Entering duties</h3><p><strong>Duty sentence deconstructor</strong></p>
-
+<h2 id="entering-duties">Entering duties</h2><h3 id="duty-sentence-deconstructor">Duty sentence deconstructor</h3>
 <ul>
 <li>While this offers a decent route to ensure that no business rules are contravened, it is problematic in terms of screen space, especially for complex conditions, where multiple duties are dependent on those conditions.</li>
 <li>In addition, it uses a lot of JavaScript, which is not great for accessibility.</li>
@@ -657,8 +715,7 @@
 <li>The validity column is just a check (adding 1, 2, 4 and 8 to make 15) that the expression is valid according to the criteria noted bottom left.</li>
 <li>The PHP is rough and ready but should be easily interpretable for translation into Python and componentisation.</li>
 </ul>
-<h3 id="screens-measures">Screens – measures</h3><p><strong>Search for measures</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" alt="image" /></a></p>
+<h2 id="screens-measures">Screens – measures</h2><h3 id="search-for-measures">Search for measures</h3><p><a href="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721601-43e86300-f35e-11ea-972e-74a54987c413.png" alt="image" /></a></p>
 
 <ul>
 <li>The search screen is vastly cut down in comparison to the existing TAP measure search screen.</li>
@@ -668,8 +725,7 @@
 <li>In the case of commodity code and regulation, the operator dropdown should include both “is one of” and “starts with” to allow exact matches, stemmed matches and searches against multiple precise items (by request of the policy team).</li>
 <li>Use type ahead on measure type, geography and quota order number fields.</li>
 </ul>
-<p><strong>Measures search results</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" alt="image" /></a></p>
+<h2 id="measures-search-results">Measures search results</h2><p><a href="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92721862-a5a8cd00-f35e-11ea-9711-5d2802ac3173.png" alt="image" /></a></p>
 <p>Search results screen is common across most data objects – with measures (and quotas), the most important point to note is that there is no left-hand side filter capability - there is no room, as there is so much data that need to be returned. Search results table must include:</p>
 
 <ul>
@@ -689,8 +745,7 @@
 <li>Show status as icon</li>
 <li>Under table show paging – this screen grab has been doctored to show only 10 results: suggestion is 100 results per page for measures.</li>
 </ul>
-<p><strong>Display of complex conditions</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" alt="image" /></a></p>
+<h2 id="display-of-complex-conditions">Display of complex conditions</h2><p><a href="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722197-21a31500-f35f-11ea-995f-b4d6bf4cd03c.png" alt="image" /></a></p>
 <p>The data in the conditions column is potentially very complicated and needs to be represented on the search results form – especially with Trade Remedies, the duties may be held in the conditions and this is perhaps the critical piece of information being sought.</p>
 <p>The colour coding is helpful in separating out the components of a condition, all of which are important to the processing of the data in CDS, Gems and Caesar</p>
 <p>For each line in the conditions column, this is what is meant:</p>
@@ -711,8 +766,7 @@
 <li>Condition 2 of type F, which states that if the net free at frontier price (import price) &gt; 0.248 EUR WAT, then apply the difference between import price and duty up to 0.350%</li>
 <li>Condition 3 of type F, which states that if the net free at frontier price (import price) &gt; 0.0 EUR WAT, then apply the duty 31.300%</li>
 </ul>
-<p><strong>Extreme conditions</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" alt="image" /></a></p>
+<h2 id="extreme-conditions">Extreme conditions</h2><p><a href="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92722598-bc035880-f35f-11ea-9072-e088585b422a.png" alt="image" /></a></p>
 <p><strong>View of tooltips for columns that need explaining</strong></p>
 
 <ul>
