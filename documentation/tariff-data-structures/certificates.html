@@ -223,6 +223,26 @@
 <li>
 <a href="#introduction-to-certificates">Introduction to certificates</a>
 </li>
+</ul>
+<p></li>
+<li>
+<a href="#what-are-certificates">What are certificates?</a>
+<ul>
+<li>
+<a href="#what-certificates-are-not">What certificates are not</a>
+</li>
+<li>
+<a href="#structure-of-certificates">Structure of certificates &amp; certificate types</a>
+</li>
+<li>
+<a href="#overview-of-existing-certificate-type-codes">Overview of existing certificate type codes</a>
+</li>
+<li>
+<a href="#use-of-certificate-code-types-since-2015">Use of certificate code types since 2015</a>
+</li>
+<li>
+<a href="#who-owns-certificates">Who owns certificates?</a>
+<ul>
 <li>
 <a href="#user-needs-certificates">User needs - certificates</a>
 </li>
@@ -230,19 +250,19 @@
 <a href="#business-rules-certificates">Business rules - certificates</a>
 </li>
 </ul>
+</li>
+</ul></p>
 
 <blockquote>
 <p>Certificates are associated to measures via measure conditions, this term refers to the certificates, licenses, and non-paper conditions that are stored in certificate tables and are required to bring goods through customs.</p>
 </blockquote>
-<h3 id="introduction-to-certificates">Introduction to certificates</h3><p><strong>What are certificates?</strong></p>
-<p>The certificates tables in TARIC-based applications store all of the certificates, licences and other conditions that are referenced via measure conditions in order to make the import (or export) of a good conditional on the provision of some entity.</p>
+<h3 id="introduction-to-certificates">Introduction to certificates</h3><h2 id="what-are-certificates">What are certificates?</h2><p>The certificates tables in TARIC-based applications store all of the certificates, licences and other conditions that are referenced via measure conditions in order to make the import (or export) of a good conditional on the provision of some entity.</p>
 <p>The sole purpose of certificates in this system is to associate them to measures via measure conditions – on their own, they no value and are not exposed to traders via any other means.</p>
 <p>This entity is usually a physical or digital document of some description (e.g. a license or official certificate), but it may also be a non-paper condition - the term “certificate” to label the table is definitely more constrictive than the actual subject matter.</p>
 <p>A good example of the ‘non-document’ condition is “Y037 - Goods exempted from the prohibition – biathlon equipment’ where the condition references a property of the good being imported, and not an accompanying document.</p>
 <p>These oddities are typically linked to measures using the measure_condition_code “Y”. Please read the instruction guide on measure conditions for a detailed insight.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93202924-71ad1d80-f74b-11ea-903d-0a4fc11b0b49.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93202924-71ad1d80-f74b-11ea-903d-0a4fc11b0b49.png" alt="image" /></a></p>
-<p><strong>What certificates are not</strong></p>
-
+<h2 id="what-certificates-are-not">What certificates are not</h2>
 <ul>
 <li>A certificate is not a representation of the actual document itself</li>
 <li>Our database stores only a certificate code (4 digits) and a description of that code</li>
@@ -251,8 +271,7 @@
 <li>There is a feeling of ‘so what’ when confronted with the need for a certificate – the interaction may favour traders that know certification inside out and the regulations that underpin it, but for entryists, the concept can be bewildering</li>
 <li>DIT may consider extending the model to allow more information than just a code and basic description to be stored against the certificate, bearing in mind that the majority of such documents or other entities would likely be owned by Defra or on occasion HMRC</li>
 </ul>
-<p><strong>Structure of certificates &amp; certificate types</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" alt="image" /></a></p>
+<h2 id="structure-of-certificates-amp-certificate-types">Structure of certificates &amp; certificate types</h2><p><a href="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" alt="image" /></a></p>
 
 <ul>
 <li>Much like footnotes and additional codes, certificates are made up of a type code and then a specific code, which, when concatenated, form the unique code of the certificate.</li>
@@ -261,8 +280,7 @@
 <li>Certificate codes typically use numeric IDs, running from 001 to 999 can be reused across multiple certificate type codes. While the schema also allows for alphabetical certificate codes, these are rarely used: there are 11 instances of certificate codes using alpha instead of numeric digits.</li>
 <li>Certificate codes must be 3 digits in length.</li>
 </ul>
-<p><strong>Overview of existing certificate type codes</strong></p>
-<div class="table-container">
+<h2 id="overview-of-existing-certificate-type-codes">Overview of existing certificate type codes</h2><div class="table-container">
         <table>
           <tr>
 <th>Code</th>
@@ -340,8 +358,7 @@
 <li>Those that are greyed out have not been used in the last 5 years.</li>
 <li>The certificate type codes are somewhat meaningless – as you can see, two of the most frequently used code types are C (Other certificates) and Y (Particular provisions) – these are catch-alls for the large proportion of condition needs.</li>
 </ul>
-<p><strong>Use of certificate code types since 2015</strong></p>
-<div class="table-container">
+<h2 id="use-of-certificate-code-types-since-2015">Use of certificate code types since 2015</h2><div class="table-container">
         <table>
           <tr>
 <th>2015</th>
@@ -460,8 +477,7 @@
       </div><p><a href="https://user-images.githubusercontent.com/61055197/93204283-ba65d600-f74d-11ea-8f65-2e344314b41e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93204283-ba65d600-f74d-11ea-8f65-2e344314b41e.png" alt="image" /></a></p>
 <p>Just because there are a lot of instances of applications of certificates to measure conditions does not mean there is an abundance of certificates</p>
 <p>In this period since 2015, 36k+ D (Anti-dumping) type certificates have been used, but this entails the application of just 7 unique certificates.</p>
-<p><strong>Who owns certificates?</strong></p>
-
+<h2 id="who-owns-certificates">Who owns certificates?</h2>
 <ul>
 <li>It is anticipated that there will be numerous owners for certificates across government: Defra, the RPA, ECJU, Trade Remedies Authority for example</li>
 <li>In the lead-up to the previous three abortive No Deal EU Exits, the question of migrating certification to a standard that differed from the EU’s was not mentioned – all certification would have remained exactly as-is, for two reasons:
