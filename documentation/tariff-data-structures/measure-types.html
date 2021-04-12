@@ -222,15 +222,73 @@
 <ul>
 <li>
 <a href="#introduction-to-measure-types">Introduction to measure types</a>
+<ul>
+<li>
+<a href="#structure-of-measure-types">Structure of measure types</a>
+</li>
+<li>
+<a href="#regulation-groups-measure-types-and-box-36-of-the-sad-form">Regulation groups, measure types and Box 36 of the SAD form</a>
+</li>
+</ul>
+<p></li>
+<li>
+<a href="#measure-types">Measure types &amp; responsibilities prior to the IP</a>
+</li>
+<li>
+<a href="#measure-types">Measure types &amp; responsibilities post-IP</a>
+</li>
+<li>
+<a href="#measure-type-series">Measure type series</a>
+</li>
+<li>
+<a href="#measure-types-series-measure-type-combination-field">Measure types series - measure type combination field</a>
+</li>
+<li>
+<a href="#existing-measure-type-series">Existing measure type series</a>
+</li>
+<li>
+<a href="#measure-types-per-measure-type-series">Measure types per measure type series</a>
+</li>
+<li>
+<a href="#context-what-does-this-mean">Context - what does this mean?</a>
+</li>
+<li>
+<a href="#the-measure-type-696-anomaly">The measure type 696 anomaly</a>
 </li>
 <li>
 <a href="#measure-type-fields">Measure type fields</a>
 </li>
 <li>
 <a href="#logical-view-of-measure-types">Logical view of measure types</a>
+<ul>
+<li>
+<a href="#primary-duty-bearing-measures-logical-layout">Primary duty-bearing measures – logical layout</a>
+</li>
+<li>
+<a href="#trade-remedy-related-measures-logical-layout">Trade remedy-related measures – logical layout</a>
+</li>
+<li>
+<a href="#sad-guidance">SAD guidance &amp; credibility checks, monitoring</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#agri-measures">Agri measures</a>
+</li>
+<li>
+<a href="#why-there-are-so-many-import-control-measures-me32">Why there are so many import control measures … ME32</a>
+</li>
+<li>
+<a href="#jams-fruit-jellies-marmalades">Jams, fruit jellies, marmalades …</a>
 </li>
 <li>
 <a href="#relationship-of-measure-types-to-additional-code-types">Relationship of measure types to additional code types</a>
+</li>
+<li>
+<a href="#additional-codes-cannot-be-applied-universally">Additional codes cannot be applied universally …</a>
+</li>
+<li>
+<a href="#measure-types-detail">Measure types detail</a>
 </li>
 <li>
 <a href="#data-structures">Data structures</a>
@@ -244,13 +302,12 @@
 <li>
 <a href="#key-business-rules-footnotes">Key business rules - footnotes</a>
 </li>
-</ul>
+</ul></p>
 
 <blockquote>
 <p>Measure types indicate the reasons or contexts for rates and conditions, and they also indicate rules that the measure types’ measures must comply with, for example, quota measure types require that their measures have a quota order number defined.</p>
 </blockquote>
-<h2 id="introduction-to-measure-types">Introduction to measure types</h2><p><strong>Structure of measure types</strong></p>
-
+<h2 id="introduction-to-measure-types">Introduction to measure types</h2><h3 id="structure-of-measure-types">Structure of measure types</h3>
 <ul>
 <li>Each measure belongs to exactly one measure type. The measure types describe to the border systems how to execute some kind of action on the trade in question (e.g. charge a duty / require a document).</li>
 <li>While the data associated with a measure type is a pretty good explainer of what the measure is intended to do, there is a significant amount of work to be done by HMRC to make the measure behave as intended.</li>
@@ -269,16 +326,14 @@
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93358003-df834300-f838-11ea-85ad-6556dfde87ce.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93358003-df834300-f838-11ea-85ad-6556dfde87ce.png" alt="image" /></a></p>
 <p>Any changes to measures, additions of new measures will need to be agreed by HMRC in advance – their function cannot fully be described in Taric: see anomaly of measure type 696 (used in steel safeguards) below.</p>
-<p><strong>Regulation groups, measure types and Box 36 of the SAD form</strong></p>
-
+<h3 id="regulation-groups-measure-types-and-box-36-of-the-sad-form">Regulation groups, measure types and Box 36 of the SAD form</h3>
 <ul>
 <li>In the regulation training manual, we mentioned the need for regulations to be assigned to the right regulation groups, because of the correlation required between the regulation group and what the trader enters in Box 36 on the SAD form.</li>
 <li>Well the measure type falls into the same bracket – the measure types have to be actively correlated to regulation group IDs by HMRC in CDS.</li>
 <li>Therefore, HMRC need to be involved in measure type creation.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93358894-ef4f5700-f839-11ea-9d85-75627fd21dd3.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93358894-ef4f5700-f839-11ea-9d85-75627fd21dd3.png" alt="image" /></a></p>
-<p><strong>Measure types &amp; responsibilities prior to the IP</strong></p>
-
+<h2 id="measure-types-amp-responsibilities-prior-to-the-ip">Measure types &amp; responsibilities prior to the IP</h2>
 <ul>
 <li>There are c. 260 measure types in existence prior to the end of the implementation period (IP).</li>
 <li>Some of these have not been used in some time and can be considered as dead, even if they are not formally terminated on the database.</li>
@@ -300,8 +355,7 @@
 <td>National   prohibitions and restrictions  <br>   VAT  <br>   Excise</td>
 </tr>
         </table>
-      </div><p><strong>Measure types &amp; responsibilities post-IP</strong></p>
-
+      </div><h2 id="measure-types-amp-responsibilities-post-ip">Measure types &amp; responsibilities post-IP</h2>
 <ul>
 <li>After the IP, there will be a great degree of similarity in the applicable trade measures.</li>
 <li>The major difference in responsibility will see the MTPO team in DIT’s Trade Policy Group replacing the role of the EU in co-ordinating and maintaining the measures that were previously seen as pan-European.</li>
@@ -309,8 +363,7 @@
 <li>These groups of measure types are detailed in subsequent pages.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93359429-81eff600-f83a-11ea-8afe-8e3178d3af69.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359429-81eff600-f83a-11ea-8afe-8e3178d3af69.png" alt="image" /></a></p>
-<p><strong>Measure type series</strong></p>
-
+<h2 id="measure-type-series">Measure type series</h2>
 <ul>
 <li>Each measure is associated with a single measure type.</li>
 <li>Each measure type is in turn associated with a single measure type series, in which additional properties of the measure type and its behaviour are stored, and the application logic for the measure types is sequenced.</li>
@@ -322,8 +375,7 @@
 <li>If modifying measure types were considered dangerous, then modifying measure type series is much more dangerous – it is highly recommended that any work that DIT to represent measure types series is to present a read-only view: there should be no capability to manage the measure type series, as the impact is potentially so damaging.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93359667-c24f7400-f83a-11ea-890f-23de31d1cd8f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359667-c24f7400-f83a-11ea-890f-23de31d1cd8f.png" alt="image" /></a></p>
-<p><strong>Measure types series - measure type combination field</strong></p>
-
+<h2 id="measure-types-series-measure-type-combination-field">Measure types series - measure type combination field</h2>
 <ul>
 <li>The measure type combination field determines how many measure types of a given type series can be applied on a trader’s declaration at any given time to the same context.</li>
 <li>There are just two valid options:</li>
@@ -360,8 +412,7 @@
 <li>For example, you cannot apply multiple measures from the same series (the trader must choose), but multiple measures from different series can be overlaid.</li>
 <li>Hence, anti-dumping duties (series D) are overlaid on top of MFN duties (series C) - the to coexist, are additive and do not require selection by the trader.</li>
 </ul>
-<p><strong>Existing measure type series</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93360440-91bc0a00-f83b-11ea-8b5b-63b74d190a34.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93360440-91bc0a00-f83b-11ea-8b5b-63b74d190a34.png" alt="image" /></a></p>
+<h2 id="existing-measure-type-series">Existing measure type series</h2><p><a href="https://user-images.githubusercontent.com/61055197/93360440-91bc0a00-f83b-11ea-8b5b-63b74d190a34.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93360440-91bc0a00-f83b-11ea-8b5b-63b74d190a34.png" alt="image" /></a></p>
 
 <ul>
 <li>This table is important in understanding how Taric-based border systems apply the measures that DIT has supplied.</li>
@@ -382,8 +433,7 @@
 <li>Skipping N and O (non-duty-related), the next duty-bearing series are VAT and excise (series P and Q), which are applied over and above import duties.</li>
 <li>Finally, series S contains the additional duties required by the agricultural safeguards re: chicken and other poultry goods, which are applied over and above any standard duty from series C.</li>
 </ul>
-<p><strong>Measure types per measure type series</strong></p>
-<div class="table-container">
+<h2 id="measure-types-per-measure-type-series">Measure types per measure type series</h2><div class="table-container">
         <table>
           <tr>
 <th>Series</th>
@@ -458,8 +508,7 @@
 </tr>
         </table>
       </div><p>This table illustrates, per measure series, the measure types that have not been actively end-dated. Bold indicates measures for which there is at last one measure in Jan 2020 (plus the provisional anti-dumping and countervailing duties, which happen to have no measures currently, but remain active).</p>
-<p><strong>Context - what does this mean?</strong></p>
-
+<h2 id="context-what-does-this-mean">Context - what does this mean?</h2>
 <ul>
 <li>First thing to say – this is a useful term invented by the project team: it is not a Taric term, but is a handy short hand for what it actually means</li>
 <li>Here is a Taric sentence that helps to explain context: this is taken from Taric Business Processing rule ME1:</li>
@@ -472,8 +521,7 @@
 <li>In addition – conflict checking must also apply all the way up and down a commodity code hierarchy – this is explained below in the pages re: ME32</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93361439-c9778180-f83c-11ea-9091-fdbff7079021.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93361439-c9778180-f83c-11ea-9091-fdbff7079021.png" alt="image" /></a></p>
-<p><strong>The measure type 696 anomaly</strong></p>
-
+<h2 id="the-measure-type-696-anomaly">The measure type 696 anomaly</h2>
 <ul>
 <li>Measure type 696 is the measure used to impose safeguards on imports of steel from multiple countries around the world, in an attempt to stabilise the flow of steel goods coming into the Union as a result of the USA’s imposition of similar safeguards: the upset to world trade flows caused such a glut of cheep steel to land on EU shores, that the EU had no option other than to follow suit.</li>
 <li>Safeguards are made up of two elements: a 25% safeguard additional duty, and a non-preferential quota, which essentially waives the safeguard.</li>
@@ -521,22 +569,16 @@
 <td>The ID of the series – single alphabetical character; acts   as foreign key into the measure type series table, where additional   properties that relate to the execution of the measure types is set.</td>
 </tr>
         </table>
-      </div><h2 id="logical-view-of-measure-types">Logical view of measure types</h2><p><strong>Primary duty-bearing measures – logical layout</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" alt="image" /></a></p>
-<p><strong>Trade remedy-related measures – logical layout</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" alt="image" /></a></p>
-<p><strong>SAD guidance &amp; credibility checks, monitoring</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93370858-5de7e100-f849-11ea-8cb8-a11d1e854f19.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370858-5de7e100-f849-11ea-8cb8-a11d1e854f19.png" alt="image" /></a></p>
-<p><strong>Agri measures</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93370873-62ac9500-f849-11ea-86d0-177fb380055d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370873-62ac9500-f849-11ea-86d0-177fb380055d.png" alt="image" /></a></p>
+      </div><h2 id="logical-view-of-measure-types">Logical view of measure types</h2><h3 id="primary-duty-bearing-measures-logical-layout">Primary duty-bearing measures – logical layout</h3><p><a href="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370303-83c0b600-f848-11ea-97b1-5ee634e48173.png" alt="image" /></a></p>
+<h3 id="trade-remedy-related-measures-logical-layout">Trade remedy-related measures – logical layout</h3><p><a href="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370502-d306e680-f848-11ea-950b-9dc79f9ff894.png" alt="image" /></a></p>
+<h3 id="sad-guidance-amp-credibility-checks-monitoring">SAD guidance &amp; credibility checks, monitoring</h3><p><a href="https://user-images.githubusercontent.com/61055197/93370858-5de7e100-f849-11ea-8cb8-a11d1e854f19.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370858-5de7e100-f849-11ea-8cb8-a11d1e854f19.png" alt="image" /></a></p>
+<h2 id="agri-measures">Agri measures</h2><p><a href="https://user-images.githubusercontent.com/61055197/93370873-62ac9500-f849-11ea-86d0-177fb380055d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370873-62ac9500-f849-11ea-86d0-177fb380055d.png" alt="image" /></a></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93370899-693b0c80-f849-11ea-917c-b1fd3d7d6f57.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370899-693b0c80-f849-11ea-917c-b1fd3d7d6f57.png" alt="image" /></a></p>
-<p><strong>Why there are so many import control measures … ME32</strong></p>
-
+<h2 id="why-there-are-so-many-import-control-measures-me32">Why there are so many import control measures … ME32</h2>
 <blockquote>
 <p>&ldquo;There may be no overlap in time with other measure occurrences with a goods code in the same nomenclature hierarchy which references the same measure type, geo area, order number, additional code and reduction indicator. This rule is not applicable for Meursing additional codes.&rdquo;</p>
 </blockquote>
-<p><strong>Jams, fruit jellies, marmalades …</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93370932-75bf6500-f849-11ea-8b78-860bc4d152b1.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370932-75bf6500-f849-11ea-8b78-860bc4d152b1.png" alt="image" /></a></p>
+<h2 id="jams-fruit-jellies-marmalades">Jams, fruit jellies, marmalades …</h2><p><a href="https://user-images.githubusercontent.com/61055197/93370932-75bf6500-f849-11ea-8b78-860bc4d152b1.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93370932-75bf6500-f849-11ea-8b78-860bc4d152b1.png" alt="image" /></a></p>
 
 <ul>
 <li>As a tariff manager, I have been asked to create a new measure for ERGA OMNES of type “Import control” at level 4 “with a sugar content exceeding 30% by weight” – </li>
@@ -555,11 +597,11 @@
 </ul>
 <svg width="457pt" height="323pt"
  viewBox="0.00 0.00 457.00 323.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_650" class="graph" transform="scale(1 1) rotate(0) translate(4 319)">
+<g id="database_105" class="graph" transform="scale(1 1) rotate(0) translate(4 319)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-319 453,-319 453,4 -4,4"/>
 <!-- Measure Types -->
-<g id="table_97" class="node">
+<g id="table_864" class="node">
 <title>Measure Types</title>
 <polygon fill="none" stroke="black" points="223.5,-294 223.5,-310 440.5,-310 440.5,-294 223.5,-294"/>
 <text text-anchor="start" x="300" y="-299.8" font-family="Arial" font-size="9.00">Measure Types</text>
@@ -618,7 +660,7 @@
 <polygon fill="none" stroke="black" points="222,-133 222,-311 441,-311 441,-133 222,-133"/>
 </g>
 <!-- Additional Code Type Measure Types -->
-<g id="table_415" class="node">
+<g id="table_455" class="node">
 <title>Additional Code Type Measure Types</title>
 <polygon fill="none" stroke="black" points="9,-208 9,-224 169,-224 169,-208 9,-208"/>
 <text text-anchor="start" x="12" y="-213.8" font-family="Arial" font-size="9.00">Additional Code Type Measure Types</text>
@@ -647,13 +689,13 @@
 <polygon fill="none" stroke="black" points="8,-143 8,-225 170,-225 170,-143 8,-143"/>
 </g>
 <!-- Additional Code Type Measure Types&#45;&gt;Measure Types -->
-<g id="database_650_edge2" class="edge">
+<g id="database_105_edge2" class="edge">
 <title>Additional Code Type Measure Types:e&#45;&gt;Measure Types:w</title>
 <path fill="none" stroke="black" d="M170,-200C211.98,-200 182.03,-275.59 215.02,-285.03"/>
 <polygon fill="black" stroke="black" points="214.73,-287.64 222.5,-286 215.4,-282.44 214.73,-287.64"/>
 </g>
 <!-- Additional Code Types -->
-<g id="table_700" class="node">
+<g id="table_881" class="node">
 <title>Additional Code Types</title>
 <polygon fill="none" stroke="black" points="255.5,-90 255.5,-106 407.5,-106 407.5,-90 255.5,-90"/>
 <text text-anchor="start" x="284.5" y="-95.8" font-family="Arial" font-size="9.00">Additional Code Types</text>
@@ -686,13 +728,13 @@
 <polygon fill="none" stroke="black" points="254.5,-9 254.5,-107 408.5,-107 408.5,-9 254.5,-9"/>
 </g>
 <!-- Additional Code Type Measure Types&#45;&gt;Additional Code Types -->
-<g id="database_650_edge3" class="edge">
+<g id="database_105_edge3" class="edge">
 <title>Additional Code Type Measure Types:e&#45;&gt;Additional Code Types:w</title>
 <path fill="none" stroke="black" d="M170,-184C204.52,-184 191.51,-146.18 214,-120 228.2,-103.47 229.66,-86.51 246.78,-82.76"/>
 <polygon fill="black" stroke="black" points="247.29,-85.35 254.5,-82 246.78,-80.13 247.29,-85.35"/>
 </g>
 <!-- meursing_table_plan_id Note -->
-<g id="note_210" class="node">
+<g id="note_617" class="node">
 <title>meursing_table_plan_id Note</title>
 <polygon fill="none" stroke="black" points="136.5,-36 35.5,-36 35.5,0 142.5,0 142.5,-30 136.5,-36"/>
 <polyline fill="none" stroke="black" points="136.5,-36 136.5,-30 "/>
@@ -700,16 +742,14 @@
 <text text-anchor="middle" x="89" y="-15.8" font-family="Arial" font-size="9.00">Always null in UK tariff</text>
 </g>
 <!-- meursing_table_plan_id Note&#45;&gt;Additional Code Types -->
-<g id="database_650_edge1" class="edge">
+<g id="database_105_edge1" class="edge">
 <title>meursing_table_plan_id Note&#45;&gt;Additional Code Types:meursing_table_plan_id_name</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M142.6,-18C174.89,-18 217.09,-18 254.5,-18"/>
 </g>
 </g>
-</svg><p><strong>Additional codes cannot be applied universally …</strong></p>
-<p>There is an additional many to many table within the tariff database that determines which additional code types can be used against which measure types. Currently there are 74 permutations of additional codes against measure types: there is little surprising about the alignment – e.g. you can only assign additional codes of type 8, A, B or C to measure types that are associated with Trade Remedies.</p>
+</svg><h2 id="additional-codes-cannot-be-applied-universally">Additional codes cannot be applied universally …</h2><p>There is an additional many to many table within the tariff database that determines which additional code types can be used against which measure types. Currently there are 74 permutations of additional codes against measure types: there is little surprising about the alignment – e.g. you can only assign additional codes of type 8, A, B or C to measure types that are associated with Trade Remedies.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93374350-7eff0080-f84e-11ea-93cc-10957a58d5bf.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93374350-7eff0080-f84e-11ea-93cc-10957a58d5bf.png" alt="image" /></a></p>
-<p><strong>Measure types detail</strong></p>
-
+<h2 id="measure-types-detail">Measure types detail</h2>
 <ul>
 <li>Please see the main Tariff Manager training manual for detail on the measure types that will be used in the UK tariff.</li>
 <li>Bear in mind also that the thinking has changed slightly since that manual was written
