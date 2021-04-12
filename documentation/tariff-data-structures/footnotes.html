@@ -223,6 +223,23 @@
 <li>
 <a href="#introduction-to-footnotes">Introduction to footnotes</a>
 </li>
+</ul>
+<p></li>
+<li>
+<a href="#structure-of-footnotes">Structure of footnotes &amp; footnote types</a>
+<ul>
+<li>
+<a href="#overview-of-existing-footnote-types">Overview of existing footnote types</a>
+</li>
+<li>
+<a href="#footnote-type-application-codes">Footnote type application codes</a>
+</li>
+<li>
+<a href="#proposed-new-footnote-types">Proposed new footnote types</a>
+</li>
+<li>
+<a href="#linking-tables-for-footnotes">Linking tables for footnotes</a>
+<ul>
 <li>
 <a href="#key-user-needs-footnotes">Key user needs - footnotes</a>
 </li>
@@ -230,12 +247,13 @@
 <a href="#key-business-rules-footnotes">Key business rules - footnotes</a>
 </li>
 </ul>
+</li>
+</ul></p>
 
 <blockquote>
 <p>Footnotes are used to give more information about measures.</p>
 </blockquote>
-<h3 id="introduction-to-footnotes">Introduction to footnotes</h3><p><strong>Structure of footnotes &amp; footnote types</strong></p>
-
+<h3 id="introduction-to-footnotes">Introduction to footnotes</h3><h2 id="structure-of-footnotes-amp-footnote-types">Structure of footnotes &amp; footnote types</h2>
 <ul>
 <li>Much like certificates and additional codes, footnotes are made up of a type and then a specific ID, which, when concatenated, form the unique ID of the footnote.</li>
 <li>For example, the footnote CD491 is constructed of a type (CD) and a specific footnote ID (491) – the entire footnote is known as CD491.</li>
@@ -244,8 +262,7 @@
 <li>Footnote type IDs are either 2 alphabetical characters (those set by the EU) or 2 numeric characters (set as national footnotes by the UK). As with the footnote ID, there is additional redundancy here – the data schema gives an opportunity to use 3 digit footnote ID types – there should be no reason to adopt these.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93206097-c7d08f80-f750-11ea-9cbe-7a2ec4499251.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93206097-c7d08f80-f750-11ea-9cbe-7a2ec4499251.png" alt="image" /></a></p>
-<p><strong>Overview of existing footnote types</strong></p>
-<div class="table-container">
+<h2 id="overview-of-existing-footnote-types">Overview of existing footnote types</h2><div class="table-container">
         <table>
           <tr>
 <th>ID</th>
@@ -347,8 +364,7 @@
 <li>This lists the number of footnotes of a given type, not the number of times these footnotes are applied to measures or commodity codes.</li>
 <li>The variety in volumes of footnotes shows the relative usefulness of the footnote type IDs.</li>
 </ul>
-<p><strong>Footnote type application codes</strong></p>
-<div class="table-container">
+<h2 id="footnote-type-application-codes">Footnote type application codes</h2><div class="table-container">
         <table>
           <tr>
 <th>Application code</th>
@@ -402,8 +418,7 @@
 <td>•While   it is tempting to look at the dynamic footnote type and imagine that it can   be applied to any of the different data objects with impunity, and that may   have been the intention initially, it is pointed to note that the EU has only   ever created one type with this application code (TP – Dynamic footnote) and   the last time is was used was in 2015 – it is an answer to a question that   has not been posed, and should not be used.</td>
 </tr>
         </table>
-      </div><p><strong>Proposed new footnote types</strong></p>
-
+      </div><h2 id="proposed-new-footnote-types">Proposed new footnote types</h2>
 <ul>
 <li>Footnotes are the last thing to be considered in a migration, as they are informational but not operational – the tariff will still function if the footnotes are omitted.</li>
 <li>The only exception to this rule has been the ECJU, which has been very keen to create footnotes that explain the requirement with regard to export controlled goods (such as dual use, goods for torture or sanctioned countries)</li>
@@ -442,8 +457,7 @@
 <li>Our proposal is to simplify the identification of footnotes, by in the future using only 2 footnote types for the majority of entities and to extend to 5-digits for footnote IDs.</li>
 <li>The only exception could be in areas of specific interest, such as Dual Use Goods (which use the footnote type ID DU), though the preference should be for a clean slate – all footnotes use type FM for measures and type FC for commodities.</li>
 </ul>
-<p><strong>Linking tables for footnotes</strong></p>
-
+<h2 id="linking-tables-for-footnotes">Linking tables for footnotes</h2>
 <ul>
 <li>The following is a list of all of the tables that are used to link footnotes to other entities in the Tariff database:
 
