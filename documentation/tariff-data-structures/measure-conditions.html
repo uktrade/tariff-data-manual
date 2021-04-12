@@ -223,19 +223,92 @@
 <li>
 <a href="#introduction-to-measure-conditions">Introduction to measure conditions</a>
 </li>
+</ul>
+<p></li>
+<li>
+<a href="#anatomy-of-a-condition">Anatomy of a condition</a>
+<ul>
+<li>
+<a href="#conditions-relationships">Conditions - relationships</a>
+<ul>
 <li>
 <a href="#condition-codes">Condition codes</a>
 </li>
+</ul>
+</li>
+<li>
+<a href="#condition-codes-currently-in-use">Condition codes currently in use</a>
+</li>
+<li>
+<a href="#measure-conditions-and-condition-components">Measure conditions and condition components</a>
+</li>
+<li>
+<a href="#conditions-and-condition-components-cherry-tomatoes">Conditions and condition components – cherry tomatoes</a>
+</li>
+<li>
+<a href="#boiling-it-down-there-are-only-really-2-condition-mechanics">Boiling it down, there are only really 2 condition mechanics</a>
+<ul>
 <li>
 <a href="#action-codes">Action codes</a>
 </li>
+</ul>
+</li>
+<li>
+<a href="#action-codes-that-go-together">Action codes that go together</a>
+</li>
+<li>
+<a href="#example-of-a-pos-neg-dual-action-code">Example of a pos / neg dual action code</a>
+</li>
+<li>
+<a href="#and-or-logic-for-condition-codes">AND / OR logic for condition codes</a>
+</li>
+<li>
+<a href="#volumes-of-conditions">Volumes of conditions</a>
+<ul>
 <li>
 <a href="#detailed-overview-of-condition-codes">Detailed overview of condition codes</a>
 </li>
+</ul>
+</li>
+<li>
+<a href="#condition-code-a">Condition code A</a>
+</li>
+<li>
+<a href="#condition-codes-b-c">Condition codes B, C &amp; H</a>
+</li>
+<li>
+<a href="#condition-code-e">Condition code E</a>
+</li>
+<li>
+<a href="#condition-code-i">Condition code I</a>
+</li>
+<li>
+<a href="#condition-code-f">Condition code F</a>
+</li>
+<li>
+<a href="#condition-code-l">Condition code L</a>
+</li>
+<li>
+<a href="#condition-code-m">Condition code M</a>
+</li>
+<li>
+<a href="#condition-code-q">Condition code Q</a>
+</li>
+<li>
+<a href="#condition-code-r">Condition code R</a>
+</li>
+<li>
+<a href="#condition-code-u">Condition code U</a>
+</li>
+<li>
+<a href="#condition-code-v-the-entry-price-system">Condition code V – The Entry price System</a>
+<ul>
 <li>
 <a href="#key-business-processing-rules">Key business processing rules</a>
 </li>
 </ul>
+</li>
+</ul></p>
 
 <blockquote>
 <p>Measure conditions specify when there are conditions that must be met, for example when documentation such as veterinary documents are required.</p>
@@ -255,14 +328,13 @@
 </ul></li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93779091-83486680-fc1e-11ea-8e12-695e654b9516.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93779091-83486680-fc1e-11ea-8e12-695e654b9516.png" alt="image" /></a></p>
-<p><strong>Anatomy of a condition</strong></p>
-<svg width="308pt" height="210pt"
+<h2 id="anatomy-of-a-condition">Anatomy of a condition</h2><svg width="308pt" height="210pt"
  viewBox="0.00 0.00 308.00 210.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_150" class="graph" transform="scale(1 1) rotate(0) translate(4 206)">
+<g id="database_178" class="graph" transform="scale(1 1) rotate(0) translate(4 206)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-206 304,-206 304,4 -4,4"/>
 <!-- Measure Conditions -->
-<g id="table_523" class="node">
+<g id="table_823" class="node">
 <title>Measure Conditions</title>
 <polygon fill="none" stroke="black" points="9,-181 9,-197 291,-197 291,-181 9,-181"/>
 <text text-anchor="start" x="108.5" y="-186.8" font-family="Arial" font-size="9.00">Measure Conditions</text>
@@ -390,19 +462,16 @@
 <td>The   specific certificate required (if needed)</td>
 </tr>
         </table>
-      </div><p><strong>Conditions - relationships</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" alt="image" /></a></p>
+      </div><h2 id="conditions-relationships">Conditions - relationships</h2><p><a href="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" alt="image" /></a></p>
 
 <ul>
 <li>This is a simplified view of the relationships of the measure_conditions with other data entities, for example all description tables are omitted.</li>
 <li>Of the tables noted here, pay special attention to measure_conditions, measures and measure_condition_components, as the rest are just foreign key tables.</li>
 <li>It is key to understand the apparent duality of some of the fields in the measure_conditions and measure_condition_components tables (as highlighted by the marquees on the diagram).</li>
 </ul>
-<h3 id="condition-codes">Condition codes</h3><p><strong>Condition codes currently in use</strong></p>
-<p>A condition code identifies what sort of condition is to be fulfilled in order for the action to be carried out. The table below identifies the condition codes that are currently in use (12.01.20) in the EU Tariff. This is not all possible condition codes – there are a number that have been used in the past that are no longer in use. The highlighted rows are those that are in use most frequently, and, importantly are likely to be used most frequently in the UK tariff.</p>
+<h3 id="condition-codes">Condition codes</h3><h2 id="condition-codes-currently-in-use">Condition codes currently in use</h2><p>A condition code identifies what sort of condition is to be fulfilled in order for the action to be carried out. The table below identifies the condition codes that are currently in use (12.01.20) in the EU Tariff. This is not all possible condition codes – there are a number that have been used in the past that are no longer in use. The highlighted rows are those that are in use most frequently, and, importantly are likely to be used most frequently in the UK tariff.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93781194-066abc00-fc21-11ea-9aad-4691067d9f91.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781194-066abc00-fc21-11ea-9aad-4691067d9f91.png" alt="image" /></a></p>
-<p><strong>Measure conditions and condition components</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93781575-6cefda00-fc21-11ea-859e-6d27c3c1cd0e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781575-6cefda00-fc21-11ea-859e-6d27c3c1cd0e.png" alt="image" /></a></p>
+<h2 id="measure-conditions-and-condition-components">Measure conditions and condition components</h2><p><a href="https://user-images.githubusercontent.com/61055197/93781575-6cefda00-fc21-11ea-859e-6d27c3c1cd0e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781575-6cefda00-fc21-11ea-859e-6d27c3c1cd0e.png" alt="image" /></a></p>
 
 <ul>
 <li>Going back to the list of condition codes, there are a number of condition codes which make reference to a minimum or maximum import price, otherwise known as a reference price (or trigger price). These are highlighted in blue above.</li>
@@ -414,13 +483,11 @@
 <li>In this case, and the other condition codes that follow the same pattern, the fields in the measure condition code table (that start condition_) represent the trigger price: the fields in the measure_condition_components table represent the duties that will be payable a a result of the trigger condition having been met.</li>
 <li>Example overleaf …</li>
 </ul>
-<p><strong>Conditions and condition components – cherry tomatoes</strong></p>
-<p>If there is a complex mechanism to be demonstrated, it is a fair bet that it can be highlighted using cherry tomatoes, which attract most complexities - tomatoes plus another c. 30 commodities are subject (in the EU) to the Entry Price System.</p>
+<h2 id="conditions-and-condition-components-cherry-tomatoes">Conditions and condition components – cherry tomatoes</h2><p>If there is a complex mechanism to be demonstrated, it is a fair bet that it can be highlighted using cherry tomatoes, which attract most complexities - tomatoes plus another c. 30 commodities are subject (in the EU) to the Entry Price System.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93781973-e687c800-fc21-11ea-96bb-1f5ec52a3bbe.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93781973-e687c800-fc21-11ea-96bb-1f5ec52a3bbe.png" alt="image" /></a></p>
 <p>In the diagram above (taken from the Trade Tariff Service), the measure condition trigger fields are highlighted in the red marquee.</p>
 <p>The payable duty amounts are highlighted in blue – if the trigger condition is met (in this case if a consignment of tomatoes comes into the country at a price lower than or equal to a given threshold (trigger price), then the duty charged will be increased.</p>
-<p><strong>Boiling it down, there are only really 2 condition mechanics</strong></p>
-<div class="table-container">
+<h2 id="boiling-it-down-there-are-only-really-2-condition-mechanics">Boiling it down, there are only really 2 condition mechanics</h2><div class="table-container">
         <table>
           <tr>
 <th>Does the trader have the right documentation?</th>
@@ -574,8 +641,7 @@
 <td>Apply export refund</td>
 </tr>
         </table>
-      </div><p><strong>Action codes that go together</strong></p>
-<p>Many of the action codes are actually part of an action code pair. The smaller of the two is usually the negative action and the larger is the complementary positive action (e.g. x is not allowed vs x is allowed).</p>
+      </div><h2 id="action-codes-that-go-together">Action codes that go together</h2><p>Many of the action codes are actually part of an action code pair. The smaller of the two is usually the negative action and the larger is the complementary positive action (e.g. x is not allowed vs x is allowed).</p>
 <p>The following pairs of action codes always go together:</p>
 <div class="table-container">
         <table>
@@ -608,8 +674,7 @@
 <td>Export   refund not applicable / Apply export refund</td>
 </tr>
         </table>
-      </div><p><strong>Example of a pos / neg dual action code</strong></p>
-
+      </div><h2 id="example-of-a-pos-neg-dual-action-code">Example of a pos / neg dual action code</h2>
 <ul>
 <li>These codes are typically used for restrictions that require some sort of documentation (certificate or license), although they may be used in all kids of circumstance (e.g. setting tiered duties for Trade Remedies).</li>
 <li>Here is an example on the UK Trade Tariff Service of a pair of conditions with pos / neg action codes – the positive being condition 1, the negative condition 2.</li>
@@ -674,8 +739,7 @@
 <li>Action codes are complementary (27 and 7) – the 27 is the positive and the 7 is the negative.</li>
 <li>The certificate required to effect the positive action is Y085</li>
 </ul>
-<p><strong>AND / OR logic for condition codes</strong></p>
-
+<h2 id="and-or-logic-for-condition-codes">AND / OR logic for condition codes</h2>
 <ul>
 <li>Conditions are grouped together according to their condition code.</li>
 <li>Within that group, the individual conditions are grouped together in an OR relationship, for example, in the conditions associated with the B condition code below, only one of the three noted goods needs to be provided, however it must be provided alongside one of the other conditions from block E being met (provision of a document or the weight of the imported good being below 2kg).</li>
@@ -683,8 +747,7 @@
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" alt="image" /></a></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93788939-23a38880-fc29-11ea-9aa4-4496f37639f9.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788939-23a38880-fc29-11ea-9aa4-4496f37639f9.png" alt="image" /></a></p>
-<p><strong>Volumes of conditions</strong></p>
-
+<h2 id="volumes-of-conditions">Volumes of conditions</h2>
 <ul>
 <li>Do not underestimate the complexity of measure conditions – there are up to 26 conditions on measures, as per the example here on commodity code 0308110000 (Aquatic invertebrates other than crustaceans and molluscs, live, fresh, chilled, frozen, dried, salted or in brine; smoked aquatic invertebrates other than crustaceans and molluscs, whether or not cooked before or during the smoking process; flours, meals and pellets of aquatic invertebrates other than crustaceans and molluscs, fit for human consumption)against the EU (measure_sid 3566626)</li>
 <li>In this case, the conditions are aligned against 2 condition codes:
@@ -696,8 +759,7 @@
 <li>The intellectual knowledge of certification is a huge challenge in DIT, Defra and HMG as a whole - over the implementation period, significant effort in DIT and Defra should be expended in looking to understand certification.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93791467-2d7abb00-fc2c-11ea-82af-8f6faa45858a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93791467-2d7abb00-fc2c-11ea-82af-8f6faa45858a.png" alt="image" /></a></p>
-<h3 id="detailed-overview-of-condition-codes">Detailed overview of condition codes</h3><p><strong>Condition code A</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" alt="image" /></a></p>
+<h3 id="detailed-overview-of-condition-codes">Detailed overview of condition codes</h3><h2 id="condition-code-a">Condition code A</h2><p><a href="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797165-c6f99b00-fc33-11ea-95e9-0c8e087d419b.png" alt="image" /></a></p>
 
 <ul>
 <li>This condition code is used to modify the circumstances of an anti-dumping or anti-subsidy duty depending on the conditions stated.</li>
@@ -773,8 +835,7 @@
 <p>Conditions B, C and H are identical in meaning</p>
 <p>C and H are used when multiple condition sets using the same mechanic need to be applied to the same measure.</p>
 </blockquote>
-<p><strong>Condition codes B, C &amp; H</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" alt="image" /></a></p>
+<h2 id="condition-codes-b-c-amp-h">Condition codes B, C &amp; H</h2><p><a href="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797576-530bc280-fc34-11ea-8075-759993263d62.png" alt="image" /></a></p>
 
 <ul>
 <li>Codes B, C and H require a certificate or other document to be presented in order for the requirement to be fulfilled.</li>
@@ -784,16 +845,14 @@
 <li>H is used only 41 times (Jan 2020); C is used c. 5,000 times whereas B is vastly more prevalent (c. 24,000 occurrences).</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93797534-45eed380-fc34-11ea-8123-3dd56caaba5b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797534-45eed380-fc34-11ea-8123-3dd56caaba5b.png" alt="image" /></a></p>
-<p><strong>Condition code E</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797650-6c147380-fc34-11ea-9127-79c54dfd1288.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797650-6c147380-fc34-11ea-9127-79c54dfd1288.png" alt="image" /></a></p>
+<h2 id="condition-code-e">Condition code E</h2><p><a href="https://user-images.githubusercontent.com/61055197/93797650-6c147380-fc34-11ea-9127-79c54dfd1288.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797650-6c147380-fc34-11ea-9127-79c54dfd1288.png" alt="image" /></a></p>
 
 <ul>
 <li>This condition code is a combination of a quantitative restriction plus a documentation requirement, i.e. a trade will be allowed provided the volume of goods is lower than the defined threshold weight (or other unit), or a document is provided that permits the trade in a larger volume of goods.</li>
 <li>The criteria that define these two conditions are set in the measure condition data.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93797793-9b2ae500-fc34-11ea-9fd0-7d12b8d3f17e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797793-9b2ae500-fc34-11ea-9fd0-7d12b8d3f17e.png" alt="image" /></a></p>
-<p><strong>Condition code I</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797859-aed64b80-fc34-11ea-9716-a0c6df520ece.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797859-aed64b80-fc34-11ea-9716-a0c6df520ece.png" alt="image" /></a></p>
+<h2 id="condition-code-i">Condition code I</h2><p><a href="https://user-images.githubusercontent.com/61055197/93797859-aed64b80-fc34-11ea-9716-a0c6df520ece.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797859-aed64b80-fc34-11ea-9716-a0c6df520ece.png" alt="image" /></a></p>
 
 <ul>
 <li>These condition codes are currently used uniquely with measure types 751 and 755 (import and export control of waste)</li>
@@ -801,8 +860,7 @@
 <li>Type I is only ever used in conjunction with type E to present a send condition set of the same type, never on its own</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93797871-b269d280-fc34-11ea-90fd-3bc10f0322e0.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797871-b269d280-fc34-11ea-90fd-3bc10f0322e0.png" alt="image" /></a></p>
-<p><strong>Condition code F</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93797962-cf9ea100-fc34-11ea-9f04-8637fdf12c11.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797962-cf9ea100-fc34-11ea-9f04-8637fdf12c11.png" alt="image" /></a></p>
+<h2 id="condition-code-f">Condition code F</h2><p><a href="https://user-images.githubusercontent.com/61055197/93797962-cf9ea100-fc34-11ea-9f04-8637fdf12c11.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797962-cf9ea100-fc34-11ea-9f04-8637fdf12c11.png" alt="image" /></a></p>
 
 <ul>
 <li>These conditions allow duties to be charged against imported goods subject to Trade Remedies (Anti dumping or anti subsidy duties) that are dependent upon the unit price of the import.</li>
@@ -817,8 +875,7 @@
 <li>This essentially sets a minimum import </li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" alt="image" /></a></p>
-<p><strong>Condition code L</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93821295-48622500-fc56-11ea-9b0b-ef497953d502.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821295-48622500-fc56-11ea-9b0b-ef497953d502.png" alt="image" /></a></p>
+<h2 id="condition-code-l">Condition code L</h2><p><a href="https://user-images.githubusercontent.com/61055197/93821295-48622500-fc56-11ea-9b0b-ef497953d502.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821295-48622500-fc56-11ea-9b0b-ef497953d502.png" alt="image" /></a></p>
 
 <ul>
 <li>This is currently used only 30 times and is always applied to measures of type 652 - Additional duty based on cif price</li>
@@ -826,8 +883,7 @@
 <li>The UK is not going to be taking on this policy, unless plans change between now and the end of 2020.</li>
 <li>The policy is far too complex to describe here, but is described in detail in the general training manual.</li>
 </ul>
-<p><strong>Condition code M</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93821499-852e1c00-fc56-11ea-9f43-33ec45d62b84.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821499-852e1c00-fc56-11ea-9f43-33ec45d62b84.png" alt="image" /></a></p>
+<h2 id="condition-code-m">Condition code M</h2><p><a href="https://user-images.githubusercontent.com/61055197/93821499-852e1c00-fc56-11ea-9f43-33ec45d62b84.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821499-852e1c00-fc56-11ea-9f43-33ec45d62b84.png" alt="image" /></a></p>
 
 <ul>
 <li>Condition code M is used in two circumstances:
@@ -848,8 +904,7 @@
 <li>In the examples below, there are two conditions which behave more or less the same as condition type F, where the applicable punitive duty is dependent the declared price [F depends on net free at frontier price before duty].</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93821534-970fbf00-fc56-11ea-9ded-0909e536e23d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821534-970fbf00-fc56-11ea-9ded-0909e536e23d.png" alt="image" /></a></p>
-<p><strong>Condition code Q</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93822545-48632480-fc58-11ea-9248-e7d404094fdd.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822545-48632480-fc58-11ea-9248-e7d404094fdd.png" alt="image" /></a></p>
+<h2 id="condition-code-q">Condition code Q</h2><p><a href="https://user-images.githubusercontent.com/61055197/93822545-48632480-fc58-11ea-9248-e7d404094fdd.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822545-48632480-fc58-11ea-9248-e7d404094fdd.png" alt="image" /></a></p>
 
 <ul>
 <li>Condition type Q is used in all cases where a measure is put in place to represent a licensed quota. And in all cases it refers to the single license Y100 (Special entries on the import licence AGRIM). It is used in measures of type:
@@ -863,23 +918,20 @@
 <li>It is only used for licensed quotas; it is never used for FCFS quotas.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93822572-5618aa00-fc58-11ea-9b8d-4556b8066802.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822572-5618aa00-fc58-11ea-9b8d-4556b8066802.png" alt="image" /></a></p>
-<p><strong>Condition code R</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93822667-75afd280-fc58-11ea-9afb-28fda63aca2e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822667-75afd280-fc58-11ea-9afb-28fda63aca2e.png" alt="image" /></a></p>
+<h2 id="condition-code-r">Condition code R</h2><p><a href="https://user-images.githubusercontent.com/61055197/93822667-75afd280-fc58-11ea-9afb-28fda63aca2e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822667-75afd280-fc58-11ea-9afb-28fda63aca2e.png" alt="image" /></a></p>
 
 <ul>
 <li>As per scenario 1 for condition code M, this is used to apply conditions to credibility checks to ensure that the weight ‘looks right’ against the number of declared goods. The supplementary unit identifies what additional unit beyond the KGM weight must be supplied by the trader on declaring their import.</li>
 <li>Again, as per condition code M, the UK will be abandoning the practise of managing credibility checks in the Taric file after EU Exit.</li>
 </ul>
-<p><strong>Condition code U</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93822928-ddfeb400-fc58-11ea-843a-dd13f7ca6416.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822928-ddfeb400-fc58-11ea-843a-dd13f7ca6416.png" alt="image" /></a></p>
+<h2 id="condition-code-u">Condition code U</h2><p><a href="https://user-images.githubusercontent.com/61055197/93822928-ddfeb400-fc58-11ea-843a-dd13f7ca6416.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93822928-ddfeb400-fc58-11ea-843a-dd13f7ca6416.png" alt="image" /></a></p>
 
 <ul>
 <li>As per scenario 1 for condition codes M &amp; R, this is used to apply conditions to credibility checks to ensure that the declared value ‘looks right’ against the number of declared goods.</li>
 <li>The supplementary unit identifies what additional unit beyond the KGM weight must be supplied by the trader on declaring their import.</li>
 <li>As per condition codes M &amp; R, the UK will be abandoning the practise of managing credibility checks in the Taric file after EU Exit.</li>
 </ul>
-<p><strong>Condition code V – The Entry price System</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93823300-7eed6f00-fc59-11ea-9028-2e0929b5b66a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823300-7eed6f00-fc59-11ea-9028-2e0929b5b66a.png" alt="image" /></a></p>
+<h2 id="condition-code-v-the-entry-price-system">Condition code V – The Entry price System</h2><p><a href="https://user-images.githubusercontent.com/61055197/93823300-7eed6f00-fc59-11ea-9028-2e0929b5b66a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823300-7eed6f00-fc59-11ea-9028-2e0929b5b66a.png" alt="image" /></a></p>
 
 <ul>
 <li>The Entry Price System (EPS) is a complex mechanism to apply tiered duties to 31 agricultural products, primarily fruit.</li>
