@@ -17,6 +17,18 @@ module RenderDotBlocks
 end
 GovukTechDocs::TechDocsHTMLRenderer.prepend(RenderDotBlocks)
 
+module EmbedSVG
+  def image link, title, alt_text
+    if link =~ /^images\/.*\.svg$/
+      svg = File.read(File.join "source", link)
+      /<svg.*<\/svg>/m.match(svg)[0]
+    else
+      super link, title, alt_text
+    end
+  end
+end
+GovukTechDocs::TechDocsHTMLRenderer.prepend(EmbedSVG)
+
 configure :build do
   prefix = (ENV['GITHUB_REPOSITORY'] || '').partition('/')[-2..-1].join
   set :http_prefix, "#{prefix}/"

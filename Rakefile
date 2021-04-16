@@ -76,6 +76,7 @@ end
 
 task :clean do
   rm_rf OUTPUT_DIR
+  rm_rf IMAGES_DIR
   rm_rf INDEX_FILE
   rm_rf 'build'
 end
