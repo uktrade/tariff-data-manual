@@ -18,12 +18,13 @@ end
 GovukTechDocs::TechDocsHTMLRenderer.prepend(RenderDotBlocks)
 
 module EmbedSVG
-  def image link, title, alt_text
+  def image link, title, alt
     if link =~ /^images\/.*\.svg$/
       svg = File.read(File.join "source", link)
-      /<svg.*<\/svg>/m.match(svg)[0]
+      code = /<svg.*<\/svg>/m.match(svg)[0]
+      code.insert(4, " aria-label=\"#{alt.gsub('"', '&quot;')}\"")
     else
-      super link, title, alt_text
+      super link, title, alt
     end
   end
 end
