@@ -3357,5 +3357,11 @@ html.has-search-results-open {
 .govuk-template {
   overflow-y: hidden; }
 
+[class^="app-pane"] {
+  overflow-x: auto !important; }
+
+main svg {
+  max-width: 100%; }
+
 
 

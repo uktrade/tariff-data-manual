@@ -3353,3 +3353,9 @@ html.has-search-results-open {
 
 .fixedsticky-on + .fixedsticky-dummy {
   display: block; }
+
+[class^="app-pane"] {
+  overflow-x: auto !important; }
+
+main svg {
+  max-width: 100%; }
