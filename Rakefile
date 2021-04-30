@@ -60,6 +60,7 @@ OUTPUT_FILES.zip(WIKI_FILES).each do |output, input|
       o.puts "title: \"#{title}\""
       o.puts "source_url: \"#{File.join 'https://github.com', GITHUB_REPO, 'wiki', input.pathmap('%n')}\""
       o.puts 'weight: 0' if output == INDEX_FILE
+      o.puts 'weight: 1' if not front_matter.include? "weight: "
       o.puts front_matter
       o.puts '---'
       o.puts header_line
