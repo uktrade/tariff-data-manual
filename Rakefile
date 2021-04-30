@@ -18,6 +18,7 @@ IMAGE_FILES = FileList["#{INPUT_DIR}/images/*.*"]
 OUTPUT_IMAGES = IMAGE_FILES.map {|n| File.join IMAGES_DIR, n.pathmap('%f') }
 
 TOP_LEVEL_HEADER = /^#\s+.*$/
+FRONT_MATTER = /---\n(.*)\n---\n/m
 
 def patch relative_path, patch_filename
   full_path = Gem.find_files(relative_path).first
@@ -54,14 +55,16 @@ OUTPUT_FILES.zip(WIKI_FILES).each do |output, input|
       rake_output_message "echo ... > #{output}"
       contents = File.read input
       header_line = contents.scan(TOP_LEVEL_HEADER).first || "# #{title}"
+      front_matter = (contents.scan(FRONT_MATTER).first || [""]).first
       o.puts '---'
       o.puts "title: \"#{title}\""
       o.puts "source_url: \"#{File.join 'https://github.com', GITHUB_REPO, 'wiki', input.pathmap('%n')}\""
       o.puts 'weight: 0' if output == INDEX_FILE
+      o.puts front_matter
       o.puts '---'
       o.puts header_line
       o.puts '<%= toc(current_page) %>'
-      o.puts contents.gsub(TOP_LEVEL_HEADER, '')
+      o.puts contents.gsub(TOP_LEVEL_HEADER, '').gsub(FRONT_MATTER, '')
       o.puts '<%= stylesheet_link_tag :dot %>' if contents =~ /^```dot/ || contents =~ /^```dbml/
     end
   end
