@@ -222,30 +222,24 @@
 <ul>
 <li>
 <a href="#introduction-to-certificates">Introduction to certificates</a>
+<ul>
+<li>
+<a href="#what-are-certificates">What are certificates?</a>
+</li>
+<li>
+<a href="#what-certificates-are-not">What certificates are not</a>
 </li>
 </ul>
 <p></li>
 <li>
-<a href="#what-are-certificates">What are certificates?</a>
-<ul>
-<li>
-<a href="#what-certificates-are-not">What certificates are not</a>
-</li>
-<li>
-<a href="#structure-of-certificates">Structure of certificates &amp; certificate types</a>
+<a href="#structure-of-certificates-and-certificate-types">Structure of certificates and certificate types</a>
 </li>
 <li>
 <a href="#overview-of-existing-certificate-type-codes">Overview of existing certificate type codes</a>
 </li>
 <li>
 <a href="#use-of-certificate-code-types-since-2015">Use of certificate code types since 2015</a>
-</li>
-<li>
-<a href="#who-owns-certificates">Who owns certificates?</a>
 <ul>
-<li>
-<a href="#user-needs-certificates">User needs - certificates</a>
-</li>
 <li>
 <a href="#business-rules-certificates">Business rules - certificates</a>
 </li>
@@ -254,24 +248,15 @@
 </ul></p>
 
 <blockquote>
-<p>Certificates are associated to measures via measure conditions, this term refers to the certificates, licenses, and non-paper conditions that are stored in certificate tables and are required to bring goods through customs.</p>
+<p>Certificates are associated to measures through measure conditions. This term refers to the certificates, licences, and non-paper conditions that are stored in certificate tables and are required to bring goods through customs.</p>
 </blockquote>
-<h3 id="introduction-to-certificates">Introduction to certificates</h3><h2 id="what-are-certificates">What are certificates?</h2><p>The certificates tables in TARIC-based applications store all of the certificates, licences and other conditions that are referenced via measure conditions in order to make the import (or export) of a good conditional on the provision of some entity.</p>
-<p>The sole purpose of certificates in this system is to associate them to measures via measure conditions – on their own, they no value and are not exposed to traders via any other means.</p>
-<p>This entity is usually a physical or digital document of some description (e.g. a license or official certificate), but it may also be a non-paper condition - the term “certificate” to label the table is definitely more constrictive than the actual subject matter.</p>
-<p>A good example of the ‘non-document’ condition is “Y037 - Goods exempted from the prohibition – biathlon equipment’ where the condition references a property of the good being imported, and not an accompanying document.</p>
-<p>These oddities are typically linked to measures using the measure_condition_code “Y”. Please read the instruction guide on measure conditions for a detailed insight.</p>
+<h2 id="introduction-to-certificates">Introduction to certificates</h2><h3 id="what-are-certificates">What are certificates?</h3><p>The certificates tables store all the certificates, licences and other conditions that are referenced through measure conditions to make the import (or export) of a good conditional on the provision of a document, declaration or similar.
+The ‘certificate’ is usually a physical or digital document (for example a licence or official certificate), but can be a non-paper condition. A good example of the ‘non-document’ condition is:</p>
+<p>‘Y037 - Goods exempted from the prohibition – biathlon equipment’</p>
+<p>where the condition references a property of the good being imported, and not an accompanying document. These rare cases are typically linked to measures using the measure_condition_code “Y”.   Refer to <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions">measure conditions</a> for more detail.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93202924-71ad1d80-f74b-11ea-903d-0a4fc11b0b49.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93202924-71ad1d80-f74b-11ea-903d-0a4fc11b0b49.png" alt="image" /></a></p>
-<h2 id="what-certificates-are-not">What certificates are not</h2>
-<ul>
-<li>A certificate is not a representation of the actual document itself</li>
-<li>Our database stores only a certificate code (4 digits) and a description of that code</li>
-<li>There is no instruction on where to find that document (if the certificate represents an actual document), there is no link to a URL nor guidance on how to complete the certificate</li>
-<li>This could be construed as a flaw in the public-facing aspect of the certification model.</li>
-<li>There is a feeling of ‘so what’ when confronted with the need for a certificate – the interaction may favour traders that know certification inside out and the regulations that underpin it, but for entryists, the concept can be bewildering</li>
-<li>DIT may consider extending the model to allow more information than just a code and basic description to be stored against the certificate, bearing in mind that the majority of such documents or other entities would likely be owned by Defra or on occasion HMRC</li>
-</ul>
-<h2 id="structure-of-certificates-amp-certificate-types">Structure of certificates &amp; certificate types</h2><p><a href="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" alt="image" /></a></p>
+<h3 id="what-certificates-are-not">What certificates are not</h3><p>A certificate is not a representation of the actual document itself.  The database stores only a certificate code (4 digits) and a description of that code.</p>
+<h2 id="structure-of-certificates-and-certificate-types">Structure of certificates and certificate types</h2><p><a href="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" alt="image" /></a></p>
 
 <ul>
 <li>Much like footnotes and additional codes, certificates are made up of a type code and then a specific code, which, when concatenated, form the unique code of the certificate.</li>
@@ -285,79 +270,60 @@
           <tr>
 <th>Code</th>
 <th>Description</th>
-<th>Measure count</th>
 </tr><tr>
 <td>9</td>
 <td>National   Document</td>
-<td>3694</td>
 </tr><tr>
 <td>A</td>
-<td>Certificate   of authenticity</td>
-<td>26180</td>
+<td>Certificate of authenticity</td>
 </tr><tr>
 <td>C</td>
 <td>Other   certificates</td>
-<td>70129</td>
 </tr><tr>
 <td>D</td>
-<td>Anti-dumping/countervailing   document</td>
-<td>47982</td>
+<td>Anti-dumping, countervailing   document</td>
 </tr><tr>
 <td>E</td>
-<td>Export   certificate/licence/document from country of origin</td>
-<td>2220</td>
+<td>Export   certificate, licence or document from country of origin</td>
 </tr><tr>
 <td>H</td>
 <td>HANDI,   LOOMS certificate</td>
-<td>1048</td>
 </tr><tr>
 <td>I</td>
-<td>Surveillance   certificate/licence/ document issued by one of the Member States</td>
-<td>4648</td>
+<td>Surveillance   certificate, licence or document issued by one of the Member States</td>
 </tr><tr>
 <td>K</td>
 <td>Tariff   quota</td>
-<td>988</td>
 </tr><tr>
 <td>L</td>
-<td>Import   certificate/licence/document</td>
-<td>62408</td>
+<td>Import   certificate, licence or document</td>
 </tr><tr>
 <td>N</td>
 <td>UN/EDIFACT   certificates</td>
-<td>18877</td>
 </tr><tr>
 <td>P</td>
 <td>Ingredients</td>
-<td>4935</td>
 </tr><tr>
 <td>R</td>
 <td>Export   refunds</td>
-<td>791</td>
 </tr><tr>
 <td>U</td>
 <td>Proofs   of origin</td>
-<td>37088</td>
 </tr><tr>
 <td>X</td>
 <td>Export   licence</td>
-<td>25051</td>
 </tr><tr>
 <td>Y</td>
 <td>Particular   provisions</td>
-<td>112304</td>
 </tr><tr>
 <td>Z</td>
 <td>More   certificates</td>
-<td>18886</td>
 </tr>
         </table>
-      </div>
-<ul>
-<li>The table lists all of the certificate code types and their frequency of use on measures in the existing tariff (since the beginning of time).</li>
-<li>Those that are greyed out have not been used in the last 5 years.</li>
-<li>The certificate type codes are somewhat meaningless – as you can see, two of the most frequently used code types are C (Other certificates) and Y (Particular provisions) – these are catch-alls for the large proportion of condition needs.</li>
-</ul>
+      </div><p>Two of the most frequently used code types are C (other certificates) and Y (particular provisions) – these are catch-alls for the large proportion of condition needs.</p>
+<p>The table lists all of the certificate code types and their frequency of use on measures in the existing tariff (since the beginning of time).
+* Those that are greyed out have not been used in the last 5 years.
+* The certificate type codes are somewhat meaningless – as you can see, two of the most frequently used code types are C (Other certificates) and Y (Particular provisions) – these are catch-alls for the large proportion of condition needs.</p>
 <h2 id="use-of-certificate-code-types-since-2015">Use of certificate code types since 2015</h2><div class="table-container">
         <table>
           <tr>
@@ -475,82 +441,7 @@
 </tr>
         </table>
       </div><p><a href="https://user-images.githubusercontent.com/61055197/93204283-ba65d600-f74d-11ea-8f65-2e344314b41e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93204283-ba65d600-f74d-11ea-8f65-2e344314b41e.png" alt="image" /></a></p>
-<p>Just because there are a lot of instances of applications of certificates to measure conditions does not mean there is an abundance of certificates</p>
-<p>In this period since 2015, 36k+ D (Anti-dumping) type certificates have been used, but this entails the application of just 7 unique certificates.</p>
-<h2 id="who-owns-certificates">Who owns certificates?</h2>
-<ul>
-<li>It is anticipated that there will be numerous owners for certificates across government: Defra, the RPA, ECJU, Trade Remedies Authority for example</li>
-<li>In the lead-up to the previous three abortive No Deal EU Exits, the question of migrating certification to a standard that differed from the EU’s was not mentioned – all certification would have remained exactly as-is, for two reasons:
-
-<ul>
-<li>this was the best way to prevent additional ‘accidental’ friction at the border</li>
-<li>the expertise and knowledge in government to make informed changes to certification was not there</li>
-</ul></li>
-<li>After the implementation period, the expectation is that standards will diverge to a degree and therefore certification will also diverge, however for Jan 1st 2021, the expectation (that needs to be tested) is that the EU certification will be carried forward as-is.</li>
-<li>Please see the document on data migration for more information.</li>
-</ul>
-<p>Managing certificate types in TAP
-[may be moved to a different section so I have not included this section]</p>
-<h3 id="user-needs-certificates">User needs - certificates</h3><div class="table-container">
-        <table>
-          <tr>
-<th>As a …</th>
-<th>I want …</th>
-<th>So that …</th>
-<th>Notes / MoSCoW</th>
-</tr><tr>
-<td>Tariff   Manager</td>
-<td>to   create a new certificate type</td>
-<td>I   can associate certificates of a given nature with that certificate type</td>
-<td>Could   Have     See   screen designs, however certificate types are quite low priority - there will   be virtually no change in this area</td>
-</tr><tr>
-<td>Tariff   Manager</td>
-<td>to   create a new certificate type</td>
-<td>I   can change the description and end date of a certificate type</td>
-<td>Could   Have     As   above, this may not be a priority due to small volume of change</td>
-</tr><tr>
-<td>Tariff   Manager</td>
-<td>to   delete a certificate type</td>
-<td>I   can declutter the certificate type interface or correct errors</td>
-<td>Won’t   Have     Very   low priority – there should be no need to delete certificate types</td>
-</tr><tr>
-<td>Tariff   Manager</td>
-<td>to   create a new certificate</td>
-<td>I   can apply the certificate, license, document or other conditions to one or   measures to enforce restrictive measures</td>
-<td>Must   Have     Likely   to be a fair degree of certificate creation in the first instance, then fewer   than a handful per year (in all probability)</td>
-</tr><tr>
-<td>Tariff   Manager</td>
-<td>to   edit a certificate</td>
-<td>I   can modify the end date or start date</td>
-<td>Should   Have     Descriptions   handled separately: end-dating is never necessary!</td>
-</tr><tr>
-<td>Tariff   Manager</td>
-<td>to   delete a certificate</td>
-<td>I   can declutter the certificate interface or correct errors</td>
-<td>Won’t   Have     Very   low priority – there should be no need to delete certificates</td>
-</tr><tr>
-<td>Tariff   Manager</td>
-<td>to   edit a certificate description</td>
-<td>I   can ensure that the certificate is displayed correctly to public and border   agents</td>
-<td>Must   Have     Likely   to be a lot of editing of descriptions, though for accountability, creating   new descriptions is preferable</td>
-</tr><tr>
-<td>Tariff   Manager</td>
-<td>to   create a new certificate description</td>
-<td>I   can ensure that the certificate is displayed correctly to public and border   agents</td>
-<td>Must   Have     For   accountability, creating new descriptions is preferable</td>
-</tr><tr>
-<td>Tariff   Manager</td>
-<td>to   assign certificates to measure (conditions)</td>
-<td>I   can operationalise restrictive measures according to   the law</td>
-<td>Must   Have</td>
-</tr><tr>
-<td>Tariff   Manager</td>
-<td>to   unassign certificates to measure (conditions)</td>
-<td>I   can operationalise restrictive measures according to the law</td>
-<td>Must   Have</td>
-</tr>
-        </table>
-      </div><h3 id="business-rules-certificates">Business rules - certificates</h3><div class="table-container">
+<h3 id="business-rules-certificates">Business rules - certificates</h3><div class="table-container">
         <table>
           <tr>
 <th>ID</th>
