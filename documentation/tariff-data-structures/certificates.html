@@ -454,15 +454,15 @@ The ‘certificate’ is usually a physical or digital document (for example a l
 </tr><tr>
 <td>CET1</td>
 <td>The   type of the certificate must be unique.</td>
-<td>Required – low priority     There   will be few requirements to modify certificate types</td>
+<td>low priority     There   will be few requirements to modify certificate types</td>
 </tr><tr>
 <td>CET2</td>
 <td>The   certificate type cannot be deleted if it is used in a certificate.</td>
-<td>Required – low priority     There   will be few requirements to modify certificate types</td>
+<td>low priority     There   will be few requirements to modify certificate types</td>
 </tr><tr>
 <td>CET3</td>
 <td>The   start date must be less than or equal to the end date.</td>
-<td>Required – low priority     There   will be few requirements to modify certificate types</td>
+<td>low priority     There   will be few requirements to modify certificate types</td>
 </tr><tr>
 <td></td>
 <td>Certificates</td>
@@ -470,31 +470,31 @@ The ‘certificate’ is usually a physical or digital document (for example a l
 </tr><tr>
 <td>CE1</td>
 <td>The   referenced certificate type must exist.</td>
-<td>Required – medium priority     Will   be picked from a list, therefore unlikely to fail.</td>
+<td>medium priority     Will   be picked from a list, therefore unlikely to fail.</td>
 </tr><tr>
 <td>CE2</td>
 <td>The   combination certificate type and certificate code must be unique.</td>
-<td>Required – high priority</td>
+<td>high priority</td>
 </tr><tr>
 <td>CE3</td>
 <td>The   start date must be less than or equal to the end date.</td>
-<td>Required – medium priority</td>
+<td>medium priority</td>
 </tr><tr>
 <td>CE4</td>
 <td>If   a certificate is used in a measure condition then the validity period of the   certificate must span the validity period of the measure.</td>
-<td>Required – medium priority     As   with all such things – just do not end-date certificates</td>
+<td>medium priority     As   with all such things – just do not end-date certificates</td>
 </tr><tr>
 <td>CE5</td>
 <td>The   certificate cannot be deleted if it is used in a measure condition.</td>
-<td>Required – low priority     Do   not delete conditions unless absolutely required</td>
+<td>low priority     Do   not delete conditions unless absolutely required</td>
 </tr><tr>
 <td>CE6</td>
 <td>At   least one description record is mandatory. The start date of the first   description period must be equal to the start date of the certificate. No two   associated description periods for the same certificate and language may have   the same start date. The validity period of the certificate must span the   validity period of the certificate description.</td>
-<td>Required – high priority     All   type 2 data sets need at least one description period, and it needs to start</td>
+<td>high priority     All   type 2 data sets need at least one description period, and it needs to start</td>
 </tr><tr>
 <td>CE7</td>
 <td>The   validity period of the certificate type must span the validity period of the   certificate.</td>
-<td>Required – low priority     Just   do not end date certificate types</td>
+<td>low priority     Just   do not end date certificate types</td>
 </tr>
         </table>
       </div>
