@@ -233,6 +233,11 @@
 <p></li>
 <li>
 <a href="#structure-of-certificates-and-certificate-types">Structure of certificates and certificate types</a>
+<ul>
+<li>
+<a href="#xml-structure">XML Structure</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="#certificate-type-codes">Certificate type codes</a>
@@ -258,7 +263,7 @@
 <p>where the condition references a property of the good being imported, and not an accompanying document. These rare cases are typically linked to measures using the <code>measure_condition_code</code> “Y”.   Refer to <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions">measure conditions</a> for more detail.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93202924-71ad1d80-f74b-11ea-903d-0a4fc11b0b49.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93202924-71ad1d80-f74b-11ea-903d-0a4fc11b0b49.png" alt="image" /></a></p>
 <h3 id="what-certificates-are-not">What certificates are not</h3><p>A certificate is not a representation of the actual document itself.  The database stores only a certificate code (4-digits) and a description of that code.</p>
-<h2 id="structure-of-certificates-and-certificate-types">Structure of certificates and certificate types</h2><div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>&lt;xs:simpleType name="CertificateCode"&gt;
+<h2 id="structure-of-certificates-and-certificate-types">Structure of certificates and certificate types</h2><h3 id="xml-structure">XML Structure</h3><div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>&lt;xs:simpleType name="CertificateCode"&gt;
     &lt;xs:restriction base="xs:string"&gt;
             &lt;xs:length value="3"/&gt;
             &lt;xs:pattern value="[A-Z0-9][A-Z0-9][A-Z0-9]"/&gt;
