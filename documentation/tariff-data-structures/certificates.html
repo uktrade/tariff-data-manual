@@ -257,20 +257,22 @@
 <p><code>Y037 - Goods exempted from the prohibition – biathlon equipment</code></p>
 <p>where the condition references a property of the good being imported, and not an accompanying document. These rare cases are typically linked to measures using the <code>measure_condition_code</code> “Y”.   Refer to <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions">measure conditions</a> for more detail.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93202924-71ad1d80-f74b-11ea-903d-0a4fc11b0b49.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93202924-71ad1d80-f74b-11ea-903d-0a4fc11b0b49.png" alt="image" /></a></p>
-<div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>&lt;xs:simpleType name="CertificateCode"&gt;
-    &lt;xs:restriction base="xs:string"&gt;
-            &lt;xs:length value="3"/&gt;
-            &lt;xs:pattern value="[A-Z0-9][A-Z0-9][A-Z0-9]"/&gt;
+<h3 id="what-certificates-are-not">What certificates are not</h3><p>A certificate is not a representation of the actual document itself.  The database stores only a certificate code (4-digits) and a description of that code.</p>
+<h2 id="structure-of-certificates-and-certificate-types">Structure of certificates and certificate types</h2><p><a href="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" alt="image" /></a>
+<code>
+&lt;xs:simpleType name=&quot;CertificateCode&quot;&gt;
+    &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+            &lt;xs:length value=&quot;3&quot;/&gt;
+            &lt;xs:pattern value=&quot;[A-Z0-9][A-Z0-9][A-Z0-9]&quot;/&gt;
     &lt;/xs:restriction&gt;
     &lt;/xs:simpleType&gt;
-    &lt;xs:simpleType name="CertificateTypeCode"&gt;
-        &lt;xs:restriction base="xs:string"&gt;
-            &lt;xs:length value="1"/&gt;
-            &lt;xs:pattern value="[A-Z0-9]"/&gt;
+    &lt;xs:simpleType name=&quot;CertificateTypeCode&quot;&gt;
+        &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+            &lt;xs:length value=&quot;1&quot;/&gt;
+            &lt;xs:pattern value=&quot;[A-Z0-9]&quot;/&gt;
         &lt;/xs:restriction&gt;
 &lt;/xs:simpleType&gt;
-</code></pre></div><h3 id="what-certificates-are-not">What certificates are not</h3><p>A certificate is not a representation of the actual document itself.  The database stores only a certificate code (4-digits) and a description of that code.</p>
-<h2 id="structure-of-certificates-and-certificate-types">Structure of certificates and certificate types</h2><p><a href="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93203326-27786c00-f74c-11ea-8847-7ccfd18f17ca.png" alt="image" /></a></p>
+</code></p>
 <p>Similar to footnotes and additional codes, certificates consist of a type code and then a specific code when joined together form the unique code of the certificate.  For example, the footnote <code>C656</code> is constructed of a type code <code>C</code> and a specific certificate code <code>656</code> – the entire certificate is known as <code>C656</code>.</p>
 <p>Certificate type codes are always 1 digit or character in length from any uppercase alphanumeric character.</p>
 <p>Historically, the alphabetical certificate type codes have been used for EU-wide certificates: the numeric certificate type codes are used for national measures.</p>
