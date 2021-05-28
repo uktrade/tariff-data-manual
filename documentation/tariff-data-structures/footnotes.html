@@ -225,7 +225,12 @@
 <ul>
 <li>
 <a href="#structure-of-footnotes-and-footnote-types">Structure of footnotes and footnote types</a>
+<ul>
+<li>
+<a href="#xml-structure">XML Structure</a>
 </li>
+</ul>
+<p></li>
 <li>
 <a href="#overview-of-existing-footnote-types">Overview of existing footnote types</a>
 </li>
@@ -233,7 +238,7 @@
 <a href="#footnote-type-application-codes">Footnote type application codes</a>
 </li>
 </ul>
-<p></li>
+</li>
 <li>
 <a href="#linking-tables-for-footnotes">Linking tables for footnotes</a>
 <ul>
@@ -251,7 +256,7 @@
 For example, the footnote <code>CD491</code> is constructed of a type <code>CD</code> and a specific footnote ID <code>491</code> - the entire footnote is known as <code>CD491</code>.
 The numeric IDs from <code>001</code> to <code>999</code> can be reused across multiple footnote type IDs.  Footnote IDs may be either 3 or 5-digits long. 
 Footnote type IDs are either two alphabetical characters (that were set by EU) or two numeric characters set by the UK.</p>
-<div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>&lt;xs:simpleType name="FootnoteId"&gt;
+<h4 id="xml-structure">XML Structure</h4><div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>&lt;xs:simpleType name="FootnoteId"&gt;
   &lt;xs:restriction base="xs:string"&gt;
     &lt;xs:pattern value="[0-9]{5}|[0-9]{3}"/&gt;
   &lt;/xs:restriction&gt;
