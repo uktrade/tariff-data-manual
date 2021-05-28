@@ -268,12 +268,12 @@
             &lt;xs:length value="3"/&gt;
             &lt;xs:pattern value="[A-Z0-9][A-Z0-9][A-Z0-9]"/&gt;
     &lt;/xs:restriction&gt;
-    &lt;/xs:simpleType&gt;
-    &lt;xs:simpleType name="CertificateTypeCode"&gt;
-        &lt;xs:restriction base="xs:string"&gt;
+&lt;/xs:simpleType&gt;
+&lt;xs:simpleType name="CertificateTypeCode"&gt;
+    &lt;xs:restriction base="xs:string"&gt;
             &lt;xs:length value="1"/&gt;
             &lt;xs:pattern value="[A-Z0-9]"/&gt;
-        &lt;/xs:restriction&gt;
+    &lt;/xs:restriction&gt;
 &lt;/xs:simpleType&gt;
 </code></pre></div><p>Similar to footnotes and additional codes, certificates consist of a type code and then a specific code when joined together form the unique code of the certificate.  For example, the footnote <code>C656</code> is constructed of a type code <code>C</code> and a specific certificate code <code>656</code> – the entire certificate is known as <code>C656</code>.</p>
 <p>Certificate type codes are always 1 digit or character in length from any uppercase alphanumeric character.</p>
