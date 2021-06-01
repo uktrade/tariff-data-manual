@@ -239,9 +239,6 @@
 <a href="#relationship-of-quotas-to-geographical-areas">Relationship of quotas to geographical areas</a>
 <ul>
 <li>
-<a href="#key-user-needs-geographical-area">Key user needs – geographical area</a>
-</li>
-<li>
 <a href="#key-business-processing-rules-geographical-areas">Key business processing rules – geographical areas</a>
 </li>
 </ul>
@@ -251,10 +248,13 @@
 <blockquote>
 <p>All measures must be assigned to a geographical area (the area to which a measure applies) and a geographical area may contain a single or multiple countries.</p>
 </blockquote>
-<h2 id="introduction-to-geographical-areas">Introduction to geographical areas</h2><p>All measures must be assigned to a single geographical area entity. This entity, derived from the <code>geographical_areas</code> view may itself be:
-* a single country (like Namibia)
-* a group of countries (like Cariforum, a Caribbean trading bloc)
-* a region – a country that has yet to be fully incorporated, like Kosovo, which remains partially recognised.</p>
+<h2 id="introduction-to-geographical-areas">Introduction to geographical areas</h2><p>All measures must be assigned to a single geographical area entity. This entity, derived from the <code>geographical_areas</code> view may itself be:</p>
+
+<ul>
+<li>a single country (like Namibia)</li>
+<li>a group of countries (like Cariforum, a Caribbean trading bloc)</li>
+<li>a region – a country that has yet to be fully incorporated, like Kosovo, which remains partially recognised.</li>
+</ul>
 <p>A quota may be assigned to multiple geographical area entities.  A geographical area that is defined as being a country group will have one or more countries (or regions) designated as members of that country group.</p>
 <h2 id="identifying-geographical-areas">Identifying geographical areas</h2><p>An identifier for a country group geographical_area_id is structured depending on the type of area.</p>
 <p>The geographical code field dictates what type of geographical area is involved:</p>
@@ -293,79 +293,10 @@ Country groups could also be created to apply specific regulatory controls.</p>
 <li>The relationship of geographical areas to quotas needs to be reflected in both the measures and quotas structures (except for licensed quotas).</li>
 <li>Therefore both the relationship of quotas to their origins and measures to the related geographical areas needs to be managed and synchronised in the data creation.</li>
 </ul>
-<h3 id="key-user-needs-geographical-area">Key user needs – geographical area</h3><div class="table-container">
+<h3 id="key-business-processing-rules-geographical-areas">Key business processing rules – geographical areas</h3><div class="table-container">
         <table>
           <tr>
-<th>As a …</th>
-<th>I want to &hellip;</th>
-<th>So that …</th>
-<th>Notes</th>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>create a new geographical area of type country or region</td>
-<td>I can assign duties or regulatory measures specifically to that country or region</td>
-<td>MUST HAVE This will be an extremely infrequent activity; very few new countries spring up. Fields required: -Start date -Geographical area ID -Description -Area code (0 or 2)</td>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>create a new geographical area of type ‘country group’</td>
-<td>I can implement measures or quotas against more than one country via the same action</td>
-<td>MUST HAVE Expected to be required up to 10 times a year (max) Fields required: -Start date -Geographical area ID -Description -Area code (1)</td>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>update the description of a country group or country or region</td>
-<td>the description best reflects the current status of that country</td>
-<td>MUST HAVE Countries change name vey irregularly; in the outset, there are c. 40 changes required for countries whose descriptions are not ISO-compliant. After that, countries change name no more than c. one instance per year Fields required: -Start date -Description</td>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>add a member country or region to a country group from a given start date</td>
-<td>the country group can best reflect the policy requirement</td>
-<td>MUST HAVE</td>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>terminate a country or region’s membership of a country group</td>
-<td>I won’t accidentally assign a retired/incorrect membership.</td>
-<td>SHOULD HAVE This id a rare scenario to happen. Can also use end-dates to achieve the same outcome.</td>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>assign measure(s) to a geographical area of any of the given types</td>
-<td>Only the correct county/region will be affected.</td>
-<td>SHOULD HAVE This can be done through the measure creation initially.</td>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>exclude one or more countries from a measure, where that measure is assigned to a group of countries</td>
-<td>Only the correct county will be affected.</td>
-<td>MUST HAVE</td>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>assign quota order number(s) to a geographical area of any of the given types</td>
-<td>Only the correct quota order number(s) will be affected.</td>
-<td>SHOULD HAVE This can be done through the quota creation initially.</td>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>exclude one or more countries from a quota (order number), where that measure is assigned to a group of countries</td>
-<td>Only the correct county will be affected.</td>
-<td>SHOULD HAVE This can be done through the quota creation initially.</td>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>have a workflow process</td>
-<td>All certificate changes can be validated and approved before being sent to CDS.</td>
-<td>Must Have</td>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>have the system validate relevant business rules accordingly</td>
-<td>It won’t cause errors when validated in CDS.</td>
-<td>Should Have</td>
-</tr><tr>
-<td>Tariff Manager</td>
-<td>have a search filter</td>
-<td>I can find the geographical areas I need quickly.</td>
-<td>Must Have</td>
-</tr>
-        </table>
-      </div><h3 id="key-business-processing-rules-geographical-areas">Key business processing rules – geographical areas</h3><div class="table-container">
-        <table>
-          <tr>
-<th>#</th>
+<th>ID</th>
 <th>Rule</th>
 <th>Notes</th>
 <th>MoSCoW</th>
