@@ -298,133 +298,81 @@ Country groups could also be created to apply specific regulatory controls.</p>
           <tr>
 <th>ID</th>
 <th>Rule</th>
-<th>Notes</th>
-<th>MoSCoW</th>
 </tr><tr>
 <td>GA1</td>
 <td>The combination geographical area id + validity start date must be unique.</td>
-<td>Required</td>
-<td>Must Have - While it is theoretically possible for there to be two areas with the same ID, and different start dates it has never happened. This rule should nonetheless be checked on the creation and update of a country group</td>
 </tr><tr>
 <td>GA2</td>
 <td>The start date must be less than or equal to the end date.</td>
-<td>Required</td>
-<td>Must Have</td>
 </tr><tr>
 <td>GA3</td>
 <td>At least one description record is mandatory. The start date of the first description period must be equal to the start date of the geographical area. Two descriptions may not have the same start date. The start date of the description must be less than or equal to the end date of the geographical area.</td>
-<td>Required</td>
-<td>Must Have - As a ‘type 2’ data object where the description can change over time (e.g. Western Samoa), the geographical_area object cannot exist without at least 1 description record &amp; equivalent period record that starts on the same day as the geographical area record.</td>
 </tr><tr>
 <td>GA4</td>
 <td>The referenced parent geographical area group must be an existing geographical area with area code = 1 (geographical area group).</td>
-<td>Not required</td>
-<td>Won’t Have - The simplest and best way to deal with any business rules regarding parent geographical areas is to not set them up: TAP should set this field to null for all new geographical areas – the field is redundant, but still has business rules associated with it – to manage memberships, use the geographical_area_memberships many to many table.</td>
 </tr><tr>
 <td>GA5</td>
 <td>If a geographical area has a parent geographical area group then the validity period of the parent geographical area group must span the validity period of the geographical area.</td>
-<td>Not required</td>
-<td>Won’t Have - As above</td>
 </tr><tr>
 <td>Relationship with measures</td>
-<td></td>
-<td></td>
 <td></td>
 </tr><tr>
 <td>GA6</td>
 <td>Loops in the parent relation between geographical areas and parent geographical area groups are not allowed. If a geographical area A is a parent geographical area group of B then B cannot be a parent geographical area group of A (loops can also exist on more than two levels, e.g. level 3; If A is a parent of B and B is a parent of C then C cannot be a parent of A).</td>
-<td>Not required</td>
-<td>Won’t Have - As above</td>
 </tr><tr>
 <td>GA7</td>
 <td>The validity period of geographical area must not overlap any other geographical area with the same geographical area id.</td>
-<td>Required This should be handled at the same time as GA1 (above)</td>
-<td>Won’t Have</td>
 </tr><tr>
 <td>GA10</td>
 <td>When a geographical area is referenced in a measure then the validity period of the geographical area must span the validity period of the measure.</td>
-<td>Required</td>
-<td>Must Have - Unless explicitly required, a geographical area should be left open-ended to avoid this error – there is rarely a need to terminate a country group, especially as there is no public-facing aspect to this: however, in certain cases, e.g. a regularly refreshed pseudo-group (like used for steel safeguards) or countries whose borders have shifted as a result of wars (Serbia and Montenegro), this is still required. It is vital however that end dates are applied sparingly.</td>
 </tr><tr>
 <td>GA11</td>
 <td>If a geographical area is referenced as an excluded geographical area in a measure then the membership period of the (excluded) geographical area must span the validity period of the measure.</td>
-<td>Required</td>
-<td>Must Have - As above – this is typically avoided by NOT end-dating geographical areas</td>
 </tr><tr>
 <td>Relation with geographical area membership</td>
-<td></td>
-<td></td>
 <td></td>
 </tr><tr>
 <td>GA12</td>
 <td>The referenced geographical area id (member) must exist.</td>
-<td>Required</td>
-<td>Must Have</td>
 </tr><tr>
 <td>GA13</td>
 <td>The referenced geographical area id (member) can only be linked to a country or region (area code = 0 or 2).</td>
-<td>Required</td>
-<td>Must Have</td>
 </tr><tr>
 <td>GA14</td>
 <td>The referenced geographical area group id must exist.</td>
-<td>Required</td>
-<td>Must Have</td>
 </tr><tr>
 <td>GA15</td>
 <td>The membership start date must be less than or equal to the membership end date.</td>
-<td>Required</td>
-<td>Must Have</td>
 </tr><tr>
 <td>GA16</td>
 <td>The validity period of the geographical area group must span all membership periods of its members.</td>
-<td>Required</td>
-<td>Must Have</td>
 </tr><tr>
 <td>GA17</td>
 <td>The membership period of a geographical area (member) must be within (inclusive) the validity period of the geographical area group (geographical area’s start and end date).</td>
-<td>Required</td>
-<td>Must Have</td>
 </tr><tr>
 <td>GA18</td>
 <td>When a geographical area is more than once member of the same group then there may be no overlap in their membership periods.</td>
-<td>Required</td>
-<td>Must Have</td>
 </tr><tr>
 <td>GA19</td>
 <td>If the associated geographical area group has a parent geographical area group then all the members of the geographical area group must also be members of the parent geographical area group.</td>
-<td>Required</td>
-<td>Must Have - But avoid creating parent groups, or terminating existing parent groups</td>
 </tr><tr>
 <td>GA20</td>
 <td>If the associated geographical area group has a parent geographical area group then the membership period of each member of the parent group must span the membership period of the same geographical area in the geographical area group.</td>
-<td>Required</td>
-<td>Must Have But avoid creating parent groups, or terminating existing parent groups</td>
 </tr><tr>
 <td>Delete a geographical area</td>
 <td></td>
-<td></td>
-<td></td>
 </tr><tr>
 <td>GA21</td>
-<td>If a geographical area is referenced in a measure then it may not be deleted1.</td>
-<td>Required</td>
-<td>Must Have - Though we should never be deleting geographical areas.</td>
+<td>If a geographical area is referenced in a measure then it may not be deleted.</td>
 </tr><tr>
 <td>GA22</td>
 <td>A geographical area cannot be deleted if it is referenced as a parent geographical area group.</td>
-<td>Required</td>
-<td>Must Have</td>
 </tr><tr>
 <td>Delete a geographical area membership</td>
-<td></td>
-<td></td>
 <td></td>
 </tr><tr>
 <td>GA23</td>
 <td>If a geographical area is referenced as an excluded geographical area in a measure, the membership association with the measure geographical area group cannot be deleted.</td>
-<td>Required</td>
-<td>Must Have</td>
 </tr>
         </table>
       </div>
