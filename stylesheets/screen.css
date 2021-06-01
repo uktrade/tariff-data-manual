@@ -3355,7 +3355,7 @@ html.has-search-results-open {
   display: block; }
 
 .govuk-template {
-  overflow-y: hidden; }
+  overflow-y: auto; }
 
 [class^="app-pane"] {
   overflow-x: auto !important; }
