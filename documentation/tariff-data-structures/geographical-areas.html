@@ -258,9 +258,12 @@
 <p>A quota may be assigned to multiple geographical area entities.  A geographical area that is defined as being a country group will have one or more countries (or regions) designated as members of that country group.</p>
 <h2 id="identifying-geographical-areas">Identifying geographical areas</h2><p>An identifier for a country group geographical_area_id is structured depending on the type of area.</p>
 <p>The geographical code field dictates what type of geographical area is involved:</p>
-<p>0 Country
-1 Country group
-2 Region</p>
+
+<ul>
+<li>0 Country</li>
+<li>1 Country group</li>
+<li>2 Region</li>
+</ul>
 <p>For all countries and regions, the code is a 2-digit upper-case alphabetical string.
 For countries, this is based on the <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">international standard ISO_3166-1</a></p>
 <p>For regions (unincorporated states) the code is typically a 2-digit string beginning with X, followed by the first letter of the country.  For country groups, the code is an alpha-numeric string of 4-digits.</p>
