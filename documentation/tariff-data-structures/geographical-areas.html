@@ -256,7 +256,7 @@
 <li>a region – a country that has yet to be fully incorporated, like Kosovo, which remains partially recognised.</li>
 </ul>
 <p>A quota may be assigned to multiple geographical area entities.  A geographical area that is defined as being a country group will have one or more countries (or regions) designated as members of that country group.</p>
-<h2 id="identifying-geographical-areas">Identifying geographical areas</h2><p>An identifier for a country group geographical_area_id is structured depending on the type of area.</p>
+<h2 id="identifying-geographical-areas">Identifying geographical areas</h2><p>An identifier for a country group <code>geographical_area_id</code> is structured depending on the type of area.</p>
 <p>The geographical code field dictates what type of geographical area is involved:</p>
 
 <ul>
@@ -267,7 +267,7 @@
 <p>For all countries and regions, the code is a 2-digit upper-case alphabetical string.
 For countries, this is based on the <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">international standard ISO_3166-1</a></p>
 <p>For regions (unincorporated states) the code is typically a 2-digit string beginning with X, followed by the first letter of the country.  For country groups, the code is an alpha-numeric string of 4-digits.</p>
-<p>For country groups set up by the EU, these 4-digit strings are always numeric, for example 1001 = worldwide (Erga Omnes)</p>
+<p>For country groups set up by the EU, these 4-digit strings are always numeric, for example 1001 = Worldwide (Erga Omnes)</p>
 <p>Nationally setup groups are alpha-numeric, for example F006 (Phytosanitary certificates)</p>
 <h2 id="country-groups">Country groups</h2><p>The last example on the previous page (F006 Phytosanitary certificates) shows that the country groups do not have to align to a globally understood trading entity like EU (1011), CARIFORUM (1033) or GSP LDC (2005).
 The fundamental of Taric and TAP is to produce measures, which can be connected to just one single geographical area, it is simpler to create a group of countries and apply the measure to that group and not the individual countries.
@@ -300,7 +300,7 @@ Country groups could also be created to apply specific regulatory controls.</p>
 <th>Rule</th>
 </tr><tr>
 <td>GA1</td>
-<td>The combination geographical area id + validity start date must be unique.</td>
+<td>The combination geographical area ID plus the validity start date must be unique.</td>
 </tr><tr>
 <td>GA2</td>
 <td>The start date must be less than or equal to the end date.</td>
