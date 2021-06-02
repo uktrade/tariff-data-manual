@@ -266,15 +266,15 @@
 </ul>
 <p>For all countries and regions, the code is a 2-digit upper-case alphabetical string.
 For countries, this is based on the <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">international standard ISO_3166-1</a></p>
-<p>For regions (unincorporated states) the code is typically a 2-digit string beginning with X, followed by the first letter of the country.  For country groups, the code is an alpha-numeric string of 4-digits.</p>
-<p>For country groups set up by the EU, these 4-digit strings are always numeric, for example 1001 = Worldwide (Erga Omnes)</p>
-<p>Nationally setup groups are alpha-numeric, for example F006 (Phytosanitary certificates)</p>
-<h2 id="country-groups">Country groups</h2><p>The last example on the previous page (F006 Phytosanitary certificates) shows that the country groups do not have to align to a globally understood trading entity like EU (1011), CARIFORUM (1033) or GSP LDC (2005).
-The fundamental of Taric and TAP is to produce measures, which can be connected to just one single geographical area, it is simpler to create a group of countries and apply the measure to that group and not the individual countries.
+<p>For regions (unincorporated states) the code is typically a 2-digit string beginning with <code>X</code>, followed by the first letter of the country.  For country groups, the code is an alpha-numeric string of 4-digits.</p>
+<p>For country groups set up by the EU, these 4-digit strings are always numeric, for example <code>1001</code> = Worldwide (Erga Omnes)</p>
+<p>Nationally setup groups are alpha-numeric, for example <code>F006</code> (Phytosanitary certificates)</p>
+<h2 id="country-groups">Country groups</h2><p>The previous example (F006 Phytosanitary certificates) shows that the country groups do not have to align to a globally understood trading entity like EU (1011), CARIFORUM (1033) or GSP LDC (2005).
+The fundamental  operation of Taric and TAP is to produce measures, which can be connected to just one single geographical area, it is simpler to create a group of countries and apply the measure to that group and not the individual countries.
 Some geographical areas are created to implement specific elements of trade policy, for example to execute the regulations associated with handloomed products.   A group has been set up to accommodate the countries to which a quota applies for such products – the name of the group is “Silk or cotton handloom products”.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/92506166-eee10b80-f1fc-11ea-9d9a-ef1157fad306.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92506166-eee10b80-f1fc-11ea-9d9a-ef1157fad306.png" alt="" /></a></p>
 <h2 id="geographical-area-membership">Geographical area membership</h2><p>Geographical areas that represent country groups (area code 1) are designed to include member countries.
-A geographical area group can only contain regions or countries (area codes 0 and 2), not other geographical area groups. A geographical area’s membership of a country group has a start date and where required an end date.
+A geographical area group can only contain regions or countries (area codes <code>0</code> and <code>2</code>), not other geographical area groups. A geographical area’s membership of a country group has a start date and where required an end date.
 There are a few  cases where membership of geographical areas change. For example, countries move in and out of Generalised System of Preferences (GSP) tiers from year to year as they progress or decline economically.
 Steel safeguards are assigned to country groups created specifically for the purpose of applying punitive duties against large numbers of countries - these groups tend to change from year to year.
 Country groups could also be created to apply specific regulatory controls.</p>
@@ -282,9 +282,9 @@ Country groups could also be created to apply specific regulatory controls.</p>
 <ul>
 <li>All measures are assigned to precisely one geographical area.</li>
 <li>That area may be a country, region (non-incorporated country) or a group of countries.</li>
-<li>If the geographical area is a country group, then it is possible to exclude (one or more) members of that country group from the measure via inclusion in the measure_excluded_geographical_areas table.</li>
+<li>If the geographical area is a country group, then it is possible to exclude (one or more) members of that country group from the measure via inclusion in the <code>measure_excluded_geographical_areas</code> table.</li>
 <li>The excluded country must be a member of that group.</li>
-<li>Please note: both the excluded_geographical_area and geographical_area_id fields refer to the excluded country, not the group.</li>
+<li>Note: both the <code>excluded_geographical_area</code> and <code>geographical_area_id</code> fields refer to the excluded country, not the group.</li>
 </ul>
 <h2 id="relationship-of-quotas-to-geographical-areas">Relationship of quotas to geographical areas</h2>
 <ul>
