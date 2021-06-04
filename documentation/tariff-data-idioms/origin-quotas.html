@@ -231,8 +231,20 @@
 </li>
 <li>
 <a href="#anatomy-of-an-origin-quota">Anatomy of an origin quota</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#q-presentation-of-an-endorsed-certificate-licence">Q: Presentation of an endorsed certificate/licence</a>
 </li>
 </ul>
+<p></li>
+<li>
+<a href="#worked-example">Worked example</a>
+</li>
+</ul>
+</li>
+</ul></p>
 <p>Origin quotas are preferential quotas that relax the rules of origin for a commodity up to a specified import volume. A certificate condition is often attached to the quota for this purpose, and the rate is the same as the non-quota preference. They are sometimes called <em>derogations</em>.</p>
 <h2 id="example-of-an-origin-quota">Example of an origin quota</h2><p>In the <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:127:1344:1414:EN:PDF">EU-South Korea trade agreement</a>, there is a rule of origin:</p>
 <div class="table-container">
@@ -348,8 +360,176 @@
 <path fill="none" stroke="black" d="M107,-72C118.49,-72 130.83,-72 142.9,-72"/>
 </g>
 </g>
-</svg><p>An origin quota is composed of a quota associated with a number of commodities via measures. The measures each have measure conditions that require the use of a certificate.
-<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
+</svg><p>An origin quota is composed of a quota associated with a number of commodities via measures. The quota is just a normal first-come first-served quota and as usual requires a quota order number beginning 05.</p>
+<p>What is different about an origin quota is that the measures associated with the quota each have a measure condition that require the use of a certificate. The certificate should be of type U (Proof of origin) and should contain text that specifies that part of the trade agreement legal text that mentions the origin quota.</p>
+<p>The condition code for the measure condition is type Q (import due to a special license). The measure conditions are set up as:</p>
+<h4 id="q-presentation-of-an-endorsed-certificate-licence">Q: Presentation of an endorsed certificate/licence</h4><div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">Document code</th>
+<th style="text-align: center">Requirement</th>
+<th style="text-align: center">Action</th>
+</tr><tr>
+<td style="text-align: center">Uxxx</td>
+<td style="text-align: center">Proof of origin containing the following statement in English: &ldquo;Product originating in accordance with Section <em>x</em> of Annex <em>xxx</em>&rdquo;</td>
+<td style="text-align: center">Apply the mentioned duty</td>
+</tr><tr>
+<td style="text-align: center"></td>
+<td style="text-align: center">No document provided</td>
+<td style="text-align: center">Measure not applicable</td>
+</tr>
+        </table>
+      </div><h3 id="worked-example">Worked example</h3><p>In the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/948119/EU-UK_Trade_and_Cooperation_Agreement_24.12.2020.pdf">trade agreement with the EU</a>, an origin quota is made available for tuna loins:</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">Harmonised system classification (2017)</th>
+<th style="text-align: center">Product description</th>
+<th style="text-align: center">Alternative product-specific rule</th>
+<th style="text-align: center">Annual quota for exports from the Union to the United Kingdom (net weight)</th>
+<th style="text-align: center">Annual quota for exports from the United Kingdom to the Union (net weight)</th>
+</tr><tr>
+<td style="text-align: center">1604.14</td>
+<td style="text-align: center">Prepared   or   preserved   tunas, skipjack and bonito (Sarda spp.), whole or in pieces (excl. minced)</td>
+<td style="text-align: center">CC</td>
+<td style="text-align: center">3,000 tonnes</td>
+<td style="text-align: center">3,000 tonnes</td>
+</tr><tr>
+<td style="text-align: center">1604.20</td>
+<td style="text-align: center">Other prepared or preserved fish</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: center"></td>
+<td style="text-align: center">Of tuna, skipjack or other fish of the    genus    Euthynnus    (excl. whole or in pieces)</td>
+<td style="text-align: center">CC</td>
+<td style="text-align: center">4,000 tonnes</td>
+<td style="text-align: center">4,000 tonnes</td>
+</tr><tr>
+<td style="text-align: center"></td>
+<td style="text-align: center">Of other fish</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+</tr>
+        </table>
+      </div><p>This results in the following tariff data objects:</p>
+<svg width="1103pt" height="292pt"
+ viewBox="0.00 0.00 1103.00 292.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 288)">
+<title>EU Tuna Origin quota anatomy</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-288 1099,-288 1099,4 -4,4"/>
+<!-- Quota -->
+<g id="node1" class="node">
+<title>Quota</title>
+<polygon fill="none" stroke="black" points="538.5,-192 481.5,-192 481.5,-156 538.5,-156 538.5,-192"/>
+<text text-anchor="start" x="491" y="-176.8" font-family="Arial" font-size="14.00">Quota</text>
+<text text-anchor="start" x="489.5" y="-164.4" font-family="Arial" font-size="12.00">059161</text>
+</g>
+<!-- QuotaDefinition -->
+<g id="node2" class="node">
+<title>QuotaDefinition</title>
+<polygon fill="none" stroke="black" points="1095,-226 883,-226 883,-180 1095,-180 1095,-226"/>
+<text text-anchor="start" x="941" y="-211.8" font-family="Arial" font-size="14.00">Quota definition</text>
+<text text-anchor="start" x="938" y="-199.4" font-family="Arial" font-size="12.00">Volume: 3000 TNE</text>
+<text text-anchor="start" x="891" y="-187.4" font-family="Arial" font-size="12.00">Dates: 1st Jan 2021 – 31st Dec 2022</text>
+</g>
+<!-- Quota&#45;&#45;QuotaDefinition -->
+<g id="edge1" class="edge">
+<title>Quota&#45;&#45;QuotaDefinition</title>
+<path fill="none" stroke="black" d="M538.71,-175.68C604.32,-179.67 772,-189.87 882.92,-196.61"/>
+</g>
+<!-- GeographicalArea -->
+<g id="node8" class="node">
+<title>GeographicalArea</title>
+<polygon fill="none" stroke="black" points="1060,-162 918,-162 918,-126 1060,-126 1060,-162"/>
+<text text-anchor="start" x="933" y="-146.8" font-family="Arial" font-size="14.00">Geographical area</text>
+<text text-anchor="start" x="926" y="-134.4" font-family="Arial" font-size="12.00">European Union (1013)</text>
+</g>
+<!-- Quota&#45;&#45;GeographicalArea -->
+<g id="edge10" class="edge">
+<title>Quota&#45;&#45;GeographicalArea</title>
+<path fill="none" stroke="black" d="M538.71,-172.26C611.68,-167.67 810.88,-155.14 917.86,-148.41"/>
+</g>
+<!-- Measure1 -->
+<g id="node3" class="node">
+<title>Measure1</title>
+<polygon fill="none" stroke="black" points="137,-215 0,-215 0,-179 137,-179 137,-215"/>
+<text text-anchor="start" x="41.5" y="-199.8" font-family="Arial" font-size="14.00">Measure</text>
+<text text-anchor="start" x="8" y="-187.4" font-family="Arial" font-size="12.00">Type: Pref. quota (143)</text>
+</g>
+<!-- Measure1&#45;&#45;Quota -->
+<g id="edge2" class="edge">
+<title>Measure1&#45;&#45;Quota</title>
+<path fill="none" stroke="black" d="M137.21,-193.46C235.45,-188.32 413.21,-179.01 481.37,-175.45"/>
+</g>
+<!-- Commodity1 -->
+<g id="node5" class="node">
+<title>Commodity1</title>
+<polygon fill="none" stroke="black" points="556.5,-284 463.5,-284 463.5,-248 556.5,-248 556.5,-284"/>
+<text text-anchor="start" x="475" y="-268.8" font-family="Arial" font-size="14.00">Commodity</text>
+<text text-anchor="start" x="471.5" y="-256.4" font-family="Arial" font-size="12.00">1604 14 00 00</text>
+</g>
+<!-- Measure1&#45;&#45;Commodity1 -->
+<g id="edge4" class="edge">
+<title>Measure1&#45;&#45;Commodity1</title>
+<path fill="none" stroke="black" d="M112.35,-215.02C130.72,-222.03 152.6,-229.46 173,-234 275.09,-256.74 398.17,-263.33 463.33,-265.23"/>
+</g>
+<!-- Certificate -->
+<g id="node7" class="node">
+<title>Certificate</title>
+<polygon fill="none" stroke="black" points="847,-138 173,-138 173,-92 847,-92 847,-138"/>
+<text text-anchor="start" x="479.5" y="-123.8" font-family="Arial" font-size="14.00">Certificate</text>
+<text text-anchor="start" x="495" y="-111.4" font-family="Arial" font-size="12.00">U178</text>
+<text text-anchor="start" x="181" y="-99.4" font-family="Arial" font-size="12.00">Proof of origin containing the following statement in English: &ldquo;Product originating in accordance with Section 1 of Annex II&#45;A&rdquo;</text>
+</g>
+<!-- Measure1&#45;&#45;Certificate -->
+<g id="edge6" class="edge">
+<title>Measure1&#45;&#45;Certificate</title>
+<path fill="none" stroke="black" d="M99.62,-178.91C119.69,-167.76 147.05,-154.25 173,-147 184.85,-143.69 197.02,-140.7 209.37,-138.02"/>
+</g>
+<!-- Measure1&#45;&#45;GeographicalArea -->
+<g id="edge8" class="edge">
+<title>Measure1&#45;&#45;GeographicalArea</title>
+<path fill="none" stroke="black" d="M137.29,-203.28C301.71,-217.58 717.7,-247.81 847,-201 866.58,-193.91 864.46,-180.49 883,-171 893.81,-165.47 905.83,-161.01 917.78,-157.43"/>
+</g>
+<!-- Measure2 -->
+<g id="node4" class="node">
+<title>Measure2</title>
+<polygon fill="none" stroke="black" points="137,-108 0,-108 0,-72 137,-72 137,-108"/>
+<text text-anchor="start" x="41.5" y="-92.8" font-family="Arial" font-size="14.00">Measure</text>
+<text text-anchor="start" x="8" y="-80.4" font-family="Arial" font-size="12.00">Type: Pref. quota (143)</text>
+</g>
+<!-- Measure2&#45;&#45;Quota -->
+<g id="edge3" class="edge">
+<title>Measure2&#45;&#45;Quota</title>
+<path fill="none" stroke="black" d="M94.93,-108.03C115.09,-121.29 144.51,-138.44 173,-147 283.41,-180.16 422.87,-178.28 481.28,-175.64"/>
+</g>
+<!-- Commodity2 -->
+<g id="node6" class="node">
+<title>Commodity2</title>
+<polygon fill="none" stroke="black" points="556.5,-36 463.5,-36 463.5,0 556.5,0 556.5,-36"/>
+<text text-anchor="start" x="475" y="-20.8" font-family="Arial" font-size="14.00">Commodity</text>
+<text text-anchor="start" x="471.5" y="-8.4" font-family="Arial" font-size="12.00">1604 20 70 00</text>
+</g>
+<!-- Measure2&#45;&#45;Commodity2 -->
+<g id="edge5" class="edge">
+<title>Measure2&#45;&#45;Commodity2</title>
+<path fill="none" stroke="black" d="M108.99,-71.8C127.96,-63.83 151.25,-55.14 173,-50 274.8,-25.96 397.99,-19.89 463.25,-18.41"/>
+</g>
+<!-- Measure2&#45;&#45;Certificate -->
+<g id="edge7" class="edge">
+<title>Measure2&#45;&#45;Certificate</title>
+<path fill="none" stroke="black" d="M137.21,-93.85C148.16,-94.47 160.11,-95.15 172.78,-95.87"/>
+</g>
+<!-- Measure2&#45;&#45;GeographicalArea -->
+<g id="edge9" class="edge">
+<title>Measure2&#45;&#45;GeographicalArea</title>
+<path fill="none" stroke="black" d="M137.25,-79.87C273.45,-61.59 589.4,-29.67 847,-83 886.57,-91.19 928.69,-111.05 956.48,-125.9"/>
+</g>
+</g>
+</svg><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
