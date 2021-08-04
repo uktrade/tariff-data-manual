@@ -21,10 +21,14 @@ TOP_LEVEL_HEADER = /^#\s+.*$/
 FRONT_MATTER = /---\n(.*)\n---\n/m
 
 def patch relative_path, patch_filename
-  full_path = Gem.find_files(relative_path).first
-  unless full_path.nil?
-    sh 'patch', full_path, '-i', patch_filename
-    full_path
+  begin
+    full_path = Gem.find_files(relative_path).first
+    unless full_path.nil?
+      sh 'patch', '--forward', full_path, '-i', patch_filename
+      full_path
+    end
+  rescue
+    rake_output_message "Patch #{patch_filename} not applied?"
   end
 end
 
@@ -35,6 +39,8 @@ task pages: OUTPUT_FILES
 task images: OUTPUT_IMAGES
 
 task :patches do
+  patch "assets/javascripts/_modules/collapsible-navigation.js", "gem-patches/collapsible-navigation.js.patch"
+  patch "assets/stylesheets/modules/_collapsible.scss", "gem-patches/collapsible.scss.patch"
   full_path = patch("assets/javascripts/_modules/search.js", "gem-patches/search.js.patch")
   unless full_path.nil?
     mv full_path, full_path + ".erb"

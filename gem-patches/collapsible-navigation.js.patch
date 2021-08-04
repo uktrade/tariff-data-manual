@@ -1,0 +1,27 @@
+--- /usr/local/bundle/gems/govuk_tech_docs-2.0.12/lib/assets/javascripts/_modules/collapsible-navigation.js
++++ /usr/local/bundle/gems/govuk_tech_docs-2.0.12/lib/assets/javascripts/_modules/collapsible-navigation.js
+@@ -9,7 +9,7 @@
+     this.start = function ($element) {
+       $contentPane = $('.app-pane__content')
+       $nav = $element
+-      $topLevelItems = $nav.find('> ul > li')
++      $topLevelItems = $nav.find('> ul > li, > ul > li > ul > li')
+ 
+       // Attach collapsible heading functionality,on mobile and desktop
+       collapsibleHeadings()
+@@ -40,6 +40,7 @@
+           .after('<button class="collapsible__toggle" aria-controls="' + arrayOfIds.join(' ') + '"><span class="collapsible__toggle-label">Expand ' + $heading.text() + '</span><span class="collapsible__toggle-icon" aria-hidden="true"></button>')
+         $topLevelItem.on('click', '.collapsible__toggle', function (e) {
+           e.preventDefault()
++          e.stopPropagation()
+           var $parent = $(this).parent()
+           toggleHeading($parent)
+         })
+@@ -83,6 +84,7 @@
+       }
+       if ($activeElement && !$activeElement.hasClass('is-open')) {
+         toggleHeading($activeElement)
++        toggleHeading($activeElement.parents('li.collapsible'))
+       }
+     }
+   }

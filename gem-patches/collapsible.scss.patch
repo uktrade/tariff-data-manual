@@ -1,0 +1,20 @@
+--- /usr/local/bundle/gems/govuk_tech_docs-2.0.12/lib/assets/stylesheets/modules/_collapsible.scss
++++ /usr/local/bundle/gems/govuk_tech_docs-2.0.12/lib/assets/stylesheets/modules/_collapsible.scss
+@@ -7,7 +7,7 @@
+ }
+ .collapsible__body {
+   display: none;
+-  .collapsible.is-open & {
++  .collapsible.is-open > & {
+     display: block
+   }
+ }
+@@ -49,7 +49,7 @@
+     height: 10px;
+     margin-top: 10px;
+   }
+-  .collapsible.is-open &::after {
++  .collapsible.is-open > .collapsible__toggle > &::after {
+     transform: rotate(315deg);
+     margin-top: 18px;
+   }

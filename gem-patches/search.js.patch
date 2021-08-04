@@ -1,3 +1,4 @@
+--- /usr/local/bundle/gems/govuk_tech_docs-2.0.12/lib/assets/javascripts/_modules/search.js
 +++ /usr/local/bundle/gems/govuk_tech_docs-2.0.12/lib/assets/javascripts/_modules/search.js
 @@ -34,7 +34,7 @@
      this.downloadSearchIndex = function downloadSearchIndex () {
