@@ -3289,7 +3289,7 @@ html.has-search-results-open {
 
 .collapsible__body {
   display: none; }
-  .collapsible.is-open .collapsible__body {
+  .collapsible.is-open > .collapsible__body {
     display: block; }
 
 .collapsible__heading,
@@ -3328,7 +3328,7 @@ html.has-search-results-open {
     width: 10px;
     height: 10px;
     margin-top: 10px; }
-  .collapsible.is-open .collapsible__toggle-icon::after {
+  .collapsible.is-open > .collapsible__toggle > .collapsible__toggle-icon::after {
     transform: rotate(315deg);
     margin-top: 18px; }
 
