@@ -3363,5 +3363,8 @@ html.has-search-results-open {
 main svg {
   max-width: 100%; }
 
+p:empty {
+  display: none; }
+
 
 
