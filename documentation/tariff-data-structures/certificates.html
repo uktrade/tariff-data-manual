@@ -616,7 +616,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-component-data-structures"><span>Measure component data structures</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -744,7 +744,7 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificates"><span>Certificates</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#introduction-to-certificates"><span>Introduction to certificates</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#what-certificates-are"><span>What certificates are</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#structure-of-certificates-and-certificate-types"><span>Structure of certificates and certificate types</span></a>
@@ -753,7 +753,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#certificate-type-codes"><span>Certificate type codes</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#business-rules-certificate-types-and-certificates"><span>Business rules - Certificate types and Certificates</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/certificates.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -919,11 +919,8 @@
             <h1 id="certificates">Certificates</h1>
 <ul>
 <li>
-<a href="#introduction-to-certificates">Introduction to certificates</a>
+<a href="#what-certificates-are">What certificates are</a>
 <ul>
-<li>
-<a href="#what-are-certificates">What are certificates?</a>
-</li>
 <li>
 <a href="#what-certificates-are-not">What certificates are not</a>
 </li>
@@ -941,7 +938,7 @@
 <a href="#certificate-type-codes">Certificate type codes</a>
 </li>
 <li>
-<a href="#business-rules-certificate-types-and-certificates">Business rules - Certificate types and Certificates</a>
+<a href="#business-rules">Business rules</a>
 <ul>
 <li>
 <a href="#certificate-types">Certificate types</a>
@@ -956,7 +953,7 @@
 <blockquote>
 <p>Certificates are associated to measures through measure conditions. This term refers to the certificates, licences, and non-paper conditions that are stored in certificate tables and are required to bring goods through customs.</p>
 </blockquote>
-<h2 id="introduction-to-certificates">Introduction to certificates</h2><h3 id="what-are-certificates">What are certificates?</h3><p>The certificates tables store all the certificates, licences and other conditions that are referenced through measure conditions to make the import or export of a good conditional on the provision of a document, declaration or exemption.  The ‘certificate’ is usually a physical or digital document (for example a licence or official certificate), but it can also be a non-document condition. A good example of a ‘non-document’ condition is:</p>
+<h2 id="what-certificates-are">What certificates are</h2><p>The certificates tables store all the certificates, licences and other conditions that are referenced through measure conditions to make the import or export of a good conditional on the provision of a document, declaration or exemption.  The ‘certificate’ is usually a physical or digital document (for example a licence or official certificate), but it can also be a non-document condition. A good example of a ‘non-document’ condition is:</p>
 <p><code>Y037 - Goods exempted from the prohibition – biathlon equipment</code></p>
 <p>Here the condition references a property of the good being imported, and not an accompanying document. These rare cases are typically linked to measures using the <code>measure_condition_code</code> “Y”.   Refer to <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions">measure conditions</a> for more detail.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93202924-71ad1d80-f74b-11ea-903d-0a4fc11b0b49.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93202924-71ad1d80-f74b-11ea-903d-0a4fc11b0b49.png" alt="image" /></a></p>
@@ -1034,7 +1031,7 @@
         </table>
       </div><p>Two of the most frequently used code types are <code>C</code> (other certificates) and <code>Y</code> (particular provisions) – these are catch-all types for the large proportion of condition needs.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93204283-ba65d600-f74d-11ea-8f65-2e344314b41e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93204283-ba65d600-f74d-11ea-8f65-2e344314b41e.png" alt="image" /></a></p>
-<h2 id="business-rules-certificate-types-and-certificates">Business rules - Certificate types and Certificates</h2><h3 id="certificate-types">Certificate types</h3><div class="table-container">
+<h2 id="business-rules">Business rules</h2><h3 id="certificate-types">Certificate types</h3><div class="table-container">
         <table>
           <tr>
 <th>ID</th>
@@ -1054,7 +1051,7 @@
 <td>Low priority - there   will be few requirements to modify certificate types.</td>
 </tr>
         </table>
-      </div><h3 id="business-rules-certificate-types-and-certificates-certificates">Certificates</h3><div class="table-container">
+      </div><h3 id="business-rules-certificates">Certificates</h3><div class="table-container">
         <table>
           <tr>
 <th>ID</th>
