@@ -438,7 +438,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-component-data-structures"><span>Measure component data structures</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -470,6 +470,13 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
     <ul>
       <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#how-quotas-work"><span>How quotas work</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#defining-quotas"><span>Defining quotas</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -741,8 +748,16 @@
             <h1 id="quotas">Quotas</h1>
 <ul>
 <li>
-<a href="#introduction-to-quotas">Introduction to quotas</a>
+<a href="#how-quotas-work">How quotas work</a>
+<ul>
+<li>
+<a href="#case-study-importing-lamb-to-the-uk">Case study: importing lamb to the UK</a>
 </li>
+</ul>
+<p></li>
+<li>
+<a href="#defining-quotas">Defining quotas</a>
+<ul>
 <li>
 <a href="#first-come-first-served-quotas">First Come, First Served Quotas</a>
 </li>
@@ -752,62 +767,32 @@
 <li>
 <a href="#licensed-quotas">Licensed quotas</a>
 </li>
-<li>
-<a href="#quota-user-needs">Quota user needs</a>
+</ul>
 </li>
 <li>
-<a href="#quota-business-rules">Quota business rules</a>
+<a href="#business-rules">Business rules</a>
 </li>
-</ul>
-
-<blockquote>
-<p>A quota is used to control quantities of particular goods being imported.</p>
-</blockquote>
-<h3 id="introduction-to-quotas">Introduction to quotas</h3>
-<ul>
-<li>A quota is used as a means of controlling the flow of goods into a country in order to create a balance between:
-
-<ul>
-<li>the needs of consumers or manufacturing industries that would use the item as a component or ingredient in producing something else in the importing countries and</li>
-<li>domestic producers of the good, whose livelihood depends on producing and selling a product to domestic customers at full market price.</li>
-</ul></li>
-<li>For example, tomatoes are imported into the European Union from Mediterranean countries and other places with temperate climates in order to satiate the needs of European citizens for tomatoes and sauces containing tomatoes. In Southern Europe, there are tomato growers for whom the overseas suppliers are rivals that threaten their livelihood.</li>
-<li>In the UK, sheep farmers depend on selling their goods to a UK market hungry for lamb and lamb products; but there is not enough lamb in the UK to satisfy our needs, hence the need to import lamb from New Zealand and other countries.</li>
-<li>This is a fine balance that needs to be managed carefully in order to support the needs of the two contrasting needs: the need for the nation to consume and need for domestic suppliers to make a living.</li>
-<li>This is where quotas come in.</li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93907690-91b58180-fcf5-11ea-92a9-6e0b56eb58b4.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93907690-91b58180-fcf5-11ea-92a9-6e0b56eb58b4.png" alt="image" /></a></p>
-<p><strong>Get to know Peter Ungphakorn</strong></p>
-
-<ul>
-<li>Peter Ungphakorn was a senior information officer with the WTO Secretariat until 2015.</li>
-<li>Since then he has moved into journalism, focusing mainly on international trade rules, agreements and institutions and fortunately making his knowledge available to the public via his Trade Beta Blog.</li>
-<li>This blog contains very good, simple explainers (for seven and a half year-olds) on a number of topics, including quotas.</li>
-</ul>
-<p><a href="https://tradebetablog.wordpress.com/2018/09/08/beginners-guide-tariff-quotas/" rel="noopener noreferrer"><img src="https://tradebetablog.wordpress.com/2018/09/08/beginners-guide-tariff-quotas/" alt="https://tradebetablog.wordpress.com/2018/09/08/beginners-guide-tariff-quotas/" /></a></p>
-
-<ul>
-<li>Read above about Tariff Rate Quotas (TRQs) (less so quantitative restrictions)</li>
-<li>See also his blog on Meursing tables which simplifies an incredibly complex subject.</li>
-</ul>
-<p><strong>What is a quota?</strong></p>
-
-<ul>
-<li>A quota allows a certain volume of goods to be imported into a country at a reduced duty rate.</li>
-<li>Once that volume has been imported, then the quota is considered to be exhausted and is no longer available to draw down against.</li>
-<li>At that point, all importers will be forced to import the goods at the full (or less preferential duty rate).</li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93908775-f32a2000-fcf6-11ea-849e-b27e68095ee6.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93908775-f32a2000-fcf6-11ea-849e-b27e68095ee6.png" alt="image" /></a></p>
-<p><strong>What properties does a quota have?</strong></p>
-
-<ul>
-<li>Returning to the lamb quota on the previous screen, clicking on the term “092016” shows more detail of the quota.</li>
-<li>“092016” is the quota order number. If any trader wants to take advantage of the preferential duties associated with a quota, then they need to quote that 6-digit quota order number on their import declaration. A quota1 has properties such as those shown here</li>
-<li>These properties are described on the following pages</li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93908974-2c629000-fcf7-11ea-9b8e-edf2fc383743.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93908974-2c629000-fcf7-11ea-9b8e-edf2fc383743.png" alt="image" /></a></p>
-<p><strong>Defining quotas</strong></p>
-<p>There are multiple ways of defining and grouping quotas, all of which will be relevant to the delivery of the next iteration of the Tariff Application:</p>
+</ul></p>
+<p>Quotas help regulate the volume of trade between countries.</p>
+<p>A quota limits the number or value of certain goods that a country can import during a specific period.</p>
+<p>In theory, this protects domestic production by discouraging imports.</p>
+<h2 id="how-quotas-work">How quotas work</h2><p>A quota allows a certain volume of goods to be imported into a country at a reduced duty rate.</p>
+<p>Once that volume has been imported, then the quota is considered to be exhausted and is no longer available to draw down against.</p>
+<p>At that point, all importers will be forced to import the goods at the full (or less preferential duty rate).</p>
+<h3 id="case-study-importing-lamb-to-the-uk">Case study: importing lamb to the UK</h3><p>In the UK, sheep farmers sell their goods to the UK market for lamb and lamb products. But there&rsquo;s not enough lamb in the UK to meet demand. So there&rsquo;s a need to import lamb from other countries, such as New Zealand.</p>
+<p>The commodity code 0204100010 is for ‘carcases and half carcasses of domestic lamb, fresh or chilled’.</p>
+<p><img width="1123" alt="Commodity hierarchy for carcases and half carcasses of domestic lamb, fresh or chilled" src="https://user-images.githubusercontent.com/82160410/143475994-1a7edfa5-e008-4d9a-aa26-a17ac6714d8a.png"></p>
+<p>Third country duty (available to all countries) is 12% + £143.00 GBP per 100kg.</p>
+<p><img width="1142" alt="Third country duty for carcases and half carcasses of domestic lamb, fresh or chilled" src="https://user-images.githubusercontent.com/82160410/143476323-b280eaba-1f41-448b-9f91-6abe86f35a23.png"></p>
+<p>There is a non-preferential tariff quota applied to the same commodity code. This allows a certain volume of goods into the UK at 0.00%.</p>
+<p>This is to encourage enough volume to meet demand.</p>
+<p><img width="1128" alt="Non preferential tariff quota for carcases and half carcasses of domestic lamb, fresh or chilled" src="https://user-images.githubusercontent.com/82160410/143476669-65098741-cb0b-4a32-83eb-5de631ed1641.png"></p>
+<p><img width="924" alt="Screen Shot 2021-11-25 at 4 39 11 PM" src="https://user-images.githubusercontent.com/82160410/143480188-bd0714bf-08d4-4ed4-80ae-da6481d80b8b.png"></p>
+<p>The quota order number is 052016.</p>
+<p>The opening balance was 220000.0 Kilogram (kg). The current balance is 1727.2 Kilogram (kg).</p>
+<p>The quota runs from 1 January 2021 to 31 December 2021.</p>
+<p>If any trader wants to take advantage of the preferential duties associated with a quota, they must quote that 6-digit quota order number on their import declaration.</p>
+<h2 id="defining-quotas">Defining quotas</h2><p>There are multiple ways of defining and grouping quotas, all of which will be relevant to the delivery of the next iteration of the Tariff Application:</p>
 
 <ul>
 <li>Administration mechanism:
@@ -840,8 +825,6 @@
 <li>The term preferential means that a single country or bloc is afforded treatment that provides better market access / lower duties than other countries.</li>
 <li>In practical terms, preferential tariff duties and quotas are almost always made available via (Free) Trade Agreements. The quota is agreed as part of the bilateral negotiation between the two parties that provides each with mutual benefits.</li>
 <li>Preferential quotas are always applied at a specific country or small group of countries.</li>
-<li>Within the EU, there are a very small number of quotas which are applied to multiple countries (e.g. a wine quota available for imports from multiple W. Balkan countries), but most are aimed explicitly at one country or bloc.</li>
-<li>Among the few exceptions, Greenland benefits from preferential quotas on seafoods outside of a formal Trade Agreement</li>
 </ul>
 <p>Non-Preferential quotas</p>
 
@@ -865,7 +848,6 @@
 <li>The purpose of a licensed quota is the same as a FCFS quota: to protect the fine balance of trade flows, however the mechanism for applying for usage is very different.</li>
 <li>For each quota, periods of the year are opened up for importers to apply for licenses from the Rural Payments Agency (RPA) - a division of Defra.</li>
 <li>During this period, the RPA accepts these license requests and issues licenses according to the specific rules of the quota</li>
-<li>In the EU tariff, all licensed quotas’ 6-digit quota order numbers begin with “094”.</li>
 </ul>
 <p><strong>Origin quotas</strong></p>
 <p>Some quotas identify as Origin Quotas (about 25%)
@@ -894,32 +876,9 @@ For a good example of an origin quota, please see the cat &amp; dog food quota i
 <li>ATQs are set on a three year cycle: the ATQ duty rate cannot be changed in the course of that 3 year cycle, however the starting balance for each year can be assessed at the start of each year.</li>
 <li>For fisheries ATQs, there is an additional point of interest, that, if 80% or more of the quota has been exhausted by the end of September in any given year, then the balance of the quota is increased by 20%</li>
 <li>Autonomous Quotas so called, as the EU unilaterally decides to open a quota – there is no requirement for recourse to WTO approval to open an ATQ.</li>
-<li>It is anticipated that the ATQs will continue to operate post-Brexit as they are favoured within the Defra ministry and offer a compromise to the different parts of the industry.</li>
 </ul>
 <p><strong>What products are covered by quotas?</strong></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93915448-f544ac80-fcff-11ea-852e-8f3e3ee74b01.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93915448-f544ac80-fcff-11ea-852e-8f3e3ee74b01.png" alt="image" /></a></p>
-<p><strong>Identifying quota types</strong></p>
-
-<ul>
-<li>Unfortunately, it is not a simple matter to take a quota order number and determine what kind of quota is being used. In the EU Tariff:
-
-<ul>
-<li>All current EU quota order numbers begin with 09 without exception</li>
-<li>“094” means licensed quota</li>
-<li>Autonomous agriculture quotas begin 0977</li>
-<li>Autonomous fisheries quotas begin 0987</li>
-</ul></li>
-<li>Apart from that, there are few obvious rules that define the EU’s use of quotas.</li>
-<li>The system for identifying quotas in the UK tariff will be determined in the course of 2020.</li>
-</ul>
-<p><strong>Managing quota order numbers</strong></p>
-
-<ul>
-<li>DIT must take the lead in managing quota order numbers – this process has been introduced but not properly observed.</li>
-<li>It needs to be a consultative process between DIT, HMRC and Defra to avoid errors and confusion, e.g. reusing existing quota order numbers</li>
-<li>How quotas get set up is dependent on what they have been used for previously – we have inadvertently selected quota order numbers that were a cross section of closed and open quota order numbers, which have caused management challenges in previous migrations.</li>
-<li>As of March 26th, the likelihood is that quota order numbers in the UK will be using ”08” as their first two digits to differentiate from the EU, with specific challenges around the dual Tariff in Northern Ireland being the primary cause. This remains to be agreed and properly analysed however.</li>
-</ul>
 <p><strong>Quotas in reference documents</strong></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93915925-a5b2b080-fd00-11ea-880c-87679308f90f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93915925-a5b2b080-fd00-11ea-880c-87679308f90f.png" alt="image" /></a></p>
 
@@ -939,26 +898,6 @@ For a good example of an origin quota, please see the cat &amp; dog food quota i
 <li>Licensed quotas do not touch HMRC systems: instead they are handled essentially off-system via the RPA (see following slides)</li>
 <li>The way in which the DIT application handles the different types of quotas is very different, as will be discussed.</li>
 </ul>
-<p><strong>First Come First Served (FCFS) quotas: in the EU and with CHIEF</strong></p>
-<p>This diagram shows the data flows of traders making declarations on CHIEF against the EU’s quota allocation system for first come, first served quotas. At the time of writing (March 2020), 100% of the UK’s FCFS quota-related trade goes via this route (i.e. no involvement from CDS).</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94019437-b408d700-fda9-11ea-8793-e9e19010d956.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94019437-b408d700-fda9-11ea-8793-e9e19010d956.png" alt="image" /></a></p>
-<p><strong>First Come First Served (FCFS) quotas: in the EU still and with CDS</strong></p>
-<p>The migration of CHIEF to CDS had been planned some time before the referendum, as CHIEF is legacy software that, despite being highly reliable, is difficult to maintain and extend to cater for new requirements (such as full adherence to the UCC -  Union Customs Code). This diagram is an extension of the previous diagram while CHIEF is excluded from this diagram (to save complexity), it will still be in place for some time anyway – and thanks to the NI Protocol, probably for another 2 years at least. In reality, this planned architecture will not be available to GB traders for the foreseeable future, thanks to the required pivot to support NI.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94019624-e74b6600-fda9-11ea-89bf-3441d5a5c5e7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94019624-e74b6600-fda9-11ea-89bf-3441d5a5c5e7.png" alt="image" /></a></p>
-<p><strong>NI Protocol has changed the approach to CDS migration and this impacts quotas</strong></p>
-<p>The NI Protocol requires (over-simplified):</p>
-
-<ul>
-<li>all goods imported into Northern Ireland to be subject to EU regulatory controls in full</li>
-<li>all goods considered to be at risk of entering the EU via the NI / ROI boundary to be subject to EU import duties</li>
-<li>while those goods that are not at risk are subject to GB duties</li>
-</ul>
-<p>This requires 2 tariffs to be present to work out the applicable duties based on the circumstances of the individual trade. This is too complex to do in CHIEF and a huge overhead to do in two systems concurrently anyway.</p>
-<p>Therefore CDS is now designated solely for NI traders (plus the 10 traders that have already been migrated), whereas all other (GB) traders will remain on CHIEF until a future date (to be specified).</p>
-<p>The impact on quotas is that, by extension, imports to NI of at risk goods may still claim on EU quotas, and these requests will continue to need to be allocated via the EU Quota 2 system while UK quotas will be allocated by the new CDS Quota Allocation Module (QAM). There is a strong possibility for confusion for traders if the UK continues to share the same quota order numbers as the EU.</p>
-<p><strong>Architecture to support NI post Transition Period</strong></p>
-<p>Key points to note in this diagram – CDS will have two tariff modules, one served by the EU to support NI regulatory controls and at risk duties, the other to support GB trade and NI not at risk trade. In theory (to be negotiated and unlikely to be deliverable by Jan 21), NI at risk goods will be able to take advantage of EU quotas, and therefore be allocated via Quota 2, not QAM. CHIEF GB declarations will send quota requests to QAM for allocation.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94019850-27aae400-fdaa-11ea-880c-949b4668dee3.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94019850-27aae400-fdaa-11ea-880c-949b4668dee3.png" alt="image" /></a></p>
 <p><strong>The Taric and FCFS quotas</strong></p>
 <p>The data objects that are utilised for FCFS are vastly more numerous than those used for licensed quotas
 Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances.</p>
@@ -980,12 +919,6 @@ Licensed quotas essentially use just measures not any of the other quota related
 </ul></li>
 <li>These periods are enshrined in the legislation that engenders them – there is no deviation on the start and end dates of the periods (though watch out for leap years)</li>
 </ul>
-<p><strong>Timespans in graphical format</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94020165-85d7c700-fdaa-11ea-9356-2c94ad96c585.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94020165-85d7c700-fdaa-11ea-9356-2c94ad96c585.png" alt="image" /></a></p>
-<p><strong>Impact of European growing seasons</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94020258-a1db6880-fdaa-11ea-84f5-0564a2e09f39.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94020258-a1db6880-fdaa-11ea-84f5-0564a2e09f39.png" alt="image" /></a></p>
-<p>There are more factors at play in determining quota volumes and periods than growing seasons (or marketing periods as they are called), but time of year is important for the EU, especially for Mediterranean countries.</p>
-<p>In time, seasonality may be of less importance to the UK, as our climate does not (yet) suit the industrial levels of production seen in Southern Europe.</p>
 <p><strong>Quota staging</strong></p>
 
 <ul>
@@ -1439,130 +1372,7 @@ Licensed quotas essentially use just measures not any of the other quota related
 <li>The approach needs to be decided by the new team</li>
 <li>The database that you will receive on arrival will contain no reference to licensed quotas at all in any tables other than the measures table.</li>
 </ul>
-<p><strong>Jersey, Guernsey and quotas</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94047448-0659f000-fdca-11ea-9d34-c398b707a7a5.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94047448-0659f000-fdca-11ea-9d34-c398b707a7a5.png" alt="image" /></a></p>
-<h3 id="quota-user-needs">Quota user needs</h3><div class="table-container">
-        <table>
-          <tr>
-<th>
-<br>As a …</th>
-<th>
-<br>I want to&hellip;</th>
-<th>
-<br>So that …</th>
-<th>
-<br>Notes</th>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>search   through a list of existing quotas</td>
-<td>
-<br>I   can find quotas to export, edit, duplicate, terminate or otherwise operate on   in order to accurately maintain the UK trade policy</td>
-<td>
-<br>Must   Have</td>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>create   a new (single) quota</td>
-<td>
-<br>I   can keep both the Tariff Application and the downstream border systems up to   date with the latest trade position.</td>
-<td>
-<br>Must   Have</td>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>edit   the properties of an existing quota <br>   <br>-description<br>   <br>-start   date<br>   <br>-end   date<br>   <br>-category   etc.</td>
-<td>
-<br>I   can update the changes imposed and also be sent to the relevant external   systems.</td>
-<td>
-<br>Must   Have</td>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>terminate   an existing measure, either individually or in bulk</td>
-<td>
-<br>the   measure will not be imposed on the relevant external systems.</td>
-<td>
-<br>Must   Have</td>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>create,   edit and terminate origins for a quota</td>
-<td>
-<br>the   quota can be applied to imports from a given country or country group</td>
-<td>
-<br>Must   Have</td>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>create,   edit and terminate definitions for a quota</td>
-<td>
-<br>a   given initial volume can be set for a quota and passed to the border systems   to operationalise</td>
-<td>
-<br>Must   Have</td>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>create,   edit and terminate suspension periods for a quota</td>
-<td>
-<br>I   can prevent a quota from being usable for a given period</td>
-<td>
-<br>Must   Have</td>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>create,   edit and terminate blocking periods for a quota</td>
-<td>
-<br>I   can block CDS from processing declaration requests that call on a given quota   for a defined period</td>
-<td>
-<br>Must   Have</td>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>view   the measures associated with a given quota</td>
-<td>
-<br>I   can validate that the data that is available on the border systems is correct</td>
-<td>
-<br>Must   Have</td>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>view   the commodities associated with a given quota</td>
-<td>
-<br>I   can validate that the commodities associated with a quota are correct, and to   export that data</td>
-<td>
-<br>Must   Have</td>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>create,   edit and terminate associations for a quota of type NM</td>
-<td>
-<br>I   can limit the usage of a quota of given sub-categories of commodities   assigned to a quota, or limit the usage of a quota to a given a country /   origin</td>
-<td>
-<br>Must   Have</td>
-</tr><tr>
-<td>
-<br>Tariff   Manager</td>
-<td>
-<br>create,   edit and terminate associations for a quota of type EQ</td>
-<td>
-<br>I   can apply differential coefficients to the volumes of goods being brought in   on a   quota</td>
-<td>
-<br>Must   Have</td>
-</tr>
-        </table>
-      </div><h3 id="quota-business-rules">Quota business rules</h3><div class="table-container">
+<h2 id="business-rules">Business rules</h2><div class="table-container">
         <table>
           <tr>
 <th>
