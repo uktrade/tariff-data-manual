@@ -277,9 +277,6 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#introduction-to-measure-types"><span>Introduction to measure types</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-amp-responsibilities-post-ip"><span>Measure types & responsibilities post-IP</span></a>
-      </li>
-      <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-type-series"><span>Measure type series</span></a>
       </li>
       <li>
@@ -322,7 +319,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#data-structures"><span>Data structures</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#key-business-rules-footnotes"><span>Key business rules - footnotes</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#key-business-rules"><span>Key business rules</span></a>
       </li>
     </ul>
   </li>
@@ -755,9 +752,6 @@
 </ul>
 <p></li>
 <li>
-<a href="#measure-types">Measure types &amp; responsibilities post-IP</a>
-</li>
-<li>
 <a href="#measure-type-series">Measure type series</a>
 </li>
 <li>
@@ -811,7 +805,7 @@
 <a href="#data-structures">Data structures</a>
 </li>
 <li>
-<a href="#key-business-rules-footnotes">Key business rules - footnotes</a>
+<a href="#key-business-rules">Key business rules</a>
 </li>
 </ul></p>
 
@@ -834,37 +828,67 @@
 
 <ul>
 <li>This is even more important when one considers the continuing role that CHIEF will play during the dual running of the two border systems - CHIEF is unable to extend its measure type capability without programming: at least CDS can be configured to extend its measure type list.</li>
+<li>Any changes to measures, additions of new measures will need to be agreed by HMRC in advance – their function cannot fully be described in Taric: see anomaly of measure type 696 (used in steel safeguards) below.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93358003-df834300-f838-11ea-85ad-6556dfde87ce.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93358003-df834300-f838-11ea-85ad-6556dfde87ce.png" alt="image" /></a></p>
-<p>Any changes to measures, additions of new measures will need to be agreed by HMRC in advance – their function cannot fully be described in Taric: see anomaly of measure type 696 (used in steel safeguards) below.</p>
-<h3 id="regulation-groups-measure-types-and-box-36-of-the-sad-form">Regulation groups, measure types and Box 36 of the SAD form</h3>
+<div class="highlight"><pre class="highlight xml" tabindex="0"><code> <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.type"</span> <span class="na">substitutionGroup=</span><span class="s">"abstract.record"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:complexType&gt;</span>
+      <span class="nt">&lt;xs:sequence&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.type.id"</span> <span class="na">type=</span><span class="s">"MeasureTypeId"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"validity.start.date"</span> <span class="na">type=</span><span class="s">"Date"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"validity.end.date"</span> <span class="na">type=</span><span class="s">"Date"</span> <span class="na">minOccurs=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"trade.movement.code"</span> <span class="na">type=</span><span class="s">"TradeMovementCode"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"priority.code"</span> <span class="na">type=</span><span class="s">"PriorityCode"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.component.applicable.code"</span> <span class="na">type=</span><span class="s">"MeasurementUnitApplicabilityCode"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"origin.dest.code"</span> <span class="na">type=</span><span class="s">"OriginCode"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"order.number.capture.code"</span> <span class="na">type=</span><span class="s">"OrderNumberCaptureCode"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.explosion.level"</span> <span class="na">type=</span><span class="s">"MeasureExplosionLevel"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.type.series.id"</span> <span class="na">type=</span><span class="s">"MeasureTypeSeriesId"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/xs:sequence&gt;</span>
+    <span class="nt">&lt;/xs:complexType&gt;</span>
+  <span class="nt">&lt;/xs:element&gt;</span>
+  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.type.description"</span> <span class="na">substitutionGroup=</span><span class="s">"abstract.record"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:complexType&gt;</span>
+      <span class="nt">&lt;xs:sequence&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.type.id"</span> <span class="na">type=</span><span class="s">"MeasureTypeId"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"language.id"</span> <span class="na">type=</span><span class="s">"LanguageId"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">type=</span><span class="s">"ShortDescription"</span> <span class="na">minOccurs=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/xs:sequence&gt;</span>
+    <span class="nt">&lt;/xs:complexType&gt;</span>
+  <span class="nt">&lt;/xs:element&gt;</span>
+</code></pre></div><h3 id="regulation-groups-measure-types-and-box-36-of-the-sad-form">Regulation groups, measure types and Box 36 of the SAD form</h3>
 <ul>
 <li>In the regulation training manual, we mentioned the need for regulations to be assigned to the right regulation groups, because of the correlation required between the regulation group and what the trader enters in Box 36 on the SAD form.</li>
 <li>Well the measure type falls into the same bracket – the measure types have to be actively correlated to regulation group IDs by HMRC in CDS.</li>
 <li>Therefore, HMRC need to be involved in measure type creation.</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93358894-ef4f5700-f839-11ea-9d85-75627fd21dd3.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93358894-ef4f5700-f839-11ea-9d85-75627fd21dd3.png" alt="image" /></a></p>
-<h2 id="measure-types-amp-responsibilities-post-ip">Measure types &amp; responsibilities post-IP</h2>
-<ul>
-<li>After the IP, there will be a great degree of similarity in the applicable trade measures.</li>
-<li>The major difference in responsibility will see the MTPO team in DIT’s Trade Policy Group replacing the role of the EU in co-ordinating and maintaining the measures that were previously seen as pan-European.</li>
-<li>There are a number of other changes too, as per the notes column</li>
-<li>These groups of measure types are detailed in subsequent pages.</li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93359429-81eff600-f83a-11ea-8afe-8e3178d3af69.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359429-81eff600-f83a-11ea-8afe-8e3178d3af69.png" alt="image" /></a></p>
 <h2 id="measure-type-series">Measure type series</h2>
 <ul>
 <li>Each measure is associated with a single measure type.</li>
 <li>Each measure type is in turn associated with a single measure type series, in which additional properties of the measure type and its behaviour are stored, and the application logic for the measure types is sequenced.</li>
 <li>The measure type series are put in place to permit multiple means of overlaying measure types (and hence duties) via combination and exclusion.</li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93359967-135f6800-f83b-11ea-8d8e-c83987212500.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359967-135f6800-f83b-11ea-8d8e-c83987212500.png" alt="image" /></a></p>
-
-<ul>
 <li>If modifying measure types were considered dangerous, then modifying measure type series is much more dangerous – it is highly recommended that any work that DIT to represent measure types series is to present a read-only view: there should be no capability to manage the measure type series, as the impact is potentially so damaging.</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93359667-c24f7400-f83a-11ea-890f-23de31d1cd8f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93359667-c24f7400-f83a-11ea-890f-23de31d1cd8f.png" alt="image" /></a></p>
-<h2 id="measure-types-series-measure-type-combination-field">Measure types series - measure type combination field</h2>
+<div class="highlight"><pre class="highlight xml" tabindex="0"><code>  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.type.series"</span> <span class="na">substitutionGroup=</span><span class="s">"abstract.record"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:complexType&gt;</span>
+      <span class="nt">&lt;xs:sequence&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.type.series.id"</span> <span class="na">type=</span><span class="s">"MeasureTypeSeriesId"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"validity.start.date"</span> <span class="na">type=</span><span class="s">"Date"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"validity.end.date"</span> <span class="na">type=</span><span class="s">"Date"</span> <span class="na">minOccurs=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.type.combination"</span> <span class="na">type=</span><span class="s">"MeasureTypeCombination"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/xs:sequence&gt;</span>
+    <span class="nt">&lt;/xs:complexType&gt;</span>
+  <span class="nt">&lt;/xs:element&gt;</span>
+  <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.type.series.description"</span> <span class="na">substitutionGroup=</span><span class="s">"abstract.record"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:complexType&gt;</span>
+      <span class="nt">&lt;xs:sequence&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"measure.type.series.id"</span> <span class="na">type=</span><span class="s">"MeasureTypeSeriesId"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"language.id"</span> <span class="na">type=</span><span class="s">"LanguageId"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">type=</span><span class="s">"ShortDescription"</span> <span class="na">minOccurs=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/xs:sequence&gt;</span>
+    <span class="nt">&lt;/xs:complexType&gt;</span>
+  <span class="nt">&lt;/xs:element&gt;</span>
+</code></pre></div><h2 id="measure-types-series-measure-type-combination-field">Measure types series - measure type combination field</h2>
 <ul>
 <li>The measure type combination field determines how many measure types of a given type series can be applied on a trader’s declaration at any given time to the same context.</li>
 <li>There are just two valid options:</li>
@@ -1002,7 +1026,10 @@
 <li>First thing to say – this is a useful term invented by the project team: it is not a Taric term, but is a handy short hand for what it actually means</li>
 <li>Here is a Taric sentence that helps to explain context: this is taken from Taric Business Processing rule ME1:</li>
 </ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93361328-a77dff00-f83c-11ea-9b72-474e5a45159b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93361328-a77dff00-f83c-11ea-9b72-474e5a45159b.png" alt="image" /></a></p>
+
+<blockquote>
+<p>The combination of measure type, geographical area, goods nomenclature item id, additional code type, additional code, order number, reduction indicator and start date must be unique.</p>
+</blockquote>
 
 <ul>
 <li>No two measures that match on all of these fields can coexist – according to this rule, if just one field differs, then a second measure can be inserted.</li>
@@ -1086,11 +1113,11 @@
 </ul>
 <svg width="457pt" height="323pt"
  viewBox="0.00 0.00 457.00 323.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_529" class="graph" transform="scale(1 1) rotate(0) translate(4 319)">
+<g id="database_73" class="graph" transform="scale(1 1) rotate(0) translate(4 319)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-319 453,-319 453,4 -4,4"/>
 <!-- Measure Types -->
-<g id="table_741" class="node">
+<g id="table_340" class="node">
 <title>Measure Types</title>
 <polygon fill="none" stroke="black" points="223.5,-294 223.5,-310 440.5,-310 440.5,-294 223.5,-294"/>
 <text text-anchor="start" x="300" y="-299.8" font-family="Arial" font-size="9.00">Measure Types</text>
@@ -1149,7 +1176,7 @@
 <polygon fill="none" stroke="black" points="222,-133 222,-311 441,-311 441,-133 222,-133"/>
 </g>
 <!-- Additional Code Type Measure Types -->
-<g id="table_655" class="node">
+<g id="table_626" class="node">
 <title>Additional Code Type Measure Types</title>
 <polygon fill="none" stroke="black" points="9,-208 9,-224 169,-224 169,-208 9,-208"/>
 <text text-anchor="start" x="12" y="-213.8" font-family="Arial" font-size="9.00">Additional Code Type Measure Types</text>
@@ -1178,13 +1205,13 @@
 <polygon fill="none" stroke="black" points="8,-143 8,-225 170,-225 170,-143 8,-143"/>
 </g>
 <!-- Additional Code Type Measure Types&#45;&gt;Measure Types -->
-<g id="database_529_edge2" class="edge">
+<g id="database_73_edge2" class="edge">
 <title>Additional Code Type Measure Types:e&#45;&gt;Measure Types:w</title>
 <path fill="none" stroke="black" d="M170,-200C211.98,-200 182.03,-275.59 215.02,-285.03"/>
 <polygon fill="black" stroke="black" points="214.73,-287.64 222.5,-286 215.4,-282.44 214.73,-287.64"/>
 </g>
 <!-- Additional Code Types -->
-<g id="table_516" class="node">
+<g id="table_365" class="node">
 <title>Additional Code Types</title>
 <polygon fill="none" stroke="black" points="255.5,-90 255.5,-106 407.5,-106 407.5,-90 255.5,-90"/>
 <text text-anchor="start" x="284.5" y="-95.8" font-family="Arial" font-size="9.00">Additional Code Types</text>
@@ -1217,13 +1244,13 @@
 <polygon fill="none" stroke="black" points="254.5,-9 254.5,-107 408.5,-107 408.5,-9 254.5,-9"/>
 </g>
 <!-- Additional Code Type Measure Types&#45;&gt;Additional Code Types -->
-<g id="database_529_edge3" class="edge">
+<g id="database_73_edge3" class="edge">
 <title>Additional Code Type Measure Types:e&#45;&gt;Additional Code Types:w</title>
 <path fill="none" stroke="black" d="M170,-184C204.52,-184 191.51,-146.18 214,-120 228.2,-103.47 229.66,-86.51 246.78,-82.76"/>
 <polygon fill="black" stroke="black" points="247.29,-85.35 254.5,-82 246.78,-80.13 247.29,-85.35"/>
 </g>
 <!-- meursing_table_plan_id Note -->
-<g id="note_665" class="node">
+<g id="note_459" class="node">
 <title>meursing_table_plan_id Note</title>
 <polygon fill="none" stroke="black" points="136.5,-36 35.5,-36 35.5,0 142.5,0 142.5,-30 136.5,-36"/>
 <polyline fill="none" stroke="black" points="136.5,-36 136.5,-30 "/>
@@ -1231,7 +1258,7 @@
 <text text-anchor="middle" x="89" y="-15.8" font-family="Arial" font-size="9.00">Always null in UK tariff</text>
 </g>
 <!-- meursing_table_plan_id Note&#45;&gt;Additional Code Types -->
-<g id="database_529_edge1" class="edge">
+<g id="database_73_edge1" class="edge">
 <title>meursing_table_plan_id Note&#45;&gt;Additional Code Types:meursing_table_plan_id_name</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M142.6,-18C174.89,-18 217.09,-18 254.5,-18"/>
 </g>
@@ -1239,106 +1266,8 @@
 </svg><h2 id="additional-codes-cannot-be-applied-universally">Additional codes cannot be applied universally …</h2><p>There is an additional many to many table within the tariff database that determines which additional code types can be used against which measure types. Currently there are 74 permutations of additional codes against measure types: there is little surprising about the alignment – e.g. you can only assign additional codes of type 8, A, B or C to measure types that are associated with Trade Remedies.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93374350-7eff0080-f84e-11ea-93cc-10957a58d5bf.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93374350-7eff0080-f84e-11ea-93cc-10957a58d5bf.png" alt="image" /></a></p>
 <h2 id="data-structures">Data structures</h2><p><a href="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93372048-3e51b800-f84b-11ea-94e1-7beaaf87f04c.png" alt="image" /></a></p>
-<h2 id="key-business-rules-footnotes">Key business rules - footnotes</h2><div class="table-container">
-        <table>
-          <tr>
-<th>#</th>
-<th>Rule</th>
-<th></th>
-<th>Notes</th>
-</tr><tr>
-<td>Measure   type series</td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr>
-<td>MTS1</td>
-<td>The measure type series must be unique.</td>
-<td>Not required     We should not be building an interface to facilitate the   management of measure type series</td>
-<td></td>
-</tr><tr>
-<td>MTS2</td>
-<td>The measure type series cannot be deleted if it is   associated with a measure type.</td>
-<td>Not required     We should not be building an interface to facilitate the   management of measure type series</td>
-<td></td>
-</tr><tr>
-<td>MTS3</td>
-<td>The start date must be less than or equal to the end date.</td>
-<td>Not required     We should not be building an interface to facilitate the   management of measure type series</td>
-<td></td>
-</tr><tr>
-<td>Measure   types</td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr>
-<td>MT1</td>
-<td>The  measure type   code must be unique.</td>
-<td>Required     Should be checked on creation of new measure types</td>
-<td></td>
-</tr><tr>
-<td>MT2</td>
-<td>The start date must be less than or equal to the end date.</td>
-<td>Required     Business users should be heavily discouraged from   terminating measure types however</td>
-<td></td>
-</tr><tr>
-<td>MT3</td>
-<td>When a measure type is used in a measure then the validity   period of the measure type must span the validity period of the measure.</td>
-<td>Required     As above, business users should be heavily discouraged   from terminating measure types, making this a largely redundant rule</td>
-<td></td>
-</tr><tr>
-<td>MT4</td>
-<td>The referenced measure type series must exist.</td>
-<td>Required     Measure type series should be selected from a dropdown;   and no change will be permitted to the values in the measure type series   table</td>
-<td></td>
-</tr><tr>
-<td>MT7</td>
-<td>A measure type can not be deleted if it is used in a   measure.</td>
-<td>Required     This could probably be pushed into Year x – there should   be no requirement to delete measure types</td>
-<td></td>
-</tr><tr>
-<td>MT10</td>
-<td>The validity period of the measure type series must span   the validity period of the measure type.</td>
-<td>Not required     All measure type series records are open-ended</td>
-<td></td>
-</tr><tr>
-<td>Relationship   of additional code types to measure types</td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr>
-<td>AMT1</td>
-<td>The measure type must exist.</td>
-<td></td>
-<td>Required</td>
-</tr><tr>
-<td>AMT2</td>
-<td>The additional code type must exist.</td>
-<td></td>
-<td>Required</td>
-</tr><tr>
-<td>AMT3</td>
-<td>The combination of additional code type and measure type   must be unique.</td>
-<td></td>
-<td>Required</td>
-</tr><tr>
-<td>AMT4</td>
-<td>The validity period of the measure type and that of the   additional code type must span the validity period of the “measure   type-additional code type” link.</td>
-<td></td>
-<td>Required</td>
-</tr><tr>
-<td>AMT5</td>
-<td>The start date must be less than or equal to the end date.</td>
-<td></td>
-<td>Required</td>
-</tr><tr>
-<td>AMT7</td>
-<td>The association between the additional code type and the   measure type cannot be deleted if there is an additional nomenclature measure   which uses this measure type and this additional code type.</td>
-<td></td>
-<td>Required</td>
-</tr>
-        </table>
-      </div><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
+<h2 id="key-business-rules">Key business rules</h2><p>Business rules for measure types can be found in the <a href="https://uktrade.github.io/tamato/html/business_rules/measures.html">system documentation</a>.
+<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
