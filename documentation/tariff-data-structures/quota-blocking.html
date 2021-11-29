@@ -319,7 +319,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#data-structures"><span>Data structures</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-2-key-business-rules"><span>Key business rules</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#key-business-rules"><span>Key business rules</span></a>
       </li>
     </ul>
   </li>
@@ -438,7 +438,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-component-data-structures"><span>Measure component data structures</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -518,7 +518,7 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#why-are-quotas-blocked"><span>Why are quotas blocked?</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#why-quotas-are-blocked"><span>Why quotas are blocked</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking-reasons"><span>Quota blocking reasons</span></a>
@@ -531,6 +531,9 @@
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#a-blocking-period-must-fit-within-a-definition-period"><span>A blocking period must fit within a definition period</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -755,7 +758,7 @@
             <h1 id="quota-blocking">Quota blocking</h1>
 <ul>
 <li>
-<a href="#why-are-quotas-blocked">Why are quotas blocked?</a>
+<a href="#why-quotas-are-blocked">Why quotas are blocked</a>
 </li>
 <li>
 <a href="#quota-blocking-reasons">Quota blocking reasons</a>
@@ -768,32 +771,21 @@
 </li>
 <li>
 <a href="#a-blocking-period-must-fit-within-a-definition-period">A blocking period must fit within a definition period</a>
-<ul>
-<li>
-<a href="#managing-blocking-periods-on-tap">Managing blocking periods on TAP</a>
 </li>
 <li>
-<a href="#key-user-needs">Key user needs</a>
-</li>
-<li>
-<a href="#key-business-rules">Key business rules</a>
+<a href="#business-rules">Business rules</a>
 </li>
 </ul>
-<p></li>
-</ul></p>
 
 <blockquote>
 <p>Unlike suspensions, blocks don’t prevent declarations being made against a quota, instead they temporarily block quota allocations from being taken, so demand for a quota can be assessed. Quota blocking periods are applicable only to First Come First Serve quotas.</p>
-<p>Please read the discussion on blocking quotas before reading this - the introduction to quotas is useful and the concepts are very similar.</p>
 </blockquote>
-<h2 id="why-are-quotas-blocked">Why are quotas blocked?</h2>
+<h2 id="why-quotas-are-blocked">Why quotas are blocked</h2>
 <ul>
 <li>Quota blocks are placed on quotas for a limited period of time to prevent allocations from being taken.</li>
 <li>Unlike suspensions, which effectively invalidate a quota (as if it does not exist and is suspended in law), all a blocking period does is to prevent allocations from being made: it does not prevent declarations from being made against a quota: it just postpones any allocation decision.</li>
 <li>A quota blocking period usually coincides with the start of a definition period, though not always; for instance, a common blocking reason is to protect the re-opening of a quota after significant returns</li>
-<li>This effect of a quota blocking period is to give HMRC an opportunity to assess the demand for a quota and potentially give an opportunity for them to make subjective decisions on allocations, e.g. to prevent a single large business from using up an entire allocation before smaller players have got their act together.</li>
-<li>277 of the 455 blocking periods created in 2019 coincided with the start of definition period.</li>
-<li>In these cases, it is most likely that the block will last c. 2 or 3 weeks</li>
+<li>This effect of a quota blocking period is to give HMRC an opportunity to assess the demand for a quota and potentially give an opportunity for them to make subjective decisions on allocations, e.g. to prevent a single large business from using up an entire allocation </li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/94176716-687d2880-fe90-11ea-9828-4bb36fe20c4e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94176716-687d2880-fe90-11ea-9828-4bb36fe20c4e.png" alt="image" /></a></p>
 <h2 id="quota-blocking-reasons">Quota blocking reasons</h2><p>Unlike with suspensions, where the Tariff Manager can only enter descriptive text to describe a suspension period, blocking periods include a field which describe the reason for the blocking period.</p>
@@ -915,93 +907,7 @@ This gives smaller traders and new entrants an opportunity to take advantage of 
       </div><p><a href="https://user-images.githubusercontent.com/61055197/94177095-f35e2300-fe90-11ea-85ca-2be70cf3bbc8.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177095-f35e2300-fe90-11ea-85ca-2be70cf3bbc8.png" alt="image" /></a></p>
 <h2 id="a-blocking-period-must-fit-within-a-definition-period">A blocking period must fit within a definition period</h2><p>The critical point is that a quota blocking period is defined against a quota definition period: the blocking period MUST NOT straddle the boundary of the definition – in the rare occasion you need to straddle a boundary, create 2 blocking periods</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94177179-12f54b80-fe91-11ea-9a95-59fd7fdaac68.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177179-12f54b80-fe91-11ea-9a95-59fd7fdaac68.png" alt="image" /></a></p>
-<h3 id="managing-blocking-periods-on-tap">Managing blocking periods on TAP</h3><p>[Not yet sure if this will go in a different section so I have omitted this from this page for now - This section is covered in pages 11-19 in the powerpoint]</p>
-<h3 id="key-user-needs">Key user needs</h3><div class="table-container">
-        <table>
-          <tr>
-<th>
-<br>As a …</th>
-<th>
-<br>I want to&hellip;</th>
-<th>
-<br>So that …</th>
-<th>
-<br>MoSCoW</th>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>view a list of all active quota   blocking periods</td>
-<td>
-<br>I can select and decide the next   appropriate actions to be performed.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>create a new quota blocking period</td>
-<td>
-<br>I can present it on the system for   future blocking purposes.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>select a quota definition period</td>
-<td>
-<br>I can assign it to the correct blocking   period.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>only view &amp; select future quota   definition period</td>
-<td>
-<br>the system won’t fail business rules.</td>
-<td>
-<br>Should Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>edit an active quota blocking period</td>
-<td>
-<br>I can reassign the blocking period   accurately.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>delete an active quota blocking period</td>
-<td>
-<br>the system will not block a quota   incorrectly.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>have a workflow process</td>
-<td>
-<br>All quota blocking changes   can be validated and approved before being sent to CDS.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>have the system validate relevant   business rules accordingly</td>
-<td>
-<br>It won’t cause errors when validated in   CDS.</td>
-<td>
-<br>Should Have</td>
-</tr>
-        </table>
-      </div><h3 id="key-business-rules">Key business rules</h3><div class="table-container">
+<h2 id="business-rules">Business rules</h2><div class="table-container">
         <table>
           <tr>
 <th>
