@@ -319,7 +319,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#data-structures"><span>Data structures</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-2-key-business-rules"><span>Key business rules</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#key-business-rules"><span>Key business rules</span></a>
       </li>
     </ul>
   </li>
@@ -438,7 +438,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-component-data-structures"><span>Measure component data structures</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -461,6 +461,13 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
     <ul>
       <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#what-quota-suspensions-are"><span>What quota suspensions are</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#when-is-a-quota-not-a-quota"><span>When is a quota not a quota?</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -748,33 +755,25 @@
             <h1 id="quota-suspensions">Quota suspensions</h1>
 <ul>
 <li>
-<a href="#managing-suspension-periods-on-tap">Managing suspension periods on TAP</a>
+<a href="#what-quota-suspensions-are">What quota suspensions are</a>
 </li>
 <li>
-<a href="#key-user-needs">Key user needs</a>
+<a href="#when-is-a-quota-not-a-quota">When is a quota not a quota?</a>
 </li>
 <li>
-<a href="#key-business-rules">Key business rules</a>
+<a href="#business-rules">Business rules</a>
 </li>
 </ul>
 
 <blockquote>
 <p>Quota suspensions invalidate a quota; during the suspension period the suspended First Come First Serve (FCFS) quotas are unavailable to traders.</p>
 </blockquote>
-<p><strong>Background to Quotas</strong></p>
-
-<ul>
-<li>A quota provides an opportunity for an importer to import goods at a rate that is lower than the prevailing MFN (or preferential rate) until the specified volume of goods has run out (or exhausted).</li>
-<li>Once the volume has exhausted, the quota is no longer available and the out-of-quota-rate is then payable.</li>
-<li>A quota can be managed via two regimes, as follows: First Come First Served (FCFS) and Licensed.</li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94132397-28e61a80-fe57-11ea-9f14-9ab5fd34d051.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94132397-28e61a80-fe57-11ea-9f14-9ab5fd34d051.png" alt="image" /></a></p>
-
-<blockquote>
-<p>Quota suspensions are applicable only to First Come First Serve quotas</p>
-</blockquote>
-<p><strong>What are quota suspensions?</strong></p>
-
+<p>A quota provides an opportunity for an importer to import goods at a rate that is lower than the prevailing MFN (or preferential rate) until the specified volume of goods has run out (or exhausted).</p>
+<p>Once the volume has exhausted, the quota is no longer available and the out-of-quota-rate is then payable.</p>
+<p>A quota can be managed via two regimes, as follows: First Come First Served (FCFS) and Licensed.</p>
+<p>Quota suspensions are applicable only to First Come First Serve quotas.</p>
+<p>Learn <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas">more about quotas</a>.</p>
+<h2 id="what-quota-suspensions-are">What quota suspensions are</h2>
 <ul>
 <li>Quota suspensions are functions that are enabled in legal text to allow for First Come First Serve quotas to be made effectively unavailable to traders for a given period of time, for a number of reasons – these reasons are typically written into the initial legal text, such that there is no requirement to legislate to bring in the suspension.</li>
 <li>Some typical reasons are as follows:
@@ -793,12 +792,11 @@
 <li>The MFN is 15.00% all year round, except for the period between Feb 15th and June 15th, where it is 0.00% (tariff free)</li>
 <li>The EU has chosen to suspend the quota for the period where the MFN is zero, as there is no value in running a quota when there is no material gain to be made for the trader in applying for quota usage during that period.</li>
 </ul>
-<p><strong>When is a quota not a quota?</strong></p>
-<p>A quota suspension can be thought of as an antidote to a quota; a nullification of its effects; during the period of the suspension, it is as if the quota is not there; a trader cannot request an allocation against that quota and it is invisible on the Trade Tariff Service, as follows:</p>
+<h2 id="when-is-a-quota-not-a-quota">When is a quota not a quota?</h2><p>A quota suspension can be thought of as an antidote to a quota; a nullification of its effects; during the period of the suspension, it is as if the quota is not there; a trader cannot request an allocation against that quota and it is invisible on the Trade Tariff Service, as follows:</p>
 <p>For 1st July 2019, after the suspension, the quota is visible <a href="https://www.trade-tariff.service.gov.uk/commodities/0303510010?currency=EUR&amp;day=1&amp;month=7&amp;year=2019#import">https://www.trade-tariff.service.gov.uk/commodities/0303510010?currency=EUR&amp;day=1&amp;month=7&amp;year=2019#import</a></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94136322-aceed100-fe5c-11ea-923a-67bb22db98da.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136322-aceed100-fe5c-11ea-923a-67bb22db98da.png" alt="image" /></a></p>
 <p>For 1st March, during the suspension, the quota is hidden<a href="https://www.trade-tariff.service.gov.uk/commodities/0303510010?currency=EUR&amp;day=1&amp;month=7&amp;year=2019#import">https://www.trade-tariff.service.gov.uk/commodities/0303510010?currency=EUR&amp;day=1&amp;month=7&amp;year=2019#import</a></p>
-<p>It is important to note however that there a many ways to skin a cat: in this example, the EU has also made the quota measures last from 16th June to 14th Feb and not all year long.</p>
+<p>It is important to note however that there is more than one way to implement quota suspensions. In this example, the EU has also made the quota measures last from 16th June to 14th Feb and not all year long.</p>
 <p><strong>Simplified quotas data model (as applies to suspension periods)</strong></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94136612-17a00c80-fe5d-11ea-8089-bdc32b48108b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136612-17a00c80-fe5d-11ea-8089-bdc32b48108b.png" alt="image" /></a></p>
 <p><strong>A quota order number is made up of many quota definition periods</strong></p>
@@ -867,102 +865,7 @@
 <li>THIS CANNOT BE STRESSED ENOUGH, and is critical to the use of suspension periods.</li>
 </ul></li>
 </ul>
-<h3 id="managing-suspension-periods-on-tap">Managing suspension periods on TAP</h3><p>[Not yet sure if this will go in a different section so I have omitted this from this page for now - This section is covered in pages 13-19 in the powerpoint]</p>
-<h3 id="key-user-needs">Key user needs</h3><div class="table-container">
-        <table>
-          <tr>
-<th>
-<br>As a …</th>
-<th>
-<br>I want to&hellip;</th>
-<th>
-<br>So that …</th>
-<th>
-<br>MoSCoW</th>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>view a list of all active quota   suspension periods</td>
-<td>
-<br>I can select and decide the next   appropriate actions to be performed.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>create a new quota suspension period</td>
-<td>
-<br>I can present it on the system for   future suspension purposes.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>select a quota definition period</td>
-<td>
-<br>I can assign it to the correct   suspension period.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>view &amp; select active quota   definition period</td>
-<td>
-<br>the system won’t fail business rules.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>view &amp; edit quota definition period   that has not ended</td>
-<td>
-<br>the system won’t fail business rules.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>edit a quota suspension period that has   not finished</td>
-<td>
-<br>I can reassign the suspension period   accurately.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>delete a quota suspension period that   has not started</td>
-<td>
-<br>the system will not suspend a quota   incorrectly.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>have a workflow process</td>
-<td>
-<br>All quota suspension changes can be   validated and approved before being sent to CDS.</td>
-<td>
-<br>Must Have</td>
-</tr><tr>
-<td>
-<br>UK Tariff Manager</td>
-<td>
-<br>have the system validate relevant   business rules accordingly</td>
-<td>
-<br>It won’t cause errors when validated in   CDS.</td>
-<td>
-<br>Should Have</td>
-</tr>
-        </table>
-      </div><h3 id="key-business-rules">Key business rules</h3><div class="table-container">
+<h2 id="business-rules">Business rules</h2><div class="table-container">
         <table>
           <tr>
 <th>
