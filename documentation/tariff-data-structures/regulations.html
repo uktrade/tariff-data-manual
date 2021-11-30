@@ -538,24 +538,13 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#measure-generating-regulations"><span>Measure generating regulations</span></a>
     <ul>
       <li>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#regulations-in-the-eu"><span>Regulations in the EU</span></a>
-      </li>
-      <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#regulations-in-the-uk"><span>Regulations in the UK</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#regulation-groups"><span>Regulation groups</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#regulation-role-types"><span>Regulation role types</span></a>
-      </li>
-      <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#linking-to-regulations"><span>Linking to regulations</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#identifying-regulations"><span>Identifying regulations</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#draft-regulations"><span>Draft regulations</span></a>
@@ -753,60 +742,13 @@
             <h1 id="measure-generating-regulations">Measure generating regulations</h1>
 <ul>
 <li>
-<a href="#introduction-to-measure-generating-regulations">Introduction to measure generating regulations</a>
-</li>
-</ul>
-<p></li>
-<li>
-<a href="#regulations-in-the-eu">Regulations in the EU</a>
-<ul>
-<li>
-<a href="#base-regulations">Base regulations</a>
-</li>
-<li>
-<a href="#modification-regulations">Modification regulations</a>
-</li>
-<li>
-<a href="#prorogation-regulations">Prorogation regulations</a>
-</li>
-<li>
-<a href="#complete-abrogation-regulation">Complete abrogation regulation</a>
-</li>
-<li>
-<a href="#explicit-abrogation-regulation">Explicit Abrogation regulation</a>
-</li>
-<li>
-<a href="#full-temporary-stop-regulation">Full Temporary Stop regulation</a>
-</li>
-<li>
-<a href="#partial-temporary-stop-regulation">Partial Temporary Stop regulation</a>
-</li>
-</ul>
-</li>
-<li>
 <a href="#regulations-in-the-uk">Regulations in the UK</a>
-<ul>
+</li>
 <li>
 <a href="#regulation-groups">Regulation groups</a>
 </li>
 <li>
-<a href="#regulation-role-types">Regulation role types</a>
-</li>
-<li>
 <a href="#linking-to-regulations">Linking to regulations</a>
-<ul>
-<li>
-<a href="#in-the-uk">In the UK</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#identifying-regulations">Identifying regulations</a>
-<ul>
-<li>
-<a href="#example-trade-agreement-regulation-in-2-parts-p2113720-p2113721">Example – Trade agreement regulation in 2 parts (P2113720 / P2113721)</a>
-</li>
-</ul>
 </li>
 <li>
 <a href="#draft-regulations">Draft regulations</a>
@@ -815,13 +757,9 @@
 <a href="#approved-flag">Approved flag</a>
 </li>
 </ul>
-</li>
+<p></li>
 </ul></p>
-
-<blockquote>
-<p>Every measure must be associated with a measure generating regulation, the regulation ensures that there is a legal basis for all tariff and regulatory activities.</p>
-</blockquote>
-<h3 id="introduction-to-measure-generating-regulations">Introduction to measure generating regulations</h3><p>Every measure entered into the Tariff database must be associated with a regulation. The purpose of this is to ensure that there is a ‘legal base’ for all tariff and regulatory activity, without which the measures could not be traced back to the initial purpose for their existence.</p>
+<p>Every measure entered into the Tariff database must be associated with a regulation. The purpose of this is to ensure that there is a ‘legal base’ for all tariff and regulatory activity, without which the measures could not be traced back to the initial purpose for their existence.</p>
 <p>The requirement for a regulation is built into the the schema for TARIC files and is a mandatory field for the measure table.</p>
 <svg width="326pt" height="260pt"
  viewBox="0.00 0.00 326.00 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -935,58 +873,10 @@
 </g>
 </g>
 </svg><p>Each regulation may have any number of measures associated with it and every measure is associated with just one measure-generating regulation. This terminology “measure-generating” is critical, as there is another regulation that is associated with measures’ terminations, which is called the “justification regulation”.</p>
-<h2 id="regulations-in-the-eu">Regulations in the EU</h2><p>The EU has instituted an incredibly complicated data schema for regulations, which is perhaps suited to European law-making but much less so to the UK. In addition to this structure being inappropriate from a policy perspective, it is also technically über-complex.</p>
-<p>Instead of being able to link to a single regulations table to list all regulations, there are multiple tables, notably <code>base_regulations</code> and <code>modification_regulations</code>. This leads to extremely inefficient data calls, but is necessary to match the EU’s law making.</p>
-<h3 id="base-regulations">Base regulations</h3><p>A base regulation introduces new tariff and commercial measures. They do not originate from, or depend on other regulations. Base regulations, unless suspended, are valid from their entry into force to their end, or they can be open-ended. Measures under these regulations have the same validity, unless they are specifically suspended.</p>
-<h3 id="modification-regulations">Modification regulations</h3><p>This regulation amends a base regulation. It can affect the tariff and commercial aspects of the updated regulation but it does not extend nor close the regulation itself. If the modification regulation has no end date of validity, its end date is defined by the end date of the regulations it modifies.</p>
-<h3 id="prorogation-regulations">Prorogation regulations</h3><p>Prorogation regulations have no validity period of their own but extend the validity end date of a base or modification regulation. This means that the measures falling under the prorogued regulation are prorogued as well.</p>
-<p>A prorogation regulation can extend several regulations at different dates and a regulation can be extended several times.
-If a regulation has been prorogued, its published end date does not take into account the prorogation and is different from its effective end date. Prorogation regulations are also called &ldquo;extension regulations&rdquo;.</p>
-<h3 id="complete-abrogation-regulation">Complete abrogation regulation</h3><p>This regulation abrogates a base, modification or FTS regulation. The abrogated regulation and its related measures are considered as &ldquo;never existed&rdquo;. This is the equivalent of cancelling a legal act. It is seldom used. It can be used, for instance, in the case of an erroneous publication. A complete abrogation regulation has no validity period.</p>
-<h3 id="explicit-abrogation-regulation">Explicit Abrogation regulation</h3><p>This regulation abrogates a base, modification or full temporary stop regulation at a given date. It puts an end date to an open-ended regulation or brings the already existing end date of the regulation further back in time. The end date applies by definition to all measures under the abrogated regulation; unless these measures have a specific end dates.</p>
-<p>If a regulation has been abrogated, its published end date does not take into account the abrogation and is different from its effective end date. An explicit abrogation regulation has no validity period; it ends the validity period of a measure-generating regulation or an FTS regulation.</p>
-<h3 id="full-temporary-stop-regulation">Full Temporary Stop regulation</h3><p>A FTS regulation suspends the applicability of a regulation for a period of time. This means that all the measures within the regulations are suspended as long as the FTS is valid. Once the FTS is abrogated or reaches its validity end date, all the measures of the suspended regulation become applicable again.</p>
-<h3 id="partial-temporary-stop-regulation">Partial Temporary Stop regulation</h3><p>If only some measures of a regulation must be suspended, a FTS regulation cannot be used as it suspends all the measures of the regulation. In this case, a PTS regulation is used to suspend specific measures within the regulation.
-PTS regulations are not introduced as independent TARIC objects, only their reference and their validity periods are introduced in the measures they suspend.</p>
-<h2 id="regulations-in-the-uk">Regulations in the UK</h2><p>We are only using the <code>base_regulation tables</code> and not any of the others. This is because all of the other functionality offered by the EU’s Taric tables:</p>
-
-<ul>
-<li>is not equally represented in UK legal practices (i.e. we do not follow the same practices in initiating laws)</li>
-<li>can be achieved via other means</li>
-<li>is performance-damaging (i.e. requiring complex join logics)</li>
-<li>brings 200+ business rules that are not required</li>
-</ul>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Regulation type</th>
-<th>Alternative</th>
-</tr><tr>
-<td>Modification   tables</td>
-<td>UK   law will see a brand new piece of legislation coming in to replace an   existing regulation: we will simply use a new base regulation</td>
-</tr><tr>
-<td>Prorogation   regulations</td>
-<td>We   will in most cases, unless explicitly required to do otherwise, leave   regulations and measures open-ended. The case for prorogation is therefore   massively watered down. Even if a measure is explicitly end-dated, the   measure’s end dates can simply be extended. We have checked with the European   Commission and there is no difference between modifying the end dates of a   measure and proroguing the measure-generating regulation.</td>
-</tr><tr>
-<td>Complete   abrogations</td>
-<td>A   complete abrogation can only take place on a future regulation: if the   measures belonging to a regulation have already started, then it is not   possible to ‘just pretend they never existed’. If the regulation and any   associated measures are in the future, then they can just be deleted to   achieve the same aim. A complete abrogation is only ever used to correct an   error.</td>
-</tr><tr>
-<td>Explicit   abrogations</td>
-<td>While   an explicit abrogation signals an earlier than expected end to a regulation,   this is a) infrequent as we will not be applying end dates to regulations in   general and b) replaced by simply terminating the associated measures.</td>
-</tr><tr>
-<td>Full   &amp; temporary stops</td>
-<td>The   policy intent that sits behind these simply does not exist in the UK – there   is no recourse to temporarily pause a regulation. The only similar case on   point concerns the use of quota suspensions: these can be achieved by apply   quota suspension periods – see document on managing quotas.</td>
-</tr>
-        </table>
-      </div><h2 id="regulation-groups">Regulation groups</h2><p>Every base regulation on the system (and we will only care in the future about base regulations) references a single regulation group. Modification regulations do not themselves have regulation groups – instead they reference the regulation group of the parent base regulation.</p>
+<h2 id="regulations-in-the-uk">Regulations in the UK</h2><p>We use <code>base_regulation tables</code>.</p>
+<p>A base regulation introduces new tariff and commercial measures. They do not originate from, or depend on other regulations. Base regulations, unless suspended, are valid from their entry into force to their end, or they can be open-ended. Measures under these regulations have the same validity, unless they are specifically suspended.</p>
+<h2 id="regulation-groups">Regulation groups</h2><p>Every base regulation on the system references a single regulation group.</p>
 <p>The regulation group represents a way of categorising regulations according to their purpose: it is much more than just a neat way of grouping regulations together: the groups mean something and if the tariff manager selects the wrong group, then the associated measures may not behave in the expected way.</p>
-<p>There is a correlation table, listed on pages 124++ of the Taric user guide (revision 2) that links regulation group identifiers to the fields that need to be declared in Box 36 (Preference) on the SAD form, and by extension the measure types that can be used in those regulations.
-The correlation tables allow traders to make specific declarations against the correct preferential duty / quota e.g. enter 100 to claim against a tariff preference.</p>
-<p>The first thing to point out about this table is that it should be taken ever so slightly with a pinch of salt – it is wrong in a lot of places (though probably right at the time of writing), as will be evidenced below.</p>
-<p><a href="https://user-images.githubusercontent.com/4951176/100004743-daee8400-2dbf-11eb-93b2-96823b3c3738.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/4951176/100004743-daee8400-2dbf-11eb-93b2-96823b3c3738.png" alt="" /></a></p>
-<p>The marqueed line here shows that if a trader were to enter the term 123 into Box 36 of their declaration, then they would be able to take advantage of measure type 122 (non-preferential quota)  (as well as 464, which is just a notification that the product has been submitted to end use).</p>
-<p>It also shows that those measures must have been entered against a regulation of type KON (non-preferential quotas). This IS enforced and tariff managers need to be aware of this when setting up regulations, otherwise the intended effect of the measure may not be achieved.</p>
-<p>The regulation group data point is very sensitive – we should not build tools to allow tariff managers to modify this data, however we should review and adjust the content of the data, as it is critical to put across the genuine meaning, which is sometimes obfuscated in the EU’s descriptions.</p>
 <div class="table-container">
         <table>
           <tr>
@@ -1033,173 +923,13 @@ The correlation tables allow traders to make specific declarations against the c
 <td>Unit   price (SPV), standard import value (SIV)</td>
 </tr>
         </table>
-      </div><h2 id="regulation-role-types">Regulation role types</h2><p>These are used purely for the purposes of linking regulations in the TARIC application.</p>
-<p>Changing the end date of a regulation is identical to prorogating / abrogating in terms of its impact on the border systems and so we will not need to use them. However, they are used to illustrate the link between regulations and those that replace them (abrogation) and to show the justification for extending (prorogating).</p>
-<p>Extreme case with regard to variable duties – for VD for rice / cereals, whenever there is a change, the EU puts in place a new regulation and abrogates the previous. UK legislation will deliver the power to modify rapidly-changing duties without need for new legislation. In most cases, our regulations will not have end dates, so this is largely a moot point.</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>ID</th>
-<th>Description</th>
-</tr><tr>
-<td>1</td>
-<td>Base   regulation</td>
-</tr><tr>
-<td>2</td>
-<td>Provisional   anti-dumping/countervailing duty</td>
-</tr><tr>
-<td>3</td>
-<td>Definitive   anti-dumping/countervailing duty</td>
-</tr><tr>
-<td>4</td>
-<td>Modification</td>
-</tr><tr>
-<td>5</td>
-<td>Prorogation</td>
-</tr><tr>
-<td>6</td>
-<td>Complete   abrogation</td>
-</tr><tr>
-<td>7</td>
-<td>Explicit   abrogation</td>
-</tr><tr>
-<td>8</td>
-<td>Regulation   which temporarily suspends all another regulation (FTS - Full Temporary Stop)</td>
-</tr>
-        </table>
       </div><h2 id="linking-to-regulations">Linking to regulations</h2><p>The process of ‘ratifying’ a piece of legislation differs depending on the type of legislation involved. The majority of regulations that will impact the usage of the UK tariff are published as secondary legislation (statutory instruments or SIs). This applies to the setting of the MFN duties, managing annual quotas, trade agreements etc.</p>
 <p>The only real outlier is with Trade Remedies anti-dumping (AD) and anti-subsidy (AS) regulation – these are typically published as Taxation Notices (tertiary legislation).</p>
 <p>Using Taxation Notices instead of SIs makes a difference to the naming convention but also the timing. An SI can take months to go from 1st reading in the House of Commons through to execution – depending on whether it is an <a href="https://www.parliament.uk/about/how/laws/secondary-legislation/statutory-instruments-commons/">affirmative or negative procedure</a>, whereas a public notice that underpins AS/AD duties can be decided overnight on the say-so of the Secretary of State. In practice the tariff management team are likely to receive ~1 week notice for implementing anti-subsidy and anti-dumping duties.</p>
 <p>There is an additional point to bear in mind with the types of regulations. Most regulations will eventually lodge somewhere on legislation.gov.uk, whereas public notices will be published as flat HTML pages on gov.uk.</p>
 <p>This is important when defining the URL where the original document can be found (online), linked to from the UK Trade Tariff Service.</p>
-<p>Pre-EU-Exit, the UK Trade Tariff Service has links out to the EU regulations that underpin a measure. Clicking on the regulation link in the lightbox navigates the user to the EUR-LEX website which houses all EU documents. There are no fields in the core regulation schema that define the URL of the regulation: this is inferred from various properties that are consistent across all regulations and made possible by the fact that all regulations are housed on EUR-LEX according to a predefined URL structure.</p>
-<p>The EUR-LEX URL is defined according to the values stored in two fields which are of critical importance to the EU, but will be largely meaningless to the UK:
-* <code>officialjournal_number</code>
-* <code>officialjournal_page</code>
-* &hellip;as well as the year of the regulation</p>
-<p><a href="https://user-images.githubusercontent.com/4951176/100005358-ba72f980-2dc0-11eb-9bab-262081bb1295.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/4951176/100005358-ba72f980-2dc0-11eb-9bab-262081bb1295.png" alt="" /></a></p>
-<p>To note – the diagram above shows two regulations that are applicable to a measure. This is (first) the modification regulation R1006/11 overlaid on top of the original base regulation R2658/97.</p>
-<p>This shows that the regulation’s box official journal number is L 282 and the official journal page is 0001. The year of the regulation is 2011. These three fields are then inserted into a boilerplate URL structure as follows:</p>
-<div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>http://eur-lex.europa.eu/search.html?whOJ=NO_OJ%3D282,YEAR_OJ%3D2011,PAGE_FIRST%3D0001&amp;DB_COLL_OJ=oj-l&amp;type=advanced&amp;lang=en
-</code></pre></div><p>This then gives a search result on EUR-LEX which surfaces the necessary OJ entry according to the criteria specified against that regualtion.</p>
-<h3 id="in-the-uk">In the UK</h3><p>Clearly the OJ journal and page and the URL on EUR-LEX are of no value to future UK legislation URLs. An alternative means of providing the data to the Trade Tariff Service needs to be implemented, as follows:</p>
-
-<ol>
-<li>We populate the “OJ” data going into UK regulations as follows:
-
-<ul>
-<li><code>officialjournal_number</code> = &ldquo;1&rdquo;</li>
-<li><code>officialjournal_page</code> = &ldquo;1&rdquo;</li>
-</ul></li>
-<li>Two additional fields, that are not in the EU’s core regulation schema are required:
-
-<ul>
-<li><code>public_identifier</code> – the regulation descriptor, as will appear on the Trade Tariff Service </li>
-<li><code>url</code> – the URL that is linked to from the regulation / legal base link.</li>
-</ul></li>
-<li>These are then combined into the <code>information_text</code> field in the XML, separated by pipe characters (<code>|</code>):
-<code>&lt;oub:information.text&gt;Regulation title|Public identifier|https://url&lt;/oub.information.text&gt;</code></li>
-</ol>
-<h2 id="identifying-regulations">Identifying regulations</h2><p>Under EU jurisdiction, the identification of the legal act is composed of four elements:</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Char(s)</th>
-<th>Usage</th>
-</tr><tr>
-<td>1</td>
-<td>To   contain the alphabetic regulation type identifier as listed below.</td>
-</tr><tr>
-<td>2-3</td>
-<td>To   contain a 2-digit reference to the year (e.g. 21, 22).</td>
-</tr><tr>
-<td>4-7</td>
-<td>To   contain a sequential identifier starting at 0000. Ideally this would, where   possible equate to the public identifier of the regulation (e.g. for statutory instrument SI 2012/1312, this would be 1312).</td>
-</tr><tr>
-<td>8</td>
-<td>The suffix: this is used to split regulations logically although they have been published as one piece of legislation (for instance, for supporting different validity periods within the one regulation or allowing the same publication to be used in mutliple regulation groups). The value here is usually “0”, but documents in EU legislation can be very complex, and this digit may extend through the numerical digits.</td>
-</tr>
-        </table>
-      </div><p>In the tariff database, to translate regulation identifiers into database IDs, it’s necessary to transpose the characters as follows:</p>
-<p><a href="https://user-images.githubusercontent.com/4951176/100006275-27d35a00-2dc2-11eb-8177-08b7ee9a4a94.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/4951176/100006275-27d35a00-2dc2-11eb-8177-08b7ee9a4a94.png" alt="" /></a></p>
-<p>The UK and the EU have very different ways of managing legislation, meaning that the way in which the EU has decided to structure its regulation IDs is not suited to the UK: we do not distinguish between regulations, decisions, agreements etc, therefore the prefix convention is less than useful to the UK.</p>
-<p>In fact, the only prefix definition that we will carry forward is ‘C’: this is used to denote a draft regulation, i.e. one where the measures do not yet take legal effect. This is the only one of 6 subdivisions of regulations that has actual functional effect: the others are labels only.</p>
-<p>The table identifies how the UK will structure its regulation identifiers – please note: this is an internal identifier only. It is not intended to be displayed to members of the public. Thr <code>public_identifier</code> field is used to provide a public facing identifier for the regulation. It is critical that every regulation is provided a regulation identifier of exactly 8 digits (not 7 not 9).</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Prefix</th>
-<th>Usage</th>
-</tr><tr>
-<td>C</td>
-<td>Draft   regulation</td>
-</tr><tr>
-<td>P</td>
-<td>Preferential   Trade Agreement / FTA</td>
-</tr><tr>
-<td>U</td>
-<td>Unilateral   preferences (GSP)</td>
-</tr><tr>
-<td>S</td>
-<td>Suspensions   and reliefs</td>
-</tr><tr>
-<td>X</td>
-<td>Import   and Export control</td>
-</tr><tr>
-<td>N</td>
-<td>Trade   remedies</td>
-</tr><tr>
-<td>M</td>
-<td>MFN</td>
-</tr><tr>
-<td>Q</td>
-<td>Quotas</td>
-</tr><tr>
-<td>A</td>
-<td>Agri   measures</td>
-</tr>
-        </table>
-      </div><h3 id="example-trade-agreement-regulation-in-2-parts-p2113720-p2113721">Example – Trade agreement regulation in 2 parts (P2113720 / P2113721)</h3><p>This would be referenced with a public identifier of 2021 No. 1372.</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Char(s)</th>
-<th>Meaning</th>
-</tr><tr>
-<td>P</td>
-<td>Preferential   Trade Agreement / FTA</td>
-</tr><tr>
-<td>21</td>
-<td>from   2021</td>
-</tr><tr>
-<td>1372</td>
-<td>The   unique identifier of the SI</td>
-</tr><tr>
-<td>0</td>
-<td>Document   part 0 (maybe used for tariff preference measures &amp; quotas)</td>
-</tr>
-        </table>
-      </div><div class="table-container">
-        <table>
-          <tr>
-<th>Char(s)</th>
-<th>Meaning</th>
-</tr><tr>
-<td>P</td>
-<td>Preferential   Trade Agreement / FTA</td>
-</tr><tr>
-<td>21</td>
-<td>from   2021</td>
-</tr><tr>
-<td>1372</td>
-<td>The   unique identifier of the SI</td>
-</tr><tr>
-<td>1</td>
-<td>Document   part 1 (maybe used for supplementary units)</td>
-</tr>
-        </table>
-      </div><h2 id="draft-regulations">Draft regulations</h2><p>Draft regulations are unique, inasmuch as they are ‘live’ but the measures that are associates with them do not take effect – they have no executive power and will not show up as active measures in the border systems or on the trade tariff service</p>
-<p>Draft regulations are identified by the prefix ‘C’ – we are continuing to use these draft regulations in the UK tariff because of the special properties that they have.</p>
+<h2 id="draft-regulations">Draft regulations</h2><p>Draft regulations are unique, inasmuch as they are ‘live’ but the measures that are associates with them do not take effect – they have no executive power and will not show up as active measures in the border systems or on the trade tariff service</p>
+<p>Draft regulations are identified by the prefix ‘C’.</p>
 <p>Draft regulations are especially useful for measures whose start date / legislative underpinning has not yet been decided, but out of expedience, it is necessary to start with measure data entry. If a draft regulation is not used, then any measures created on the Tariff Application will be ‘live’ and visible on the Trade Tariff Service, even if the user needs to move the time forward to see them.</p>
 <h3 id="approved-flag">Approved flag</h3><p>A regulation can either be “approved” or “not approved”. If a regulation is “not approved”, none of the measures that link to it will be active at the border, regardless of their validity dates. So the “approved” flag is like an on/off switch for all of the measures associated with a regulation.</p>
 <p>The use case is that sometimes it is appropriate to prepare and send new policy to border systems in advance before the legislation has been written or formally accepted by Parliament. In these cases, a draft regulation in a “not approved” state can be sent with all of the measures that it creates, and then when the legislation is signed off by Parliament the regulation can be simply updated to be “approved” and all of the measures become live.</p>
