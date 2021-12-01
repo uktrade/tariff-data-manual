@@ -317,7 +317,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#data-structures"><span>Data structures</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#key-business-rules"><span>Key business rules</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-2-key-business-rules"><span>Key business rules</span></a>
       </li>
     </ul>
   </li>
@@ -598,7 +598,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-area-membership"><span>Geographical area membership</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#relationship-of-measures-to-geographical-areas"><span>Relationship of measures to geographical areas</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#exclusions"><span>Exclusions</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#relationship-of-quotas-to-geographical-areas"><span>Relationship of quotas to geographical areas</span></a>
@@ -722,13 +722,13 @@
 <a href="#geographical-area-membership">Geographical area membership</a>
 </li>
 <li>
-<a href="#relationship-of-measures-to-geographical-areas">Relationship of measures to geographical areas</a>
+<a href="#exclusions">Exclusions</a>
 </li>
 <li>
 <a href="#relationship-of-quotas-to-geographical-areas">Relationship of quotas to geographical areas</a>
 <ul>
 <li>
-<a href="#key-business-processing-rules-geographical-areas">Key business processing rules – geographical areas</a>
+<a href="#key-business-rules">Key business rules</a>
 </li>
 </ul>
 <p></li>
@@ -741,37 +741,40 @@
 
 <ul>
 <li>a single country (like Namibia)</li>
-<li>a group of countries (like Cariforum, a Caribbean trading bloc)</li>
+<li>a group of countries (like <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/1033">Cariforum</a>, a Caribbean trading bloc)</li>
 <li>a region – a country that has yet to be fully incorporated, like Kosovo, which remains partially recognised.</li>
 </ul>
-<p>A quota may be assigned to multiple geographical area entities.  A geographical area that is defined as being a country group will have one or more countries (or regions) designated as members of that country group.</p>
+<p>A quota may be assigned to multiple geographical area entities. A geographical area that is defined as being a country group will have one or more countries (or regions) designated as members of that country group.</p>
 <h2 id="identifying-geographical-areas">Identifying geographical areas</h2><p>An identifier for a country group <code>geographical_area_id</code> is structured depending on the type of area.</p>
-<p>The geographical code field dictates what type of geographical area is involved:</p>
-
-<ul>
-<li>0 Country</li>
-<li>1 Country group</li>
-<li>2 Region</li>
-</ul>
-<p>For all countries and regions, the code is a 2-digit upper-case alphabetical string.
-For countries, this is based on the <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">international standard ISO_3166-1</a></p>
-<p>For regions (unincorporated states) the code is typically a 2-digit string beginning with <code>X</code>, followed by the first letter of the country.  For country groups, the code is an alpha-numeric string of 4-digits.</p>
-<p>For country groups set up by the EU, these 4-digit strings are always numeric, for example <code>1001</code> = Worldwide (Erga Omnes)</p>
-<p>Nationally setup groups are alpha-numeric, for example <code>F006</code> (Phytosanitary certificates)</p>
-<h2 id="country-groups">Country groups</h2><p>The previous example (F006 Phytosanitary certificates) shows that the country groups do not have to align to a globally understood trading entity like EU (1011), CARIFORUM (1033) or GSP LDC (2005).
-The fundamental  operation of Taric and TAP is to produce measures, which can be connected to just one single geographical area, it is simpler to create a group of countries and apply the measure to that group and not the individual countries.
-Some geographical areas are created to implement specific elements of trade policy, for example to execute the regulations associated with handloomed products.   A group has been set up to accommodate the countries to which a quota applies for such products – the name of the group is “Silk or cotton handloom products”.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/92506166-eee10b80-f1fc-11ea-9d9a-ef1157fad306.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/92506166-eee10b80-f1fc-11ea-9d9a-ef1157fad306.png" alt="" /></a></p>
-<h2 id="geographical-area-membership">Geographical area membership</h2><p>Geographical areas that represent country groups (area code <code>1</code>) are designed to include member countries.
-A geographical area group can only contain regions or countries (area codes <code>0</code> and <code>2</code>), not other geographical area groups. A geographical area’s membership of a country group has a start date and where required an end date.
-There are a few  cases where membership of geographical areas change. For example, countries move in and out of Generalised System of Preferences (GSP) tiers from year to year as they progress or decline economically.
-Steel safeguards are assigned to country groups created specifically for the purpose of applying punitive duties against large numbers of countries - these groups tend to change from year to year.
-Country groups could also be created to apply specific regulatory controls.</p>
-<h2 id="relationship-of-measures-to-geographical-areas">Relationship of measures to geographical areas</h2>
+<p>The geographical <code>area_code</code> field dictates what type of geographical area is involved:</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">Type</th>
+<th style="text-align: center">Area code</th>
+</tr><tr>
+<td style="text-align: center">Country</td>
+<td style="text-align: center">0</td>
+</tr><tr>
+<td style="text-align: center">Country group</td>
+<td style="text-align: center">1</td>
+</tr><tr>
+<td style="text-align: center">Region</td>
+<td style="text-align: center">2</td>
+</tr>
+        </table>
+      </div><p>For all countries and regions, the code is a 2-digit upper-case alphabetical string. For countries, this is based on the <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">international standard ISO 3166-1</a></p>
+<p>For regions (unincorporated states) the code is typically a 2-digit string beginning with <code>X</code>, followed by the first letter of the country.</p>
+<p>For country groups, the code is an alpha-numeric string of 4-digits. These 4-digit strings are almost always numeric. For example <code>1011</code> is for <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/1011">all countries</a>. Some legacy groups do contain letters; for example <code>F006</code> is for <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/F006">countries subject to phytosanitary certificates</a>.</p>
+<h2 id="country-groups">Country groups</h2><p>The previous example (F006 Phytosanitary certificates) shows that the country groups do not have to align to a globally understood trading entity like EU (1011), CARIFORUM (1033) or GSP LDC (2005).</p>
+<p>It is sometimes simpler to create a group of countries and apply a trade measure to that group and not the individual countries. Some geographical areas are created to implement specific elements of trade policy. For example, to execute the regulations associated with handloomed products, a group called <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/2300">&ldquo;Silk or cotton handloom products&rdquo;</a> has been set up to accommodate the countries to which a quota applies for such products.</p>
+<h2 id="geographical-area-membership">Geographical area membership</h2><p>Geographical areas that represent country groups (area code <code>1</code>) are designed to include member countries. A geographical area group can only contain regions or countries (area codes <code>0</code> and <code>2</code>), not other geographical area groups. A geographical area’s membership of a country group has a start date and where required an end date.</p>
+<p>There are a few cases where membership of geographical areas change. For example, countries move in and out of Generalised System of Preferences (GSP) tiers from year to year as they progress or decline economically.</p>
+<p>Steel safeguards are assigned to country groups created specifically for the purpose of applying punitive duties against large numbers of countries - these groups tend to change from year to year.</p>
+<h2 id="exclusions">Exclusions</h2>
 <ul>
 <li>All measures are assigned to precisely one geographical area.</li>
-<li>That area may be a country, region (non-incorporated country) or a group of countries.</li>
-<li>If the geographical area is a country group, then it is possible to exclude (one or more) members of that country group from the measure via inclusion in the <code>measure_excluded_geographical_areas</code> table.</li>
+<li>If the geographical area is a country group, then it is possible to exclude one or more members of that country group from the measure via inclusion in the <code>measure_excluded_geographical_areas</code> table.</li>
 <li>The excluded country must be a member of that group.</li>
 <li>Note: both the <code>excluded_geographical_area</code> and <code>geographical_area_id</code> fields refer to the excluded country, not the group.</li>
 </ul>
@@ -782,89 +785,8 @@ Country groups could also be created to apply specific regulatory controls.</p>
 <li>The relationship of geographical areas to quotas needs to be reflected in both the measures and quotas structures (except for licensed quotas).</li>
 <li>Therefore both the relationship of quotas to their origins and measures to the related geographical areas needs to be managed and synchronised in the data creation.</li>
 </ul>
-<h3 id="key-business-processing-rules-geographical-areas">Key business processing rules – geographical areas</h3><div class="table-container">
-        <table>
-          <tr>
-<th>ID</th>
-<th>Rule</th>
-</tr><tr>
-<td>GA1</td>
-<td>The combination geographical area ID plus the validity start date must be unique.</td>
-</tr><tr>
-<td>GA2</td>
-<td>The start date must be less than or equal to the end date.</td>
-</tr><tr>
-<td>GA3</td>
-<td>At least one description record is mandatory. The start date of the first description period must be equal to the start date of the geographical area. Two descriptions may not have the same start date. The start date of the description must be less than or equal to the end date of the geographical area.</td>
-</tr><tr>
-<td>GA4</td>
-<td>The referenced parent geographical area group must be an existing geographical area with area code = 1 (geographical area group).</td>
-</tr><tr>
-<td>GA5</td>
-<td>If a geographical area has a parent geographical area group then the validity period of the parent geographical area group must span the validity period of the geographical area.</td>
-</tr><tr>
-<td>Relationship with measures</td>
-<td></td>
-</tr><tr>
-<td>GA6</td>
-<td>Loops in the parent relation between geographical areas and parent geographical area groups are not allowed. If a geographical area A is a parent geographical area group of B then B cannot be a parent geographical area group of A (loops can also exist on more than two levels, e.g. level 3; If A is a parent of B and B is a parent of C then C cannot be a parent of A).</td>
-</tr><tr>
-<td>GA7</td>
-<td>The validity period of geographical area must not overlap any other geographical area with the same geographical area id.</td>
-</tr><tr>
-<td>GA10</td>
-<td>When a geographical area is referenced in a measure then the validity period of the geographical area must span the validity period of the measure.</td>
-</tr><tr>
-<td>GA11</td>
-<td>If a geographical area is referenced as an excluded geographical area in a measure then the membership period of the (excluded) geographical area must span the validity period of the measure.</td>
-</tr><tr>
-<td>Relation with geographical area membership</td>
-<td></td>
-</tr><tr>
-<td>GA12</td>
-<td>The referenced geographical area id (member) must exist.</td>
-</tr><tr>
-<td>GA13</td>
-<td>The referenced geographical area id (member) can only be linked to a country or region (area code = 0 or 2).</td>
-</tr><tr>
-<td>GA14</td>
-<td>The referenced geographical area group id must exist.</td>
-</tr><tr>
-<td>GA15</td>
-<td>The membership start date must be less than or equal to the membership end date.</td>
-</tr><tr>
-<td>GA16</td>
-<td>The validity period of the geographical area group must span all membership periods of its members.</td>
-</tr><tr>
-<td>GA17</td>
-<td>The membership period of a geographical area (member) must be within (inclusive) the validity period of the geographical area group (geographical area’s start and end date).</td>
-</tr><tr>
-<td>GA18</td>
-<td>When a geographical area is more than once member of the same group then there may be no overlap in their membership periods.</td>
-</tr><tr>
-<td>GA19</td>
-<td>If the associated geographical area group has a parent geographical area group then all the members of the geographical area group must also be members of the parent geographical area group.</td>
-</tr><tr>
-<td>GA20</td>
-<td>If the associated geographical area group has a parent geographical area group then the membership period of each member of the parent group must span the membership period of the same geographical area in the geographical area group.</td>
-</tr><tr>
-<td>Delete a geographical area</td>
-<td></td>
-</tr><tr>
-<td>GA21</td>
-<td>If a geographical area is referenced in a measure then it may not be deleted.</td>
-</tr><tr>
-<td>GA22</td>
-<td>A geographical area cannot be deleted if it is referenced as a parent geographical area group.</td>
-</tr><tr>
-<td>Delete a geographical area membership</td>
-<td></td>
-</tr><tr>
-<td>GA23</td>
-<td>If a geographical area is referenced as an excluded geographical area in a measure, the membership association with the measure geographical area group cannot be deleted.</td>
-</tr>
-        </table>
-      </div>
+<h3 id="key-business-rules">Key business rules</h3><p>Business rules that apply to geographical areas can be found in the <a href="https://uktrade.github.io/tamato/html/business_rules/geographical_areas.html">system documentation</a>.</p>
+
             
           </main>
 
