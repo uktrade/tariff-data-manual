@@ -314,7 +314,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#additional-codes-cannot-be-applied-universally"><span>Additional codes cannot be applied universally …</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#data-structures"><span>Data structures</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-2-data-structures"><span>Data structures</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#key-business-rules"><span>Key business rules</span></a>
@@ -476,6 +476,18 @@
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#defining-quotas"><span>Defining quotas</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#introductory-periods"><span>Introductory periods</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas-data-structures"><span>Data structures</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quota-exception-periods-and-events"><span>Quota exception periods and events</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#licensed-quotas"><span>Licensed quotas</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#business-rules"><span>Business rules</span></a>
@@ -734,12 +746,62 @@
 <ul>
 <li>
 <a href="#first-come-first-served-quotas">First Come, First Served Quotas</a>
+<ul>
+<li>
+<a href="#data-structures">Data structures</a>
 </li>
 <li>
-<a href="#in-depth-view-of-data-tables">In-depth view of data tables</a>
+<a href="#the-timespans-of-a-fcfs-quota">The timespans of a FCFS quota</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#quota-staging">Quota staging</a>
+</li>
+<li>
+<a href="#safeguard-quotas">Safeguard quotas</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#introductory-periods">Introductory periods</a>
+</li>
+<li>
+<a href="#data-structures">Data structures</a>
+<ul>
+<li>
+<a href="#criticality">Criticality</a>
+</li>
+<li>
+<a href="#managing-geography">Managing geography</a>
+</li>
+<li>
+<a href="#geographical-areas-concepts">Geographical areas – concepts</a>
+<ul>
+<li>
+<a href="#excluding-countries-from-quotas">Excluding countries from quotas</a>
+</li>
+<li>
+<a href="#key-data-fields-quota-order-number-origins">Key data fields - Quota order number origins &amp; exclusions table**</a>
+</li>
+<li>
+<a href="#strategies-for-managing-origins-and-exclusions">Strategies for managing origins and exclusions</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#quota-exception-periods-and-events">Quota exception periods and events</a>
 </li>
 <li>
 <a href="#licensed-quotas">Licensed quotas</a>
+<ul>
+<li>
+<a href="#quota-data-structures-and-fields">Quota data structures and fields</a>
+</li>
+<li>
+<a href="#licensed-quota-process-by-example-garlic">Licensed quota process – by example (garlic)</a>
 </li>
 </ul>
 </li>
@@ -858,29 +920,26 @@ For a good example of an origin quota, please see the cat &amp; dog food quota i
 
 <ul>
 <li>Above is a sample of the quota section of a reference document – it lists the quotas that are applicable to a given country or trading bloc (here is a mocked-up reference document for the ESA1 trading bloc).</li>
-<li>The three highlighted data elements (with largely made up data for illustration purposes only), are data fields over and above what the Taric requires: these are not data that is needed by the HMRC systems, but is of benefit to creating reference documents.</li>
-<li>In TAPv1, the reference document creation service had been created as a totally separate application (using Python / Django), whereas in round 2, it needs to be integrated.</li>
-<li>Please see the training document on reference documents for more information</li>
 </ul>
 <h3 id="first-come-first-served-quotas">First Come, First Served Quotas</h3>
 <ul>
 <li>First Come, First Served quotas are far more prevalent than licensed quotas on the Tariff database.</li>
 <li>As the name suggests this favours those traders that apply for the quota first</li>
-<li>Then, once the initial volume assigned to the quota has been fully depleted, the quota is deemed to be exhausted and is no longer available to draw down against. Once depleted, the trader’s import then falls back on the next best import duty, which may be a tariff preference, but it more likely just the MFN duty.</li>
-<li>There is an important difference in the way in which FCFS are managed compared to licensed quotas:</li>
-<li>FCFS quotas pass through the HMRC systems that are of greatest interest to the DIT Tariff Application (CHIEF and CDS)</li>
-<li>Licensed quotas do not touch HMRC systems: instead they are handled essentially off-system via the RPA (see following slides)</li>
-<li>The way in which the DIT application handles the different types of quotas is very different, as will be discussed.</li>
-</ul>
-<p><strong>The Taric and FCFS quotas</strong></p>
-<p>The data objects that are utilised for FCFS are vastly more numerous than those used for licensed quotas
-Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" alt="image" /></a></p>
-<p><strong>The timespans of a FCFS quota</strong></p>
+<li><p>Then, once the initial volume assigned to the quota has been fully depleted, the quota is deemed to be exhausted and is no longer available to draw down against. Once depleted, the trader’s import then falls back on the next best import duty, which may be a tariff preference, but it more likely just the MFN duty.</p></li>
+<li><p>There is an important difference in the way in which FCFS are managed compared to licensed quotas:</p>
 
 <ul>
+<li>FCFS quotas pass through the HMRC systems that are of greatest interest to the DIT Tariff Application (CHIEF and CDS)</li>
+<li>Licensed quotas do not touch HMRC systems: instead they are handled essentially off-system via the RPA.</li>
+</ul></li>
+</ul>
+<h4 id="data-structures">Data structures</h4><p>The data objects that are utilised for FCFS are vastly more numerous than those used for licensed quotas.</p>
+<p>Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" alt="image" /></a></p>
+<h4 id="the-timespans-of-a-fcfs-quota">The timespans of a FCFS quota</h4>
+<ul>
 <li>There are no limits on the periods that quotas can span, but there are commonalities, which these pages aim to share.</li>
-<li>There are no quotas that are essentially one-offs – a quota is a permanent instrument to balance trade, not a one-time hit. The only slight deviation from this concerns the quotas that have been put in place to provide checks and balances on the import of steel goods (Steel safeguards), which evolve annually: this is just because the instrument is immature, not because it is a one-off.</li>
+<li>There are no quotas that are essentially one-offs – a quota is a permanent instrument to balance trade, not a one-time hit.</li>
 <li>The following types of quota periodicity can be found in the tariff:
 
 <ul>
@@ -893,8 +952,7 @@ Licensed quotas essentially use just measures not any of the other quota related
 </ul></li>
 <li>These periods are enshrined in the legislation that engenders them – there is no deviation on the start and end dates of the periods (though watch out for leap years)</li>
 </ul>
-<p><strong>Quota staging</strong></p>
-
+<h3 id="quota-staging">Quota staging</h3>
 <ul>
 <li>The ultimate goal of a trade agreement is often to get to a place where there is a 0% import duty on goods being imported</li>
 <li>But, if that goal were to be reached immediately, the toxic shock to domestic producers would be potentially crippling, as  internal markets are swept away in one fell swoop by cheap and abundant imports.</li>
@@ -907,13 +965,9 @@ Licensed quotas essentially use just measures not any of the other quota related
 </ul></li>
 <li>Staging often appears in quotas created as part of a Trade Agreement, but never in WTO quotas or ATQs</li>
 </ul>
-<p><strong>Safeguard quotas</strong></p>
-
+<h3 id="safeguard-quotas">Safeguard quotas</h3>
 <ul>
-<li>Since 2018, the EU has imposed quotas as part of its Steel Safeguards programme. Since 2017, USA has imposed swingeing import duties on steel and related goods coming into the country in order to protect its own industry from collapse</li>
-<li>This led to a huge increase in the quantities of such goods coming into the European Union, as manufacturers (usually in the Far East), who previously had easy pickings in USA, now had to seek alternative markets.</li>
-<li>The knock-on impact was felt in EU domestic steel suppliers, hence the imposition of steel safeguards by the EU.</li>
-<li>Safeguards had been extremely rare in the EU until 2018 and the use of quotas to support them had never been seen. Now they are part of the EU’s defence armoury and will be adopted largely like-for-like by the UK after the end of the implementation period.</li>
+<li>Safeguards had been extremely rare in the tariff until 2018 and the use of quotas to support them had never been seen.</li>
 <li>The safeguard works like this:
 
 <ul>
@@ -923,22 +977,11 @@ Licensed quotas essentially use just measures not any of the other quota related
 <li>This function is documented in detail elsewhere – warning: it is hugely complex and warrants very detailed attention.</li>
 <li>Knowing about the concepts behind quotas before digging into the safeguards will prepare you for the complexity.</li>
 </ul>
-<p><strong>Introductory periods</strong></p>
-
+<h2 id="introductory-periods">Introductory periods</h2>
 <ul>
-<li>There are very many cases where an annual cadence is set up for a quota with an introductory period at the start that allows the quota to, for example, coincide with the Day One live implementation of a trade agreement, but to still allow the cadence to follow a marketing period.</li>
-<li>This ‘introductory period’ will be critical also in the migration of quotas from the EU to the UK – if the implementation period ends on December 31st 2020, then there will be many quotas which will naturally start in the UK tariff on 1st January 2021, 
-
-<ul>
-<li>This is the mode (annual quotas that run for a calendar year).</li>
-<li>But, any quota that does not commence on Jan 1st for its annual cadence will potentially require an introductory period</li>
-<li>for example, an annual quota that starts on July 1st will require a 6-month introductory period</li>
-<li>the steel safeguard quotas that typically run in quarters from July 1st to June 30th will require two introductory periods of three months each</li>
-<li>but a quotas which runs from Valentine’s day to the end of June will not</li>
-</ul></li>
+<li>There are very many cases where an annual cadence is set up for a quota with an introductory period at the start that allows the quota to, for example, coincide with the Day One live implementation of a trade agreement, but to still allow the cadence to follow a regular period.</li>
 </ul>
-<h3 id="in-depth-view-of-data-tables">In-depth view of data tables</h3><p><strong>Quota data structures and fields</strong></p>
-<p>The next slides go through the structure of quotas as per the Taric, starting with the overarching quota object, the quota order number table.</p>
+<h2 id="quotas-data-structures">Data structures</h2><p><strong>Quota data structures and fields</strong></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94041703-83816700-fdc2-11ea-9aab-54dc59286eec.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94041703-83816700-fdc2-11ea-9aab-54dc59286eec.png" alt="image" /></a></p>
 <p><strong>Key data fields - Quota order number table</strong></p>
 <div class="table-container">
@@ -957,7 +1000,7 @@ Licensed quotas essentially use just measures not any of the other quota related
 <td>
 <br>quota_order_number_id</td>
 <td>
-<br>•6-digit numerical field, e.g.   ‘091234’. In all current cases, the quota order number begins with the 2   digits ‘09’.<br>   <br>•If the first three digits are   ‘094’, then the quota must be a licensed quota: HMRC do not want to receive   data in the quota tables for such quotas.<br>   <br>•Depending on the needs of the   Northern Ireland Protocol, we may want to change away from using 09 as the   opening 2 digits, in order to clearly differentiate UK and EU quota order   numbers.<br>   <br>•Quota order numbers are not a   unique key: it it possible, and is frequently the case that an order number   is set up for a given period of time, then terminated, and restarted again at   a later date, either to reuse the order number for other purposes or because   the policy returns after an intermission.<br>   <br>•Additionally, quota order numbers   are terminated then restarted when the origins or origin exclusions change<br>   <br>•When a quota order number is used   on multiple occasions, a new record with a unique quota_order_number_sid   is created.</td>
+<br>•6-digit numerical field, e.g.   ‘091234’. In all current cases, the quota order number begins with the 2   digits ‘05’.<br>   <br>•If the third digit is ‘4’, then the quota must be a licensed quota.<br>      <br>•Quota order numbers are not a   unique key: it it possible, and is frequently the case that an order number   is set up for a given period of time, then terminated, and restarted again at   a later date, either to reuse the order number for other purposes or because   the policy returns after an intermission.<br>   <br>•Additionally, quota order numbers   are terminated then restarted when the origins or origin exclusions change<br>   <br>•When a quota order number is used   on multiple occasions, a new record with a unique quota_order_number_sid   is created.</td>
 </tr><tr>
 <td>
 <br>Validity   start date</td>
@@ -987,15 +1030,14 @@ Licensed quotas essentially use just measures not any of the other quota related
 <li>the in quota duties that apply</li>
 </ul></li>
 <li>There are a lot of tables that impact quotas, but the four below do the bulk of the work – the division of labour is noted</li>
-<li>You may also hear quota definition referred to as quota account by HMRC.”</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/94042165-20440480-fdc3-11ea-9fa4-1ca0392c15b9.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94042165-20440480-fdc3-11ea-9fa4-1ca0392c15b9.png" alt="image" /></a></p>
 <p><strong>The quota definition in pictures</strong></p>
 
 <ul>
 <li>This graphic shows the relationship between quota order numbers and quota definitions (quotas are invented)</li>
-<li>Imagine a world where a new regime starts, brand new on Jan 1st – it is virgin territory with nothing preceding it: this is not the case with the UK’s exit from the EU, where we will be continuing as much as we can.</li>
-<li>We want all quotas to start asap (unless set to specific marketing periods)</li>
+<li>Imagine a world where a new regime starts, brand new on Jan 1st – it is a new policy with nothing preceding it.</li>
+<li>We want all quotas to start asap (unless set to specific seasonal periods)</li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/94042307-4c5f8580-fdc3-11ea-8c27-fe9550714d24.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94042307-4c5f8580-fdc3-11ea-8c27-fe9550714d24.png" alt="image" /></a></p>
 <p><strong>Key data fields - Quota definition table</strong></p>
@@ -1035,32 +1077,34 @@ Licensed quotas essentially use just measures not any of the other quota related
 <td>
 <br>volume</td>
 <td>
-<br>•The current volume of the quota   definition – when DIT first set the volume, it should be set to the initial   volume.<br>   <br>•Once the quota is ‘handed over’   to HMRC and the start date has passed, DIT then has no ability to impact the   volume of the quota definition. If we try to send over an update to the   definition where the quota volume changes, the change will be rejected. <br>   <br>•We can only change the end date   and the description once the definition has started (formally), however this   is in name only, as there is no way of matching all the fields in the DIT XML   with the HMRC current data set and we cannot send over partial XML: once the   start date has passed, we can no longer influence the volume.</td>
+<br>•The current volume of the quota   definition – when DIT first set the volume, it should be set to the initial   volume.<br>
+</td>
 </tr><tr>
 <td>
 <br>initial_volume</td>
 <td>
-<br>•The initial volume of the quota –   this remains constant in the HMRC systems post-initiation of the definition   period.<br>   <br>•We set the volume and initial   volume to the same figure<br>   <br>•Only the volume decrements in   HMRC systems<br>   <br>•Volume is dependent of the units   (see next slide)</td>
+<br>•The initial volume of the quota –   this remains constant in the border systems post-initiation of the definition   period.<br>   <br>•We set the volume and initial   volume to the same figure<br>   <br>•Only the volume decrements in   border systems<br>   <br>•Volume is dependent of the units   (see next slide)</td>
 </tr><tr>
 <td>
 <br>measurement_unit_code</td>
 <td>
-<br>•The primary unit in which the   quota volume is measured<br>   <br>•Usually this will be kilogrammes,   sometimes it is litres, of number of items<br>   <br>•In migrating from the EU data set   into the UK data set, watch out for sloppiness and inconsistency in the   legislation compared to the implementation – this can affect the units in   which quotas are declared.<br>   <br>•In terms of operationalising a   quota, it is preferable to use a smaller unit rather than a large one – i.e.   you will see most quotas are defined against a unit of KGM rather than TNE   (tonne), as this allows traders to bring in smaller amounts and account for   them accurately.<br>   <br>•The legislation will often refer   to tonnes – you will need to multiply the volumes by 1,000 in that case</td>
+<br>•The primary unit in which the   quota volume is measured<br>   <br>•Usually this will be kilogrammes,   sometimes it is litres, of number of items<br>   <br>   <br>•In terms of operationalising a   quota, it is preferable to use a smaller unit rather than a large one – i.e. a unit of KGM rather than TNE   (tonne), as this allows traders to bring in smaller amounts and account for   them accurately.<br>   <br>•The legislation will often refer   to tonnes</td>
 </tr><tr>
 <td>
 <br>measurement_unit_<br>     qualifier_code</td>
 <td>
-<br>•If the measurement unit needs   further definition, then the measurement unit qualifier code can be used to   provide that additional definition: it is used sparingly. See the document on   measure components for more info, as the concept for quota definitions is the   same,</td>
+<br>•If the measurement unit needs   further definition, then the measurement unit qualifier code can be used to   provide that additional definition: it is used sparingly. See the document on   measure components for more info, as the concept for quota definitions is the   same.</td>
 </tr><tr>
 <td>
 <br>maximum_precision</td>
 <td>
-<br>•This is invariably set to 3 these   days. It determines the number of decimal places that a trader can enter into   their declaration form requesting an allocation (allows for grams of goods to   be imported against a quota measured in kilos)</td>
+<br>•This is always set to 3 for current quotas. It determines the number of decimal places that a trader can enter into   their declaration form requesting an allocation (allows for grams of goods to   be imported against a quota measured in kilos)</td>
 </tr><tr>
 <td>
 <br>critical_state</td>
 <td>
-<br>•The critical state determines if   a trader needs to pay securities (essentially a deposit) when utilising the   quota.<br>   <br>•There are two states Yes or No.   If the state is set to Yes, then securities are required; if set to No, then   securities are not required.<br>   <br>•DIT do not need to care about the   mechanism for collecting securities, as this falls into the HMRC domain<br>   <br>•It it is a DIT responsibility to   set criticality however for all definitions: the unwritten rules around   criticality are described in a few slides time</td>
+<br>•The critical state determines if   a trader needs to pay securities (essentially a deposit) when utilising the   quota.<br>   <br>•There are two states: Yes or No.   If the state is set to Yes, then securities are required; if set to No, then   securities are not required.<br>
+</td>
 </tr><tr>
 <td>
 <br>critical_threshold</td>
@@ -1070,16 +1114,17 @@ Licensed quotas essentially use just measures not any of the other quota related
 <td>
 <br>monetary_unit_code</td>
 <td>
-<br>•In the EU tariff, there are a few   quotas that are measured according to the total value   of the goods coming into the bloc rather than weight / volume etc.<br>   <br>•See   quotas 090103, 090101, 090106, 090104, 092501, 092501, 090825, 090786<br>   <br>•The   first 6 of these are silk or fine materials: presumably they are so gossamer   thin that weight is irrelevant and only monetary value is of interest<br>   <br>•The   others are house plants etc from Norway, which is a quota that we do not   intend to pursue in the UK (at the last count)<br>   <br>•It   is an oddity of Taric that, even though there are values in the measurement   unit table that look like they could be used for this purpose, they are not   used in this way (EURO - Euro – for statistic purposes is a valid measurement   unit)<br>   <br>•Even though the UK tariff shows   no inclination of adopting any of these 8 quotas, we will still need to   maintain this functionality going forward: what if we do introduce quotas on   silk products in the future? That may be unlikely, as we have no silk industry   in the UK of course (it is big in Italy).</td>
+<br>•In the tariff, there are a few   quotas that are measured according to the total value   of the goods coming into the bloc rather than weight / volume etc.<br>  •The   first of these are silk or fine materials: presumably they are so gossamer   thin that weight is irrelevant and only monetary value is of interest<br>   •It   is an oddity of Taric that, even though there are values in the measurement   unit table that look like they could be used for this purpose, they are not   used in this way (EURO - Euro – for statistic purposes is a valid measurement   unit)<br>
+</td>
 </tr><tr>
 <td>
 <br>description</td>
 <td>
-<br>•This field has little overt value   and no way of exposing it to the trading public, however it is of value to   populate the field to provide an ‘at a glance’ view of the nature of the   definition.<br>   <br>•It is a weakness of the Taric   data structure that there is no way of defining a ‘description’ of the quota   as a whole.<br>   <br>•TAP 1’s preference was to create   a description against the quota order number itself and then to inherit that   down to the definitions that belong to the quota, appending specifics of the   definition to the definition’s description (such as the dates), though this   could be construed as superfluous.</td>
+<br>•This field has little overt value   and no way of exposing it to the trading public, however it is of value to   populate the field to provide an ‘at a glance’ view of the nature of the   definition.<br>   <br>•It is a weakness of the Taric   data structure that there is no way of defining a ‘description’ of the quota   as a whole.<br>
+</td>
 </tr>
         </table>
-      </div><p><strong>Criticality</strong></p>
-
+      </div><h3 id="criticality">Criticality</h3>
 <ul>
 <li>As described above, the critical state determines if a trader needs to pay securities when utilising the quota.</li>
 <li>The purpose of the requirement to collect securities is to
@@ -1088,47 +1133,23 @@ Licensed quotas essentially use just measures not any of the other quota related
 <li>a) attempt to provide some sort of level playing field for traders as a quota reaches exhaustion</li>
 <li>b) try to reduce returns towards the end of a definition’s active life span – managing returns is a hassle and if a trader has paid a security, the are less likely to be blasé with unused quota volume.</li>
 </ul></li>
-<li>It is up to DIT to set the critical state of a quota definition, as we set all the properties of a quota definition period before it has begun, including critical state.</li>
-<li>The rules of thumb are:</li>
-<li>a new quota should be set to critical for three years so that there is an opportunity to study trade flows to determine if the volumes are correct</li>
-<li>setting critical to ‘Y’ for this period ensures that the trade flow is more reflective of actual trade, dispensing with traders that declare a need for quota volume, but then do not use it.</li>
-<li>BUT at the same time, for HMRC to take securities is a major overhead and they prefer not to in all cases.</li>
-<li>So, during the 3 non-Brexits to date, the critical state for all quota definition periods has been set to N initially:
-
-<ul>
-<li>in order to reduce workload for HMRC</li>
-<li>because most trade flows were fairly well known through UK;s membership of the EU</li>
-<li>we were not introducing many genuinely new quotas (though the maxim was applied to all)</li>
-</ul></li>
-<li>HMRC will need to be consulted in the lead-up to the implementation period on what they want to do with criticality: it is their domain, but our responsibility to set the initial state. This will be especially vital if we kick off any brand new trade deals with new overseas trading partners on Day One, which is remotely possible.</li>
 </ul>
-<p><strong>Managing geography</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" alt="image" /></a></p>
+<h3 id="managing-geography">Managing geography</h3><p><a href="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" alt="image" /></a></p>
 <p>A FCFS quota only works when the full set of quota tables and measure tables are all set up and synchronised. It’s important to understand a few points around the geography of these two entities in order to create the right data.
 * geography has to be set correctly against both the measure and the quota order number
 * while the measures table has a 1-2-1 relationship with geographical areas, the quota order number table can relate to multiple origins via the many-to-many linking table “quota order number origins”.</p>
-<p>*<em>Geographical areas – concepts *</em></p>
-<p><em>Assigning quotas to countries</em></p>
-
+<h3 id="geographical-areas-concepts">Geographical areas – concepts</h3>
 <ul>
 <li>A quota can be assigned either to an individual country or to a group of countries</li>
-<li>As described on the previous page, it may also be assigned to multiple (single) countries as well; theoretically, there is no reason why the quota cannot be assigned to multiple country groups simultaneously, though this has never happened.</li>
-<li>There are currently (in the EU tariff) several quotas that are assigned to multiple (single) countries, but these will not carry over into the UK tariff (needs to be re-checked).
-
-<ul>
-<li>For example, quota order number 091530 is assigned to import of wines from the Western Balkan states of Albania, Bosnia and Herzegovina, Kosovo, North Macedonia, Montenegro and Serbia.</li>
-<li>While the UK will aim to engineer trade agreements with all 6 of these prior to the end of the implementation period, the quotas will be split into individual quotas per country.</li>
-</ul></li>
-<li>The aim must be to still permit assignment of quotas to multiple countries however, as the model permits it.</li>
-<li>For each assignment of geographical area to quota order number, the following is required:
+<li><p>As described, it may also be assigned to multiple (single) countries as well; theoretically, there is no reason why the quota cannot be assigned to multiple country groups simultaneously, though this has never happened.</p></li>
+<li><p>For each assignment of geographical area to quota order number, the following is required:</p>
 
 <ul>
 <li>a record in the measures table, linking geographical_area_id and ordernumber.</li>
 <li>a record in the quota_order_number_origins table, linking geographical_area_id and quota_order_number_id.</li>
 </ul></li>
 </ul>
-<p><em>Excluding countries from quotas</em></p>
-
+<h4 id="excluding-countries-from-quotas">Excluding countries from quotas</h4>
 <ul>
 <li>When a quota is assigned to a country group, it is possible and very common to exclude countries from that group, such that the quota does not apply to that country. Examples of this are:
 
@@ -1144,8 +1165,7 @@ Licensed quotas essentially use just measures not any of the other quota related
 <li>a record in the measure_excluded_geographical_areas table, linking the origin and the excluded geographical area.</li>
 </ul></li>
 </ul>
-<p><strong>Key data fields - Quota order number origins &amp; exclusions table</strong></p>
-<div class="table-container">
+<h4 id="key-data-fields-quota-order-number-origins-amp-exclusions-table">Key data fields - Quota order number origins &amp; exclusions table**</h4><div class="table-container">
         <table>
           <tr>
 <th>
@@ -1204,126 +1224,33 @@ Licensed quotas essentially use just measures not any of the other quota related
 </tr>
         </table>
       </div><p>Any entries made in these two quota origin-related tables must also be matched by entries in the measures and measure_excluded_geographical_areas tables.</p>
-<p><strong>Strategies for managing origins and exclusions</strong></p>
-
+<h4 id="strategies-for-managing-origins-and-exclusions">Strategies for managing origins and exclusions</h4>
 <ul>
 <li>Quota order number origins have start dates and end dates</li>
 <li>Quota order number origins do not have start dates and end dates</li>
-<li>If you want to alter the quota order number origin exclusions for a quota, and you don’t want it to happen immediately, you cannot just add the exclusion to the origin: it will take effect immediately, which is almost certainly not the requirement.</li>
-<li>As case in point is the steel safeguards:
-
-<ul>
-<li>each year to date, the origin exclusions have been tweaked as the EU has discovered more about world trade flows and the impact of both the US and EU safeguards on that flow</li>
-<li>the EU has not been able to just remove and add exclusions</li>
-</ul></li>
-<li>There are two options:
+<li><p>If you want to alter the quota order number origin exclusions for a quota, and you don’t want it to happen immediately, you cannot just add the exclusion to the origin: it will take effect immediately, which is almost certainly not the requirement.</p></li>
+<li><p>There are two options:</p>
 
 <ul>
 <li>either end the origin and start another origin</li>
 <li>or end the quota order number and start another quota order number with a new origin</li>
 </ul></li>
-<li>The EU chooses the latter option: terminating the quota order number and replacing with another one starting the next day with a new origin.
-
-<ul>
-<li>in TAP1, we followed this route: the alternative route may also be followed.</li>
-</ul></li>
 </ul>
-<p><strong>Quota exception periods and events</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" alt="image" /></a></p>
+<h2 id="quota-exception-periods-and-events">Quota exception periods and events</h2><p><a href="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" alt="image" /></a></p>
 
 <ul>
-<li>Linked to the definition tables are 8 additional tables:
-
-<ul>
+<li>Linked to the definition tables are 8 additional tables:</li>
 <li>2 of these, the period tables are useful – these are discussed in the relevant documents (blocking and suspending quotas)</li>
-<li>The other 6 are of no interest to DIT in terms of managing the UK tariff – these are reflections of the operational state of EU quotas. As DIT has no interest in the operationalisation of the quotas, we will not need to worry about them.</li>
-</ul></li>
-<li>If there is a requirement to continue to support the EU tariff, then all data tables should be loaded, including the events tables.</li>
-<li>The tables are extremely simple nonetheless, should they be required.</li>
 <li>There is an additional entity in the XSD, the quota.closed.and.transferred.event which is historical</li>
 </ul>
-<p><strong>HMRC and DIT responsibilities re: quotas</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94045429-5be0cd80-fdc7-11ea-944e-94744b598ec7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94045429-5be0cd80-fdc7-11ea-944e-94744b598ec7.png" alt="image" /></a></p>
-<h3 id="licensed-quotas">Licensed quotas</h3><p><strong>Quota data structures and fields</strong></p>
-<p>None of the quota tables outside of the blue box below are relevant to licensed quotas</p>
+<h2 id="licensed-quotas">Licensed quotas</h2><h3 id="quota-data-structures-and-fields">Quota data structures and fields</h3><p>None of the quota tables outside of the blue box below are relevant to licensed quotas</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94045622-9a768800-fdc7-11ea-8f89-1ed976e90b86.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94045622-9a768800-fdc7-11ea-8f89-1ed976e90b86.png" alt="image" /></a></p>
-<p><strong>Licensed quotas – which products and how many?</strong></p>
 
 <ul>
 <li>The ways to apply for the use of a licensed quota are laid out in the regulations that support them and they may differ according to the product that is concerned.</li>
-<li>Licensed quotas are never used for anything other than agricultural products</li>
+<li>Licensed quotas have never been used for anything other than agricultural products</li>
 </ul>
-<div class="table-container">
-        <table>
-          <tr>
-<th>
-<br>Chapter</th>
-<th>
-<br>Measure count</th>
-</tr><tr>
-<td>
-<br>Chapter   01 - LIVE ANIMALS</td>
-<td>
-<br>50</td>
-</tr><tr>
-<td>
-<br>Chapter   02 - MEAT AND EDIBLE MEAT OFFAL</td>
-<td>
-<br>1011</td>
-</tr><tr>
-<td>
-<br>Chapter   04 - DAIRY PRODUCE; BIRDS&rsquo; EGGS; NATURAL HONEY; EDIBLE PRODUCTS OF ANIMAL   ORIGIN, NOT ELSEWHERE SPECIFIED OR INCLUDED</td>
-<td>
-<br>260</td>
-</tr><tr>
-<td>
-<br>Chapter   07 - EDIBLE VEGETABLES AND CERTAIN ROOTS AND TUBERS</td>
-<td>
-<br>14</td>
-</tr><tr>
-<td>
-<br>Chapter   10 - CEREALS</td>
-<td>
-<br>116</td>
-</tr><tr>
-<td>
-<br>Chapter   11 - PRODUCTS OF THE MILLING INDUSTRY; MALT; STARCHES; INULIN; WHEAT GLUTEN</td>
-<td>
-<br>13</td>
-</tr><tr>
-<td>
-<br>Chapter   15 - ANIMAL OR VEGETABLE FATS AND OILS AND THEIR CLEAVAGE PRODUCTS; PREPARED   EDIBLE FATS; ANIMAL OR VEGETABLE WAXES</td>
-<td>
-<br>1</td>
-</tr><tr>
-<td>
-<br>Chapter   16 - PREPARATIONS OF MEAT, OF FISH OR OF CRUSTACEANS, MOLLUSCS OR OTHER   AQUATIC INVERTEBRATES</td>
-<td>
-<br>73</td>
-</tr><tr>
-<td>
-<br>Chapter   17 - SUGARS AND SUGAR CONFECTIONERY</td>
-<td>
-<br>62</td>
-</tr><tr>
-<td>
-<br>Chapter   20 - PREPARATIONS OF VEGETABLES, FRUIT, NUTS OR OTHER PARTS OF PLANTS</td>
-<td>
-<br>8</td>
-</tr><tr>
-<td>
-<br>Chapter   35 - ALBUMINOIDAL SUBSTANCES; MODIFIED STARCHES; GLUES; ENZYMES</td>
-<td>
-<br>13</td>
-</tr><tr>
-<td>
-<br>Grand Total</td>
-<td>
-<br>1621</td>
-</tr>
-        </table>
-      </div><p><strong>Licensed quota process – by example (garlic)</strong></p>
-
+<h3 id="licensed-quota-process-by-example-garlic">Licensed quota process – by example (garlic)</h3>
 <ul>
 <li>Possible garlic traders are grouped into two groups:
 
@@ -1334,382 +1261,11 @@ Licensed quotas essentially use just measures not any of the other quota related
 <li>All declarants must register with the RPA (Rural Payments Agency)</li>
 <li>Applications must be submitted using an import licence application form (AGRIM), downloadable from gov.uk</li>
 <li>Quota applications may be made at certain specific periods in the year (for garlic, applications must be received during the first seven calendar days of April, July, October and January), and must be accompanied by securities and proof of trade</li>
-<li>Licenses are issued within a given date window, and may be used then in a short fixedperiod only from the point of issue</li>
-<li>Most importantly for us, all we need to set up is the relationship between thecommodity, the measure type, the time period, the in-quota duty rate and the origin– there is no concept of number of licenses / import volumes to be concernedabout in DIT.</li>
+<li>Licenses are issued within a given date window, and may be used then in a short fixed period only from the point of issue</li>
+<li>All that is in the tariff data is the relationship between the commodity, the measure type, the time period, the in-quota duty rate and the origin – there is no concept of number of licenses / import volumes in the tariff data.</li>
 </ul>
-<p><strong>TAP 1 – Approach to licensed quotas</strong></p>
+<h2 id="business-rules">Business rules</h2><p>Business rules for quotas can be found in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
 
-<ul>
-<li>The approach to building quotas in the first version of the Tariff Application was to not use any of the tables outside of the blue marquee on the previous screen for building licensed quotas.</li>
-<li>The reason for this was to avoid any data for licensed quotas being sent to the HMRC systems that would cause compatibility issues on arrival. Therefore, that project only used the measures table for licensed quotas</li>
-<li>It may be considered as useful to use at least the quota_order_number table to capture quota order numbers in the 2nd iteration if this helps certain functions in the new application, such as the quota search function, then it may be advisable to utilise this table</li>
-<li>The approach needs to be decided by the new team</li>
-<li>The database that you will receive on arrival will contain no reference to licensed quotas at all in any tables other than the measures table.</li>
-</ul>
-<h2 id="business-rules">Business rules</h2><div class="table-container">
-        <table>
-          <tr>
-<th>
-<br>#</th>
-<th>
-<br>Description</th>
-<th>
-<br>Notes</th>
-</tr><tr>
-<td>
-<br>ON1</td>
-<td>
-<br>Quota order number id + start date must be unique</td>
-<td>
-<br>Required – high priority<br>   <br>It is very possible to have more than one quota order number   with the same ID, and this is used for quotas that become obsolete and then   the quota order number is reused. This will be less of an issue for the UK,   as we will be using “08” as the 1st two digits rather than “09”,   therefore no chance of reuse. But this needs to be checked anyway.</td>
-</tr><tr>
-<td>
-<br>ON2</td>
-<td>
-<br>There may be no overlap in time of two quota order numbers   with the same quota order number id.</td>
-<td>
-<br>Required – high priority<br>   <br>This is actually to be delivered as part of ON1 – and   supersedes it – not overlap of start / end dates permitted for QONs. This   includes for quotas that are not terminated.</td>
-</tr><tr>
-<td>
-<br>ON3</td>
-<td>
-<br>The start date must be less than or equal to the end date.</td>
-<td>
-<br>Required – medium priority<br>   <br>When setting up a new quota order number, the opportunity   must not be given to set an end date, and in general users should be   discouraged from adding in end dates to quotas.</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Quota   order number origins</td>
-<td></td>
-</tr><tr>
-<td>
-<br>ON4</td>
-<td>
-<br>The referenced geographical area must exist.</td>
-<td>
-<br>Required – medium priority<br>   <br>Each origin must point to one and one only geographical area   ID of any of the three types - even though there may be multiple origins   assigned to a quota order number simultaneously. Set as medium, as quota   order number origins will be pulled from a dropdown / type-ahead list.</td>
-</tr><tr>
-<td>
-<br>ON5</td>
-<td>
-<br>There may be no overlap in time of two quota order number   origins with the same quota order number SID and geographical area id.</td>
-<td>
-<br>Required – high priority<br>   <br>Also applies to quota order number origins that are not   terminated.</td>
-</tr><tr>
-<td>
-<br>ON6</td>
-<td>
-<br>The validity period of the geographical area must span the   validity period of the quota order number origin.</td>
-<td>
-<br>Required – medium priority<br>   <br>Made much easier if tariff managers never end date   geographical areas.</td>
-</tr><tr>
-<td>
-<br>ON7</td>
-<td>
-<br>The validity period of the quota order number must span   the validity period of the quota order number origin.</td>
-<td>
-<br>Required – medium priority<br>   <br>As per description</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Relation   with quota definition</td>
-<td></td>
-</tr><tr>
-<td>
-<br>ON8</td>
-<td>
-<br>The validity period of the quota order number must span   the validity period of the referencing quota definition.</td>
-<td>
-<br>Required – high priority<br>   <br>As per description</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Relation with Measure</td>
-<td></td>
-</tr><tr>
-<td>
-<br>ON9</td>
-<td>
-<br>When a quota order number is used in a measure then the   validity period of the quota order number must span the validity period of   the measure. This rule is only applicable for measure with start date after   31/12/2007.</td>
-<td>
-<br>Required – high priority<br>   <br>Made much easier if tariff managers never end date   quota order numbers</td>
-</tr><tr>
-<td>
-<br>ON10</td>
-<td>
-<br>When a quota order number is used in a measure then the   validity period of the quota order number origin must span the validity   period of the measure. This rule is only applicable for measures with start   date after 31/12/2007.</td>
-<td>
-<br>Required – high priority<br>   <br>Made much easier if tariff managers never end date   quota order numbers &amp; their origins</td>
-</tr><tr>
-<td>
-<br>ON11</td>
-<td>
-<br>The quota order number cannot be deleted if it is used in   a measure. This rule is only applicable for measure with start date after   31/12/2007.</td>
-<td>
-<br>Required – low priority<br>   <br>Just don’t delete quota order numbers</td>
-</tr><tr>
-<td>
-<br>ON12</td>
-<td>
-<br>The quota order number origin cannot be deleted if it is   used in a measure. This rule is only applicable for measure with start date   after 31/12/2007.</td>
-<td>
-<br>Required – low priority<br>   <br>Just don’t delete quota order number origins</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Quota order number origin exclusions</td>
-<td></td>
-</tr><tr>
-<td>
-<br>ON13</td>
-<td>
-<br>An exclusion can only be entered if the order number   origin is a geographical area group (area code = 1).</td>
-<td>
-<br>Required – high priority<br>   <br>As per description</td>
-</tr><tr>
-<td>
-<br>ON14</td>
-<td>
-<br>The excluded geographical area must be a member of the   geographical area group.</td>
-<td>
-<br>Required – high priority<br>   <br>As per description</td>
-</tr><tr>
-<td>
-<br>QD1</td>
-<td>
-<br>Quota order number id + start date must be unique.</td>
-<td>
-<br>Required – high priority<br>   <br>Definitions always have start and end dates and there   are almost always multiple definitions per quota order number; there actually   must be no overlap in the quota definition periods, so it is more than just   the start dates that need to be compared.</td>
-</tr><tr>
-<td>
-<br>QD2</td>
-<td>
-<br>The start date must be less than or equal to the end date</td>
-<td>
-<br>Required – medium priority<br>   <br>As per description</td>
-</tr><tr>
-<td>
-<br>QD3</td>
-<td>
-<br>The quota order number must exist.</td>
-<td>
-<br>Required – high priority<br>   <br>QD1 cannot pass without QD3 being valid</td>
-</tr><tr>
-<td>
-<br>QD4</td>
-<td>
-<br>The monetary unit code must exist</td>
-<td>
-<br>Not required<br>   <br>We will only be using pound sterling AND I believe that   all 6 of the quotas that use the monetary unit as their unit, instead of any   other measure type, have been abandoned in the UK tariff. This is very   lightweight, but expensive, materials, that can not easily be measured in   terms of their weight.</td>
-</tr><tr>
-<td>
-<br>QD5</td>
-<td>
-<br>The measurement unit code must exist.</td>
-<td>
-<br>Required – high priority<br>   <br>As per description – this is the measurement unit that   is aligned to the opening quota balance – don’t forget to use KGM, even if   the policy team give you TNE (in most cases)</td>
-</tr><tr>
-<td>
-<br>QD6</td>
-<td>
-<br>The measurement unit qualifier code must exist.</td>
-<td>
-<br>Required – high priority<br>   <br>Or the measurement unit qualifier can be left blank …   which is the case with nearly all quotas</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Relation with quota order number</td>
-<td></td>
-</tr><tr>
-<td>
-<br>QD7</td>
-<td>
-<br>The validity period of the quota definition must be   spanned by one of the validity periods of the referenced quota order number.</td>
-<td>
-<br>Required – medium priority<br>   <br>Just don’t end date quota order numbers – and only use   them once; will save a lot of time</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Relation with monetary unit</td>
-<td></td>
-</tr><tr>
-<td>
-<br>QD8</td>
-<td>
-<br>The validity period of the monetary unit code must span   the validity period of the quota definition.</td>
-<td>
-<br>Not required<br>   <br>We will only be using pound sterling</td>
-</tr><tr>
-<td>
-<br>QD9</td>
-<td>
-<br>The monetary unit code must always be the Euro ISO code   (or Ecu for quota defined prior to the Euro Definition).</td>
-<td>
-<br>Not required<br>   <br>We will only be using pound sterling</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Relation with measurement unit</td>
-<td></td>
-</tr><tr>
-<td>
-<br>QD10</td>
-<td>
-<br>The validity period of the measurement unit code must span   the validity period of the quota definition.</td>
-<td>
-<br>Required – low priority<br>   <br>Just do not terminate the measurement units</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Relation with measurement unit qualifier</td>
-<td></td>
-</tr><tr>
-<td>
-<br>QD11</td>
-<td>
-<br>The validity period of the measurement unit qualifier code   must span the validity period of the quota definition.</td>
-<td>
-<br>Required – low priority<br>   <br>Just do not terminate the measurement qualifier units</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Relation with quota event</td>
-<td></td>
-</tr><tr>
-<td>
-<br>QD12</td>
-<td>
-<br>If quota events exist for a quota definition, the start   date of the quota definition cannot be brought forward.</td>
-<td>
-<br>Not required<br>   <br>We do not deal in quota events – preserve of CDS</td>
-</tr><tr>
-<td>
-<br>QD13</td>
-<td>
-<br>If quota events exist for a quota definition, the start   date can only be postponed up to the date of the first quota event.</td>
-<td>
-<br>Not required<br>   <br>We do not deal in quota events – preserve of CDS</td>
-</tr><tr>
-<td>
-<br>QD14</td>
-<td>
-<br>If quota events exist for a quota definition, the end date   of the quota definition can be postponed.</td>
-<td>
-<br>Not required<br>   <br>We do not deal in quota events – preserve of CDS</td>
-</tr><tr>
-<td>
-<br>QD15</td>
-<td>
-<br>If quota events exist for a quota definition, the end date   can only be brought forward up to the date of the last quota event on that   quota definition.</td>
-<td>
-<br>Not required<br>   <br>We do not deal in quota events – preserve of CDS</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Quota Association</td>
-<td></td>
-</tr><tr>
-<td>
-<br>QA1</td>
-<td>
-<br>The association between two quota definitions must be   unique.</td>
-<td>
-<br>Required – high priority<br>   <br>Associations are made between a definition of a main   (parent) quota and a definition of a sub (child) quota. There may not be more   than one association connecting the same two definitions.</td>
-</tr><tr>
-<td>
-<br>QA2</td>
-<td>
-<br>The sub-quota’s validity period must be entirely enclosed   within the validity period of the main quota</td>
-<td>
-<br>Required – high priority<br>   <br>Associations are made between a definition of a main   (parent) quota and a definition of a sub (child) quota. There may not be more   than one association connecting the same two definitions.</td>
-</tr><tr>
-<td>
-<br>QA3</td>
-<td>
-<br>When converted to the measurement unit of the main quota,   the volume of a sub-quota must always be lower than or equal to the volume of   the main quota.</td>
-<td>
-<br>Required – medium priority<br>   <br>In fact, we should never permit there to be different   units on the main and sub quotas – it becomes impossible to manage</td>
-</tr><tr>
-<td>
-<br>QA4</td>
-<td>
-<br>Whenever a sub-quota receives a coefficient, this has to   be a strictly positive decimal number. When it is not specified a value of 1   is always assumed</td>
-<td>
-<br>Required – high priority<br>   <br>Ignore the 2nd clause here – we must always be explicit   in specifying the coefficient for all associations</td>
-</tr><tr>
-<td>
-<br>QA5</td>
-<td>
-<br>Whenever a sub-quota is defined with the ‘equivalent’   type, it must have the same volume as the ones associated with the parent   quota. Moreover it must be defined with a coefficient not equal to 1</td>
-<td>
-<br>Required – high priority<br>   <br>As per description</td>
-</tr><tr>
-<td>
-<br>QA6</td>
-<td>
-<br>Sub-quotas associated with the same main quota must have   the same relation type</td>
-<td>
-<br>Required – high priority<br>   <br>As per description – there is often, but not always,   more than one association of a main quota to sub quotas – they must be of the   same type</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Quota Blocking Period</td>
-<td></td>
-</tr><tr>
-<td>
-<br>QBP1</td>
-<td>
-<br>The quota definition SID must exist.</td>
-<td>
-<br>Required – medium priority<br>   <br>Will be picked from a dropdown</td>
-</tr><tr>
-<td>
-<br>QBP2</td>
-<td>
-<br>The start date of the quota blocking period must be later   than or equal to the start date of the quota validity period.</td>
-<td>
-<br>Required – high priority<br>   <br>This actually means the quota definition validity   period, not the quota order number – quite unclear. They also omit to say   that the end date of the blocking period must be no later than the end date   of the definition</td>
-</tr><tr>
-<td>
-<br>QBP3</td>
-<td>
-<br>The end date of the quota blocking period must be later   than the start date of the quota blocking period.</td>
-<td>
-<br>Required – high priority<br>   <br>As per description</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Quota Suspension Period</td>
-<td></td>
-</tr><tr>
-<td>
-<br>QSP1</td>
-<td>
-<br>The quota definition SID must exist.</td>
-<td>
-<br>Required – medium priority<br>   <br>Will be picked from a dropdown</td>
-</tr><tr>
-<td>
-<br>QSP2</td>
-<td>
-<br>The validity period of the quota must span the quota   suspension period.</td>
-<td>
-<br>Required – high priority<br>   <br>This actually means the quota definition validity   period, not the quota order number – quite unclear. But a better, more   generic description than re: blocking periods.</td>
-</tr><tr>
-<td><br></td>
-<td>
-<br>Extended Quota Information</td>
-<td></td>
-</tr><tr>
-<td>
-<br>QEI1</td>
-<td>
-<br>The quota definition SID must exist.</td>
-<td>
-<br>Not required<br>   <br>Extended information table is not used by DIT</td>
-</tr>
-        </table>
-      </div>
             
           </main>
 
