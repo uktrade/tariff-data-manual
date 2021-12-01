@@ -754,14 +754,6 @@
 </li>
 <li>
 <a href="#business-rules">Business rules</a>
-<ul>
-<li>
-<a href="#certificate-types">Certificate types</a>
-</li>
-<li>
-<a href="#certificates">Certificates</a>
-</li>
-</ul>
 </li>
 </ul></p>
 
@@ -845,64 +837,8 @@
 </tr>
         </table>
       </div><p>Two of the most frequently used code types are <code>C</code> (other certificates) and <code>Y</code> (particular provisions) – these are catch-all types for the large proportion of condition needs.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93204283-ba65d600-f74d-11ea-8f65-2e344314b41e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93204283-ba65d600-f74d-11ea-8f65-2e344314b41e.png" alt="image" /></a></p>
-<h2 id="business-rules">Business rules</h2><h3 id="certificate-types">Certificate types</h3><div class="table-container">
-        <table>
-          <tr>
-<th>ID</th>
-<th>Description</th>
-<th>Notes</th>
-</tr><tr>
-<td>CET1</td>
-<td>The   type of the certificate must be unique.</td>
-<td>Low priority - there   will be few requirements to modify certificate types.</td>
-</tr><tr>
-<td>CET2</td>
-<td>The   certificate type cannot be deleted if it is used in a certificate.</td>
-<td>Low priority - there   will be few requirements to modify certificate types.</td>
-</tr><tr>
-<td>CET3</td>
-<td>The   start date must be less than or equal to the end date.</td>
-<td>Low priority - there   will be few requirements to modify certificate types.</td>
-</tr>
-        </table>
-      </div><h3 id="business-rules-certificates">Certificates</h3><div class="table-container">
-        <table>
-          <tr>
-<th>ID</th>
-<th>Description</th>
-<th>Notes</th>
-</tr><tr>
-<td>CE1</td>
-<td>The   referenced certificate type must exist.</td>
-<td>Medium priority - will be picked from a list, therefore unlikely to fail.</td>
-</tr><tr>
-<td>CE2</td>
-<td>The   combination of certificate type and certificate code must be unique.</td>
-<td>High priority.</td>
-</tr><tr>
-<td>CE3</td>
-<td>The   start date must be less than or equal to the end date.</td>
-<td>Medium priority.</td>
-</tr><tr>
-<td>CE4</td>
-<td>If   a certificate is used in a measure condition then the validity period of the certificate must span the validity period of the measure.</td>
-<td>Medium priority - as with all such things – just do not end-date certificates.</td>
-</tr><tr>
-<td>CE5</td>
-<td>The certificate cannot be deleted if it is used in a measure condition.</td>
-<td>Low priority do not delete conditions unless absolutely required.</td>
-</tr><tr>
-<td>CE6</td>
-<td>At   least one description record is mandatory. The start date of the first description period must be equal to the start date of the certificate. No two   associated description periods for the same certificate and language may have the same start date. The validity period of the certificate must span the validity period of the certificate description.</td>
-<td>High priority - all   type 2 data sets need at least one description period, and it needs to start.</td>
-</tr><tr>
-<td>CE7</td>
-<td>The   validity period of the certificate type must span the validity period of the   certificate.</td>
-<td>Low priority     - just do not end date certificate types.</td>
-</tr>
-        </table>
-      </div>
+<h2 id="business-rules">Business rules</h2><p>Business rules for certificates can be found in the <a href="https://uktrade.github.io/tamato/html/business_rules/certificates.html">system documentation</a>.</p>
+
             
           </main>
 
