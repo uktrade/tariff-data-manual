@@ -29,7 +29,7 @@ collapsible_nav: true
 max_toc_heading_level: 2
 
 # Prevent robots from indexing (e.g. whilst in development)
-prevent_indexing: true
+prevent_indexing: false
 
 show_contribution_banner: true
 github_repo: uktrade/tariff-data-manual
