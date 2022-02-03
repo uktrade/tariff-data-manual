@@ -316,10 +316,10 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates-on-descriptions"><span>Validity dates on descriptions</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#putting-validity-end-dates-on-measures"><span>Putting validity end dates on measures</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-date-of-measures"><span>Validity date of measures</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/validity-dates.html#validity-dates-on-measure-descriptions"><span>Validity dates on measure descriptions</span></a>
       </li>
     </ul>
   </li>
@@ -659,30 +659,33 @@
             <h1 id="validity-dates">Validity dates</h1>
 <ul>
 <li>
-<a href="#validity-dates-on-descriptions">Validity dates on descriptions</a>
+<a href="#putting-validity-end-dates-on-measures">Putting validity end dates on measures</a>
 </li>
 <li>
-<a href="#validity-date-of-measures">Validity date of measures</a>
+<a href="#validity-dates-on-measure-descriptions">Validity dates on measure descriptions</a>
 </li>
 </ul>
 
 <blockquote>
-<p>Tariff elements such as measures and measure descriptions have validity dates, which show when those elements are live.</p>
+<p>Validity dates show when tariff elements, such as measures, are live.</p>
 </blockquote>
-<p>The tariff database implements a version control system that specifies which elements of the tariff are live on the border on a given day. Most elements use a pair of <strong>validity dates</strong>: the element is live after the validity start date and before the validity end date.</p>
-<p>If the validity end date is blank then the element is live indefinitely. Validity dates can be modified after the initial creation of an element, so an element that initially has a blank end date can be updated to subsequently add one.</p>
-<p>Start and end validity dates are inclusive – meaning that the element is live from the beginning of the start date to the end of the end date. An element with the same start and end date is therefore live for 1 day.</p>
-<h2 id="validity-dates-on-descriptions">Validity dates on descriptions</h2><p>Description elements have a requirement that there must always be one live description at any time. For this reason, descriptions do not have end dates and only have start dates. The description is live up until the start date of the next description record.</p>
-<h2 id="validity-date-of-measures">Validity date of measures</h2><p>There are four ways in which measures can get end dated:</p>
+<p>Most elements use a pair of validity dates. The element is live between the validity start date and validity end date.</p>
+<p>If the validity end date is blank the element is live indefinitely.</p>
+<p>Validity dates can be changed after a tariff element is created. End dates can be added if they were not specified before and existing dates can be updated.</p>
+<p>Validity start and end dates are inclusive. This means the element is live from the beginning of the start date to the end of the end date.</p>
+<p>An element with the same start and end date is live for one day.</p>
+<h2 id="putting-validity-end-dates-on-measures">Putting validity end dates on measures</h2><p>There are 4 ways to end-date a measure:</p>
 
 <ol>
-<li>Where the measure is given an explicit end date on the measure record itself</li>
-<li>Where the measure&rsquo;s generating regulation is a base regulation, and the base regulation is end-dated</li>
-<li>Where the measure&rsquo;s generating regulation is a modification regulation, and the modification regulation is end-dated</li>
-<li>Where the measure&rsquo;s generating regulation is a modification regulation, and the base regulation that it modifies is end-dated</li>
+<li>The measure is given an explicit end date on the measure record itself.</li>
+<li>The measure’s generating regulation is a base regulation, and the base regulation is end-dated.</li>
+<li>The measure’s generating regulation is a modification regulation, and the modification regulation is end-dated.</li>
+<li>The measure’s generating regulation is a modification regulation, and the base regulation that it modifies is end-dated.</li>
 </ol>
-<p>Numbers 2–4 also have to take account of the &ldquo;effective end date&rdquo; which if set should be used over any explicit date. The effective end date is set when other types of regulations are used (abrogation, prorogation, etc).</p>
-<p>In the UK tariff, we will not be using regulation end dates and will only ever stop measures by adding end dates explicitly.</p>
+<p>In the UK Tariff, we do not use regulation end dates. Validity end dates are added to the measure explicitly (as per point 1).</p>
+<h2 id="validity-dates-on-measure-descriptions">Validity dates on measure descriptions</h2><p>There must always be one live description on a measure description.</p>
+<p>Measure descriptions do not have end dates.</p>
+<p>The description is live until the start date of the next description is recorded.</p>
 
             
           </main>
