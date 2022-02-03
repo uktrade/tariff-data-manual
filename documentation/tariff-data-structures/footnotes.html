@@ -287,7 +287,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#detailed-overview-of-condition-codes"><span>Detailed overview of condition codes</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -612,7 +612,10 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#introduction-to-footnotes"><span>Introduction to footnotes</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#how-footnotes-are-structured"><span>How footnotes are structured</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#existing-footnote-types"><span>Existing footnote types</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#linking-tables-for-footnotes"><span>Linking tables for footnotes</span></a>
@@ -656,10 +659,7 @@
             <h1 id="footnotes">Footnotes</h1>
 <ul>
 <li>
-<a href="#introduction-to-footnotes">Introduction to footnotes</a>
-<ul>
-<li>
-<a href="#structure-of-footnotes-and-footnote-types">Structure of footnotes and footnote types</a>
+<a href="#how-footnotes-are-structured">How footnotes are structured</a>
 <ul>
 <li>
 <a href="#xml-structure">XML Structure</a>
@@ -667,8 +667,8 @@
 </ul>
 <p></li>
 <li>
-<a href="#overview-of-existing-footnote-types">Overview of existing footnote types</a>
-</li>
+<a href="#existing-footnote-types">Existing footnote types</a>
+<ul>
 <li>
 <a href="#footnote-type-application-codes">Footnote type application codes</a>
 </li>
@@ -678,7 +678,7 @@
 <a href="#linking-tables-for-footnotes">Linking tables for footnotes</a>
 <ul>
 <li>
-<a href="#key-business-rules-footnotes">Key business rules - footnotes</a>
+<a href="#business-rules">Business rules</a>
 </li>
 </ul>
 </li>
@@ -687,11 +687,11 @@
 <blockquote>
 <p>Footnotes are used to give more information about measures.</p>
 </blockquote>
-<h2 id="introduction-to-footnotes">Introduction to footnotes</h2><h3 id="structure-of-footnotes-and-footnote-types">Structure of footnotes and footnote types</h3><p>Similar to certificates and additional codes, footnotes consist of a type and a specific ID that make up the unique ID of the footnote.
-For example, the footnote <code>CD491</code> is constructed of a type <code>CD</code> and a specific footnote ID <code>491</code> - the entire footnote is known as <code>CD491</code>.
-The numeric IDs from <code>001</code> to <code>999</code> can be reused across multiple footnote type IDs.  Footnote IDs may be either 3 or 5-digits long. 
-Footnote type IDs are either two alphabetical characters (that were set by EU) or two numeric characters set by the UK.</p>
-<h4 id="xml-structure">XML Structure</h4><div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>&lt;xs:simpleType name="FootnoteId"&gt;
+<h2 id="how-footnotes-are-structured">How footnotes are structured</h2><p>Each footnote has a unique ID. The ID consists of a type and a specific footnote ID.</p>
+<p>Footnote types are either 2 letters (that were set by the EU) or 2 numbers set by the UK.</p>
+<p>Specific footnote IDs may be either 3 or 5 digits long.</p>
+<p>For example, footnote CD491 consists of type - CD, and specific footnote ID - 491.</p>
+<h3 id="xml-structure">XML Structure</h3><div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>&lt;xs:simpleType name="FootnoteId"&gt;
   &lt;xs:restriction base="xs:string"&gt;
     &lt;xs:pattern value="[0-9]{5}|[0-9]{3}"/&gt;
   &lt;/xs:restriction&gt;
@@ -701,7 +701,7 @@ Footnote type IDs are either two alphabetical characters (that were set by EU) o
     &lt;xs:pattern value="[A-Z]{2}|[A-Z]{3}"/&gt;
   &lt;/xs:restriction&gt;
 &lt;/xs:simpleType&gt;
-</code></pre></div><h3 id="overview-of-existing-footnote-types">Overview of existing footnote types</h3><div class="table-container">
+</code></pre></div><h2 id="existing-footnote-types">Existing footnote types</h2><div class="table-container">
         <table>
           <tr>
 <th>ID</th>
@@ -747,7 +747,7 @@ Footnote type IDs are either two alphabetical characters (that were set by EU) o
 <td>Combined   Nomenclature</td>
 </tr><tr>
 <td>NM</td>
-<td>CN   measure</td>
+<td>Combined Nomenclature   measure</td>
 </tr><tr>
 <td>NX</td>
 <td>Export   Refund Nomenclature</td>
@@ -783,9 +783,9 @@ Footnote type IDs are either two alphabetical characters (that were set by EU) o
 <th>Notes</th>
 </tr><tr>
 <td>1</td>
-<td>CN   nomenclature</td>
+<td>Combined   nomenclature</td>
 <td>Commodity   codes</td>
-<td>These two application codes are used for footnote types that are to be linked to commodity codes (goods nomenclatures). The difference is that application code 1 limits the use of the footnote such that it can only be applied to commodity codes where the first 8 digits are significant (they end in “00”). The footnote types associated with application code 2 can be assigned to any commodity code (the Taric nomenclature label references the full use of all 10-digits in Taric). There is no reason to create a footnote that can only be applied to commodity codes with 8 significant digits.</td>
+<td>These two application codes are used for footnote types that are to be linked to commodity codes (goods nomenclatures). The difference is that application code 1 limits the use of the footnote such that it can only be applied to commodity codes where the first 8 digits are significant (they end in “00”). The footnote types associated with application code 2 can be assigned to any commodity code (the TARIC nomenclature label references the full use of all 10-digits in TARIC). There is no reason to create a footnote that can only be applied to commodity codes with 8 significant digits.</td>
 </tr><tr>
 <td>2</td>
 <td>TARIC   nomenclature</td>
@@ -818,9 +818,7 @@ Footnote type IDs are either two alphabetical characters (that were set by EU) o
 <td>In theory a dynamic footnote type could be applied to any of the different data objects. Historically the EU has only ever created one type with this application code (TP – Dynamic footnote), the last time it was used was in 2015.</td>
 </tr>
         </table>
-      </div><h2 id="linking-tables-for-footnotes">Linking tables for footnotes</h2>
-<ul>
-<li>The following is a list of all of the tables that are used to link footnotes to other entities in the Tariff database:
+      </div><h2 id="linking-tables-for-footnotes">Linking tables for footnotes</h2><p>The following is a list of all of the tables that are used to link footnotes to other entities in the Tariff database:</p>
 
 <ul>
 <li>footnote_association_additional_codes_oplog</li>
@@ -828,10 +826,9 @@ Footnote type IDs are either two alphabetical characters (that were set by EU) o
 <li>footnote_association_goods_nomenclatures_oplog</li>
 <li>footnote_association_measures_oplog</li>
 <li>footnote_association_meursing_headings_oplog</li>
-</ul></li>
 </ul>
 <p><a href="https://user-images.githubusercontent.com/61055197/93206655-a91ec880-f751-11ea-9693-5c2a66642bc2.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93206655-a91ec880-f751-11ea-9693-5c2a66642bc2.png" alt="image" /></a></p>
-<h3 id="key-business-rules-footnotes">Key business rules - footnotes</h3><p>Business rules for footnotes can be found in the <a href="https://uktrade.github.io/tamato/html/business_rules/footnotes.html">system documentation</a>.</p>
+<h3 id="business-rules">Business rules</h3><p>Read the footnotes for business rules in the <a href="https://uktrade.github.io/tamato/html/business_rules/footnotes.html">system documentation</a>.</p>
 
             
           </main>
