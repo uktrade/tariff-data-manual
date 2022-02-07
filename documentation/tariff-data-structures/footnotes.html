@@ -615,7 +615,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#existing-footnote-types"><span>Existing footnote types</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#linking-tables-for-footnotes"><span>Linking tables for footnotes</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#what-footnotes-link-to-in-the-tariff"><span>What footnotes link to in the Tariff</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/footnotes.html#business-rules"><span>Business rules</span></a>
@@ -660,12 +660,7 @@
 <ul>
 <li>
 <a href="#how-footnotes-are-structured">How footnotes are structured</a>
-<ul>
-<li>
-<a href="#xml-structure">XML Structure</a>
 </li>
-</ul>
-<p></li>
 <li>
 <a href="#existing-footnote-types">Existing footnote types</a>
 <ul>
@@ -673,9 +668,9 @@
 <a href="#footnote-type-application-codes">Footnote type application codes</a>
 </li>
 </ul>
-</li>
+<p></li>
 <li>
-<a href="#linking-tables-for-footnotes">Linking tables for footnotes</a>
+<a href="#what-footnotes-link-to-in-the-tariff">What footnotes link to in the Tariff</a>
 </li>
 <li>
 <a href="#business-rules">Business rules</a>
@@ -685,21 +680,11 @@
 <blockquote>
 <p>Footnotes are used to give more information about measures.</p>
 </blockquote>
-<h2 id="how-footnotes-are-structured">How footnotes are structured</h2><p>Each footnote has a unique ID. The ID consists of a type and a specific footnote ID.</p>
+<h2 id="how-footnotes-are-structured">How footnotes are structured</h2><p>Each footnote has a unique ID. The ID consists of a type and a specific footnote code.</p>
 <p>Footnote types are either 2 letters (that were set by the EU) or 2 numbers set by the UK.</p>
-<p>Specific footnote IDs may be either 3 or 5 digits long.</p>
-<p>For example, footnote CD491 consists of type - CD, and specific footnote ID - 491.</p>
-<h3 id="xml-structure">XML Structure</h3><div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>&lt;xs:simpleType name="FootnoteId"&gt;
-  &lt;xs:restriction base="xs:string"&gt;
-    &lt;xs:pattern value="[0-9]{5}|[0-9]{3}"/&gt;
-  &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;
-&lt;xs:simpleType name="FootnoteTypeId"&gt;
-  &lt;xs:restriction base="xs:string"&gt;
-    &lt;xs:pattern value="[A-Z]{2}|[A-Z]{3}"/&gt;
-  &lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;
-</code></pre></div><h2 id="existing-footnote-types">Existing footnote types</h2><div class="table-container">
+<p>Specific footnote codes may be either 3 or 5 digits long.</p>
+<p>For example, footnote CD491 consists of type - CD, and specific footnote code - 491.</p>
+<h2 id="existing-footnote-types">Existing footnote types</h2><div class="table-container">
         <table>
           <tr>
 <th>ID</th>
@@ -816,15 +801,7 @@
 <td>In theory a dynamic footnote type could be applied to any of the different data objects. Historically the EU has only ever created one type with this application code (TP – Dynamic footnote), the last time it was used was in 2015.</td>
 </tr>
         </table>
-      </div><h2 id="linking-tables-for-footnotes">Linking tables for footnotes</h2><p>The following is a list of all of the tables that are used to link footnotes to other entities in the Tariff database:</p>
-
-<ul>
-<li>footnote_association_additional_codes_oplog</li>
-<li>footnote_association_erns_oplog</li>
-<li>footnote_association_goods_nomenclatures_oplog</li>
-<li>footnote_association_measures_oplog</li>
-<li>footnote_association_meursing_headings_oplog</li>
-</ul>
+      </div><h2 id="what-footnotes-link-to-in-the-tariff">What footnotes link to in the Tariff</h2><p>Footnotes link to many other things in the Tariff as follows:</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93206655-a91ec880-f751-11ea-9693-5c2a66642bc2.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93206655-a91ec880-f751-11ea-9693-5c2a66642bc2.png" alt="image" /></a></p>
 <h2 id="business-rules">Business rules</h2><p>Read the footnotes for business rules in the <a href="https://uktrade.github.io/tamato/html/business_rules/footnotes.html">system documentation</a>.</p>
 
