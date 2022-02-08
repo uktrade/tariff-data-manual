@@ -329,22 +329,25 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#introduction-to-geographical-areas"><span>Introduction to geographical areas</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#what-geographical-areas-are"><span>What geographical areas are</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#identifying-geographical-areas"><span>Identifying geographical areas</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#defining-country-groups"><span>Defining country groups</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#country-groups"><span>Country groups</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#how-geographical-areas-are-identified"><span>How geographical areas are identified</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-area-membership"><span>Geographical area membership</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#membership-of-geographical-areas"><span>Membership of geographical areas</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#exclusions"><span>Exclusions</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#excluding-countries-from-geographical-areas"><span>Excluding countries from geographical areas</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#relationship-of-quotas-to-geographical-areas"><span>Relationship of quotas to geographical areas</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#how-quotas-relate-to-geographical-areas"><span>How quotas relate to geographical areas</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -452,7 +455,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#data-structures"><span>Data structures</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-2-key-business-rules"><span>Key business rules</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#key-business-rules"><span>Key business rules</span></a>
       </li>
     </ul>
   </li>
@@ -709,11 +712,11 @@
 <h3 id="quota-suspension-data-object-in-detail">Quota suspension data object in detail</h3><p>The quota suspension object is not one of the more complex objects in the specification: there are few fields, in fact there are only three that you need to actively define.</p>
 <svg width="687pt" height="206pt"
  viewBox="0.00 0.00 687.00 206.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_531" class="graph" transform="scale(1 1) rotate(0) translate(4 202)">
+<g id="database_902" class="graph" transform="scale(1 1) rotate(0) translate(4 202)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-202 683,-202 683,4 -4,4"/>
 <!-- Quota suspension -->
-<g id="table_352" class="node">
+<g id="table_345" class="node">
 <title>Quota suspension</title>
 <polygon fill="none" stroke="black" points="431.5,-147 431.5,-163 670.5,-163 670.5,-147 431.5,-147"/>
 <text text-anchor="start" x="513.5" y="-152.8" font-family="Arial" font-size="9.00">Quota suspension</text>
@@ -748,7 +751,7 @@
 <polygon fill="none" stroke="black" points="430,-66 430,-164 671,-164 671,-66 430,-66"/>
 </g>
 <!-- quota_definition_sid Note -->
-<g id="note_423" class="node">
+<g id="note_182" class="node">
 <title>quota_definition_sid Note</title>
 <polygon fill="none" stroke="black" points="271,-198 109,-198 109,-162 277,-162 277,-192 271,-198"/>
 <polyline fill="none" stroke="black" points="271,-198 271,-192 "/>
@@ -756,12 +759,12 @@
 <text text-anchor="middle" x="193" y="-177.8" font-family="Arial" font-size="9.00">The quota definition to be suspended</text>
 </g>
 <!-- quota_definition_sid Note&#45;&gt;Quota suspension -->
-<g id="database_531_edge1" class="edge">
+<g id="database_902_edge1" class="edge">
 <title>quota_definition_sid Note&#45;&gt;Quota suspension:quota_definition_sid_name</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M277.33,-176.52C311.85,-172.99 351.75,-166.15 386,-153 408.27,-144.45 406.65,-123 430.5,-123"/>
 </g>
 <!-- suspension_start_date Note -->
-<g id="note_369" class="node">
+<g id="note_703" class="node">
 <title>suspension_start_date Note</title>
 <polygon fill="none" stroke="black" points="363.5,-144 16.5,-144 16.5,-108 369.5,-108 369.5,-138 363.5,-144"/>
 <polyline fill="none" stroke="black" points="363.5,-144 363.5,-138 "/>
@@ -769,12 +772,12 @@
 <text text-anchor="middle" x="193" y="-123.8" font-family="Arial" font-size="9.00">The start date of the suspension period – i.e. midnight at the start of the chosen day</text>
 </g>
 <!-- suspension_start_date Note&#45;&gt;Quota suspension -->
-<g id="database_531_edge2" class="edge">
+<g id="database_902_edge2" class="edge">
 <title>suspension_start_date Note&#45;&gt;Quota suspension:suspension_start_date_name</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M369.52,-108.75C390.06,-107.67 410.73,-107 430.5,-107"/>
 </g>
 <!-- suspension_end_date Note -->
-<g id="note_596" class="node">
+<g id="note_527" class="node">
 <title>suspension_end_date Note</title>
 <polygon fill="none" stroke="black" points="380,-90 0,-90 0,-54 386,-54 386,-84 380,-90"/>
 <polyline fill="none" stroke="black" points="380,-90 380,-84 "/>
@@ -782,12 +785,12 @@
 <text text-anchor="middle" x="193" y="-69.8" font-family="Arial" font-size="9.00">The end date of the suspension blocking period – i.e. midnight at the end of the chosen day</text>
 </g>
 <!-- suspension_end_date Note&#45;&gt;Quota suspension -->
-<g id="database_531_edge3" class="edge">
+<g id="database_902_edge3" class="edge">
 <title>suspension_end_date Note&#45;&gt;Quota suspension:suspension_end_date_name</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M385.57,-90.01C400.76,-90.63 415.88,-91 430.5,-91"/>
 </g>
 <!-- descriptionv Note -->
-<g id="note_269" class="node">
+<g id="note_237" class="node">
 <title>descriptionv Note</title>
 <polygon fill="none" stroke="black" points="302,-36 78,-36 78,0 308,0 308,-30 302,-36"/>
 <polyline fill="none" stroke="black" points="302,-36 302,-30 "/>
@@ -795,7 +798,7 @@
 <text text-anchor="middle" x="193" y="-15.8" font-family="Arial" font-size="9.00">Helps to define the suspension and the reasons for it</text>
 </g>
 <!-- descriptionv Note&#45;&gt;Quota suspension -->
-<g id="database_531_edge4" class="edge">
+<g id="database_902_edge4" class="edge">
 <title>descriptionv Note&#45;&gt;Quota suspension:descriptionv_name</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M308.09,-25.4C334.26,-29.45 361.57,-35.62 386,-45 408.27,-53.55 406.65,-75 430.5,-75"/>
 </g>
