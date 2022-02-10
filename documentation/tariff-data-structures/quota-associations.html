@@ -455,7 +455,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#additional-codes-cannot-be-applied-universally"><span>Additional codes cannot be applied universally …</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-data-structures"><span>Data structures</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#data-structures"><span>Data structures</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#key-business-rules"><span>Key business rules</span></a>
@@ -493,7 +493,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#why-suspensions-are-used"><span>Why suspensions are used</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#how-the-data-is-structured"><span>How the data is structured</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions-how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#where-quota-suspensions-are-used-in-the-tariff"><span>Where quota suspensions are used in the Tariff</span></a>
@@ -509,16 +509,13 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#what-are-quota-associations"><span>What are quota associations?</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#where-quota-associations-are-used"><span>Where quota associations are used</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#where-are-quota-associations-used"><span>Where are quota associations used?</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#data-structures"><span>Data structures</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#two-relation-types-equivalent-and-normal"><span>Two relation types: equivalent and normal</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#how-quota-types-are-defined"><span>How quota types are defined</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-associations.html#business-rules"><span>Business rules</span></a>
@@ -659,32 +656,27 @@
             <h1 id="quota-associations">Quota associations</h1>
 <ul>
 <li>
-<a href="#what-are-quota-associations">What are quota associations?</a>
+<a href="#where-quota-associations-are-used">Where quota associations are used</a>
 </li>
 <li>
-<a href="#where-are-quota-associations-used">Where are quota associations used?</a>
+<a href="#how-the-data-is-structured">How the data is structured</a>
 </li>
 <li>
-<a href="#data-structures">Data structures</a>
-</li>
-<li>
-<a href="#two-relation-types-equivalent-and-normal">Two relation types: equivalent and normal</a>
+<a href="#how-quota-types-are-defined">How quota types are defined</a>
 <ul>
 <li>
-<a href="#key-examples-equivalence-associations-eq">Key examples - Equivalence associations (EQ)</a>
+<a href="#relation-types">Relation types</a>
 <ul>
 <li>
-<a href="#sheep-and-goat-meat-wto-quota">Sheep and goat meat – WTO quota</a>
+<a href="#equivalent-eq">Equivalent (EQ)</a>
+</li>
+<li>
+<a href="#normal-nm">Normal (NM)</a>
 </li>
 </ul>
 <p></li>
 <li>
-<a href="#key-examples-normal-associations-nm">Key examples - Normal associations (NM)</a>
-<ul>
-<li>
-<a href="#central-america-quota-of-quotas">Central America &ldquo;quota of quotas&rdquo;</a>
-</li>
-</ul>
+<a href="#co-efficients">Co-efficients</a>
 </li>
 </ul>
 </li>
@@ -694,32 +686,28 @@
 </ul></p>
 
 <blockquote>
-<p>A quota association is used to link together one main quota and one or more sub quotas, so that drawing down on one quota will have an impact on another.</p>
+<p>A quota association links quotas together.</p>
 </blockquote>
-<h2 id="what-are-quota-associations">What are quota associations?</h2>
-<ul>
-<li>A quota association is used as a mechanism to link together quotas in such a way that the drawing down on that quota by a trader will then have an impact on another.</li>
-<li>The detail of the trade instruments that necessitate and make use of this function are described in detail below.</li>
-<li>The quota association links together two or more quotas’ definitions, which are the time-bound periods for which the volume is available.</li>
-<li>The association defines the link between one and only one main quota and one or more sub quotas. These are sometimes referred to respectively as parent and child quotas, though main and sub are the terms used in the data specification.</li>
-</ul>
+<p>If 2 quotas are linked, when a trader claims against one it has an impact on the other.</p>
+<p>Quota associations define the link between one main quota and one or more sub-quotas. These are sometimes referred to as parent and child quotas.</p>
+<p>Quota associations link 2 or more quota definitions. Quota definitions are the time periods during which the quota is available.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" alt="image" /></a></p>
-<h2 id="where-are-quota-associations-used">Where are quota associations used?</h2><p>There are a number of key product areas where quota associations are used.</p>
+<h2 id="where-quota-associations-are-used">Where quota associations are used</h2><p>Product areas where quota associations are used include:</p>
 
 <ul>
-<li>Lamb, sheep and goat meat (WTO quota)</li>
-<li>Beef (WTO quota)</li>
-<li>Orange juice (Israel)</li>
-<li>Clothing (C. America quota of quotas)</li>
+<li>lamb, sheep and goat meat</li>
+<li>beef </li>
+<li>orange juice </li>
+<li>clothing</li>
 </ul>
-<h2 id="data-structures">Data structures</h2><p>The data model, if not the underlying concepts for quota associations, is simple.</p>
+<h2 id="how-the-data-is-structured">How the data is structured</h2><p>The following diagram shows the data model for quota associations.</p>
 <svg width="700pt" height="250pt"
  viewBox="0.00 0.00 700.00 250.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_594" class="graph" transform="scale(1 1) rotate(0) translate(4 246)">
+<g id="database_956" class="graph" transform="scale(1 1) rotate(0) translate(4 246)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-246 696,-246 696,4 -4,4"/>
 <!-- Quota association -->
-<g id="table_518" class="node">
+<g id="table_976" class="node">
 <title>Quota association</title>
 <polygon fill="none" stroke="black" points="9.5,-221 9.5,-237 186.5,-237 186.5,-221 9.5,-221"/>
 <text text-anchor="start" x="61" y="-226.8" font-family="Arial" font-size="9.00">Quota association</text>
@@ -748,7 +736,7 @@
 <polygon fill="none" stroke="black" points="8,-156 8,-238 187,-238 187,-156 8,-156"/>
 </g>
 <!-- Quota definition -->
-<g id="table_439" class="node">
+<g id="table_349" class="node">
 <title>Quota definition</title>
 <polygon fill="none" stroke="black" points="240.5,-213 240.5,-229 453.5,-229 453.5,-213 240.5,-213"/>
 <text text-anchor="start" x="314.5" y="-218.8" font-family="Arial" font-size="9.00">Quota definition</text>
@@ -825,19 +813,19 @@
 <polygon fill="none" stroke="black" points="239,-4 239,-230 454,-230 454,-4 239,-4"/>
 </g>
 <!-- Quota association&#45;&gt;Quota definition -->
-<g id="database_594_edge1" class="edge">
+<g id="database_956_edge1" class="edge">
 <title>Quota association:e&#45;&gt;Quota definition:w</title>
 <path fill="none" stroke="black" d="M187.5,-213C208.14,-213 214.64,-206.77 231.97,-205.3"/>
 <polygon fill="black" stroke="black" points="232.11,-207.93 239.5,-205 231.9,-202.68 232.11,-207.93"/>
 </g>
 <!-- Quota association&#45;&gt;Quota definition -->
-<g id="database_594_edge2" class="edge">
+<g id="database_956_edge2" class="edge">
 <title>Quota association:e&#45;&gt;Quota definition:w</title>
 <path fill="none" stroke="black" d="M187.5,-197C208.14,-197 214.64,-203.23 231.97,-204.7"/>
 <polygon fill="black" stroke="black" points="231.9,-207.32 239.5,-205 232.11,-202.07 231.9,-207.32"/>
 </g>
 <!-- Quota order number -->
-<g id="table_418" class="node">
+<g id="table_728" class="node">
 <title>Quota order number</title>
 <polygon fill="none" stroke="black" points="507,-197 507,-213 683,-213 683,-197 507,-197"/>
 <text text-anchor="start" x="553.5" y="-202.8" font-family="Arial" font-size="9.00">Quota order number</text>
@@ -865,113 +853,43 @@
 <polygon fill="none" stroke="black" points="506,-132 506,-214 684,-214 684,-132 506,-132"/>
 </g>
 <!-- Quota definition&#45;&gt;Quota order number -->
-<g id="database_594_edge3" class="edge">
+<g id="database_956_edge3" class="edge">
 <title>Quota definition:e&#45;&gt;Quota order number:w</title>
 <path fill="none" stroke="black" d="M454.5,-189C474.53,-189 481.41,-189 498.15,-189"/>
 <polygon fill="black" stroke="black" points="498.5,-191.63 506,-189 498.5,-186.38 498.5,-191.63"/>
 </g>
 </g>
-</svg>
-<ul>
-<li>an association links to a single main (parent) quota definition and a single sub (child) definition: these definitions define the quota order number, which is a property of the definition as well as the time extent: the association will last as long as the definitions. In most cases, the definitions of main and sub quota are equally long.</li>
-<li>an association then has a relation type, defined below, and a coefficient, also explained below.</li>
-</ul>
-<h2 id="two-relation-types-equivalent-and-normal">Two relation types: equivalent and normal</h2><p>There are two relation type values that are used to define quota associations: EQ (equivalent to main quota) and NM (normal). The two relation types define the two main uses of quota associations.</p>
-<p>Quota associations are used:</p>
+</svg><p>A quota association links to a main definition (parent quota) and a sub-definition (child). These definitions define the quota order number.</p>
+<p>The association will last as long as the definitions. In most cases, the definitions of the main and sub-quota are the same length.</p>
+<h2 id="how-quota-types-are-defined">How quota types are defined</h2><p>Each quota association has a relation type and a co-efficient.</p>
+<h3 id="relation-types">Relation types</h3><p>There are 2 relation types:</p>
+
+<ol>
+<li>Equivalent - equal to the main quota</li>
+<li>Normal </li>
+</ol>
+<h4 id="equivalent-eq">Equivalent (EQ)</h4><p>EQ is used to relate quota order numbers where volume or weight is to be interpreted differently via a co-efficient.</p>
+<p>For example, the sheep and goat meat WTO quota. Details of the trade in sheep and goat meat are set out in <a href="https://www.legislation.gov.uk/uksi/2020/1432">the Customs (Tariff Quota) (EU Exit) Regulations</a> on GOV.UK.</p>
+<p>Equivalence associations are used in this set of quotas because there are 3 types of products to be traded. Each of these is represented by multiple commodities whose imports are to be treated differently, depending on the product.</p>
+<p>When determining quota allocations, 1kg of meat off the bone counts less than 1kg of meat on the bone.</p>
+<p>The table on page 6 of the <a href="https://www.gov.uk/government/publications/reference-documents-for-the-customs-tariff-quotas-eu-exit-regulations-2020">reference document</a> shows the effect and implementation of EQ quota associations.</p>
+<p>The UK is allowed to import 228,254 tonnes of meat from New Zealand annually. The notes in the volume column are instrumental. &lsquo;Carcass weight&rsquo; illustrates you need to do a calculation to determine what makes up a tonne.</p>
+<p>In this case, bone-in carcases are counted as 1 tonne, boneless mutton/sheep counts as 1.81 tonnes and boneless lamb counts as 1.67 tonnes. These values are reflected in the co-efficients on the printed regulation and in the quota associations table in the database.</p>
+<h4 id="normal-nm">Normal (NM)</h4><p>NM is used where weight or volume is the same across each related definition. A maximum weight/volume is applied to specific commodity codes in the sub-quota.</p>
+<p>For example, a function known as ‘quota of quotas’ applies to Nicaragua and El Salvador. It applies a maximum import volume across multiple quotas.</p>
+<p>There is a single quota (or quota of quotas) which a master volume is assigned to.</p>
+<p>This is a blanket quota showing a maximum threshold: there are no commodities applied to the master quota. Traders are not expected to reference the quota order number on their declarations.</p>
+<p>The quota then has a NM type relationship with the 34 individual quotas that are afforded a threshold by the main quota. Quota volumes are applied to the individual quotas.</p>
+<p>The main quota limits the volume of imports, and each sub-quota applies a maximum volume to each commodity.</p>
+<h3 id="co-efficients">Co-efficients</h3><p>Where a quota has been over–subscribed, the Rural Payments Agency applies a reduction co-efficient. This is the standard approach for dividing up the available quota.</p>
+<p>The following rules apply:</p>
 
 <ul>
-<li>to provide the opportunity to spread a quota balance across multiple order numbers and to apply a weighting to the weight or volume of the individual products (relation type EQ). The weighting is defined in the corresponding <code>coefficient</code> field.</li>
-<li>to apply a maximum quota volume to subsidiary products (or periods) within a parent group’s volume (relation type NM)</li>
-<li>to allow goods to be traded evenly across multiple in-year definition periods and for balances to be transferred into a future period.</li>
+<li>the value assigned to the co-efficient field is always 1.00 where the relation type is ‘NM’</li>
+<li>the values assigned to the co-efficient field are always something other than 1.00 where the relation type is ‘EQ’</li>
 </ul>
-<p>These different types were first introduced in 2010. The following rules apply:</p>
-
-<ul>
-<li>the value assigned to the coefficient field is always 1.00 where the relation type is “NM”.</li>
-<li>the values assigned to the coefficient field is always something other than 1.00 where the relation type is “EQ”.</li>
-</ul>
-<p>Therefore, EQ is used to relate quota order numbers where volume or weight is to be interpreted differently via a simple co-efficient.</p>
-<p>NM is used where weight or volume is the same across each related definition, however a maximum weight / volume is applied to specific commodity codes in the sub-quota, or in the case of beef WTO quotas, to allow balance to be shared equitably across an entire year.</p>
-<h3 id="key-examples-equivalence-associations-eq">Key examples - Equivalence associations (EQ)</h3><h4 id="sheep-and-goat-meat-wto-quota">Sheep and goat meat – WTO quota</h4>
-<ul>
-<li>The details of the trade in sheep and goat meat are set out in the <a href="https://www.legislation.gov.uk/uksi/2020/1432">Customs (Tariff Quota) (EU Exit) Regulations</a>.</li>
-<li>The reason why equivalence associations are used in this set of quotas is that there are three types of products to be traded (each represented by multiple commodities) whose imports are to be treated different, depending on what product they are.</li>
-<li>It is considered that 1kg of meat off the bone is to count less than 1kg of meat on the bone when determining quota allocations.</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>Quota Number</th>
-      <th>Commodity Code</th>
-      <th>Country of Origin</th>
-      <th>Quota Duty Rate</th>
-      <th>Quota Volume</th>
-      <th>Date Quota Opens</th>
-      <th>Date Quota Closes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="16">05.2013<br>(Co-efficient = 1.00)<br></td>
-      <td>0204100000</td>
-      <td rowspan="26">New Zealand</td>
-      <td rowspan="26">Zero</td>
-      <td rowspan="26">114,205,000 (kg)<br>(carcass weight)</td>
-      <td rowspan="26">01 January</td>
-      <td rowspan="26">31 December</td>
-    </tr>
-    <tr><td>0204210000</td></tr>
-    <tr><td>0204220000</td></tr>
-    <tr><td>0204300000</td></tr>
-    <tr><td>0204410000</td></tr>
-    <tr><td>0204420000</td></tr>
-    <tr><td>0204501100</td></tr>
-    <tr><td>0204501300</td></tr>
-    <tr><td>0204501500</td></tr>
-    <tr><td>0204501900</td></tr>
-    <tr><td>0204503100</td></tr>
-    <tr><td>0204505100</td></tr>
-    <tr><td>0204505300</td></tr>
-    <tr><td>0204505500</td></tr>
-    <tr><td>0204505900</td></tr>
-    <tr><td>0204507100</td></tr>
-    <tr>
-      <td rowspan="5">05.2109<br>(Co-efficient = 1.67)<br></td>
-      <td>0204230011</td>
-    </tr>
-    <tr><td>0204230091</td></tr>
-    <tr><td>0204431000</td></tr>
-    <tr><td>0204503910</td></tr>
-    <tr><td>0204507910</td></tr>
-    <tr>
-      <td rowspan="5">05.2110<br>(Co-efficient = 1.81)<br></td>
-      <td>0204230019</td>
-    </tr>
-    <tr><td>0204230099</td></tr>
-    <tr><td>0204439000</td></tr>
-    <tr><td>0204503990</td></tr>
-    <tr><td>0204507990</td></tr>
-  </tbody>
-  </table>
-
-<ul>
-<li>The above table is from page 6 of the <a href="https://www.gov.uk/government/publications/reference-documents-for-the-customs-tariff-quotas-eu-exit-regulations-2020">reference document</a> and shows the effect and implementation of quota associations (EQ type).</li>
-<li>The UK is allowed to import 228,254 tonnes of meat from New Zealand annually. The notes in the volume column are instrumental – “carcass weight” illustrates there is a calculation to undertake for goods of various different types in order to determine “what constitutes a tonne”.</li>
-<li>In this case bone-in carcases are counted as 1 tonne, boneless mutton / sheep counts as 1.81 tonnes and boneless lamb counts as 1.67 tonnes. These values are reflected in the coefficients on the printed regulation and also in the quota associations table in the database.</li>
-</ul>
-<h3 id="key-examples-normal-associations-nm">Key examples - Normal associations (NM)</h3><h4 id="central-america-quot-quota-of-quotas-quot">Central America &ldquo;quota of quotas&rdquo;</h4>
-<ul>
-<li>Applicable to Nicaragua and El Salvador, a function known as a ‘quota of quotas’ has been implemented to apply a maximum import volume across multiple quotas.</li>
-<li>The intent is expressed as follows: &ldquo;For the tariff quotas with quota order numbers from 09.7105 to 09.7138, the global yearly quota volume may not exceed the following number of items (pairs) for the respective calendar year&rdquo;, with a table beneath it expressing the maximum overall volume across multiple quotas.</li>
-<li>There is a single quota (or quota of quotas) to which a master overall volume is assigned.</li>
-<li>Crucially, this is purely a blanket quota exercising a maximum threshold: there are no commodities applied to the master quota: traders are also not expected to reference the quota order number on their declarations.</li>
-<li>The quota then has a <code>NM</code> type relationship with the 34 individual quotas that are afforded a threshold by the main quota.</li>
-<li>Quota volumes are applied to the individual quotas, as are related commodities.</li>
-</ul>
-<p>The main quota therefore limits the maximum volume of imports, and each sub quota applies a maximum volume to each commodity.</p>
-<h2 id="business-rules">Business rules</h2><p>Business rules for quota associations can be found in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
-<p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
+<h2 id="business-rules">Business rules</h2><p>Read the business rules for quota associations in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.
+<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
