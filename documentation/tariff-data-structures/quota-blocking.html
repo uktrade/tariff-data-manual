@@ -549,7 +549,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#introductory-periods"><span>Introductory periods</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#how-the-data-is-structured"><span>How the data is structured</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas-how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#assigning-quotas-to-geographical-areas"><span>Assigning quotas to geographical areas</span></a>
@@ -631,19 +631,13 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
     <ul>
       <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#how-long-quota-blocks-last"><span>How long quota blocks last</span></a>
+      </li>
+      <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#why-quotas-are-blocked"><span>Why quotas are blocked</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking-reasons"><span>Quota blocking reasons</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#simplified-quotas-data-model-as-applies-to-blocking-periods"><span>Simplified quotas data model (as applies to blocking periods)</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#quota-blocking-data-object-in-detail"><span>Quota blocking data object in detail</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#a-blocking-period-must-fit-within-a-definition-period"><span>A blocking period must fit within a definition period</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quota-blocking.html#business-rules"><span>Business rules</span></a>
@@ -662,37 +656,36 @@
             <h1 id="quota-blocking">Quota blocking</h1>
 <ul>
 <li>
+<a href="#how-long-quota-blocks-last">How long quota blocks last</a>
+</li>
+<li>
 <a href="#why-quotas-are-blocked">Why quotas are blocked</a>
 </li>
 <li>
-<a href="#quota-blocking-reasons">Quota blocking reasons</a>
-</li>
-<li>
-<a href="#simplified-quotas-data-model-as-applies-to-blocking-periods">Simplified quotas data model (as applies to blocking periods)</a>
-</li>
+<a href="#how-the-data-is-structured">How the data is structured</a>
+<ul>
 <li>
 <a href="#quota-blocking-data-object-in-detail">Quota blocking data object in detail</a>
 </li>
 <li>
-<a href="#a-blocking-period-must-fit-within-a-definition-period">A blocking period must fit within a definition period</a>
+<a href="#where-quota-blocks-are-used-in-the-tariff">Where quota blocks are used in the Tariff</a>
 </li>
+</ul>
+<p></li>
 <li>
 <a href="#business-rules">Business rules</a>
 </li>
-</ul>
+</ul></p>
 
 <blockquote>
-<p>Unlike suspensions, blocks don’t prevent declarations being made against a quota, instead they temporarily block quota allocations from being taken, so demand for a quota can be assessed. Quota blocking periods are applicable only to First Come First Serve quotas.</p>
+<p>Quota blocks stop quota allocations being taken for a limited time.</p>
 </blockquote>
-<h2 id="why-quotas-are-blocked">Why quotas are blocked</h2>
-<ul>
-<li>Quota blocks are placed on quotas for a limited period of time to prevent allocations from being taken.</li>
-<li>Unlike suspensions, which effectively invalidate a quota (as if it does not exist and is suspended in law), all a blocking period does is to prevent allocations from being made: it does not prevent declarations from being made against a quota: it just postpones any allocation decision.</li>
-<li>A quota blocking period usually coincides with the start of a definition period, though not always; for instance, a common blocking reason is to protect the re-opening of a quota after significant returns</li>
-<li>This effect of a quota blocking period is to give HMRC an opportunity to assess the demand for a quota and potentially give an opportunity for them to make subjective decisions on allocations, e.g. to prevent a single large business from using up an entire allocation </li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94176716-687d2880-fe90-11ea-9828-4bb36fe20c4e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94176716-687d2880-fe90-11ea-9828-4bb36fe20c4e.png" alt="image" /></a></p>
-<h2 id="quota-blocking-reasons">Quota blocking reasons</h2><p>Unlike with suspensions, blocking periods include a field which describe the reason for the blocking period.</p>
+<p>Quota blocks are put in place to allow HMRC to assess the demand for a quota and make decisions about how to allocate it.</p>
+<p>Claims can still be made against a quota during a quota block, but the allocation decision will be delayed. This is unlike <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions">quota suspensions</a>, which are not available to traders to claim against.</p>
+<p>Quota blocks are only applicable to first come, first serve quotas. Learn more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas">about quotas</a>.</p>
+<h2 id="how-long-quota-blocks-last">How long quota blocks last</h2><p>Usually a quota block lasts for 2 or 3 weeks.</p>
+<p>For example, a quota starts on 1 January and runs until 31 December.  The decision is taken to place a block on the quota for the first 15 days. This allows HMRC to make an assessment on potential usage by taking allocation requests but not actually allocating the balance. This gives smaller traders and new entrants an opportunity to take advantage of the reduced rate.</p>
+<h2 id="why-quotas-are-blocked">Why quotas are blocked</h2><p>The following table shows the reasons for quota blocks.</p>
 <div class="table-container">
         <table>
           <tr>
@@ -760,14 +753,8 @@
 <br>8</td>
 </tr>
         </table>
-      </div><p>Options 1 and 3 are the most common – option 1 actually seems more by design that just accidental late publication</p>
-<p><strong>Logical model of a quota blocking period</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94176888-a67a4c80-fe90-11ea-9b23-328f3d15931d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94176888-a67a4c80-fe90-11ea-9b23-328f3d15931d.png" alt="image" /></a></p>
-<p>A quota starts on Jan 1st and runs throughout the year
-The decision is taken to place a block on the quota for the first 15 days, to allow HMRC to make an assessment on potential usage of the quota, by taking allocation requests, but not actually allocating / decrementing the opening balance
-This gives smaller traders and new entrants an opportunity to take advantage of the reduced rate</p>
-<h2 id="simplified-quotas-data-model-as-applies-to-blocking-periods">Simplified quotas data model (as applies to blocking periods)</h2><p><a href="https://user-images.githubusercontent.com/61055197/94176946-bb56e000-fe90-11ea-93c9-0d1911caa7b7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94176946-bb56e000-fe90-11ea-93c9-0d1911caa7b7.png" alt="image" /></a></p>
-<h2 id="quota-blocking-data-object-in-detail">Quota blocking data object in detail</h2><p>As with suspension periods, the quota blocking object is not one of the more complex objects in the database: there are few fields, in fact there are only three that you need to actively define.</p>
+      </div><h2 id="how-the-data-is-structured">How the data is structured</h2><p><a href="https://user-images.githubusercontent.com/61055197/94176946-bb56e000-fe90-11ea-93c9-0d1911caa7b7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94176946-bb56e000-fe90-11ea-93c9-0d1911caa7b7.png" alt="image" /></a></p>
+<h3 id="quota-blocking-data-object-in-detail">Quota blocking data object in detail</h3><p>There are only 3 fields you must define in the database.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94177037-df1a2600-fe90-11ea-9bb5-a972e1814a40.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177037-df1a2600-fe90-11ea-9bb5-a972e1814a40.png" alt="image" /></a></p>
 <div class="table-container">
         <table>
@@ -808,10 +795,10 @@ This gives smaller traders and new entrants an opportunity to take advantage of 
 <br>An   optional field, up to 500 characters in length, that helps to define the   blocking period and the reasons for it.</td>
 </tr>
         </table>
-      </div><p><a href="https://user-images.githubusercontent.com/61055197/94177095-f35e2300-fe90-11ea-85ca-2be70cf3bbc8.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177095-f35e2300-fe90-11ea-85ca-2be70cf3bbc8.png" alt="image" /></a></p>
-<h2 id="a-blocking-period-must-fit-within-a-definition-period">A blocking period must fit within a definition period</h2><p>The critical point is that a quota blocking period is defined against a quota definition period: the blocking period MUST NOT straddle the boundary of the definition – in the rare occasion you need to straddle a boundary, create 2 blocking periods</p>
+      </div><h3 id="where-quota-blocks-are-used-in-the-tariff">Where quota blocks are used in the Tariff</h3><p>A quota blocking period usually coincides with the start of a definition period.</p>
+<p>A blocking period must also fit within a definition period. It must not straddle the boundary of the definition. If you need to straddle a boundary, you must create 2 blocking periods.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94177179-12f54b80-fe91-11ea-9a95-59fd7fdaac68.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177179-12f54b80-fe91-11ea-9a95-59fd7fdaac68.png" alt="image" /></a></p>
-<h2 id="business-rules">Business rules</h2><p>Business rules for quotas can be found in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
+<h2 id="business-rules">Business rules</h2><p>Read the business rules for quotas in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
 
             
           </main>
