@@ -90,7 +90,7 @@
 <ul><li><a href="/tariff-data-manual/documentation/tariff-data-idioms.html"><span>Tariff data idioms</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/tariff-data-idioms/origin-quotas.html#origin-quotas"><span>Origin quotas</span></a>
+    <a href="/tariff-data-manual/documentation/tariff-data-idioms/origin-quotas.html#origin-quotas-2"><span>Origin quotas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-idioms/origin-quotas.html#example-of-an-origin-quota"><span>Example of an origin quota</span></a>
@@ -455,7 +455,7 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#additional-codes-cannot-be-applied-universally"><span>Additional codes cannot be applied universally …</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-data-structures"><span>Data structures</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#data-structures"><span>Data structures</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#key-business-rules"><span>Key business rules</span></a>
@@ -528,22 +528,31 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas"><span>Quotas</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#how-quotas-work"><span>How quotas work</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#how-tariff-quotas-operate"><span>How tariff quotas operate</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#defining-quotas"><span>Defining quotas</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#types-of-quota"><span>Types of quota</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#defining-and-grouping-quotas"><span>Defining and grouping quotas</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#how-quotas-are-managed"><span>How quotas are managed</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#how-long-quotas-last-for"><span>How long quotas last for</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#how-tariff-quotas-are-introduced"><span>How tariff quotas are introduced</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#introductory-periods"><span>Introductory periods</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas-data-structures"><span>Data structures</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quota-exception-periods-and-events"><span>Quota exception periods and events</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#licensed-quotas"><span>Licensed quotas</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#assigning-quotas-to-geographical-areas"><span>Assigning quotas to geographical areas</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/quotas.html#business-rules"><span>Business rules</span></a>
@@ -653,74 +662,68 @@
             <h1 id="quotas">Quotas</h1>
 <ul>
 <li>
-<a href="#how-quotas-work">How quotas work</a>
+<a href="#how-tariff-quotas-operate">How tariff quotas operate</a>
+</li>
+<li>
+<a href="#types-of-quota">Types of quota</a>
 <ul>
 <li>
-<a href="#case-study-importing-lamb-to-the-uk">Case study: importing lamb to the UK</a>
-</li>
-</ul>
-<p></li>
-<li>
-<a href="#defining-quotas">Defining quotas</a>
-<ul>
-<li>
-<a href="#first-come-first-served-quotas">First Come, First Served Quotas</a>
-<ul>
-<li>
-<a href="#data-structures">Data structures</a>
+<a href="#wto-quotas">WTO quotas</a>
 </li>
 <li>
-<a href="#the-timespans-of-a-fcfs-quota">The timespans of a FCFS quota</a>
-</li>
-</ul>
+<a href="#autonomous-quotas">Autonomous quotas</a>
 </li>
 <li>
-<a href="#quota-staging">Quota staging</a>
+<a href="#origin-quotas">Origin quotas</a>
 </li>
 <li>
 <a href="#safeguard-quotas">Safeguard quotas</a>
 </li>
+<li>
+<a href="#an-example-importing-lamb">An example: importing lamb</a>
+</li>
 </ul>
+<p></li>
+<li>
+<a href="#defining-and-grouping-quotas">Defining and grouping quotas</a>
+</li>
+<li>
+<a href="#how-quotas-are-managed">How quotas are managed</a>
+</li>
+<li>
+<a href="#how-long-quotas-last-for">How long quotas last for</a>
+</li>
+<li>
+<a href="#how-tariff-quotas-are-introduced">How tariff quotas are introduced</a>
 </li>
 <li>
 <a href="#introductory-periods">Introductory periods</a>
 </li>
 <li>
-<a href="#data-structures">Data structures</a>
+<a href="#how-the-data-is-structured">How the data is structured</a>
 <ul>
 <li>
-<a href="#criticality">Criticality</a>
+<a href="#the-quota-order-number-table">The quota order number table</a>
 </li>
+<li>
+<a href="#the-quota-definition-table">The quota definition table</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#assigning-quotas-to-geographical-areas">Assigning quotas to geographical areas</a>
+<ul>
 <li>
 <a href="#managing-geography">Managing geography</a>
 </li>
 <li>
-<a href="#geographical-areas-concepts">Geographical areas – concepts</a>
-<ul>
-<li>
-<a href="#excluding-countries-from-quotas">Excluding countries from quotas</a>
-</li>
-<li>
-<a href="#key-data-fields-quota-order-number-origins">Key data fields - Quota order number origins &amp; exclusions table**</a>
+<a href="#quota-order-number-origins-and-exclusions-table">Quota order number origins and exclusions table</a>
 </li>
 <li>
 <a href="#strategies-for-managing-origins-and-exclusions">Strategies for managing origins and exclusions</a>
 </li>
-</ul>
-</li>
-</ul>
-</li>
 <li>
 <a href="#quota-exception-periods-and-events">Quota exception periods and events</a>
-</li>
-<li>
-<a href="#licensed-quotas">Licensed quotas</a>
-<ul>
-<li>
-<a href="#quota-data-structures-and-fields">Quota data structures and fields</a>
-</li>
-<li>
-<a href="#licensed-quota-process-by-example-garlic">Licensed quota process – by example (garlic)</a>
 </li>
 </ul>
 </li>
@@ -728,181 +731,63 @@
 <a href="#business-rules">Business rules</a>
 </li>
 </ul></p>
-<p>Quotas help regulate the volume of trade between countries.</p>
-<p>A quota limits the number or value of certain goods that a country can import during a specific period.</p>
-<p>In theory, this protects domestic production by discouraging imports.</p>
-<h2 id="how-quotas-work">How quotas work</h2><p>A quota allows a certain volume of goods to be imported into a country at a reduced duty rate.</p>
-<p>Once that volume has been imported, then the quota is considered to be exhausted and is no longer available to draw down against.</p>
-<p>At that point, all importers will be forced to import the goods at the full (or less preferential duty rate).</p>
-<h3 id="case-study-importing-lamb-to-the-uk">Case study: importing lamb to the UK</h3><p>In the UK, sheep farmers sell their goods to the UK market for lamb and lamb products. But there&rsquo;s not enough lamb in the UK to meet demand. So there&rsquo;s a need to import lamb from other countries, such as New Zealand.</p>
-<p>The commodity code 0204100010 is for ‘carcases and half carcasses of domestic lamb, fresh or chilled’.</p>
-<p><img width="1123" alt="Commodity hierarchy for carcases and half carcasses of domestic lamb, fresh or chilled" src="https://user-images.githubusercontent.com/82160410/143475994-1a7edfa5-e008-4d9a-aa26-a17ac6714d8a.png"></p>
-<p>Third country duty (available to all countries) is 12% + £143.00 GBP per 100kg.</p>
+
+<blockquote>
+<p>Tariff quotas help regulate the volume of trade between countries. They allow a certain amount of specific goods to be imported at a lower rate of duty.</p>
+</blockquote>
+<h2 id="how-tariff-quotas-operate">How tariff quotas operate</h2><p>Most tariff quotas operate on a first come, first serve basis. This involves making a limited amount available to traders. Whoever claims against that amount first pays the reduced rate. Once that amount is used up, traders must pay the full (or less preferential) duty rate.</p>
+<p>Other tariff quotas are licence based. Access to them depends on getting an import licence before importing the goods.</p>
+<p>When a quota is almost used up it becomes &lsquo;critical&rsquo;. If a quota&rsquo;s status is critical, security must be provided as there is no guarantee a claim will be allowed.</p>
+<p>Read more <a href="https://www.gov.uk/guidance/claiming-tariff-quotas-to-reduce-import-duties">about tariff quotas</a> on GOV.UK.</p>
+<h2 id="types-of-quota">Types of quota</h2><p>Quotas may be preferential or non-preferential.</p>
+<p>Preferential quotas are usually made available through <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements-2">free trade agreements</a>. The 2 parties agree on the quotas as part of the negotiations between them. The agreement provides both parties with mutual benefits.</p>
+<p>In the Tariff, preferential quotas are always assigned to a specific country or to a small group of countries.</p>
+<p>Non-preferential quotas are aimed at maintaining the balance of trade flows on critical goods. They do this by opening up a specific volume of market access to all overseas nations.</p>
+<p>In the Tariff, non-preferential quotas are usually assigned to Erga Omnes or &lsquo;all countries (1011)&rsquo;.</p>
+<p>There are very few non-preferential quotas that are available to only one country.</p>
+<h3 id="wto-quotas">WTO quotas</h3><p>The UK declares a tariff &lsquo;schedule of concessions&rsquo; to the WTO.</p>
+<p>This lists the concessions the UK will give to overseas nations to allow them greater access to UK markets than they would get by adopting the most favoured nation rate alone.</p>
+<p>In the Tariff, WTO quotas are usually assigned to Erga Omnes or &lsquo;all countries (1011)&rsquo;.</p>
+<h3 id="autonomous-quotas">Autonomous quotas</h3><p>Autonomous tariff quotas (ATQs) allow limited quantities of a product to be imported at a reduced rate for a specified period.</p>
+<p>ATQs are shown in the Tariff as &lsquo;non-preferential quotas&rsquo;.</p>
+<p>Read <a href="https://www.gov.uk/guidance/duty-suspensions-and-tariff-quotas">about autonomous quotas (ATQs)</a> on GOV.UK.</p>
+<h3 id="origin-quotas">Origin quotas</h3><p>About 25% of quotas are origin quotas.</p>
+<p>Origin quotas allow specific quantities of some goods to get preferential tariff treatment.</p>
+<p>The goods must meet certain conditions. For example, a trader must prove the origin of the goods. Read <a href="https://www.gov.uk/guidance/check-your-goods-meet-the-rules-of-origin">about rules of origin</a> on GOV.UK.</p>
+<h3 id="safeguard-quotas">Safeguard quotas</h3><p>Safeguard quotas aim to prevent dumping of products by placing a cap on the volume that can be imported.</p>
+<p>Read <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-idioms/steel-safeguard.html#steel-safeguard">about safeguard quotas</a>.</p>
+<h3 id="an-example-importing-lamb">An example: importing lamb</h3><p>The following example shows a quota associated with the import of lamb on commodity code 0204100010.</p>
+<p>Third country duty (available to all countries) was 12% + £143.00 GBP per 100kg.</p>
 <p><img width="1142" alt="Third country duty for carcases and half carcasses of domestic lamb, fresh or chilled" src="https://user-images.githubusercontent.com/82160410/143476323-b280eaba-1f41-448b-9f91-6abe86f35a23.png"></p>
-<p>There is a non-preferential tariff quota applied to the same commodity code. This allows a certain volume of goods into the UK at 0.00%.</p>
-<p>This is to encourage enough volume to meet demand.</p>
+<p>There was a non-preferential tariff quota (order number 052016) applied to the commodity code. This allowed a certain volume of goods into the UK at 0.00%. The quota ran from 1 January 2021 to 31 December 2021.</p>
 <p><img width="1128" alt="Non preferential tariff quota for carcases and half carcasses of domestic lamb, fresh or chilled" src="https://user-images.githubusercontent.com/82160410/143476669-65098741-cb0b-4a32-83eb-5de631ed1641.png"></p>
+<p>The following image shows the opening balance was 22000.0kg and the current balance was 1727.2kg.</p>
 <p><img width="924" alt="Screen Shot 2021-11-25 at 4 39 11 PM" src="https://user-images.githubusercontent.com/82160410/143480188-bd0714bf-08d4-4ed4-80ae-da6481d80b8b.png"></p>
-<p>The quota order number is 052016.</p>
-<p>The opening balance was 220000.0 Kilogram (kg). The current balance is 1727.2 Kilogram (kg).</p>
-<p>The quota runs from 1 January 2021 to 31 December 2021.</p>
-<p>If any trader wants to take advantage of the preferential duties associated with a quota, they must quote that 6-digit quota order number on their import declaration.</p>
-<h2 id="defining-quotas">Defining quotas</h2><p>There are multiple ways of defining and grouping quotas, all of which will be relevant to the delivery of the next iteration of the Tariff Application:</p>
-
-<ul>
-<li>Administration mechanism:
-
-<ul>
-<li>First come first served </li>
-<li>Licensed</li>
-</ul></li>
-<li>Legislative mechanism:
-
-<ul>
-<li>WTO quota</li>
-<li>ATQ</li>
-<li>preferential quota as part of an FTA </li>
-<li>safeguard quota</li>
-</ul></li>
-<li>Origin quota: 
-
-<ul>
-<li>Yes</li>
-<li>No</li>
-</ul></li>
-</ul>
-<p>If you were to draw a Venn-style diagram of how these slices fit together, it would look a bit like this:</p>
+<h2 id="defining-and-grouping-quotas">Defining and grouping quotas</h2><p>The following diagram shows the relationships between the different types of quotas.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93910896-a3992380-fcf9-11ea-936c-f6e5c1ea09dc.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93910896-a3992380-fcf9-11ea-936c-f6e5c1ea09dc.png" alt="image" /></a></p>
-<p><strong>Preferential vs Non-Preferential quotas</strong></p>
-<p>Preferential quotas</p>
+<h2 id="how-quotas-are-managed">How quotas are managed</h2><p>First come, first serve and licensed quotas are managed differently.</p>
+<p>First come, first serve quotas pass through the HMRC systems CHIEF and CDS.</p>
+<p>Licensed quotas do not pass through HMRC systems. They are handled by <a href="https://www.gov.uk/government/organisations/rural-payments-agency">the Rural Payments Agency</a>.</p>
+<h2 id="how-long-quotas-last-for">How long quotas last for</h2><p>There are no limits on how long quotas can last for.</p>
+<p>In the Tariff, you will find the following types of quota:</p>
 
 <ul>
-<li>The term preferential means that a single country or bloc is afforded treatment that provides better market access / lower duties than other countries.</li>
-<li>In practical terms, preferential tariff duties and quotas are almost always made available via (Free) Trade Agreements. The quota is agreed as part of the bilateral negotiation between the two parties that provides each with mutual benefits.</li>
-<li>Preferential quotas are always applied at a specific country or small group of countries.</li>
+<li>annual full year quota from 1 January to 31 December and repeating every year</li>
+<li>annual full year quota from another start date, such as 1 July to 30 June, and repeating every year</li>
+<li>part year quota from any date to any other date, such as 14 February to 31 May, and repeating between the same dates every year</li>
+<li>quarterly quota starting on 1 January and repeating in that pattern every year</li>
+<li>quarterly quota starting from another date, lasting 12 months and repeating in that pattern every year</li>
+<li>part year quota split into monthly sections and repeating every year</li>
 </ul>
-<p>Non-Preferential quotas</p>
-
-<ul>
-<li>Non-preferential quotas are aimed at maintaining the balance of trade flows on critical goods by opening up a specific volume of market access to all overseas nations – in most cases, the non-preferential quotas are assigned to ERGA OMNES1 (the country group that includes all countries).</li>
-<li>There are very few officially non-preferential quotas that have been opened up to specific countries only, where there is a need to maintain global trade flows with a less blunt instrument than a global non-preferential quota applied to the entire world, especially where there are trade titans in a particular commodity</li>
-<li>Lamb is again a great example of this – there is a non-preferential quota for Erga Omnes (small volume) and much larger non-prefs for specific countries like Chile, Australia and New Zealand – each of which is a dominant player in the lamb trade.</li>
-</ul>
-<p><strong>Ways of administering quotas</strong></p>
-<p>There are two methods of administering a quota:</p>
-<p>First Come First Served quotas</p>
-
-<ul>
-<li>These are by far the most common of the two types of quota.</li>
-<li>As the name suggests, a FCFS quota involves making a pot available to traders: whoever claims against that pot first gets to take advantage of the reduced rate.</li>
-<li>If you’re not quick enough, you miss the opportunity and pay the non-preferential rate.</li>
-</ul>
-<p>Licensed quotas</p>
-
-<ul>
-<li>The purpose of a licensed quota is the same as a FCFS quota: to protect the fine balance of trade flows, however the mechanism for applying for usage is very different.</li>
-<li>For each quota, periods of the year are opened up for importers to apply for licenses from the Rural Payments Agency (RPA) - a division of Defra.</li>
-<li>During this period, the RPA accepts these license requests and issues licenses according to the specific rules of the quota</li>
-</ul>
-<p><strong>Origin quotas</strong></p>
-<p>Some quotas identify as Origin Quotas (about 25%)
-Origin quotas allow for specific quantities of some products to receive preferential tariff treatment if the products meet certain conditions, for example a proof of origin can be provided to prove that the goods do in fact come from the specific country.
-Origin quotas are always preferential in nature.
-For a good example of an origin quota, please see the cat &amp; dog food quota in place with Canada, where a proof of origin certificate is explicitly required.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93911539-6da86f00-fcfa-11ea-90c2-e659b80f333c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93911539-6da86f00-fcfa-11ea-90c2-e659b80f333c.png" alt="image" /></a></p>
-<p>The reason why this is important is that a quota’s origin status is displayed on the reference documents that accompany a trade agreements (as a schedule to the primary SI).</p>
-<p><strong>WTO quotas</strong></p>
-
-<ul>
-<li>The UK declares a tariff “schedule of concessions” to the WTO which is made up of multiple elements – what interests us most here is:</li>
-<li>the tariff schedule</li>
-<li>the schedules for tariff quotas on agricultural and non-agricultural products</li>
-<li>The quota schedules list the concessions that we will make to overseas nations to provide greater market access to our market than would have been afforded by adopting the MFN rate alone.</li>
-<li>In most cases, WTO quotas are assigned to the whole world (ERGA OMNES), but in certain cases (e.g. with lamb), the quota concessions are made available to individual countries which major in a certain trade (e.g. New Zealand for lamb).</li>
-<li>Almost all WTO quotas are agricultural goods (this also applies to the other kinds of quota).</li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/93915223-9848f680-fcff-11ea-8462-86bd6133032d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93915223-9848f680-fcff-11ea-8462-86bd6133032d.png" alt="image" /></a></p>
-<p><strong>Autonomous quotas (ATQs)</strong></p>
-
-<ul>
-<li>Autonomous quotas are represented in the tariff as simple “Non-preferential quotas”. These are particularly applicable within the fishing industry. There is contention within the fishing industry between the catching sector and the food and processing sector.</li>
-<li>For highly consumed goods, such as cod, pollock and prawns, the UK / EU catching industry cannot catch sufficient product to satisfy the needs of the home and international market. Therefore the processing industry needs access to low or zero duty for such products, while the catching industry needs protection by retaining at least some maximum import threshold above which normal tariff duties apply.</li>
-<li>The autonomous tariff rate quota (ATQ) facilitates this compromise – a quantity of goods can be imported into the EU at zero or low rate, until exhausted, at which point the duty reverts to the third country rate</li>
-<li>ATQs are set on a three year cycle: the ATQ duty rate cannot be changed in the course of that 3 year cycle, however the starting balance for each year can be assessed at the start of each year.</li>
-<li>For fisheries ATQs, there is an additional point of interest, that, if 80% or more of the quota has been exhausted by the end of September in any given year, then the balance of the quota is increased by 20%</li>
-<li>Autonomous Quotas so called, as the EU unilaterally decides to open a quota – there is no requirement for recourse to WTO approval to open an ATQ.</li>
-</ul>
-<p><strong>What products are covered by quotas?</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93915448-f544ac80-fcff-11ea-852e-8f3e3ee74b01.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93915448-f544ac80-fcff-11ea-852e-8f3e3ee74b01.png" alt="image" /></a></p>
-<p><strong>Quotas in reference documents</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93915925-a5b2b080-fd00-11ea-880c-87679308f90f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93915925-a5b2b080-fd00-11ea-880c-87679308f90f.png" alt="image" /></a></p>
-
-<ul>
-<li>Above is a sample of the quota section of a reference document – it lists the quotas that are applicable to a given country or trading bloc (here is a mocked-up reference document for the ESA1 trading bloc).</li>
-</ul>
-<h3 id="first-come-first-served-quotas">First Come, First Served Quotas</h3>
-<ul>
-<li>First Come, First Served quotas are far more prevalent than licensed quotas on the Tariff database.</li>
-<li>As the name suggests this favours those traders that apply for the quota first</li>
-<li><p>Then, once the initial volume assigned to the quota has been fully depleted, the quota is deemed to be exhausted and is no longer available to draw down against. Once depleted, the trader’s import then falls back on the next best import duty, which may be a tariff preference, but it more likely just the MFN duty.</p></li>
-<li><p>There is an important difference in the way in which FCFS are managed compared to licensed quotas:</p>
-
-<ul>
-<li>FCFS quotas pass through the HMRC systems that are of greatest interest to the DIT Tariff Application (CHIEF and CDS)</li>
-<li>Licensed quotas do not touch HMRC systems: instead they are handled essentially off-system via the RPA.</li>
-</ul></li>
-</ul>
-<h4 id="data-structures">Data structures</h4><p>The data objects that are utilised for FCFS are vastly more numerous than those used for licensed quotas.</p>
+<h2 id="how-tariff-quotas-are-introduced">How tariff quotas are introduced</h2><p>Usually tariff quotas are brought in over time by a process called &lsquo;staging&rsquo;.</p>
+<p>Read more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#introducing-the-benefits-of-a-trade-agreement-over-time-staging">about staging</a>.</p>
+<h2 id="introductory-periods">Introductory periods</h2><p>Sometimes quotas are set up with an introductory period. For example, the UK may sign a new trade agreement with another country which contains a quota period.</p>
+<p>If the start of the quota period and the implementation of the trade agreement are not the same, an introductory period would be needed.</p>
+<p>During the introductory period, only a proportion of the total quota balance is available to traders.</p>
+<h2 id="how-the-data-is-structured">How the data is structured</h2><p>There are more data objects for first come, first serve quotas than for licensed quotas.</p>
 <p>Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" alt="image" /></a></p>
-<h4 id="the-timespans-of-a-fcfs-quota">The timespans of a FCFS quota</h4>
-<ul>
-<li>There are no limits on the periods that quotas can span, but there are commonalities, which these pages aim to share.</li>
-<li>There are no quotas that are essentially one-offs – a quota is a permanent instrument to balance trade, not a one-time hit.</li>
-<li>The following types of quota periodicity can be found in the tariff:
-
-<ul>
-<li>Annual full year quota running from Jan 1st to December 31st and repeating every year</li>
-<li>Annual full year quota running from another start date (e.g. July 1st to June 30th) and repeating every year</li>
-<li>Part year quota running from any date to any other date (e.g. Feb 14th to May 31st) and repeating between the same dates every year</li>
-<li>Quarterly quota running from Jan 1st to December 31st and repeating on that pattern every year</li>
-<li>Quarterly quota running from another start date but lasting a full 12 months and repeating on that pattern every year</li>
-<li>Part year quota split into monthly sections and repeating every year</li>
-</ul></li>
-<li>These periods are enshrined in the legislation that engenders them – there is no deviation on the start and end dates of the periods (though watch out for leap years)</li>
-</ul>
-<h3 id="quota-staging">Quota staging</h3>
-<ul>
-<li>The ultimate goal of a trade agreement is often to get to a place where there is a 0% import duty on goods being imported</li>
-<li>But, if that goal were to be reached immediately, the toxic shock to domestic producers would be potentially crippling, as  internal markets are swept away in one fell swoop by cheap and abundant imports.</li>
-<li>Therefore the idea of staging has been adopted to allow domestic businesses to adjust to the new reality over time.</li>
-<li>Staging periods equate to the period over which a trade agreement reaches it ultimate goal:
-
-<ul>
-<li>for tariff preferences, this is usually finite. For example, an agreement may include the goal to reduce an import duty from 10% (the pre-agreement MFN) to 0% over 4 years, reducing by 2.5% per year. After 4 years, the duty remains at 0% for as long as the agreement remains in place</li>
-<li>for staging in quotas, there is no finite end goal, just an increase in the volume of goods made available to the quota. For example at the start of a trade agreement, a quota may permit the import of 100,000 KGM of goods at a reduced rate. The agreement states that an additional 10,000 KGM are permitted per year. I have not seen a ceiling placed on this (e.g. an extra 10,000 KGM a year until it reached 200,000 KGM), but that does not mean it does not happen. The relaxation always takes place against the quota volume, not against the in-quota duties.</li>
-</ul></li>
-<li>Staging often appears in quotas created as part of a Trade Agreement, but never in WTO quotas or ATQs</li>
-</ul>
-<h3 id="safeguard-quotas">Safeguard quotas</h3>
-<ul>
-<li>Safeguards had been extremely rare in the tariff until 2018 and the use of quotas to support them had never been seen.</li>
-<li>The safeguard works like this:
-
-<ul>
-<li>a punitive duty of 25% import duty (type 696 – Additional duties (safeguard)) is applied to multiple steel products grouped in 28 categories. The duty is applied to c. 100 countries</li>
-<li>then individual quotas are overlaid to remove the duties for certain countries up to a given volume – different quotas are set up for each of the 28 groups (with many country exclusions), some of the quotas being annual and some of the quotas being quarterly</li>
-</ul></li>
-<li>This function is documented in detail elsewhere – warning: it is hugely complex and warrants very detailed attention.</li>
-<li>Knowing about the concepts behind quotas before digging into the safeguards will prepare you for the complexity.</li>
-</ul>
-<h2 id="introductory-periods">Introductory periods</h2>
-<ul>
-<li>There are very many cases where an annual cadence is set up for a quota with an introductory period at the start that allows the quota to, for example, coincide with the Day One live implementation of a trade agreement, but to still allow the cadence to follow a regular period.</li>
-</ul>
-<h2 id="quotas-data-structures">Data structures</h2><p><strong>Quota data structures and fields</strong></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94041703-83816700-fdc2-11ea-9aab-54dc59286eec.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94041703-83816700-fdc2-11ea-9aab-54dc59286eec.png" alt="image" /></a></p>
-<p><strong>Key data fields - Quota order number table</strong></p>
+<h3 id="the-quota-order-number-table">The quota order number table</h3><p>The quota order number table’s quota order number ID is linked to the measures table via the measures table’s order number field (one of many examples where common field names do not match in TARIC).</p>
 <div class="table-container">
         <table>
           <tr>
@@ -932,34 +817,7 @@ For a good example of an origin quota, please see the cat &amp; dog food quota i
 <br>The   date on which the quota order number record terminates – this should, in   nearly every circumstance, be left blank – see pages on origins and origin   exclusions below for the exceptions</td>
 </tr>
         </table>
-      </div>
-<ul>
-<li>The quota order number table’s quota order number ID is linked to the measures table via the measures table’s ordernumber field (one of many examples where common field names do not match in Taric).</li>
-<li>There are links also to the definition and origin tables (see below)</li>
-</ul>
-<p><strong>The quota definition table</strong></p>
-
-<ul>
-<li>The quota definition table is the table which defines the cadence of the quota and the volume of the goods that can be imported at reduced rates during each period.</li>
-<li>The definition table does not contain any information about:
-
-<ul>
-<li>the commodity codes that are impacted</li>
-<li>the geographical areas from which goods can be imported</li>
-<li>the in quota duties that apply</li>
-</ul></li>
-<li>There are a lot of tables that impact quotas, but the four below do the bulk of the work – the division of labour is noted</li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94042165-20440480-fdc3-11ea-9fa4-1ca0392c15b9.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94042165-20440480-fdc3-11ea-9fa4-1ca0392c15b9.png" alt="image" /></a></p>
-<p><strong>The quota definition in pictures</strong></p>
-
-<ul>
-<li>This graphic shows the relationship between quota order numbers and quota definitions (quotas are invented)</li>
-<li>Imagine a world where a new regime starts, brand new on Jan 1st – it is a new policy with nothing preceding it.</li>
-<li>We want all quotas to start asap (unless set to specific seasonal periods)</li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94042307-4c5f8580-fdc3-11ea-8c27-fe9550714d24.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94042307-4c5f8580-fdc3-11ea-8c27-fe9550714d24.png" alt="image" /></a></p>
-<p><strong>Key data fields - Quota definition table</strong></p>
+      </div><h3 id="the-quota-definition-table">The quota definition table</h3><p>The quota definition table is the table which defines the cadence of the quota and the volume of the goods that can be imported at reduced rates during each period.</p>
 <div class="table-container">
         <table>
           <tr>
@@ -1043,48 +901,28 @@ For a good example of an origin quota, please see the cat &amp; dog food quota i
 </td>
 </tr>
         </table>
-      </div><h3 id="criticality">Criticality</h3>
-<ul>
-<li>As described above, the critical state determines if a trader needs to pay securities when utilising the quota.</li>
-<li>The purpose of the requirement to collect securities is to
+      </div><p>The definition table does not contain any information about:</p>
 
 <ul>
-<li>a) attempt to provide some sort of level playing field for traders as a quota reaches exhaustion</li>
-<li>b) try to reduce returns towards the end of a definition’s active life span – managing returns is a hassle and if a trader has paid a security, the are less likely to be blasé with unused quota volume.</li>
-</ul></li>
+<li>the commodity codes that are impacted</li>
+<li>the geographical areas from which goods can be imported</li>
+<li>the in quota duties that apply</li>
 </ul>
-<h3 id="managing-geography">Managing geography</h3><p><a href="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" alt="image" /></a></p>
-<p>A FCFS quota only works when the full set of quota tables and measure tables are all set up and synchronised. It’s important to understand a few points around the geography of these two entities in order to create the right data.
-* geography has to be set correctly against both the measure and the quota order number
-* while the measures table has a 1-2-1 relationship with geographical areas, the quota order number table can relate to multiple origins via the many-to-many linking table “quota order number origins”.</p>
-<h3 id="geographical-areas-concepts">Geographical areas – concepts</h3>
-<ul>
-<li>A quota can be assigned either to an individual country or to a group of countries</li>
-<li><p>As described, it may also be assigned to multiple (single) countries as well; theoretically, there is no reason why the quota cannot be assigned to multiple country groups simultaneously, though this has never happened.</p></li>
-<li><p>For each assignment of geographical area to quota order number, the following is required:</p>
-
-<ul>
-<li>a record in the measures table, linking geographical_area_id and ordernumber.</li>
-<li>a record in the quota_order_number_origins table, linking geographical_area_id and quota_order_number_id.</li>
-</ul></li>
-</ul>
-<h4 id="excluding-countries-from-quotas">Excluding countries from quotas</h4>
-<ul>
-<li>When a quota is assigned to a country group, it is possible and very common to exclude countries from that group, such that the quota does not apply to that country. Examples of this are:
-
-<ul>
-<li>quotas that apply on food and drink that apply to Central America, but from which Panama is excluded</li>
-<li>almost all of the steel safeguard quotas feature multiple exclusions.</li>
-</ul></li>
-<li>Obviously, the excluded country may be a member of the country group that’s assigned to the quota.</li>
-<li>For each exclusion of a country from a quota associated to a country group, the following is required:
-
-<ul>
-<li>a record in the quota order number origin exclusions table, linking the origin and the excluded geographical area.</li>
-<li>a record in the measure_excluded_geographical_areas table, linking the origin and the excluded geographical area.</li>
-</ul></li>
-</ul>
-<h4 id="key-data-fields-quota-order-number-origins-amp-exclusions-table">Key data fields - Quota order number origins &amp; exclusions table**</h4><div class="table-container">
+<p>There are a lot of tables that impact quotas, but the 4 in the figure below do the bulk of the work – the division of labour is noted.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94042165-20440480-fdc3-11ea-9fa4-1ca0392c15b9.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94042165-20440480-fdc3-11ea-9fa4-1ca0392c15b9.png" alt="image" /></a></p>
+<p>This graphic shows the relationship between quota order numbers and quota definitions (quotas are invented).</p>
+<p>Imagine that a brand new regime starts on 1 January. It is a new policy with nothing preceding it.</p>
+<p>We want all quotas to start as soon as possible (unless set to specific seasonal periods).</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94042307-4c5f8580-fdc3-11ea-8c27-fe9550714d24.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94042307-4c5f8580-fdc3-11ea-8c27-fe9550714d24.png" alt="image" /></a></p>
+<h2 id="assigning-quotas-to-geographical-areas">Assigning quotas to geographical areas</h2><p>A quota can be assigned either to an individual country or to a group of countries.</p>
+<p>It is also common to exclude countries from a country group.</p>
+<p>Read more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas">about geographical areas</a>.</p>
+<h3 id="managing-geography">Managing geography</h3><p>A first come, first serve quota only works when the full set of quota tables and measure tables are all set up and synchronised. It is important to understand a few points around the geography of these 2 entities in order to create the right data.</p>
+<p>Geography has to be set correctly against both the measure and the quota order number.</p>
+<p>While the measures table has a 1-2-1 relationship with geographical areas, the quota order number table can relate to multiple origins via the many-to-many linking table ‘quota order number origins’.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" alt="image" /></a></p>
+<h3 id="quota-order-number-origins-and-exclusions-table">Quota order number origins and exclusions table</h3><p>Any entries made in these two quota origin-related tables must also be matched by entries in the measures and measure_excluded_geographical_areas tables.</p>
+<div class="table-container">
         <table>
           <tr>
 <th>
@@ -1142,48 +980,17 @@ For a good example of an origin quota, please see the cat &amp; dog food quota i
 <br>•Foreign key to the SID of the   excluded geographical area</td>
 </tr>
         </table>
-      </div><p>Any entries made in these two quota origin-related tables must also be matched by entries in the measures and measure_excluded_geographical_areas tables.</p>
-<h4 id="strategies-for-managing-origins-and-exclusions">Strategies for managing origins and exclusions</h4>
-<ul>
-<li>Quota order number origins have start dates and end dates</li>
-<li>Quota order number origins do not have start dates and end dates</li>
-<li><p>If you want to alter the quota order number origin exclusions for a quota, and you don’t want it to happen immediately, you cannot just add the exclusion to the origin: it will take effect immediately, which is almost certainly not the requirement.</p></li>
-<li><p>There are two options:</p>
+      </div><h3 id="strategies-for-managing-origins-and-exclusions">Strategies for managing origins and exclusions</h3><p>Quota order number origins have start dates and end dates.</p>
+<p>Quota order number origins do not have start dates and end dates.</p>
+<p>If you want to alter the quota order number origin exclusions for a quota, and you do not want it to happen immediately, you cannot just add the exclusion to the origin: it will take effect immediately, which is almost certainly not the requirement. In this case, there are 2 options:</p>
 
 <ul>
 <li>either end the origin and start another origin</li>
 <li>or end the quota order number and start another quota order number with a new origin</li>
-</ul></li>
 </ul>
-<h2 id="quota-exception-periods-and-events">Quota exception periods and events</h2><p><a href="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" alt="image" /></a></p>
-
-<ul>
-<li>Linked to the definition tables are 8 additional tables:</li>
-<li>2 of these, the period tables are useful – these are discussed in the relevant documents (blocking and suspending quotas)</li>
-<li>There is an additional entity in the XSD, the quota.closed.and.transferred.event which is historical</li>
-</ul>
-<h2 id="licensed-quotas">Licensed quotas</h2><h3 id="quota-data-structures-and-fields">Quota data structures and fields</h3><p>None of the quota tables outside of the blue box below are relevant to licensed quotas</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94045622-9a768800-fdc7-11ea-8f89-1ed976e90b86.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94045622-9a768800-fdc7-11ea-8f89-1ed976e90b86.png" alt="image" /></a></p>
-
-<ul>
-<li>The ways to apply for the use of a licensed quota are laid out in the regulations that support them and they may differ according to the product that is concerned.</li>
-<li>Licensed quotas have never been used for anything other than agricultural products</li>
-</ul>
-<h3 id="licensed-quota-process-by-example-garlic">Licensed quota process – by example (garlic)</h3>
-<ul>
-<li>Possible garlic traders are grouped into two groups:
-
-<ul>
-<li>new importers – 30% of quota licenses are available for new importers</li>
-<li>traditional importers – 70% of quota licenses are available for traditional importers (those who can prove they have imported garlic frequently over the last x years)</li>
-</ul></li>
-<li>All declarants must register with the RPA (Rural Payments Agency)</li>
-<li>Applications must be submitted using an import licence application form (AGRIM), downloadable from gov.uk</li>
-<li>Quota applications may be made at certain specific periods in the year (for garlic, applications must be received during the first seven calendar days of April, July, October and January), and must be accompanied by securities and proof of trade</li>
-<li>Licenses are issued within a given date window, and may be used then in a short fixed period only from the point of issue</li>
-<li>All that is in the tariff data is the relationship between the commodity, the measure type, the time period, the in-quota duty rate and the origin – there is no concept of number of licenses / import volumes in the tariff data.</li>
-</ul>
-<h2 id="business-rules">Business rules</h2><p>Business rules for quotas can be found in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
+<h3 id="quota-exception-periods-and-events">Quota exception periods and events</h3><p>Eight additional tables are linked to the definition tables (see the figure below). The two period tables (highlighted in red in the figure) are useful – these are discussed in the relevant documents (blocking and suspending quotas).</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" alt="image" /></a></p>
+<h2 id="business-rules">Business rules</h2><p>Read the business rules for quotas in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
 
             
           </main>
