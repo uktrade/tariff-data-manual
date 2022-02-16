@@ -143,7 +143,7 @@
         <a href="/tariff-data-manual/documentation/tariff-policy/import-&-export-control.html#measure-types-and-measure-type-series"><span>Measure types and measure type series</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-policy/import-&-export-control.html#restrictions"><span>Restrictions</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-policy/import-&-export-control.html#prohibitions-and-restrictions"><span>Prohibitions and restrictions</span></a>
       </li>
     </ul>
   </li>
@@ -668,34 +668,25 @@
 <a href="#measure-types-and-measure-type-series">Measure types and measure type series</a>
 </li>
 <li>
-<a href="#restrictions">Restrictions</a>
-<ul>
-<li>
-<a href="#an-example-import-control-on-cat-and-dog-fur">An example: import control on cat and dog fur</a>
+<a href="#prohibitions-and-restrictions">Prohibitions and restrictions</a>
 </li>
 </ul>
-<p></li>
-</ul></p>
-<h2 id="import-controls">Import controls</h2><p>Import controls are imposed using either statutory instruments or the UK’s national import prohibition legislation.</p>
+<h2 id="import-controls">Import controls</h2><p>Import controls are imposed using either of the following:</p>
+
+<ul>
+<li>statutory instruments</li>
+<li>the UK’s national import prohibition legislation</li>
+</ul>
 <p>Read guidance on <a href="https://www.gov.uk/guidance/import-controls">how the government monitors imports into the UK</a> on GOV.UK.</p>
 <h2 id="export-controls">Export controls</h2><p>Controlled goods are regulated through a system of export licensing.</p>
 <p>The Export Control Joint Unit (ECJU) is responsible for the exporting control and licensing of these items.</p>
 <p>Read <a href="https://www.gov.uk/guidance/exporting-controlled-goods-after-eu-exit">guidance on the export of controlled goods</a> on GOV.UK</p>
-<h2 id="measure-types-and-measure-type-series">Measure types and measure type series</h2><p><a href="https://user-images.githubusercontent.com/61055197/94949190-72c6a480-04d8-11eb-9808-e955465c237d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94949190-72c6a480-04d8-11eb-9808-e955465c237d.png" alt="image" /></a></p>
-
-<ul>
-<li>The list of measure types on the previous page may appear overwhelming, however it is reassuring that there is a huge degree of similarity between literally all of these measures – they all involve the same data objects and the same system usage.</li>
-<li>There are two axes to be aware of, as follows:
-
-<ul>
-<li>Import vs export</li>
-<li>Prohibition vs restriction</li>
-</ul></li>
-<li>In terms of data setup, there is no difference whatsoever for tariff users determining import versus export: the import versus export differentiator is set up as a part of the measure type (i.e. just once)</li>
-<li>for prohibition versus restriction, the difference is that prohibitions are finite: they cannot be overcome via the use of documentation (e.g. certificates / licenses), whereas for restrictions, these are always accompanies by conditions: the trader can complete the import if certain conditions are fulfilled, usually by accompanying the trade with some kind of documentation.</li>
-</ul>
-<p><a href="https://user-images.githubusercontent.com/61055197/94949326-a4d80680-04d8-11eb-9390-75fb2f041132.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94949326-a4d80680-04d8-11eb-9390-75fb2f041132.png" alt="image" /></a></p>
-<p>According to the Tariff guide, prohibitions and meant to be set up using measure type series ‘A’ and restrictions using measure series ‘B’. While this is honoured for some prohibitions this has been somewhat loosely observed. Hence, the following measure types exist as ‘true’ prohibitions according to the measure types series:</p>
+<h2 id="measure-types-and-measure-type-series">Measure types and measure type series</h2><p>All the measures listed in the following image involve the same data objects and system usage.</p>
+<p>When setting up the data, there&rsquo;s no difference for tariff users determining import or export. The import or export differentiator is set up once as a part of the measure type.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94949190-72c6a480-04d8-11eb-9808-e955465c237d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94949190-72c6a480-04d8-11eb-9808-e955465c237d.png" alt="image" /></a></p>
+<h2 id="prohibitions-and-restrictions">Prohibitions and restrictions</h2><p>Prohibitions are finite. They cannot be overcome with documentation, such as certificates or licences.</p>
+<p>Restrictions are always accompanied by conditions. The trader can complete the import if they fulfill certain conditions. This usually takes the form of documentation.</p>
+<p>Prohibitions should be set up using measure type series ‘A’ and restrictions using measure series ‘B’. This rule has been loosely observed. So the following measure types exist as ‘true’ prohibitions according to the measure types series:</p>
 
 <ul>
 <li>277 Import prohibition</li>
@@ -709,19 +700,16 @@
 <li>740 Export control on cat and dog fur</li>
 <li>749 Export control of mercury</li>
 </ul>
-<h2 id="restrictions">Restrictions</h2>
-<ul>
-<li>Most restrictions are simple – they describe a measure type that has been applied to a commodity code from a given date (usually unterminated), which is then assigned a small number of conditions that describe how the trader can make the trade succeed, e.g. by supplying a document of some sort.</li>
-<li>In most cases, the restriction is set up as a pair of items:
+<p>Most restrictions describe a measure type that has been applied to a commodity code from a given date. This is then assigned a small number of conditions that describe how the trader can make the trade succeed. For example, by supplying a document.</p>
+<p>In most cases, the restriction is set up as a pair of items:</p>
 
 <ul>
 <li>one describing what should happen if the conditions are fulfilled</li>
 <li>the other describing what happens if the conditions are not fulfilled</li>
-</ul></li>
 </ul>
-<h3 id="an-example-import-control-on-cat-and-dog-fur">An example: import control on cat and dog fur</h3><p><a href="https://user-images.githubusercontent.com/61055197/94949525-f54f6400-04d8-11eb-8b96-4a2fdc2e8f41.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94949525-f54f6400-04d8-11eb-8b96-4a2fdc2e8f41.png" alt="image" /></a></p>
-<p>This shows a pair of conditions: at the top the success condition and beneath it the failure condition. In this case, success if a specific “document code” is fulfilled.</p>
-<p>This is actually not a document at all, rather an indication as to which types of pelt are included in the restriction.</p>
+<p>For example, the following image shows a pair of conditions for the import of cat and dog fur. At the top is the success condition and beneath it the failure condition.</p>
+<p>In this case, the success condition is if a specific document code is fulfilled. This is actually not a document. It is an indication of which types of pelt are included in the restriction.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94949525-f54f6400-04d8-11eb-8b96-4a2fdc2e8f41.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94949525-f54f6400-04d8-11eb-8b96-4a2fdc2e8f41.png" alt="image" /></a></p>
 
             
           </main>
