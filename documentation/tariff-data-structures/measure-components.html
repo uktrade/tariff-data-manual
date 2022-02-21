@@ -354,10 +354,10 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#types-of-duty-applied-to-measures"><span>Types of duty applied to measures</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#what-measure-components-are"><span>What measure components are</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-components-measure-components"><span>Measure components</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#types-of-duty-applied-to-measures"><span>Types of duty applied to measures</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#breaking-down-a-duty-string"><span>Breaking down a duty string</span></a>
@@ -366,13 +366,13 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#duty-expressions"><span>Duty expressions</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#duty-expression-sequencing-amp-duality"><span>Duty expression sequencing & duality</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#duty-expression-sequencing-and-duality"><span>Duty expression sequencing and duality</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#how-to-group-duty-expressions"><span>How to group duty expressions</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#about-measurement-unit-qualifiers"><span>About measurement unit qualifiers</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-components.html#measure-component-data-structures"><span>Measure component data structures</span></a>
@@ -650,10 +650,10 @@
             <h1 id="measure-components">Measure components</h1>
 <ul>
 <li>
-<a href="#types-of-duty-applied-to-measures">Types of duty applied to measures</a>
+<a href="#what-measure-components-are">What measure components are</a>
 </li>
 <li>
-<a href="#measure-components">Measure components</a>
+<a href="#types-of-duty-applied-to-measures">Types of duty applied to measures</a>
 </li>
 <li>
 <a href="#breaking-down-a-duty-string">Breaking down a duty string</a>
@@ -662,13 +662,13 @@
 <a href="#duty-expressions">Duty expressions</a>
 </li>
 <li>
-<a href="#duty-expression-sequencing">Duty expression sequencing & duality</a>
+<a href="#duty-expression-sequencing-and-duality">Duty expression sequencing and duality</a>
 </li>
 <li>
 <a href="#how-to-group-duty-expressions">How to group duty expressions</a>
 </li>
 <li>
-<a href="#about-measurement-unit-qualifiers">About measurement unit qualifiers</a>
+<a href="#measurement-unit-qualifiers">Measurement unit qualifiers</a>
 <ul>
 <li>
 <a href="#managing-duties">Managing duties</a>
@@ -687,38 +687,32 @@
 <a href="#business-rules">Business rules</a>
 </li>
 </ul></p>
+<h2 id="what-measure-components-are">What measure components are</h2><p>Measure components are the elements that make up a tariff duty.</p>
+<p>Not all tariff measures have duties associated with them. For example, measure types which do need duties include:</p>
 
-<blockquote>
-<p>‘Measure components’ are the elements that make up a tariff duty.</p>
-</blockquote>
-<p>Not all tariff measures have duties associated with them. For example, measures of type 103, 142 or 143 (third country duty, tariff preference and preferential tariff rate quota) require duties but, for example 277 import prohibition does not.</p>
-<p>This table shows the duties or measure component column on the UK Trade Tariff service.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93507608-d0be8e00-f915-11ea-90f7-208e03d30913.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93507608-d0be8e00-f915-11ea-90f7-208e03d30913.png" alt="image" /></a></p>
+<ul>
+<li>third country duty (103)</li>
+<li>tariff preference (142)</li>
+<li>preferential tariff rate quota (143) </li>
+</ul>
+<p>The import prohibition measure type (277) does not.</p>
 <h2 id="types-of-duty-applied-to-measures">Types of duty applied to measures</h2><p>The types of duties that can be applied to a measure are:</p>
 
 <ul>
-<li>‘Ad valorem’ duty, for example 0.00% or 3.60% (a percentage additional duty applied to the import duty of the goods</li>
-<li>specific duty: an import duty dependent on the weight or volume of goods being imported rather than the price (for example 4.200 EUR/kg or 110.00 EUR/l)</li>
-<li>compound duty: a combination of ad valorem and compound types (for example 3.60% + 110 EUR/l)
-‘Conjunctions’ can be used to  join multiple ‘clauses’ within the duty sentence. For example, Min (down to a minimum of …) Max (up to a maximum of …)</li>
+<li>ad valorem duty - for example 0.00% or 3.60% (a percentage additional duty applied to the import duty of the goods)</li>
+<li>specific duty - an amount based on the weight or volume of the imported goods rather than the price</li>
+<li>compound duty - a combination of ad valorem and specific duties</li>
 </ul>
-<h2 id="measure-components-measure-components">Measure components</h2><p>A ‘measure component’ is the term used in tariff management to describe the elements that make up a tariff duty.</p>
-<p>An example</p>
-<p>The duties applied to the import of white chocolate into the European Union illustrate a number of the concepts behind management of duties and measure components.</p>
-<p>The full duty applicable to the import of white chocolate (1704903000) is as follows:</p>
-<p>9.10 % + 45.10 EUR / 100 kg MAX 18.90 % + 16.50 EUR / 100 kg</p>
-<p>This is a complex duty that is a pair of compound duties joined together by a MAX conjunction.</p>
-<p>The following shows how this is broken into multiple measure components.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93507687-f055b680-f915-11ea-8856-210c74c209eb.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93507687-f055b680-f915-11ea-8856-210c74c209eb.png" alt="image" /></a></p>
 <h2 id="breaking-down-a-duty-string">Breaking down a duty string</h2><p><a href="https://user-images.githubusercontent.com/61055197/93507767-124f3900-f916-11ea-994c-21ebb8b2a923.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93507767-124f3900-f916-11ea-994c-21ebb8b2a923.png" alt="image" /></a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93507782-17ac8380-f916-11ea-8474-b70e2f2d96c0.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93507782-17ac8380-f916-11ea-8474-b70e2f2d96c0.png" alt="image" /></a></p>
-<h2 id="duty-expressions">Duty expressions</h2><p><a href="https://user-images.githubusercontent.com/61055197/93519105-b391bb80-f925-11ea-8ce6-31761d89017c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519105-b391bb80-f925-11ea-8ce6-31761d89017c.png" alt="image" /></a></p>
-<p>Usable duty expressions</p>
-<p>The duty expression indicates to the border system how to treat the values that are attributed to the other columns in the measure_component table.</p>
+<h2 id="duty-expressions">Duty expressions</h2><p>Duty expressions indicate to the border system how the values that are attributed to the other columns in the measure component table should be treated.</p>
 <p>Duty expressions cannot be changed, appended or deleted.</p>
-<h2 id="duty-expression-sequencing-amp-duality">Duty expression sequencing &amp; duality</h2><p><a href="https://user-images.githubusercontent.com/61055197/93519438-2c911300-f926-11ea-94d3-e60cb9a3c569.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519438-2c911300-f926-11ea-94d3-e60cb9a3c569.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93519105-b391bb80-f925-11ea-8ce6-31761d89017c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519105-b391bb80-f925-11ea-8ce6-31761d89017c.png" alt="image" /></a></p>
+<h2 id="duty-expression-sequencing-and-duality">Duty expression sequencing and duality</h2><p><a href="https://user-images.githubusercontent.com/61055197/93519438-2c911300-f926-11ea-94d3-e60cb9a3c569.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519438-2c911300-f926-11ea-94d3-e60cb9a3c569.png" alt="image" /></a></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93519449-3155c700-f926-11ea-9ff6-926aa8f00b63.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519449-3155c700-f926-11ea-9ff6-926aa8f00b63.png" alt="image" /></a></p>
-<h2 id="how-to-group-duty-expressions">How to group duty expressions</h2><div class="table-container">
+<h2 id="how-to-group-duty-expressions">How to group duty expressions</h2><p>You cannot choose which of the grouped duty expressions to select. You must use 01 on all occasions for an ad valorem duty or specific duties unless there is a compound duty. If there&rsquo;s a compound duty, use 01 followed by 04.</p>
+<p>For standard duty expressions (excluding <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-policy/agricultural-instruments.html#meursing-code">Meursing</a> and <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-policy/miscellaneous-measures.html#supplementary-units">supplementary units</a>) there&rsquo;s a specific duty for a set monetary unit. If there is no value, then it is an ad valorem duty. This is why the duty expression description is &lsquo;% or amount&rsquo;.</p>
+<p>For a specified monetary unit, there must be a measurement unit. For a specified measurement unit, you can also apply a qualifier which is used to specify measurement units such as &lsquo;kg net weight&rsquo; or &lsquo;kg gross weight&rsquo;.</p>
+<div class="table-container">
         <table>
           <tr>
 <th>Requirement</th>
@@ -740,28 +734,17 @@
 <td>99</td>
 </tr>
         </table>
-      </div><p>It is not up to you to choose which of the grouped duty expressions to use:</p>
-
-<ul>
-<li>use 01 in all occasions for an ad valorem duty or specific duties …</li>
-<li>unless there is a compound duty, in which case use 01 followed by 04</li>
-</ul>
-<p>Previously we described the duty expressions 01, 04 and 19 (and 20) as being functionally identical, however, they display differently – this is solely down to the other values in the table row.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93520618-aa551e80-f926-11ea-9151-986cdee88d2a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93520618-aa551e80-f926-11ea-9151-986cdee88d2a.png" alt="image" /></a></p>
-<p>For standard duty expressions (excluding Meursing and supplementary units):for a  set  monetary unit  there is a specific duty. If there is no value, then it is an ad valorem duty. This is why the duty expression description is “% or amount”.</p>
-<p>For a specified  monetary unit, there must be a measurement unit. For a specified measurement unit, you can also apply a qualifier.  It is used to specify measurement units such as “kg net weight” or “kg gross weight”.</p>
-<p>Measurement unit qualifiers can only be applied to some measurement units.</p>
+      </div><h2 id="measurement-unit-qualifiers">Measurement unit qualifiers</h2><p>Measurement unit qualifiers can only be applied to some measurement units.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93520800-f56f3180-f926-11ea-9788-82ad0ec18110.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93520800-f56f3180-f926-11ea-9788-82ad0ec18110.png" alt="image" /></a></p>
-<p>The measurement units that can be used</p>
-<p>NAR (number of articles) is commonly used, but can be referred to as:</p>
+<p>The measurement units that are commonly used are Number of Articles (NAR), which are also referred to as:</p>
 
 <ul>
-<li>“p/s” for items in French or German, or</li>
-<li>“heads” in reference to livestock</li>
+<li>&lsquo;p/s&rsquo; for items in French or German, or</li>
+<li>&lsquo;heads&rsquo; in reference to livestock</li>
 </ul>
-<h2 id="about-measurement-unit-qualifiers">About measurement unit qualifiers</h2><p>The following table identifies the measurement unit qualifiers that can be used. Those highlighted in yellow are those that have been used since Jan 2021.</p>
+<p>The following table identifies the measurement unit qualifiers that can be used. Those highlighted in yellow are those that have been used since Jan 2021.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93520975-3d8e5400-f927-11ea-9619-752b32412f5e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93520975-3d8e5400-f927-11ea-9619-752b32412f5e.png" alt="image" /></a></p>
-<p>The following table is used to identify which qualifiers can be used alongside which measurement codes. It’s vital that the TAP interface does not allow any combination of unit and qualifier not specified in the measurements table.</p>
+<p>The following table is used to identify which qualifiers can be used alongside which measurement codes. It’s vital that the Tariff Application Platform does not allow any combination of unit and qualifier not specified in the measurements table.</p>
 <div class="table-container">
         <table>
           <tr>
@@ -899,18 +882,16 @@
       </div><h3 id="managing-duties">Managing duties</h3><p>When a trader declares goods for import, they usually have to declare the weight of their goods in kilograms (KGM), but goods may also be measured in:</p>
 
 <ul>
-<li>“number of items” for livestock</li>
+<li>number of items for livestock</li>
 <li>volume in litres for liquid items</li>
-<li>“number of pairs” for socks</li>
+<li>number of pairs for socks</li>
 </ul>
-<p>The trader is asked to complete Box 41 on the SAD form (shown below) – the trader must enter the numeric value and the supplementary unit, for example 247 items (NAR) or 15,000 litres of pure alcohol (LPA).</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93506235-e763e580-f913-11ea-9fe2-3313da065e65.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93506235-e763e580-f913-11ea-9fe2-3313da065e65.png" alt="image" /></a></p>
+<p>The trader is asked to complete Box 41 on the single administrative document (SAD) form. The trader must enter the numeric value and the supplementary unit, for example 247 items (NAR) or 15,000 litres of pure alcohol (LPA).</p>
 <h2 id="measure-component-data-structures">Measure component data structures</h2><p><a href="https://user-images.githubusercontent.com/61055197/93506190-d4511580-f913-11ea-878a-924132f86482.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93506190-d4511580-f913-11ea-878a-924132f86482.png" alt="image" /></a></p>
 <h3 id="measure-condition-components">Measure condition components</h3><p><a href="https://user-images.githubusercontent.com/61055197/93506182-cf8c6180-f913-11ea-8a06-49b983015b3d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93506182-cf8c6180-f913-11ea-8a06-49b983015b3d.png" alt="image" /></a></p>
-<p>Measure conditions may be attached to conditions instead of to measures themselves.</p>
-<p>Measure condition components measure components must not be applied together.</p>
-<p>Measure condition components differ from measure components only in that they are attached to the condition and not the measure itself.</p>
-<h2 id="business-rules">Business rules</h2><p>Business rules for measure components can be found in the <a href="https://uktrade.github.io/tamato/html/business_rules/measures.html">system documentation</a>.</p>
+<p>Measure conditions may be attached to conditions instead of to measures themselves. Measure condition components differ from measure components only in that they are attached to the condition and not the measure itself.</p>
+<p>Measure condition components and measure components must not be applied together.</p>
+<h2 id="business-rules">Business rules</h2><p>Read the business rules for measure components in the <a href="https://uktrade.github.io/tamato/html/business_rules/measures.html">system documentation</a>.</p>
 
             
           </main>
