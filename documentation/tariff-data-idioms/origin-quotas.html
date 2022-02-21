@@ -93,10 +93,10 @@
     <a href="/tariff-data-manual/documentation/tariff-data-idioms/origin-quotas.html#origin-quotas"><span>Origin quotas</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-idioms/origin-quotas.html#example-of-an-origin-quota"><span>Example of an origin quota</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-idioms/origin-quotas.html#what-origin-quotas-are"><span>What origin quotas are</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-idioms/origin-quotas.html#anatomy-of-an-origin-quota"><span>Anatomy of an origin quota</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-idioms/origin-quotas.html#how-origin-quotas-are-structured"><span>How origin quotas are structured</span></a>
       </li>
     </ul>
   </li>
@@ -659,10 +659,10 @@
             <h1 id="origin-quotas">Origin quotas</h1>
 <ul>
 <li>
-<a href="#example-of-an-origin-quota">Example of an origin quota</a>
+<a href="#what-origin-quotas-are">What origin quotas are</a>
 </li>
 <li>
-<a href="#anatomy-of-an-origin-quota">Anatomy of an origin quota</a>
+<a href="#how-origin-quotas-are-structured">How origin quotas are structured</a>
 <ul>
 <li>
 <a href="#worked-example">Worked example</a>
@@ -670,8 +670,10 @@
 </ul>
 <p></li>
 </ul></p>
-<p>Origin quotas are preferential quotas that relax the rules of origin for a commodity up to a specified import volume. A certificate condition is often attached to the quota for this purpose, and the rate is the same as the non-quota preference. They are sometimes called <em>derogations</em>.</p>
-<h2 id="example-of-an-origin-quota">Example of an origin quota</h2><p>In the <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:127:1344:1414:EN:PDF">EU-South Korea trade agreement</a>, there is a rule of origin:</p>
+<h2 id="what-origin-quotas-are">What origin quotas are</h2><p>Origin quotas are sometimes called derogations.</p>
+<p>They allow specific quantities of some goods to get preferential tariff treatment.</p>
+<p>The goods must meet certain conditions. For example, a trader must prove the origin of the goods. Read <a href="https://www.gov.uk/guidance/check-your-goods-meet-the-rules-of-origin">about rules of origin</a> on GOV.UK.</p>
+<p>The following table shows an example of a rule of origin in the <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:127:1344:1414:EN:PDF">EU-South Korea trade agreement</a>.</p>
 <div class="table-container">
         <table>
           <tr>
@@ -684,7 +686,7 @@
 <td style="text-align: center">Manufacture in which at least 70% by weight of the unmanufactured tobacco or tobacco refuse of heading 2401 used is originating</td>
 </tr>
         </table>
-      </div><p>And there is also an origin quota:</p>
+      </div><p>The following table shows there is also an origin quota in the EU-South Korea trade agreement.</p>
 <div class="table-container">
         <table>
           <tr>
@@ -699,7 +701,7 @@
 <td style="text-align: center">Annual quota of 250 Metric tons</td>
 </tr>
         </table>
-      </div><h2 id="anatomy-of-an-origin-quota">Anatomy of an origin quota</h2><svg width="443pt" height="152pt"
+      </div><h2 id="how-origin-quotas-are-structured">How origin quotas are structured</h2><svg width="443pt" height="152pt"
  viewBox="0.00 0.00 443.31 152.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 148)">
 <title>g</title>
@@ -806,10 +808,11 @@
 <path fill="none" stroke="black" d="M204.66,-72C192.83,-72 180.1,-72 167.67,-72"/>
 </g>
 </g>
-</svg><p>An origin quota is composed of a quota associated with a number of commodities via measures. The quota is just a normal first-come first-served quota and as usual requires a quota order number beginning 05.</p>
-<p>What is different about an origin quota is that the measures associated with the quota each have a measure condition that require the use of a certificate. The certificate should be of type U (Proof of origin) and should contain text that specifies that part of the trade agreement legal text that mentions the origin quota.</p>
-<p>The condition code for the measure condition is type Q (import due to a special license). The measure conditions are set up as:</p>
-<p><strong>Q: Presentation of an endorsed certificate/licence</strong></p>
+</svg><p>An origin quota consists of a quota associated with some commodities via measures. The quota is a first come, first serve quota. As usual, it requires a quota order number beginning 05.</p>
+<p>The measures associated with the quota each have a measure condition that requires the use of a certificate.</p>
+<p>The certificate should be of type U (proof of origin). It must describe the specific part of the trade agreement that mentions the origin quota.</p>
+<p>The condition code for the measure condition is type Q (import due to a special licence). The following table shows how measure conditions are set up.</p>
+<p>Q: Presentation of an endorsed certificate/licence</p>
 <div class="table-container">
         <table>
           <tr>
@@ -861,9 +864,15 @@
 <td style="text-align: center">-</td>
 </tr>
         </table>
-      </div><p>Heading 1604.14 (a.k.a commodity code <code>1604 14 00 00</code>) specifies an annual volume of 3,000 tonnes. Heading 1604.20 does not have a quota specified against the code itself, and most importantly nothing is specified against its subdivision &ldquo;of other fish&rdquo;. The quota therefore only applies to the one child &ldquo;… of the Euthynnus genus&rdquo;. This corresponds to commodity code <code>1604 20 70 00</code> in the current nomenclature.</p>
-<p>As the two quotas are independent (trades from one does not remove volume from the other) and because they have different volumes, two different quota order numbers are needed. As the origin quotas are defined in the same table they can use a certificate with the same description.</p>
-<p>This results in the following tariff data objects:</p>
+      </div><p>1604.14 (or commodity code 1604 14 00 00) specifies an annual volume of 3,000 tonnes.</p>
+<p>1604.20 does not have a quota specified against the code itself, and nothing is specified against its subdivision “of other fish”. So, the quota only applies to the one child &lsquo;of the Euthynnus genus&rsquo;. This corresponds to commodity code 1604 20 70 00 in the current nomenclature.</p>
+<p>Two different quota order numbers are needed because:</p>
+
+<ul>
+<li>the 2 quotas are independent - trades from one do not remove volume from the other</li>
+<li>the 2 quotas have different volumes</li>
+</ul>
+<p>As the origin quotas are defined in the same table they can use a certificate with the same description. This results in the following tariff data objects:</p>
 <svg width="782pt" height="363pt"
  viewBox="0.00 0.00 782.00 363.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 359)">
