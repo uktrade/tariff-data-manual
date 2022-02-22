@@ -294,13 +294,10 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#measure-generating-regulations"><span>Measure generating regulations</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#regulations-in-the-uk"><span>Regulations in the UK</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#base-regulations"><span>Base regulations</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#regulation-groups"><span>Regulation groups</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#linking-to-regulations"><span>Linking to regulations</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#grouping-regulations"><span>Grouping regulations</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/regulations.html#draft-regulations"><span>Draft regulations</span></a>
@@ -650,25 +647,23 @@
             <h1 id="measure-generating-regulations">Measure generating regulations</h1>
 <ul>
 <li>
-<a href="#regulations-in-the-uk">Regulations in the UK</a>
+<a href="#base-regulations">Base regulations</a>
 </li>
 <li>
-<a href="#regulation-groups">Regulation groups</a>
-</li>
-<li>
-<a href="#linking-to-regulations">Linking to regulations</a>
+<a href="#grouping-regulations">Grouping regulations</a>
 </li>
 <li>
 <a href="#draft-regulations">Draft regulations</a>
 <ul>
 <li>
-<a href="#approved-flag">Approved flag</a>
+<a href="#sending-draft-regulations-before-they-re-approved">Sending draft regulations before they&rsquo;re approved</a>
 </li>
 </ul>
 <p></li>
 </ul></p>
-<p>Every measure entered into the Tariff database must be associated with a regulation. The purpose of this is to ensure that there is a ‘legal base’ for all tariff and regulatory activity, without which the measures could not be traced back to the initial purpose for their existence.</p>
-<p>The requirement for a regulation is built into the the schema for TARIC files and is a mandatory field for the measure table.</p>
+<p>Every measure entered into the tariff database must be associated with a regulation.</p>
+<p>This is so there&rsquo;s a ‘legal base’ for all tariff and regulatory activity. Without this, measures cannot be traced back to why they were created.</p>
+<p>The need for a regulation is built into the schema for TARIC files. It is a mandatory field for the measure table.</p>
 <svg width="326pt" height="260pt"
  viewBox="0.00 0.00 326.00 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
@@ -780,11 +775,12 @@
 <path fill="none" stroke="black" d="M265.73,-71.7C266.82,-60.85 268.21,-46.92 269.29,-36.1"/>
 </g>
 </g>
-</svg><p>Each regulation may have any number of measures associated with it and every measure is associated with just one measure-generating regulation. This terminology “measure-generating” is critical, as there is another regulation that is associated with measures’ terminations, which is called the “justification regulation”.</p>
-<h2 id="regulations-in-the-uk">Regulations in the UK</h2><p>We use <code>base_regulation tables</code>.</p>
-<p>A base regulation introduces new tariff and commercial measures. They do not originate from, or depend on other regulations. Base regulations, unless suspended, are valid from their entry into force to their end, or they can be open-ended. Measures under these regulations have the same validity, unless they are specifically suspended.</p>
-<h2 id="regulation-groups">Regulation groups</h2><p>Every base regulation on the system references a single regulation group.</p>
-<p>The regulation group represents a way of categorising regulations according to their purpose: it is much more than just a neat way of grouping regulations together: the groups mean something and if the tariff manager selects the wrong group, then the associated measures may not behave in the expected way.</p>
+</svg><p>Each regulation may have any number of measures associated with it. Every measure is associated with just one measure-generating regulation.</p>
+<h2 id="base-regulations">Base regulations</h2><p>A base regulation introduces new tariff and commercial measures. They do not originate from, or depend on, other regulations. Unless they are suspended, base regulations are valid from their entry into force to their end, or they can be open-ended.</p>
+<p>Measures under these regulations have the same validity, unless they are specifically suspended.</p>
+<h2 id="grouping-regulations">Grouping regulations</h2><p>Every base regulation on the system refers to a single regulation group.</p>
+<p>Regulation groups categorise regulations according to their purpose.</p>
+<p>Tariff managers must select the correct regulation group. If they select the wrong group, associated measures may not work properly.</p>
 <div class="table-container">
         <table>
           <tr>
@@ -831,25 +827,20 @@
 <td>Unit   price (SPV), standard import value (SIV)</td>
 </tr>
         </table>
-      </div><h2 id="linking-to-regulations">Linking to regulations</h2><p>The process of ‘ratifying’ a piece of legislation differs depending on the type of legislation involved. The majority of regulations that will impact the usage of the UK tariff are published as secondary legislation (statutory instruments or SIs). This applies to the setting of the MFN duties, managing annual quotas, trade agreements etc.</p>
-<p>The only real outlier is with Trade Remedies anti-dumping (AD) and anti-subsidy (AS) regulation – these are typically published as Taxation Notices (tertiary legislation).</p>
-<p>Using Taxation Notices instead of SIs makes a difference to the naming convention but also the timing. An SI can take months to go from 1st reading in the House of Commons through to execution – depending on whether it is an <a href="https://www.parliament.uk/about/how/laws/secondary-legislation/statutory-instruments-commons/">affirmative or negative procedure</a>, whereas a public notice that underpins AS/AD duties can be decided overnight on the say-so of the Secretary of State. In practice the tariff management team are likely to receive ~1 week notice for implementing anti-subsidy and anti-dumping duties.</p>
-<p>There is an additional point to bear in mind with the types of regulations. Most regulations will eventually lodge somewhere on legislation.gov.uk, whereas public notices will be published as flat HTML pages on gov.uk.</p>
-<p>This is important when defining the URL where the original document can be found (online), linked to from the UK Trade Tariff Service.</p>
-<h2 id="draft-regulations">Draft regulations</h2><p>Draft regulations are unique, inasmuch as they are ‘live’ but the measures that are associates with them do not take effect – they have no executive power and will not show up as active measures in the border systems or on the trade tariff service</p>
-<p>Draft regulations are identified by the prefix ‘C’.</p>
-<p>Draft regulations are especially useful for measures whose start date / legislative underpinning has not yet been decided, but out of expedience, it is necessary to start with measure data entry. If a draft regulation is not used, then any measures created on the Tariff Application will be ‘live’ and visible on the Trade Tariff Service, even if the user needs to move the time forward to see them.</p>
-<h3 id="approved-flag">Approved flag</h3><p>A regulation can either be “approved” or “not approved”. If a regulation is “not approved”, none of the measures that link to it will be active at the border, regardless of their validity dates. So the “approved” flag is like an on/off switch for all of the measures associated with a regulation.</p>
-<p>The use case is that sometimes it is appropriate to prepare and send new policy to border systems in advance before the legislation has been written or formally accepted by Parliament. In these cases, a draft regulation in a “not approved” state can be sent with all of the measures that it creates, and then when the legislation is signed off by Parliament the regulation can be simply updated to be “approved” and all of the measures become live.</p>
-<p>(The advantage of doing this over just not sending the measures until it is signed is that allows traders and other users to see what the changes <em>will be</em> when they are signed off by Parliament without any risk that they will accidentally be applied at the border.)</p>
-<p>The approved flag is hence not related to the “status” field or the tariff workflow – it is possible to have a “published” regulation that is “not approved”, or a “unpublished” regulation that is “approved”.</p>
-<p>The approved flag follows the following rules:</p>
+      </div><h2 id="draft-regulations">Draft regulations</h2><p>Draft regulations are unique in that they&rsquo;re live but the measures that are associated with them do not take effect. They have no executive power and will not show up as active measures in the border systems or in the UK tariff.</p>
+<p>Draft regulations are identified by the prefix C.</p>
+<p>Draft regulations are useful for measures where the start date has not yet been decided but it&rsquo;s necessary to start data entry.</p>
+<h3 id="sending-draft-regulations-before-they-39-re-approved">Sending draft regulations before they&rsquo;re approved</h3><p>Sometimes it is necessary to send new policy to border systems before the legislation has been accepted by Parliament.</p>
+<p>In this case, a draft regulation can be sent with a &lsquo;not approved&rsquo; flag.</p>
+<p>None of the measures linked to a &lsquo;not approved&rsquo; regulation will be active at the border.</p>
+<p>When the legislation is signed off by Parliament the regulation can be given an &lsquo;approved&rsquo; flag. At this point, all the measures become live.</p>
+<p>The following 2 rules apply:</p>
 
-<ul>
-<li>Only “draft regulations” can be “not approved”. A “draft regulation” is any regulation with an ID that starts with a “C”. Other types of regulations must always be “approved”.</li>
-<li>The approved flag can only be switched from “not approved” to “approved”. Once a regulation has been “approved”, it cannot subsequently be updated to be “not approved”. 
-<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></li>
-</ul>
+<ol>
+<li><p>Only draft regulations can be &lsquo;not approved&rsquo;. A draft regulation is any regulation with an ID that starts with C. Other types of regulations must always be &lsquo;approved&rsquo;.</p></li>
+<li><p>The approved flag can only be changed from &lsquo;not approved&rsquo; to &lsquo;approved&rsquo;. Once a regulation has been approved, it cannot be changed back. 
+<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p></li>
+</ol>
 
             
           </main>
