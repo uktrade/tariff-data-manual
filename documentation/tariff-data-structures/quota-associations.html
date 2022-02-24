@@ -404,7 +404,7 @@
     <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#introduction-to-measure-types"><span>Introduction to measure types</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#what-measure-types-are"><span>What measure types are</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-type-series"><span>Measure type series</span></a>
@@ -416,40 +416,19 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#existing-measure-type-series"><span>Existing measure type series</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-per-measure-type-series"><span>Measure types per measure type series</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#context-what-does-this-mean"><span>Context - what does this mean?</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#the-measure-type-696-anomaly"><span>The measure type 696 anomaly</span></a>
-      </li>
-      <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-type-fields"><span>Measure type fields</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#logical-view-of-measure-types"><span>Logical view of measure types</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#agri-measures"><span>Agri measures</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-and-additional-codes"><span>Measure types and additional codes</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#why-there-are-so-many-import-control-measures-me32"><span>Why there are so many import control measures … ME32</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#jams-fruit-jellies-marmalades"><span>Jams, fruit jellies, marmalades …</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#relationship-of-measure-types-to-additional-code-types"><span>Relationship of measure types to additional code types</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#additional-codes-cannot-be-applied-universally"><span>Additional codes cannot be applied universally …</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#data-structures"><span>Data structures</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#key-business-rules"><span>Key business rules</span></a>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-types.html#measure-types-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -694,11 +673,11 @@
 <h2 id="how-the-data-is-structured">How the data is structured</h2><p>The following diagram shows the data model for quota associations.</p>
 <svg width="700pt" height="250pt"
  viewBox="0.00 0.00 700.00 250.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_277" class="graph" transform="scale(1 1) rotate(0) translate(4 246)">
+<g id="database_447" class="graph" transform="scale(1 1) rotate(0) translate(4 246)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-246 696,-246 696,4 -4,4"/>
 <!-- Quota association -->
-<g id="table_685" class="node">
+<g id="table_103" class="node">
 <title>Quota association</title>
 <polygon fill="none" stroke="black" points="9.5,-221 9.5,-237 186.5,-237 186.5,-221 9.5,-221"/>
 <text text-anchor="start" x="61" y="-226.8" font-family="Arial" font-size="9.00">Quota association</text>
@@ -727,7 +706,7 @@
 <polygon fill="none" stroke="black" points="8,-156 8,-238 187,-238 187,-156 8,-156"/>
 </g>
 <!-- Quota definition -->
-<g id="table_758" class="node">
+<g id="table_311" class="node">
 <title>Quota definition</title>
 <polygon fill="none" stroke="black" points="240.5,-213 240.5,-229 453.5,-229 453.5,-213 240.5,-213"/>
 <text text-anchor="start" x="314.5" y="-218.8" font-family="Arial" font-size="9.00">Quota definition</text>
@@ -804,19 +783,19 @@
 <polygon fill="none" stroke="black" points="239,-4 239,-230 454,-230 454,-4 239,-4"/>
 </g>
 <!-- Quota association&#45;&gt;Quota definition -->
-<g id="database_277_edge1" class="edge">
+<g id="database_447_edge1" class="edge">
 <title>Quota association:e&#45;&gt;Quota definition:w</title>
 <path fill="none" stroke="black" d="M187.5,-213C208.14,-213 214.64,-206.77 231.97,-205.3"/>
 <polygon fill="black" stroke="black" points="232.11,-207.93 239.5,-205 231.9,-202.68 232.11,-207.93"/>
 </g>
 <!-- Quota association&#45;&gt;Quota definition -->
-<g id="database_277_edge2" class="edge">
+<g id="database_447_edge2" class="edge">
 <title>Quota association:e&#45;&gt;Quota definition:w</title>
 <path fill="none" stroke="black" d="M187.5,-197C208.14,-197 214.64,-203.23 231.97,-204.7"/>
 <polygon fill="black" stroke="black" points="231.9,-207.32 239.5,-205 232.11,-202.07 231.9,-207.32"/>
 </g>
 <!-- Quota order number -->
-<g id="table_225" class="node">
+<g id="table_162" class="node">
 <title>Quota order number</title>
 <polygon fill="none" stroke="black" points="507,-197 507,-213 683,-213 683,-197 507,-197"/>
 <text text-anchor="start" x="553.5" y="-202.8" font-family="Arial" font-size="9.00">Quota order number</text>
@@ -844,7 +823,7 @@
 <polygon fill="none" stroke="black" points="506,-132 506,-214 684,-214 684,-132 506,-132"/>
 </g>
 <!-- Quota definition&#45;&gt;Quota order number -->
-<g id="database_277_edge3" class="edge">
+<g id="database_447_edge3" class="edge">
 <title>Quota definition:e&#45;&gt;Quota order number:w</title>
 <path fill="none" stroke="black" d="M454.5,-189C474.53,-189 481.41,-189 498.15,-189"/>
 <polygon fill="black" stroke="black" points="498.5,-191.63 506,-189 498.5,-186.38 498.5,-191.63"/>
