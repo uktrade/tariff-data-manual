@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Supplementary units - Tariff Data Manual</title>
+    <title>Authorised use relief - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/tariff-policy/supplementary-units.html">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/tariff-policy/authorised-use-relief.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Supplementary units - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/tariff-policy/supplementary-units.html" />
+      <meta name="twitter:title" content="Authorised use relief - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/tariff-policy/authorised-use-relief.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Supplementary units" />
+      <meta property="og:title" content="Authorised use relief" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/tariff-policy/supplementary-units.html" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/tariff-policy/authorised-use-relief.html" />
 
     
   </head>
@@ -633,42 +633,45 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="supplementary-units">Supplementary units</h1>
+            <h1 id="authorised-use-relief">Authorised Use relief</h1>
 <ul>
 <li>
-<a href="#what-supplementary-units-are">What supplementary units are</a>
-</li>
+<a href="#how-to-find-a-commodity-code-which-is-for-authorised-use">How to find a commodity code which is for Authorised Use</a>
+<ul>
 <li>
-<a href="#measure-types-for-supplementary-units">Measure types for supplementary units</a>
+<a href="#how-traders-qualify-for-authorised-use-relief">How traders qualify for Authorised Use relief</a>
 </li>
 </ul>
-<h2 id="what-supplementary-units-are">What supplementary units are</h2><p>Supplementary units are used when an extra measurement unit is needed on customs declarations. For example, the quantity of the products as well as the weight in kilograms.</p>
-<p>This information is then used for statistical purposes.</p>
-<h2 id="measure-types-for-supplementary-units">Measure types for supplementary units</h2><p>There are 3 measure types available for supplementary units. These are:</p>
+<p></li>
+</ul></p>
+<p>Traders can apply to pay less or no duty on goods they import for specific purposes.</p>
+<p>To qualify for <a href="https://www.gov.uk/guidance/apply-to-pay-less-duty-on-goods-you-import-for-specific-uses">Authorised Use relief</a>, goods must meet defined criteria.</p>
+<p>Goods covered by Authorised Use relief include:</p>
 
 <ul>
-<li>109 Supplementary unit</li>
-<li>110 Supplementary unit (import)</li>
-<li>111 Supplementary unit (export)</li>
+<li>civil aircraft and aircraft parts</li>
+<li>shipwork goods</li>
+<li>fish</li>
+<li>cheese</li>
+<li>bicycle parts</li>
 </ul>
-<p>109 is applied to both imports and exports.</p>
-<p>110 is applied only to imports.</p>
-<p>111 has never been used.</p>
-<p>Measures for any of the 3 types of supplementary units are set up as follows:</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94956032-685dd800-04e3-11eb-9ca3-6f789ab112ac.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94956032-685dd800-04e3-11eb-9ca3-6f789ab112ac.png" alt="image" /></a></p>
-<p>The 3 data items highlighted in yellow in the table are important.</p>
-<p>The &lsquo;duty expression ID&rsquo; field has a value of 99, which means that the expression is a supplementary unit.</p>
-<p>The measure type ID in the measures table identifies that this is a supplementary unit. It will usually be of type 109.</p>
-<p>The &lsquo;measurement unit code&rsquo; field in the &lsquo;measure component&rsquo; table shows the unit the trader has to submit on their declaration form.  &lsquo;NAR&rsquo; means &lsquo;number of items&rsquo;.</p>
-<p>The &lsquo;measurement unit qualifier code&rsquo; field is usually null, but may be used to qualify the primary unit.</p>
+<p>Read more about the <a href="https://www.gov.uk/guidance/check-if-you-can-pay-less-duty-if-your-goods-are-imported-into-end-use">goods that traders can get Authorised Use relief for</a> on GOV.UK.</p>
+<p>The EU refers to Authorised Use as &lsquo;end use relief&rsquo;.</p>
+<h2 id="how-to-find-a-commodity-code-which-is-for-authorised-use">How to find a commodity code which is for Authorised Use</h2><p>A small proportion of the total number of commodity codes are for Authorised Use only.</p>
+<p>To find a commodity that is for Authorised Use only, search for measure type &lsquo;105&rsquo;.</p>
+<p>In the Tariff Editor these appear as &lsquo;105 (Non preferential duty under end use)&rsquo; instead of &lsquo;103 (Third country duty)&rsquo;.</p>
+<p>The descriptions include information about the specific purpose the imported goods must be used for. For example &lsquo;for use in&rsquo; or &lsquo;for the manufacture of&rsquo;.</p>
+<h3 id="how-traders-qualify-for-authorised-use-relief">How traders qualify for Authorised Use relief</h3><p>To qualify for Authorised Use relief, a trader must produce certificate N990.</p>
+<p>N990 should be present as a condition on all 105 duties in the Tariff editor. This also applies to other end use measures.</p>
+<p>N990 is currently called &lsquo;EUS - Authorisation for the use of end use procedure (Column 8c, Annex A of Delegated Regulation (EU) 2015/2446)&rsquo;.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Tariff-Policy;-Supplementary-units">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Supplementary%20units'&amp;body=Problem%20with%20'Supplementary%20units'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/tariff-policy/supplementary-units.html)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Tariff-policy;-Authorised-Use-relief">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Authorised%20use%20relief'&amp;body=Problem%20with%20'Authorised%20use%20relief'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/tariff-policy/authorised-use-relief.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
