@@ -288,6 +288,9 @@
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#action-codes"><span>Action codes</span></a>
       </li>
       <li>
+        <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#how-conditions-are-used"><span>How conditions are used</span></a>
+      </li>
+      <li>
         <a href="/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#grouping-condition-codes"><span>Grouping condition codes</span></a>
       </li>
       <li>
@@ -656,6 +659,9 @@
 </ul>
 <p></li>
 <li>
+<a href="#how-conditions-are-used">How conditions are used</a>
+</li>
+<li>
 <a href="#grouping-condition-codes">Grouping condition codes</a>
 </li>
 <li>
@@ -712,11 +718,11 @@
 <h2 id="how-conditions-are-structured">How conditions are structured</h2><p>The following diagrams illustrate the primary data fields associated with a measure condition.</p>
 <svg width="308pt" height="210pt"
  viewBox="0.00 0.00 308.00 210.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_214" class="graph" transform="scale(1 1) rotate(0) translate(4 206)">
+<g id="database_157" class="graph" transform="scale(1 1) rotate(0) translate(4 206)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-206 304,-206 304,4 -4,4"/>
 <!-- Measure Conditions -->
-<g id="table_842" class="node">
+<g id="table_972" class="node">
 <title>Measure Conditions</title>
 <polygon fill="none" stroke="black" points="9,-181 9,-197 291,-197 291,-181 9,-181"/>
 <text text-anchor="start" x="108.5" y="-186.8" font-family="Arial" font-size="9.00">Measure Conditions</text>
@@ -1029,7 +1035,36 @@
 <td>Export   refund not applicable / Apply export refund</td>
 </tr>
         </table>
-      </div><h2 id="grouping-condition-codes">Grouping condition codes</h2><p>Conditions are grouped together according to their condition code.</p>
+      </div><h2 id="how-conditions-are-used">How conditions are used</h2><p>Conditions on a measure are generally set up into a few separate configurations, documented by this flow diagram:
+&ldquo;`dot
+digraph &quot;Conditions&rdquo; {
+  node [shape=rect]</p>
+<p>q_cert_change [label=&ldquo;Does the duty rate change\ndepending on use of a certificate?&rdquo;]
+  q_one_duty [label=&ldquo;Does every certificate or exemption\napply the same duty?&rdquo;]
+  a_use_measure_duty [label=&ldquo;Set the single duty on the measure.\nUse action &lsquo;Apply mentioned duty&rsquo; on certificates/exemptions.&rdquo;]
+  a_use_condition_duty [label=&ldquo;Do not set a duty on the measure.\nUse action &lsquo;Apply the amount of the action&rsquo; and\nset duty individually for each certificate or price.&rdquo;]
+  q_negative_case [label=&ldquo;Does a different duty apply\nif no certificate is supplied or for lowest reference price?&rdquo;]
+  a_set_negative_duty [label=&ldquo;Use action &lsquo;Apply the amount of the action&rsquo; and\nset duty to be applied.&rdquo;]
+  a_measure_not_applicable [label=&ldquo;Use action &lsquo;Measure not applicable&rsquo; for negative case.&rdquo;]
+  a_import_export [label=&ldquo;Do not set any duties.\nUse action &lsquo;import/export allowed&rsquo; for each certificate or exemption.\nUse action &lsquo;import/export not allowed&rsquo; for negative case.&rdquo;]
+  q_reference_price [label=&ldquo;Does the duty change depending on\nthe price of the imported goods?&rdquo;]
+  q_import_export [label=&ldquo;Is the trade prevented if a\ncertificate or exemption is not supplied?&rdquo;]
+  a_no_condition_required [label=&ldquo;Conditions aren&rsquo;t required for this measure&rdquo;]</p>
+<p>q_cert_change -&gt; q_one_duty [label=&ldquo;Yes&rdquo;]
+  q_cert_change -&gt; q_import_export [label=&ldquo;No&rdquo;]
+  q_one_duty -&gt; a_use_measure_duty [label=&ldquo;Yes&rdquo;]
+  q_one_duty -&gt; a_use_condition_duty [label=&ldquo;No&rdquo;]
+  a_use_measure_duty -&gt; q_negative_case
+  a_use_condition_duty -&gt; q_negative_case
+  q_negative_case -&gt; a_measure_not_applicable [label=&ldquo;No&rdquo;]
+  q_negative_case -&gt; a_set_negative_duty [label=&ldquo;Yes&rdquo;]
+  q_import_export -&gt; a_import_export [label=&ldquo;Yes&rdquo;]
+  q_import_export -&gt; q_reference_price [label=&ldquo;No&rdquo;]
+  q_reference_price -&gt; a_use_condition_duty [label=&ldquo;Yes&rdquo;]
+  q_reference_price -&gt; a_no_condition_required [label=&ldquo;No&rdquo;]
+}
+&ldquo;`</p>
+<h2 id="grouping-condition-codes">Grouping condition codes</h2><p>Conditions are grouped together according to their condition code.</p>
 <p>Within that group, the individual conditions are grouped together in an &lsquo;or&rsquo; relationship.</p>
 <p>In the following diagram, one of the 2 conditions in condition set B needs to be provided, alongside one of the 2 conditions in condition set E.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" alt="image" /></a></p>
