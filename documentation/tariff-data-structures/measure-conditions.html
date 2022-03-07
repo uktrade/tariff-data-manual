@@ -718,11 +718,11 @@
 <h2 id="how-conditions-are-structured">How conditions are structured</h2><p>The following diagrams illustrate the primary data fields associated with a measure condition.</p>
 <svg width="308pt" height="210pt"
  viewBox="0.00 0.00 308.00 210.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_157" class="graph" transform="scale(1 1) rotate(0) translate(4 206)">
+<g id="database_788" class="graph" transform="scale(1 1) rotate(0) translate(4 206)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-206 304,-206 304,4 -4,4"/>
 <!-- Measure Conditions -->
-<g id="table_972" class="node">
+<g id="table_913" class="node">
 <title>Measure Conditions</title>
 <polygon fill="none" stroke="black" points="9,-181 9,-197 291,-197 291,-181 9,-181"/>
 <text text-anchor="start" x="108.5" y="-186.8" font-family="Arial" font-size="9.00">Measure Conditions</text>
@@ -1035,36 +1035,173 @@
 <td>Export   refund not applicable / Apply export refund</td>
 </tr>
         </table>
-      </div><h2 id="how-conditions-are-used">How conditions are used</h2><p>Conditions on a measure are generally set up into a few separate configurations, documented by this flow diagram:
-&ldquo;`dot
-digraph &quot;Conditions&rdquo; {
-  node [shape=rect]</p>
-<p>q_cert_change [label=&ldquo;Does the duty rate change\ndepending on use of a certificate?&rdquo;]
-  q_one_duty [label=&ldquo;Does every certificate or exemption\napply the same duty?&rdquo;]
-  a_use_measure_duty [label=&ldquo;Set the single duty on the measure.\nUse action &lsquo;Apply mentioned duty&rsquo; on certificates/exemptions.&rdquo;]
-  a_use_condition_duty [label=&ldquo;Do not set a duty on the measure.\nUse action &lsquo;Apply the amount of the action&rsquo; and\nset duty individually for each certificate or price.&rdquo;]
-  q_negative_case [label=&ldquo;Does a different duty apply\nif no certificate is supplied or for lowest reference price?&rdquo;]
-  a_set_negative_duty [label=&ldquo;Use action &lsquo;Apply the amount of the action&rsquo; and\nset duty to be applied.&rdquo;]
-  a_measure_not_applicable [label=&ldquo;Use action &lsquo;Measure not applicable&rsquo; for negative case.&rdquo;]
-  a_import_export [label=&ldquo;Do not set any duties.\nUse action &lsquo;import/export allowed&rsquo; for each certificate or exemption.\nUse action &lsquo;import/export not allowed&rsquo; for negative case.&rdquo;]
-  q_reference_price [label=&ldquo;Does the duty change depending on\nthe price of the imported goods?&rdquo;]
-  q_import_export [label=&ldquo;Is the trade prevented if a\ncertificate or exemption is not supplied?&rdquo;]
-  a_no_condition_required [label=&ldquo;Conditions aren&rsquo;t required for this measure&rdquo;]</p>
-<p>q_cert_change -&gt; q_one_duty [label=&ldquo;Yes&rdquo;]
-  q_cert_change -&gt; q_import_export [label=&ldquo;No&rdquo;]
-  q_one_duty -&gt; a_use_measure_duty [label=&ldquo;Yes&rdquo;]
-  q_one_duty -&gt; a_use_condition_duty [label=&ldquo;No&rdquo;]
-  a_use_measure_duty -&gt; q_negative_case
-  a_use_condition_duty -&gt; q_negative_case
-  q_negative_case -&gt; a_measure_not_applicable [label=&ldquo;No&rdquo;]
-  q_negative_case -&gt; a_set_negative_duty [label=&ldquo;Yes&rdquo;]
-  q_import_export -&gt; a_import_export [label=&ldquo;Yes&rdquo;]
-  q_import_export -&gt; q_reference_price [label=&ldquo;No&rdquo;]
-  q_reference_price -&gt; a_use_condition_duty [label=&ldquo;Yes&rdquo;]
-  q_reference_price -&gt; a_no_condition_required [label=&ldquo;No&rdquo;]
-}
-&ldquo;`</p>
-<h2 id="grouping-condition-codes">Grouping condition codes</h2><p>Conditions are grouped together according to their condition code.</p>
+      </div><h2 id="how-conditions-are-used">How conditions are used</h2><p>Conditions on a measure are generally set up into a few separate configurations, documented by this flow diagram:</p>
+<svg width="1023pt" height="507pt"
+ viewBox="0.00 0.00 1022.50 507.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 503)">
+<title>Conditions</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-503 1018.5,-503 1018.5,4 -4,4"/>
+<!-- q_cert_change -->
+<g id="node1" class="node">
+<title>q_cert_change</title>
+<polygon fill="none" stroke="black" points="404,-499 185,-499 185,-461 404,-461 404,-499"/>
+<text text-anchor="middle" x="294.5" y="-483.8" font-family="Arial" font-size="14.00">Does the duty rate change</text>
+<text text-anchor="middle" x="294.5" y="-468.8" font-family="Arial" font-size="14.00">depending on use of a certificate?</text>
+</g>
+<!-- q_one_duty -->
+<g id="node2" class="node">
+<title>q_one_duty</title>
+<polygon fill="none" stroke="black" points="307,-313.5 78,-313.5 78,-275.5 307,-275.5 307,-313.5"/>
+<text text-anchor="middle" x="192.5" y="-298.3" font-family="Arial" font-size="14.00">Does every certificate or exemption</text>
+<text text-anchor="middle" x="192.5" y="-283.3" font-family="Arial" font-size="14.00">apply the same duty?</text>
+</g>
+<!-- q_cert_change&#45;&gt;q_one_duty -->
+<g id="edge1" class="edge">
+<title>q_cert_change&#45;&gt;q_one_duty</title>
+<path fill="none" stroke="black" d="M284.35,-460.73C266.32,-428.31 228.66,-360.55 207.59,-322.64"/>
+<polygon fill="black" stroke="black" points="210.53,-320.73 202.61,-313.69 204.41,-324.13 210.53,-320.73"/>
+<text text-anchor="middle" x="268" y="-387.3" font-family="Times,serif" font-size="14.00">Yes</text>
+</g>
+<!-- q_import_export -->
+<g id="node10" class="node">
+<title>q_import_export</title>
+<polygon fill="none" stroke="black" points="661.5,-410 407.5,-410 407.5,-372 661.5,-372 661.5,-410"/>
+<text text-anchor="middle" x="534.5" y="-394.8" font-family="Arial" font-size="14.00">Is the trade prevented if a</text>
+<text text-anchor="middle" x="534.5" y="-379.8" font-family="Arial" font-size="14.00">certificate or exemption is not supplied?</text>
+</g>
+<!-- q_cert_change&#45;&gt;q_import_export -->
+<g id="edge2" class="edge">
+<title>q_cert_change&#45;&gt;q_import_export</title>
+<path fill="none" stroke="black" d="M344.23,-460.97C382.36,-447.15 435.11,-428.03 475.4,-413.42"/>
+<polygon fill="black" stroke="black" points="476.63,-416.7 484.84,-410 474.24,-410.12 476.63,-416.7"/>
+<text text-anchor="middle" x="439" y="-431.8" font-family="Times,serif" font-size="14.00">No</text>
+</g>
+<!-- a_use_measure_duty -->
+<g id="node3" class="node">
+<title>a_use_measure_duty</title>
+<polygon fill="none" stroke="black" points="385,-209.5 0,-209.5 0,-171.5 385,-171.5 385,-209.5"/>
+<text text-anchor="middle" x="192.5" y="-194.3" font-family="Arial" font-size="14.00">Set the single duty on the measure.</text>
+<text text-anchor="middle" x="192.5" y="-179.3" font-family="Arial" font-size="14.00">Use action &lsquo;Apply mentioned duty&rsquo; on certificates/exemptions.</text>
+</g>
+<!-- q_one_duty&#45;&gt;a_use_measure_duty -->
+<g id="edge3" class="edge">
+<title>q_one_duty&#45;&gt;a_use_measure_duty</title>
+<path fill="none" stroke="black" d="M192.5,-275.26C192.5,-259.82 192.5,-237.41 192.5,-219.66"/>
+<polygon fill="black" stroke="black" points="196,-219.58 192.5,-209.58 189,-219.58 196,-219.58"/>
+<text text-anchor="middle" x="205" y="-238.8" font-family="Times,serif" font-size="14.00">Yes</text>
+</g>
+<!-- a_use_condition_duty -->
+<g id="node4" class="node">
+<title>a_use_condition_duty</title>
+<polygon fill="none" stroke="black" points="703.5,-217 403.5,-217 403.5,-164 703.5,-164 703.5,-217"/>
+<text text-anchor="middle" x="553.5" y="-201.8" font-family="Arial" font-size="14.00">Do not set a duty on the measure.</text>
+<text text-anchor="middle" x="553.5" y="-186.8" font-family="Arial" font-size="14.00">Use action &lsquo;Apply the amount of the action&rsquo; and</text>
+<text text-anchor="middle" x="553.5" y="-171.8" font-family="Arial" font-size="14.00">set duty individually for each certificate or price.</text>
+</g>
+<!-- q_one_duty&#45;&gt;a_use_condition_duty -->
+<g id="edge4" class="edge">
+<title>q_one_duty&#45;&gt;a_use_condition_duty</title>
+<path fill="none" stroke="black" d="M256.21,-275.5C310.68,-260.11 390.02,-237.69 453.03,-219.89"/>
+<polygon fill="black" stroke="black" points="454.33,-223.16 463,-217.07 452.43,-216.42 454.33,-223.16"/>
+<text text-anchor="middle" x="405" y="-238.8" font-family="Times,serif" font-size="14.00">No</text>
+</g>
+<!-- q_negative_case -->
+<g id="node5" class="node">
+<title>q_negative_case</title>
+<polygon fill="none" stroke="black" points="547.5,-127 197.5,-127 197.5,-89 547.5,-89 547.5,-127"/>
+<text text-anchor="middle" x="372.5" y="-111.8" font-family="Arial" font-size="14.00">Does a different duty apply</text>
+<text text-anchor="middle" x="372.5" y="-96.8" font-family="Arial" font-size="14.00">if no certificate is supplied or for lowest reference price?</text>
+</g>
+<!-- a_use_measure_duty&#45;&gt;q_negative_case -->
+<g id="edge5" class="edge">
+<title>a_use_measure_duty&#45;&gt;q_negative_case</title>
+<path fill="none" stroke="black" d="M232.9,-171.43C259.53,-159.52 294.59,-143.84 322.91,-131.18"/>
+<polygon fill="black" stroke="black" points="324.54,-134.28 332.24,-127.01 321.68,-127.89 324.54,-134.28"/>
+</g>
+<!-- a_use_condition_duty&#45;&gt;q_negative_case -->
+<g id="edge6" class="edge">
+<title>a_use_condition_duty&#45;&gt;q_negative_case</title>
+<path fill="none" stroke="black" d="M495.73,-163.81C472.2,-153.34 445.25,-141.35 422.56,-131.26"/>
+<polygon fill="black" stroke="black" points="423.68,-127.93 413.12,-127.07 420.84,-134.33 423.68,-127.93"/>
+</g>
+<!-- a_set_negative_duty -->
+<g id="node6" class="node">
+<title>a_set_negative_duty</title>
+<polygon fill="none" stroke="black" points="353,-38 54,-38 54,0 353,0 353,-38"/>
+<text text-anchor="middle" x="203.5" y="-22.8" font-family="Arial" font-size="14.00">Use action &lsquo;Apply the amount of the action&rsquo; and</text>
+<text text-anchor="middle" x="203.5" y="-7.8" font-family="Arial" font-size="14.00">set duty to be applied.</text>
+</g>
+<!-- q_negative_case&#45;&gt;a_set_negative_duty -->
+<g id="edge8" class="edge">
+<title>q_negative_case&#45;&gt;a_set_negative_duty</title>
+<path fill="none" stroke="black" d="M337.48,-88.97C311.42,-75.56 275.67,-57.15 247.65,-42.73"/>
+<polygon fill="black" stroke="black" points="248.97,-39.47 238.47,-38 245.76,-45.69 248.97,-39.47"/>
+<text text-anchor="middle" x="311" y="-59.8" font-family="Times,serif" font-size="14.00">Yes</text>
+</g>
+<!-- a_measure_not_applicable -->
+<g id="node7" class="node">
+<title>a_measure_not_applicable</title>
+<polygon fill="none" stroke="black" points="712,-37 371,-37 371,-1 712,-1 712,-37"/>
+<text text-anchor="middle" x="541.5" y="-15.3" font-family="Arial" font-size="14.00">Use action &lsquo;Measure not applicable&rsquo; for negative case.</text>
+</g>
+<!-- q_negative_case&#45;&gt;a_measure_not_applicable -->
+<g id="edge7" class="edge">
+<title>q_negative_case&#45;&gt;a_measure_not_applicable</title>
+<path fill="none" stroke="black" d="M407.52,-88.97C434.1,-75.29 470.76,-56.42 499.02,-41.87"/>
+<polygon fill="black" stroke="black" points="500.96,-44.8 508.25,-37.12 497.76,-38.58 500.96,-44.8"/>
+<text text-anchor="middle" x="477" y="-59.8" font-family="Times,serif" font-size="14.00">No</text>
+</g>
+<!-- a_import_export -->
+<g id="node8" class="node">
+<title>a_import_export</title>
+<polygon fill="none" stroke="black" points="744,-321 325,-321 325,-268 744,-268 744,-321"/>
+<text text-anchor="middle" x="534.5" y="-305.8" font-family="Arial" font-size="14.00">Do not set any duties.</text>
+<text text-anchor="middle" x="534.5" y="-290.8" font-family="Arial" font-size="14.00">Use action &lsquo;import/export allowed&rsquo; for each certificate or exemption.</text>
+<text text-anchor="middle" x="534.5" y="-275.8" font-family="Arial" font-size="14.00">Use action &lsquo;import/export not allowed&rsquo; for negative case.</text>
+</g>
+<!-- q_reference_price -->
+<g id="node9" class="node">
+<title>q_reference_price</title>
+<polygon fill="none" stroke="black" points="995,-313.5 762,-313.5 762,-275.5 995,-275.5 995,-313.5"/>
+<text text-anchor="middle" x="878.5" y="-298.3" font-family="Arial" font-size="14.00">Does the duty change depending on</text>
+<text text-anchor="middle" x="878.5" y="-283.3" font-family="Arial" font-size="14.00">the price of the imported goods?</text>
+</g>
+<!-- q_reference_price&#45;&gt;a_use_condition_duty -->
+<g id="edge11" class="edge">
+<title>q_reference_price&#45;&gt;a_use_condition_duty</title>
+<path fill="none" stroke="black" d="M821.14,-275.5C772.31,-260.17 701.27,-237.88 644.65,-220.11"/>
+<polygon fill="black" stroke="black" points="645.56,-216.73 634.97,-217.07 643.47,-223.4 645.56,-216.73"/>
+<text text-anchor="middle" x="747" y="-238.8" font-family="Times,serif" font-size="14.00">Yes</text>
+</g>
+<!-- a_no_condition_required -->
+<g id="node11" class="node">
+<title>a_no_condition_required</title>
+<polygon fill="none" stroke="black" points="1014.5,-208.5 742.5,-208.5 742.5,-172.5 1014.5,-172.5 1014.5,-208.5"/>
+<text text-anchor="middle" x="878.5" y="-186.8" font-family="Arial" font-size="14.00">Conditions aren&rsquo;t required for this measure</text>
+</g>
+<!-- q_reference_price&#45;&gt;a_no_condition_required -->
+<g id="edge12" class="edge">
+<title>q_reference_price&#45;&gt;a_no_condition_required</title>
+<path fill="none" stroke="black" d="M878.5,-275.26C878.5,-259.53 878.5,-236.58 878.5,-218.68"/>
+<polygon fill="black" stroke="black" points="882,-218.56 878.5,-208.56 875,-218.56 882,-218.56"/>
+<text text-anchor="middle" x="889" y="-238.8" font-family="Times,serif" font-size="14.00">No</text>
+</g>
+<!-- q_import_export&#45;&gt;a_import_export -->
+<g id="edge9" class="edge">
+<title>q_import_export&#45;&gt;a_import_export</title>
+<path fill="none" stroke="black" d="M534.5,-371.78C534.5,-360.33 534.5,-345.16 534.5,-331.36"/>
+<polygon fill="black" stroke="black" points="538,-331.17 534.5,-321.17 531,-331.17 538,-331.17"/>
+<text text-anchor="middle" x="547" y="-342.8" font-family="Times,serif" font-size="14.00">Yes</text>
+</g>
+<!-- q_import_export&#45;&gt;q_reference_price -->
+<g id="edge10" class="edge">
+<title>q_import_export&#45;&gt;q_reference_price</title>
+<path fill="none" stroke="black" d="M600.42,-371.89C658.26,-356 742.37,-332.9 802.92,-316.26"/>
+<polygon fill="black" stroke="black" points="804.09,-319.57 812.8,-313.55 802.23,-312.82 804.09,-319.57"/>
+<text text-anchor="middle" x="727" y="-342.8" font-family="Times,serif" font-size="14.00">No</text>
+</g>
+</g>
+</svg><h2 id="grouping-condition-codes">Grouping condition codes</h2><p>Conditions are grouped together according to their condition code.</p>
 <p>Within that group, the individual conditions are grouped together in an &lsquo;or&rsquo; relationship.</p>
 <p>In the following diagram, one of the 2 conditions in condition set B needs to be provided, alongside one of the 2 conditions in condition set E.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" alt="image" /></a></p>
