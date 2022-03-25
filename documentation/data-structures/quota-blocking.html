@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Home - Tariff Data Manual</title>
+    <title>Quota blocking - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-blocking.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Home - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta name="twitter:title" content="Quota blocking - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-blocking.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Home" />
+      <meta property="og:title" content="Quota blocking" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-blocking.html" />
 
     
   </head>
@@ -117,7 +117,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#condition-codes-in-detail"><span>Condition codes in detail</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -286,7 +286,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-and-additional-codes"><span>Measure types and additional codes</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#how-the-data-is-structured"><span>How the data is structured</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-business-rules"><span>Business rules</span></a>
@@ -440,10 +440,10 @@
         <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#why-quotas-are-blocked"><span>Why quotas are blocked</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#quota-blocking-how-the-data-is-structured"><span>How the data is structured</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#quota-blocking-business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -635,18 +635,160 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="home">Home</h1><p>The Tariff Data Manual is the technical documentation and reference manual for the United Kingdom&rsquo;s Import and Export Tariff data.</p>
-<p>This manual contains documentation on both low-level data structures and the high-level combinations of them used to represent tariff policy.</p>
-<p>You can find tariff data on <a href="https://data.gov.uk/dataset/3bee9a8a-e69c-400e-add5-3345a87a8e25/tariffs-to-trade-with-the-uk-from-1-january-2021">data.gov.uk</a>.</p>
-<p>If you find problems with the content in this manual, please <a href="https://github.com/uktrade/tariff-data-manual/issues">raise an issue on GitHub</a>.</p>
+            <h1 id="quota-blocking">Quota blocking</h1>
+<ul>
+<li>
+<a href="#how-long-quota-blocks-last">How long quota blocks last</a>
+</li>
+<li>
+<a href="#why-quotas-are-blocked">Why quotas are blocked</a>
+</li>
+<li>
+<a href="#how-the-data-is-structured">How the data is structured</a>
+<ul>
+<li>
+<a href="#quota-blocking-data-object-in-detail">Quota blocking data object in detail</a>
+</li>
+<li>
+<a href="#where-quota-blocks-are-used-in-the-tariff">Where quota blocks are used in the Tariff</a>
+</li>
+</ul>
+<p></li>
+<li>
+<a href="#business-rules">Business rules</a>
+</li>
+</ul></p>
+
+<blockquote>
+<p>Quota blocks stop quota allocations being taken for a limited time.</p>
+</blockquote>
+<p>Quota blocks are put in place to allow HMRC to assess the demand for a quota and make decisions about how to allocate it.</p>
+<p>Claims can still be made against a quota during a quota block, but the allocation decision will be delayed. This is unlike <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/quota-suspensions.html#quota-suspensions">quota suspensions</a>, which are not available to traders to claim against.</p>
+<p>Quota blocks are only applicable to first come, first serve quotas. Learn more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas">about quotas</a>.</p>
+<h2 id="how-long-quota-blocks-last">How long quota blocks last</h2><p>Usually a quota block lasts for 2 or 3 weeks.</p>
+<p>For example, a quota starts on 1 January and runs until 31 December.  The decision is taken to place a block on the quota for the first 15 days. This allows HMRC to make an assessment on potential usage by taking allocation requests but not actually allocating the balance. This gives smaller traders and new entrants an opportunity to take advantage of the reduced rate.</p>
+<h2 id="why-quotas-are-blocked">Why quotas are blocked</h2><p>The following table shows the reasons for quota blocks.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>
+<br>ID</th>
+<th>
+<br>Reason</th>
+<th>
+<br>Count</th>
+</tr><tr>
+<td>
+<br>1</td>
+<td>
+<br>Block   the allocations for a quota due to a late publication.</td>
+<td>
+<br>1637</td>
+</tr><tr>
+<td>
+<br>2</td>
+<td>
+<br>Block   the allocations for a quota after its reopening due to a volume increase.</td>
+<td>
+<br>82</td>
+</tr><tr>
+<td>
+<br>3</td>
+<td>
+<br>Block   the allocations for a quota after its reopening due to the reception of quota   return requests.</td>
+<td>
+<br>1665</td>
+</tr><tr>
+<td>
+<br>4</td>
+<td>
+<br>Block   the allocations for a quota due to the modification of the validity period   after receiving quota return requests.</td>
+<td>
+<br>7</td>
+</tr><tr>
+<td>
+<br>5</td>
+<td>
+<br>Block   the allocations for a quota on request of a MSA.</td>
+<td>
+<br>3</td>
+</tr><tr>
+<td>
+<br>6</td>
+<td>
+<br>Block   the allocations for a quota due to an end-user decision.</td>
+<td>
+<br>69</td>
+</tr><tr>
+<td>
+<br>7</td>
+<td>
+<br>Block   the allocations for a quota due to an exceptional condition.</td>
+<td>
+<br>178</td>
+</tr><tr>
+<td>
+<br>8</td>
+<td>
+<br>Block   the allocations for a quota after its reopening due to a balance transfer.</td>
+<td>
+<br>8</td>
+</tr>
+        </table>
+      </div><h2 id="how-the-data-is-structured">How the data is structured</h2><p><a href="https://user-images.githubusercontent.com/61055197/94176946-bb56e000-fe90-11ea-93c9-0d1911caa7b7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94176946-bb56e000-fe90-11ea-93c9-0d1911caa7b7.png" alt="image" /></a></p>
+<h3 id="quota-blocking-data-object-in-detail">Quota blocking data object in detail</h3><p>There are only 3 fields you must define in the database.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94177037-df1a2600-fe90-11ea-9bb5-a972e1814a40.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177037-df1a2600-fe90-11ea-9bb5-a972e1814a40.png" alt="image" /></a></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>
+<br>Field</th>
+<th>
+<br>Description</th>
+</tr><tr>
+<td>
+<br>quota_blocking_period_sid</td>
+<td>
+<br>Unique   identifier, automatically generated</td>
+</tr><tr>
+<td>
+<br>quota_definition_sid</td>
+<td>
+<br>The   quota definition to which the suspension is to be attached</td>
+</tr><tr>
+<td>
+<br>blocking_start_date</td>
+<td>
+<br>The   start date of the suspension blocking period – i.e. 00:00 at the start of the   chosen day</td>
+</tr><tr>
+<td>
+<br>blocking_end_date</td>
+<td>
+<br>The   end date of the suspension blocking period – i.e. 00:00 at the end of the   chosen day</td>
+</tr><tr>
+<td>
+<br>blocking_periods_type</td>
+<td>
+<br>One   of the 8 options noted previously – largely options 1 or 3</td>
+</tr><tr>
+<td>
+<br>description</td>
+<td>
+<br>An   optional field, up to 500 characters in length, that helps to define the   blocking period and the reasons for it.</td>
+</tr>
+        </table>
+      </div><h3 id="where-quota-blocks-are-used-in-the-tariff">Where quota blocks are used in the Tariff</h3><p>A quota blocking period usually coincides with the start of a definition period.</p>
+<p>A blocking period must also fit within a definition period. It must not straddle the boundary of the definition. If you need to straddle a boundary, you must create 2 blocking periods.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94177179-12f54b80-fe91-11ea-9a95-59fd7fdaac68.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177179-12f54b80-fe91-11ea-9a95-59fd7fdaac68.png" alt="image" /></a></p>
+<h2 id="business-rules">Business rules</h2><p>Read the business rules for quotas in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Home">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Home'&amp;body=Problem%20with%20'Home'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Quota-blocking">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Quota%20blocking'&amp;body=Problem%20with%20'Quota%20blocking'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-blocking.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

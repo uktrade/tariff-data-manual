@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Home - Tariff Data Manual</title>
+    <title>Agricultural instruments - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Home - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta name="twitter:title" content="Agricultural instruments - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Home" />
+      <meta property="og:title" content="Agricultural instruments" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html" />
 
     
   </head>
@@ -635,18 +635,51 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="home">Home</h1><p>The Tariff Data Manual is the technical documentation and reference manual for the United Kingdom&rsquo;s Import and Export Tariff data.</p>
-<p>This manual contains documentation on both low-level data structures and the high-level combinations of them used to represent tariff policy.</p>
-<p>You can find tariff data on <a href="https://data.gov.uk/dataset/3bee9a8a-e69c-400e-add5-3345a87a8e25/tariffs-to-trade-with-the-uk-from-1-january-2021">data.gov.uk</a>.</p>
-<p>If you find problems with the content in this manual, please <a href="https://github.com/uktrade/tariff-data-manual/issues">raise an issue on GitHub</a>.</p>
+            <h1 id="agricultural-instruments">Agricultural instruments</h1>
+<ul>
+<li>
+<a href="#meursing-code">Meursing code</a>
+</li>
+<li>
+<a href="#simplified-procedure-value-rates">Simplified procedure value rates</a>
+<ul>
+<li>
+<a href="#how-to-use-simplified-procedure-values-in-the-tariff">How to use simplified procedure values in the Tariff</a>
+</li>
+</ul>
+<p></li>
+</ul></p>
+
+<blockquote>
+<p>The term &lsquo;agricultural instruments&rsquo; refers to any policy or mechanism which only applies to agricultural goods.</p>
+</blockquote>
+<p>There are 2 types of agricultural measures to be aware of.</p>
+<p>These are:</p>
+
+<ul>
+<li>Meursing code</li>
+<li>simplified procedure values</li>
+</ul>
+<h2 id="meursing-code">Meursing code</h2><p>A Meursing code is an <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/additional-codes.html#additional-codes">additional code</a> used in the EU. It applies specific duties to goods containing certain types of milk and sugars.</p>
+<p>On 1 January 2021, Meursing was removed from the UK Tariff. As a result, imports to Great Britain do not need Meursing codes.</p>
+<p>Imports to Northern Ireland and the EU do need Meursing codes.</p>
+<p>You can <a href="https://www.gov.uk/additional-commodity-code">look up Meursing codes on GOV.UK</a>.</p>
+<h2 id="simplified-procedure-value-rates">Simplified procedure value rates</h2><p>Simplified procedure value (SPV) rates are used for imported fresh fruit and vegetables.</p>
+<p>SPV rates can only be used for batches of whole fruit and vegetable produce, of a single kind, that are yet to be sold.</p>
+<p>Fruit or vegetable products that are cut and diced before they’re imported are excluded.</p>
+<p>SPV rates change every 14 days.</p>
+<p>Read <a href="https://www.gov.uk/guidance/check-simplified-procedure-value-rates-for-fresh-fruit-and-vegetables">more about SPVs</a> on GOV.UK.</p>
+<h3 id="how-to-use-simplified-procedure-values-in-the-tariff">How to use simplified procedure values in the Tariff</h3><p>SPV are always assigned to Erga Omnes (1011 – the whole world). There are no preferential instances of SPVs.</p>
+<p>SPVs use measure type 488 (Unit Price).</p>
+<p>There are never any conditions associated with an SPV, only components identifying the specific import duty. For example, 184.58 EUR (EUC) / 100 kg.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Home">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Home'&amp;body=Problem%20with%20'Home'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Trade-policies;-Agricultural-instruments">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Agricultural%20instruments'&amp;body=Problem%20with%20'Agricultural%20instruments'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

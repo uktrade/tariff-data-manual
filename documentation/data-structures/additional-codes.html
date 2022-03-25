@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Home - Tariff Data Manual</title>
+    <title>Additional codes - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/additional-codes.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Home - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta name="twitter:title" content="Additional codes - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/additional-codes.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Home" />
+      <meta property="og:title" content="Additional codes" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/additional-codes.html" />
 
     
   </head>
@@ -117,7 +117,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#condition-codes-in-detail"><span>Condition codes in detail</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -311,7 +311,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#how-additional-codes-apply"><span>How additional codes apply</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#additional-codes-business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -635,18 +635,62 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="home">Home</h1><p>The Tariff Data Manual is the technical documentation and reference manual for the United Kingdom&rsquo;s Import and Export Tariff data.</p>
-<p>This manual contains documentation on both low-level data structures and the high-level combinations of them used to represent tariff policy.</p>
-<p>You can find tariff data on <a href="https://data.gov.uk/dataset/3bee9a8a-e69c-400e-add5-3345a87a8e25/tariffs-to-trade-with-the-uk-from-1-january-2021">data.gov.uk</a>.</p>
-<p>If you find problems with the content in this manual, please <a href="https://github.com/uktrade/tariff-data-manual/issues">raise an issue on GitHub</a>.</p>
+            <h1 id="additional-codes">Additional codes</h1>
+<ul>
+<li>
+<a href="#what-additional-codes-are">What additional codes are</a>
+</li>
+<li>
+<a href="#what-additional-codes-show">What additional codes show</a>
+</li>
+<li>
+<a href="#how-additional-codes-work">How additional codes work</a>
+</li>
+<li>
+<a href="#how-additional-codes-apply">How additional codes apply</a>
+<ul>
+<li>
+<a href="#additional-code-types-data-entities">Additional code types data entities</a>
+</li>
+</ul>
+<p></li>
+<li>
+<a href="#business-rules">Business rules</a>
+</li>
+</ul></p>
+<h2 id="what-additional-codes-are">What additional codes are</h2><p>Goods are usually identified by their 10-digit <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/nomenclature.html#commodity-codes">commodity code</a>.</p>
+<p>Sometimes a commodity code is not enough to identify the product being traded. When this happens, extra digits are needed. These extra digits are called additional codes.</p>
+<p>Additional codes can be applied to more than one commodity code.</p>
+<h2 id="what-additional-codes-show">What additional codes show</h2><p>Additional codes identify:</p>
+
+<ul>
+<li>whether a company is subject to punitive measures, such as anti-dumping duties</li>
+<li>products which have reduced duties because they are for pharmaceutical use</li>
+<li>the route goods take into the UK and how different tariff or regulatory treatments apply</li>
+<li>stolen works of art, for example from Syria or Iraq as a result of military conflict</li>
+</ul>
+<h2 id="how-additional-codes-work">How additional codes work</h2><p>Additional codes are 4 digits combining the following 2 elements:</p>
+
+<ul>
+<li>a code type</li>
+<li>a 3-character ID (which can also include letters)</li>
+</ul>
+<p>The additional code type defines the additional code that is being addressed.</p>
+<p>For example, the additional code C233 is made up of type C and specific ID 233.</p>
+<p>Numeric IDs from 001 to 999 can be reused across multiple additional code type IDs. Numeric IDs are unique only when they are used with a character code.</p>
+<h2 id="how-additional-codes-apply">How additional codes apply</h2><p>Additional codes can only be applied to particular types of measures. Types 8, A, B and C can only be used with trade remedies.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93088912-72ce4400-f692-11ea-962f-066d5ab58746.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93088912-72ce4400-f692-11ea-962f-066d5ab58746.png" alt="image" /></a></p>
+<p><a href="https://user-images.githubusercontent.com/61055197/93092034-d22e5300-f696-11ea-8230-d14b200a0016.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93092034-d22e5300-f696-11ea-8230-d14b200a0016.png" alt="image" /></a></p>
+<h3 id="additional-code-types-data-entities">Additional code types data entities</h3><p><a href="https://user-images.githubusercontent.com/61055197/93092047-d8243400-f696-11ea-808c-e40c6ce953cd.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93092047-d8243400-f696-11ea-808c-e40c6ce953cd.png" alt="image" /></a></p>
+<h2 id="business-rules">Business rules</h2><p>Read the business rules for additional codes in the <a href="https://uktrade.github.io/tamato/html/business_rules/additional_codes.html">system documentation</a>.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Home">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Home'&amp;body=Problem%20with%20'Home'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Additional-codes">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Additional%20codes'&amp;body=Problem%20with%20'Additional%20codes'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/additional-codes.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

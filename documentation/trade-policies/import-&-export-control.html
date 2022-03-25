@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Home - Tariff Data Manual</title>
+    <title>Import & export control - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/import-&-export-control.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Home - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta name="twitter:title" content="Import &amp; export control - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/import-&amp;-export-control.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Home" />
+      <meta property="og:title" content="Import &amp; export control" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/import-&amp;-export-control.html" />
 
     
   </head>
@@ -635,18 +635,68 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="home">Home</h1><p>The Tariff Data Manual is the technical documentation and reference manual for the United Kingdom&rsquo;s Import and Export Tariff data.</p>
-<p>This manual contains documentation on both low-level data structures and the high-level combinations of them used to represent tariff policy.</p>
-<p>You can find tariff data on <a href="https://data.gov.uk/dataset/3bee9a8a-e69c-400e-add5-3345a87a8e25/tariffs-to-trade-with-the-uk-from-1-january-2021">data.gov.uk</a>.</p>
-<p>If you find problems with the content in this manual, please <a href="https://github.com/uktrade/tariff-data-manual/issues">raise an issue on GitHub</a>.</p>
+            <h1 id="import-and-export-control">Import and export control</h1>
+<ul>
+<li>
+<a href="#import-controls">Import controls</a>
+</li>
+<li>
+<a href="#export-controls">Export controls</a>
+</li>
+<li>
+<a href="#measure-types-and-measure-type-series">Measure types and measure type series</a>
+</li>
+<li>
+<a href="#prohibitions-and-restrictions">Prohibitions and restrictions</a>
+</li>
+</ul>
+<h2 id="import-controls">Import controls</h2><p>Import controls are imposed using either of the following:</p>
+
+<ul>
+<li>statutory instruments</li>
+<li>the UK’s national import prohibition legislation</li>
+</ul>
+<p>Read guidance on <a href="https://www.gov.uk/guidance/import-controls">how the government monitors imports into the UK</a> on GOV.UK.</p>
+<h2 id="export-controls">Export controls</h2><p>Controlled goods are regulated through a system of export licensing.</p>
+<p>The Export Control Joint Unit (ECJU) is responsible for the export control and licensing of these items.</p>
+<p>Read <a href="https://www.gov.uk/guidance/exporting-controlled-goods-after-eu-exit">guidance on the export of controlled goods</a> on GOV.UK</p>
+<h2 id="measure-types-and-measure-type-series">Measure types and measure type series</h2><p>All the measures listed in the following image involve the same data objects and system usage.</p>
+<p>When setting up the data, there&rsquo;s no difference for tariff users determining import or export. The import or export differentiator is set up once as a part of the measure type.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94949190-72c6a480-04d8-11eb-9808-e955465c237d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94949190-72c6a480-04d8-11eb-9808-e955465c237d.png" alt="image" /></a></p>
+<h2 id="prohibitions-and-restrictions">Prohibitions and restrictions</h2><p>Prohibitions are finite. They cannot be overcome with documentation, such as certificates or licences.</p>
+<p>Restrictions are always accompanied by conditions. The trader can complete the import if they fulfill certain conditions. This usually takes the form of documentation.</p>
+<p>Prohibitions should be set up using measure type series ‘A’ and restrictions using measure series ‘B’. This rule has been loosely observed. So the following measure types exist as ‘true’ prohibitions according to the measure types series:</p>
+
+<ul>
+<li>277 Import prohibition</li>
+<li>278 Export prohibition</li>
+</ul>
+<p>The following measure types, which behave as prohibitions, are set up with measure type B:</p>
+
+<ul>
+<li>724 Import control of fluorinated greenhouse gases</li>
+<li>745 Import control on cat and dog fur</li>
+<li>740 Export control on cat and dog fur</li>
+<li>749 Export control of mercury</li>
+</ul>
+<p>Most restrictions describe a measure type that has been applied to a commodity code from a given date. This is then assigned a small number of conditions that describe how the trader can make the trade succeed. For example, by supplying a document.</p>
+<p>In most cases, the restriction is set up as a pair of items:</p>
+
+<ul>
+<li>one describing what should happen if the conditions are fulfilled</li>
+<li>the other describing what happens if the conditions are not fulfilled</li>
+</ul>
+<p>For example, the following image shows a pair of conditions for the import of cat and dog fur. At the top is the success condition and beneath it the failure condition.</p>
+<p>In this case, the success condition is if a specific document code is fulfilled. This is actually not a document. It is an indication of which types of pelt are included in the restriction.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94949525-f54f6400-04d8-11eb-8b96-4a2fdc2e8f41.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94949525-f54f6400-04d8-11eb-8b96-4a2fdc2e8f41.png" alt="image" /></a></p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Home">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Home'&amp;body=Problem%20with%20'Home'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Trade-policies;-Import-&amp;-export-control">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Import%20&amp;%20export%20control'&amp;body=Problem%20with%20'Import%20&amp;%20export%20control'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/import-&amp;-export-control.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

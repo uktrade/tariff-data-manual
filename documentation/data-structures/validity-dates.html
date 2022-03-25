@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Home - Tariff Data Manual</title>
+    <title>Validity dates - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/validity-dates.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Home - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta name="twitter:title" content="Validity dates - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/validity-dates.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Home" />
+      <meta property="og:title" content="Validity dates" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/validity-dates.html" />
 
     
   </head>
@@ -635,18 +635,44 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="home">Home</h1><p>The Tariff Data Manual is the technical documentation and reference manual for the United Kingdom&rsquo;s Import and Export Tariff data.</p>
-<p>This manual contains documentation on both low-level data structures and the high-level combinations of them used to represent tariff policy.</p>
-<p>You can find tariff data on <a href="https://data.gov.uk/dataset/3bee9a8a-e69c-400e-add5-3345a87a8e25/tariffs-to-trade-with-the-uk-from-1-january-2021">data.gov.uk</a>.</p>
-<p>If you find problems with the content in this manual, please <a href="https://github.com/uktrade/tariff-data-manual/issues">raise an issue on GitHub</a>.</p>
+            <h1 id="validity-dates">Validity dates</h1>
+<ul>
+<li>
+<a href="#putting-validity-end-dates-on-measures">Putting validity end dates on measures</a>
+</li>
+<li>
+<a href="#validity-dates-on-measure-descriptions">Validity dates on measure descriptions</a>
+</li>
+</ul>
+
+<blockquote>
+<p>Validity dates show when tariff elements, such as measures, are live.</p>
+</blockquote>
+<p>Most elements use a pair of validity dates. The element is live between the validity start date and validity end date.</p>
+<p>If the validity end date is blank the element is live forever.</p>
+<p>Validity dates can be changed after a tariff element is created. End dates can be added if they were not specified before and existing dates can be updated.</p>
+<p>Validity start and end dates are inclusive. This means the element is live from the beginning of the start date to the end of the end date.</p>
+<p>An element with the same start and end date is live for one day.</p>
+<h2 id="putting-validity-end-dates-on-measures">Putting validity end dates on measures</h2><p>There are 4 ways to end-date a measure:</p>
+
+<ol>
+<li>The measure is given an explicit end date on the measure record itself.</li>
+<li>The measure’s generating regulation is a base regulation, and the base regulation is end-dated.</li>
+<li>The measure’s generating regulation is a modification regulation, and the modification regulation is end-dated.</li>
+<li>The measure’s generating regulation is a modification regulation, and the base regulation that it modifies is end-dated.</li>
+</ol>
+<p>In the UK Tariff, we do not use regulation end dates. Validity end dates are added to the measure explicitly (as per point 1).</p>
+<h2 id="validity-dates-on-measure-descriptions">Validity dates on measure descriptions</h2><p>There must always be one live description on a measure description.</p>
+<p>Measure descriptions do not have end dates.</p>
+<p>The description is live until the start date of the next description is recorded.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Home">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Home'&amp;body=Problem%20with%20'Home'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Validity-dates">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Validity%20dates'&amp;body=Problem%20with%20'Validity%20dates'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/validity-dates.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

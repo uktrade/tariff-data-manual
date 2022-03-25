@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Home - Tariff Data Manual</title>
+    <title>Regulations - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/regulations.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Home - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta name="twitter:title" content="Regulations - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/regulations.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Home" />
+      <meta property="og:title" content="Regulations" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/regulations.html" />
 
     
   </head>
@@ -635,18 +635,211 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="home">Home</h1><p>The Tariff Data Manual is the technical documentation and reference manual for the United Kingdom&rsquo;s Import and Export Tariff data.</p>
-<p>This manual contains documentation on both low-level data structures and the high-level combinations of them used to represent tariff policy.</p>
-<p>You can find tariff data on <a href="https://data.gov.uk/dataset/3bee9a8a-e69c-400e-add5-3345a87a8e25/tariffs-to-trade-with-the-uk-from-1-january-2021">data.gov.uk</a>.</p>
-<p>If you find problems with the content in this manual, please <a href="https://github.com/uktrade/tariff-data-manual/issues">raise an issue on GitHub</a>.</p>
+            <h1 id="measure-generating-regulations">Measure generating regulations</h1>
+<ul>
+<li>
+<a href="#base-regulations">Base regulations</a>
+</li>
+<li>
+<a href="#grouping-regulations">Grouping regulations</a>
+</li>
+<li>
+<a href="#draft-regulations">Draft regulations</a>
+<ul>
+<li>
+<a href="#sending-draft-regulations-before-they-re-approved">Sending draft regulations before they&rsquo;re approved</a>
+</li>
+</ul>
+<p></li>
+</ul></p>
+<p>Every measure entered into the tariff database must be associated with a regulation.</p>
+<p>This is so there&rsquo;s a ‘legal base’ for all tariff and regulatory activity. Without this, measures cannot be traced back to why they were created.</p>
+<p>The need for a regulation is built into the schema for TARIC files. It is a mandatory field for the measure table.</p>
+<svg width="326pt" height="260pt"
+ viewBox="0.00 0.00 326.00 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-256 322,-256 322,4 -4,4"/>
+<!-- measure1 -->
+<g id="node1" class="node">
+<title>measure1</title>
+<polygon fill="none" stroke="black" points="94,-180 24,-180 24,-144 94,-144 94,-180"/>
+<text text-anchor="middle" x="59" y="-158.3" font-family="Arial" font-size="14.00">Measure</text>
+</g>
+<!-- conditions1 -->
+<g id="node5" class="node">
+<title>conditions1</title>
+<polygon fill="none" stroke="black" points="93,-108 13,-108 13,-72 93,-72 93,-108"/>
+<text text-anchor="middle" x="53" y="-86.3" font-family="Arial" font-size="14.00">Conditions</text>
+</g>
+<!-- measure1&#45;&#45;conditions1 -->
+<g id="edge4" class="edge">
+<title>measure1&#45;&#45;conditions1</title>
+<path fill="none" stroke="black" d="M57.52,-143.7C56.59,-132.85 55.39,-118.92 54.47,-108.1"/>
+</g>
+<!-- measure2 -->
+<g id="node2" class="node">
+<title>measure2</title>
+<polygon fill="none" stroke="black" points="194,-180 124,-180 124,-144 194,-144 194,-180"/>
+<text text-anchor="middle" x="159" y="-158.3" font-family="Arial" font-size="14.00">Measure</text>
+</g>
+<!-- conditions2 -->
+<g id="node6" class="node">
+<title>conditions2</title>
+<polygon fill="none" stroke="black" points="199,-108 119,-108 119,-72 199,-72 199,-108"/>
+<text text-anchor="middle" x="159" y="-86.3" font-family="Arial" font-size="14.00">Conditions</text>
+</g>
+<!-- measure2&#45;&#45;conditions2 -->
+<g id="edge5" class="edge">
+<title>measure2&#45;&#45;conditions2</title>
+<path fill="none" stroke="black" d="M159,-143.7C159,-132.85 159,-118.92 159,-108.1"/>
+</g>
+<!-- measure3 -->
+<g id="node3" class="node">
+<title>measure3</title>
+<polygon fill="none" stroke="black" points="290,-180 220,-180 220,-144 290,-144 290,-180"/>
+<text text-anchor="middle" x="255" y="-158.3" font-family="Arial" font-size="14.00">Measure</text>
+</g>
+<!-- conditions3 -->
+<g id="node7" class="node">
+<title>conditions3</title>
+<polygon fill="none" stroke="black" points="304,-108 224,-108 224,-72 304,-72 304,-108"/>
+<text text-anchor="middle" x="264" y="-86.3" font-family="Arial" font-size="14.00">Conditions</text>
+</g>
+<!-- measure3&#45;&#45;conditions3 -->
+<g id="edge6" class="edge">
+<title>measure3&#45;&#45;conditions3</title>
+<path fill="none" stroke="black" d="M257.22,-143.7C258.62,-132.85 260.41,-118.92 261.8,-108.1"/>
+</g>
+<!-- Regulation -->
+<g id="node4" class="node">
+<title>Regulation</title>
+<polygon fill="none" stroke="black" points="199.5,-252 118.5,-252 118.5,-216 199.5,-216 199.5,-252"/>
+<text text-anchor="middle" x="159" y="-230.3" font-family="Arial" font-size="14.00">Regulation</text>
+</g>
+<!-- Regulation&#45;&#45;measure1 -->
+<g id="edge1" class="edge">
+<title>Regulation&#45;&#45;measure1</title>
+<path fill="none" stroke="black" d="M134.54,-215.88C119.04,-205.03 99.07,-191.05 83.56,-180.19"/>
+</g>
+<!-- Regulation&#45;&#45;measure2 -->
+<g id="edge2" class="edge">
+<title>Regulation&#45;&#45;measure2</title>
+<path fill="none" stroke="black" d="M159,-215.7C159,-204.85 159,-190.92 159,-180.1"/>
+</g>
+<!-- Regulation&#45;&#45;measure3 -->
+<g id="edge3" class="edge">
+<title>Regulation&#45;&#45;measure3</title>
+<path fill="none" stroke="black" d="M182.73,-215.7C197.61,-204.85 216.71,-190.92 231.54,-180.1"/>
+</g>
+<!-- components1 -->
+<g id="node8" class="node">
+<title>components1</title>
+<polygon fill="none" stroke="black" points="94,-36 0,-36 0,0 94,0 94,-36"/>
+<text text-anchor="middle" x="47" y="-14.3" font-family="Arial" font-size="14.00">Components</text>
+</g>
+<!-- conditions1&#45;&#45;components1 -->
+<g id="edge7" class="edge">
+<title>conditions1&#45;&#45;components1</title>
+<path fill="none" stroke="black" d="M51.52,-71.7C50.59,-60.85 49.39,-46.92 48.47,-36.1"/>
+</g>
+<!-- components2 -->
+<g id="node9" class="node">
+<title>components2</title>
+<polygon fill="none" stroke="black" points="206,-36 112,-36 112,0 206,0 206,-36"/>
+<text text-anchor="middle" x="159" y="-14.3" font-family="Arial" font-size="14.00">Components</text>
+</g>
+<!-- conditions2&#45;&#45;components2 -->
+<g id="edge8" class="edge">
+<title>conditions2&#45;&#45;components2</title>
+<path fill="none" stroke="black" d="M159,-71.7C159,-60.85 159,-46.92 159,-36.1"/>
+</g>
+<!-- components3 -->
+<g id="node10" class="node">
+<title>components3</title>
+<polygon fill="none" stroke="black" points="318,-36 224,-36 224,0 318,0 318,-36"/>
+<text text-anchor="middle" x="271" y="-14.3" font-family="Arial" font-size="14.00">Components</text>
+</g>
+<!-- conditions3&#45;&#45;components3 -->
+<g id="edge9" class="edge">
+<title>conditions3&#45;&#45;components3</title>
+<path fill="none" stroke="black" d="M265.73,-71.7C266.82,-60.85 268.21,-46.92 269.29,-36.1"/>
+</g>
+</g>
+</svg><p>Each regulation may have any number of measures associated with it. Every measure is associated with just one measure-generating regulation.</p>
+<h2 id="base-regulations">Base regulations</h2><p>A base regulation introduces new tariff and commercial measures. They do not originate from, or depend on, other regulations. Unless they are suspended, base regulations are valid from their entry into force to their end, or they can be open-ended.</p>
+<p>Measures under these regulations have the same validity, unless they are specifically suspended.</p>
+<h2 id="grouping-regulations">Grouping regulations</h2><p>Every base regulation on the system refers to a single regulation group.</p>
+<p>Regulation groups categorise regulations according to their purpose.</p>
+<p>Tariff managers must select the correct regulation group. If they select the wrong group, associated measures may not work properly.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Group</th>
+<th>Proposed UK description</th>
+</tr><tr>
+<td>CIT</td>
+<td>CITES</td>
+</tr><tr>
+<td>DNC</td>
+<td>Third   country duties (MFNs)</td>
+</tr><tr>
+<td>DUM</td>
+<td>Trade remedies (Anti-dumping and   anti-subsidy duties)</td>
+</tr><tr>
+<td>FTA</td>
+<td>FTA   (preferences and quotas)</td>
+</tr><tr>
+<td>KON</td>
+<td>Non-preferential   quotas (WTO, ATQ and safeguards)</td>
+</tr><tr>
+<td>MLA</td>
+<td>Import   and export restrictions</td>
+</tr><tr>
+<td>PRF</td>
+<td>Preferential   duties outside of FTAs</td>
+</tr><tr>
+<td>PRS</td>
+<td>Import and export prohibitions</td>
+</tr><tr>
+<td>SPG</td>
+<td>Generalised   system of preferences (GSP)</td>
+</tr><tr>
+<td>SUS</td>
+<td>Tariff   suspensions and reliefs</td>
+</tr><tr>
+<td>TXC</td>
+<td>Retaliatory   and safeguard duties</td>
+</tr><tr>
+<td>UTS</td>
+<td>Supplementary   units</td>
+</tr><tr>
+<td>VAU</td>
+<td>Unit   price (SPV), standard import value (SIV)</td>
+</tr>
+        </table>
+      </div><h2 id="draft-regulations">Draft regulations</h2><p>Draft regulations are unique in that they&rsquo;re live but the measures that are associated with them do not take effect. They have no executive power and will not show up as active measures in the border systems or in the UK tariff.</p>
+<p>Draft regulations are identified by the prefix C.</p>
+<p>Draft regulations are useful for measures where the start date has not yet been decided but it&rsquo;s necessary to start data entry.</p>
+<h3 id="sending-draft-regulations-before-they-39-re-approved">Sending draft regulations before they&rsquo;re approved</h3><p>Sometimes it is necessary to send new policy to border systems before the legislation has been accepted by Parliament.</p>
+<p>In this case, a draft regulation can be sent with a &lsquo;not approved&rsquo; flag.</p>
+<p>None of the measures linked to a &lsquo;not approved&rsquo; regulation will be active at the border.</p>
+<p>When the legislation is signed off by Parliament the regulation can be given an &lsquo;approved&rsquo; flag. At this point, all the measures become live.</p>
+<p>The following 2 rules apply:</p>
+
+<ol>
+<li><p>Only draft regulations can be &lsquo;not approved&rsquo;. A draft regulation is any regulation with an ID that starts with C. Other types of regulations must always be &lsquo;approved&rsquo;.</p></li>
+<li><p>The approved flag can only be changed from &lsquo;not approved&rsquo; to &lsquo;approved&rsquo;. Once a regulation has been approved, it cannot be changed back. 
+<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p></li>
+</ol>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Home">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Home'&amp;body=Problem%20with%20'Home'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Regulations">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Regulations'&amp;body=Problem%20with%20'Regulations'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/regulations.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

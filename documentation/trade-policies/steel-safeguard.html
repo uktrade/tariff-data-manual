@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Home - Tariff Data Manual</title>
+    <title>Steel safeguard - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/steel-safeguard.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Home - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta name="twitter:title" content="Steel safeguard - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/steel-safeguard.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Home" />
+      <meta property="og:title" content="Steel safeguard" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/steel-safeguard.html" />
 
     
   </head>
@@ -286,7 +286,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-and-additional-codes"><span>Measure types and additional codes</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#how-the-data-is-structured"><span>How the data is structured</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-business-rules"><span>Business rules</span></a>
@@ -494,7 +494,7 @@
         <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#what-happens-if-a-specific-quota-volume-runs-out"><span>What happens if a specific quota volume runs out</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#steel-safeguard-how-the-data-is-structured"><span>How the data is structured</span></a>
+        <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
     </ul>
   </li>
@@ -635,18 +635,364 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="home">Home</h1><p>The Tariff Data Manual is the technical documentation and reference manual for the United Kingdom&rsquo;s Import and Export Tariff data.</p>
-<p>This manual contains documentation on both low-level data structures and the high-level combinations of them used to represent tariff policy.</p>
-<p>You can find tariff data on <a href="https://data.gov.uk/dataset/3bee9a8a-e69c-400e-add5-3345a87a8e25/tariffs-to-trade-with-the-uk-from-1-january-2021">data.gov.uk</a>.</p>
-<p>If you find problems with the content in this manual, please <a href="https://github.com/uktrade/tariff-data-manual/issues">raise an issue on GitHub</a>.</p>
+            <h1 id="steel-safeguard">Steel safeguard</h1>
+<ul>
+<li>
+<a href="#safeguard-categories">Safeguard categories</a>
+</li>
+<li>
+<a href="#where-safeguards-apply">Where safeguards apply</a>
+</li>
+<li>
+<a href="#how-often-safeguard-quotas-are-defined">How often safeguard quotas are defined</a>
+</li>
+<li>
+<a href="#what-happens-if-a-specific-quota-volume-runs-out">What happens if a specific quota volume runs out</a>
+<ul>
+<li>
+<a href="#how-leftover-quota-volume-is-carried-over">How leftover quota volume is carried over</a>
+</li>
+</ul>
+<p></li>
+<li>
+<a href="#how-the-data-is-structured">How the data is structured</a>
+</li>
+</ul></p>
+<p>Steel safeguards aim to prevent dumping of steel-based products by placing a cap on the volume of steel that can be imported. The cap is fine-grained and is controlled on a quarterly basis.</p>
+<p>A safeguard set-up is made up of:</p>
+
+<ul>
+<li>a punitive duty that applies to all imports, </li>
+<li>a quota that can override that duty for a set quarterly import volume.</li>
+</ul>
+<p>Once the quota is exhausted, the punitive duty applies and the import of steel products is strongly abated. There are normally multiple quotas – one for &ldquo;all countries&rdquo; and then more for individual countries who are big exporters in that category.</p>
+<p>The override behaviour is not possible using the regular tariff rules and preference codes have to be used to allow the override to happen.</p>
+<p>Significant changes were made to the regime in Q1 2021 and a number of categories are no longer subject to safeguard. The old information which applied pre-Q1 2021 is shown on the <a href="https://github.com/uktrade/tariff-data-manual/wiki/Tariff-Data-Idioms;-Steel-safeguard/c6ae2552fba7522c3e2f41ff4b15c53fe8600e7e">old version of this page</a>.</p>
+<h2 id="safeguard-categories">Safeguard categories</h2><p>Products to which safeguards are applied are split into several categories. This is shown in the following table.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Number</th>
+<th>Products</th>
+</tr><tr>
+<td>1</td>
+<td>Non Alloy and Other Alloy Hot Rolled Sheets and Strips</td>
+</tr><tr>
+<td>2</td>
+<td>Non Alloy and Other Alloy Cold Rolled Sheets</td>
+</tr><tr>
+<td>4A</td>
+<td>Metallic Coated Sheets</td>
+</tr><tr>
+<td>5</td>
+<td>Organic Coated Sheets</td>
+</tr><tr>
+<td>13</td>
+<td>Rebars</td>
+</tr><tr>
+<td>20</td>
+<td>Gas Pipes</td>
+</tr><tr>
+<td>21</td>
+<td>Hollow Sections</td>
+</tr><tr>
+<td>25A</td>
+<td>Large Welded Tubes</td>
+</tr><tr>
+<td>25B</td>
+<td>Large Welded Tubes</td>
+</tr><tr>
+<td>26</td>
+<td>Other Welded Pipes</td>
+</tr>
+        </table>
+      </div><p>One quota then applies for each category for each quarter such that all the products in that category draw down from the same volume.</p>
+<p>For each product in a category therefore receives one measure for the safeguard and then another measure for that category&rsquo;s quota.</p>
+<h2 id="where-safeguards-apply">Where safeguards apply</h2><p>Not all countries are subject to measures – certain developing countries are exempt. These countries are not in geographical area 5050 - <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/5050">Countries subject to safeguard measures (5050)</a>.</p>
+<p>There is also a list of countries that are exempt only for certain categories. In the following table, where the county has an “X” it is subject to safeguards in that category. Where the country has a blank it is exempt from safeguards in that category.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: right">Category</th>
+<th style="text-align: center">Brazil</th>
+<th style="text-align: center">China</th>
+<th style="text-align: center">India</th>
+<th style="text-align: center">Indonesia</th>
+<th style="text-align: center">Malaysia</th>
+<th style="text-align: center">Saudi Arabia</th>
+<th style="text-align: center">Thailand</th>
+<th style="text-align: center">Turkey</th>
+<th style="text-align: center">Ukraine</th>
+<th style="text-align: center">UAE</th>
+<th style="text-align: center">Vietnam</th>
+</tr><tr>
+<td style="text-align: right">1</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: right">2</td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+</tr><tr>
+<td style="text-align: right">4A</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: right">5</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: right">13</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: right">20</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: right">21</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: right">25A</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center">X</td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: right">25B</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: right">26</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">X</td>
+<td style="text-align: center"></td>
+</tr>
+        </table>
+      </div><p>Some of the big exporters in each category get quotas of their own so they are exempt from the ‘all countries’ quota. As well as there being a quota for &lsquo;all countries&rsquo; there can also be separate quotas for individual geographies.</p>
+<h2 id="how-often-safeguard-quotas-are-defined">How often safeguard quotas are defined</h2><p>Safeguard quotas are defined on a quarterly basis. Quarter 1 is from July to August and the next quarters continue from there.</p>
+<p>The same quota order numbers are used across each quarter but the volume is refreshed.</p>
+<h2 id="what-happens-if-a-specific-quota-volume-runs-out">What happens if a specific quota volume runs out</h2><p>When the quota for a specific country has run out in Quarter 4:</p>
+
+<ul>
+<li>the country is added to the &lsquo;all countries&rsquo; quota for Quarter 4</li>
+<li>traders can claim against the &lsquo;all countries&rsquo; volume</li>
+</ul>
+<p>There is no maximum volume they can draw out of the remaining balance.</p>
+<p>There is no mechanism in the Tariff to show that a country should be added to a quota in response to another quota running out. This is done manually on a case by case basis.</p>
+<h3 id="how-leftover-quota-volume-is-carried-over">How leftover quota volume is carried over</h3><p>Any volume left in quota pots in Quarter 3 is automatically added on to quota volumes in Quarter 4. This is handled by border systems and   no change in tariff data is needed.</p>
+<h2 id="how-the-data-is-structured">How the data is structured</h2><p>This following diagram shows an example of a commodity that is subject to steel safeguards.</p>
+<svg width="818pt" height="218pt"
+ viewBox="0.00 0.00 818.00 218.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 214)">
+<title>Steel safeguard anatomy</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-214 814,-214 814,4 -4,4"/>
+<!-- QuotaSpecific -->
+<g id="node1" class="node">
+<title>QuotaSpecific</title>
+<polygon fill="none" stroke="black" points="189,-129 71,-129 71,-93 189,-93 189,-129"/>
+<text text-anchor="start" x="111" y="-113.8" font-family="Arial" font-size="14.00">Quota</text>
+<text text-anchor="start" x="79" y="-101.4" font-family="Arial" font-size="12.00">Origin: Turkey (TR)</text>
+</g>
+<!-- MeasureSpecific -->
+<g id="node3" class="node">
+<title>MeasureSpecific</title>
+<polygon fill="none" stroke="black" points="525.5,-134 326.5,-134 326.5,-88 525.5,-88 525.5,-134"/>
+<text text-anchor="start" x="399" y="-119.8" font-family="Arial" font-size="14.00">Measure</text>
+<text text-anchor="start" x="334.5" y="-107.4" font-family="Arial" font-size="12.00">Type: Non&#45;preferential quota (122)</text>
+<text text-anchor="start" x="375" y="-95.4" font-family="Arial" font-size="12.00">Origin: Turkey (TR)</text>
+</g>
+<!-- QuotaSpecific&#45;&#45;MeasureSpecific -->
+<g id="edge5" class="edge">
+<title>QuotaSpecific&#45;&#45;MeasureSpecific</title>
+<path fill="none" stroke="black" d="M189.08,-111C228.16,-111 280.66,-111 326.22,-111"/>
+</g>
+<!-- QuotaAll -->
+<g id="node2" class="node">
+<title>QuotaAll</title>
+<polygon fill="none" stroke="black" points="260,-199 0,-199 0,-163 260,-163 260,-199"/>
+<text text-anchor="start" x="111" y="-183.8" font-family="Arial" font-size="14.00">Quota</text>
+<text text-anchor="start" x="8" y="-171.4" font-family="Arial" font-size="12.00">Origin: Countries subject to safeguards (5050)</text>
+</g>
+<!-- MeasureAll -->
+<g id="node4" class="node">
+<title>MeasureAll</title>
+<polygon fill="none" stroke="black" points="556,-210 296,-210 296,-152 556,-152 556,-210"/>
+<text text-anchor="start" x="399" y="-195.8" font-family="Arial" font-size="14.00">Measure</text>
+<text text-anchor="start" x="334.5" y="-183.4" font-family="Arial" font-size="12.00">Type: Non&#45;preferential quota (122)</text>
+<text text-anchor="start" x="304" y="-171.4" font-family="Arial" font-size="12.00">Origin: Countries subject to safeguards (5050)</text>
+<text text-anchor="start" x="337.5" y="-159.4" font-family="Arial" font-size="12.00">Exclusion: Turkey (TR), India (IN)</text>
+</g>
+<!-- QuotaAll&#45;&#45;MeasureAll -->
+<g id="edge4" class="edge">
+<title>QuotaAll&#45;&#45;MeasureAll</title>
+<path fill="none" stroke="black" d="M260.38,-181C272.09,-181 283.95,-181 295.66,-181"/>
+</g>
+<!-- QuotaRegulation -->
+<g id="node8" class="node">
+<title>QuotaRegulation</title>
+<polygon fill="none" stroke="black" points="810,-191 592,-191 592,-155 810,-155 810,-191"/>
+<text text-anchor="start" x="668.5" y="-175.8" font-family="Arial" font-size="14.00">Regulation</text>
+<text text-anchor="start" x="600" y="-163.4" font-family="Arial" font-size="12.00">Group: Non&#45;preferential quotas (KON)</text>
+</g>
+<!-- MeasureSpecific&#45;&#45;QuotaRegulation -->
+<g id="edge8" class="edge">
+<title>MeasureSpecific&#45;&#45;QuotaRegulation</title>
+<path fill="none" stroke="black" d="M525.56,-133.38C556.72,-140.46 590.74,-148.19 620.4,-154.92"/>
+</g>
+<!-- MeasureAll&#45;&#45;QuotaRegulation -->
+<g id="edge7" class="edge">
+<title>MeasureAll&#45;&#45;QuotaRegulation</title>
+<path fill="none" stroke="black" d="M556.3,-177.21C568.16,-176.86 580.08,-176.51 591.72,-176.17"/>
+</g>
+<!-- SafeguardMeasure -->
+<g id="node5" class="node">
+<title>SafeguardMeasure</title>
+<polygon fill="none" stroke="black" points="556,-70 296,-70 296,0 556,0 556,-70"/>
+<text text-anchor="start" x="399" y="-55.8" font-family="Arial" font-size="14.00">Measure</text>
+<text text-anchor="start" x="317.5" y="-43.4" font-family="Arial" font-size="12.00">Type: Additional duties (safeguard) (696)</text>
+<text text-anchor="start" x="304" y="-31.4" font-family="Arial" font-size="12.00">Origin: Countries subject to safeguards (5050)</text>
+<text text-anchor="start" x="372" y="-19.4" font-family="Arial" font-size="12.00">Exclusion: India (IN)</text>
+<text text-anchor="start" x="382" y="-7.4" font-family="Arial" font-size="12.00">Amount: 25.00%</text>
+</g>
+<!-- SafeguardRegulation -->
+<g id="node7" class="node">
+<title>SafeguardRegulation</title>
+<polygon fill="none" stroke="black" points="774,-53 628,-53 628,-17 774,-17 774,-53"/>
+<text text-anchor="start" x="668.5" y="-37.8" font-family="Arial" font-size="14.00">Regulation</text>
+<text text-anchor="start" x="636" y="-25.4" font-family="Arial" font-size="12.00">Group: Safeguard (TXC)</text>
+</g>
+<!-- SafeguardMeasure&#45;&#45;SafeguardRegulation -->
+<g id="edge6" class="edge">
+<title>SafeguardMeasure&#45;&#45;SafeguardRegulation</title>
+<path fill="none" stroke="black" d="M556.3,-35C580.84,-35 605.68,-35 627.65,-35"/>
+</g>
+<!-- Commodity -->
+<g id="node6" class="node">
+<title>Commodity</title>
+<polygon fill="none" stroke="black" points="744,-129 658,-129 658,-93 744,-93 744,-129"/>
+<text text-anchor="middle" x="701" y="-107.3" font-family="Arial" font-size="14.00">Commodity</text>
+</g>
+<!-- Commodity&#45;&#45;MeasureSpecific -->
+<g id="edge2" class="edge">
+<title>Commodity&#45;&#45;MeasureSpecific</title>
+<path fill="none" stroke="black" d="M657.9,-111C622.7,-111 571.07,-111 525.56,-111"/>
+</g>
+<!-- Commodity&#45;&#45;MeasureAll -->
+<g id="edge1" class="edge">
+<title>Commodity&#45;&#45;MeasureAll</title>
+<path fill="none" stroke="black" d="M657.99,-121.77C626.56,-129.83 582.01,-141.25 540.4,-151.92"/>
+</g>
+<!-- Commodity&#45;&#45;SafeguardMeasure -->
+<g id="edge3" class="edge">
+<title>Commodity&#45;&#45;SafeguardMeasure</title>
+<path fill="none" stroke="black" d="M657.86,-99.27C629.62,-91.41 590.83,-80.61 553.11,-70.11"/>
+</g>
+</g>
+</svg><p>The important features are:</p>
+
+<ul>
+<li>India is exempt from the category - so it is excluded from both the safeguard measure and the quota</li>
+<li>Turkey is a big exporter – it receives its own quota and is exempt from the &lsquo;all countries&rsquo; quota</li>
+<li>there is only one commodity – bigger categories will have more than one and all will link to the same quotas
+<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></li>
+</ul>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Home">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Home'&amp;body=Problem%20with%20'Home'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Trade-policies;-Steel-safeguard">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Steel%20safeguard'&amp;body=Problem%20with%20'Steel%20safeguard'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/steel-safeguard.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

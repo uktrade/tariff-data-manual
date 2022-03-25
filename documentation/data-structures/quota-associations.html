@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Home - Tariff Data Manual</title>
+    <title>Quota associations - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-associations.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Home - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta name="twitter:title" content="Quota associations - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-associations.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Home" />
+      <meta property="og:title" content="Quota associations" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-associations.html" />
 
     
   </head>
@@ -117,7 +117,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#condition-codes-in-detail"><span>Condition codes in detail</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -286,7 +286,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-and-additional-codes"><span>Measure types and additional codes</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#how-the-data-is-structured"><span>How the data is structured</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-business-rules"><span>Business rules</span></a>
@@ -343,13 +343,13 @@
         <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#where-quota-associations-are-used"><span>Where quota associations are used</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#quota-associations-how-the-data-is-structured"><span>How the data is structured</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#how-quota-types-are-defined"><span>How quota types are defined</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#quota-associations-business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -635,18 +635,251 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="home">Home</h1><p>The Tariff Data Manual is the technical documentation and reference manual for the United Kingdom&rsquo;s Import and Export Tariff data.</p>
-<p>This manual contains documentation on both low-level data structures and the high-level combinations of them used to represent tariff policy.</p>
-<p>You can find tariff data on <a href="https://data.gov.uk/dataset/3bee9a8a-e69c-400e-add5-3345a87a8e25/tariffs-to-trade-with-the-uk-from-1-january-2021">data.gov.uk</a>.</p>
-<p>If you find problems with the content in this manual, please <a href="https://github.com/uktrade/tariff-data-manual/issues">raise an issue on GitHub</a>.</p>
+            <h1 id="quota-associations">Quota associations</h1>
+<ul>
+<li>
+<a href="#where-quota-associations-are-used">Where quota associations are used</a>
+</li>
+<li>
+<a href="#how-the-data-is-structured">How the data is structured</a>
+</li>
+<li>
+<a href="#how-quota-types-are-defined">How quota types are defined</a>
+<ul>
+<li>
+<a href="#relation-types">Relation types</a>
+<ul>
+<li>
+<a href="#equivalent-eq">Equivalent (EQ)</a>
+</li>
+<li>
+<a href="#normal-nm">Normal (NM)</a>
+</li>
+</ul>
+<p></li>
+<li>
+<a href="#co-efficients">Co-efficients</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#business-rules">Business rules</a>
+</li>
+</ul></p>
+
+<blockquote>
+<p>A quota association links quotas together.</p>
+</blockquote>
+<p>If 2 quotas are linked, when a trader claims against one it has an impact on the other.</p>
+<p>Quota associations define the link between one main quota and one or more sub-quotas. These are sometimes referred to as parent and child quotas.</p>
+<p>Quota associations link 2 or more quota definitions. Quota definitions are the time periods during which the quota is available.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" alt="image" /></a></p>
+<h2 id="where-quota-associations-are-used">Where quota associations are used</h2><p>Product areas where quota associations are used include:</p>
+
+<ul>
+<li>lamb, sheep and goat meat</li>
+<li>beef </li>
+<li>orange juice </li>
+<li>clothing</li>
+</ul>
+<h2 id="how-the-data-is-structured">How the data is structured</h2><p>The following diagram shows the data model for quota associations.</p>
+<svg width="700pt" height="250pt"
+ viewBox="0.00 0.00 700.00 250.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_5" class="graph" transform="scale(1 1) rotate(0) translate(4 246)">
+<title>Database</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-246 696,-246 696,4 -4,4"/>
+<!-- Quota association -->
+<g id="table_698" class="node">
+<title>Quota association</title>
+<polygon fill="none" stroke="black" points="9.5,-221 9.5,-237 186.5,-237 186.5,-221 9.5,-221"/>
+<text text-anchor="start" x="61" y="-226.8" font-family="Arial" font-size="9.00">Quota association</text>
+<polygon fill="none" stroke="black" points="9.5,-205 9.5,-221 124.5,-221 124.5,-205 9.5,-205"/>
+<text text-anchor="start" x="12.5" y="-210.8" font-family="Arial" font-size="9.00">main_quota_definition_sid</text>
+<polygon fill="none" stroke="black" points="124.5,-205 124.5,-221 173.5,-221 173.5,-205 124.5,-205"/>
+<text text-anchor="start" x="144" y="-210.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="173.5,-205 173.5,-221 186.5,-221 186.5,-205 173.5,-205"/>
+<text text-anchor="start" x="176.5" y="-210.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="9.5,-189 9.5,-205 124.5,-205 124.5,-189 9.5,-189"/>
+<text text-anchor="start" x="15" y="-194.8" font-family="Arial" font-size="9.00">sub_quota_definition_sid</text>
+<polygon fill="none" stroke="black" points="124.5,-189 124.5,-205 173.5,-205 173.5,-189 124.5,-189"/>
+<text text-anchor="start" x="144" y="-194.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="173.5,-189 173.5,-205 186.5,-205 186.5,-189 173.5,-189"/>
+<text text-anchor="start" x="176.5" y="-194.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="9.5,-173 9.5,-189 124.5,-189 124.5,-173 9.5,-173"/>
+<text text-anchor="start" x="40" y="-178.8" font-family="Arial" font-size="9.00">relation_type</text>
+<polygon fill="none" stroke="black" points="124.5,-173 124.5,-189 173.5,-189 173.5,-173 124.5,-173"/>
+<text text-anchor="start" x="127.5" y="-178.8" font-family="Arial" font-size="9.00">varchar(2)</text>
+<polygon fill="none" stroke="black" points="173.5,-173 173.5,-189 186.5,-189 186.5,-173 173.5,-173"/>
+<polygon fill="none" stroke="black" points="9.5,-157 9.5,-173 124.5,-173 124.5,-157 9.5,-157"/>
+<text text-anchor="start" x="46" y="-162.8" font-family="Arial" font-size="9.00">coefficient</text>
+<polygon fill="none" stroke="black" points="124.5,-157 124.5,-173 173.5,-173 173.5,-157 124.5,-157"/>
+<text text-anchor="start" x="132.5" y="-162.8" font-family="Arial" font-size="9.00">decimal</text>
+<polygon fill="none" stroke="black" points="173.5,-157 173.5,-173 186.5,-173 186.5,-157 173.5,-157"/>
+<polygon fill="none" stroke="black" points="8,-156 8,-238 187,-238 187,-156 8,-156"/>
+</g>
+<!-- Quota definition -->
+<g id="table_389" class="node">
+<title>Quota definition</title>
+<polygon fill="none" stroke="black" points="240.5,-213 240.5,-229 453.5,-229 453.5,-213 240.5,-213"/>
+<text text-anchor="start" x="314.5" y="-218.8" font-family="Arial" font-size="9.00">Quota definition</text>
+<polygon fill="none" stroke="black" points="240.5,-197 240.5,-213 361.5,-213 361.5,-197 240.5,-197"/>
+<text text-anchor="start" x="259" y="-202.8" font-family="Arial" font-size="9.00">quota_definition_sid</text>
+<polygon fill="none" stroke="black" points="361.5,-197 361.5,-213 420.5,-213 420.5,-197 361.5,-197"/>
+<text text-anchor="start" x="386" y="-202.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="420.5,-197 420.5,-213 453.5,-213 453.5,-197 420.5,-197"/>
+<text text-anchor="start" x="432" y="-202.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="240.5,-181 240.5,-197 361.5,-197 361.5,-181 240.5,-181"/>
+<text text-anchor="start" x="248.5" y="-186.8" font-family="Arial" font-size="9.00">quota_order_number_sid</text>
+<polygon fill="none" stroke="black" points="361.5,-181 361.5,-197 420.5,-197 420.5,-181 361.5,-181"/>
+<text text-anchor="start" x="386" y="-186.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="420.5,-181 420.5,-197 453.5,-197 453.5,-181 420.5,-181"/>
+<text text-anchor="start" x="433.5" y="-186.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="240.5,-165 240.5,-181 361.5,-181 361.5,-165 240.5,-165"/>
+<text text-anchor="start" x="263.5" y="-170.8" font-family="Arial" font-size="9.00">validity_start_date</text>
+<polygon fill="none" stroke="black" points="361.5,-165 361.5,-181 420.5,-181 420.5,-165 361.5,-165"/>
+<text text-anchor="start" x="381.5" y="-170.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="420.5,-165 420.5,-181 453.5,-181 453.5,-165 420.5,-165"/>
+<polygon fill="none" stroke="black" points="240.5,-149 240.5,-165 361.5,-165 361.5,-149 240.5,-149"/>
+<text text-anchor="start" x="264.5" y="-154.8" font-family="Arial" font-size="9.00">validity_end_date</text>
+<polygon fill="none" stroke="black" points="361.5,-149 361.5,-165 420.5,-165 420.5,-149 361.5,-149"/>
+<text text-anchor="start" x="381.5" y="-154.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="420.5,-149 420.5,-165 453.5,-165 453.5,-149 420.5,-149"/>
+<polygon fill="none" stroke="black" points="240.5,-133 240.5,-149 361.5,-149 361.5,-133 240.5,-133"/>
+<text text-anchor="start" x="285.5" y="-138.8" font-family="Arial" font-size="9.00">volume</text>
+<polygon fill="none" stroke="black" points="361.5,-133 361.5,-149 420.5,-149 420.5,-133 361.5,-133"/>
+<text text-anchor="start" x="374.5" y="-138.8" font-family="Arial" font-size="9.00">decimal</text>
+<polygon fill="none" stroke="black" points="420.5,-133 420.5,-149 453.5,-149 453.5,-133 420.5,-133"/>
+<polygon fill="none" stroke="black" points="240.5,-117 240.5,-133 361.5,-133 361.5,-117 240.5,-117"/>
+<text text-anchor="start" x="272" y="-122.8" font-family="Arial" font-size="9.00">initial_volume</text>
+<polygon fill="none" stroke="black" points="361.5,-117 361.5,-133 420.5,-133 420.5,-117 361.5,-117"/>
+<text text-anchor="start" x="374.5" y="-122.8" font-family="Arial" font-size="9.00">decimal</text>
+<polygon fill="none" stroke="black" points="420.5,-117 420.5,-133 453.5,-133 453.5,-117 420.5,-117"/>
+<polygon fill="none" stroke="black" points="240.5,-101 240.5,-117 361.5,-117 361.5,-101 240.5,-101"/>
+<text text-anchor="start" x="271.5" y="-106.8" font-family="Arial" font-size="9.00">monetary_unit</text>
+<polygon fill="none" stroke="black" points="361.5,-101 361.5,-117 420.5,-117 420.5,-101 361.5,-101"/>
+<text text-anchor="start" x="369.5" y="-106.8" font-family="Arial" font-size="9.00">varchar(3)</text>
+<polygon fill="none" stroke="black" points="420.5,-101 420.5,-117 453.5,-117 453.5,-101 420.5,-101"/>
+<text text-anchor="start" x="423.5" y="-106.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="240.5,-85 240.5,-101 361.5,-101 361.5,-85 240.5,-85"/>
+<text text-anchor="start" x="262.5" y="-90.8" font-family="Arial" font-size="9.00">measurement_unit</text>
+<polygon fill="none" stroke="black" points="361.5,-85 361.5,-101 420.5,-101 420.5,-85 361.5,-85"/>
+<text text-anchor="start" x="369.5" y="-90.8" font-family="Arial" font-size="9.00">varchar(3)</text>
+<polygon fill="none" stroke="black" points="420.5,-85 420.5,-101 453.5,-101 453.5,-85 420.5,-85"/>
+<text text-anchor="start" x="423.5" y="-90.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="240.5,-69 240.5,-85 361.5,-85 361.5,-69 240.5,-69"/>
+<text text-anchor="start" x="243.5" y="-74.8" font-family="Arial" font-size="9.00">measurement_unit_qualifier</text>
+<polygon fill="none" stroke="black" points="361.5,-69 361.5,-85 420.5,-85 420.5,-69 361.5,-69"/>
+<text text-anchor="start" x="369.5" y="-74.8" font-family="Arial" font-size="9.00">varchar(1)</text>
+<polygon fill="none" stroke="black" points="420.5,-69 420.5,-85 453.5,-85 453.5,-69 420.5,-69"/>
+<text text-anchor="start" x="423.5" y="-74.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="240.5,-53 240.5,-69 361.5,-69 361.5,-53 240.5,-53"/>
+<text text-anchor="start" x="259.5" y="-58.8" font-family="Arial" font-size="9.00">maximum_precision</text>
+<polygon fill="none" stroke="black" points="361.5,-53 361.5,-69 420.5,-69 420.5,-53 361.5,-53"/>
+<text text-anchor="start" x="386" y="-58.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="420.5,-53 420.5,-69 453.5,-69 453.5,-53 420.5,-53"/>
+<polygon fill="none" stroke="black" points="240.5,-37 240.5,-53 361.5,-53 361.5,-37 240.5,-37"/>
+<text text-anchor="start" x="273.5" y="-42.8" font-family="Arial" font-size="9.00">quota_critical</text>
+<polygon fill="none" stroke="black" points="361.5,-37 361.5,-53 420.5,-53 420.5,-37 361.5,-37"/>
+<text text-anchor="start" x="381.5" y="-42.8" font-family="Arial" font-size="9.00">bool</text>
+<polygon fill="none" stroke="black" points="420.5,-37 420.5,-53 453.5,-53 453.5,-37 420.5,-37"/>
+<polygon fill="none" stroke="black" points="240.5,-21 240.5,-37 361.5,-37 361.5,-21 240.5,-21"/>
+<text text-anchor="start" x="251.5" y="-26.8" font-family="Arial" font-size="9.00">quota_critical_threshold</text>
+<polygon fill="none" stroke="black" points="361.5,-21 361.5,-37 420.5,-37 420.5,-21 361.5,-21"/>
+<text text-anchor="start" x="386" y="-26.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="420.5,-21 420.5,-37 453.5,-37 453.5,-21 420.5,-21"/>
+<polygon fill="none" stroke="black" points="240.5,-5 240.5,-21 361.5,-21 361.5,-5 240.5,-5"/>
+<text text-anchor="start" x="278" y="-10.8" font-family="Arial" font-size="9.00">description</text>
+<polygon fill="none" stroke="black" points="361.5,-5 361.5,-21 420.5,-21 420.5,-5 361.5,-5"/>
+<text text-anchor="start" x="364.5" y="-10.8" font-family="Arial" font-size="9.00">varchar(500)</text>
+<polygon fill="none" stroke="black" points="420.5,-5 420.5,-21 453.5,-21 453.5,-5 420.5,-5"/>
+<polygon fill="none" stroke="black" points="239,-4 239,-230 454,-230 454,-4 239,-4"/>
+</g>
+<!-- Quota association&#45;&gt;Quota definition -->
+<g id="database_5_edge1" class="edge">
+<title>Quota association:e&#45;&gt;Quota definition:w</title>
+<path fill="none" stroke="black" d="M187.5,-213C208.14,-213 214.64,-206.77 231.97,-205.3"/>
+<polygon fill="black" stroke="black" points="232.11,-207.93 239.5,-205 231.9,-202.68 232.11,-207.93"/>
+</g>
+<!-- Quota association&#45;&gt;Quota definition -->
+<g id="database_5_edge2" class="edge">
+<title>Quota association:e&#45;&gt;Quota definition:w</title>
+<path fill="none" stroke="black" d="M187.5,-197C208.14,-197 214.64,-203.23 231.97,-204.7"/>
+<polygon fill="black" stroke="black" points="231.9,-207.32 239.5,-205 232.11,-202.07 231.9,-207.32"/>
+</g>
+<!-- Quota order number -->
+<g id="table_1" class="node">
+<title>Quota order number</title>
+<polygon fill="none" stroke="black" points="507,-197 507,-213 683,-213 683,-197 507,-197"/>
+<text text-anchor="start" x="553.5" y="-202.8" font-family="Arial" font-size="9.00">Quota order number</text>
+<polygon fill="none" stroke="black" points="507,-181 507,-197 618,-197 618,-181 507,-181"/>
+<text text-anchor="start" x="510" y="-186.8" font-family="Arial" font-size="9.00">quota_order_number_sid</text>
+<polygon fill="none" stroke="black" points="618,-181 618,-197 667,-197 667,-181 618,-181"/>
+<text text-anchor="start" x="637.5" y="-186.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="667,-181 667,-197 683,-197 683,-181 667,-181"/>
+<text text-anchor="start" x="670" y="-186.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="507,-165 507,-181 618,-181 618,-165 507,-165"/>
+<text text-anchor="start" x="518.5" y="-170.8" font-family="Arial" font-size="9.00">quota_order_number</text>
+<polygon fill="none" stroke="black" points="618,-165 618,-181 667,-181 667,-165 618,-165"/>
+<text text-anchor="start" x="621" y="-170.8" font-family="Arial" font-size="9.00">varchar(6)</text>
+<polygon fill="none" stroke="black" points="667,-165 667,-181 683,-181 683,-165 667,-165"/>
+<polygon fill="none" stroke="black" points="507,-149 507,-165 618,-165 618,-149 507,-149"/>
+<text text-anchor="start" x="525" y="-154.8" font-family="Arial" font-size="9.00">validity_start_date</text>
+<polygon fill="none" stroke="black" points="618,-149 618,-165 667,-165 667,-149 618,-149"/>
+<text text-anchor="start" x="633" y="-154.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="667,-149 667,-165 683,-165 683,-149 667,-149"/>
+<polygon fill="none" stroke="black" points="507,-133 507,-149 618,-149 618,-133 507,-133"/>
+<text text-anchor="start" x="526" y="-138.8" font-family="Arial" font-size="9.00">validity_end_date</text>
+<polygon fill="none" stroke="black" points="618,-133 618,-149 667,-149 667,-133 618,-133"/>
+<text text-anchor="start" x="633" y="-138.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="667,-133 667,-149 683,-149 683,-133 667,-133"/>
+<polygon fill="none" stroke="black" points="506,-132 506,-214 684,-214 684,-132 506,-132"/>
+</g>
+<!-- Quota definition&#45;&gt;Quota order number -->
+<g id="database_5_edge3" class="edge">
+<title>Quota definition:e&#45;&gt;Quota order number:w</title>
+<path fill="none" stroke="black" d="M454.5,-189C474.53,-189 481.41,-189 498.15,-189"/>
+<polygon fill="black" stroke="black" points="498.5,-191.63 506,-189 498.5,-186.38 498.5,-191.63"/>
+</g>
+</g>
+</svg><p>A quota association links to a main definition (parent quota) and a sub-definition (child). These definitions define the quota order number.</p>
+<p>The association will last as long as the definitions. In most cases, the definitions of the main and sub-quota are the same length.</p>
+<h2 id="how-quota-types-are-defined">How quota types are defined</h2><p>Each quota association has a relation type and a co-efficient.</p>
+<h3 id="relation-types">Relation types</h3><p>There are 2 relation types:</p>
+
+<ol>
+<li>Equivalent - equal to the main quota</li>
+<li>Normal </li>
+</ol>
+<h4 id="equivalent-eq">Equivalent (EQ)</h4><p>EQ is used to relate quota order numbers where volume or weight is to be interpreted differently via a co-efficient.</p>
+<p>For example, the sheep and goat meat WTO quota. Details of the trade in sheep and goat meat are set out in <a href="https://www.legislation.gov.uk/uksi/2020/1432">the Customs (Tariff Quota) (EU Exit) Regulations</a> on GOV.UK.</p>
+<p>Equivalence associations are used in this set of quotas because there are 3 types of products to be traded. Each of these is represented by multiple commodities whose imports are to be treated differently, depending on the product.</p>
+<p>When determining quota allocations, 1kg of meat off the bone counts less than 1kg of meat on the bone.</p>
+<p>The table on page 6 of the <a href="https://www.gov.uk/government/publications/reference-documents-for-the-customs-tariff-quotas-eu-exit-regulations-2020">reference document</a> shows the effect and implementation of EQ quota associations.</p>
+<p>The UK is allowed to import 228,254 tonnes of meat from New Zealand annually. The notes in the volume column are instrumental. &lsquo;Carcass weight&rsquo; illustrates you need to do a calculation to determine what makes up a tonne.</p>
+<p>In this case, bone-in carcases are counted as 1 tonne, boneless mutton/sheep counts as 1.81 tonnes and boneless lamb counts as 1.67 tonnes. These values are reflected in the co-efficients on the printed regulation and in the quota associations table in the database.</p>
+<h4 id="normal-nm">Normal (NM)</h4><p>NM is used where weight or volume is the same across each related definition. A maximum weight/volume is applied to specific commodity codes in the sub-quota.</p>
+<p>For example, a function known as ‘quota of quotas’ applies to Nicaragua and El Salvador. It applies a maximum import volume across multiple quotas.</p>
+<p>There is a single quota (or quota of quotas) which a master volume is assigned to.</p>
+<p>This is a blanket quota showing a maximum threshold: there are no commodities applied to the master quota. Traders are not expected to reference the quota order number on their declarations.</p>
+<p>The quota then has a NM type relationship with the 34 individual quotas that are afforded a threshold by the main quota. Quota volumes are applied to the individual quotas.</p>
+<p>The main quota limits the volume of imports, and each sub-quota applies a maximum volume to each commodity.</p>
+<h3 id="co-efficients">Co-efficients</h3><p>Where a quota has been over–subscribed, the Rural Payments Agency applies a reduction co-efficient. This is the standard approach for dividing up the available quota.</p>
+<p>The following rules apply:</p>
+
+<ul>
+<li>the value assigned to the co-efficient field is always 1.00 where the relation type is ‘NM’</li>
+<li>the values assigned to the co-efficient field are always something other than 1.00 where the relation type is ‘EQ’</li>
+</ul>
+<h2 id="business-rules">Business rules</h2><p>Read the business rules for quota associations in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.
+<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Home">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Home'&amp;body=Problem%20with%20'Home'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Quota-associations">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Quota%20associations'&amp;body=Problem%20with%20'Quota%20associations'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-associations.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

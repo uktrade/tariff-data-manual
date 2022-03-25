@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Home - Tariff Data Manual</title>
+    <title>Geographical areas - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/geographical-areas.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Home - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta name="twitter:title" content="Geographical areas - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/geographical-areas.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Home" />
+      <meta property="og:title" content="Geographical areas" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/geographical-areas.html" />
 
     
   </head>
@@ -117,7 +117,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#condition-codes-in-detail"><span>Condition codes in detail</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -174,7 +174,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#how-quotas-relate-to-geographical-areas"><span>How quotas relate to geographical areas</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#geographical-areas-business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -635,18 +635,88 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="home">Home</h1><p>The Tariff Data Manual is the technical documentation and reference manual for the United Kingdom&rsquo;s Import and Export Tariff data.</p>
-<p>This manual contains documentation on both low-level data structures and the high-level combinations of them used to represent tariff policy.</p>
-<p>You can find tariff data on <a href="https://data.gov.uk/dataset/3bee9a8a-e69c-400e-add5-3345a87a8e25/tariffs-to-trade-with-the-uk-from-1-january-2021">data.gov.uk</a>.</p>
-<p>If you find problems with the content in this manual, please <a href="https://github.com/uktrade/tariff-data-manual/issues">raise an issue on GitHub</a>.</p>
+            <h1 id="geographical-areas">Geographical areas</h1>
+<ul>
+<li>
+<a href="#what-geographical-areas-are">What geographical areas are</a>
+</li>
+<li>
+<a href="#defining-country-groups">Defining country groups</a>
+<ul>
+<li>
+<a href="#grouping-countries-to-apply-specific-elements-of-trade-policy">Grouping countries to apply specific elements of trade policy</a>
+</li>
+</ul>
+<p></li>
+<li>
+<a href="#how-geographical-areas-are-identified">How geographical areas are identified</a>
+</li>
+<li>
+<a href="#membership-of-geographical-areas">Membership of geographical areas</a>
+</li>
+<li>
+<a href="#excluding-countries-from-geographical-areas">Excluding countries from geographical areas</a>
+</li>
+<li>
+<a href="#how-quotas-relate-to-geographical-areas">How quotas relate to geographical areas</a>
+</li>
+<li>
+<a href="#business-rules">Business rules</a>
+</li>
+</ul></p>
+<h2 id="what-geographical-areas-are">What geographical areas are</h2><p>A geographical area is the area a <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/measures.html#measures">measure</a> applies to.</p>
+<p>All measures must be assigned to a geographical area.</p>
+<p>A <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/quotas.html#quotas">quota</a> may be assigned to more than one geographical area.</p>
+<p>A geographical area can be:</p>
+
+<ul>
+<li>a single country</li>
+<li>a country group</li>
+<li>a region</li>
+</ul>
+<h2 id="defining-country-groups">Defining country groups</h2><p>A country group may refer to a globally understood trading entity, such as <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/1033">CARIFORUM</a> or <a href="https://www.gov.uk/government/publications/trading-with-developing-nations">the Generalised Scheme of Preferences</a>.</p>
+<p>Sometimes a trade measure may apply to several countries which are not part of a trading entity. Instead of applying the measure to each individual country, it is easier to create a country group containing these countries. The measure can then be applied to the whole group.</p>
+<h3 id="grouping-countries-to-apply-specific-elements-of-trade-policy">Grouping countries to apply specific elements of trade policy</h3><p>Sometimes countries are grouped together to be able to apply specific elements of a trade policy.</p>
+<p>For example, the country group <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/2300">Silk or cotton handloom products</a> allows the execution of rules on hand loomed products.</p>
+<h2 id="how-geographical-areas-are-identified">How geographical areas are identified</h2><p>An identifier for a country group geographical_area_id is structured depending on the type of area.</p>
+<p>The geographical area_code field dictates what type of geographical area is involved:</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: center">Type</th>
+<th style="text-align: center">Area code</th>
+</tr><tr>
+<td style="text-align: center">Country</td>
+<td style="text-align: center">0</td>
+</tr><tr>
+<td style="text-align: center">Country group</td>
+<td style="text-align: center">1</td>
+</tr><tr>
+<td style="text-align: center">Region</td>
+<td style="text-align: center">2</td>
+</tr>
+        </table>
+      </div><p>For all countries and regions, the code is a 2-digit upper-case alphabetical string.</p>
+<p>For regions (unincorporated states) the code is typically a 2-digit string beginning with X, followed by the first letter of the country.</p>
+<p>For country groups, the code is an alpha-numeric string of 4-digits. These 4-digit strings are almost always numeric. For example 1011 is for <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/1011">all countries</a>. Some legacy groups do contain letters. For example F006 is for <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/F006">countries subject to phytosanitary certificates</a>.</p>
+<h2 id="membership-of-geographical-areas">Membership of geographical areas</h2><p>Geographical areas that represent country groups (area code 1) are designed to include member countries. A geographical area group can only contain regions or countries (area codes 0 and 2), not other geographical area groups. A geographical area’s membership of a country group has a start date and where required an end date.</p>
+<p>There are a few cases where membership of geographical areas change. For example, countries move in and out of Generalised System of Preferences (GSP) tiers from year to year as they progress or decline economically.</p>
+<p>Steel safeguards are assigned to country groups created specifically for the purpose of applying punitive duties against large numbers of countries - these groups tend to change from year to year.</p>
+<h2 id="excluding-countries-from-geographical-areas">Excluding countries from geographical areas</h2><p>All measures are assigned to one geographical area.</p>
+<p>If the geographical area is a country group, one or more members of the group can be excluded from the measure. This is done by including them in the measure_excluded_geographical_areas table.</p>
+<p>The excluded country must be a member of that group.</p>
+<p>Both the excluded_geographical_area and geographical_area_id fields refer to the excluded country, not the group.</p>
+<h2 id="how-quotas-relate-to-geographical-areas">How quotas relate to geographical areas</h2><p>All quotas must be represented both as measures and within the structures related to quotas.</p>
+<p>With licensed quotas, these are only represented by quotas.</p>
+<h2 id="business-rules">Business rules</h2><p>Read the business rules that apply to geographical areas in the <a href="https://uktrade.github.io/tamato/html/business_rules/geographical_areas.html">system documentation</a>.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Home">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Home'&amp;body=Problem%20with%20'Home'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Geographical-Areas">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Geographical%20areas'&amp;body=Problem%20with%20'Geographical%20areas'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/geographical-areas.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

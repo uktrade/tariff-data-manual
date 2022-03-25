@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Home - Tariff Data Manual</title>
+    <title>Most favoured nation duties - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Home - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta name="twitter:title" content="Most favoured nation duties - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Home" />
+      <meta property="og:title" content="Most favoured nation duties" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html" />
 
     
   </head>
@@ -559,7 +559,7 @@
 </ul>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#free-trade-agreements-2"><span>Free trade agreements</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#what-trade-agreements-contain"><span>What trade agreements contain</span></a>
@@ -635,18 +635,96 @@
 
         <div class="app-pane__content toc-open-disabled">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="home">Home</h1><p>The Tariff Data Manual is the technical documentation and reference manual for the United Kingdom&rsquo;s Import and Export Tariff data.</p>
-<p>This manual contains documentation on both low-level data structures and the high-level combinations of them used to represent tariff policy.</p>
-<p>You can find tariff data on <a href="https://data.gov.uk/dataset/3bee9a8a-e69c-400e-add5-3345a87a8e25/tariffs-to-trade-with-the-uk-from-1-january-2021">data.gov.uk</a>.</p>
-<p>If you find problems with the content in this manual, please <a href="https://github.com/uktrade/tariff-data-manual/issues">raise an issue on GitHub</a>.</p>
+            <h1 id="most-favoured-nation-duties">Most favoured nation duties</h1>
+<ul>
+<li>
+<a href="#what-most-favoured-nation-is">What most favoured nation is</a>
+</li>
+<li>
+<a href="#exceptions-to-most-favoured-nation">Exceptions to most favoured nation</a>
+<ul>
+<li>
+<a href="#free-trade-agreements">Free trade agreements</a>
+</li>
+<li>
+<a href="#trading-with-developing-nations">Trading with developing nations</a>
+</li>
+<li>
+<a href="#trade-barriers">Trade barriers</a>
+</li>
+</ul>
+<p></li>
+<li>
+<a href="#creating-mfn-duties-in-the-tariff">Creating MFN duties in the tariff</a>
+<ul>
+<li>
+<a href="#attaching-mfn-duties-in-the-commodity-code-hierarchy">Attaching MFN duties in the commodity code hierarchy</a>
+</li>
+<li>
+<a href="#attaching-mfn-duties-to-a-geographical-area">Attaching MFN duties to a geographical area</a>
+</li>
+</ul>
+</li>
+</ul></p>
+<h2 id="what-most-favoured-nation-is">What most favoured nation is</h2><p>Most favoured nation (MFN) is a principle of the World Trade Organization (WTO).</p>
+<p>It means members of the WTO cannot usually discriminate between their trading partners.</p>
+<p>Countries must offer access to their market on the same terms for all members of the WTO.</p>
+<p>Any favour offered to one country must be offered to everyone. For example, if you offer a lower rate of customs duty to a country for one of its products, you must do the same for all countries.</p>
+<h2 id="exceptions-to-most-favoured-nation">Exceptions to most favoured nation</h2><p>There are some exceptions to MFN treatment.</p>
+<h3 id="free-trade-agreements">Free trade agreements</h3><p>Countries can negotiate a free trade agreement.</p>
+<p>Free trade agreements set out the rules that cover trade between 2 or more countries.</p>
+<p>They aim to make trading easier between only those countries. They do this by reducing the restrictions on imports and exports between them.
+Learn more about <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements">how free trade agreements work</a>.</p>
+<p>Read about <a href="https://www.gov.uk/government/collections/the-uks-trade-agreements">the UK’s trade agreements</a> on GOV.UK.</p>
+<h3 id="trading-with-developing-nations">Trading with developing nations</h3><p>Countries can give developing nations special access to their markets. These are known as <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences">unilateral preferences</a>.</p>
+<p>Eligible countries can pay less or no duties on some goods they import under the UK Generalised Scheme of Preferences (GSP).
+Read <a href="https://www.gov.uk/guidance/use-the-generalised-scheme-of-preferences-to-import-and-export-goods">more about GSP</a> on GOV.UK.</p>
+<h3 id="trade-barriers">Trade barriers</h3><p>Countries can make it more difficult for other nations or traders to import products they believe are being traded unfairly.
+They do this by raising trade barriers.</p>
+<p>Trade barriers can include:</p>
+
+<ul>
+<li>taxes on imported goods</li>
+<li>import quotas or price controls (including limits on the amount of goods that can be imported)</li>
+<li>requirements for goods to be locally produced</li>
+</ul>
+<p>Read <a href="https://www.gov.uk/guidance/report-a-trade-barrier">about trade barriers</a> on GOV.UK.</p>
+<h2 id="creating-mfn-duties-in-the-tariff">Creating MFN duties in the tariff</h2><p>There are about 24,500 commodity codes in the Tariff.</p>
+<p>Every commodity code must have one or both of the following MFN measure types attached to it:</p>
+
+<ul>
+<li>103 (Third country duty)</li>
+<li>105 (Non preferential duty under end-use)</li>
+</ul>
+<p>About 16,500 of the total number of commodity codes are declarable end-lines. An end-line is the most specific classification of a product.</p>
+<p>Each end-line has an MFN duty attached to it.</p>
+<p>Often, the MFN duty is 0%. However, it does not matter what the duty is, it must be set against the commodity code in the Tariff.</p>
+<h3 id="attaching-mfn-duties-in-the-commodity-code-hierarchy">Attaching MFN duties in the commodity code hierarchy</h3><p>You can attach the MFN duty to any tier in the commodity code hierarchy. All the codes below it in the hierarchy inherit the same duty.</p>
+<p>For example, the commodity code for Natural Chilean sodium nitrate is 3102500010.</p>
+<p><img width="1132" alt="Commodity code hierarchy for Natural Chilean sodium nitrate" src="https://user-images.githubusercontent.com/82160410/142454179-e1b15b28-9190-4af5-9394-c2077378b459.png"></p>
+<p>This is made up of:</p>
+
+<ul>
+<li>HS chapter: 31 Fertilisers</li>
+<li>HS heading: 02 Mineral or chemical fertilisers, nitrogenous</li>
+<li>HS subheading: 50 Sodium nitrate</li>
+<li>CN subheading: 00 (not set)</li>
+<li>Taric code: 10 Natural Chilean sodium nitrate</li>
+</ul>
+<p>If the MFN duty on &lsquo;31 Fertilisers&rsquo; is 0%, all the codes below it in the hierarchy inherit the 0% MFN duty.</p>
+<p>Read more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/nomenclature.html#commodity-codes">about commodity codes</a>.</p>
+<h3 id="attaching-mfn-duties-to-a-geographical-area">Attaching MFN duties to a geographical area</h3><p>You must create all MFN duties (103s and 105s) against ‘Erga Omnes’.</p>
+<p>Erga Omnes is a Latin phrase which means ‘towards all’ or ‘towards everyone’. In trade terms, Erga Omnes is the geographical area group which covers the whole world.</p>
+<p>Erga Omnes has a geographical area ID of 1011. This country group includes the UK.</p>
+<p>There is also a country group called ‘All third countries’. This group has the ID 1008. This country group excludes the UK.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Home">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Home'&amp;body=Problem%20with%20'Home'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Trade-policies;-Most-favoured-nation-duties">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Most%20favoured%20nation%20duties'&amp;body=Problem%20with%20'Most%20favoured%20nation%20duties'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html)">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
