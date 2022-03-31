@@ -1,0 +1,1505 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Preference codes - Tariff Data Manual</title>
+
+    <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/preference-codes.html">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="uktrade.github.io" />
+      <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
+      <meta name="twitter:title" content="Preference codes - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/preference-codes.html" />
+
+      <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
+      <meta property="og:site_name" content="Tariff Data Manual" />
+      <meta property="og:title" content="Preference codes" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/preference-codes.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="https://uktrade.github.io/tariff-data-manual/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          Tariff Data Manual
+        </span>
+      </a>
+        <strong class="govuk-tag">Alpha</strong>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
+              <div class="search" data-module="search">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual"/>
+    <label class="govuk-label search__label" for="search" aria-hidden="true">
+      Search (via Google)
+    </label>
+    <input
+      type="text"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="govuk-button search__button">Search</button>
+  </form>
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
+      <div class="search-results__content"></div>
+    </div>
+  </div>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
+                      <ul>
+  <li>
+    <a href="/tariff-data-manual/#home"><span>Home</span></a>
+  </li>
+</ul>
+<ul><li><a href="/tariff-data-manual/documentation/data-structures.html"><span>Data structures</span></a>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#what-measure-conditions-are"><span>What measure conditions are</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#how-conditions-are-structured"><span>How conditions are structured</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#how-conditions-are-linked"><span>How conditions are linked</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#condition-codes"><span>Condition codes</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#action-codes"><span>Action codes</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#how-conditions-are-used"><span>How conditions are used</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#grouping-condition-codes"><span>Grouping condition codes</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#condition-codes-in-detail"><span>Condition codes in detail</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/regulations.html#measure-generating-regulations"><span>Measure generating regulations</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/regulations.html#base-regulations"><span>Base regulations</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/regulations.html#grouping-regulations"><span>Grouping regulations</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/regulations.html#draft-regulations"><span>Draft regulations</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html#validity-dates"><span>Validity dates</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html#putting-validity-end-dates-on-measures"><span>Putting validity end dates on measures</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html#validity-dates-on-measure-descriptions"><span>Validity dates on measure descriptions</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#what-geographical-areas-are"><span>What geographical areas are</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#defining-country-groups"><span>Defining country groups</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#how-geographical-areas-are-identified"><span>How geographical areas are identified</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#membership-of-geographical-areas"><span>Membership of geographical areas</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#excluding-countries-from-geographical-areas"><span>Excluding countries from geographical areas</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#how-quotas-relate-to-geographical-areas"><span>How quotas relate to geographical areas</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#geographical-areas-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#what-measure-components-are"><span>What measure components are</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#types-of-duty-applied-to-measures"><span>Types of duty applied to measures</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#breaking-down-a-duty-string"><span>Breaking down a duty string</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#duty-expressions"><span>Duty expressions</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#duty-expression-sequencing-and-duality"><span>Duty expression sequencing and duality</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#how-to-group-duty-expressions"><span>How to group duty expressions</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-component-data-structures"><span>Measure component data structures</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-components-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#commodity-codes"><span>Commodity codes</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#what-commodity-codes-are-made-up-of"><span>What commodity codes are made up of</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#if-a-commodity-codes-appears-to-have-fewer-than-10-characters"><span>If a commodity codes appears to have fewer than 10 characters</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#chapters-98-and-99-of-the-goods-classification"><span>Chapters 98 and 99 of the goods classification</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#why-the-online-tariff-has-indents"><span>Why the online tariff has indents</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#defining-if-a-product-is-declarable-the-product-line-suffix"><span>Defining if a product is declarable: the product line suffix</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#how-new-commodity-codes-are-created"><span>How new commodity codes are created</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#commodity-codes-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/certificates.html#what-certificates-are"><span>What certificates are</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/certificates.html#how-certificates-are-structured"><span>How certificates are structured</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/certificates.html#certificate-type-codes"><span>Certificate type codes</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/certificates.html#certificates-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#what-measure-types-are"><span>What measure types are</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-type-series"><span>Measure type series</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-type-combinations"><span>Measure type combinations</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#existing-measure-type-series"><span>Existing measure type series</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-type-fields"><span>Measure type fields</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#logical-view-of-measure-types"><span>Logical view of measure types</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-and-additional-codes"><span>Measure types and additional codes</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#how-the-data-is-structured"><span>How the data is structured</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#what-additional-codes-are"><span>What additional codes are</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#what-additional-codes-show"><span>What additional codes show</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#how-additional-codes-work"><span>How additional codes work</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#how-additional-codes-apply"><span>How additional codes apply</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#additional-codes-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#why-suspensions-are-used"><span>Why suspensions are used</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#quota-suspensions-how-the-data-is-structured"><span>How the data is structured</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#where-quota-suspensions-are-used-in-the-tariff"><span>Where quota suspensions are used in the Tariff</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#quota-suspensions-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#where-quota-associations-are-used"><span>Where quota associations are used</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#quota-associations-how-the-data-is-structured"><span>How the data is structured</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#how-quota-types-are-defined"><span>How quota types are defined</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#quota-associations-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas"><span>Quotas</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#how-tariff-quotas-operate"><span>How tariff quotas operate</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#types-of-quota"><span>Types of quota</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#defining-and-grouping-quotas"><span>Defining and grouping quotas</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#how-quotas-are-managed"><span>How quotas are managed</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#how-long-quotas-last-for"><span>How long quotas last for</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#how-tariff-quotas-are-introduced"><span>How tariff quotas are introduced</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#introductory-periods"><span>Introductory periods</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas-how-the-data-is-structured"><span>How the data is structured</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#assigning-quotas-to-geographical-areas"><span>Assigning quotas to geographical areas</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#preference-codes"><span>Preference codes</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#what-preference-codes-do"><span>What preference codes do</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#how-preference-code-correlations-are-structured"><span>How preference code correlations are structured</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#correlation-table"><span>Correlation table</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/measures.html#measures"><span>Measures</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measures.html#what-measures-are"><span>What measures are</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measures.html#how-a-measure-is-structured"><span>How a measure is structured</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measures.html#national-prohibition-and-restriction-types"><span>National prohibition and restriction types</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/measures.html#measures-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#how-footnotes-are-structured"><span>How footnotes are structured</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#existing-footnote-types"><span>Existing footnote types</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#what-footnotes-link-to-in-the-tariff"><span>What footnotes link to in the Tariff</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#footnotes-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#how-long-quota-blocks-last"><span>How long quota blocks last</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#why-quotas-are-blocked"><span>Why quotas are blocked</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#quota-blocking-how-the-data-is-structured"><span>How the data is structured</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#quota-blocking-business-rules"><span>Business rules</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</li></ul><ul><li><a href="/tariff-data-manual/documentation/trade-policies.html"><span>Trade policies</span></a>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html#origin-quotas-2"><span>Origin quotas</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html#what-origin-quotas-are"><span>What origin quotas are</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html#how-origin-quotas-are-structured"><span>How origin quotas are structured</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html#retaliatory-measures"><span>Retaliatory measures</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html#authorised-use-relief"><span>Authorised Use relief</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html#finding-an-authorised-use-commodity-code"><span>Finding an Authorised Use commodity code</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#steel-safeguard"><span>Steel safeguard</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#safeguard-categories"><span>Safeguard categories</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#where-safeguards-apply"><span>Where safeguards apply</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#how-often-safeguard-quotas-are-defined"><span>How often safeguard quotas are defined</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#what-happens-if-a-specific-quota-volume-runs-out"><span>What happens if a specific quota volume runs out</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#steel-safeguard-how-the-data-is-structured"><span>How the data is structured</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#import-and-export-control"><span>Import and export control</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#import-controls"><span>Import controls</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#export-controls"><span>Export controls</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#measure-types-and-measure-type-series"><span>Measure types and measure type series</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#prohibitions-and-restrictions"><span>Prohibitions and restrictions</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html#what-unilateral-preferences-are"><span>What unilateral preferences are</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html#unilateral-preference-measures"><span>Unilateral preference measures</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html#the-difference-between-suspensions-and-reliefs"><span>The difference between suspensions and reliefs</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#what-a-trade-remedy-is"><span>What a trade remedy is</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#how-trade-remedies-work"><span>How trade remedies work</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#trade-remedy-measure-types"><span>Trade remedy measure types</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#what-trade-agreements-contain"><span>What trade agreements contain</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#preferential-tariffs"><span>Preferential tariffs</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#tariff-rate-quotas"><span>Tariff rate quotas</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#introducing-the-benefits-of-a-trade-agreement-over-time-staging"><span>Introducing the benefits of a trade agreement over time: staging</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#preferential-tariff-staging"><span>Preferential tariff staging</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#tariff-rate-quota-staging"><span>Tariff rate quota staging</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#assigning-tariff-preference-measures-in-the-tariff"><span>Assigning tariff preference measures in the Tariff</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most favoured nation duties</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#what-most-favoured-nation-is"><span>What most favoured nation is</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#exceptions-to-most-favoured-nation"><span>Exceptions to most favoured nation</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#creating-mfn-duties-in-the-tariff"><span>Creating MFN duties in the tariff</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#meursing-code"><span>Meursing code</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#simplified-procedure-value-rates"><span>Simplified procedure value rates</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html#supplementary-units"><span>Supplementary units</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html#what-supplementary-units-are"><span>What supplementary units are</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html#measure-types-for-supplementary-units"><span>Measure types for supplementary units</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</li></ul>
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <h1 id="preference-codes">Preference codes</h1>
+<ul>
+<li>
+<a href="#what-preference-codes-do">What preference codes do</a>
+<ul>
+<li>
+<a href="#they-control-when-additional-duties-get-applied">They control when additional duties get applied</a>
+</li>
+<li>
+<a href="#they-control-requirements-around-presence-of-supporting-measures">They control requirements around presence of supporting measures</a>
+</li>
+<li>
+<a href="#they-specify-what-regulation-groups-must-be-used">They specify what regulation groups must be used</a>
+</li>
+</ul>
+<p></li>
+<li>
+<a href="#how-preference-code-correlations-are-structured">How preference code correlations are structured</a>
+</li>
+<li>
+<a href="#correlation-table">Correlation table</a>
+<ul>
+<li>
+<a href="#worked-example">Worked example</a>
+</li>
+</ul>
+</li>
+</ul></p>
+<p>Preference codes (also called treatment codes) are used by traders to specify which of the measures available to them they would like to use. For example, they may have access to a non-preferential (WTO) quota whilst also having access to a preferential rate from a free trade agreement, and it is up to the trader to decide which to use. The current list of available preference codes is <a href="https://www.gov.uk/government/publications/uk-trade-tariff-imports-and-community-transport-inwards/uk-trade-tariff-imports-and-community-transport-inwards#box-36--preference">published on GOV.UK</a>.</p>
+<p>Preference codes are a 3-digit code written into Box 36 of <a href="https://www.gov.uk/government/publications/import-and-export-single-administrative-document-full-8-part-set-c88-1-8">the declaration form</a>. A measure type is selected based on the preference code and declaration systems apply the treatment if it is available or return an error if it is not.</p>
+<p>Preference codes are not specified as part of the tariff file. Instead, a separate correlation table is used that maps preference codes to the measure types that should be applied.</p>
+<h2 id="what-preference-codes-do">What preference codes do</h2><p>Preference codes have three main uses.</p>
+<h3 id="they-control-when-additional-duties-get-applied">They control when additional duties get applied</h3><p>Any measure type specified against the preference code in the correlation table is &ldquo;added on&rdquo; to the final tariff. So in addition to the third-country duty (103) specified for preference code &ldquo;100&rdquo;, safeguard duties (696), representative price securities (651) and additional CIF duties (652) are also present. This means that those additional duties (if present) will also be charged. This is the means by which safeguard quotas can &ldquo;switch off&rdquo; the normal safeguard duty because the preference code for non-preferential quotas does not include 696-type measures.</p>
+<h3 id="they-control-requirements-around-presence-of-supporting-measures">They control requirements around presence of supporting measures</h3><p>Some preference codes are only valid when two measure types are found together. For example, the preference code &ldquo;323&rdquo; covers preferential tariff quotas subject to end-use. There are two ways for this preference code to be activated:</p>
+
+<ul>
+<li>by the presence of an end-use preferential quota (146),</li>
+<li>by the presence of a normal preferential quota (143) and a declaration of subheading submitted to end-use provisions measure (464).</li>
+</ul>
+<p>The presence of these two measure types in the same table represents an &ldquo;option&rdquo; because 143 and 146 both come from the same measure type series which has its combination field set to zero, so only one can apply.</p>
+<h3 id="they-specify-what-regulation-groups-must-be-used">They specify what regulation groups must be used</h3><p>For each preference code and measure type, the correlation table can optionally specify a list of regulation groups. The measure generating regulation must then sit in one of those groups for the preference code to be applicable. For example, preference code &ldquo;120&rdquo; is only applicable when there is a measure with type 122 and regulation group KON. This means that any non-preferential tariff quotas must always be linked to a regulation in the correct group.</p>
+<h2 id="how-preference-code-correlations-are-structured">How preference code correlations are structured</h2><svg width="889pt" height="272pt"
+ viewBox="0.00 0.00 889.00 272.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_297" class="graph" transform="scale(1 1) rotate(0) translate(4 268)">
+<title>Database</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-268 885,-268 885,4 -4,4"/>
+<!-- Preference Codes -->
+<g id="table_79" class="node">
+<title>Preference Codes</title>
+<polygon fill="none" stroke="black" points="768,-113 768,-129 872,-129 872,-113 768,-113"/>
+<text text-anchor="start" x="782.5" y="-118.8" font-family="Arial" font-size="9.00">Preference Codes</text>
+<polygon fill="none" stroke="black" points="768,-97 768,-113 820,-113 820,-97 768,-97"/>
+<text text-anchor="start" x="787.5" y="-102.8" font-family="Arial" font-size="9.00">sid</text>
+<polygon fill="none" stroke="black" points="820,-97 820,-113 856,-113 856,-97 820,-97"/>
+<text text-anchor="start" x="823" y="-102.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="856,-97 856,-113 872,-113 872,-97 856,-97"/>
+<text text-anchor="start" x="859" y="-102.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="768,-81 768,-97 820,-97 820,-81 768,-81"/>
+<text text-anchor="start" x="782" y="-86.8" font-family="Arial" font-size="9.00">name</text>
+<polygon fill="none" stroke="black" points="820,-81 820,-97 856,-97 856,-81 820,-81"/>
+<text text-anchor="start" x="830.5" y="-86.8" font-family="Arial" font-size="9.00">text</text>
+<polygon fill="none" stroke="black" points="856,-81 856,-97 872,-97 872,-81 856,-81"/>
+<polygon fill="none" stroke="black" points="768,-65 768,-81 820,-81 820,-65 768,-65"/>
+<text text-anchor="start" x="771" y="-70.8" font-family="Arial" font-size="9.00">description</text>
+<polygon fill="none" stroke="black" points="820,-65 820,-81 856,-81 856,-65 820,-65"/>
+<text text-anchor="start" x="830.5" y="-70.8" font-family="Arial" font-size="9.00">text</text>
+<polygon fill="none" stroke="black" points="856,-65 856,-81 872,-81 872,-65 856,-65"/>
+<polygon fill="none" stroke="black" points="767,-64 767,-130 873,-130 873,-64 767,-64"/>
+</g>
+<!-- Preference Code Mappings -->
+<g id="table_62" class="node">
+<title>Preference Code Mappings</title>
+<polygon fill="none" stroke="black" points="568,-129 568,-145 714,-145 714,-129 568,-129"/>
+<text text-anchor="start" x="584.5" y="-134.8" font-family="Arial" font-size="9.00">Preference Code Mappings</text>
+<polygon fill="none" stroke="black" points="568,-113 568,-129 662,-129 662,-113 568,-113"/>
+<text text-anchor="start" x="608.5" y="-118.8" font-family="Arial" font-size="9.00">sid</text>
+<polygon fill="none" stroke="black" points="662,-113 662,-129 698,-129 698,-113 662,-113"/>
+<text text-anchor="start" x="668.5" y="-118.8" font-family="Arial" font-size="9.00">bigint</text>
+<polygon fill="none" stroke="black" points="698,-113 698,-129 714,-129 714,-113 698,-113"/>
+<text text-anchor="start" x="701" y="-118.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="568,-97 568,-113 662,-113 662,-97 568,-97"/>
+<text text-anchor="start" x="571" y="-102.8" font-family="Arial" font-size="9.00">preference_code_sid</text>
+<polygon fill="none" stroke="black" points="662,-97 662,-113 698,-113 698,-97 662,-97"/>
+<text text-anchor="start" x="665" y="-102.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="698,-97 698,-113 714,-113 714,-97 698,-97"/>
+<polygon fill="none" stroke="black" points="568,-81 568,-97 662,-97 662,-81 568,-81"/>
+<text text-anchor="start" x="581.5" y="-86.8" font-family="Arial" font-size="9.00">choice_of_types</text>
+<polygon fill="none" stroke="black" points="662,-81 662,-97 698,-97 698,-81 662,-81"/>
+<text text-anchor="start" x="670.5" y="-86.8" font-family="Arial" font-size="9.00">bool</text>
+<polygon fill="none" stroke="black" points="698,-81 698,-97 714,-97 714,-81 698,-81"/>
+<polygon fill="none" stroke="black" points="567,-80 567,-146 715,-146 715,-80 567,-80"/>
+</g>
+<!-- Preference Code Mappings&#45;&gt;Preference Codes -->
+<g id="database_297_edge2" class="edge">
+<title>Preference Code Mappings:e&#45;&gt;Preference Codes:w</title>
+<path fill="none" stroke="black" d="M715,-105C735.22,-105 742.17,-105 759.08,-105"/>
+<polygon fill="black" stroke="black" points="759.5,-107.63 767,-105 759.5,-102.38 759.5,-107.63"/>
+</g>
+<!-- choice_of_types Note -->
+<g id="note_808" class="node">
+<title>choice_of_types Note</title>
+<polygon fill="none" stroke="black" points="517,-36 0,-36 0,0 523,0 523,-30 517,-36"/>
+<polyline fill="none" stroke="black" points="517,-36 517,-30 "/>
+<polyline fill="none" stroke="black" points="523,-30 517,-30 "/>
+<text text-anchor="middle" x="261.5" y="-15.8" font-family="Arial" font-size="9.00">True when any of the attached measure types can be present, False when all of the attached measure types must be present.</text>
+</g>
+<!-- choice_of_types Note&#45;&gt;Preference Code Mappings -->
+<g id="database_297_edge1" class="edge">
+<title>choice_of_types Note&#45;&gt;Preference Code Mappings:choice_of_types_name</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M501.78,-36.09C509.03,-38.77 516.12,-41.73 523,-45 547.97,-56.89 539.34,-89 567,-89"/>
+</g>
+<!-- Preference Code Measure Type Mappings -->
+<g id="table_685" class="node">
+<title>Preference Code Measure Type Mappings</title>
+<polygon fill="none" stroke="black" points="171.5,-243 171.5,-259 351.5,-259 351.5,-243 171.5,-243"/>
+<text text-anchor="start" x="174.5" y="-248.8" font-family="Arial" font-size="9.00">Preference Code Measure Type Mappings</text>
+<polygon fill="none" stroke="black" points="171.5,-227 171.5,-243 272.5,-243 272.5,-227 171.5,-227"/>
+<text text-anchor="start" x="195" y="-232.8" font-family="Arial" font-size="9.00">mapping_sid</text>
+<polygon fill="none" stroke="black" points="272.5,-227 272.5,-243 326.5,-243 326.5,-227 272.5,-227"/>
+<text text-anchor="start" x="288" y="-232.8" font-family="Arial" font-size="9.00">bigint</text>
+<polygon fill="none" stroke="black" points="326.5,-227 326.5,-243 351.5,-243 351.5,-227 326.5,-227"/>
+<polygon fill="none" stroke="black" points="171.5,-211 171.5,-227 272.5,-227 272.5,-211 171.5,-211"/>
+<text text-anchor="start" x="192.5" y="-216.8" font-family="Arial" font-size="9.00">measure_type</text>
+<polygon fill="none" stroke="black" points="272.5,-211 272.5,-227 326.5,-227 326.5,-211 272.5,-211"/>
+<text text-anchor="start" x="284.5" y="-216.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="326.5,-211 326.5,-227 351.5,-227 351.5,-211 326.5,-211"/>
+<polygon fill="none" stroke="black" points="170.5,-210 170.5,-260 352.5,-260 352.5,-210 170.5,-210"/>
+</g>
+<!-- Preference Code Measure Type Mappings&#45;&gt;Preference Code Mappings -->
+<g id="database_297_edge3" class="edge">
+<title>Preference Code Measure Type Mappings:e&#45;&gt;Preference Code Mappings:w</title>
+<path fill="none" stroke="black" d="M352.5,-235C430.14,-235 460.39,-242.91 523,-197 552.14,-175.64 531.58,-128.69 559.34,-121.84"/>
+<polygon fill="black" stroke="black" points="559.83,-124.43 567,-121 559.26,-119.21 559.83,-124.43"/>
+</g>
+<!-- Preference Code Regulation Group Mappings -->
+<g id="table_22" class="node">
+<title>Preference Code Regulation Group Mappings</title>
+<polygon fill="none" stroke="black" points="164.5,-167 164.5,-183 358.5,-183 358.5,-167 164.5,-167"/>
+<text text-anchor="start" x="167.5" y="-172.8" font-family="Arial" font-size="9.00">Preference Code Regulation Group Mappings</text>
+<polygon fill="none" stroke="black" points="164.5,-151 164.5,-167 278.5,-167 278.5,-151 164.5,-151"/>
+<text text-anchor="start" x="194.5" y="-156.8" font-family="Arial" font-size="9.00">mapping_sid</text>
+<polygon fill="none" stroke="black" points="278.5,-151 278.5,-167 333.5,-167 333.5,-151 278.5,-151"/>
+<text text-anchor="start" x="294.5" y="-156.8" font-family="Arial" font-size="9.00">bigint</text>
+<polygon fill="none" stroke="black" points="333.5,-151 333.5,-167 358.5,-167 358.5,-151 333.5,-151"/>
+<polygon fill="none" stroke="black" points="164.5,-135 164.5,-151 278.5,-151 278.5,-135 164.5,-135"/>
+<text text-anchor="start" x="186" y="-140.8" font-family="Arial" font-size="9.00">regulation_group</text>
+<polygon fill="none" stroke="black" points="278.5,-135 278.5,-151 333.5,-151 333.5,-135 278.5,-135"/>
+<text text-anchor="start" x="291" y="-140.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="333.5,-135 333.5,-151 358.5,-151 358.5,-135 333.5,-135"/>
+<polygon fill="none" stroke="black" points="163.5,-134 163.5,-184 359.5,-184 359.5,-134 163.5,-134"/>
+</g>
+<!-- Preference Code Regulation Group Mappings&#45;&gt;Preference Code Mappings -->
+<g id="database_297_edge4" class="edge">
+<title>Preference Code Regulation Group Mappings:e&#45;&gt;Preference Code Mappings:w</title>
+<path fill="none" stroke="black" d="M359.5,-159C450.69,-159 472.1,-123.05 559.47,-121.08"/>
+<polygon fill="black" stroke="black" points="559.53,-123.71 567,-121 559.47,-118.46 559.53,-123.71"/>
+</g>
+<!-- Preference Code Condition Code Mappings -->
+<g id="table_780" class="node">
+<title>Preference Code Condition Code Mappings</title>
+<polygon fill="none" stroke="black" points="168.5,-91 168.5,-107 354.5,-107 354.5,-91 168.5,-91"/>
+<text text-anchor="start" x="171.5" y="-96.8" font-family="Arial" font-size="9.00">Preference Code Condition Code Mappings</text>
+<polygon fill="none" stroke="black" points="168.5,-75 168.5,-91 275.5,-91 275.5,-75 168.5,-75"/>
+<text text-anchor="start" x="195" y="-80.8" font-family="Arial" font-size="9.00">mapping_sid</text>
+<polygon fill="none" stroke="black" points="275.5,-75 275.5,-91 329.5,-91 329.5,-75 275.5,-75"/>
+<text text-anchor="start" x="291" y="-80.8" font-family="Arial" font-size="9.00">bigint</text>
+<polygon fill="none" stroke="black" points="329.5,-75 329.5,-91 354.5,-91 354.5,-75 329.5,-75"/>
+<polygon fill="none" stroke="black" points="168.5,-59 168.5,-75 275.5,-75 275.5,-59 168.5,-59"/>
+<text text-anchor="start" x="190" y="-64.8" font-family="Arial" font-size="9.00">condition_code</text>
+<polygon fill="none" stroke="black" points="275.5,-59 275.5,-75 329.5,-75 329.5,-59 275.5,-59"/>
+<text text-anchor="start" x="287.5" y="-64.8" font-family="Arial" font-size="9.00">char(1)</text>
+<polygon fill="none" stroke="black" points="329.5,-59 329.5,-75 354.5,-75 354.5,-59 329.5,-59"/>
+<polygon fill="none" stroke="black" points="167.5,-58 167.5,-108 355.5,-108 355.5,-58 167.5,-58"/>
+</g>
+<!-- Preference Code Condition Code Mappings&#45;&gt;Preference Code Mappings -->
+<g id="database_297_edge5" class="edge">
+<title>Preference Code Condition Code Mappings:e&#45;&gt;Preference Code Mappings:w</title>
+<path fill="none" stroke="black" d="M355.5,-83C448.39,-83 470.32,-118.95 559.33,-120.92"/>
+<polygon fill="black" stroke="black" points="559.47,-123.54 567,-121 559.53,-118.29 559.47,-123.54"/>
+</g>
+</g>
+</svg><p>Each preference code can be mapped to multiple measure types. Each mapping represents another measure type that will be &ldquo;added on&rdquo; when that preference code is used.</p>
+<p>Each mapping can specify multiple measure types. If there is more than one specified, the mapping also controls whether any or all of the attached measure types must be present. If it is &ldquo;all&rdquo;, the mapping will only be available if a measure from each type is present. If it is &ldquo;any&rdquo;, the mapping will be available if a measure of any of the specified types is present.</p>
+<h2 id="correlation-table">Correlation table</h2><p>The correlation table encodes a complicated decision tree of how to find the correct measure based on the preference code and when to apply additional duties and safeguards.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Box 36</th>
+<th>Name</th>
+<th>Description</th>
+<th>Measure type</th>
+<th>Regulation group</th>
+<th>Condition code</th>
+</tr><tr>
+<td>100</td>
+<td>Erga Omnes third-country duty rates</td>
+<td>In these cases, a preferential Customs duty is not requested or does not exist.</td>
+<td>103</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>100</td>
+<td>Erga Omnes third-country duty rates</td>
+<td>These cases are subject to safeguards.</td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>100</td>
+<td>Erga Omnes third-country duty rates</td>
+<td>In these cases, a preferential Customs duty is not requested or does not exist.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>110</td>
+<td>Erga Omnes autonomous tariff suspension</td>
+<td>Temporary autonomous suspensions from the Customs duties are granted for certain goods of the agricultural, chemical, aeronautical and microelectronic sector. Most of them are contained in annual regulations. (The basic regulation on the autonomous suspensions is Regulation 1387/2013 which is amended twice a year to add or withdraw products from its annex). Others are shown as footnotes to certain CN codes and are applicable for an indefinite period. The normal duty rates can be suspended either totally (e.g. chapter 27) or partially (e.g. 2905 44, 3201 20 00, 3824 60 etc).</td>
+<td>112</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>110</td>
+<td>Erga Omnes autonomous tariff suspension</td>
+<td>These cases are subject to safeguards.</td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>110</td>
+<td>Erga Omnes autonomous tariff suspension</td>
+<td>Currently, autonomous tariff suspensions do not relieve from the additional duties.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>115</td>
+<td>Erga Omnes autonomous tariff suspensions subject to an end-use</td>
+<td>Application of autonomous tariff suspension under the end-use regime (Article 254 of UCC).</td>
+<td>115</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>115</td>
+<td>Erga Omnes autonomous tariff suspensions subject to an end-use</td>
+<td>These cases are subject to safeguards.</td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>115</td>
+<td>Erga Omnes autonomous tariff suspensions subject to an end-use</td>
+<td>Application of autonomous tariff suspension under the end-use regime (Article 254 of UCC).</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>115</td>
+<td>Erga Omnes autonomous tariff suspensions subject to an end-use</td>
+<td>When antidumping duties (or any additional duty) are applied on a non end use position, the end use requirements apply even if the Customs duty rate is not lower on the end use position.</td>
+<td>112 + 464</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>118</td>
+<td>Erga Omnes autonomous tariff suspensions with certificate confirming the special nature of the product</td>
+<td>Currently not applicable</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>118</td>
+<td>Erga Omnes autonomous tariff suspensions with certificate confirming the special nature of the product</td>
+<td>Currently not applicable.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>119</td>
+<td>Erga Omnes autonomous tariff suspensions subject to an ‘airworthiness certificate’</td>
+<td>These suspensions are only granted if an airworthiness certificate has been presented.</td>
+<td>119</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>119</td>
+<td>Erga Omnes autonomous tariff suspensions subject to an ‘airworthiness certificate’</td>
+<td>These cases are subject to safeguards.</td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>119</td>
+<td>Erga Omnes autonomous tariff suspensions subject to an ‘airworthiness certificate’</td>
+<td>Currently, airworthiness tariff suspensions do not relieve from the additional duties.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>120</td>
+<td>Non-preferential tariff quotas</td>
+<td>Includes WTO, autonomous, Erga Omnes and origin-related tariff quotas.</td>
+<td>122</td>
+<td>KON</td>
+<td></td>
+</tr><tr>
+<td>120</td>
+<td>Non-preferential tariff quotas</td>
+<td>Full additional duties are potentially applicable. See processing rules in the applicable documents.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>120</td>
+<td>Non-preferential tariff quotas</td>
+<td>Non preferential quotas can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>653, 654,</td>
+<td>KON</td>
+<td></td>
+</tr><tr>
+<td>123</td>
+<td>Non-preferential tariff quotas subject to an end-use authorisation</td>
+<td>Certain tariff quotas of code 120 are only granted if the goods obtain a specific destination, an &ldquo;end-use&rdquo; pursuant to Article 254 of the UCC.</td>
+<td>123</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>123</td>
+<td>Non-preferential tariff quotas subject to an end-use authorisation</td>
+<td>Application of end use obligation due to the presence of antidumping duties (or additional duties) on the non end use line</td>
+<td>122 + 464</td>
+<td>KON</td>
+<td></td>
+</tr><tr>
+<td>123</td>
+<td>Non-preferential tariff quotas subject to an end-use authorisation</td>
+<td>Full additional duties are potentially applicable. See processing rules in the applicable documents.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>123</td>
+<td>Non-preferential tariff quotas subject to an end-use authorisation</td>
+<td>Non preferential end use quotas can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>653, 654</td>
+<td>KON</td>
+<td></td>
+</tr><tr>
+<td>125</td>
+<td>Non-preferential tariff quotas subject to a special certificate</td>
+<td>These must be other documents than origin certificates, e.g. pedigree certificates, handicraft, handlooms certificates&hellip;</td>
+<td>122</td>
+<td>KON</td>
+<td>B, C, Q, Y</td>
+</tr><tr>
+<td>125</td>
+<td>Non-preferential tariff quotas subject to a special certificate</td>
+<td>Full additional duties are potentially applicable. See processing rules in the applicable documents.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>125</td>
+<td>Non-preferential tariff quotas subject to a special certificate</td>
+<td>These quotas can relieve, even partially, from full additional duties. See processing rules in the agpplicable documents.</td>
+<td>653, 654</td>
+<td>KON</td>
+<td></td>
+</tr><tr>
+<td>128</td>
+<td>Erga Omnes tariff quotas following outward processing</td>
+<td>Certain tariff quotas under code 128 are granted only pursuant to the EU legislation about the arrangements regarding processing.</td>
+<td>122</td>
+<td>OPQ</td>
+<td></td>
+</tr><tr>
+<td>128</td>
+<td>Erga Omnes tariff quotas following outward processing</td>
+<td>Full additional duties are potentially applicable. See processing rules in the applicable documents.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>128</td>
+<td>Erga Omnes tariff quotas following outward processing</td>
+<td>These quotas can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>653, 654</td>
+<td>KON</td>
+<td></td>
+</tr><tr>
+<td>140</td>
+<td>Special end-use resulting from the Common Customs Tariff</td>
+<td>Application of tariff suspension under the end-use regime (Article 254 of UCC).</td>
+<td>105</td>
+<td>DNC; APL</td>
+<td></td>
+</tr><tr>
+<td>140</td>
+<td>Special end-use resulting from the Common Customs Tariff</td>
+<td>The full additional duties apply systematically.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>140</td>
+<td>Special end-use resulting from the Common Customs Tariff</td>
+<td>Application of end use obligation due to the presence of antidumping duties (or additional duties) on the non end use line</td>
+<td>103 + 464</td>
+<td>DNC</td>
+<td></td>
+</tr><tr>
+<td>140</td>
+<td>Special end-use resulting from the Common Customs Tariff</td>
+<td>Some of the end-use cases are mentioned the Combined Nomenclature (see preliminary provisions).</td>
+<td>117</td>
+<td>SUS</td>
+<td></td>
+</tr><tr>
+<td>140</td>
+<td>Special end-use resulting from the Common Customs Tariff</td>
+<td>Application of end use obligation due to the presence of antidumping duties (or additional duties) on the non-end use line</td>
+<td>117 + 464</td>
+<td>SUS</td>
+<td></td>
+</tr><tr>
+<td>140</td>
+<td>Special end-use resulting from the Common Customs Tariff</td>
+<td>The full additional duties apply systematically.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>140</td>
+<td>Special end-use resulting from the Common Customs Tariff</td>
+<td>These cases are subject to safeguards.</td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>150</td>
+<td>Admission to CN codes subject to special certificates</td>
+<td>Most of these cases and the relevant certificates are mentioned the Combined Nomenclature (see preliminary provisions). Others are mentioned as footnotes to the relevant CN codes, e.g. 0202 30 50.</td>
+<td>103</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>150</td>
+<td>Admission to CN codes subject to special certificates</td>
+<td>These cases are subject to safeguards.</td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>150</td>
+<td>Admission to CN codes subject to special certificates</td>
+<td>The full additional duties apply systematically.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>200</td>
+<td>GSP duty rate without conditions or limits</td>
+<td>The basic regulation applying the Union scheme of generalised tariff preferences is Council Regulation (EC) No 980/2005 of 27 June 2005. The same Regulation also establishes special incentives for sustainable development and good governance and grants a further tariff reduction to countries abiding by the rules of these arrangements (currently this is the case for several countries - Bolivia, Moldova, etc. See Commission Decision 2005/924/EC).</td>
+<td>142</td>
+<td>SPG</td>
+<td></td>
+</tr><tr>
+<td>200</td>
+<td>GSP duty rate without conditions or limits</td>
+<td>The basic regulation applying the Union scheme of generalised tariff preferences is Council Regulation (EC) No 980/2005 of 27 June 2005. The same Regulation also establishes special incentives for sustainable development and good governance and grants a further tariff reduction to countries abiding by the rules of these arrangements (currently this is the case for several countries - Bolivia, Moldova, etc. See Commission Decision 2005/924/EC).</td>
+<td>142</td>
+<td>SPG</td>
+<td>Q</td>
+</tr><tr>
+<td>200</td>
+<td>GSP duty rate without conditions or limits</td>
+<td></td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>200</td>
+<td>GSP duty rate without conditions or limits</td>
+<td>Full additional duties are potentially applicable. See processing rules in the applicable documents.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>200</td>
+<td>GSP duty rate without conditions or limits</td>
+<td>These preferences can relieve, even partially, from full additional duties.</td>
+<td>657, 658</td>
+<td>SPG</td>
+<td></td>
+</tr><tr>
+<td>218</td>
+<td>GSP suspensions with certificate confirming the special nature of the product</td>
+<td>Currently not applicable</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>220</td>
+<td>GSP tariff quotas</td>
+<td>Certain tariff quotas under code 220 are granted only pursuant to the EU legislation on the GSP.</td>
+<td>143</td>
+<td>SPG</td>
+<td></td>
+</tr><tr>
+<td>220</td>
+<td>GSP tariff quotas</td>
+<td>These quotas can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>653, 654</td>
+<td>SPG</td>
+<td></td>
+</tr><tr>
+<td>223</td>
+<td>GSP tariff quota subject to an end-use</td>
+<td>Certain GSP tariff quotas are granted only if the goods are put to a specific ‘end-use’ pursuant to Article 254 of UCC..</td>
+<td>146</td>
+<td>SPG</td>
+<td></td>
+</tr><tr>
+<td>223</td>
+<td>GSP tariff quota subject to an end-use</td>
+<td>Application of end use obligation due to the presence of antidumping duties (or additional duties) on the non end use line</td>
+<td>143 + 464</td>
+<td>SPG</td>
+<td></td>
+</tr><tr>
+<td>223</td>
+<td>GSP tariff quota subject to an end-use</td>
+<td>These quotas can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>653, 654</td>
+<td>SPG</td>
+<td></td>
+</tr><tr>
+<td>225</td>
+<td>GSP tariff quotas subject to a special certificate</td>
+<td>These must be documents other than certificates of origin, form A (or invoice declarations), e.g. an import licence.</td>
+<td>143</td>
+<td>SPG</td>
+<td>B, C, Q, Y</td>
+</tr><tr>
+<td>225</td>
+<td>GSP tariff quotas subject to a special certificate</td>
+<td></td>
+<td>653, 654</td>
+<td>SPG</td>
+<td></td>
+</tr><tr>
+<td>240</td>
+<td>GSP preferential duty rates subject to an end-use</td>
+<td>Certain GSP preferences are granted only if the goods are put to a specific ‘end-use’ pursuant to Article 254 of UCC.</td>
+<td>145</td>
+<td>SPG</td>
+<td></td>
+</tr><tr>
+<td>240</td>
+<td>GSP preferential duty rates subject to an end-use</td>
+<td>These cases are subject to safeguards.</td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>240</td>
+<td>GSP preferential duty rates subject to an end-use</td>
+<td>Application of end use obligation due to the presence of antidumping duties (or additional duties) on the non end use line.</td>
+<td>142 + 464</td>
+<td>SPG</td>
+<td></td>
+</tr><tr>
+<td>240</td>
+<td>GSP preferential duty rates subject to an end-use</td>
+<td>These preferences can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>657, 658</td>
+<td>SPG</td>
+<td></td>
+</tr><tr>
+<td>250</td>
+<td>Admission to CN codes with special GSP rates subject to a special certificate</td>
+<td>Currently not applicable.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>300</td>
+<td>Preferential duty rate without conditions or limits (including ceilings)</td>
+<td>Application of the preferential duty rates under the relevant agreement.</td>
+<td>142, 144</td>
+<td>FTA, PRF, RDR</td>
+<td></td>
+</tr><tr>
+<td>300</td>
+<td>Preferential duty rate without conditions or limits (including ceilings)</td>
+<td>These cases are subject to safeguards.</td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>300</td>
+<td>Preferential duty rate without conditions or limits (including ceilings)</td>
+<td>These preferences can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>657, 658</td>
+<td>FTA, PRF</td>
+<td></td>
+</tr><tr>
+<td>310</td>
+<td>Preferential agreements: tariff suspensions</td>
+<td>Example of the legal basis for this kind of tariff suspension: Council Regulation (EC) No 1140/2004 of 21 June 2004 suspending the autonomous Common Customs Tariff duties on certain fishery products originating in Ceuta and Melilla.</td>
+<td>141</td>
+<td>FTA, PRF, RDR</td>
+<td></td>
+</tr><tr>
+<td>310</td>
+<td>Preferential agreements: tariff suspensions</td>
+<td>These cases are subject to safeguards.</td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>315</td>
+<td>Preferential suspension subject to an end-use</td>
+<td>Preferential suspensions are granted only if the goods are put to a specific ‘end-use’ pursuant to Article 254 of UCC. Currently not applicable.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>315</td>
+<td>Preferential suspension subject to an end-use</td>
+<td>Application of end use obligation due to the presence of antidumping duties (or additional duties) on the non end use line.</td>
+<td>141 + 464</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>318</td>
+<td>Preferential suspensions with certificate confirming the special nature of the product</td>
+<td>Currently not applicable</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>320</td>
+<td>Preferential tariff quotas</td>
+<td>The preferential duty rates are only applicable within the limits of quotas. They can be managed on a &ldquo;first come - first served&rdquo;- basis or by licences.</td>
+<td>143</td>
+<td>FTA, PRF, RDR</td>
+<td></td>
+</tr><tr>
+<td>320</td>
+<td>Preferential tariff quotas</td>
+<td>These quotas can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>653, 654</td>
+<td>FTA, PRF</td>
+<td></td>
+</tr><tr>
+<td>323</td>
+<td>Preferential tariff quotas subject to an end-use</td>
+<td>Certain quotas under code 320 apply only if the goods are put to a specific ‘end-use’ pursuant to Article 254 of UCC.</td>
+<td>146</td>
+<td>FTA, PRF, RDR</td>
+<td></td>
+</tr><tr>
+<td>323</td>
+<td>Preferential tariff quotas subject to an end-use</td>
+<td>Application of end use obligation due to the presence of antidumping duties (or additional duties) on the non end use line.</td>
+<td>143 + 464</td>
+<td>FTA, PRF, RDR</td>
+<td></td>
+</tr><tr>
+<td>323</td>
+<td>Preferential tariff quotas subject to an end-use</td>
+<td>These quotas can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>653, 654</td>
+<td>FTA, PRF</td>
+<td></td>
+</tr><tr>
+<td>325</td>
+<td>Preferential tariff quotas subject to a special certificate</td>
+<td>These special certificates must be documents other than EUR.1 movement certificates (or invoice declarations), e.g. an import licence.</td>
+<td>143</td>
+<td>FTA, PRF, RDR</td>
+<td>B, C, Q, Y</td>
+</tr><tr>
+<td>325</td>
+<td>Preferential tariff quotas subject to a special certificate</td>
+<td>These quotas can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>653, 654</td>
+<td>FTA, PRF</td>
+<td></td>
+</tr><tr>
+<td>340</td>
+<td>Preferential duty rates subject to an end-use</td>
+<td>Preferences are granted only if the goods are put to a specific ‘end-use’ pursuant to Article 254 of UCC.</td>
+<td>145</td>
+<td>FTA, PRF, RDR</td>
+<td></td>
+</tr><tr>
+<td>340</td>
+<td>Preferential duty rates subject to an end-use</td>
+<td>Preferences are granted only if the goods are put to a specific ‘end-use’ pursuant to Article 254 of UCC..</td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>340</td>
+<td>Preferential duty rates subject to an end-use</td>
+<td>Application of end use obligation due to the presence of antidumping duties (or additional duties) on the non end use line.</td>
+<td>142 + 464</td>
+<td>FTA, PRF</td>
+<td></td>
+</tr><tr>
+<td>340</td>
+<td>Preferential duty rates subject to an end-use</td>
+<td>These preferences can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>657, 658</td>
+<td>FTA, PRF</td>
+<td></td>
+</tr><tr>
+<td>350</td>
+<td>Admission to CN codes with special preferential rates subject to a special certificate</td>
+<td>Currently, not applicable</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>400</td>
+<td>Customs duties under customs union agreements concluded by the Union</td>
+<td>This code is used when customs duties are imposed in the framework of customs union agreements with Andorra, San Marino and Turkey.</td>
+<td>106</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>400</td>
+<td>Customs duties under customs union agreements concluded by the Union</td>
+<td>These cases are subject to safeguards.</td>
+<td>696</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>400</td>
+<td>Customs duties under customs union agreements concluded by the Union</td>
+<td>Full additional duties are potentially applicable. See processing rules in the applicable documents.</td>
+<td>651, 652</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>400</td>
+<td>Customs duties under customs union agreements concluded by the Union</td>
+<td>These measures can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>657, 658</td>
+<td>CUN</td>
+<td></td>
+</tr><tr>
+<td>420</td>
+<td>Customs Union Quota</td>
+<td></td>
+<td>147</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>420</td>
+<td>Customs Union Quota</td>
+<td>These quotas can relieve, even partially, from full additional duties. See processing rules in the applicable documents.</td>
+<td>653, 654</td>
+<td>CUN</td>
+<td></td>
+</tr>
+        </table>
+      </div><h3 id="worked-example">Worked example</h3><p>Preference code 223 in the table above demonstrates some of the complexity around preference codes.</p>
+<p>If a trader uses preference code &ldquo;223&rdquo;, they are specifying that their preferred treatment is to use a Generalised System of Preferences (GSP) tariff quota, with products subject to end-use relief. The following is must be true:</p>
+
+<ul>
+<li>If there is a &ldquo;preferential tariff quota under end use (146)&rdquo; measure, it will be used.</li>
+<li>If there is a &ldquo;preferential tariff quota (143)&rdquo; measure, it will be used if there is also a &ldquo;declaration of subheading submitted to authorised use provisions (464)&rdquo; measure which specifies that the entire commodity code is subject to authorised use.</li>
+<li>Whichever is used, the quota measures must be from a regulation in the group &ldquo;SPG&rdquo;.</li>
+<li>There is partial relief from security deposits – any measures of type &ldquo;Security based on representative price, reduced under the benefit of a tariff quota (653)&rdquo; or &ldquo;Additional duty based on CIF price, reduced under the benefit of a tariff quota (654)&rdquo;, if they exist, will be added on. This is on contrast to measures of type 651 and 652 specified against the non-quota preference code &ldquo;200&rdquo;, which would hold the full duty.</li>
+<li>Note that measure type &ldquo;Additional duties (safeguard) (696)&rdquo; is not present, so use of a GSP quota relives traders from safeguard duties.</li>
+</ul>
+<p>The correlation must still be used in conjunction with the measure type series table – because measure types 143 and 146 are both from the &ldquo;Applicable duty &copy;&rdquo; series from which only 1 measure must be used, the presence of both measure types in the table specifies an &ldquo;option&rdquo; – only one of those mappings will apply. But because the 653 and 654 are from a difference measure type series, they will be applied in addition to whichever quota measure is used.</p>
+<p>There is no mechanism that <em>requires</em> duty to be paid, but typically any import declaration that fails to use a measure from the &ldquo;applicable duties&rdquo; series will fail.
+<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
+
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Preference-codes">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Preference%20codes'&amp;body=Problem%20with%20'Preference%20codes'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/preference-codes.html)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'GTM-P9CRWB2', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'displayFeaturesTask', null);
+  ga('set', 'transport', 'beacon');
+  ga('set', 'page', location.pathname+location.search+location.hash);
+  ga('send', 'pageview');
+  </script>
+
+    <script src="/tariff-data-manual/javascripts/application.js"></script>
+  </body>
+</html>
