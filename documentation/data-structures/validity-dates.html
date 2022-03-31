@@ -660,10 +660,7 @@
 <a href="#validity-dates-on-descriptions">Validity dates on descriptions</a>
 </li>
 </ul>
-
-<blockquote>
 <p>Validity dates show when tariff elements, such as measures, are live.</p>
-</blockquote>
 <p>Most elements use a pair of validity dates. The element is live between the validity start date and validity end date.</p>
 <p>If the validity end date is blank the element is live forever.</p>
 <p>Validity dates can be changed after a tariff element is created. End dates can be added if they were not specified before and existing dates can be updated.</p>
@@ -672,10 +669,11 @@
 <h2 id="ending-validity-of-measures">Ending validity of measures</h2><p>There are 4 ways to end-date a measure:</p>
 
 <ol>
-<li>The measure is given an explicit end date on the measure record itself.</li>
-<li>The measure’s generating regulation is a base regulation, and the base regulation is end-dated.</li>
-<li>The measure’s generating regulation is a modification regulation, and the modification regulation is end-dated.</li>
-<li>The measure’s generating regulation is a modification regulation, and the base regulation that it modifies is end-dated.</li>
+<li>The measure is given an explicit end date on the measure record itself</li>
+<li>The measure&rsquo;s generating regulation is a base regulation, and the base regulation itself is end-dated</li>
+<li>The measure&rsquo;s generating regulation is a modification regulation, and the modification regulation itself is end-dated</li>
+<li>The measure&rsquo;s generating regulation is a base regulation, and any of the modification regulations that modify it are end-dated</li>
+<li>The measure&rsquo;s generating regulation is a modification regulation, and the base regulation that it modifies is end-dated</li>
 </ol>
 <p>In the UK Tariff, we do not use regulation end dates. Validity end dates are added to the measure explicitly (as per point 1).</p>
 <h2 id="validity-dates-on-descriptions">Validity dates on descriptions</h2><p>Footnotes, certificates, additional codes and geographical areas all have descriptions which can change over time. There must always be only one description valid at any time.</p>
