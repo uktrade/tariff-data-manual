@@ -692,144 +692,131 @@
 </ul>
 <p>The presence of these two measure types in the same table represents an &ldquo;option&rdquo; because 143 and 146 both come from the same measure type series which has its combination field set to zero, so only one can apply.</p>
 <h3 id="they-specify-what-regulation-groups-must-be-used">They specify what regulation groups must be used</h3><p>For each preference code and measure type, the correlation table can optionally specify a list of regulation groups. The measure generating regulation must then sit in one of those groups for the preference code to be applicable. For example, preference code &ldquo;120&rdquo; is only applicable when there is a measure with type 122 and regulation group KON. This means that any non-preferential tariff quotas must always be linked to a regulation in the correct group.</p>
-<h2 id="how-preference-code-correlations-are-structured">How preference code correlations are structured</h2><svg width="889pt" height="272pt"
- viewBox="0.00 0.00 889.00 272.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_297" class="graph" transform="scale(1 1) rotate(0) translate(4 268)">
+<h2 id="how-preference-code-correlations-are-structured">How preference code correlations are structured</h2><svg width="578pt" height="218pt"
+ viewBox="0.00 0.00 578.00 218.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_457" class="graph" transform="scale(1 1) rotate(0) translate(4 214)">
 <title>Database</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-268 885,-268 885,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-214 574,-214 574,4 -4,4"/>
 <!-- Preference Codes -->
-<g id="table_79" class="node">
+<g id="table_399" class="node">
 <title>Preference Codes</title>
-<polygon fill="none" stroke="black" points="768,-113 768,-129 872,-129 872,-113 768,-113"/>
-<text text-anchor="start" x="782.5" y="-118.8" font-family="Arial" font-size="9.00">Preference Codes</text>
-<polygon fill="none" stroke="black" points="768,-97 768,-113 820,-113 820,-97 768,-97"/>
-<text text-anchor="start" x="787.5" y="-102.8" font-family="Arial" font-size="9.00">sid</text>
-<polygon fill="none" stroke="black" points="820,-97 820,-113 856,-113 856,-97 820,-97"/>
-<text text-anchor="start" x="823" y="-102.8" font-family="Arial" font-size="9.00">char(3)</text>
-<polygon fill="none" stroke="black" points="856,-97 856,-113 872,-113 872,-97 856,-97"/>
-<text text-anchor="start" x="859" y="-102.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="768,-81 768,-97 820,-97 820,-81 768,-81"/>
-<text text-anchor="start" x="782" y="-86.8" font-family="Arial" font-size="9.00">name</text>
-<polygon fill="none" stroke="black" points="820,-81 820,-97 856,-97 856,-81 820,-81"/>
-<text text-anchor="start" x="830.5" y="-86.8" font-family="Arial" font-size="9.00">text</text>
-<polygon fill="none" stroke="black" points="856,-81 856,-97 872,-97 872,-81 856,-81"/>
-<polygon fill="none" stroke="black" points="768,-65 768,-81 820,-81 820,-65 768,-65"/>
-<text text-anchor="start" x="771" y="-70.8" font-family="Arial" font-size="9.00">description</text>
-<polygon fill="none" stroke="black" points="820,-65 820,-81 856,-81 856,-65 820,-65"/>
-<text text-anchor="start" x="830.5" y="-70.8" font-family="Arial" font-size="9.00">text</text>
-<polygon fill="none" stroke="black" points="856,-65 856,-81 872,-81 872,-65 856,-65"/>
-<polygon fill="none" stroke="black" points="767,-64 767,-130 873,-130 873,-64 767,-64"/>
+<polygon fill="none" stroke="black" points="457,-97 457,-113 561,-113 561,-97 457,-97"/>
+<text text-anchor="start" x="471.5" y="-102.8" font-family="Arial" font-size="9.00">Preference Codes</text>
+<polygon fill="none" stroke="black" points="457,-81 457,-97 509,-97 509,-81 457,-81"/>
+<text text-anchor="start" x="476.5" y="-86.8" font-family="Arial" font-size="9.00">sid</text>
+<polygon fill="none" stroke="black" points="509,-81 509,-97 545,-97 545,-81 509,-81"/>
+<text text-anchor="start" x="512" y="-86.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="545,-81 545,-97 561,-97 561,-81 545,-81"/>
+<text text-anchor="start" x="548" y="-86.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="457,-65 457,-81 509,-81 509,-65 457,-65"/>
+<text text-anchor="start" x="471" y="-70.8" font-family="Arial" font-size="9.00">name</text>
+<polygon fill="none" stroke="black" points="509,-65 509,-81 545,-81 545,-65 509,-65"/>
+<text text-anchor="start" x="519.5" y="-70.8" font-family="Arial" font-size="9.00">text</text>
+<polygon fill="none" stroke="black" points="545,-65 545,-81 561,-81 561,-65 545,-65"/>
+<polygon fill="none" stroke="black" points="457,-49 457,-65 509,-65 509,-49 457,-49"/>
+<text text-anchor="start" x="460" y="-54.8" font-family="Arial" font-size="9.00">description</text>
+<polygon fill="none" stroke="black" points="509,-49 509,-65 545,-65 545,-49 509,-49"/>
+<text text-anchor="start" x="519.5" y="-54.8" font-family="Arial" font-size="9.00">text</text>
+<polygon fill="none" stroke="black" points="545,-49 545,-65 561,-65 561,-49 545,-49"/>
+<polygon fill="none" stroke="black" points="456,-48 456,-114 562,-114 562,-48 456,-48"/>
 </g>
 <!-- Preference Code Mappings -->
-<g id="table_62" class="node">
+<g id="table_907" class="node">
 <title>Preference Code Mappings</title>
-<polygon fill="none" stroke="black" points="568,-129 568,-145 714,-145 714,-129 568,-129"/>
-<text text-anchor="start" x="584.5" y="-134.8" font-family="Arial" font-size="9.00">Preference Code Mappings</text>
-<polygon fill="none" stroke="black" points="568,-113 568,-129 662,-129 662,-113 568,-113"/>
-<text text-anchor="start" x="608.5" y="-118.8" font-family="Arial" font-size="9.00">sid</text>
-<polygon fill="none" stroke="black" points="662,-113 662,-129 698,-129 698,-113 662,-113"/>
-<text text-anchor="start" x="668.5" y="-118.8" font-family="Arial" font-size="9.00">bigint</text>
-<polygon fill="none" stroke="black" points="698,-113 698,-129 714,-129 714,-113 698,-113"/>
-<text text-anchor="start" x="701" y="-118.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="568,-97 568,-113 662,-113 662,-97 568,-97"/>
-<text text-anchor="start" x="571" y="-102.8" font-family="Arial" font-size="9.00">preference_code_sid</text>
-<polygon fill="none" stroke="black" points="662,-97 662,-113 698,-113 698,-97 662,-97"/>
-<text text-anchor="start" x="665" y="-102.8" font-family="Arial" font-size="9.00">char(3)</text>
-<polygon fill="none" stroke="black" points="698,-97 698,-113 714,-113 714,-97 698,-97"/>
-<polygon fill="none" stroke="black" points="568,-81 568,-97 662,-97 662,-81 568,-81"/>
-<text text-anchor="start" x="581.5" y="-86.8" font-family="Arial" font-size="9.00">choice_of_types</text>
-<polygon fill="none" stroke="black" points="662,-81 662,-97 698,-97 698,-81 662,-81"/>
-<text text-anchor="start" x="670.5" y="-86.8" font-family="Arial" font-size="9.00">bool</text>
-<polygon fill="none" stroke="black" points="698,-81 698,-97 714,-97 714,-81 698,-81"/>
-<polygon fill="none" stroke="black" points="567,-80 567,-146 715,-146 715,-80 567,-80"/>
+<polygon fill="none" stroke="black" points="257,-113 257,-129 403,-129 403,-113 257,-113"/>
+<text text-anchor="start" x="273.5" y="-118.8" font-family="Arial" font-size="9.00">Preference Code Mappings</text>
+<polygon fill="none" stroke="black" points="257,-97 257,-113 351,-113 351,-97 257,-97"/>
+<text text-anchor="start" x="297.5" y="-102.8" font-family="Arial" font-size="9.00">sid</text>
+<polygon fill="none" stroke="black" points="351,-97 351,-113 387,-113 387,-97 351,-97"/>
+<text text-anchor="start" x="357.5" y="-102.8" font-family="Arial" font-size="9.00">bigint</text>
+<polygon fill="none" stroke="black" points="387,-97 387,-113 403,-113 403,-97 387,-97"/>
+<text text-anchor="start" x="390" y="-102.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="257,-81 257,-97 351,-97 351,-81 257,-81"/>
+<text text-anchor="start" x="260" y="-86.8" font-family="Arial" font-size="9.00">preference_code_sid</text>
+<polygon fill="none" stroke="black" points="351,-81 351,-97 387,-97 387,-81 351,-81"/>
+<text text-anchor="start" x="354" y="-86.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="387,-81 387,-97 403,-97 403,-81 387,-81"/>
+<polygon fill="none" stroke="black" points="257,-65 257,-81 351,-81 351,-65 257,-65"/>
+<text text-anchor="start" x="270.5" y="-70.8" font-family="Arial" font-size="9.00">choice_of_types</text>
+<polygon fill="none" stroke="black" points="351,-65 351,-81 387,-81 387,-65 351,-65"/>
+<text text-anchor="start" x="359.5" y="-70.8" font-family="Arial" font-size="9.00">bool</text>
+<polygon fill="none" stroke="black" points="387,-65 387,-81 403,-81 403,-65 387,-65"/>
+<polygon fill="none" stroke="black" points="256,-64 256,-130 404,-130 404,-64 256,-64"/>
 </g>
 <!-- Preference Code Mappings&#45;&gt;Preference Codes -->
-<g id="database_297_edge2" class="edge">
+<g id="database_457_edge1" class="edge">
 <title>Preference Code Mappings:e&#45;&gt;Preference Codes:w</title>
-<path fill="none" stroke="black" d="M715,-105C735.22,-105 742.17,-105 759.08,-105"/>
-<polygon fill="black" stroke="black" points="759.5,-107.63 767,-105 759.5,-102.38 759.5,-107.63"/>
-</g>
-<!-- choice_of_types Note -->
-<g id="note_808" class="node">
-<title>choice_of_types Note</title>
-<polygon fill="none" stroke="black" points="517,-36 0,-36 0,0 523,0 523,-30 517,-36"/>
-<polyline fill="none" stroke="black" points="517,-36 517,-30 "/>
-<polyline fill="none" stroke="black" points="523,-30 517,-30 "/>
-<text text-anchor="middle" x="261.5" y="-15.8" font-family="Arial" font-size="9.00">True when any of the attached measure types can be present, False when all of the attached measure types must be present.</text>
-</g>
-<!-- choice_of_types Note&#45;&gt;Preference Code Mappings -->
-<g id="database_297_edge1" class="edge">
-<title>choice_of_types Note&#45;&gt;Preference Code Mappings:choice_of_types_name</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M501.78,-36.09C509.03,-38.77 516.12,-41.73 523,-45 547.97,-56.89 539.34,-89 567,-89"/>
+<path fill="none" stroke="black" d="M404,-89C424.22,-89 431.17,-89 448.08,-89"/>
+<polygon fill="black" stroke="black" points="448.5,-91.63 456,-89 448.5,-86.38 448.5,-91.63"/>
 </g>
 <!-- Preference Code Measure Type Mappings -->
-<g id="table_685" class="node">
+<g id="table_799" class="node">
 <title>Preference Code Measure Type Mappings</title>
-<polygon fill="none" stroke="black" points="171.5,-243 171.5,-259 351.5,-259 351.5,-243 171.5,-243"/>
-<text text-anchor="start" x="174.5" y="-248.8" font-family="Arial" font-size="9.00">Preference Code Measure Type Mappings</text>
-<polygon fill="none" stroke="black" points="171.5,-227 171.5,-243 272.5,-243 272.5,-227 171.5,-227"/>
-<text text-anchor="start" x="195" y="-232.8" font-family="Arial" font-size="9.00">mapping_sid</text>
-<polygon fill="none" stroke="black" points="272.5,-227 272.5,-243 326.5,-243 326.5,-227 272.5,-227"/>
-<text text-anchor="start" x="288" y="-232.8" font-family="Arial" font-size="9.00">bigint</text>
-<polygon fill="none" stroke="black" points="326.5,-227 326.5,-243 351.5,-243 351.5,-227 326.5,-227"/>
-<polygon fill="none" stroke="black" points="171.5,-211 171.5,-227 272.5,-227 272.5,-211 171.5,-211"/>
-<text text-anchor="start" x="192.5" y="-216.8" font-family="Arial" font-size="9.00">measure_type</text>
-<polygon fill="none" stroke="black" points="272.5,-211 272.5,-227 326.5,-227 326.5,-211 272.5,-211"/>
-<text text-anchor="start" x="284.5" y="-216.8" font-family="Arial" font-size="9.00">char(3)</text>
-<polygon fill="none" stroke="black" points="326.5,-211 326.5,-227 351.5,-227 351.5,-211 326.5,-211"/>
-<polygon fill="none" stroke="black" points="170.5,-210 170.5,-260 352.5,-260 352.5,-210 170.5,-210"/>
+<polygon fill="none" stroke="black" points="16,-189 16,-205 196,-205 196,-189 16,-189"/>
+<text text-anchor="start" x="19" y="-194.8" font-family="Arial" font-size="9.00">Preference Code Measure Type Mappings</text>
+<polygon fill="none" stroke="black" points="16,-173 16,-189 117,-189 117,-173 16,-173"/>
+<text text-anchor="start" x="39.5" y="-178.8" font-family="Arial" font-size="9.00">mapping_sid</text>
+<polygon fill="none" stroke="black" points="117,-173 117,-189 171,-189 171,-173 117,-173"/>
+<text text-anchor="start" x="132.5" y="-178.8" font-family="Arial" font-size="9.00">bigint</text>
+<polygon fill="none" stroke="black" points="171,-173 171,-189 196,-189 196,-173 171,-173"/>
+<polygon fill="none" stroke="black" points="16,-157 16,-173 117,-173 117,-157 16,-157"/>
+<text text-anchor="start" x="37" y="-162.8" font-family="Arial" font-size="9.00">measure_type</text>
+<polygon fill="none" stroke="black" points="117,-157 117,-173 171,-173 171,-157 117,-157"/>
+<text text-anchor="start" x="129" y="-162.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="171,-157 171,-173 196,-173 196,-157 171,-157"/>
+<polygon fill="none" stroke="black" points="15,-156 15,-206 197,-206 197,-156 15,-156"/>
 </g>
 <!-- Preference Code Measure Type Mappings&#45;&gt;Preference Code Mappings -->
-<g id="database_297_edge3" class="edge">
+<g id="database_457_edge2" class="edge">
 <title>Preference Code Measure Type Mappings:e&#45;&gt;Preference Code Mappings:w</title>
-<path fill="none" stroke="black" d="M352.5,-235C430.14,-235 460.39,-242.91 523,-197 552.14,-175.64 531.58,-128.69 559.34,-121.84"/>
-<polygon fill="black" stroke="black" points="559.83,-124.43 567,-121 559.26,-119.21 559.83,-124.43"/>
+<path fill="none" stroke="black" d="M197,-181C236.92,-181 216.46,-114.76 248.36,-105.96"/>
+<polygon fill="black" stroke="black" points="248.89,-108.54 256,-105 248.23,-103.33 248.89,-108.54"/>
 </g>
 <!-- Preference Code Regulation Group Mappings -->
-<g id="table_22" class="node">
+<g id="table_741" class="node">
 <title>Preference Code Regulation Group Mappings</title>
-<polygon fill="none" stroke="black" points="164.5,-167 164.5,-183 358.5,-183 358.5,-167 164.5,-167"/>
-<text text-anchor="start" x="167.5" y="-172.8" font-family="Arial" font-size="9.00">Preference Code Regulation Group Mappings</text>
-<polygon fill="none" stroke="black" points="164.5,-151 164.5,-167 278.5,-167 278.5,-151 164.5,-151"/>
-<text text-anchor="start" x="194.5" y="-156.8" font-family="Arial" font-size="9.00">mapping_sid</text>
-<polygon fill="none" stroke="black" points="278.5,-151 278.5,-167 333.5,-167 333.5,-151 278.5,-151"/>
-<text text-anchor="start" x="294.5" y="-156.8" font-family="Arial" font-size="9.00">bigint</text>
-<polygon fill="none" stroke="black" points="333.5,-151 333.5,-167 358.5,-167 358.5,-151 333.5,-151"/>
-<polygon fill="none" stroke="black" points="164.5,-135 164.5,-151 278.5,-151 278.5,-135 164.5,-135"/>
-<text text-anchor="start" x="186" y="-140.8" font-family="Arial" font-size="9.00">regulation_group</text>
-<polygon fill="none" stroke="black" points="278.5,-135 278.5,-151 333.5,-151 333.5,-135 278.5,-135"/>
-<text text-anchor="start" x="291" y="-140.8" font-family="Arial" font-size="9.00">char(3)</text>
-<polygon fill="none" stroke="black" points="333.5,-135 333.5,-151 358.5,-151 358.5,-135 333.5,-135"/>
-<polygon fill="none" stroke="black" points="163.5,-134 163.5,-184 359.5,-184 359.5,-134 163.5,-134"/>
+<polygon fill="none" stroke="black" points="9,-113 9,-129 203,-129 203,-113 9,-113"/>
+<text text-anchor="start" x="12" y="-118.8" font-family="Arial" font-size="9.00">Preference Code Regulation Group Mappings</text>
+<polygon fill="none" stroke="black" points="9,-97 9,-113 123,-113 123,-97 9,-97"/>
+<text text-anchor="start" x="39" y="-102.8" font-family="Arial" font-size="9.00">mapping_sid</text>
+<polygon fill="none" stroke="black" points="123,-97 123,-113 178,-113 178,-97 123,-97"/>
+<text text-anchor="start" x="139" y="-102.8" font-family="Arial" font-size="9.00">bigint</text>
+<polygon fill="none" stroke="black" points="178,-97 178,-113 203,-113 203,-97 178,-97"/>
+<polygon fill="none" stroke="black" points="9,-81 9,-97 123,-97 123,-81 9,-81"/>
+<text text-anchor="start" x="30.5" y="-86.8" font-family="Arial" font-size="9.00">regulation_group</text>
+<polygon fill="none" stroke="black" points="123,-81 123,-97 178,-97 178,-81 123,-81"/>
+<text text-anchor="start" x="135.5" y="-86.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="178,-81 178,-97 203,-97 203,-81 178,-81"/>
+<polygon fill="none" stroke="black" points="8,-80 8,-130 204,-130 204,-80 8,-80"/>
 </g>
 <!-- Preference Code Regulation Group Mappings&#45;&gt;Preference Code Mappings -->
-<g id="database_297_edge4" class="edge">
+<g id="database_457_edge3" class="edge">
 <title>Preference Code Regulation Group Mappings:e&#45;&gt;Preference Code Mappings:w</title>
-<path fill="none" stroke="black" d="M359.5,-159C450.69,-159 472.1,-123.05 559.47,-121.08"/>
-<polygon fill="black" stroke="black" points="559.53,-123.71 567,-121 559.47,-118.46 559.53,-123.71"/>
+<path fill="none" stroke="black" d="M204,-105C224.22,-105 231.17,-105 248.08,-105"/>
+<polygon fill="black" stroke="black" points="248.5,-107.63 256,-105 248.5,-102.38 248.5,-107.63"/>
 </g>
 <!-- Preference Code Condition Code Mappings -->
-<g id="table_780" class="node">
+<g id="table_798" class="node">
 <title>Preference Code Condition Code Mappings</title>
-<polygon fill="none" stroke="black" points="168.5,-91 168.5,-107 354.5,-107 354.5,-91 168.5,-91"/>
-<text text-anchor="start" x="171.5" y="-96.8" font-family="Arial" font-size="9.00">Preference Code Condition Code Mappings</text>
-<polygon fill="none" stroke="black" points="168.5,-75 168.5,-91 275.5,-91 275.5,-75 168.5,-75"/>
-<text text-anchor="start" x="195" y="-80.8" font-family="Arial" font-size="9.00">mapping_sid</text>
-<polygon fill="none" stroke="black" points="275.5,-75 275.5,-91 329.5,-91 329.5,-75 275.5,-75"/>
-<text text-anchor="start" x="291" y="-80.8" font-family="Arial" font-size="9.00">bigint</text>
-<polygon fill="none" stroke="black" points="329.5,-75 329.5,-91 354.5,-91 354.5,-75 329.5,-75"/>
-<polygon fill="none" stroke="black" points="168.5,-59 168.5,-75 275.5,-75 275.5,-59 168.5,-59"/>
-<text text-anchor="start" x="190" y="-64.8" font-family="Arial" font-size="9.00">condition_code</text>
-<polygon fill="none" stroke="black" points="275.5,-59 275.5,-75 329.5,-75 329.5,-59 275.5,-59"/>
-<text text-anchor="start" x="287.5" y="-64.8" font-family="Arial" font-size="9.00">char(1)</text>
-<polygon fill="none" stroke="black" points="329.5,-59 329.5,-75 354.5,-75 354.5,-59 329.5,-59"/>
-<polygon fill="none" stroke="black" points="167.5,-58 167.5,-108 355.5,-108 355.5,-58 167.5,-58"/>
+<polygon fill="none" stroke="black" points="13,-37 13,-53 199,-53 199,-37 13,-37"/>
+<text text-anchor="start" x="16" y="-42.8" font-family="Arial" font-size="9.00">Preference Code Condition Code Mappings</text>
+<polygon fill="none" stroke="black" points="13,-21 13,-37 120,-37 120,-21 13,-21"/>
+<text text-anchor="start" x="39.5" y="-26.8" font-family="Arial" font-size="9.00">mapping_sid</text>
+<polygon fill="none" stroke="black" points="120,-21 120,-37 174,-37 174,-21 120,-21"/>
+<text text-anchor="start" x="135.5" y="-26.8" font-family="Arial" font-size="9.00">bigint</text>
+<polygon fill="none" stroke="black" points="174,-21 174,-37 199,-37 199,-21 174,-21"/>
+<polygon fill="none" stroke="black" points="13,-5 13,-21 120,-21 120,-5 13,-5"/>
+<text text-anchor="start" x="34.5" y="-10.8" font-family="Arial" font-size="9.00">condition_code</text>
+<polygon fill="none" stroke="black" points="120,-5 120,-21 174,-21 174,-5 120,-5"/>
+<text text-anchor="start" x="132" y="-10.8" font-family="Arial" font-size="9.00">char(1)</text>
+<polygon fill="none" stroke="black" points="174,-5 174,-21 199,-21 199,-5 174,-5"/>
+<polygon fill="none" stroke="black" points="12,-4 12,-54 200,-54 200,-4 12,-4"/>
 </g>
 <!-- Preference Code Condition Code Mappings&#45;&gt;Preference Code Mappings -->
-<g id="database_297_edge5" class="edge">
+<g id="database_457_edge4" class="edge">
 <title>Preference Code Condition Code Mappings:e&#45;&gt;Preference Code Mappings:w</title>
-<path fill="none" stroke="black" d="M355.5,-83C448.39,-83 470.32,-118.95 559.33,-120.92"/>
-<polygon fill="black" stroke="black" points="559.47,-123.54 567,-121 559.53,-118.29 559.47,-123.54"/>
+<path fill="none" stroke="black" d="M200,-29C239.17,-29 217.44,-95.24 248.52,-104.04"/>
+<polygon fill="black" stroke="black" points="248.23,-106.65 256,-105 248.9,-101.44 248.23,-106.65"/>
 </g>
 </g>
 </svg><p>Each preference code can be mapped to multiple measure types. Each mapping represents another measure type that will be &ldquo;added on&rdquo; when that preference code is used.</p>
