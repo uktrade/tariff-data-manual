@@ -85,7 +85,7 @@ Requires:
 
 * graphviz
 * node
-* ruby 3.1.3
+* ruby 2.6.0
 
 Install the submodule:
 
