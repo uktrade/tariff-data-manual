@@ -87,6 +87,14 @@ Requires:
 * node
 * ruby 2.6.0
 
+On Mac these can be installed with:
+
+```
+brew install node
+brew install graphviz
+brew install ruby
+```
+
 Install the submodule:
 
 ```
