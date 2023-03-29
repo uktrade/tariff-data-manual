@@ -2,6 +2,11 @@ name: Update static site on wiki edit
 
 on: [gollum, push]
 
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+
 jobs:
   update-submodule:
     name: Update submodule
