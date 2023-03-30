@@ -78,3 +78,47 @@ graph "Measures and Regulations" {
 - We need to put a 'back to the top' button at the end of each page 
 - We need to add a 'Is there anything wrong with this page?' section at the end of each page so if users notice any mistakes/problems they can notify us
 - Although we can add tables, there are still a few formatting kinks that need to be straightend out such as how to highlight rows/columns/cells or how to merge cells
+
+## Running the documentation locally
+
+Requires:
+
+* graphviz
+* node
+* ruby 2.6.0
+
+On Mac these can be installed with:
+
+```
+brew install node
+brew install graphviz
+brew install ruby
+```
+
+Install the submodule:
+
+```
+cd wiki
+git submodule init
+git submodule update
+```
+
+Install dependencies:
+
+```
+bundle install
+```
+
+Build:
+
+```
+rake build
+```
+
+Run the server:
+
+```
+bundle exec middleman server
+```
+
+Access the site at localhost:4567
