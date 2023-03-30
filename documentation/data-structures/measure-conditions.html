@@ -31,7 +31,7 @@
 
     <div class="app-pane">
       <div class="app-pane__header toc-open-disabled">
-        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 
         <header class="govuk-header app-header" role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-header__container--full-width">
@@ -57,7 +57,7 @@
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
             <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
-              <div class="search" data-module="search">
+              <div class="search" data-module="search" data-path-to-site-root="/tariff-data-manual/">
   <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual"/>
     <label class="govuk-label search__label" for="search" aria-hidden="true">
@@ -69,28 +69,20 @@
       class="govuk-input govuk-!-margin-bottom-0 search__input"
       aria-controls="search-results"
       placeholder="Search">
-    <button type="submit" class="govuk-button search__button">Search</button>
+    <button type="submit" class="search__button">Search</button>
   </form>
-  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
-    <div class="search-results__inner">
-      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
-      <div class="search-results__content"></div>
-    </div>
-  </div>
 </div>
 
               <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
-    <a href="/tariff-data-manual/#home"><span>Home</span></a>
+    <a href="/tariff-data-manual/"><span>Home</span></a>
   </li>
-</ul>
-<ul><li><a href="/tariff-data-manual/documentation/trade-policies.html"><span>Trade policies</span></a>
+<li><a href="/tariff-data-manual/documentation/trade-policies.html"><span>Trade policies</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html"><span>Trade remedies</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#what-a-trade-remedy-is"><span>What a trade remedy is</span></a>
@@ -103,10 +95,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html"><span>Free trade agreements</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#what-trade-agreements-contain"><span>What trade agreements contain</span></a>
@@ -131,10 +121,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#steel-safeguard"><span>Steel safeguard</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html"><span>Steel safeguard</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#safeguard-categories"><span>Safeguard categories</span></a>
@@ -153,10 +141,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html"><span>Unilateral preferences</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html#what-unilateral-preferences-are"><span>What unilateral preferences are</span></a>
@@ -166,10 +152,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html"><span>Agricultural instruments</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#meursing-code"><span>Meursing code</span></a>
@@ -179,10 +163,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#import-and-export-control"><span>Import and export control</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html"><span>Import and export control</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#import-controls"><span>Import controls</span></a>
@@ -198,20 +180,16 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html#authorised-use-relief"><span>Authorised Use relief</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html"><span>Authorised Use relief</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html#finding-an-authorised-use-commodity-code"><span>Finding an Authorised Use commodity code</span></a>
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most favoured nation duties</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html"><span>Most favoured nation duties</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#what-most-favoured-nation-is"><span>What most favoured nation is</span></a>
@@ -224,10 +202,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html#origin-quotas"><span>Origin quotas</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html"><span>Origin quotas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html#what-origin-quotas-are"><span>What origin quotas are</span></a>
@@ -237,25 +213,19 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html#retaliatory-measures"><span>Retaliatory measures</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html"><span>Retaliatory measures</span></a>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html"><span>Suspensions and reliefs</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html#the-difference-between-suspensions-and-reliefs"><span>The difference between suspensions and reliefs</span></a>
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html#supplementary-units"><span>Supplementary units</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html"><span>Supplementary units</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html#what-supplementary-units-are"><span>What supplementary units are</span></a>
@@ -266,10 +236,11 @@
     </ul>
   </li>
 </ul>
-</li></ul><ul><li><a href="/tariff-data-manual/documentation/data-structures.html"><span>Data structures</span></a>
+</li>
+<li><a href="/tariff-data-manual/documentation/data-structures.html"><span>Data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html"><span>Quota suspensions</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#why-suspensions-are-used"><span>Why suspensions are used</span></a>
@@ -285,10 +256,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measures.html#measures"><span>Measures</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measures.html"><span>Measures</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measures.html#what-measures-are"><span>What measures are</span></a>
@@ -304,10 +273,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html"><span>Quota associations</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#where-quota-associations-are-used"><span>Where quota associations are used</span></a>
@@ -323,10 +290,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-types.html"><span>Measure types</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#what-measure-types-are"><span>What measure types are</span></a>
@@ -357,10 +322,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html#validity-dates-2"><span>Validity dates</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html"><span>Validity dates</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html#ending-validity-of-measures"><span>Ending validity of measures</span></a>
@@ -370,10 +333,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas"><span>Quotas</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quotas.html"><span>Quotas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quotas.html#how-tariff-quotas-operate"><span>How tariff quotas operate</span></a>
@@ -407,10 +368,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html"><span>Geographical areas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#what-geographical-areas-are"><span>What geographical areas are</span></a>
@@ -435,10 +394,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html"><span>Additional codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#what-additional-codes-are"><span>What additional codes are</span></a>
@@ -457,10 +414,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/footnotes.html"><span>Footnotes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#how-footnotes-are-structured"><span>How footnotes are structured</span></a>
@@ -476,10 +431,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#commodity-codes"><span>Commodity codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html"><span>Commodity codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#what-commodity-codes-are-made-up-of"><span>What commodity codes are made up of</span></a>
@@ -504,10 +457,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#preference-codes"><span>Preference codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html"><span>Preference codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#what-preference-codes-do"><span>What preference codes do</span></a>
@@ -520,10 +471,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/certificates.html"><span>Certificates</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/certificates.html#what-certificates-are"><span>What certificates are</span></a>
@@ -539,10 +488,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-components.html"><span>Measure components</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#what-measure-components-are"><span>What measure components are</span></a>
@@ -573,10 +520,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/regulations.html#regulations"><span>Regulations</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/regulations.html"><span>Regulations</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/regulations.html#base-regulations"><span>Base regulations</span></a>
@@ -589,10 +534,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html"><span>Quota blocking</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#how-long-quota-blocks-last"><span>How long quota blocks last</span></a>
@@ -608,10 +551,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html"><span>Measure conditions</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#what-measure-conditions-are"><span>What measure conditions are</span></a>
@@ -643,15 +584,18 @@
     </ul>
   </li>
 </ul>
-</li></ul>
+</li>
+</ul>
+
 
               </nav>
             </div>
           </div>
 
-        <div class="app-pane__content toc-open-disabled">
+        <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
             <h1 id="measure-conditions">Measure conditions</h1>
+
 <ul>
 <li>
 <a href="#what-measure-conditions-are">What measure conditions are</a>
@@ -727,17 +671,19 @@
 <a href="#business-rules">Business rules</a>
 </li>
 </ul></p>
-<h2 id="what-measure-conditions-are">What measure conditions are</h2><p>Measure conditions specify when there are conditions that must be met. For example, when documentation is required, such as veterinary documents.</p>
+<h2 id="what-measure-conditions-are">What measure conditions are</h2>
+<p>Measure conditions specify when there are conditions that must be met. For example, when documentation is required, such as veterinary documents.</p>
 <p>Not all measures apply in all circumstances. Approximately half of all measures are usable by traders only under certain conditions.</p>
 <p>In the Tariff, the conditions for a commodity code are listed under the &lsquo;conditions&rsquo; column.</p>
-<h2 id="how-conditions-are-structured">How conditions are structured</h2><p>The following diagrams illustrate the primary data fields associated with a measure condition.</p>
+<h2 id="how-conditions-are-structured">How conditions are structured</h2>
+<p>The following diagrams illustrate the primary data fields associated with a measure condition.</p>
 <svg width="727pt" height="210pt"
  viewBox="0.00 0.00 727.00 210.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_337" class="graph" transform="scale(1 1) rotate(0) translate(4 206)">
+<g id="database_409" class="graph" transform="scale(1 1) rotate(0) translate(4 206)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-206 723,-206 723,4 -4,4"/>
 <!-- Measure Conditions -->
-<g id="table_88" class="node">
+<g id="table_874" class="node">
 <title>Measure Conditions</title>
 <polygon fill="none" stroke="black" points="292,-181 292,-197 564,-197 564,-181 292,-181"/>
 <text text-anchor="start" x="386.5" y="-186.8" font-family="Arial" font-size="9.00">Measure Conditions</text>
@@ -809,7 +755,7 @@
 <polygon fill="none" stroke="black" points="291,-4 291,-198 565,-198 565,-4 291,-4"/>
 </g>
 <!-- Measures -->
-<g id="table_873" class="node">
+<g id="table_726" class="node">
 <title>Measures</title>
 <polygon fill="none" stroke="black" points="618,-165 618,-181 710,-181 710,-165 618,-165"/>
 <text text-anchor="start" x="643.5" y="-170.8" font-family="Arial" font-size="9.00">Measures</text>
@@ -822,13 +768,13 @@
 <polygon fill="none" stroke="black" points="617,-148 617,-182 711,-182 711,-148 617,-148"/>
 </g>
 <!-- Measure Conditions&#45;&gt;Measures -->
-<g id="database_337_edge1" class="edge">
+<g id="database_409_edge1" class="edge">
 <title>Measure Conditions:e&#45;&gt;Measures:w</title>
 <path fill="none" stroke="black" d="M565,-157C585.22,-157 592.17,-157 609.08,-157"/>
 <polygon fill="black" stroke="black" points="609.5,-159.63 617,-157 609.5,-154.38 609.5,-159.63"/>
 </g>
 <!-- Measure Condition Components -->
-<g id="table_420" class="node">
+<g id="table_540" class="node">
 <title>Measure Condition Components</title>
 <polygon fill="none" stroke="black" points="9.5,-181 9.5,-197 238.5,-197 238.5,-181 9.5,-181"/>
 <text text-anchor="start" x="57.5" y="-186.8" font-family="Arial" font-size="9.00">Measure Condition Components</text>
@@ -871,7 +817,7 @@
 <polygon fill="none" stroke="black" points="8,-84 8,-198 239,-198 239,-84 8,-84"/>
 </g>
 <!-- Measure Condition Components&#45;&gt;Measure Conditions -->
-<g id="database_337_edge2" class="edge">
+<g id="database_409_edge2" class="edge">
 <title>Measure Condition Components:e&#45;&gt;Measure Conditions:w</title>
 <path fill="none" stroke="black" d="M239.5,-173C259.53,-173 266.41,-173 283.15,-173"/>
 <polygon fill="black" stroke="black" points="283.5,-175.63 291,-173 283.5,-170.38 283.5,-175.63"/>
@@ -933,9 +879,11 @@
 <td>The   specific certificate required (if needed)</td>
 </tr>
         </table>
-      </div><h2 id="how-conditions-are-linked">How conditions are linked</h2><p>The following diagram is a simplified view of the relationships of the measure conditions with other data entities. Focus on measure conditions, measures and measure condition components, as the rest are foreign key tables.</p>
+      </div><h2 id="how-conditions-are-linked">How conditions are linked</h2>
+<p>The following diagram is a simplified view of the relationships of the measure conditions with other data entities. Focus on measure conditions, measures and measure condition components, as the rest are foreign key tables.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93780436-10d88600-fc20-11ea-94b2-9b5b3738f6d3.png" alt="image" /></a></p>
-<h2 id="condition-codes">Condition codes</h2><p>A condition code identifies what condition must be fulfilled for the action to be carried out.</p>
+<h2 id="condition-codes">Condition codes</h2>
+<p>A condition code identifies what condition must be fulfilled for the action to be carried out.</p>
 <p>Some condition codes refer to a minimum or maximum import price. This is known as a reference price or trigger price.</p>
 <p>There are 2 main types of condition code:</p>
 
@@ -1002,7 +950,8 @@
 <td>Import   price must be equal to or greater than the entry price (see components)</td>
 </tr>
         </table>
-      </div><h2 id="action-codes">Action codes</h2><p>Action codes identify the type of action that will be taken in response to a condition code.</p>
+      </div><h2 id="action-codes">Action codes</h2>
+<p>Action codes identify the type of action that will be taken in response to a condition code.</p>
 <p>The following table lists the action codes that can be associated with a condition. The action code is mandatory – there is no value in a condition if no subsequent action is taken.</p>
 <div class="table-container">
         <table>
@@ -1086,7 +1035,8 @@
 <td>Apply export refund</td>
 </tr>
         </table>
-      </div><h3 id="action-codes-that-go-together">Action codes that go together</h3><p>Many of the action codes are part of an action code pair. The smaller of the 2 is usually the negative action. The larger is the complementary positive action.</p>
+      </div><h3 id="action-codes-that-go-together">Action codes that go together</h3>
+<p>Many of the action codes are part of an action code pair. The smaller of the 2 is usually the negative action. The larger is the complementary positive action.</p>
 <p>The following table shows the pairs of action codes that always go together.</p>
 <div class="table-container">
         <table>
@@ -1119,7 +1069,8 @@
 <td>Export   refund not applicable / Apply export refund</td>
 </tr>
         </table>
-      </div><h2 id="how-conditions-are-used">How conditions are used</h2><p>Conditions on a measure are generally set up into a few separate configurations, documented by this flow diagram:</p>
+      </div><h2 id="how-conditions-are-used">How conditions are used</h2>
+<p>Conditions on a measure are generally set up into a few separate configurations, documented by this flow diagram:</p>
 <svg width="1023pt" height="507pt"
  viewBox="0.00 0.00 1022.50 507.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 503)">
@@ -1285,11 +1236,14 @@
 <text text-anchor="middle" x="727" y="-342.8" font-family="Times,serif" font-size="14.00">No</text>
 </g>
 </g>
-</svg><h2 id="grouping-condition-codes">Grouping condition codes</h2><p>Conditions are grouped together according to their condition code.</p>
+</svg><h2 id="grouping-condition-codes">Grouping condition codes</h2>
+<p>Conditions are grouped together according to their condition code.</p>
 <p>Within that group, the individual conditions are grouped together in an &lsquo;or&rsquo; relationship.</p>
 <p>In the following diagram, one of the 2 conditions in condition set B needs to be provided, alongside one of the 2 conditions in condition set E.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" alt="image" /></a></p>
-<h2 id="condition-codes-in-detail">Condition codes in detail</h2><h3 id="condition-code-a-presentation-of-an-anti-dumping-countervailing-document">Condition code A: Presentation of an anti-dumping/countervailing document</h3><p>Condition code A modifies the circumstances of an anti-dumping or anti-subsidy duty depending on the conditions stated.</p>
+<h2 id="condition-codes-in-detail">Condition codes in detail</h2>
+<h3 id="condition-code-a-presentation-of-an-anti-dumping-countervailing-document">Condition code A: Presentation of an anti-dumping/countervailing document</h3>
+<p>Condition code A modifies the circumstances of an anti-dumping or anti-subsidy duty depending on the conditions stated.</p>
 <p>There are 3 scenarios in which this condition code is used. Two of these have two related and opposite action codes:</p>
 
 <ul>
@@ -1305,10 +1259,12 @@
 <p>Scenario 3 – determining applicability of exemption/reduction of the anti-dumping duty</p>
 <p>As with scenario 2, this features a pair of conditions with complementing action codes that are always found together. Though not completely defunct, this scenario is used only 3 times in current measures by the EU.</p>
 <p>Anti-dumping duty will be waived or reduced according to the legislation.</p>
-<h3 id="condition-codes-b-c-and-h-presentation-of-a-certificate-licence-document">Condition codes B, C and H: Presentation of a certificate/licence/document</h3><p>Codes C and H are used when multiple sets of condition using the same mechanic need to be applied to the same measure.</p>
+<h3 id="condition-codes-b-c-and-h-presentation-of-a-certificate-licence-document">Condition codes B, C and H: Presentation of a certificate/licence/document</h3>
+<p>Codes C and H are used when multiple sets of condition using the same mechanic need to be applied to the same measure.</p>
 <p>Codes B, C and H need a certificate or other document to be presented in order for the requirement to be fulfilled.</p>
 <p>Condition codes C and H are identical to condition code B. There is no obvious reason why C or H might be used instead of B.</p>
-<h3 id="condition-code-e">Condition code E</h3><p>This condition code is a combination of a quantitative restriction and a need for a document. A trade will be allowed if the volume of goods is either of the following:</p>
+<h3 id="condition-code-e">Condition code E</h3>
+<p>This condition code is a combination of a quantitative restriction and a need for a document. A trade will be allowed if the volume of goods is either of the following:</p>
 
 <ul>
 <li>lower than the defined threshold weight (or other unit)</li>
@@ -1316,18 +1272,22 @@
 </ul>
 <p>The criteria that define these 2 conditions are set in the measure condition data as is shown in the following 2 examples.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93797793-9b2ae500-fc34-11ea-9fd0-7d12b8d3f17e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797793-9b2ae500-fc34-11ea-9fd0-7d12b8d3f17e.png" alt="image" /></a></p>
-<h3 id="condition-code-i">Condition code I</h3><p>These condition codes are currently used only with measure types 751 and 755 (import and export control of waste).</p>
+<h3 id="condition-code-i">Condition code I</h3>
+<p>These condition codes are currently used only with measure types 751 and 755 (import and export control of waste).</p>
 <p>They work the same way as condition code E.</p>
 <p>Type I is only ever used in conjunction with type E to present a send condition set of the same type. It is never used on its own, as is shown in the following diagram.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93797871-b269d280-fc34-11ea-90fd-3bc10f0322e0.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797871-b269d280-fc34-11ea-90fd-3bc10f0322e0.png" alt="image" /></a></p>
-<h3 id="condition-code-f">Condition code F</h3><p>These conditions allow duties to be charged against imported goods subject to anti-dumping or anti-subsidy duties that are dependent upon the unit price of the import.</p>
+<h3 id="condition-code-f">Condition code F</h3>
+<p>These conditions allow duties to be charged against imported goods subject to anti-dumping or anti-subsidy duties that are dependent upon the unit price of the import.</p>
 <p>It is used less often than condition code A, which also applies conditions to the trade of goods subject to an anti-dumping or anti-subsidy duty.</p>
 <p>There are 119 instances of condition code F being used and more than 17,000 instances of condition code A.</p>
 <p>The following shows measure 3571830 on commodity 2933610000 (melamine). There are 2 F-type conditions, which are dependent on the import price and the duties are set accordingly.</p>
 <p>What these conditions say is if the good is imported at a price of higher than €1153 per tonne, then apply zero additional punitive duty (condition 1). If the import of the good is at a lower price, apply the difference between the import price and the punitive duty. This sets a minimum import.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93797978-d75e4580-fc34-11ea-8b9e-1f889fbadd51.png" alt="image" /></a></p>
-<h3 id="condition-code-l-cif-price-must-be-higher-than-the-minimum-price">Condition code L: CIF price must be higher than the minimum price</h3><p>Condition code L is always applied to measures of type 652 in the TARIC (additional duty based on CIF price). It is no longer used in the UK.</p>
-<h3 id="condition-code-m">Condition code M</h3><p>Condition code M is used in 2 circumstances. The first is in managing supplied credibility checks of the following type:</p>
+<h3 id="condition-code-l-cif-price-must-be-higher-than-the-minimum-price">Condition code L: CIF price must be higher than the minimum price</h3>
+<p>Condition code L is always applied to measures of type 652 in the TARIC (additional duty based on CIF price). It is no longer used in the UK.</p>
+<h3 id="condition-code-m">Condition code M</h3>
+<p>Condition code M is used in 2 circumstances. The first is in managing supplied credibility checks of the following type:</p>
 
 <ul>
 <li>430 Control of particulars of the declaration (suspicious value/net weight or value/supplementary unit)</li>
@@ -1338,7 +1298,8 @@
 <p>The second circumstance deals with Trade Remedies. The existing conditions of this type are against measure type ID 552 (definitive anti-dumping duty). There&rsquo;s no reason why these would not also be assigned to measure types 551, 553 and 554.</p>
 <p>In the following examples there are 2 conditions which behave more or less the same as condition type F, where the applicable punitive duty is dependent on the declared price.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93821534-970fbf00-fc56-11ea-9ded-0909e536e23d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93821534-970fbf00-fc56-11ea-9ded-0909e536e23d.png" alt="image" /></a></p>
-<h3 id="condition-code-q-presentation-of-an-endorsed-certificate-licence">Condition code Q: Presentation of an endorsed certificate/licence</h3><p>Condition type Q is used in all cases where a measure is put in place to represent a licensed quota. And in all cases it refers to the single licence Y100 (special entries on the import licence AGRIM). It is only used for licensed and origin quotas in measures of the following type:</p>
+<h3 id="condition-code-q-presentation-of-an-endorsed-certificate-licence">Condition code Q: Presentation of an endorsed certificate/licence</h3>
+<p>Condition type Q is used in all cases where a measure is put in place to represent a licensed quota. And in all cases it refers to the single licence Y100 (special entries on the import licence AGRIM). It is only used for licensed and origin quotas in measures of the following type:</p>
 
 <ul>
 <li>122 Non preferential tariff quota</li>
@@ -1346,14 +1307,18 @@
 <li>142 Tariff preference</li>
 <li>143 Preferential tariff quota</li>
 </ul>
-<h3 id="condition-code-r">Condition code R</h3><p>This is used to apply conditions to credibility checks to ensure the weight looks right against the number of declared goods. The supplementary unit identifies what additional unit beyond the KGM weight must be supplied by the trader on declaring their import.</p>
-<h3 id="condition-code-u">Condition code U</h3><p>This is used to apply conditions to credibility checks to ensure the declared value looks right against the number of declared goods. The supplementary unit identifies what additional unit beyond the kilogramme weight must be supplied by the trader on declaring their import.</p>
-<h3 id="condition-code-v-the-entry-price-system">Condition code V – The Entry Price System</h3><p>The Entry Price System (EPS) is a complex mechanism to apply tiered duties to 31 agricultural products, mostly fruit. The UK does not use the EPS.</p>
+<h3 id="condition-code-r">Condition code R</h3>
+<p>This is used to apply conditions to credibility checks to ensure the weight looks right against the number of declared goods. The supplementary unit identifies what additional unit beyond the KGM weight must be supplied by the trader on declaring their import.</p>
+<h3 id="condition-code-u">Condition code U</h3>
+<p>This is used to apply conditions to credibility checks to ensure the declared value looks right against the number of declared goods. The supplementary unit identifies what additional unit beyond the kilogramme weight must be supplied by the trader on declaring their import.</p>
+<h3 id="condition-code-v-the-entry-price-system">Condition code V – The Entry Price System</h3>
+<p>The Entry Price System (EPS) is a complex mechanism to apply tiered duties to 31 agricultural products, mostly fruit. The UK does not use the EPS.</p>
 <p>The following example shows the EPS in action for the third country duty for cherry tomatoes. The duties that are applicable depend on the import price: the cheaper the import, the more expensive the duty. The purpose of this is to protect domestic growers in Europe from influxes of very cheap goods.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93823127-359d1f80-fc59-11ea-91c2-5c72639d322e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823127-359d1f80-fc59-11ea-91c2-5c72639d322e.png" alt="image" /></a></p>
 <p>In the following example, each row is a price threshold: if the import price falls below a given threshold, then the duty from the row below is charged.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93823436-b825df00-fc59-11ea-8bea-46fc0806bdb8.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93823436-b825df00-fc59-11ea-8bea-46fc0806bdb8.png" alt="image" /></a></p>
-<h3 id="condition-code-y-other-conditions">Condition code Y: Other conditions</h3><p>These miscellaneous conditions are linked to in a similar way that certificates are referenced - using the certificate type code and certificate code fields. Some examples of conditions that are referenced by condition code Y are as follows:</p>
+<h3 id="condition-code-y-other-conditions">Condition code Y: Other conditions</h3>
+<p>These miscellaneous conditions are linked to in a similar way that certificates are referenced - using the certificate type code and certificate code fields. Some examples of conditions that are referenced by condition code Y are as follows:</p>
 
 <ul>
 <li>Y019 Request for preferential treatment for Iceland</li>
@@ -1362,7 +1327,8 @@
 <li>Y037 Goods exempted from the prohibition – biathlon equipment</li>
 </ul>
 <p>None of the conditions linked to via the condition code ‘Y’ utilise the price threshold fields.</p>
-<h3 id="condition-code-z-presentation-of-more-than-one-certificate">Condition code Z: Presentation of more than one certificate</h3><p>At the moment this condition code is only used on national P and R measures.</p>
+<h3 id="condition-code-z-presentation-of-more-than-one-certificate">Condition code Z: Presentation of more than one certificate</h3>
+<p>At the moment this condition code is only used on national P and R measures.</p>
 <p>The following are the measure types where Z is used:</p>
 
 <ul>
@@ -1377,7 +1343,8 @@
 </ul>
 <p>There is no reason why this condition code should be used in preference to B, C or H.</p>
 <p>There are occasions where the Z type is used, but only one positive condition is included.</p>
-<h2 id="business-rules">Business rules</h2><p>Read the business rules for measure conditions in the <a href="https://uktrade.github.io/tamato/html/business_rules/measures.html">system documentation</a>.
+<h2 id="business-rules">Business rules</h2>
+<p>Read the business rules for measure conditions in the <a href="https://uktrade.github.io/tamato/html/business_rules/measures.html">system documentation</a>.
 <link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
@@ -1386,7 +1353,7 @@
           <aside>
               <ul class="contribution-banner">
                 <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Measure-conditions">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Measure%20conditions'&amp;body=Problem%20with%20'Measure%20conditions'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/measure-conditions.html)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Measure+conditions%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fdata-structures%2Fmeasure-conditions.html%29&amp;labels=bug&amp;title=Re%3A+%27Measure+conditions%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

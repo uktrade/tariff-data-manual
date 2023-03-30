@@ -31,7 +31,7 @@
 
     <div class="app-pane">
       <div class="app-pane__header toc-open-disabled">
-        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 
         <header class="govuk-header app-header" role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-header__container--full-width">
@@ -57,7 +57,7 @@
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
             <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
-              <div class="search" data-module="search">
+              <div class="search" data-module="search" data-path-to-site-root="/tariff-data-manual/">
   <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual"/>
     <label class="govuk-label search__label" for="search" aria-hidden="true">
@@ -69,28 +69,20 @@
       class="govuk-input govuk-!-margin-bottom-0 search__input"
       aria-controls="search-results"
       placeholder="Search">
-    <button type="submit" class="govuk-button search__button">Search</button>
+    <button type="submit" class="search__button">Search</button>
   </form>
-  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
-    <div class="search-results__inner">
-      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
-      <div class="search-results__content"></div>
-    </div>
-  </div>
 </div>
 
               <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
-    <a href="/tariff-data-manual/#home"><span>Home</span></a>
+    <a href="/tariff-data-manual/"><span>Home</span></a>
   </li>
-</ul>
-<ul><li><a href="/tariff-data-manual/documentation/trade-policies.html"><span>Trade policies</span></a>
+<li><a href="/tariff-data-manual/documentation/trade-policies.html"><span>Trade policies</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html"><span>Trade remedies</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#what-a-trade-remedy-is"><span>What a trade remedy is</span></a>
@@ -103,10 +95,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html"><span>Free trade agreements</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#what-trade-agreements-contain"><span>What trade agreements contain</span></a>
@@ -131,10 +121,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#steel-safeguard"><span>Steel safeguard</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html"><span>Steel safeguard</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#safeguard-categories"><span>Safeguard categories</span></a>
@@ -153,10 +141,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html"><span>Unilateral preferences</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html#what-unilateral-preferences-are"><span>What unilateral preferences are</span></a>
@@ -166,10 +152,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html"><span>Agricultural instruments</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#meursing-code"><span>Meursing code</span></a>
@@ -179,10 +163,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#import-and-export-control"><span>Import and export control</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html"><span>Import and export control</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#import-controls"><span>Import controls</span></a>
@@ -198,20 +180,16 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html#authorised-use-relief"><span>Authorised Use relief</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html"><span>Authorised Use relief</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html#finding-an-authorised-use-commodity-code"><span>Finding an Authorised Use commodity code</span></a>
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most favoured nation duties</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html"><span>Most favoured nation duties</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#what-most-favoured-nation-is"><span>What most favoured nation is</span></a>
@@ -224,10 +202,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html#origin-quotas"><span>Origin quotas</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html"><span>Origin quotas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html#what-origin-quotas-are"><span>What origin quotas are</span></a>
@@ -237,25 +213,19 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html#retaliatory-measures"><span>Retaliatory measures</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html"><span>Retaliatory measures</span></a>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html"><span>Suspensions and reliefs</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html#the-difference-between-suspensions-and-reliefs"><span>The difference between suspensions and reliefs</span></a>
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html#supplementary-units"><span>Supplementary units</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html"><span>Supplementary units</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html#what-supplementary-units-are"><span>What supplementary units are</span></a>
@@ -266,10 +236,11 @@
     </ul>
   </li>
 </ul>
-</li></ul><ul><li><a href="/tariff-data-manual/documentation/data-structures.html"><span>Data structures</span></a>
+</li>
+<li><a href="/tariff-data-manual/documentation/data-structures.html"><span>Data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html"><span>Quota suspensions</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#why-suspensions-are-used"><span>Why suspensions are used</span></a>
@@ -285,10 +256,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measures.html#measures"><span>Measures</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measures.html"><span>Measures</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measures.html#what-measures-are"><span>What measures are</span></a>
@@ -304,10 +273,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html"><span>Quota associations</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#where-quota-associations-are-used"><span>Where quota associations are used</span></a>
@@ -323,10 +290,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-types.html"><span>Measure types</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#what-measure-types-are"><span>What measure types are</span></a>
@@ -357,10 +322,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html#validity-dates-2"><span>Validity dates</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html"><span>Validity dates</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html#ending-validity-of-measures"><span>Ending validity of measures</span></a>
@@ -370,10 +333,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas"><span>Quotas</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quotas.html"><span>Quotas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quotas.html#how-tariff-quotas-operate"><span>How tariff quotas operate</span></a>
@@ -407,10 +368,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html"><span>Geographical areas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#what-geographical-areas-are"><span>What geographical areas are</span></a>
@@ -435,10 +394,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html"><span>Additional codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#what-additional-codes-are"><span>What additional codes are</span></a>
@@ -457,10 +414,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/footnotes.html"><span>Footnotes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#how-footnotes-are-structured"><span>How footnotes are structured</span></a>
@@ -476,10 +431,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#commodity-codes"><span>Commodity codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html"><span>Commodity codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#what-commodity-codes-are-made-up-of"><span>What commodity codes are made up of</span></a>
@@ -504,10 +457,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#preference-codes"><span>Preference codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html"><span>Preference codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#what-preference-codes-do"><span>What preference codes do</span></a>
@@ -520,10 +471,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/certificates.html"><span>Certificates</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/certificates.html#what-certificates-are"><span>What certificates are</span></a>
@@ -539,10 +488,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-components.html"><span>Measure components</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#what-measure-components-are"><span>What measure components are</span></a>
@@ -573,10 +520,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/regulations.html#regulations"><span>Regulations</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/regulations.html"><span>Regulations</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/regulations.html#base-regulations"><span>Base regulations</span></a>
@@ -589,10 +534,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html"><span>Quota blocking</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#how-long-quota-blocks-last"><span>How long quota blocks last</span></a>
@@ -608,10 +551,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html"><span>Measure conditions</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#what-measure-conditions-are"><span>What measure conditions are</span></a>
@@ -643,15 +584,18 @@
     </ul>
   </li>
 </ul>
-</li></ul>
+</li>
+</ul>
+
 
               </nav>
             </div>
           </div>
 
-        <div class="app-pane__content toc-open-disabled">
+        <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
             <h1 id="supplementary-units">Supplementary units</h1>
+
 <ul>
 <li>
 <a href="#what-supplementary-units-are">What supplementary units are</a>
@@ -660,9 +604,11 @@
 <a href="#measure-types-for-supplementary-units">Measure types for supplementary units</a>
 </li>
 </ul>
-<h2 id="what-supplementary-units-are">What supplementary units are</h2><p>Supplementary units are used when an extra measurement unit is needed on customs declarations. For example, the quantity of the products as well as the weight in kilograms.</p>
+<h2 id="what-supplementary-units-are">What supplementary units are</h2>
+<p>Supplementary units are used when an extra measurement unit is needed on customs declarations. For example, the quantity of the products as well as the weight in kilograms.</p>
 <p>This information is then used for statistical purposes.</p>
-<h2 id="measure-types-for-supplementary-units">Measure types for supplementary units</h2><p>There are 3 measure types available for supplementary units. These are:</p>
+<h2 id="measure-types-for-supplementary-units">Measure types for supplementary units</h2>
+<p>There are 3 measure types available for supplementary units. These are:</p>
 
 <ul>
 <li>109 Supplementary unit</li>
@@ -686,7 +632,7 @@
           <aside>
               <ul class="contribution-banner">
                 <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Trade-policies;-Supplementary-units">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Supplementary%20units'&amp;body=Problem%20with%20'Supplementary%20units'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/supplementary-units.html)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Supplementary+units%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Ftrade-policies%2Fsupplementary-units.html%29&amp;labels=bug&amp;title=Re%3A+%27Supplementary+units%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

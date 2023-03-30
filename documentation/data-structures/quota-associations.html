@@ -31,7 +31,7 @@
 
     <div class="app-pane">
       <div class="app-pane__header toc-open-disabled">
-        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 
         <header class="govuk-header app-header" role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-header__container--full-width">
@@ -57,7 +57,7 @@
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
             <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
-              <div class="search" data-module="search">
+              <div class="search" data-module="search" data-path-to-site-root="/tariff-data-manual/">
   <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual"/>
     <label class="govuk-label search__label" for="search" aria-hidden="true">
@@ -69,28 +69,20 @@
       class="govuk-input govuk-!-margin-bottom-0 search__input"
       aria-controls="search-results"
       placeholder="Search">
-    <button type="submit" class="govuk-button search__button">Search</button>
+    <button type="submit" class="search__button">Search</button>
   </form>
-  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
-    <div class="search-results__inner">
-      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
-      <div class="search-results__content"></div>
-    </div>
-  </div>
 </div>
 
               <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
-    <a href="/tariff-data-manual/#home"><span>Home</span></a>
+    <a href="/tariff-data-manual/"><span>Home</span></a>
   </li>
-</ul>
-<ul><li><a href="/tariff-data-manual/documentation/trade-policies.html"><span>Trade policies</span></a>
+<li><a href="/tariff-data-manual/documentation/trade-policies.html"><span>Trade policies</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html"><span>Trade remedies</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#what-a-trade-remedy-is"><span>What a trade remedy is</span></a>
@@ -103,10 +95,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html"><span>Free trade agreements</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#what-trade-agreements-contain"><span>What trade agreements contain</span></a>
@@ -131,10 +121,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#steel-safeguard"><span>Steel safeguard</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html"><span>Steel safeguard</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#safeguard-categories"><span>Safeguard categories</span></a>
@@ -153,10 +141,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html"><span>Unilateral preferences</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html#what-unilateral-preferences-are"><span>What unilateral preferences are</span></a>
@@ -166,10 +152,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html"><span>Agricultural instruments</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#meursing-code"><span>Meursing code</span></a>
@@ -179,10 +163,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#import-and-export-control"><span>Import and export control</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html"><span>Import and export control</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#import-controls"><span>Import controls</span></a>
@@ -198,20 +180,16 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html#authorised-use-relief"><span>Authorised Use relief</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html"><span>Authorised Use relief</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html#finding-an-authorised-use-commodity-code"><span>Finding an Authorised Use commodity code</span></a>
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most favoured nation duties</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html"><span>Most favoured nation duties</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#what-most-favoured-nation-is"><span>What most favoured nation is</span></a>
@@ -224,10 +202,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html#origin-quotas"><span>Origin quotas</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html"><span>Origin quotas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html#what-origin-quotas-are"><span>What origin quotas are</span></a>
@@ -237,25 +213,19 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html#retaliatory-measures"><span>Retaliatory measures</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html"><span>Retaliatory measures</span></a>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html"><span>Suspensions and reliefs</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html#the-difference-between-suspensions-and-reliefs"><span>The difference between suspensions and reliefs</span></a>
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html#supplementary-units"><span>Supplementary units</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html"><span>Supplementary units</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html#what-supplementary-units-are"><span>What supplementary units are</span></a>
@@ -266,10 +236,11 @@
     </ul>
   </li>
 </ul>
-</li></ul><ul><li><a href="/tariff-data-manual/documentation/data-structures.html"><span>Data structures</span></a>
+</li>
+<li><a href="/tariff-data-manual/documentation/data-structures.html"><span>Data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html"><span>Quota suspensions</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#why-suspensions-are-used"><span>Why suspensions are used</span></a>
@@ -285,10 +256,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measures.html#measures"><span>Measures</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measures.html"><span>Measures</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measures.html#what-measures-are"><span>What measures are</span></a>
@@ -304,10 +273,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html"><span>Quota associations</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#where-quota-associations-are-used"><span>Where quota associations are used</span></a>
@@ -323,10 +290,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-types.html"><span>Measure types</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#what-measure-types-are"><span>What measure types are</span></a>
@@ -357,10 +322,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html#validity-dates-2"><span>Validity dates</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html"><span>Validity dates</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html#ending-validity-of-measures"><span>Ending validity of measures</span></a>
@@ -370,10 +333,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas"><span>Quotas</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quotas.html"><span>Quotas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quotas.html#how-tariff-quotas-operate"><span>How tariff quotas operate</span></a>
@@ -407,10 +368,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html"><span>Geographical areas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#what-geographical-areas-are"><span>What geographical areas are</span></a>
@@ -435,10 +394,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html"><span>Additional codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#what-additional-codes-are"><span>What additional codes are</span></a>
@@ -457,10 +414,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/footnotes.html"><span>Footnotes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#how-footnotes-are-structured"><span>How footnotes are structured</span></a>
@@ -476,10 +431,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#commodity-codes"><span>Commodity codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html"><span>Commodity codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#what-commodity-codes-are-made-up-of"><span>What commodity codes are made up of</span></a>
@@ -504,10 +457,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#preference-codes"><span>Preference codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html"><span>Preference codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#what-preference-codes-do"><span>What preference codes do</span></a>
@@ -520,10 +471,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/certificates.html"><span>Certificates</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/certificates.html#what-certificates-are"><span>What certificates are</span></a>
@@ -539,10 +488,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-components.html"><span>Measure components</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#what-measure-components-are"><span>What measure components are</span></a>
@@ -573,10 +520,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/regulations.html#regulations"><span>Regulations</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/regulations.html"><span>Regulations</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/regulations.html#base-regulations"><span>Base regulations</span></a>
@@ -589,10 +534,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html"><span>Quota blocking</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#how-long-quota-blocks-last"><span>How long quota blocks last</span></a>
@@ -608,10 +551,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html"><span>Measure conditions</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#what-measure-conditions-are"><span>What measure conditions are</span></a>
@@ -643,15 +584,18 @@
     </ul>
   </li>
 </ul>
-</li></ul>
+</li>
+</ul>
+
 
               </nav>
             </div>
           </div>
 
-        <div class="app-pane__content toc-open-disabled">
+        <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
             <h1 id="quota-associations">Quota associations</h1>
+
 <ul>
 <li>
 <a href="#where-quota-associations-are-used">Where quota associations are used</a>
@@ -690,7 +634,8 @@
 <p>Quota associations define the link between one main quota and one or more sub-quotas. These are sometimes referred to as parent and child quotas.</p>
 <p>Quota associations link 2 or more quota definitions. Quota definitions are the time periods during which the quota is available.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94258407-b479ad00-ff24-11ea-9b48-e47abe1aa68a.png" alt="image" /></a></p>
-<h2 id="where-quota-associations-are-used">Where quota associations are used</h2><p>Product areas where quota associations are used include:</p>
+<h2 id="where-quota-associations-are-used">Where quota associations are used</h2>
+<p>Product areas where quota associations are used include:</p>
 
 <ul>
 <li>lamb, sheep and goat meat</li>
@@ -698,14 +643,15 @@
 <li>orange juice </li>
 <li>clothing</li>
 </ul>
-<h2 id="how-the-data-is-structured">How the data is structured</h2><p>The following diagram shows the data model for quota associations.</p>
+<h2 id="how-the-data-is-structured">How the data is structured</h2>
+<p>The following diagram shows the data model for quota associations.</p>
 <svg width="700pt" height="250pt"
  viewBox="0.00 0.00 700.00 250.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_147" class="graph" transform="scale(1 1) rotate(0) translate(4 246)">
+<g id="database_519" class="graph" transform="scale(1 1) rotate(0) translate(4 246)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-246 696,-246 696,4 -4,4"/>
 <!-- Quota association -->
-<g id="table_980" class="node">
+<g id="table_662" class="node">
 <title>Quota association</title>
 <polygon fill="none" stroke="black" points="9.5,-221 9.5,-237 186.5,-237 186.5,-221 9.5,-221"/>
 <text text-anchor="start" x="61" y="-226.8" font-family="Arial" font-size="9.00">Quota association</text>
@@ -734,7 +680,7 @@
 <polygon fill="none" stroke="black" points="8,-156 8,-238 187,-238 187,-156 8,-156"/>
 </g>
 <!-- Quota definition -->
-<g id="table_26" class="node">
+<g id="table_131" class="node">
 <title>Quota definition</title>
 <polygon fill="none" stroke="black" points="240.5,-213 240.5,-229 453.5,-229 453.5,-213 240.5,-213"/>
 <text text-anchor="start" x="314.5" y="-218.8" font-family="Arial" font-size="9.00">Quota definition</text>
@@ -811,19 +757,19 @@
 <polygon fill="none" stroke="black" points="239,-4 239,-230 454,-230 454,-4 239,-4"/>
 </g>
 <!-- Quota association&#45;&gt;Quota definition -->
-<g id="database_147_edge1" class="edge">
+<g id="database_519_edge1" class="edge">
 <title>Quota association:e&#45;&gt;Quota definition:w</title>
 <path fill="none" stroke="black" d="M187.5,-213C208.14,-213 214.64,-206.77 231.97,-205.3"/>
 <polygon fill="black" stroke="black" points="232.11,-207.93 239.5,-205 231.9,-202.68 232.11,-207.93"/>
 </g>
 <!-- Quota association&#45;&gt;Quota definition -->
-<g id="database_147_edge2" class="edge">
+<g id="database_519_edge2" class="edge">
 <title>Quota association:e&#45;&gt;Quota definition:w</title>
 <path fill="none" stroke="black" d="M187.5,-197C208.14,-197 214.64,-203.23 231.97,-204.7"/>
 <polygon fill="black" stroke="black" points="231.9,-207.32 239.5,-205 232.11,-202.07 231.9,-207.32"/>
 </g>
 <!-- Quota order number -->
-<g id="table_962" class="node">
+<g id="table_984" class="node">
 <title>Quota order number</title>
 <polygon fill="none" stroke="black" points="507,-197 507,-213 683,-213 683,-197 507,-197"/>
 <text text-anchor="start" x="553.5" y="-202.8" font-family="Arial" font-size="9.00">Quota order number</text>
@@ -851,7 +797,7 @@
 <polygon fill="none" stroke="black" points="506,-132 506,-214 684,-214 684,-132 506,-132"/>
 </g>
 <!-- Quota definition&#45;&gt;Quota order number -->
-<g id="database_147_edge3" class="edge">
+<g id="database_519_edge3" class="edge">
 <title>Quota definition:e&#45;&gt;Quota order number:w</title>
 <path fill="none" stroke="black" d="M454.5,-189C474.53,-189 481.41,-189 498.15,-189"/>
 <polygon fill="black" stroke="black" points="498.5,-191.63 506,-189 498.5,-186.38 498.5,-191.63"/>
@@ -859,34 +805,40 @@
 </g>
 </svg><p>A quota association links to a main definition (parent quota) and a sub-definition (child). These definitions define the quota order number.</p>
 <p>The association will last as long as the definitions. In most cases, the definitions of the main and sub-quota are the same length.</p>
-<h2 id="how-quota-types-are-defined">How quota types are defined</h2><p>Each quota association has a relation type and a co-efficient.</p>
-<h3 id="relation-types">Relation types</h3><p>There are 2 relation types:</p>
+<h2 id="how-quota-types-are-defined">How quota types are defined</h2>
+<p>Each quota association has a relation type and a co-efficient.</p>
+<h3 id="relation-types">Relation types</h3>
+<p>There are 2 relation types:</p>
 
 <ol>
 <li>Equivalent - equal to the main quota</li>
 <li>Normal </li>
 </ol>
-<h4 id="equivalent-eq">Equivalent (EQ)</h4><p>EQ is used to relate quota order numbers where volume or weight is to be interpreted differently via a co-efficient.</p>
+<h4 id="equivalent-eq">Equivalent (EQ)</h4>
+<p>EQ is used to relate quota order numbers where volume or weight is to be interpreted differently via a co-efficient.</p>
 <p>For example, the sheep and goat meat WTO quota. Details of the trade in sheep and goat meat are set out in <a href="https://www.legislation.gov.uk/uksi/2020/1432">the Customs (Tariff Quota) (EU Exit) Regulations</a> on GOV.UK.</p>
 <p>Equivalence associations are used in this set of quotas because there are 3 types of products to be traded. Each of these is represented by multiple commodities whose imports are to be treated differently, depending on the product.</p>
 <p>When determining quota allocations, 1kg of meat off the bone counts less than 1kg of meat on the bone.</p>
 <p>The table on page 6 of the <a href="https://www.gov.uk/government/publications/reference-documents-for-the-customs-tariff-quotas-eu-exit-regulations-2020">reference document</a> shows the effect and implementation of EQ quota associations.</p>
 <p>The UK is allowed to import 228,254 tonnes of meat from New Zealand annually. The notes in the volume column are instrumental. &lsquo;Carcass weight&rsquo; illustrates you need to do a calculation to determine what makes up a tonne.</p>
 <p>In this case, bone-in carcases are counted as 1 tonne, boneless mutton/sheep counts as 1.81 tonnes and boneless lamb counts as 1.67 tonnes. These values are reflected in the co-efficients on the printed regulation and in the quota associations table in the database.</p>
-<h4 id="normal-nm">Normal (NM)</h4><p>NM is used where weight or volume is the same across each related definition. A maximum weight/volume is applied to specific commodity codes in the sub-quota.</p>
+<h4 id="normal-nm">Normal (NM)</h4>
+<p>NM is used where weight or volume is the same across each related definition. A maximum weight/volume is applied to specific commodity codes in the sub-quota.</p>
 <p>For example, a function known as ‘quota of quotas’ applies to Nicaragua and El Salvador. It applies a maximum import volume across multiple quotas.</p>
 <p>There is a single quota (or quota of quotas) which a master volume is assigned to.</p>
 <p>This is a blanket quota showing a maximum threshold: there are no commodities applied to the master quota. Traders are not expected to reference the quota order number on their declarations.</p>
 <p>The quota then has a NM type relationship with the 34 individual quotas that are afforded a threshold by the main quota. Quota volumes are applied to the individual quotas.</p>
 <p>The main quota limits the volume of imports, and each sub-quota applies a maximum volume to each commodity.</p>
-<h3 id="co-efficients">Co-efficients</h3><p>Where a quota has been over–subscribed, the Rural Payments Agency applies a reduction co-efficient. This is the standard approach for dividing up the available quota.</p>
+<h3 id="co-efficients">Co-efficients</h3>
+<p>Where a quota has been over–subscribed, the Rural Payments Agency applies a reduction co-efficient. This is the standard approach for dividing up the available quota.</p>
 <p>The following rules apply:</p>
 
 <ul>
 <li>the value assigned to the co-efficient field is always 1.00 where the relation type is ‘NM’</li>
 <li>the values assigned to the co-efficient field are always something other than 1.00 where the relation type is ‘EQ’</li>
 </ul>
-<h2 id="business-rules">Business rules</h2><p>Read the business rules for quota associations in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.
+<h2 id="business-rules">Business rules</h2>
+<p>Read the business rules for quota associations in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.
 <link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
@@ -895,7 +847,7 @@
           <aside>
               <ul class="contribution-banner">
                 <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Quota-associations">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Quota%20associations'&amp;body=Problem%20with%20'Quota%20associations'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-associations.html)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Quota+associations%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fdata-structures%2Fquota-associations.html%29&amp;labels=bug&amp;title=Re%3A+%27Quota+associations%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>

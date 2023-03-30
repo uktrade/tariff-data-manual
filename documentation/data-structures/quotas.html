@@ -31,7 +31,7 @@
 
     <div class="app-pane">
       <div class="app-pane__header toc-open-disabled">
-        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 
         <header class="govuk-header app-header" role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-header__container--full-width">
@@ -57,7 +57,7 @@
       <div class="app-pane__body" data-module="in-page-navigation">
           <div class="app-pane__toc">
             <div class="toc" data-module="table-of-contents" tabindex="-1" aria-label="Table of contents" role="dialog">
-              <div class="search" data-module="search">
+              <div class="search" data-module="search" data-path-to-site-root="/tariff-data-manual/">
   <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
     <input type="hidden" name="as_sitesearch" value="https://uktrade.github.io/tariff-data-manual"/>
     <label class="govuk-label search__label" for="search" aria-hidden="true">
@@ -69,28 +69,20 @@
       class="govuk-input govuk-!-margin-bottom-0 search__input"
       aria-controls="search-results"
       placeholder="Search">
-    <button type="submit" class="govuk-button search__button">Search</button>
+    <button type="submit" class="search__button">Search</button>
   </form>
-  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
-    <div class="search-results__inner">
-      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
-      <h2 id="search-results-title" class="search-results__title" aria-live="assertive" role="alert">Results</h2>
-      <div class="search-results__content"></div>
-    </div>
-  </div>
 </div>
 
               <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
                       <ul>
   <li>
-    <a href="/tariff-data-manual/#home"><span>Home</span></a>
+    <a href="/tariff-data-manual/"><span>Home</span></a>
   </li>
-</ul>
-<ul><li><a href="/tariff-data-manual/documentation/trade-policies.html"><span>Trade policies</span></a>
+<li><a href="/tariff-data-manual/documentation/trade-policies.html"><span>Trade policies</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#trade-remedies"><span>Trade remedies</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html"><span>Trade remedies</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/trade-remedies.html#what-a-trade-remedy-is"><span>What a trade remedy is</span></a>
@@ -103,10 +95,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#free-trade-agreements"><span>Free trade agreements</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html"><span>Free trade agreements</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/free-trade-agreements.html#what-trade-agreements-contain"><span>What trade agreements contain</span></a>
@@ -131,10 +121,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#steel-safeguard"><span>Steel safeguard</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html"><span>Steel safeguard</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#safeguard-categories"><span>Safeguard categories</span></a>
@@ -153,10 +141,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html#unilateral-preferences"><span>Unilateral preferences</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html"><span>Unilateral preferences</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/unilateral-preferences.html#what-unilateral-preferences-are"><span>What unilateral preferences are</span></a>
@@ -166,10 +152,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#agricultural-instruments"><span>Agricultural instruments</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html"><span>Agricultural instruments</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#meursing-code"><span>Meursing code</span></a>
@@ -179,10 +163,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#import-and-export-control"><span>Import and export control</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html"><span>Import and export control</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/import-&-export-control.html#import-controls"><span>Import controls</span></a>
@@ -198,20 +180,16 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html#authorised-use-relief"><span>Authorised Use relief</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html"><span>Authorised Use relief</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/authorised-use-relief.html#finding-an-authorised-use-commodity-code"><span>Finding an Authorised Use commodity code</span></a>
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#most-favoured-nation-duties"><span>Most favoured nation duties</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html"><span>Most favoured nation duties</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html#what-most-favoured-nation-is"><span>What most favoured nation is</span></a>
@@ -224,10 +202,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html#origin-quotas-2"><span>Origin quotas</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html"><span>Origin quotas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/origin-quotas.html#what-origin-quotas-are"><span>What origin quotas are</span></a>
@@ -237,25 +213,19 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html#retaliatory-measures"><span>Retaliatory measures</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html"><span>Retaliatory measures</span></a>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html#suspensions-and-reliefs"><span>Suspensions and reliefs</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html"><span>Suspensions and reliefs</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/suspensions-and-reliefs.html#the-difference-between-suspensions-and-reliefs"><span>The difference between suspensions and reliefs</span></a>
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html#supplementary-units"><span>Supplementary units</span></a>
+    <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html"><span>Supplementary units</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html#what-supplementary-units-are"><span>What supplementary units are</span></a>
@@ -266,10 +236,11 @@
     </ul>
   </li>
 </ul>
-</li></ul><ul><li><a href="/tariff-data-manual/documentation/data-structures.html"><span>Data structures</span></a>
+</li>
+<li><a href="/tariff-data-manual/documentation/data-structures.html"><span>Data structures</span></a>
 <ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#quota-suspensions"><span>Quota suspensions</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html"><span>Quota suspensions</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-suspensions.html#why-suspensions-are-used"><span>Why suspensions are used</span></a>
@@ -285,10 +256,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measures.html#measures"><span>Measures</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measures.html"><span>Measures</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measures.html#what-measures-are"><span>What measures are</span></a>
@@ -304,10 +273,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#quota-associations"><span>Quota associations</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html"><span>Quota associations</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#where-quota-associations-are-used"><span>Where quota associations are used</span></a>
@@ -323,10 +290,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types"><span>Measure types</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-types.html"><span>Measure types</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#what-measure-types-are"><span>What measure types are</span></a>
@@ -357,10 +322,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html#validity-dates-2"><span>Validity dates</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html"><span>Validity dates</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html#ending-validity-of-measures"><span>Ending validity of measures</span></a>
@@ -370,10 +333,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas"><span>Quotas</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quotas.html"><span>Quotas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quotas.html#how-tariff-quotas-operate"><span>How tariff quotas operate</span></a>
@@ -407,10 +368,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#geographical-areas"><span>Geographical areas</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html"><span>Geographical areas</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#what-geographical-areas-are"><span>What geographical areas are</span></a>
@@ -435,10 +394,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#additional-codes"><span>Additional codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html"><span>Additional codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#what-additional-codes-are"><span>What additional codes are</span></a>
@@ -457,10 +414,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#footnotes"><span>Footnotes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/footnotes.html"><span>Footnotes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#how-footnotes-are-structured"><span>How footnotes are structured</span></a>
@@ -476,10 +431,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#commodity-codes"><span>Commodity codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html"><span>Commodity codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html#what-commodity-codes-are-made-up-of"><span>What commodity codes are made up of</span></a>
@@ -504,10 +457,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#preference-codes"><span>Preference codes</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html"><span>Preference codes</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/preference-codes.html#what-preference-codes-do"><span>What preference codes do</span></a>
@@ -520,10 +471,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/certificates.html#certificates"><span>Certificates</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/certificates.html"><span>Certificates</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/certificates.html#what-certificates-are"><span>What certificates are</span></a>
@@ -539,10 +488,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-components"><span>Measure components</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-components.html"><span>Measure components</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#what-measure-components-are"><span>What measure components are</span></a>
@@ -573,10 +520,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/regulations.html#regulations"><span>Regulations</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/regulations.html"><span>Regulations</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/regulations.html#base-regulations"><span>Base regulations</span></a>
@@ -589,10 +534,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#quota-blocking"><span>Quota blocking</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html"><span>Quota blocking</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#how-long-quota-blocks-last"><span>How long quota blocks last</span></a>
@@ -608,10 +551,8 @@
       </li>
     </ul>
   </li>
-</ul>
-<ul>
   <li>
-    <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions"><span>Measure conditions</span></a>
+    <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html"><span>Measure conditions</span></a>
     <ul>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#what-measure-conditions-are"><span>What measure conditions are</span></a>
@@ -643,15 +584,18 @@
     </ul>
   </li>
 </ul>
-</li></ul>
+</li>
+</ul>
+
 
               </nav>
             </div>
           </div>
 
-        <div class="app-pane__content toc-open-disabled">
+        <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
             <h1 id="quotas">Quotas</h1>
+
 <ul>
 <li>
 <a href="#how-tariff-quotas-operate">How tariff quotas operate</a>
@@ -727,39 +671,49 @@
 <blockquote>
 <p>Tariff quotas help regulate the volume of trade between countries. They allow a certain amount of specific goods to be imported at a lower rate of duty.</p>
 </blockquote>
-<h2 id="how-tariff-quotas-operate">How tariff quotas operate</h2><p>Most tariff quotas operate on a first come, first serve basis. This involves making a limited amount available to traders. Whoever claims against that amount first pays the reduced rate. Once that amount is used up, traders must pay the full (or less preferential) duty rate.</p>
+<h2 id="how-tariff-quotas-operate">How tariff quotas operate</h2>
+<p>Most tariff quotas operate on a first come, first serve basis. This involves making a limited amount available to traders. Whoever claims against that amount first pays the reduced rate. Once that amount is used up, traders must pay the full (or less preferential) duty rate.</p>
 <p>Other tariff quotas are licence based. Access to them depends on getting an import licence before importing the goods.</p>
 <p>When a quota is almost used up it becomes &lsquo;critical&rsquo;. If a quota&rsquo;s status is critical, security must be provided as there is no guarantee a claim will be allowed.</p>
 <p>Read more <a href="https://www.gov.uk/guidance/claiming-tariff-quotas-to-reduce-import-duties">about tariff quotas</a> on GOV.UK.</p>
-<h2 id="types-of-quota">Types of quota</h2><p>Quotas may be preferential or non-preferential.</p>
+<h2 id="types-of-quota">Types of quota</h2>
+<p>Quotas may be preferential or non-preferential.</p>
 <p>Preferential quotas are usually made available through <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements-2">free trade agreements</a>. The 2 parties agree on the quotas as part of the negotiations between them. The agreement provides both parties with mutual benefits.</p>
 <p>In the Tariff, preferential quotas are always assigned to a specific country or to a small group of countries.</p>
 <p>Non-preferential quotas are aimed at maintaining the balance of trade flows on critical goods. They do this by opening up a specific volume of market access to all overseas nations.</p>
 <p>In the Tariff, non-preferential quotas are usually assigned to Erga Omnes or &lsquo;all countries (1011)&rsquo;.</p>
 <p>There are very few non-preferential quotas that are available to only one country.</p>
-<h3 id="wto-quotas">WTO quotas</h3><p>The UK declares a tariff &lsquo;schedule of concessions&rsquo; to the WTO.</p>
+<h3 id="wto-quotas">WTO quotas</h3>
+<p>The UK declares a tariff &lsquo;schedule of concessions&rsquo; to the WTO.</p>
 <p>This lists the concessions the UK will give to overseas nations to allow them greater access to UK markets than they would get by adopting the most favoured nation rate alone.</p>
 <p>In the Tariff, WTO quotas are usually assigned to Erga Omnes or &lsquo;all countries (1011)&rsquo;.</p>
-<h3 id="autonomous-quotas">Autonomous quotas</h3><p>Autonomous tariff quotas (ATQs) allow limited quantities of a product to be imported at a reduced rate for a specified period.</p>
+<h3 id="autonomous-quotas">Autonomous quotas</h3>
+<p>Autonomous tariff quotas (ATQs) allow limited quantities of a product to be imported at a reduced rate for a specified period.</p>
 <p>ATQs are shown in the Tariff as &lsquo;non-preferential quotas&rsquo;.</p>
 <p>Read <a href="https://www.gov.uk/guidance/duty-suspensions-and-tariff-quotas">about autonomous quotas (ATQs)</a> on GOV.UK.</p>
-<h3 id="origin-quotas">Origin quotas</h3><p>Origin quotas allow specific quantities of some goods to get preferential tariff treatment. The goods must meet certain conditions.</p>
+<h3 id="origin-quotas">Origin quotas</h3>
+<p>Origin quotas allow specific quantities of some goods to get preferential tariff treatment. The goods must meet certain conditions.</p>
 <p>Read more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-idioms/origin-quotas.html#origin-quotas">about origin quotas</a>.</p>
-<h3 id="safeguard-quotas">Safeguard quotas</h3><p>Safeguard quotas aim to prevent dumping of products by placing a cap on the volume that can be imported.</p>
+<h3 id="safeguard-quotas">Safeguard quotas</h3>
+<p>Safeguard quotas aim to prevent dumping of products by placing a cap on the volume that can be imported.</p>
 <p>Read <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-idioms/steel-safeguard.html#steel-safeguard">about safeguard quotas</a>.</p>
-<h3 id="an-example-importing-lamb">An example: importing lamb</h3><p>The following example shows a quota associated with the import of lamb on commodity code 0204100010.</p>
+<h3 id="an-example-importing-lamb">An example: importing lamb</h3>
+<p>The following example shows a quota associated with the import of lamb on commodity code 0204100010.</p>
 <p>Third country duty (available to all countries) was 12% + £143.00 GBP per 100kg.</p>
 <p><img width="1142" alt="Third country duty for carcases and half carcasses of domestic lamb, fresh or chilled" src="https://user-images.githubusercontent.com/82160410/143476323-b280eaba-1f41-448b-9f91-6abe86f35a23.png"></p>
 <p>There was a non-preferential tariff quota (order number 052016) applied to the commodity code. This allowed a certain volume of goods into the UK at 0.00%. The quota ran from 1 January 2021 to 31 December 2021.</p>
 <p><img width="1128" alt="Non preferential tariff quota for carcases and half carcasses of domestic lamb, fresh or chilled" src="https://user-images.githubusercontent.com/82160410/143476669-65098741-cb0b-4a32-83eb-5de631ed1641.png"></p>
 <p>The following image shows the opening balance was 22000.0kg and the current balance was 1727.2kg.</p>
 <p><img width="924" alt="Screen Shot 2021-11-25 at 4 39 11 PM" src="https://user-images.githubusercontent.com/82160410/143480188-bd0714bf-08d4-4ed4-80ae-da6481d80b8b.png"></p>
-<h2 id="defining-and-grouping-quotas">Defining and grouping quotas</h2><p>The following diagram shows the relationships between the different types of quotas.</p>
+<h2 id="defining-and-grouping-quotas">Defining and grouping quotas</h2>
+<p>The following diagram shows the relationships between the different types of quotas.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/93910896-a3992380-fcf9-11ea-936c-f6e5c1ea09dc.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93910896-a3992380-fcf9-11ea-936c-f6e5c1ea09dc.png" alt="image" /></a></p>
-<h2 id="how-quotas-are-managed">How quotas are managed</h2><p>First come, first serve and licensed quotas are managed differently.</p>
+<h2 id="how-quotas-are-managed">How quotas are managed</h2>
+<p>First come, first serve and licensed quotas are managed differently.</p>
 <p>First come, first serve quotas pass through the HMRC systems CHIEF and CDS.</p>
 <p>Licensed quotas do not pass through HMRC systems. They are handled by <a href="https://www.gov.uk/government/organisations/rural-payments-agency">the Rural Payments Agency</a>.</p>
-<h2 id="how-long-quotas-last-for">How long quotas last for</h2><p>There are no limits on how long quotas can last for.</p>
+<h2 id="how-long-quotas-last-for">How long quotas last for</h2>
+<p>There are no limits on how long quotas can last for.</p>
 <p>In the Tariff, you will find the following types of quota:</p>
 
 <ul>
@@ -770,15 +724,19 @@
 <li>quarterly quota starting from another date, lasting 12 months and repeating in that pattern every year</li>
 <li>part year quota split into monthly sections and repeating every year</li>
 </ul>
-<h2 id="how-tariff-quotas-are-introduced">How tariff quotas are introduced</h2><p>Usually tariff quotas are brought in over time by a process called &lsquo;staging&rsquo;.</p>
+<h2 id="how-tariff-quotas-are-introduced">How tariff quotas are introduced</h2>
+<p>Usually tariff quotas are brought in over time by a process called &lsquo;staging&rsquo;.</p>
 <p>Read more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#introducing-the-benefits-of-a-trade-agreement-over-time-staging">about staging</a>.</p>
-<h2 id="introductory-periods">Introductory periods</h2><p>Sometimes quotas are set up with an introductory period. For example, the UK may sign a new trade agreement with another country which contains a quota period.</p>
+<h2 id="introductory-periods">Introductory periods</h2>
+<p>Sometimes quotas are set up with an introductory period. For example, the UK may sign a new trade agreement with another country which contains a quota period.</p>
 <p>If the start of the quota period and the implementation of the trade agreement are not the same, an introductory period would be needed.</p>
 <p>During the introductory period, only a proportion of the total quota balance is available to traders.</p>
-<h2 id="how-the-data-is-structured">How the data is structured</h2><p>There are more data objects for first come, first serve quotas than for licensed quotas.</p>
+<h2 id="how-the-data-is-structured">How the data is structured</h2>
+<p>There are more data objects for first come, first serve quotas than for licensed quotas.</p>
 <p>Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" alt="image" /></a></p>
-<h3 id="the-quota-order-number-table">The quota order number table</h3><p>The quota order number table’s quota order number ID is linked to the measures table via the measures table’s order number field (one of many examples where common field names do not match in TARIC).</p>
+<h3 id="the-quota-order-number-table">The quota order number table</h3>
+<p>The quota order number table’s quota order number ID is linked to the measures table via the measures table’s order number field (one of many examples where common field names do not match in TARIC).</p>
 <div class="table-container">
         <table>
           <tr>
@@ -808,7 +766,8 @@
 <br>The   date on which the quota order number record terminates – this should, in   nearly every circumstance, be left blank – see pages on origins and origin   exclusions below for the exceptions</td>
 </tr>
         </table>
-      </div><h3 id="the-quota-definition-table">The quota definition table</h3><p>The quota definition table is the table which defines the cadence of the quota and the volume of the goods that can be imported at reduced rates during each period.</p>
+      </div><h3 id="the-quota-definition-table">The quota definition table</h3>
+<p>The quota definition table is the table which defines the cadence of the quota and the volume of the goods that can be imported at reduced rates during each period.</p>
 <div class="table-container">
         <table>
           <tr>
@@ -905,14 +864,17 @@
 <p>Imagine that a brand new regime starts on 1 January. It is a new policy with nothing preceding it.</p>
 <p>We want all quotas to start as soon as possible (unless set to specific seasonal periods).</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94042307-4c5f8580-fdc3-11ea-8c27-fe9550714d24.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94042307-4c5f8580-fdc3-11ea-8c27-fe9550714d24.png" alt="image" /></a></p>
-<h2 id="assigning-quotas-to-geographical-areas">Assigning quotas to geographical areas</h2><p>A quota can be assigned either to an individual country or to a group of countries.</p>
+<h2 id="assigning-quotas-to-geographical-areas">Assigning quotas to geographical areas</h2>
+<p>A quota can be assigned either to an individual country or to a group of countries.</p>
 <p>It is also common to exclude countries from a country group.</p>
 <p>Read more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas">about geographical areas</a>.</p>
-<h3 id="managing-geography">Managing geography</h3><p>A first come, first serve quota only works when the full set of quota tables and measure tables are all set up and synchronised. It is important to understand a few points around the geography of these 2 entities in order to create the right data.</p>
+<h3 id="managing-geography">Managing geography</h3>
+<p>A first come, first serve quota only works when the full set of quota tables and measure tables are all set up and synchronised. It is important to understand a few points around the geography of these 2 entities in order to create the right data.</p>
 <p>Geography has to be set correctly against both the measure and the quota order number.</p>
 <p>While the measures table has a 1-2-1 relationship with geographical areas, the quota order number table can relate to multiple origins via the many-to-many linking table ‘quota order number origins’.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" alt="image" /></a></p>
-<h3 id="quota-order-number-origins-and-exclusions-table">Quota order number origins and exclusions table</h3><p>Any entries made in these two quota origin-related tables must also be matched by entries in the measures and measure_excluded_geographical_areas tables.</p>
+<h3 id="quota-order-number-origins-and-exclusions-table">Quota order number origins and exclusions table</h3>
+<p>Any entries made in these two quota origin-related tables must also be matched by entries in the measures and measure_excluded_geographical_areas tables.</p>
 <div class="table-container">
         <table>
           <tr>
@@ -971,7 +933,8 @@
 <br>•Foreign key to the SID of the   excluded geographical area</td>
 </tr>
         </table>
-      </div><h3 id="strategies-for-managing-origins-and-exclusions">Strategies for managing origins and exclusions</h3><p>Quota order number origins have start dates and end dates.</p>
+      </div><h3 id="strategies-for-managing-origins-and-exclusions">Strategies for managing origins and exclusions</h3>
+<p>Quota order number origins have start dates and end dates.</p>
 <p>Quota order number origin exclusions do not have start dates and end dates.</p>
 <p>If you want to alter the quota order number origin exclusions for a quota, and you do not want it to happen immediately, you cannot just add the exclusion to the origin: it will take effect immediately, which is almost certainly not the requirement. In this case, there are 2 options:</p>
 
@@ -979,9 +942,11 @@
 <li>either end the origin and start another origin</li>
 <li>or end the quota order number and start another quota order number with a new origin</li>
 </ul>
-<h3 id="quota-exception-periods-and-events">Quota exception periods and events</h3><p>Eight additional tables are linked to the definition tables (see the figure below). The two period tables (highlighted in red in the figure) are useful – these are discussed in the relevant documents (blocking and suspending quotas).</p>
+<h3 id="quota-exception-periods-and-events">Quota exception periods and events</h3>
+<p>Eight additional tables are linked to the definition tables (see the figure below). The two period tables (highlighted in red in the figure) are useful – these are discussed in the relevant documents (blocking and suspending quotas).</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" alt="image" /></a></p>
-<h2 id="business-rules">Business rules</h2><p>Read the business rules for quotas in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
+<h2 id="business-rules">Business rules</h2>
+<p>Read the business rules for quotas in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
 
             
           </main>
@@ -989,7 +954,7 @@
           <aside>
               <ul class="contribution-banner">
                 <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Quotas">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?labels=bug&amp;title=Re:%20'Quotas'&amp;body=Problem%20with%20'Quotas'%20(https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quotas.html)">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Quotas%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fdata-structures%2Fquotas.html%29&amp;labels=bug&amp;title=Re%3A+%27Quotas%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
