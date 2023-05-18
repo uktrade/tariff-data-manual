@@ -84,8 +84,8 @@ graph "Measures and Regulations" {
 Requires:
 
 * graphviz
-* node
-* ruby 2.6.0
+* node (supported major versions: 10, 12, 14)
+* ruby 2.7.2
 
 On Mac these can be installed with:
 
@@ -94,6 +94,14 @@ brew install node
 brew install graphviz
 brew install ruby
 ```
+
+[rbenv](https://github.com/rbenv/rbenv) and [nvm](https://github.com/nvm-sh/nvm) are useful for installing and running multiple version of ruby and nodejs respectively. rbenv can be installed with:
+
+```
+brew install rbenv ruby-build
+```
+
+For nvm install instructions, see [the project page on github](https://github.com/nvm-sh/nvm).
 
 Install the submodule:
 
