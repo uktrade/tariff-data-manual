@@ -10,6 +10,12 @@ OUTPUT_DIR = 'source/documentation'
 IMAGES_DIR = 'source/images'
 SEPARATOR  = ';-'
 
+SOURCE_DATABASE = 'https://data.api.trade.gov.uk/v1/datasets/uk-tariff-2021-01-01/versions/latest/data?format=sqlite&download'
+LOCAL_DATABASE = ENV['LOCAL_DATABASE'] || 'tariff.sqlite'
+
+# Export for use in docs render
+ENV['LOCAL_DATABASE'] = LOCAL_DATABASE
+
 WIKI_FILES   = FileList["#{INPUT_DIR}/*.md"]
 OUTPUT_FILES = WIKI_FILES.map {|n| File.join *n.gsub(INPUT_DIR, OUTPUT_DIR).gsub('.md','.html.md.erb').downcase.split(SEPARATOR) }
 INDEX_FILE   = File.join OUTPUT_DIR, '../', 'index.html.md.erb'
@@ -47,7 +53,7 @@ task :patches do
   end
 end
 
-task build: [:pages, :images, :patches] do
+task build: [:pages, :images, :patches, LOCAL_DATABASE] do
   sh 'middleman', 'build', '--verbose'
   sh 'sed', '-i', "s:url(\"/images/:url(\"#{PREFIX}/images/:", *Dir.glob('build/stylesheets/*.css')
 end
@@ -82,6 +88,12 @@ OUTPUT_IMAGES.zip(IMAGE_FILES).each do |output, input|
   file output => [input, File.dirname(output)] do
     cp input, output
   end
+end
+
+file LOCAL_DATABASE do
+  require 'open-uri'
+  rake_output_message "curl '#{SOURCE_DATABASE}' > #{LOCAL_DATABASE}"
+  IO.copy_stream URI.open(SOURCE_DATABASE), LOCAL_DATABASE
 end
 
 task :clean do

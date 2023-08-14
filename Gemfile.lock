@@ -160,6 +160,8 @@ GEM
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
+    sqlite3 (1.6.3)
+      mini_portile2 (~> 2.8.0)
     temple (0.10.1)
     thor (1.2.2)
     tilt (2.0.11)
@@ -178,6 +180,7 @@ DEPENDENCIES
   dbml (>= 0.2)
   govuk_tech_docs (~> 3.3)
   rake
+  sqlite3 (~> 1.6)
   tzinfo-data
   wdm (~> 0.1.0)
 

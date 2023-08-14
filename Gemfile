@@ -16,3 +16,5 @@ gem 'dbml', '>= 0.2'
 
 # Include automation
 gem 'rake'
+
+gem "sqlite3", "~> 1.6"
