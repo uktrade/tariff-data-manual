@@ -19,10 +19,14 @@ jobs:
           git submodule foreach git fetch --all
           git submodule foreach git reset --hard origin/master
 
+      - name: Retrieve update description
+        id: get-commit-message
+        run: echo "description=$(git submodule -q foreach git log -n1 --format=format:%s)" >> "$GITHUB_OUTPUT"
+
       - name: Commit updated submodule
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Updating based on latest wiki changes
+          commit_message: ${{ steps.get-commit-message.outputs.description }}
           file_pattern: wiki .gitmodules
 
   build-static-pages:
