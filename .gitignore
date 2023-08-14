@@ -22,3 +22,6 @@
 .DS_Store
 
 Staticfile.auth
+
+# Ignore downloaded databases
+*.sqlite
