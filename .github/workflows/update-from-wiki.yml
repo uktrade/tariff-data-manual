@@ -10,7 +10,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.ref || 'refs/heads/master' }}
           submodules: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -37,6 +37,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
         with:
+          ref: ${{ github.ref || 'refs/heads/master' }}
           submodules: true
 
       - name: Setup Graphviz
