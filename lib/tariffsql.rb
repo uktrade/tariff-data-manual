@@ -30,5 +30,12 @@ def sql_to_table sql
         end.join}</tr>"
       end.join}
     </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=#{statement.columns.size}>
+          Last updated #{Time.now.strftime('%d %b %Y')}
+        </td>
+      </tr>
+    </tfoot>
   </table>"
 end
