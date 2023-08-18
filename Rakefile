@@ -17,7 +17,12 @@ LOCAL_DATABASE = ENV['LOCAL_DATABASE'] || 'tariff.sqlite'
 ENV['LOCAL_DATABASE'] = LOCAL_DATABASE
 
 WIKI_FILES   = FileList["#{INPUT_DIR}/*.md"]
-OUTPUT_FILES = WIKI_FILES.map {|n| File.join *n.gsub(INPUT_DIR, OUTPUT_DIR).gsub('.md','.html.md.erb').downcase.split(SEPARATOR) }
+OUTPUT_FILES = WIKI_FILES.map do |n|
+  File.join *n.gsub(INPUT_DIR, OUTPUT_DIR).
+               gsub(/[^a-zA-Z0-9\-\/\;\.]+/, '-').
+               gsub('.md','.html.md.erb').
+               downcase.split(SEPARATOR)
+end
 INDEX_FILE   = File.join OUTPUT_DIR, '../', 'index.html.md.erb'
 
 IMAGE_FILES = FileList["#{INPUT_DIR}/images/*.*"]
@@ -94,6 +99,10 @@ file LOCAL_DATABASE do
   require 'open-uri'
   rake_output_message "curl '#{SOURCE_DATABASE}' > #{LOCAL_DATABASE}"
   IO.copy_stream URI.open(SOURCE_DATABASE), LOCAL_DATABASE
+end\
+
+task :serve => [:build] do
+  sh 'middleman', 'serve'
 end
 
 task :clean do
