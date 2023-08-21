@@ -1,3 +1,4 @@
+require 'uri'
 require 'govuk_tech_docs'
 require_relative 'lib/dot'
 require_relative 'lib/dbml'
@@ -33,7 +34,23 @@ module EmbedSVG
 end
 GovukTechDocs::TechDocsHTMLRenderer.prepend(EmbedSVG)
 
+module RetargetLinks
+  def link link, title, content
+    if link.nil?
+      super link, title, content
+    else
+      uri = URI::parse link
+      if uri.relative? && uri.path =~ /\.md$/
+        uri.path = PREFIX + "/documentation/" + uri.path.downcase.gsub(/;-/, '/').gsub(/\.md$/, '.html')
+      end
+      super uri.to_s, title, content
+    end
+  end
+end
+GovukTechDocs::TechDocsHTMLRenderer.prepend(RetargetLinks)
+
+PREFIX = (ENV['GITHUB_REPOSITORY'] || '').partition('/')[-2..-1].join
+
 configure :build do
-  prefix = (ENV['GITHUB_REPOSITORY'] || '').partition('/')[-2..-1].join
-  set :http_prefix, "#{prefix}/"
+  set :http_prefix, "#{PREFIX}/"
 end
