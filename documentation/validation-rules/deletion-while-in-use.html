@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Additional codes - Tariff Data Manual</title>
+    <title>Deletion while in use - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/additional-codes.html">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Additional codes - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/additional-codes.html" />
+      <meta name="twitter:title" content="Deletion while in use - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Additional codes" />
+      <meta property="og:title" content="Deletion while in use" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/additional-codes.html" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html" />
 
     
   </head>
@@ -304,7 +304,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/quotas.html#assigning-quotas-to-geographical-areas"><span>Assigning quotas to geographical areas</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas-business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -449,7 +449,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#how-additional-codes-apply"><span>How additional codes apply</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#additional-codes-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -631,69 +631,48 @@
 
         <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="additional-codes">Additional codes</h1>
+            <h1 id="deletion-while-in-use">Deletion while in use</h1>
 
 <ul>
 <li>
-<a href="#what-additional-codes-are">What additional codes are</a>
-</li>
-<li>
-<a href="#what-additional-codes-show">What additional codes show</a>
-</li>
-<li>
-<a href="#how-additional-codes-work">How additional codes work</a>
-</li>
-<li>
-<a href="#how-additional-codes-apply">How additional codes apply</a>
-<ul>
-<li>
-<a href="#additional-code-types-data-entities">Additional code types data entities</a>
+<a href="#examples">Examples</a>
 </li>
 </ul>
-<p></li>
-<li>
-<a href="#business-rules">Business rules</a>
-</li>
-</ul></p>
-<h2 id="what-additional-codes-are">What additional codes are</h2>
-<p>Goods are usually identified by their 10-digit <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/nomenclature.html#commodity-codes">commodity code</a>.</p>
-<p>Sometimes a commodity code is not enough to identify the product being traded. When this happens, extra digits are needed. These extra digits are called additional codes.</p>
-<p>Additional codes can be applied to more than one commodity code.</p>
-<h2 id="what-additional-codes-show">What additional codes show</h2>
-<p>Additional codes identify:</p>
-
-<ul>
-<li>whether a company is subject to punitive measures, such as anti-dumping duties</li>
-<li>products which have reduced duties because they are for pharmaceutical use</li>
-<li>the route goods take into the UK and how different tariff or regulatory treatments apply</li>
-<li>stolen works of art, for example from Syria or Iraq as a result of military conflict</li>
-</ul>
-<h2 id="how-additional-codes-work">How additional codes work</h2>
-<p>Additional codes are 4 digits combining the following 2 elements:</p>
-
-<ul>
-<li>a code type</li>
-<li>a 3-character ID (which can also include letters)</li>
-</ul>
-<p>The additional code type defines the additional code that is being addressed.</p>
-<p>For example, the additional code C233 is made up of type C and specific ID 233.</p>
-<p>Numeric IDs from 001 to 999 can be reused across multiple additional code type IDs. Numeric IDs are unique only when they are used with a character code.</p>
-<h2 id="how-additional-codes-apply">How additional codes apply</h2>
-<p>Additional codes can only be applied to particular types of measures. Types 8, A, B and C can only be used with trade remedies.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93088912-72ce4400-f692-11ea-962f-066d5ab58746.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93088912-72ce4400-f692-11ea-962f-066d5ab58746.png" alt="image" /></a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93092034-d22e5300-f696-11ea-8230-d14b200a0016.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93092034-d22e5300-f696-11ea-8230-d14b200a0016.png" alt="image" /></a></p>
-<h3 id="additional-code-types-data-entities">Additional code types data entities</h3>
-<p><a href="https://user-images.githubusercontent.com/61055197/93092047-d8243400-f696-11ea-808c-e40c6ce953cd.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93092047-d8243400-f696-11ea-808c-e40c6ce953cd.png" alt="image" /></a></p>
-<h2 id="business-rules">Business rules</h2>
-<p>Read the business rules for additional codes in the <a href="https://uktrade.github.io/tamato/html/business_rules/additional_codes.html">system documentation</a>.</p>
+<p>A record cannot be deleted while it is being referenced by another record.</p>
+<p>Here, <strong>deletion</strong> refers to a modification of type <code>DELETE</code> being added to the
+transaction sequence for a record. As the transaction sequence is an append-only
+log, no past modifications are ever actually deleted.</p>
+<p>A record is <strong>being referenced by</strong> another record if its <a href="#">identifying fields</a> are
+present in the <a href="#">current version</a> of the other record and the other record is in a
+different <a href="#">record type</a>.</p>
+<p>The <a href="Data-structures;-Validity-dates.md">validity dates</a> of the referencing
+record are not relevant; a record is still being referenced even if the
+referencing record has expired.</p>
+<p>Previous versions of records or <code>DELETE</code> records are also not considered; a
+referencing record is no longer referencing another record if a modification is
+made to remove the identifying fields of the referenced record (either by
+removing them or by referencing a new record).</p>
+<p>A record is not considered to be referenced by its own subrecords. For
+example: if a record has a description then the record is not referenced by the
+description and can be deleted even if there are current description records.</p>
+<p>To avoid firing this validity rule, all referencing records must either have an
+<code>UPDATE</code> that removes the reference or themselves have a <code>DELETE</code>.</p>
+<h2 id="examples">Examples</h2>
+<p>A certificate type <code>S</code> is referenced by a certificate <code>S001</code>. If a transaction
+is emitted that contains a <code>DELETE</code> for certificate type <code>S</code>, the transaction
+would fail this validity rule because <code>S</code> is referenced by <code>S001</code>.</p>
+<p>Certificate <code>S001</code> is updated to change its validity dates to be in the far
+past. A transaction deleting <code>S</code> would still fail this validity rule.</p>
+<p>Certificate <code>S001</code> is then deleted. A transaction that contains a <code>DELETE</code> for
+<code>S</code> would now pass this rule because it is no longer being referenced.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Additional-codes">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Additional+codes%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fdata-structures%2Fadditional-codes.html%29&amp;labels=bug&amp;title=Re%3A+%27Additional+codes%27">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Validation-rules;-Deletion-while-in-use">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Deletion+while+in+use%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fvalidation-rules%2Fdeletion-while-in-use.html%29&amp;labels=bug&amp;title=Re%3A+%27Deletion+while+in+use%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
