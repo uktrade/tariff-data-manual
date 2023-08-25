@@ -262,10 +262,18 @@
 <li><a href="/tariff-data-manual/documentation/validation-rules.html"><span>Validation rules</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/validation-rules/uniqueness.html"><span>Uniqueness</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/validation-rules/uniqueness.html#examples"><span>Examples</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
     <a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html"><span>Deletion while in use</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html#examples"><span>Examples</span></a>
+        <a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html#deletion-while-in-use-examples"><span>Examples</span></a>
       </li>
     </ul>
   </li>
@@ -680,8 +688,8 @@
 <p>Read more about <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions">measure conditions</a>.</p>
 <h2 id="how-certificates-are-structured">How certificates are structured</h2>
 <p>Like footnotes and additional codes, certificates consist of the following:
-a type code 
-a specific certificate code 
+a type code
+a specific certificate code
 When joined together these form the unique code of the certificate.</p>
 <p>For example, the footnote C656 is made up of type code C and a specific certificate code 656.</p>
 <h3 id="type-codes">Type codes</h3>
@@ -718,23 +726,23 @@ When joined together these form the unique code of the certificate.</p>
 </tr><tr>
 <td>CE2</td>
 <td>
-<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for fields <code>certificate_type</code> and <code>code</code>.</td>
+<a href="/tariff-data-manual/documentation/validation-rules/uniqueness.html">Uniqueness</a> rule for fields <code>certificate_type</code> and <code>code</code>.</td>
 </tr><tr>
 <td>CE4</td>
 <td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule requiring certificate validity to contain <a href="/tariff-data-manual/documentation/data-structures/measure.html">measure</a> validity via associated <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure conditions</a>.</td>
+<a href="/tariff-data-manual/documentation/validation-rules/validity-contained.html">Validity contained</a> rule requiring certificate validity to contain <a href="/tariff-data-manual/documentation/data-structures/measure.html">measure</a> validity via associated <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure conditions</a>.</td>
 </tr><tr>
 <td>CE5</td>
 <td>
-<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure condition</a>.</td>
+<a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure condition</a>.</td>
 </tr><tr>
 <td>CE6</td>
 <td>
-<a href="/tariff-data-manual/documentation/validity-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for certificate descriptions.</td>
+<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for certificate descriptions.</td>
 </tr><tr>
 <td>CE7</td>
 <td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule requiring certificate type validity to contain certificate validity.</td>
+<a href="/tariff-data-manual/documentation/validation-rules/validity-contained.html">Validity contained</a> rule requiring certificate type validity to contain certificate validity.</td>
 </tr>
         </table>
       </div><h3 id="certificate-types">Certificate types</h3>
@@ -746,11 +754,11 @@ When joined together these form the unique code of the certificate.</p>
 </tr><tr>
 <td>CET1</td>
 <td>
-<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for field <code>certificate_type</code>.</td>
+<a href="/tariff-data-manual/documentation/validation-rules/uniqueness.html">Uniqueness</a> rule for field <code>certificate_type</code>.</td>
 </tr><tr>
 <td>CET2</td>
 <td>
-<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a certificate.</td>
+<a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a certificate.</td>
 </tr>
         </table>
       </div>

@@ -262,6 +262,14 @@
 <li><a href="/tariff-data-manual/documentation/validation-rules.html"><span>Validation rules</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/validation-rules/uniqueness.html"><span>Uniqueness</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/validation-rules/uniqueness.html#uniqueness-examples"><span>Examples</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
     <a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html"><span>Deletion while in use</span></a>
     <ul>
       <li>
@@ -642,9 +650,9 @@
 <p>Here, <strong>deletion</strong> refers to a modification of type <code>DELETE</code> being added to the
 transaction sequence for a record. As the transaction sequence is an append-only
 log, no past modifications are ever actually deleted.</p>
-<p>A record is <strong>being referenced by</strong> another record if its <a href="#">identifying fields</a> are
-present in the <a href="#">current version</a> of the other record and the other record is in a
-different <a href="#">record type</a>.</p>
+<p>A record is <strong>being referenced by</strong> another record if its <a href="#">identifying fields</a>
+are present in the <a href="#">current version</a> of the other record and the other record
+is in a different <a href="#">record type</a>.</p>
 <p>The <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html">validity dates</a> of the referencing
 record are not relevant; a record is still being referenced even if the
 referencing record has expired.</p>
@@ -652,11 +660,14 @@ referencing record has expired.</p>
 referencing record is no longer referencing another record if a modification is
 made to remove the identifying fields of the referenced record (either by
 removing them or by referencing a new record).</p>
-<p>A record is not considered to be referenced by its own subrecords. For
-example: if a record has a description then the record is not referenced by the
+<p>A record is not considered to be referenced by its own subrecords. For example:
+if a record has a description then the record is not referenced by the
 description and can be deleted even if there are current description records.</p>
 <p>To avoid firing this validity rule, all referencing records must either have an
 <code>UPDATE</code> that removes the reference or themselves have a <code>DELETE</code>.</p>
+<p>This rule ensures that systems using the data always have all of the information
+they need and that the meaning or function of a referencing record is never
+ambiguous.</p>
 <h2 id="examples">Examples</h2>
 <p>A certificate type <code>S</code> is referenced by a certificate <code>S001</code>. If a transaction
 is emitted that contains a <code>DELETE</code> for certificate type <code>S</code>, the transaction
