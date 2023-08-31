@@ -323,7 +323,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/quotas.html#assigning-quotas-to-geographical-areas"><span>Assigning quotas to geographical areas</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas-business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -591,16 +591,13 @@
     <a href="/tariff-data-manual/documentation/data-structures/footnotes.html"><span>Footnotes</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#how-footnotes-are-structured"><span>How footnotes are structured</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#footnote-associations"><span>Footnote associations</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#existing-footnote-types"><span>Existing footnote types</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#footnote-types"><span>Footnote types</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#what-footnotes-link-to-in-the-tariff"><span>What footnotes link to in the Tariff</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/footnotes.html#validity-rules"><span>Validity rules</span></a>
       </li>
     </ul>
   </li>
@@ -654,156 +651,527 @@
 
 <ul>
 <li>
-<a href="#how-footnotes-are-structured">How footnotes are structured</a>
+<a href="#footnote-associations">Footnote associations</a>
 </li>
 <li>
-<a href="#existing-footnote-types">Existing footnote types</a>
+<a href="#footnote-types">Footnote types</a>
 <ul>
 <li>
-<a href="#footnote-type-application-codes">Footnote type application codes</a>
+<a href="#existing-footnote-types">Existing footnote types</a>
+</li>
+<li>
+<a href="#application-codes">Application codes</a>
 </li>
 </ul>
 <p></li>
 <li>
-<a href="#what-footnotes-link-to-in-the-tariff">What footnotes link to in the Tariff</a>
+<a href="#validity-rules">Validity rules</a>
+<ul>
+<li>
+<a href="#footnotes">Footnotes</a>
 </li>
 <li>
-<a href="#business-rules">Business rules</a>
+<a href="#footnote-types">Footnote types</a>
+</li>
+</ul>
 </li>
 </ul></p>
-
-<blockquote>
-<p>Footnotes are used to give more information about measures.</p>
-</blockquote>
-<h2 id="how-footnotes-are-structured">How footnotes are structured</h2>
-<p>Each footnote has a unique ID. The ID consists of a type and a specific footnote code.</p>
-<p>Footnote types are either 2 letters (that were set by the EU) or 2 numbers set by the UK.</p>
-<p>Specific footnote codes may be either 3 or 5 digits long.</p>
-<p>For example, footnote CD491 consists of type - CD, and specific footnote code - 491.</p>
-<h2 id="existing-footnote-types">Existing footnote types</h2>
-<div class="table-container">
-        <table>
-          <tr>
-<th>ID</th>
-<th>Description</th>
-</tr><tr>
-<td>01</td>
-<td>UK   tax type, to distinguish which applies by tax type when several Excise   measures on commodity</td>
-</tr><tr>
-<td>03</td>
-<td>UK   VAT rate, to distinguish which applies when multiple rates on same commodity</td>
-</tr><tr>
-<td>04</td>
-<td>UK footnotes_oplog on   prohibitions and restrictions</td>
-</tr><tr>
-<td>CA</td>
-<td>Additional   nomenclature - CADD</td>
-</tr><tr>
-<td>CD</td>
-<td>Conditions</td>
-</tr><tr>
-<td>CG</td>
-<td>Cultural   goods</td>
-</tr><tr>
-<td>DU</td>
-<td>Dual   use goods</td>
-</tr><tr>
-<td>EU</td>
-<td>End   use</td>
-</tr><tr>
-<td>IS</td>
-<td>Invasive   alien species</td>
-</tr><tr>
-<td>MG</td>
-<td>Military   goods and technologies</td>
-</tr><tr>
-<td>MH</td>
-<td>Meursing   table</td>
-</tr><tr>
-<td>MX</td>
-<td>Export   refund measure</td>
-</tr><tr>
-<td>NC</td>
-<td>Combined   Nomenclature</td>
-</tr><tr>
-<td>NM</td>
-<td>Combined Nomenclature   measure</td>
-</tr><tr>
-<td>NX</td>
-<td>Export   Refund Nomenclature</td>
-</tr><tr>
-<td>OZ</td>
-<td>Ozone-depleting   substances</td>
-</tr><tr>
-<td>PB</td>
-<td>Publication</td>
-</tr><tr>
-<td>PN</td>
-<td>See   annex</td>
-</tr><tr>
-<td>TM</td>
-<td>Taric   Measure</td>
-</tr><tr>
-<td>TN</td>
-<td>Taric   Nomenclature</td>
-</tr><tr>
-<td>TP</td>
-<td>Dynamic   footnote</td>
-</tr><tr>
-<td>TR</td>
-<td>Torture   and repression</td>
-</tr>
-        </table>
-      </div><h3 id="footnote-type-application-codes">Footnote type application codes</h3>
+<p>A footnote is a piece of text that can be seen by traders in the <a href="https://www.trade-tariff.service.gov.uk/footnote_search">Trade Tariff Service</a> or in their own trading software.</p>
+<p>They do not affect how an import or export declaration is processed; they are for informational purposes. Due to this, they are subject to change at any time.</p>
+<p>They can give additional information for traders about:
+* requirements for importing or exporting a product
+* how to acquire licenses or permissions
+* eligibility for more favourable import fees
+* suspensions of import fees and what products they apply to</p>
+<p>A footnote&rsquo;s identifying fields consist of a type and a code. Footnote types are represented by 2 letters or digits. Footnote codes are 3 digits. 
+Footnotes are often represented as their combined identifier. For example, footnote CD491.</p>
+<p>Footnotes have <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html">validity dates</a> that represent how long the text in the footnote is accurate. The text of the footnote is contained within <a href="#">description records</a> that will record changes to the footnote.</p>
+<p>Footnotes are set and owned by the teams or departments that manage the policy associated with the footnote.</p>
+<svg width="432pt" height="907pt"
+ viewBox="0.00 0.00 432.00 907.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_251" class="graph" transform="scale(1 1) rotate(0) translate(4 903)">
+<title>Database</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-903 428,-903 428,4 -4,4"/>
+<!-- Footnotes -->
+<g id="table_44" class="node">
+<title>Footnotes</title>
+<polygon fill="none" stroke="black" points="248.5,-193 248.5,-209 414.5,-209 414.5,-193 248.5,-193"/>
+<text text-anchor="start" x="311" y="-198.8" font-family="Arial" font-size="9.00">Footnotes</text>
+<polygon fill="none" stroke="black" points="248.5,-177 248.5,-193 324.5,-193 324.5,-177 248.5,-177"/>
+<text text-anchor="start" x="251.5" y="-182.8" font-family="Arial" font-size="9.00">Footnote Type ID</text>
+<polygon fill="none" stroke="black" points="324.5,-177 324.5,-193 360.5,-193 360.5,-177 324.5,-177"/>
+<text text-anchor="start" x="327.5" y="-182.8" font-family="Arial" font-size="9.00">char(2)</text>
+<polygon fill="none" stroke="black" points="360.5,-177 360.5,-193 414.5,-193 414.5,-177 360.5,-177"/>
+<text text-anchor="start" x="363.5" y="-182.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="248.5,-161 248.5,-177 324.5,-177 324.5,-161 248.5,-161"/>
+<text text-anchor="start" x="262.5" y="-166.8" font-family="Arial" font-size="9.00">Footnote ID</text>
+<polygon fill="none" stroke="black" points="324.5,-161 324.5,-177 360.5,-177 360.5,-161 324.5,-161"/>
+<text text-anchor="start" x="327.5" y="-166.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="360.5,-161 360.5,-177 414.5,-177 414.5,-161 360.5,-161"/>
+<text text-anchor="start" x="363.5" y="-166.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="248.5,-145 248.5,-161 324.5,-161 324.5,-145 248.5,-145"/>
+<text text-anchor="start" x="261" y="-150.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="324.5,-145 324.5,-161 360.5,-161 360.5,-145 324.5,-145"/>
+<text text-anchor="start" x="333" y="-150.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="360.5,-145 360.5,-161 414.5,-161 414.5,-145 360.5,-145"/>
+<text text-anchor="start" x="372" y="-150.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="248.5,-129 248.5,-145 324.5,-145 324.5,-129 248.5,-129"/>
+<text text-anchor="start" x="262" y="-134.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="324.5,-129 324.5,-145 360.5,-145 360.5,-129 324.5,-129"/>
+<text text-anchor="start" x="333" y="-134.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="360.5,-129 360.5,-145 414.5,-145 414.5,-129 360.5,-129"/>
+<polygon fill="none" stroke="black" points="247.5,-128 247.5,-210 415.5,-210 415.5,-128 247.5,-128"/>
+</g>
+<!-- Footnote Types -->
+<g id="table_500" class="node">
+<title>Footnote Types</title>
+<polygon fill="none" stroke="black" points="248.5,-85 248.5,-101 415.5,-101 415.5,-85 248.5,-85"/>
+<text text-anchor="start" x="300" y="-90.8" font-family="Arial" font-size="9.00">Footnote Types</text>
+<polygon fill="none" stroke="black" points="248.5,-69 248.5,-85 325.5,-85 325.5,-69 248.5,-69"/>
+<text text-anchor="start" x="252" y="-74.8" font-family="Arial" font-size="9.00">Footnote Type ID</text>
+<polygon fill="none" stroke="black" points="325.5,-69 325.5,-85 361.5,-85 361.5,-69 325.5,-69"/>
+<text text-anchor="start" x="328.5" y="-74.8" font-family="Arial" font-size="9.00">char(2)</text>
+<polygon fill="none" stroke="black" points="361.5,-69 361.5,-85 415.5,-85 415.5,-69 361.5,-69"/>
+<text text-anchor="start" x="364.5" y="-74.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="248.5,-53 248.5,-69 325.5,-69 325.5,-53 248.5,-53"/>
+<text text-anchor="start" x="263.5" y="-58.8" font-family="Arial" font-size="9.00">Description</text>
+<polygon fill="none" stroke="black" points="325.5,-53 325.5,-69 361.5,-69 361.5,-53 325.5,-53"/>
+<text text-anchor="start" x="336" y="-58.8" font-family="Arial" font-size="9.00">text</text>
+<polygon fill="none" stroke="black" points="361.5,-53 361.5,-69 415.5,-69 415.5,-53 361.5,-53"/>
+<polygon fill="none" stroke="black" points="248.5,-37 248.5,-53 325.5,-53 325.5,-37 248.5,-37"/>
+<text text-anchor="start" x="251.5" y="-42.8" font-family="Arial" font-size="9.00">Application Code</text>
+<polygon fill="none" stroke="black" points="325.5,-37 325.5,-53 361.5,-53 361.5,-37 325.5,-37"/>
+<text text-anchor="start" x="328.5" y="-42.8" font-family="Arial" font-size="9.00">char(1)</text>
+<polygon fill="none" stroke="black" points="361.5,-37 361.5,-53 415.5,-53 415.5,-37 361.5,-37"/>
+<text text-anchor="start" x="373" y="-42.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="248.5,-21 248.5,-37 325.5,-37 325.5,-21 248.5,-21"/>
+<text text-anchor="start" x="261.5" y="-26.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="325.5,-21 325.5,-37 361.5,-37 361.5,-21 325.5,-21"/>
+<text text-anchor="start" x="334" y="-26.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="361.5,-21 361.5,-37 415.5,-37 415.5,-21 361.5,-21"/>
+<text text-anchor="start" x="373" y="-26.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="248.5,-5 248.5,-21 325.5,-21 325.5,-5 248.5,-5"/>
+<text text-anchor="start" x="262.5" y="-10.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="325.5,-5 325.5,-21 361.5,-21 361.5,-5 325.5,-5"/>
+<text text-anchor="start" x="334" y="-10.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="361.5,-5 361.5,-21 415.5,-21 415.5,-5 361.5,-5"/>
+<polygon fill="none" stroke="black" points="247,-4 247,-102 416,-102 416,-4 247,-4"/>
+</g>
+<!-- Footnote Descriptions -->
+<g id="table_61" class="node">
+<title>Footnote Descriptions</title>
+<polygon fill="none" stroke="black" points="11.5,-290 11.5,-306 192.5,-306 192.5,-290 11.5,-290"/>
+<text text-anchor="start" x="57" y="-295.8" font-family="Arial" font-size="9.00">Footnote Descriptions</text>
+<polygon fill="none" stroke="black" points="11.5,-274 11.5,-290 87.5,-290 87.5,-274 11.5,-274"/>
+<text text-anchor="start" x="14.5" y="-279.8" font-family="Arial" font-size="9.00">Footnote Type ID</text>
+<polygon fill="none" stroke="black" points="87.5,-274 87.5,-290 123.5,-290 123.5,-274 87.5,-274"/>
+<text text-anchor="start" x="90.5" y="-279.8" font-family="Arial" font-size="9.00">char(2)</text>
+<polygon fill="none" stroke="black" points="123.5,-274 123.5,-290 192.5,-290 192.5,-274 123.5,-274"/>
+<text text-anchor="start" x="134" y="-279.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="11.5,-258 11.5,-274 87.5,-274 87.5,-258 11.5,-258"/>
+<text text-anchor="start" x="25.5" y="-263.8" font-family="Arial" font-size="9.00">Footnote ID</text>
+<polygon fill="none" stroke="black" points="87.5,-258 87.5,-274 123.5,-274 123.5,-258 87.5,-258"/>
+<text text-anchor="start" x="90.5" y="-263.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="123.5,-258 123.5,-274 192.5,-274 192.5,-258 123.5,-258"/>
+<text text-anchor="start" x="134" y="-263.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="11.5,-242 11.5,-258 87.5,-258 87.5,-242 11.5,-242"/>
+<text text-anchor="start" x="24" y="-247.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="87.5,-242 87.5,-258 123.5,-258 123.5,-242 87.5,-242"/>
+<text text-anchor="start" x="96" y="-247.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="123.5,-242 123.5,-258 192.5,-258 192.5,-242 123.5,-242"/>
+<text text-anchor="start" x="134" y="-247.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="11.5,-226 11.5,-242 87.5,-242 87.5,-226 11.5,-226"/>
+<text text-anchor="start" x="26" y="-231.8" font-family="Arial" font-size="9.00">Description</text>
+<polygon fill="none" stroke="black" points="87.5,-226 87.5,-242 123.5,-242 123.5,-226 87.5,-226"/>
+<text text-anchor="start" x="98" y="-231.8" font-family="Arial" font-size="9.00">text</text>
+<polygon fill="none" stroke="black" points="123.5,-226 123.5,-242 192.5,-242 192.5,-226 123.5,-226"/>
+<text text-anchor="start" x="142.5" y="-231.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="11.5,-210 11.5,-226 87.5,-226 87.5,-210 11.5,-210"/>
+<text text-anchor="start" x="28" y="-215.8" font-family="Arial" font-size="9.00">Language</text>
+<polygon fill="none" stroke="black" points="87.5,-210 87.5,-226 123.5,-226 123.5,-210 87.5,-210"/>
+<text text-anchor="start" x="90.5" y="-215.8" font-family="Arial" font-size="9.00">char(2)</text>
+<polygon fill="none" stroke="black" points="123.5,-210 123.5,-226 192.5,-226 192.5,-210 123.5,-210"/>
+<text text-anchor="start" x="126.5" y="-215.8" font-family="Arial" font-size="9.00">not null, default</text>
+<polygon fill="none" stroke="black" points="10,-209 10,-307 193,-307 193,-209 10,-209"/>
+</g>
+<!-- Footnote Measure Associations -->
+<g id="table_560" class="node">
+<title>Footnote Measure Associations</title>
+<polygon fill="none" stroke="black" points="23.5,-414 23.5,-430 180.5,-430 180.5,-414 23.5,-414"/>
+<text text-anchor="start" x="37.5" y="-419.8" font-family="Arial" font-size="9.00">Footnote Measure Associations</text>
+<polygon fill="none" stroke="black" points="23.5,-398 23.5,-414 90.5,-414 90.5,-398 23.5,-398"/>
+<text text-anchor="start" x="27.5" y="-403.8" font-family="Arial" font-size="9.00">Footnote Type</text>
+<polygon fill="none" stroke="black" points="90.5,-398 90.5,-414 126.5,-414 126.5,-398 90.5,-398"/>
+<text text-anchor="start" x="93.5" y="-403.8" font-family="Arial" font-size="9.00">char(2)</text>
+<polygon fill="none" stroke="black" points="126.5,-398 126.5,-414 180.5,-414 180.5,-398 126.5,-398"/>
+<text text-anchor="start" x="129.5" y="-403.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="23.5,-382 23.5,-398 90.5,-398 90.5,-382 23.5,-382"/>
+<text text-anchor="start" x="26.5" y="-387.8" font-family="Arial" font-size="9.00">Footnote Code</text>
+<polygon fill="none" stroke="black" points="90.5,-382 90.5,-398 126.5,-398 126.5,-382 90.5,-382"/>
+<text text-anchor="start" x="93.5" y="-387.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="126.5,-382 126.5,-398 180.5,-398 180.5,-382 126.5,-382"/>
+<text text-anchor="start" x="129.5" y="-387.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="23.5,-366 23.5,-382 90.5,-382 90.5,-366 23.5,-366"/>
+<text text-anchor="start" x="30" y="-371.8" font-family="Arial" font-size="9.00">Measure SID</text>
+<polygon fill="none" stroke="black" points="90.5,-366 90.5,-382 126.5,-382 126.5,-366 90.5,-366"/>
+<text text-anchor="start" x="103.5" y="-371.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="126.5,-366 126.5,-382 180.5,-382 180.5,-366 126.5,-366"/>
+<text text-anchor="start" x="129.5" y="-371.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="23.5,-350 23.5,-366 90.5,-366 90.5,-350 23.5,-350"/>
+<text text-anchor="start" x="31.5" y="-355.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="90.5,-350 90.5,-366 126.5,-366 126.5,-350 90.5,-350"/>
+<text text-anchor="start" x="99" y="-355.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="126.5,-350 126.5,-366 180.5,-366 180.5,-350 126.5,-350"/>
+<text text-anchor="start" x="129.5" y="-355.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="23.5,-334 23.5,-350 90.5,-350 90.5,-334 23.5,-334"/>
+<text text-anchor="start" x="32.5" y="-339.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="90.5,-334 90.5,-350 126.5,-350 126.5,-334 90.5,-334"/>
+<text text-anchor="start" x="99" y="-339.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="126.5,-334 126.5,-350 180.5,-350 180.5,-334 126.5,-334"/>
+<polygon fill="none" stroke="black" points="22,-333 22,-431 181,-431 181,-333 22,-333"/>
+</g>
+<!-- Measures -->
+<g id="table_270" class="node">
+<title>Measures</title>
+<polygon fill="none" stroke="black" points="284.5,-555 284.5,-571 379.5,-571 379.5,-555 284.5,-555"/>
+<text text-anchor="start" x="311.5" y="-560.8" font-family="Arial" font-size="9.00">Measures</text>
+<polygon fill="none" stroke="black" points="284.5,-539 284.5,-555 306.5,-555 306.5,-539 284.5,-539"/>
+<text text-anchor="start" x="287.5" y="-544.8" font-family="Arial" font-size="9.00">SID</text>
+<polygon fill="none" stroke="black" points="306.5,-539 306.5,-555 325.5,-555 325.5,-539 306.5,-539"/>
+<text text-anchor="start" x="311" y="-544.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="325.5,-539 325.5,-555 379.5,-555 379.5,-539 325.5,-539"/>
+<text text-anchor="start" x="328.5" y="-544.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="284.5,-523 284.5,-539 306.5,-539 306.5,-523 284.5,-523"/>
+<text text-anchor="start" x="292" y="-528.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="306.5,-523 306.5,-539 325.5,-539 325.5,-523 306.5,-523"/>
+<text text-anchor="start" x="309.5" y="-528.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="325.5,-523 325.5,-539 379.5,-539 379.5,-523 325.5,-523"/>
+<polygon fill="none" stroke="black" points="283,-522 283,-572 380,-572 380,-522 283,-522"/>
+</g>
+<!-- Footnote Commodity Associations -->
+<g id="table_673" class="node">
+<title>Footnote Commodity Associations</title>
+<polygon fill="none" stroke="black" points="9.5,-592 9.5,-608 194.5,-608 194.5,-592 9.5,-592"/>
+<text text-anchor="start" x="32.5" y="-597.8" font-family="Arial" font-size="9.00">Footnote Commodity Associations</text>
+<polygon fill="none" stroke="black" points="9.5,-576 9.5,-592 104.5,-592 104.5,-576 9.5,-576"/>
+<text text-anchor="start" x="27.5" y="-581.8" font-family="Arial" font-size="9.00">Footnote Type</text>
+<polygon fill="none" stroke="black" points="104.5,-576 104.5,-592 140.5,-592 140.5,-576 104.5,-576"/>
+<text text-anchor="start" x="107.5" y="-581.8" font-family="Arial" font-size="9.00">char(2)</text>
+<polygon fill="none" stroke="black" points="140.5,-576 140.5,-592 194.5,-592 194.5,-576 140.5,-576"/>
+<text text-anchor="start" x="143.5" y="-581.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="9.5,-560 9.5,-576 104.5,-576 104.5,-560 9.5,-560"/>
+<text text-anchor="start" x="26.5" y="-565.8" font-family="Arial" font-size="9.00">Footnote Code</text>
+<polygon fill="none" stroke="black" points="104.5,-560 104.5,-576 140.5,-576 140.5,-560 104.5,-560"/>
+<text text-anchor="start" x="107.5" y="-565.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="140.5,-560 140.5,-576 194.5,-576 194.5,-560 140.5,-560"/>
+<text text-anchor="start" x="143.5" y="-565.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="9.5,-544 9.5,-560 104.5,-560 104.5,-544 9.5,-544"/>
+<text text-anchor="start" x="12.5" y="-549.8" font-family="Arial" font-size="9.00">Commodity Code SID</text>
+<polygon fill="none" stroke="black" points="104.5,-544 104.5,-560 140.5,-560 140.5,-544 104.5,-544"/>
+<text text-anchor="start" x="117.5" y="-549.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="140.5,-544 140.5,-560 194.5,-560 194.5,-544 140.5,-544"/>
+<text text-anchor="start" x="143.5" y="-549.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="9.5,-528 9.5,-544 104.5,-544 104.5,-528 9.5,-528"/>
+<text text-anchor="start" x="31.5" y="-533.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="104.5,-528 104.5,-544 140.5,-544 140.5,-528 104.5,-528"/>
+<text text-anchor="start" x="113" y="-533.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="140.5,-528 140.5,-544 194.5,-544 194.5,-528 140.5,-528"/>
+<text text-anchor="start" x="143.5" y="-533.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="9.5,-512 9.5,-528 104.5,-528 104.5,-512 9.5,-512"/>
+<text text-anchor="start" x="32.5" y="-517.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="104.5,-512 104.5,-528 140.5,-528 140.5,-512 104.5,-512"/>
+<text text-anchor="start" x="113" y="-517.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="140.5,-512 140.5,-528 194.5,-528 194.5,-512 140.5,-512"/>
+<polygon fill="none" stroke="black" points="8,-511 8,-609 195,-609 195,-511 8,-511"/>
+</g>
+<!-- Commodity Codes -->
+<g id="table_101" class="node">
+<title>Commodity Codes</title>
+<polygon fill="none" stroke="black" points="284.5,-479 284.5,-495 379.5,-495 379.5,-479 284.5,-479"/>
+<text text-anchor="start" x="294" y="-484.8" font-family="Arial" font-size="9.00">Commodity Codes</text>
+<polygon fill="none" stroke="black" points="284.5,-463 284.5,-479 306.5,-479 306.5,-463 284.5,-463"/>
+<text text-anchor="start" x="287.5" y="-468.8" font-family="Arial" font-size="9.00">SID</text>
+<polygon fill="none" stroke="black" points="306.5,-463 306.5,-479 325.5,-479 325.5,-463 306.5,-463"/>
+<text text-anchor="start" x="311" y="-468.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="325.5,-463 325.5,-479 379.5,-479 379.5,-463 325.5,-463"/>
+<text text-anchor="start" x="328.5" y="-468.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="284.5,-447 284.5,-463 306.5,-463 306.5,-447 284.5,-447"/>
+<text text-anchor="start" x="292" y="-452.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="306.5,-447 306.5,-463 325.5,-463 325.5,-447 306.5,-447"/>
+<text text-anchor="start" x="309.5" y="-452.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="325.5,-447 325.5,-463 379.5,-463 379.5,-447 325.5,-447"/>
+<polygon fill="none" stroke="black" points="283,-446 283,-496 380,-496 380,-446 283,-446"/>
+</g>
+<!-- Footnote Additional Code Associations -->
+<g id="table_397" class="node">
+<title>Footnote Additional Code Associations</title>
+<polygon fill="none" stroke="black" points="11.5,-716 11.5,-732 191.5,-732 191.5,-716 11.5,-716"/>
+<text text-anchor="start" x="22" y="-721.8" font-family="Arial" font-size="9.00">Footnote Additional Code Associations</text>
+<polygon fill="none" stroke="black" points="11.5,-700 11.5,-716 101.5,-716 101.5,-700 11.5,-700"/>
+<text text-anchor="start" x="27" y="-705.8" font-family="Arial" font-size="9.00">Footnote Type</text>
+<polygon fill="none" stroke="black" points="101.5,-700 101.5,-716 137.5,-716 137.5,-700 101.5,-700"/>
+<text text-anchor="start" x="104.5" y="-705.8" font-family="Arial" font-size="9.00">char(2)</text>
+<polygon fill="none" stroke="black" points="137.5,-700 137.5,-716 191.5,-716 191.5,-700 137.5,-700"/>
+<text text-anchor="start" x="140.5" y="-705.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="11.5,-684 11.5,-700 101.5,-700 101.5,-684 11.5,-684"/>
+<text text-anchor="start" x="26" y="-689.8" font-family="Arial" font-size="9.00">Footnote Code</text>
+<polygon fill="none" stroke="black" points="101.5,-684 101.5,-700 137.5,-700 137.5,-684 101.5,-684"/>
+<text text-anchor="start" x="104.5" y="-689.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="137.5,-684 137.5,-700 191.5,-700 191.5,-684 137.5,-684"/>
+<text text-anchor="start" x="140.5" y="-689.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="11.5,-668 11.5,-684 101.5,-684 101.5,-668 11.5,-668"/>
+<text text-anchor="start" x="14.5" y="-673.8" font-family="Arial" font-size="9.00">Additional Code SID</text>
+<polygon fill="none" stroke="black" points="101.5,-668 101.5,-684 137.5,-684 137.5,-668 101.5,-668"/>
+<text text-anchor="start" x="114.5" y="-673.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="137.5,-668 137.5,-684 191.5,-684 191.5,-668 137.5,-668"/>
+<text text-anchor="start" x="140.5" y="-673.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="11.5,-652 11.5,-668 101.5,-668 101.5,-652 11.5,-652"/>
+<text text-anchor="start" x="31" y="-657.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="101.5,-652 101.5,-668 137.5,-668 137.5,-652 101.5,-652"/>
+<text text-anchor="start" x="110" y="-657.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="137.5,-652 137.5,-668 191.5,-668 191.5,-652 137.5,-652"/>
+<text text-anchor="start" x="140.5" y="-657.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="11.5,-636 11.5,-652 101.5,-652 101.5,-636 11.5,-636"/>
+<text text-anchor="start" x="32" y="-641.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="101.5,-636 101.5,-652 137.5,-652 137.5,-636 101.5,-636"/>
+<text text-anchor="start" x="110" y="-641.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="137.5,-636 137.5,-652 191.5,-652 191.5,-636 137.5,-636"/>
+<polygon fill="none" stroke="black" points="10.5,-635 10.5,-733 192.5,-733 192.5,-635 10.5,-635"/>
+</g>
+<!-- Additional Codes -->
+<g id="table_84" class="node">
+<title>Additional Codes</title>
+<polygon fill="none" stroke="black" points="284.5,-403 284.5,-419 379.5,-419 379.5,-403 284.5,-403"/>
+<text text-anchor="start" x="296.5" y="-408.8" font-family="Arial" font-size="9.00">Additional Codes</text>
+<polygon fill="none" stroke="black" points="284.5,-387 284.5,-403 306.5,-403 306.5,-387 284.5,-387"/>
+<text text-anchor="start" x="287.5" y="-392.8" font-family="Arial" font-size="9.00">SID</text>
+<polygon fill="none" stroke="black" points="306.5,-387 306.5,-403 325.5,-403 325.5,-387 306.5,-387"/>
+<text text-anchor="start" x="311" y="-392.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="325.5,-387 325.5,-403 379.5,-403 379.5,-387 325.5,-387"/>
+<text text-anchor="start" x="328.5" y="-392.8" font-family="Arial" font-size="9.00">primary key</text>
+<polygon fill="none" stroke="black" points="284.5,-371 284.5,-387 306.5,-387 306.5,-371 284.5,-371"/>
+<text text-anchor="start" x="292" y="-376.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="306.5,-371 306.5,-387 325.5,-387 325.5,-371 306.5,-371"/>
+<text text-anchor="start" x="309.5" y="-376.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="325.5,-371 325.5,-387 379.5,-387 379.5,-371 325.5,-371"/>
+<polygon fill="none" stroke="black" points="283,-370 283,-420 380,-420 380,-370 283,-370"/>
+</g>
+<!-- Type -->
+<g id="database_251_node10" class="node">
+<title>Type</title>
+<text text-anchor="middle" x="101.5" y="-770.8" font-family="Arial" font-size="9.00">Type</text>
+</g>
+<!-- ID_attribs -->
+<g id="database_251_node11" class="node">
+<title>ID_attribs</title>
+<text text-anchor="middle" x="101.5" y="-166.8" font-family="Arial" font-size="9.00">ID_attribs</text>
+</g>
+<!-- ID_attribs&#45;&gt;Footnotes -->
+<g id="database_251_edge2" class="edge">
+<title>ID_attribs:e&#45;&gt;Footnotes:Footnote</title>
+<path fill="none" stroke="black" d="M130.5,-169C163.45,-165.66 199.45,-163.56 231.72,-162.7"/>
+<polygon fill="black" stroke="black" points="231.96,-165.32 239.4,-162.52 231.84,-160.07 231.96,-165.32"/>
+</g>
+<!-- ID_attribs&#45;&gt;Footnotes -->
+<g id="database_251_edge3" class="edge">
+<title>ID_attribs:e&#45;&gt;Footnotes:Footnote</title>
+<path fill="none" stroke="black" d="M130.5,-169C163.45,-172.34 199.45,-174.44 231.72,-175.3"/>
+<polygon fill="black" stroke="black" points="231.84,-177.93 239.4,-175.48 231.96,-172.68 231.84,-177.93"/>
+</g>
+<!-- ID_attribs&#45;&gt;Footnote Types -->
+<g id="database_251_edge1" class="edge">
+<title>ID_attribs:e&#45;&gt;Footnote Types:Footnote</title>
+<path fill="none" stroke="black" d="M130.5,-169C143.46,-169 194.27,-139.47 241.42,-110.2"/>
+<polygon fill="black" stroke="black" points="243.07,-112.27 248.05,-106.08 240.29,-107.81 243.07,-112.27"/>
+</g>
+<!-- ID_name -->
+<g id="database_251_node12" class="node">
+<title>ID_name</title>
+<text text-anchor="middle" x="101.5" y="-824.8" font-family="Arial" font-size="9.00">ID_name</text>
+</g>
+<!-- SID_attribs -->
+<g id="database_251_node13" class="node">
+<title>SID_attribs</title>
+<text text-anchor="middle" x="101.5" y="-468.8" font-family="Arial" font-size="9.00">SID_attribs</text>
+</g>
+<!-- SID_attribs&#45;&gt;Measures -->
+<g id="database_251_edge4" class="edge">
+<title>SID_attribs:e&#45;&gt;Measures:w</title>
+<path fill="none" stroke="black" d="M133.5,-471C166.64,-471 173.29,-483.33 203,-498 238.06,-515.31 241.31,-543.01 275.67,-546.61"/>
+<polygon fill="black" stroke="black" points="275.88,-549.25 283.5,-547 276.14,-544 275.88,-549.25"/>
+</g>
+<!-- SID_attribs&#45;&gt;Commodity Codes -->
+<g id="database_251_edge5" class="edge">
+<title>SID_attribs:e&#45;&gt;Commodity Codes:w</title>
+<path fill="none" stroke="black" d="M133.5,-471C197.56,-471 215.45,-471 275.91,-471"/>
+<polygon fill="black" stroke="black" points="276,-473.63 283.5,-471 276,-468.38 276,-473.63"/>
+</g>
+<!-- SID_attribs&#45;&gt;Additional Codes -->
+<g id="database_251_edge6" class="edge">
+<title>SID_attribs:e&#45;&gt;Additional Codes:w</title>
+<path fill="none" stroke="black" d="M133.5,-471C166.64,-471 173.29,-458.67 203,-444 238.06,-426.69 241.31,-398.99 275.67,-395.39"/>
+<polygon fill="black" stroke="black" points="276.14,-398 283.5,-395 275.88,-392.75 276.14,-398"/>
+</g>
+<!-- Code -->
+<g id="database_251_node14" class="node">
+<title>Code</title>
+<text text-anchor="middle" x="101.5" y="-878.8" font-family="Arial" font-size="9.00">Code</text>
+</g>
+</g>
+</svg><h2 id="footnote-associations">Footnote associations</h2>
+<p>Footnotes are used to give more information about <a href="/tariff-data-manual/documentation/data-structures/measures.html">measures</a>, <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html">commodity codes</a>, or <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html">additional codes</a>. Each type has an association record type that links one footnote to one measure, commodity code or additional code. The association record is in the same <a href="#">record family</a> as the associated type.</p>
+<p>The association record has its own <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html">validity dates</a> so that the footnote can be attached for only a temporary period.</p>
+<h2 id="footnote-types">Footnote types</h2>
+<p>Each footnote has a type that identifies the purpose or scope of the footnote.</p>
+<p>Footnote types are defined by UK tariff managers and don’t come from any external source. They are created as necessary to aid categorisation and understanding.</p>
+<h3 id="existing-footnote-types">Existing footnote types</h3>
+<table>
+    <thead>
+      <tr>
+        <th>Type</th><th>Description</th><th>Usage count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>AD</td><td>Anti dumping</td><td>2</td></tr><tr><td>CA</td><td>Additional nomenclature - CADD</td><td>6</td></tr><tr><td>CD</td><td>Conditions</td><td>822</td></tr><tr><td>CG</td><td>Cultural goods</td><td>21</td></tr><tr><td>CR</td><td>Critical commodity footnote</td><td>1</td></tr><tr><td>DS</td><td>Duty suspension</td><td>347</td></tr><tr><td>DU</td><td>Dual use goods</td><td>662</td></tr><tr><td>EU</td><td>End use</td><td>4</td></tr><tr><td>EX</td><td>Export control measures</td><td>15</td></tr><tr><td>IS</td><td>Invasive alien species</td><td>16</td></tr><tr><td>MG</td><td>Military goods and technologies</td><td>769</td></tr><tr><td>MH</td><td>Meursing table</td><td>3</td></tr><tr><td>MX</td><td>Export refund measure</td><td>47</td></tr><tr><td>NC</td><td>Combined Nomenclature</td><td>31</td></tr><tr><td>NM</td><td>CN measure</td><td>218</td></tr><tr><td>NX</td><td>Export Refund Nomenclature</td><td>63</td></tr><tr><td>OZ</td><td>Ozone-depleting substances</td><td>10</td></tr><tr><td>PB</td><td>Publication</td><td>2</td></tr><tr><td>PE</td><td>Protective equipment</td><td>3</td></tr><tr><td>PH</td><td>Phytosanitary measures</td><td>12</td></tr><tr><td>PI</td><td>Trade Against Pandemics Initiative (TAPI)</td><td>40</td></tr><tr><td>PN</td><td>See annex</td><td>1</td></tr><tr><td>PR</td><td>UK footnotes_oplog on prohibitions and restrictions</td><td>28</td></tr><tr><td>SN</td><td>Sanctions</td><td>129</td></tr><tr><td>TM</td><td>Taric Measure</td><td>929</td></tr><tr><td>TN</td><td>Taric Nomenclature</td><td>105</td></tr><tr><td>TP</td><td>Dynamic footnote</td><td>6</td></tr><tr><td>TR</td><td>Torture and repression</td><td>36</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=3>
+          Last updated 31 Aug 2023
+        </td>
+      </tr>
+    </tfoot>
+  </table><h3 id="application-codes">Application codes</h3>
+<p>Each footnote type has an application code. The application code controls whether footnotes of that type apply to <a href="/tariff-data-manual/documentation/data-structures/measures.html">measures</a>, <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html">commodity codes</a>, or <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html">additional codes</a>.</p>
+<p>The code also controls at what level of the commodity code hierarchy they can be placed. Some codes require that footnotes can only be attached to measures or commodities at the 8-digit commodity code level whereas others can be set at any level.</p>
+<p>A <a href="/tariff-data-manual/documentation/validation-rules.html">validitation rule</a> on each type enforces that footnotes are set at the correct level.</p>
+<p>Application codes are hard-coded in systems. Changes to application codes require a change to this data standard.</p>
 <div class="table-container">
         <table>
           <tr>
 <th>Application code</th>
 <th>Description</th>
 <th>Applies to</th>
+<th>What level</th>
 <th>Notes</th>
 </tr><tr>
 <td>1</td>
 <td>Combined   nomenclature</td>
 <td>Commodity   codes</td>
-<td>These two application codes are used for footnote types that are to be linked to commodity codes (goods nomenclatures). The difference is that application code 1 limits the use of the footnote such that it can only be applied to commodity codes where the first 8 digits are significant (they end in “00”). The footnote types associated with application code 2 can be assigned to any commodity code (the TARIC nomenclature label references the full use of all 10-digits in TARIC). There is no reason to create a footnote that can only be applied to commodity codes with 8 significant digits.</td>
+<td>8-digit commodity codes</td>
+<td></td>
 </tr><tr>
 <td>2</td>
 <td>TARIC   nomenclature</td>
 <td>Commodity   codes</td>
+<td>10-digit commodity codes</td>
 <td></td>
 </tr><tr>
 <td>3</td>
 <td>Export   refund nomenclature</td>
 <td>ERNs</td>
-<td>ERNs are historical and can be ignored.</td>
+<td></td>
+<td>ERNs are historical and are no longer used.</td>
 </tr><tr>
 <td>4</td>
 <td>Wine   reference nomenclature</td>
 <td>N/A</td>
-<td>Wine references are historical and can be ignored.</td>
+<td></td>
+<td>Wine references are historical and are no longer used.</td>
+</tr><tr>
+<td>5</td>
+<td>Additional code</td>
+<td>Additional codes</td>
+<td>Any</td>
+<td>Additional code footnotes are historical and are no longer used.</td>
 </tr><tr>
 <td>6</td>
 <td>CN   measures</td>
 <td>Measures</td>
-<td>These two types share a similarity with the description of the nomenclature application codes above. While they are both applied to measures, only footnotes of application code type ‘7’ can be applied to any measures, regardless of the tier in the code hierarchy to which the measure is assigned. There is no reason to create a footnote that can only be applied to measures with 8-digit commodity codes.</td>
+<td>8-digit commodity codes</td>
+<td></td>
 </tr><tr>
 <td>7</td>
 <td>Other   measures</td>
 <td>Measures</td>
+<td>10-digit commodity codes</td>
 <td></td>
+</tr><tr>
+<td>8</td>
+<td>Meursing heading</td>
+<td></td>
+<td></td>
+<td>Meursing headings are historical and are no longer used.</td>
 </tr><tr>
 <td>9</td>
 <td>Dynamic   footnote</td>
-<td>N/A</td>
-<td>In theory a dynamic footnote type could be applied to any of the different data objects. Historically the EU has only ever created one type with this application code (TP – Dynamic footnote), the last time it was used was in 2015.</td>
+<td>Anything</td>
+<td>Any</td>
+<td>Dynamic footnotes are historical and are no longer used.</td>
 </tr>
         </table>
-      </div><h2 id="what-footnotes-link-to-in-the-tariff">What footnotes link to in the Tariff</h2>
-<p>Footnotes link to many other things in the Tariff as follows:</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93206655-a91ec880-f751-11ea-9693-5c2a66642bc2.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93206655-a91ec880-f751-11ea-9693-5c2a66642bc2.png" alt="image" /></a></p>
-<h2 id="business-rules">Business rules</h2>
-<p>Read the footnotes for business rules in the <a href="https://uktrade.github.io/tamato/html/business_rules/footnotes.html">system documentation</a>.</p>
+      </div><h2 id="validity-rules">Validity rules</h2>
+<h3 id="validity-rules-footnotes">Footnotes</h3>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code</th>
+<th>Description</th>
+</tr><tr>
+<td>FO2</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/uniqueness.html">Uniqueness</a> rule for footnote <code>type</code> and <code>code</code>.</td>
+</tr><tr>
+<td>FO4</td>
+<td>
+<a href="#">Mandatory subrecord</a> rule for footnote descriptions.</td>
+</tr><tr>
+<td>FO5</td>
+<td>
+<a href="#">Validity contained</a> rule requiring footnote validity to contain validity of any measure associations.</td>
+</tr><tr>
+<td>FO6</td>
+<td>
+<a href="#">Validity contained</a> rule requiring footnote validity to contain validity of any commodity code associations.</td>
+</tr><tr>
+<td>FO9</td>
+<td>
+<a href="#">Validity contained</a> rule requiring footnote validity to contain validity of any additional code associations.</td>
+</tr><tr>
+<td>FO11</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a measure via a measure association.</td>
+</tr><tr>
+<td>FO12</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a commodity code via a commodity code association.</td>
+</tr><tr>
+<td>FO15</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from an additional code via an additional code association.</td>
+</tr><tr>
+<td>FO17</td>
+<td>
+<a href="#">Validity contained</a> rule requiring footnote type validity to contain footnote validity.</td>
+</tr>
+        </table>
+      </div><h3 id="validity-rules-footnote-types">Footnote types</h3>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code</th>
+<th>Description</th>
+</tr><tr>
+<td>FOT1</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/uniqueness.html">Uniqueness</a> rule for footnote <code>type</code>.</td>
+</tr><tr>
+<td>FOT2</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a footnote.</td>
+</tr>
+        </table>
+      </div><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
