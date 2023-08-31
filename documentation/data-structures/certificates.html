@@ -365,6 +365,9 @@
         <a href="/tariff-data-manual/documentation/data-structures/certificates.html#certificate-type-codes"><span>Certificate type codes</span></a>
       </li>
       <li>
+        <a href="/tariff-data-manual/documentation/data-structures/certificates.html#source-of-data"><span>Source of data</span></a>
+      </li>
+      <li>
         <a href="/tariff-data-manual/documentation/data-structures/certificates.html#validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
@@ -657,6 +660,9 @@
 <a href="#how-certificates-are-structured">How certificates are structured</a>
 <ul>
 <li>
+<a href="#entity-relationship-diagram-for-certificates">Entity-Relationship Diagram for Certificates</a>
+</li>
+<li>
 <a href="#type-codes">Type codes</a>
 </li>
 <li>
@@ -666,6 +672,9 @@
 <p></li>
 <li>
 <a href="#certificate-type-codes">Certificate type codes</a>
+</li>
+<li>
+<a href="#source-of-data">Source of data</a>
 </li>
 <li>
 <a href="#validation-rules">Validation rules</a>
@@ -681,7 +690,8 @@
 </ul></p>
 <h2 id="what-certificates-are">What certificates are</h2>
 <p>The import of some goods is conditional. It is only allowed if certain conditions are met.</p>
-<p>Some conditions need specific information to be provided. This may include a physical or digital copy of:</p>
+<p>The certificates tables in TARIC-based applications store all of the conditions that are referenced via <a href="https://uktrade.github.io/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions">measure conditions</a> in order to make the import (or export) of a good conditional on the provision of some entity.</p>
+<p>These entities may be a physical or digital copy of:</p>
 
 <ul>
 <li>an official certificate</li>
@@ -694,13 +704,126 @@
 <p>The following example shows the import control conditions for the commodity code 0101210000.</p>
 <p><img width="926" alt="Import conditions - CITES - commodity code 0101210000" src="https://user-images.githubusercontent.com/82160410/153037775-7ebf2508-ce2f-4046-8795-a176f0a81657.png"></p>
 <p>Read more about <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/measure-conditions.html#measure-conditions">measure conditions</a>.</p>
+<p>The sole purpose of certificates in this system is to associate them to measures via measure conditions – on their own, they no value and are not exposed to traders via any other means.</p>
 <h2 id="how-certificates-are-structured">How certificates are structured</h2>
 <p>Like footnotes and additional codes, certificates consist of the following:
-a type code
-a specific certificate code
+a type code 
+a specific certificate code 
 When joined together these form the unique code of the certificate.</p>
 <p>For example, the footnote C656 is made up of type code C and a specific certificate code 656.</p>
-<h3 id="type-codes">Type codes</h3>
+<p>Within the tariff data structure, the &lsquo;certificates&rsquo; record lists the specific certificate code, the certificate type id (for joining to the relevant certificate type record), and the <a href="https://uktrade.github.io/tariff-data-manual/documentation/data-structures/validity-dates.html#validity-dates">validity</a> start and end dates.</p>
+<p>The &lsquo;certificate_types&rsquo; record lists the type code, type description and the <a href="https://uktrade.github.io/tariff-data-manual/documentation/data-structures/validity-dates.html#validity-dates">validity</a> start and end dates.</p>
+<p>The &lsquo;certificate_descriptions&rsquo; record lists the certificate description id (for joining to the relevant certificate record), the id of the associated certificate and the description itself. Read more about <a href="#">descriptions</a> and how they are structured.</p>
+<h3 id="entity-relationship-diagram-for-certificates">Entity-Relationship Diagram for Certificates</h3>
+<svg width="667pt" height="130pt"
+ viewBox="0.00 0.00 667.00 130.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_105" class="graph" transform="scale(1 1) rotate(0) translate(4 126)">
+<title>Database</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-126 663,-126 663,4 -4,4"/>
+<!-- Certificate Descriptions -->
+<g id="table_312" class="node">
+<title>Certificate Descriptions</title>
+<polygon fill="none" stroke="black" points="9.5,-101 9.5,-117 218.5,-117 218.5,-101 9.5,-101"/>
+<text text-anchor="start" x="66.5" y="-106.8" font-family="Arial" font-size="9.00">Certificate Descriptions</text>
+<polygon fill="none" stroke="black" points="9.5,-85 9.5,-101 122.5,-101 122.5,-85 9.5,-85"/>
+<text text-anchor="start" x="12.5" y="-90.8" font-family="Arial" font-size="9.00">certificate_description_sid</text>
+<polygon fill="none" stroke="black" points="122.5,-85 122.5,-101 181.5,-101 181.5,-85 122.5,-85"/>
+<text text-anchor="start" x="147" y="-90.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="181.5,-85 181.5,-101 218.5,-101 218.5,-85 181.5,-85"/>
+<text text-anchor="start" x="195" y="-90.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="9.5,-69 9.5,-85 122.5,-85 122.5,-69 9.5,-69"/>
+<text text-anchor="start" x="17" y="-74.8" font-family="Arial" font-size="9.00">described_certificate_id</text>
+<polygon fill="none" stroke="black" points="122.5,-69 122.5,-85 181.5,-85 181.5,-69 122.5,-69"/>
+<text text-anchor="start" x="147" y="-74.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="181.5,-69 181.5,-85 218.5,-85 218.5,-69 181.5,-69"/>
+<polygon fill="none" stroke="black" points="9.5,-53 9.5,-69 122.5,-69 122.5,-53 9.5,-53"/>
+<text text-anchor="start" x="43" y="-58.8" font-family="Arial" font-size="9.00">description</text>
+<polygon fill="none" stroke="black" points="122.5,-53 122.5,-69 181.5,-69 181.5,-53 122.5,-53"/>
+<text text-anchor="start" x="125.5" y="-58.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="181.5,-53 181.5,-69 218.5,-69 218.5,-53 181.5,-53"/>
+<text text-anchor="start" x="184.5" y="-58.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="9.5,-37 9.5,-53 122.5,-53 122.5,-37 9.5,-37"/>
+<text text-anchor="start" x="40" y="-42.8" font-family="Arial" font-size="9.00">validity_start</text>
+<polygon fill="none" stroke="black" points="122.5,-37 122.5,-53 181.5,-53 181.5,-37 122.5,-37"/>
+<text text-anchor="start" x="142.5" y="-42.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="181.5,-37 181.5,-53 218.5,-53 218.5,-37 181.5,-37"/>
+<text text-anchor="start" x="184.5" y="-42.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="8,-36 8,-118 219,-118 219,-36 8,-36"/>
+</g>
+<!-- Certificates -->
+<g id="table_675" class="node">
+<title>Certificates</title>
+<polygon fill="none" stroke="black" points="272.5,-85 272.5,-101 415.5,-101 415.5,-85 272.5,-85"/>
+<text text-anchor="start" x="321" y="-90.8" font-family="Arial" font-size="9.00">Certificates</text>
+<polygon fill="none" stroke="black" points="272.5,-69 272.5,-85 353.5,-85 353.5,-69 272.5,-69"/>
+<text text-anchor="start" x="284.5" y="-74.8" font-family="Arial" font-size="9.00">certificate_sid</text>
+<polygon fill="none" stroke="black" points="353.5,-69 353.5,-85 378.5,-85 378.5,-69 353.5,-69"/>
+<text text-anchor="start" x="361" y="-74.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="378.5,-69 378.5,-85 415.5,-85 415.5,-69 378.5,-69"/>
+<text text-anchor="start" x="392" y="-74.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="272.5,-53 272.5,-69 353.5,-69 353.5,-53 272.5,-53"/>
+<text text-anchor="start" x="275.5" y="-58.8" font-family="Arial" font-size="9.00">certificate_type_id</text>
+<polygon fill="none" stroke="black" points="353.5,-53 353.5,-69 378.5,-69 378.5,-53 353.5,-53"/>
+<text text-anchor="start" x="361" y="-58.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="378.5,-53 378.5,-69 415.5,-69 415.5,-53 378.5,-53"/>
+<polygon fill="none" stroke="black" points="272.5,-37 272.5,-53 353.5,-53 353.5,-37 272.5,-37"/>
+<text text-anchor="start" x="287" y="-42.8" font-family="Arial" font-size="9.00">validity_start</text>
+<polygon fill="none" stroke="black" points="353.5,-37 353.5,-53 378.5,-53 378.5,-37 353.5,-37"/>
+<text text-anchor="start" x="356.5" y="-42.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="378.5,-37 378.5,-53 415.5,-53 415.5,-37 378.5,-37"/>
+<text text-anchor="start" x="381.5" y="-42.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="272.5,-21 272.5,-37 353.5,-37 353.5,-21 272.5,-21"/>
+<text text-anchor="start" x="288" y="-26.8" font-family="Arial" font-size="9.00">validity_end</text>
+<polygon fill="none" stroke="black" points="353.5,-21 353.5,-37 378.5,-37 378.5,-21 353.5,-21"/>
+<text text-anchor="start" x="356.5" y="-26.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="378.5,-21 378.5,-37 415.5,-37 415.5,-21 378.5,-21"/>
+<text text-anchor="start" x="389" y="-26.8" font-family="Arial" font-size="9.00">null</text>
+<polygon fill="none" stroke="black" points="271,-20 271,-102 416,-102 416,-20 271,-20"/>
+</g>
+<!-- Certificate Descriptions&#45;&gt;Certificates -->
+<g id="database_105_edge2" class="edge">
+<title>Certificate Descriptions:e&#45;&gt;Certificates:w</title>
+<path fill="none" stroke="black" d="M219.5,-77C239.72,-77 246.67,-77 263.58,-77"/>
+<polygon fill="black" stroke="black" points="264,-79.63 271.5,-77 264,-74.38 264,-79.63"/>
+</g>
+<!-- Certifcate Types -->
+<g id="table_127" class="node">
+<title>Certifcate Types</title>
+<polygon fill="none" stroke="black" points="469.5,-69 469.5,-85 650.5,-85 650.5,-69 469.5,-69"/>
+<text text-anchor="start" x="526.5" y="-74.8" font-family="Arial" font-size="9.00">Certifcate Types</text>
+<polygon fill="none" stroke="black" points="469.5,-53 469.5,-69 554.5,-69 554.5,-53 469.5,-53"/>
+<text text-anchor="start" x="472.5" y="-58.8" font-family="Arial" font-size="9.00">certificate_type_sid</text>
+<polygon fill="none" stroke="black" points="554.5,-53 554.5,-69 613.5,-69 613.5,-53 554.5,-53"/>
+<text text-anchor="start" x="579" y="-58.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="613.5,-53 613.5,-69 650.5,-69 650.5,-53 613.5,-53"/>
+<text text-anchor="start" x="627" y="-58.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="469.5,-37 469.5,-53 554.5,-53 554.5,-37 469.5,-37"/>
+<text text-anchor="start" x="489" y="-42.8" font-family="Arial" font-size="9.00">description</text>
+<polygon fill="none" stroke="black" points="554.5,-37 554.5,-53 613.5,-53 613.5,-37 554.5,-37"/>
+<text text-anchor="start" x="557.5" y="-42.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="613.5,-37 613.5,-53 650.5,-53 650.5,-37 613.5,-37"/>
+<text text-anchor="start" x="616.5" y="-42.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="469.5,-21 469.5,-37 554.5,-37 554.5,-21 469.5,-21"/>
+<text text-anchor="start" x="486" y="-26.8" font-family="Arial" font-size="9.00">validity_start</text>
+<polygon fill="none" stroke="black" points="554.5,-21 554.5,-37 613.5,-37 613.5,-21 554.5,-21"/>
+<text text-anchor="start" x="574.5" y="-26.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="613.5,-21 613.5,-37 650.5,-37 650.5,-21 613.5,-21"/>
+<text text-anchor="start" x="616.5" y="-26.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="469.5,-5 469.5,-21 554.5,-21 554.5,-5 469.5,-5"/>
+<text text-anchor="start" x="487" y="-10.8" font-family="Arial" font-size="9.00">validity_end</text>
+<polygon fill="none" stroke="black" points="554.5,-5 554.5,-21 613.5,-21 613.5,-5 554.5,-5"/>
+<text text-anchor="start" x="574" y="-10.8" font-family="Arial" font-size="9.00">[null]</text>
+<polygon fill="none" stroke="black" points="613.5,-5 613.5,-21 650.5,-21 650.5,-5 613.5,-5"/>
+<polygon fill="none" stroke="black" points="468,-4 468,-86 651,-86 651,-4 468,-4"/>
+</g>
+<!-- Certificates&#45;&gt;Certifcate Types -->
+<g id="database_105_edge1" class="edge">
+<title>Certificates:e&#45;&gt;Certifcate Types:w</title>
+<path fill="none" stroke="black" d="M416.5,-61C436.72,-61 443.67,-61 460.58,-61"/>
+<polygon fill="black" stroke="black" points="461,-63.63 468.5,-61 461,-58.38 461,-63.63"/>
+</g>
+</g>
+</svg><h3 id="type-codes">Type codes</h3>
 <p>Type codes are always one uppercase letter or number in length.</p>
 <p>Historically, the alphabetical certificate type codes were used for EU-wide certificates. The numeric certificate type codes were used for national measures.</p>
 <h3 id="specific-certificate-codes">Specific certificate codes</h3>
@@ -724,7 +847,10 @@ When joined together these form the unique code of the certificate.</p>
       </tr>
     </tfoot>
   </table><p>Two of the most used code types are C (other certificates) and Y (particular provisions).</p>
+<h2 id="source-of-data">Source of data</h2>
+<p>Certificates are set by UK government trade policy, as are certificate types. Most certificates and certificate types were set by the EU and have remained in place following the UK&rsquo;s departure. Certificate types are typically unchanging (all the current types were established in 1970). New certificates are relatively often introduced, typically between 10-30 a year, with existing certificates coming to an end at a slightly slower rate. Certificate descriptions may also change over time, most commonly being updated to reflect minor changes in policy or wording (with a date from which the new description is in effect), and on occasion new versions of descriptions may be issued to correct errors.</p>
 <h2 id="validation-rules">Validation rules</h2>
+<p>Below are the <a href="#">validation rules</a> that apply to certificates.</p>
 <h3 id="validation-rules-certificates">Certificates</h3>
 <div class="table-container">
         <table>
@@ -734,23 +860,23 @@ When joined together these form the unique code of the certificate.</p>
 </tr><tr>
 <td>CE2</td>
 <td>
-<a href="/tariff-data-manual/documentation/validation-rules/uniqueness.html">Uniqueness</a> rule for fields <code>certificate_type</code> and <code>code</code>.</td>
+<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for fields <code>certificate_type</code> and <code>code</code>.</td>
 </tr><tr>
 <td>CE4</td>
 <td>
-<a href="/tariff-data-manual/documentation/validation-rules/validity-contained.html">Validity contained</a> rule requiring certificate validity to contain <a href="/tariff-data-manual/documentation/data-structures/measure.html">measure</a> validity via associated <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure conditions</a>.</td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule requiring certificate validity to contain <a href="/tariff-data-manual/documentation/data-structures/measure.html">measure</a> validity via associated <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure conditions</a>.</td>
 </tr><tr>
 <td>CE5</td>
 <td>
-<a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure condition</a>.</td>
+<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure condition</a>.</td>
 </tr><tr>
 <td>CE6</td>
 <td>
-<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for certificate descriptions.</td>
+<a href="/tariff-data-manual/documentation/validity-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for certificate descriptions.</td>
 </tr><tr>
 <td>CE7</td>
 <td>
-<a href="/tariff-data-manual/documentation/validation-rules/validity-contained.html">Validity contained</a> rule requiring certificate type validity to contain certificate validity.</td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule requiring certificate type validity to contain certificate validity.</td>
 </tr>
         </table>
       </div><h3 id="certificate-types">Certificate types</h3>
@@ -762,14 +888,15 @@ When joined together these form the unique code of the certificate.</p>
 </tr><tr>
 <td>CET1</td>
 <td>
-<a href="/tariff-data-manual/documentation/validation-rules/uniqueness.html">Uniqueness</a> rule for field <code>certificate_type</code>.</td>
+<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for field <code>certificate_type</code>.</td>
 </tr><tr>
 <td>CET2</td>
 <td>
-<a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a certificate.</td>
+<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a certificate.</td>
 </tr>
         </table>
-      </div>
+      </div><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
+
             
           </main>
 
