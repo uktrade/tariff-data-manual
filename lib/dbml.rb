@@ -40,7 +40,7 @@ def dbml_to_dot code
 
 
     #{project.relationships.map do |relationship| %{
-      "#{relationship.left_table}":#{relationship.left_fields.first}_attribs:e -> "#{relationship.right_table}":#{relationship.right_fields.first}_name:w
+      "#{relationship.left_table}":"#{relationship.left_fields.first}_attribs":e -> "#{relationship.right_table}":"#{relationship.right_fields.first}_name":w
     } end.join("\n")}
   }}
 end
