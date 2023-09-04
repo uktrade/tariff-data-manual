@@ -729,112 +729,112 @@ When joined together these form the unique code of the certificate.</p>
 <p>The &lsquo;certificate_types&rsquo; record lists the type code, type description and the <a href="https://uktrade.github.io/tariff-data-manual/documentation/data-structures/validity-dates.html#validity-dates">validity</a> start and end dates.</p>
 <p>The &lsquo;certificate_descriptions&rsquo; record lists the certificate description id (for joining to the relevant certificate record), the id of the associated certificate and the description itself. Read more about <a href="#">descriptions</a> and how they are structured.</p>
 <h3 id="entity-relationship-diagram-for-certificates">Entity-Relationship Diagram for Certificates</h3>
-<svg width="667pt" height="130pt"
- viewBox="0.00 0.00 667.00 130.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_337" class="graph" transform="scale(1 1) rotate(0) translate(4 126)">
+<svg width="654pt" height="130pt"
+ viewBox="0.00 0.00 654.00 130.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_589" class="graph" transform="scale(1 1) rotate(0) translate(4 126)">
 <title>Database</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-126 663,-126 663,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-126 650,-126 650,4 -4,4"/>
 <!-- Certificates -->
-<g id="table_690" class="node">
+<g id="table_806" class="node">
 <title>Certificates</title>
-<polygon fill="none" stroke="black" points="272.5,-85 272.5,-101 415.5,-101 415.5,-85 272.5,-85"/>
-<text text-anchor="start" x="321" y="-90.8" font-family="Arial" font-size="9.00">Certificates</text>
-<polygon fill="none" stroke="black" points="272.5,-69 272.5,-85 353.5,-85 353.5,-69 272.5,-69"/>
-<text text-anchor="start" x="284.5" y="-74.8" font-family="Arial" font-size="9.00">certificate_sid</text>
-<polygon fill="none" stroke="black" points="353.5,-69 353.5,-85 378.5,-85 378.5,-69 353.5,-69"/>
-<text text-anchor="start" x="361" y="-74.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="378.5,-69 378.5,-85 415.5,-85 415.5,-69 378.5,-69"/>
-<text text-anchor="start" x="392" y="-74.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="272.5,-53 272.5,-69 353.5,-69 353.5,-53 272.5,-53"/>
-<text text-anchor="start" x="275.5" y="-58.8" font-family="Arial" font-size="9.00">certificate_type_id</text>
-<polygon fill="none" stroke="black" points="353.5,-53 353.5,-69 378.5,-69 378.5,-53 353.5,-53"/>
-<text text-anchor="start" x="361" y="-58.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="378.5,-53 378.5,-69 415.5,-69 415.5,-53 378.5,-53"/>
-<polygon fill="none" stroke="black" points="272.5,-37 272.5,-53 353.5,-53 353.5,-37 272.5,-37"/>
-<text text-anchor="start" x="287" y="-42.8" font-family="Arial" font-size="9.00">validity_start</text>
-<polygon fill="none" stroke="black" points="353.5,-37 353.5,-53 378.5,-53 378.5,-37 353.5,-37"/>
-<text text-anchor="start" x="356.5" y="-42.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="378.5,-37 378.5,-53 415.5,-53 415.5,-37 378.5,-37"/>
-<text text-anchor="start" x="381.5" y="-42.8" font-family="Arial" font-size="9.00">not null</text>
-<polygon fill="none" stroke="black" points="272.5,-21 272.5,-37 353.5,-37 353.5,-21 272.5,-21"/>
-<text text-anchor="start" x="288" y="-26.8" font-family="Arial" font-size="9.00">validity_end</text>
-<polygon fill="none" stroke="black" points="353.5,-21 353.5,-37 378.5,-37 378.5,-21 353.5,-21"/>
-<text text-anchor="start" x="356.5" y="-26.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="378.5,-21 378.5,-37 415.5,-37 415.5,-21 378.5,-21"/>
-<text text-anchor="start" x="389" y="-26.8" font-family="Arial" font-size="9.00">null</text>
-<polygon fill="none" stroke="black" points="271,-20 271,-102 416,-102 416,-20 271,-20"/>
+<polygon fill="none" stroke="black" points="265,-85 265,-101 407,-101 407,-85 265,-85"/>
+<text text-anchor="start" x="313" y="-90.8" font-family="Arial" font-size="9.00">Certificates</text>
+<polygon fill="none" stroke="black" points="265,-69 265,-85 345,-85 345,-69 265,-69"/>
+<text text-anchor="start" x="279" y="-74.8" font-family="Arial" font-size="9.00">Certificate Id</text>
+<polygon fill="none" stroke="black" points="345,-69 345,-85 370,-85 370,-69 345,-69"/>
+<text text-anchor="start" x="352.5" y="-74.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="370,-69 370,-85 407,-85 407,-69 370,-69"/>
+<text text-anchor="start" x="383.5" y="-74.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="265,-53 265,-69 345,-69 345,-53 265,-53"/>
+<text text-anchor="start" x="268" y="-58.8" font-family="Arial" font-size="9.00">Certificate Type Id</text>
+<polygon fill="none" stroke="black" points="345,-53 345,-69 370,-69 370,-53 345,-53"/>
+<text text-anchor="start" x="352.5" y="-58.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="370,-53 370,-69 407,-69 407,-53 370,-53"/>
+<polygon fill="none" stroke="black" points="265,-37 265,-53 345,-53 345,-37 265,-37"/>
+<text text-anchor="start" x="268.5" y="-42.8" font-family="Arial" font-size="9.00">Validity Start Date</text>
+<polygon fill="none" stroke="black" points="345,-37 345,-53 370,-53 370,-37 345,-37"/>
+<text text-anchor="start" x="348" y="-42.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="370,-37 370,-53 407,-53 407,-37 370,-37"/>
+<text text-anchor="start" x="373" y="-42.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="265,-21 265,-37 345,-37 345,-21 265,-21"/>
+<text text-anchor="start" x="270" y="-26.8" font-family="Arial" font-size="9.00">Validity End Date</text>
+<polygon fill="none" stroke="black" points="345,-21 345,-37 370,-37 370,-21 345,-21"/>
+<text text-anchor="start" x="348" y="-26.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="370,-21 370,-37 407,-37 407,-21 370,-21"/>
+<text text-anchor="start" x="380.5" y="-26.8" font-family="Arial" font-size="9.00">null</text>
+<polygon fill="none" stroke="black" points="264,-20 264,-102 408,-102 408,-20 264,-20"/>
 </g>
 <!-- Certifcate Types -->
-<g id="table_243" class="node">
+<g id="table_244" class="node">
 <title>Certifcate Types</title>
-<polygon fill="none" stroke="black" points="469.5,-69 469.5,-85 650.5,-85 650.5,-69 469.5,-69"/>
-<text text-anchor="start" x="526.5" y="-74.8" font-family="Arial" font-size="9.00">Certifcate Types</text>
-<polygon fill="none" stroke="black" points="469.5,-53 469.5,-69 554.5,-69 554.5,-53 469.5,-53"/>
-<text text-anchor="start" x="472.5" y="-58.8" font-family="Arial" font-size="9.00">certificate_type_sid</text>
-<polygon fill="none" stroke="black" points="554.5,-53 554.5,-69 613.5,-69 613.5,-53 554.5,-53"/>
-<text text-anchor="start" x="579" y="-58.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="613.5,-53 613.5,-69 650.5,-69 650.5,-53 613.5,-53"/>
-<text text-anchor="start" x="627" y="-58.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="469.5,-37 469.5,-53 554.5,-53 554.5,-37 469.5,-37"/>
-<text text-anchor="start" x="489" y="-42.8" font-family="Arial" font-size="9.00">description</text>
-<polygon fill="none" stroke="black" points="554.5,-37 554.5,-53 613.5,-53 613.5,-37 554.5,-37"/>
-<text text-anchor="start" x="557.5" y="-42.8" font-family="Arial" font-size="9.00">varchar(255)</text>
-<polygon fill="none" stroke="black" points="613.5,-37 613.5,-53 650.5,-53 650.5,-37 613.5,-37"/>
-<text text-anchor="start" x="616.5" y="-42.8" font-family="Arial" font-size="9.00">not null</text>
-<polygon fill="none" stroke="black" points="469.5,-21 469.5,-37 554.5,-37 554.5,-21 469.5,-21"/>
-<text text-anchor="start" x="486" y="-26.8" font-family="Arial" font-size="9.00">validity_start</text>
-<polygon fill="none" stroke="black" points="554.5,-21 554.5,-37 613.5,-37 613.5,-21 554.5,-21"/>
-<text text-anchor="start" x="574.5" y="-26.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="613.5,-21 613.5,-37 650.5,-37 650.5,-21 613.5,-21"/>
-<text text-anchor="start" x="616.5" y="-26.8" font-family="Arial" font-size="9.00">not null</text>
-<polygon fill="none" stroke="black" points="469.5,-5 469.5,-21 554.5,-21 554.5,-5 469.5,-5"/>
-<text text-anchor="start" x="487" y="-10.8" font-family="Arial" font-size="9.00">validity_end</text>
-<polygon fill="none" stroke="black" points="554.5,-5 554.5,-21 613.5,-21 613.5,-5 554.5,-5"/>
-<text text-anchor="start" x="574" y="-10.8" font-family="Arial" font-size="9.00">[null]</text>
-<polygon fill="none" stroke="black" points="613.5,-5 613.5,-21 650.5,-21 650.5,-5 613.5,-5"/>
-<polygon fill="none" stroke="black" points="468,-4 468,-86 651,-86 651,-4 468,-4"/>
+<polygon fill="none" stroke="black" points="461,-69 461,-85 637,-85 637,-69 461,-69"/>
+<text text-anchor="start" x="515.5" y="-74.8" font-family="Arial" font-size="9.00">Certifcate Types</text>
+<polygon fill="none" stroke="black" points="461,-53 461,-69 541,-69 541,-53 461,-53"/>
+<text text-anchor="start" x="464" y="-58.8" font-family="Arial" font-size="9.00">Certificate Type Id</text>
+<polygon fill="none" stroke="black" points="541,-53 541,-69 600,-69 600,-53 541,-53"/>
+<text text-anchor="start" x="565.5" y="-58.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="600,-53 600,-69 637,-69 637,-53 600,-53"/>
+<text text-anchor="start" x="613.5" y="-58.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="461,-37 461,-53 541,-53 541,-37 461,-37"/>
+<text text-anchor="start" x="477.5" y="-42.8" font-family="Arial" font-size="9.00">Description</text>
+<polygon fill="none" stroke="black" points="541,-37 541,-53 600,-53 600,-37 541,-37"/>
+<text text-anchor="start" x="544" y="-42.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="600,-37 600,-53 637,-53 637,-37 600,-37"/>
+<text text-anchor="start" x="603" y="-42.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="461,-21 461,-37 541,-37 541,-21 461,-21"/>
+<text text-anchor="start" x="464.5" y="-26.8" font-family="Arial" font-size="9.00">Validity Start Date</text>
+<polygon fill="none" stroke="black" points="541,-21 541,-37 600,-37 600,-21 541,-21"/>
+<text text-anchor="start" x="561" y="-26.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="600,-21 600,-37 637,-37 637,-21 600,-21"/>
+<text text-anchor="start" x="603" y="-26.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="461,-5 461,-21 541,-21 541,-5 461,-5"/>
+<text text-anchor="start" x="466" y="-10.8" font-family="Arial" font-size="9.00">Validity End Date</text>
+<polygon fill="none" stroke="black" points="541,-5 541,-21 600,-21 600,-5 541,-5"/>
+<text text-anchor="start" x="560.5" y="-10.8" font-family="Arial" font-size="9.00">[null]</text>
+<polygon fill="none" stroke="black" points="600,-5 600,-21 637,-21 637,-5 600,-5"/>
+<polygon fill="none" stroke="black" points="460,-4 460,-86 638,-86 638,-4 460,-4"/>
 </g>
 <!-- Certificates&#45;&gt;Certifcate Types -->
-<g id="database_337_edge1" class="edge">
+<g id="database_589_edge1" class="edge">
 <title>Certificates:e&#45;&gt;Certifcate Types:w</title>
-<path fill="none" stroke="black" d="M416.5,-61C436.72,-61 443.67,-61 460.58,-61"/>
-<polygon fill="black" stroke="black" points="461,-63.63 468.5,-61 461,-58.38 461,-63.63"/>
+<path fill="none" stroke="black" d="M408,-61C428.22,-61 435.17,-61 452.08,-61"/>
+<polygon fill="black" stroke="black" points="452.5,-63.63 460,-61 452.5,-58.38 452.5,-63.63"/>
 </g>
 <!-- Certificate Descriptions -->
-<g id="table_357" class="node">
+<g id="table_569" class="node">
 <title>Certificate Descriptions</title>
-<polygon fill="none" stroke="black" points="9.5,-101 9.5,-117 218.5,-117 218.5,-101 9.5,-101"/>
-<text text-anchor="start" x="66.5" y="-106.8" font-family="Arial" font-size="9.00">Certificate Descriptions</text>
-<polygon fill="none" stroke="black" points="9.5,-85 9.5,-101 122.5,-101 122.5,-85 9.5,-85"/>
-<text text-anchor="start" x="12.5" y="-90.8" font-family="Arial" font-size="9.00">certificate_description_sid</text>
-<polygon fill="none" stroke="black" points="122.5,-85 122.5,-101 181.5,-101 181.5,-85 122.5,-85"/>
-<text text-anchor="start" x="147" y="-90.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="181.5,-85 181.5,-101 218.5,-101 218.5,-85 181.5,-85"/>
-<text text-anchor="start" x="195" y="-90.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="9.5,-69 9.5,-85 122.5,-85 122.5,-69 9.5,-69"/>
-<text text-anchor="start" x="17" y="-74.8" font-family="Arial" font-size="9.00">described_certificate_id</text>
-<polygon fill="none" stroke="black" points="122.5,-69 122.5,-85 181.5,-85 181.5,-69 122.5,-69"/>
-<text text-anchor="start" x="147" y="-74.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="181.5,-69 181.5,-85 218.5,-85 218.5,-69 181.5,-69"/>
-<polygon fill="none" stroke="black" points="9.5,-53 9.5,-69 122.5,-69 122.5,-53 9.5,-53"/>
-<text text-anchor="start" x="43" y="-58.8" font-family="Arial" font-size="9.00">description</text>
-<polygon fill="none" stroke="black" points="122.5,-53 122.5,-69 181.5,-69 181.5,-53 122.5,-53"/>
-<text text-anchor="start" x="125.5" y="-58.8" font-family="Arial" font-size="9.00">varchar(255)</text>
-<polygon fill="none" stroke="black" points="181.5,-53 181.5,-69 218.5,-69 218.5,-53 181.5,-53"/>
-<text text-anchor="start" x="184.5" y="-58.8" font-family="Arial" font-size="9.00">not null</text>
-<polygon fill="none" stroke="black" points="9.5,-37 9.5,-53 122.5,-53 122.5,-37 9.5,-37"/>
-<text text-anchor="start" x="40" y="-42.8" font-family="Arial" font-size="9.00">validity_start</text>
-<polygon fill="none" stroke="black" points="122.5,-37 122.5,-53 181.5,-53 181.5,-37 122.5,-37"/>
-<text text-anchor="start" x="142.5" y="-42.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="181.5,-37 181.5,-53 218.5,-53 218.5,-37 181.5,-37"/>
-<text text-anchor="start" x="184.5" y="-42.8" font-family="Arial" font-size="9.00">not null</text>
-<polygon fill="none" stroke="black" points="8,-36 8,-118 219,-118 219,-36 8,-36"/>
+<polygon fill="none" stroke="black" points="9,-101 9,-117 211,-117 211,-101 9,-101"/>
+<text text-anchor="start" x="62.5" y="-106.8" font-family="Arial" font-size="9.00">Certificate Descriptions</text>
+<polygon fill="none" stroke="black" points="9,-85 9,-101 115,-101 115,-85 9,-85"/>
+<text text-anchor="start" x="12" y="-90.8" font-family="Arial" font-size="9.00">Certificate Description Id</text>
+<polygon fill="none" stroke="black" points="115,-85 115,-101 174,-101 174,-85 115,-85"/>
+<text text-anchor="start" x="139.5" y="-90.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="174,-85 174,-101 211,-101 211,-85 174,-85"/>
+<text text-anchor="start" x="187.5" y="-90.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="9,-69 9,-85 115,-85 115,-69 9,-69"/>
+<text text-anchor="start" x="14" y="-74.8" font-family="Arial" font-size="9.00">Described Certificate Id</text>
+<polygon fill="none" stroke="black" points="115,-69 115,-85 174,-85 174,-69 115,-69"/>
+<text text-anchor="start" x="139.5" y="-74.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="174,-69 174,-85 211,-85 211,-69 174,-69"/>
+<polygon fill="none" stroke="black" points="9,-53 9,-69 115,-69 115,-53 9,-53"/>
+<text text-anchor="start" x="38.5" y="-58.8" font-family="Arial" font-size="9.00">Description</text>
+<polygon fill="none" stroke="black" points="115,-53 115,-69 174,-69 174,-53 115,-53"/>
+<text text-anchor="start" x="118" y="-58.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="174,-53 174,-69 211,-69 211,-53 174,-53"/>
+<text text-anchor="start" x="177" y="-58.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="9,-37 9,-53 115,-53 115,-37 9,-37"/>
+<text text-anchor="start" x="25.5" y="-42.8" font-family="Arial" font-size="9.00">Validity Start Date</text>
+<polygon fill="none" stroke="black" points="115,-37 115,-53 174,-53 174,-37 115,-37"/>
+<text text-anchor="start" x="135" y="-42.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="174,-37 174,-53 211,-53 211,-37 174,-37"/>
+<text text-anchor="start" x="177" y="-42.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="8,-36 8,-118 212,-118 212,-36 8,-36"/>
 </g>
 <!-- Certificate Descriptions&#45;&gt;Certificates -->
-<g id="database_337_edge2" class="edge">
+<g id="database_589_edge2" class="edge">
 <title>Certificate Descriptions:e&#45;&gt;Certificates:w</title>
-<path fill="none" stroke="black" d="M219.5,-77C239.72,-77 246.67,-77 263.58,-77"/>
-<polygon fill="black" stroke="black" points="264,-79.63 271.5,-77 264,-74.38 264,-79.63"/>
+<path fill="none" stroke="black" d="M212,-77C232.22,-77 239.17,-77 256.08,-77"/>
+<polygon fill="black" stroke="black" points="256.5,-79.63 264,-77 256.5,-74.38 256.5,-79.63"/>
 </g>
 </g>
 </svg><h3 id="type-codes">Type codes</h3>
@@ -856,7 +856,7 @@ When joined together these form the unique code of the certificate.</p>
     <tfoot>
       <tr>
         <td colspan=3>
-          Last updated 03 Sep 2023
+          Last updated 04 Sep 2023
         </td>
       </tr>
     </tfoot>
