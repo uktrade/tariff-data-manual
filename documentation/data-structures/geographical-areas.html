@@ -729,13 +729,12 @@
 <li>a region</li>
 </ul>
 <h2 id="defining-countries-and-regions">Defining countries and regions</h2>
-<p>A country is any soverign state recognised as such by the UK Foreign, Commonwealth and Development Office, and the list of geographical areas marked as countries should match the FCDO&rsquo;s list of recognized countries.</p>
+<p>A country is any soverign state recognised as such by the UK Foreign, Commonwealth and Development Office, and the list of geographical areas marked as countries should match the FCDO&rsquo;s <a href="https://www.data.gov.uk/dataset/0b412b57-6934-4f28-b495-640cdc7e8f7f/foreign-commonwealth-and-development-office-geographical-names-index">list of recognized countries</a>.</p>
 <p>A region refers to a territory, these may be overseas territories (e.g. British Virgin Islands) or disputed territories (e.g. Taiwan). These are any area that is not a recognised soverign state but which has its own tariff or origin declaration requirements.</p>
 <h2 id="defining-country-groups">Defining country groups</h2>
 <p>There are many cases where a measure may apply equally across many countires, in such cases the measure is specified as applying to a defined country group, rather than specifying each individual country within the measure definition.</p>
 <p>A country group may refer to a globally understood trading entity, such as <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/1033">CARIFORUM</a> or <a href="https://www.gov.uk/government/publications/trading-with-developing-nations">the Generalised Scheme of Preferences</a>.</p>
 <p>Sometimes a trade measure may apply to several countries which are not part of a trading entity. Instead of applying the measure to each individual country, it is easier to create a country group containing these countries. The measure can then be applied to the whole group.</p>
-<p>An area defined as a group may not be a member of another group, only countries and regions can be members of groups.</p>
 <h3 id="grouping-countries-to-apply-specific-elements-of-trade-policy">Grouping countries to apply specific elements of trade policy</h3>
 <p>Sometimes countries are grouped together to be able to apply specific elements of a trade policy.</p>
 <p>For example, the country group <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/2300">Silk or cotton handloom products</a> allows the execution of rules on hand loomed products.</p>
@@ -774,11 +773,11 @@
 <h2 id="entity-relationship-diagram-of-the-relevant-records">Entity-Relationship Diagram of the relevant records</h2>
 <svg width="393pt" height="374pt"
  viewBox="0.00 0.00 393.00 374.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_295" class="graph" transform="scale(1 1) rotate(0) translate(4 370)">
+<g id="database_181" class="graph" transform="scale(1 1) rotate(0) translate(4 370)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-370 389,-370 389,4 -4,4"/>
 <!-- Geographical Areas -->
-<g id="table_935" class="node">
+<g id="table_674" class="node">
 <title>Geographical Areas</title>
 <polygon fill="none" stroke="black" points="230,-221 230,-237 376,-237 376,-221 230,-221"/>
 <text text-anchor="start" x="262" y="-226.8" font-family="Arial" font-size="9.00">Geographical Areas</text>
@@ -806,7 +805,7 @@
 <polygon fill="none" stroke="black" points="229,-156 229,-238 377,-238 377,-156 229,-156"/>
 </g>
 <!-- Geographical Area Descriptions -->
-<g id="table_524" class="node">
+<g id="table_31" class="node">
 <title>Geographical Area Descriptions</title>
 <polygon fill="none" stroke="black" points="23.5,-345 23.5,-361 161.5,-361 161.5,-345 23.5,-345"/>
 <text text-anchor="start" x="27" y="-350.8" font-family="Arial" font-size="9.00">Geographical Area Descriptions</text>
@@ -835,13 +834,13 @@
 <polygon fill="none" stroke="black" points="22.5,-280 22.5,-362 162.5,-362 162.5,-280 22.5,-280"/>
 </g>
 <!-- Geographical Area Descriptions&#45;&gt;Geographical Areas -->
-<g id="database_295_edge1" class="edge">
+<g id="database_181_edge1" class="edge">
 <title>Geographical Area Descriptions:e&#45;&gt;Geographical Areas:w</title>
 <path fill="none" stroke="black" d="M162.5,-321C216.12,-321 176.9,-223.29 221.45,-213.75"/>
 <polygon fill="black" stroke="black" points="221.8,-216.35 229,-213 221.28,-211.13 221.8,-216.35"/>
 </g>
 <!-- Geographical Area Memberships -->
-<g id="table_668" class="node">
+<g id="table_838" class="node">
 <title>Geographical Area Memberships</title>
 <polygon fill="none" stroke="black" points="21.5,-237 21.5,-253 163.5,-253 163.5,-237 21.5,-237"/>
 <text text-anchor="start" x="24.5" y="-242.8" font-family="Arial" font-size="9.00">Geographical Area Memberships</text>
@@ -870,19 +869,19 @@
 <polygon fill="none" stroke="black" points="20.5,-172 20.5,-254 164.5,-254 164.5,-172 20.5,-172"/>
 </g>
 <!-- Geographical Area Memberships&#45;&gt;Geographical Areas -->
-<g id="database_295_edge2" class="edge">
+<g id="database_181_edge2" class="edge">
 <title>Geographical Area Memberships:e&#45;&gt;Geographical Areas:w</title>
 <path fill="none" stroke="black" d="M164.5,-213C190.48,-213 198.8,-213 221.47,-213"/>
 <polygon fill="black" stroke="black" points="221.5,-215.63 229,-213 221.5,-210.38 221.5,-215.63"/>
 </g>
 <!-- Geographical Area Memberships&#45;&gt;Geographical Areas -->
-<g id="database_295_edge5" class="edge">
+<g id="database_181_edge5" class="edge">
 <title>Geographical Area Memberships:e&#45;&gt;Geographical Areas:w</title>
 <path fill="none" stroke="black" d="M164.5,-229C191.27,-229 198.23,-215.86 221.29,-213.4"/>
 <polygon fill="black" stroke="black" points="221.64,-216.01 229,-213 221.38,-210.76 221.64,-216.01"/>
 </g>
 <!-- Measure Excluded Geographical Areas -->
-<g id="table_310" class="node">
+<g id="table_671" class="node">
 <title>Measure Excluded Geographical Areas</title>
 <polygon fill="none" stroke="black" points="9.5,-129 9.5,-145 176.5,-145 176.5,-129 9.5,-129"/>
 <text text-anchor="start" x="12.5" y="-134.8" font-family="Arial" font-size="9.00">Measure Excluded Geographical Areas</text>
@@ -899,13 +898,13 @@
 <polygon fill="none" stroke="black" points="8,-96 8,-146 177,-146 177,-96 8,-96"/>
 </g>
 <!-- Measure Excluded Geographical Areas&#45;&gt;Geographical Areas -->
-<g id="database_295_edge3" class="edge">
+<g id="database_181_edge3" class="edge">
 <title>Measure Excluded Geographical Areas:e&#45;&gt;Geographical Areas:w</title>
 <path fill="none" stroke="black" d="M177.5,-105C227.77,-105 181.5,-201.51 221.21,-212.07"/>
 <polygon fill="black" stroke="black" points="221.24,-214.71 229,-213 221.87,-209.5 221.24,-214.71"/>
 </g>
 <!-- Measures -->
-<g id="table_770" class="node">
+<g id="table_422" class="node">
 <title>Measures</title>
 <polygon fill="none" stroke="black" points="32.5,-53 32.5,-69 153.5,-69 153.5,-53 32.5,-53"/>
 <text text-anchor="start" x="72.5" y="-58.8" font-family="Arial" font-size="9.00">Measures</text>
@@ -927,7 +926,7 @@
 <polygon fill="none" stroke="black" points="31,-4 31,-70 154,-70 154,-4 31,-4"/>
 </g>
 <!-- Measures&#45;&gt;Geographical Areas -->
-<g id="database_295_edge4" class="edge">
+<g id="database_181_edge4" class="edge">
 <title>Measures:e&#45;&gt;Geographical Areas:w</title>
 <path fill="none" stroke="black" d="M154.5,-29C239.97,-29 146.96,-201.68 221.27,-212.47"/>
 <polygon fill="black" stroke="black" points="221.34,-215.11 229,-213 221.7,-209.87 221.34,-215.11"/>
@@ -953,7 +952,7 @@
 <a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for geographical area descriptions.</td>
 </tr><tr>
 <td>DescriptionNotEmpty</td>
-<td>A description cannot be blank. Only applicable to records with a vaidity start date after 1998-02-01.</td>
+<td>A description cannot be blank. Only applicable to records with a validity start date after 1998-02-01.</td>
 </tr><tr>
 <td>GA4</td>
 <td>The referenced parent geographical area group must be an existing geographical area with area code = 1 (geographical area group).</td>
