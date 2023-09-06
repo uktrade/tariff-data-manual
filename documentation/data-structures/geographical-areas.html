@@ -337,7 +337,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/quotas.html#assigning-quotas-to-geographical-areas"><span>Assigning quotas to geographical areas</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas-business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -571,6 +571,9 @@
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#what-geographical-areas-are"><span>What geographical areas are</span></a>
       </li>
       <li>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#defining-countries-and-regions"><span>Defining countries and regions</span></a>
+      </li>
+      <li>
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#defining-country-groups"><span>Defining country groups</span></a>
       </li>
       <li>
@@ -583,10 +586,13 @@
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#excluding-countries-from-geographical-areas"><span>Excluding countries from geographical areas</span></a>
       </li>
       <li>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#entity-relationship-diagram-of-the-relevant-records"><span>Entity-Relationship Diagram of the relevant records</span></a>
+      </li>
+      <li>
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#how-quotas-relate-to-geographical-areas"><span>How quotas relate to geographical areas</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
   </li>
@@ -671,6 +677,9 @@
 <a href="#what-geographical-areas-are">What geographical areas are</a>
 </li>
 <li>
+<a href="#defining-countries-and-regions">Defining countries and regions</a>
+</li>
+<li>
 <a href="#defining-country-groups">Defining country groups</a>
 <ul>
 <li>
@@ -688,10 +697,24 @@
 <a href="#excluding-countries-from-geographical-areas">Excluding countries from geographical areas</a>
 </li>
 <li>
+<a href="#entity-relationship-diagram-of-the-relevant-records">Entity-Relationship Diagram of the relevant records</a>
+</li>
+<li>
 <a href="#how-quotas-relate-to-geographical-areas">How quotas relate to geographical areas</a>
 </li>
 <li>
-<a href="#business-rules">Business rules</a>
+<a href="#validation-rules">Validation rules</a>
+<ul>
+<li>
+<a href="#geo-areas">Geo Areas</a>
+</li>
+<li>
+<a href="#geo-area-memberships">Geo Area Memberships</a>
+</li>
+<li>
+<a href="#excluded-geo-areas">Excluded Geo Areas</a>
+</li>
+</ul>
 </li>
 </ul></p>
 <h2 id="what-geographical-areas-are">What geographical areas are</h2>
@@ -705,9 +728,14 @@
 <li>a country group</li>
 <li>a region</li>
 </ul>
+<h2 id="defining-countries-and-regions">Defining countries and regions</h2>
+<p>A country is any soverign state recognised as such by the UK Foreign, Commonwealth and Development Office, and the list of geographical areas marked as countries should match the FCDO&rsquo;s list of recognized countries.</p>
+<p>A region refers to a territory, these may be overseas territories (e.g. British Virgin Islands) or disputed territories (e.g. Taiwan). These are any area that is not a recognised soverign state but which has its own tariff or origin declaration requirements.</p>
 <h2 id="defining-country-groups">Defining country groups</h2>
+<p>There are many cases where a measure may apply equally across many countires, in such cases the measure is specified as applying to a defined country group, rather than specifying each individual country within the measure definition.</p>
 <p>A country group may refer to a globally understood trading entity, such as <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/1033">CARIFORUM</a> or <a href="https://www.gov.uk/government/publications/trading-with-developing-nations">the Generalised Scheme of Preferences</a>.</p>
 <p>Sometimes a trade measure may apply to several countries which are not part of a trading entity. Instead of applying the measure to each individual country, it is easier to create a country group containing these countries. The measure can then be applied to the whole group.</p>
+<p>An area defined as a group may not be a member of another group, only countries and regions can be members of groups.</p>
 <h3 id="grouping-countries-to-apply-specific-elements-of-trade-policy">Grouping countries to apply specific elements of trade policy</h3>
 <p>Sometimes countries are grouped together to be able to apply specific elements of a trade policy.</p>
 <p>For example, the country group <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/2300">Silk or cotton handloom products</a> allows the execution of rules on hand loomed products.</p>
@@ -731,6 +759,7 @@
 </tr>
         </table>
       </div><p>For all countries and regions, the code is a 2-digit upper-case alphabetical string.</p>
+<p>For countries, the two digit code typically matches the ISO 3166-1 Alpha-2 code. Though there are exeptions, in most cases this would be due to the country not having such a code when it was initially added.</p>
 <p>For regions (unincorporated states) the code is typically a 2-digit string beginning with X, followed by the first letter of the country.</p>
 <p>For country groups, the code is an alpha-numeric string of 4-digits. These 4-digit strings are almost always numeric. For example 1011 is for <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/1011">all countries</a>. Some legacy groups do contain letters. For example F006 is for <a href="https://www.trade-tariff.service.gov.uk/geographical_areas/F006">countries subject to phytosanitary certificates</a>.</p>
 <h2 id="membership-of-geographical-areas">Membership of geographical areas</h2>
@@ -742,11 +771,269 @@
 <p>If the geographical area is a country group, one or more members of the group can be excluded from the measure. This is done by including them in the measure_excluded_geographical_areas table.</p>
 <p>The excluded country must be a member of that group.</p>
 <p>Both the excluded_geographical_area and geographical_area_id fields refer to the excluded country, not the group.</p>
-<h2 id="how-quotas-relate-to-geographical-areas">How quotas relate to geographical areas</h2>
+<h2 id="entity-relationship-diagram-of-the-relevant-records">Entity-Relationship Diagram of the relevant records</h2>
+<svg width="393pt" height="374pt"
+ viewBox="0.00 0.00 393.00 374.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_295" class="graph" transform="scale(1 1) rotate(0) translate(4 370)">
+<title>Database</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-370 389,-370 389,4 -4,4"/>
+<!-- Geographical Areas -->
+<g id="table_935" class="node">
+<title>Geographical Areas</title>
+<polygon fill="none" stroke="black" points="230,-221 230,-237 376,-237 376,-221 230,-221"/>
+<text text-anchor="start" x="262" y="-226.8" font-family="Arial" font-size="9.00">Geographical Areas</text>
+<polygon fill="none" stroke="black" points="230,-205 230,-221 324,-221 324,-205 230,-205"/>
+<text text-anchor="start" x="233" y="-210.8" font-family="Arial" font-size="9.00">Geographical Area Id</text>
+<polygon fill="none" stroke="black" points="324,-205 324,-221 360,-221 360,-205 324,-205"/>
+<text text-anchor="start" x="327" y="-210.8" font-family="Arial" font-size="9.00">char(4)</text>
+<polygon fill="none" stroke="black" points="360,-205 360,-221 376,-221 376,-205 360,-205"/>
+<text text-anchor="start" x="363" y="-210.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="230,-189 230,-205 324,-205 324,-189 230,-189"/>
+<text text-anchor="start" x="254.5" y="-194.8" font-family="Arial" font-size="9.00">Area Code</text>
+<polygon fill="none" stroke="black" points="324,-189 324,-205 360,-205 360,-189 324,-189"/>
+<text text-anchor="start" x="337" y="-194.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="360,-189 360,-205 376,-205 376,-189 360,-189"/>
+<polygon fill="none" stroke="black" points="230,-173 230,-189 324,-189 324,-173 230,-173"/>
+<text text-anchor="start" x="251.5" y="-178.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="324,-173 324,-189 360,-189 360,-173 324,-173"/>
+<text text-anchor="start" x="332.5" y="-178.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="360,-173 360,-189 376,-189 376,-173 360,-173"/>
+<polygon fill="none" stroke="black" points="230,-157 230,-173 324,-173 324,-157 230,-157"/>
+<text text-anchor="start" x="252.5" y="-162.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="324,-157 324,-173 360,-173 360,-157 324,-157"/>
+<text text-anchor="start" x="332.5" y="-162.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="360,-157 360,-173 376,-173 376,-157 360,-157"/>
+<polygon fill="none" stroke="black" points="229,-156 229,-238 377,-238 377,-156 229,-156"/>
+</g>
+<!-- Geographical Area Descriptions -->
+<g id="table_524" class="node">
+<title>Geographical Area Descriptions</title>
+<polygon fill="none" stroke="black" points="23.5,-345 23.5,-361 161.5,-361 161.5,-345 23.5,-345"/>
+<text text-anchor="start" x="27" y="-350.8" font-family="Arial" font-size="9.00">Geographical Area Descriptions</text>
+<polygon fill="none" stroke="black" points="23.5,-329 23.5,-345 86.5,-345 86.5,-329 23.5,-329"/>
+<text text-anchor="start" x="26.5" y="-334.8" font-family="Arial" font-size="9.00">Description Id</text>
+<polygon fill="none" stroke="black" points="86.5,-329 86.5,-345 145.5,-345 145.5,-329 86.5,-329"/>
+<text text-anchor="start" x="111" y="-334.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="145.5,-329 145.5,-345 161.5,-345 161.5,-329 145.5,-329"/>
+<text text-anchor="start" x="148.5" y="-334.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="23.5,-313 23.5,-329 86.5,-329 86.5,-313 23.5,-313"/>
+<text text-anchor="start" x="33" y="-318.8" font-family="Arial" font-size="9.00">Member Id</text>
+<polygon fill="none" stroke="black" points="86.5,-313 86.5,-329 145.5,-329 145.5,-313 86.5,-313"/>
+<text text-anchor="start" x="101" y="-318.8" font-family="Arial" font-size="9.00">char(4)</text>
+<polygon fill="none" stroke="black" points="145.5,-313 145.5,-329 161.5,-329 161.5,-313 145.5,-313"/>
+<text text-anchor="start" x="148.5" y="-318.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="23.5,-297 23.5,-313 86.5,-313 86.5,-297 23.5,-297"/>
+<text text-anchor="start" x="31.5" y="-302.8" font-family="Arial" font-size="9.00">Description</text>
+<polygon fill="none" stroke="black" points="86.5,-297 86.5,-313 145.5,-313 145.5,-297 86.5,-297"/>
+<text text-anchor="start" x="89.5" y="-302.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="145.5,-297 145.5,-313 161.5,-313 161.5,-297 145.5,-297"/>
+<polygon fill="none" stroke="black" points="23.5,-281 23.5,-297 86.5,-297 86.5,-281 23.5,-281"/>
+<text text-anchor="start" x="30" y="-286.8" font-family="Arial" font-size="9.00">validity Start</text>
+<polygon fill="none" stroke="black" points="86.5,-281 86.5,-297 145.5,-297 145.5,-281 86.5,-281"/>
+<text text-anchor="start" x="106.5" y="-286.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="145.5,-281 145.5,-297 161.5,-297 161.5,-281 145.5,-281"/>
+<polygon fill="none" stroke="black" points="22.5,-280 22.5,-362 162.5,-362 162.5,-280 22.5,-280"/>
+</g>
+<!-- Geographical Area Descriptions&#45;&gt;Geographical Areas -->
+<g id="database_295_edge1" class="edge">
+<title>Geographical Area Descriptions:e&#45;&gt;Geographical Areas:w</title>
+<path fill="none" stroke="black" d="M162.5,-321C216.12,-321 176.9,-223.29 221.45,-213.75"/>
+<polygon fill="black" stroke="black" points="221.8,-216.35 229,-213 221.28,-211.13 221.8,-216.35"/>
+</g>
+<!-- Geographical Area Memberships -->
+<g id="table_668" class="node">
+<title>Geographical Area Memberships</title>
+<polygon fill="none" stroke="black" points="21.5,-237 21.5,-253 163.5,-253 163.5,-237 21.5,-237"/>
+<text text-anchor="start" x="24.5" y="-242.8" font-family="Arial" font-size="9.00">Geographical Area Memberships</text>
+<polygon fill="none" stroke="black" points="21.5,-221 21.5,-237 94.5,-237 94.5,-221 21.5,-221"/>
+<text text-anchor="start" x="40" y="-226.8" font-family="Arial" font-size="9.00">Group Id</text>
+<polygon fill="none" stroke="black" points="94.5,-221 94.5,-237 138.5,-237 138.5,-221 94.5,-221"/>
+<text text-anchor="start" x="111.5" y="-226.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="138.5,-221 138.5,-237 163.5,-237 163.5,-221 138.5,-221"/>
+<text text-anchor="start" x="146" y="-226.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="21.5,-205 21.5,-221 94.5,-221 94.5,-205 21.5,-205"/>
+<text text-anchor="start" x="36" y="-210.8" font-family="Arial" font-size="9.00">Member Id</text>
+<polygon fill="none" stroke="black" points="94.5,-205 94.5,-221 138.5,-221 138.5,-205 94.5,-205"/>
+<text text-anchor="start" x="101.5" y="-210.8" font-family="Arial" font-size="9.00">char(4)</text>
+<polygon fill="none" stroke="black" points="138.5,-205 138.5,-221 163.5,-221 163.5,-205 138.5,-205"/>
+<text text-anchor="start" x="146" y="-210.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="21.5,-189 21.5,-205 94.5,-205 94.5,-189 21.5,-189"/>
+<text text-anchor="start" x="32.5" y="-194.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="94.5,-189 94.5,-205 138.5,-205 138.5,-189 94.5,-189"/>
+<text text-anchor="start" x="107" y="-194.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="138.5,-189 138.5,-205 163.5,-205 163.5,-189 138.5,-189"/>
+<polygon fill="none" stroke="black" points="21.5,-173 21.5,-189 94.5,-189 94.5,-173 21.5,-173"/>
+<text text-anchor="start" x="33.5" y="-178.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="94.5,-173 94.5,-189 138.5,-189 138.5,-173 94.5,-173"/>
+<text text-anchor="start" x="107" y="-178.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="138.5,-173 138.5,-189 163.5,-189 163.5,-173 138.5,-173"/>
+<polygon fill="none" stroke="black" points="20.5,-172 20.5,-254 164.5,-254 164.5,-172 20.5,-172"/>
+</g>
+<!-- Geographical Area Memberships&#45;&gt;Geographical Areas -->
+<g id="database_295_edge2" class="edge">
+<title>Geographical Area Memberships:e&#45;&gt;Geographical Areas:w</title>
+<path fill="none" stroke="black" d="M164.5,-213C190.48,-213 198.8,-213 221.47,-213"/>
+<polygon fill="black" stroke="black" points="221.5,-215.63 229,-213 221.5,-210.38 221.5,-215.63"/>
+</g>
+<!-- Geographical Area Memberships&#45;&gt;Geographical Areas -->
+<g id="database_295_edge5" class="edge">
+<title>Geographical Area Memberships:e&#45;&gt;Geographical Areas:w</title>
+<path fill="none" stroke="black" d="M164.5,-229C191.27,-229 198.23,-215.86 221.29,-213.4"/>
+<polygon fill="black" stroke="black" points="221.64,-216.01 229,-213 221.38,-210.76 221.64,-216.01"/>
+</g>
+<!-- Measure Excluded Geographical Areas -->
+<g id="table_310" class="node">
+<title>Measure Excluded Geographical Areas</title>
+<polygon fill="none" stroke="black" points="9.5,-129 9.5,-145 176.5,-145 176.5,-129 9.5,-129"/>
+<text text-anchor="start" x="12.5" y="-134.8" font-family="Arial" font-size="9.00">Measure Excluded Geographical Areas</text>
+<polygon fill="none" stroke="black" points="9.5,-113 9.5,-129 117.5,-129 117.5,-113 9.5,-113"/>
+<text text-anchor="start" x="40.5" y="-118.8" font-family="Arial" font-size="9.00">Measure Id</text>
+<polygon fill="none" stroke="black" points="117.5,-113 117.5,-129 154.5,-129 154.5,-113 117.5,-113"/>
+<text text-anchor="start" x="128.5" y="-118.8" font-family="Arial" font-size="9.00">[pk]</text>
+<polygon fill="none" stroke="black" points="154.5,-113 154.5,-129 176.5,-129 176.5,-113 154.5,-113"/>
+<polygon fill="none" stroke="black" points="9.5,-97 9.5,-113 117.5,-113 117.5,-97 9.5,-97"/>
+<text text-anchor="start" x="28.5" y="-102.8" font-family="Arial" font-size="9.00">Excluded Area Id</text>
+<polygon fill="none" stroke="black" points="117.5,-97 117.5,-113 154.5,-113 154.5,-97 117.5,-97"/>
+<text text-anchor="start" x="128.5" y="-102.8" font-family="Arial" font-size="9.00">[pk]</text>
+<polygon fill="none" stroke="black" points="154.5,-97 154.5,-113 176.5,-113 176.5,-97 154.5,-97"/>
+<polygon fill="none" stroke="black" points="8,-96 8,-146 177,-146 177,-96 8,-96"/>
+</g>
+<!-- Measure Excluded Geographical Areas&#45;&gt;Geographical Areas -->
+<g id="database_295_edge3" class="edge">
+<title>Measure Excluded Geographical Areas:e&#45;&gt;Geographical Areas:w</title>
+<path fill="none" stroke="black" d="M177.5,-105C227.77,-105 181.5,-201.51 221.21,-212.07"/>
+<polygon fill="black" stroke="black" points="221.24,-214.71 229,-213 221.87,-209.5 221.24,-214.71"/>
+</g>
+<!-- Measures -->
+<g id="table_770" class="node">
+<title>Measures</title>
+<polygon fill="none" stroke="black" points="32.5,-53 32.5,-69 153.5,-69 153.5,-53 32.5,-53"/>
+<text text-anchor="start" x="72.5" y="-58.8" font-family="Arial" font-size="9.00">Measures</text>
+<polygon fill="none" stroke="black" points="32.5,-37 32.5,-53 126.5,-53 126.5,-37 32.5,-37"/>
+<text text-anchor="start" x="56.5" y="-42.8" font-family="Arial" font-size="9.00">Measure Id</text>
+<polygon fill="none" stroke="black" points="126.5,-37 126.5,-53 147.5,-53 147.5,-37 126.5,-37"/>
+<text text-anchor="start" x="129.5" y="-42.8" font-family="Arial" font-size="9.00">[pk]</text>
+<polygon fill="none" stroke="black" points="147.5,-37 147.5,-53 153.5,-53 153.5,-37 147.5,-37"/>
+<polygon fill="none" stroke="black" points="32.5,-21 32.5,-37 126.5,-37 126.5,-21 32.5,-21"/>
+<text text-anchor="start" x="35.5" y="-26.8" font-family="Arial" font-size="9.00">Geographical Area Id</text>
+<polygon fill="none" stroke="black" points="126.5,-21 126.5,-37 147.5,-37 147.5,-21 126.5,-21"/>
+<text text-anchor="start" x="129.5" y="-26.8" font-family="Arial" font-size="9.00">[pk]</text>
+<polygon fill="none" stroke="black" points="147.5,-21 147.5,-37 153.5,-37 153.5,-21 147.5,-21"/>
+<polygon fill="none" stroke="black" points="32.5,-5 32.5,-21 126.5,-21 126.5,-5 32.5,-5"/>
+<text text-anchor="start" x="76" y="-10.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="126.5,-5 126.5,-21 147.5,-21 147.5,-5 126.5,-5"/>
+<text text-anchor="start" x="130.5" y="-10.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="147.5,-5 147.5,-21 153.5,-21 153.5,-5 147.5,-5"/>
+<polygon fill="none" stroke="black" points="31,-4 31,-70 154,-70 154,-4 31,-4"/>
+</g>
+<!-- Measures&#45;&gt;Geographical Areas -->
+<g id="database_295_edge4" class="edge">
+<title>Measures:e&#45;&gt;Geographical Areas:w</title>
+<path fill="none" stroke="black" d="M154.5,-29C239.97,-29 146.96,-201.68 221.27,-212.47"/>
+<polygon fill="black" stroke="black" points="221.34,-215.11 229,-213 221.7,-209.87 221.34,-215.11"/>
+</g>
+</g>
+</svg><h2 id="how-quotas-relate-to-geographical-areas">How quotas relate to geographical areas</h2>
 <p>All quotas must be represented both as measures and within the structures related to quotas.</p>
 <p>With licensed quotas, these are only represented by quotas.</p>
-<h2 id="business-rules">Business rules</h2>
-<p>Read the business rules that apply to geographical areas in the <a href="https://uktrade.github.io/tamato/html/business_rules/geographical_areas.html">system documentation</a>.</p>
+<h2 id="validation-rules">Validation rules</h2>
+<h3 id="geo-areas">Geo Areas</h3>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code</th>
+<th>Description</th>
+</tr><tr>
+<td>GA1</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/uniqueness.html">Uniqueness</a> rule for field combination <code>gegraphical area id</code> and <code>validity start date</code>.</td>
+</tr><tr>
+<td>GA3</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for geographical area descriptions.</td>
+</tr><tr>
+<td>DescriptionNotEmpty</td>
+<td>A description cannot be blank. Only applicable to records with a vaidity start date after 1998-02-01.</td>
+</tr><tr>
+<td>GA4</td>
+<td>The referenced parent geographical area group must be an existing geographical area with area code = 1 (geographical area group).</td>
+</tr><tr>
+<td>GA5</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/validity-contained.html">Validity contained</a> rule for parent geographical area groups.</td>
+</tr><tr>
+<td>GA6</td>
+<td>Loops in the parent relation between geographical areas and parent geographical area groups are not allowed.</td>
+</tr><tr>
+<td>GA7</td>
+<td>The validity period of geographical area must not overlap any other geographical area with the same geographical area id.</td>
+</tr><tr>
+<td>GA10</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/validity-contained.html">Validity contained</a> rule requiring geographical area validity to contain <a href="/tariff-data-manual/documentation/data-structures/measure.html">measure</a> validity via associated <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure conditions</a>.</td>
+</tr><tr>
+<td>GA11</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/validity-contained.html">Validity contained</a> rule requiring the validity of a geographical area referenced as an excluded geographical area to contain <a href="/tariff-data-manual/documentation/data-structures/measure.html">measure</a> validity via associated <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure conditions</a>.</td>
+</tr><tr>
+<td>GA21</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure condition</a>.</td>
+</tr><tr>
+<td>GA22</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references as a parent geographical area group.</td>
+</tr>
+        </table>
+      </div><h3 id="geo-area-memberships">Geo Area Memberships</h3>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code</th>
+<th>Description</th>
+</tr><tr>
+<td>GA12</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/must-exist.html">Must exist</a> rule for the referenced geographical area id.</td>
+</tr><tr>
+<td>GA13</td>
+<td>A group member must be a country or region, not a group</td>
+</tr><tr>
+<td>GA14</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/must-exist.html">Must exist</a> rule for the referenced geographical area group id.</td>
+</tr><tr>
+<td>GA16</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/validity-contained.html">Validity contained</a> rule requiring geographical group validity to span all membership periods of its members.</td>
+</tr><tr>
+<td>GA17</td>
+<td>The membership period of a geographical area (member) must be within (inclusive) the validity period of the geographical area group (geographical area’s start and end date).</td>
+</tr><tr>
+<td>GA18</td>
+<td>When a geographical area is more than once member of the same group then there may be no overlap in their membership periods.</td>
+</tr><tr>
+<td>GA19</td>
+<td>If the associated geographical area group has a parent geographical area group then all the members of the geographical area group must also be members of the parent geographical area group.</td>
+</tr><tr>
+<td>GA20</td>
+<td>If the associated geographical area group has a parent geographical area group then the membership period of each member of the parent group must span the membership period of the same geographical area in the geographical area group.</td>
+</tr>
+        </table>
+      </div><h3 id="excluded-geo-areas">Excluded Geo Areas</h3>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code</th>
+<th>Description</th>
+</tr><tr>
+<td>GA23</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/deletion-while-in-use.html">Deletion while in use</a> rule for references from a <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure condition</a>.</td>
+</tr>
+        </table>
+      </div><p>For more detail read the rules that apply to geographical areas in the <a href="https://uktrade.github.io/tamato/html/business_rules/geographical_areas.html">system documentation</a>.</p>
+<p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
