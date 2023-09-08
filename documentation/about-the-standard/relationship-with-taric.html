@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Weeknote 1 beginnings - Tariff Data Manual</title>
+    <title>Relationship with taric - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/weeknotes/weeknote-1-beginnings.html">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/relationship-with-taric.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Weeknote 1 beginnings - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/weeknotes/weeknote-1-beginnings.html" />
+      <meta name="twitter:title" content="Relationship with taric - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/relationship-with-taric.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Weeknote 1 beginnings" />
+      <meta property="og:title" content="Relationship with taric" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/weeknotes/weeknote-1-beginnings.html" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/relationship-with-taric.html" />
 
     
   </head>
@@ -678,41 +678,27 @@
 
         <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="weeknote-1-beginnings">Weeknote #1: Beginnings</h1>
+            <h1 id="relationship-with-taric">Relationship with taric</h1>
+<p>The Tarif Intégré Communautaire (Integrated Tariff of the European Communities, shortened to TARIC) is the Import and Export Tariff of the European Union. The EU produces a TARIC data standard to which its own tariff data conforms. The TARIC data and standard are used by EU Member States to apply a consistent set of trading rules across the entire bloc.</p>
+<p>This standard is dervied from and compatible with the EU&rsquo;s TARIC3 standard. The data structures and formats are mostly identical and data produced to this standard is also valid TARIC3. Any system designed around TARIC3 data can also use data conforming to this standard.</p>
+<p>This standard differs from TARIC3 in the following high-level areas:</p>
 
 <ul>
-<li>
-<a href="#what-is-a-data-standard">What is a data standard?</a>
-</li>
-<li>
-<a href="#so-why-are-we-doing-this">So why are we doing this?</a>
-</li>
-<li>
-<a href="#what-s-next">What’s next?</a>
-</li>
+<li>Regulations are simplified. Only the base regulation records are used and EU-specific fields such as Official Journal numbers are not populated. UK-specific information is included in other fields instead. Other regulation records are maintained for historical data and compatibility.</li>
+<li>Some fields that previously only allowed alphabet or numeral characters have had their format expanded to include both alphabet <strong>and</strong> numeral characters.</li>
+<li>Some extra validity rules have been added to more tightly constrain data. For example, in most cases descriptions are no longer allowed to be blank or missing.</li>
+<li>Languages other than English are possible to represent but are not used. </li>
+<li>A number of features are no longer used, such as publication sigles, exchange rates, nomenclature groups and geographical group parents.</li>
 </ul>
-<p>Hi and welcome to our first tariff data standards weeknote! I’m Steve Corder and I’m the Senior Product Manager for the Tariff Application Platform (TAP) here at the <a href="https://www.gov.uk/government/organisations/department-for-business-and-trade">Department for Business and Trade (DBT)</a>. TAP is the data service that creates UK Tariff policy in a data format that is used by our partners in HMRC and the Channel Islands to apply the correct duties on thousands of different goods moving across the UK border.</p>
-<p>Over the coming months, my department will be setting out to have the data model we all use recognised as a formal UK Data Standard. This and future weeknotes will allow you to follow us on this journey.</p>
-<p>I’m going to assume that if you’re reading this, you’re already aware of how trade tariffs work. So, I’m going to focus in on the data and why we want to set our model up as a formal UK Data Standard.</p>
-<h2 id="what-is-a-data-standard">What is a data standard?</h2>
-<p>A data standard is an agreed upon approach to allow for consistent measurement, qualification or exchange of an object, process, or unit of information. 
-The data model we use in the UK is based on the TARIC3 (Tarif Intégré Communautaire) model used by the European Union. Our aim is to have this model recognised as a formal UK Government data standard so that anyone who wishes to use the data that DBT provides can have confidence that the data is accurate and that the sources of the data we’ve used are clearly understood and can be referenced if needed.</p>
-<p>If you want to know more about UK Government data standards, check out the <a href="https://www.gov.uk/government/groups/data-standards-authority">Data Standards Authority</a> whose departmental aim is to improve how the public sector manages data.</p>
-<h2 id="so-why-are-we-doing-this">So why are we doing this?</h2>
-<p>DBT has a very strong data presence and we use data to help us secure better trading outcomes for the UK. We’ve come to realise that the data coming out of TAP is very useful for this as it allows us to assess the current Tariff against proposals and work out the value it brings to the UK economy  - this is before mentioning the operational uses! We’re also aware that our data from TAP is used for commercial activities in the private sector that help traders make best use of preferential treatment which we’re keen to support.</p>
-<p>With such a wide range of users, our hope is that having a defined standard so that you (the user of the data) knows exactly how we’ve produced the data, what sources we’ve used and how we’ve gone about creating it will provide confidence in our data.</p>
-<h2 id="what-s-next">What’s next?</h2>
-<p>Over the next few months, I’ll be introducing members of the team who are working on this along with how to get involved in the journey.</p>
-<p>This isn’t something we’ll achieve overnight and along the way we’ll likely get things wrong or make a misstep. We’ll use these weeknotes to call this out as we move along on this journey. We’ll also start adding more information to our data manual and use the weeknotes to call out new additions or changes.</p>
-<p>I’ll leave the weeknote here for today, welcome aboard and I hope this has left you interested in what will happen next.</p>
+<p>These changes only apply to data valid from 1st January 2021. Data prior to this date was authored by the EU and conforms to its model.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/About-the-standard;-Weeknotes;-Weeknote-1-Beginnings">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Weeknote+1+beginnings%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fabout-the-standard%2Fweeknotes%2Fweeknote-1-beginnings.html%29&amp;labels=bug&amp;title=Re%3A+%27Weeknote+1+beginnings%27">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/About-the-standard;-Relationship-with-TARIC">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Relationship+with+taric%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fabout-the-standard%2Frelationship-with-taric.html%29&amp;labels=bug&amp;title=Re%3A+%27Relationship+with+taric%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
