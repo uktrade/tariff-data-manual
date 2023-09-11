@@ -509,10 +509,10 @@
         <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#additional-code-types"><span>Additional Code Types</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#how-additional-codes-apply"><span>How additional codes apply</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#business-rules"><span>Business rules</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#how-additional-codes-apply"><span>How additional codes apply</span></a>
       </li>
     </ul>
   </li>
@@ -705,9 +705,6 @@
 </li>
 <li>
 <a href="#additional-code-types">Additional Code Types</a>
-</li>
-<li>
-<a href="#how-additional-codes-apply">How additional codes apply</a>
 <ul>
 <li>
 <a href="#additional-code-types-data-entities">Additional code types data entities</a>
@@ -716,6 +713,29 @@
 <p></li>
 <li>
 <a href="#business-rules">Business rules</a>
+</li>
+<li>
+<a href="#how-additional-codes-apply">How additional codes apply</a>
+<ul>
+<li>
+<a href="#prohibition-restriction-surveillance-3">Prohibition/Restriction/Surveillance (3)</a>
+</li>
+<li>
+<a href="#dual-use-d">Dual Use (D)</a>
+</li>
+<li>
+<a href="#agricultural-tables-non-meursing-6">Agricultural Tables (non-Meursing) (6)</a>
+</li>
+<li>
+<a href="#tariff-preference-2">Tariff Preference (2)</a>
+</li>
+<li>
+<a href="#restrictions-4">Restrictions (4)</a>
+</li>
+<li>
+<a href="#anti-dumping-countervailing-measures-8-a-b-c">Anti-dumping/countervailing measures (8,A,B,C)</a>
+</li>
+</ul>
 </li>
 </ul></p>
 <h2 id="what-additional-codes-are">What additional codes are</h2>
@@ -744,46 +764,29 @@
 <table>
     <thead>
       <tr>
-        <th>Code Type</th><th>Description</th>
+        <th>Code Type</th><th>Description</th><th>Applicability</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>3</td><td>Prohibition/Restriction/Surveillance</td></tr><tr><td>8</td><td>Anti-dumping/countervailing</td></tr><tr><td>7</td><td>Agricultural Tables (Meursing)</td></tr><tr><td>F</td><td>Reference prices fishery products</td></tr><tr><td>D</td><td>Dual Use</td></tr><tr><td>P</td><td>Refund for basic products</td></tr><tr><td>B</td><td>Anti-dumping/countervailing</td></tr><tr><td>6</td><td>Agricultural Tables (non-Meursing)</td></tr><tr><td>9</td><td>Export Refunds</td></tr><tr><td>2</td><td>Tariff preference</td></tr><tr><td>A</td><td>Anti-dumping/countervailing</td></tr><tr><td>4</td><td>Restrictions</td></tr><tr><td>C</td><td>Anti-dumping/countervailing</td></tr>
+      <tr><td>3</td><td>Prohibition/Restriction/Surveillance</td><td>Additional codes</td></tr><tr><td>8</td><td>Anti-dumping/countervailing</td><td>Additional codes</td></tr><tr><td>7</td><td>Agricultural Tables (Meursing)</td><td>Meursing additional codes</td></tr><tr><td>F</td><td>Reference prices fishery products</td><td>Additional codes</td></tr><tr><td>D</td><td>Dual Use</td><td>Additional codes</td></tr><tr><td>P</td><td>Refund for basic products</td><td>Export refund for processed agricultural goods</td></tr><tr><td>B</td><td>Anti-dumping/countervailing</td><td>Additional codes</td></tr><tr><td>6</td><td>Agricultural Tables (non-Meursing)</td><td>Additional codes</td></tr><tr><td>9</td><td>Export Refunds</td><td>Export refund nomenclature</td></tr><tr><td>2</td><td>Tariff preference</td><td>Additional codes</td></tr><tr><td>A</td><td>Anti-dumping/countervailing</td><td>Additional codes</td></tr><tr><td>4</td><td>Restrictions</td><td>Additional codes</td></tr><tr><td>C</td><td>Anti-dumping/countervailing</td><td>Additional codes</td></tr>
     </tbody>
     <tfoot>
       <tr>
-        <td colspan=2>
+        <td colspan=3>
           Last updated 11 Sep 2023
         </td>
       </tr>
     </tfoot>
   </table><p>The list of additional code types is set by DBT, and rarely changes as it requires extensive updates to downstream systems. The only changes in the last two decades have been the addition of code type C in 2009, and the removal of code type F in 2016.</p>
-<h2 id="how-additional-codes-apply">How additional codes apply</h2>
-<p>Additional codes can only be applied to particular types of measures. Types 8, A, B and C can only be used with trade remedies, the full list of measure types that can apply to these additional code types (8,A,B,C) is shown below as an example.</p>
-<table>
-    <thead>
-      <tr>
-        <th>Measure Type</th><th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>166</td><td>Provisional exclusion</td></tr><tr><td>420</td><td>Entry into free circulation (prior surveillance)</td></tr><tr><td>464</td><td>Declaration of subheading submitted to end-use provisions</td></tr><tr><td>465</td><td>Restriction on entry into free circulation</td></tr><tr><td>551</td><td>Provisional anti-dumping duty</td></tr><tr><td>552</td><td>Definitive anti-dumping duty</td></tr><tr><td>553</td><td>Provisional countervailing duty</td></tr><tr><td>554</td><td>Definitive countervailing duty</td></tr><tr><td>555</td><td>Anti-dumping/countervailing duty - Pending collection</td></tr><tr><td>561</td><td>Notice of initiation of an anti-dumping or countervailing proceeding</td></tr><tr><td>562</td><td>Suspended anti-dumping or countervailing duty</td></tr><tr><td>563</td><td>Dump Undertakings</td></tr><tr><td>564</td><td>Anti-dumping or countervailing registration</td></tr><tr><td>565</td><td>Anti-dumping/countervailing review</td></tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan=2>
-          Last updated 11 Sep 2023
-        </td>
-      </tr>
-    </tfoot>
-  </table><h3 id="additional-code-types-data-entities">Additional code types data entities</h3>
+<p>Applicability indicates the data type the additional codes apply to. Only those labelled &ldquo;Additional Codes&rdquo; are still in use, hiwever the remainder still appear in the data and are included here for completeness.</p>
+<h3 id="additional-code-types-data-entities">Additional code types data entities</h3>
 <svg width="1033pt" height="314pt"
  viewBox="0.00 0.00 1033.00 314.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_79" class="graph" transform="scale(1 1) rotate(0) translate(4 310)">
+<g id="database_411" class="graph" transform="scale(1 1) rotate(0) translate(4 310)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-310 1029,-310 1029,4 -4,4"/>
 <!-- Additional Codes -->
-<g id="table_317" class="node">
+<g id="table_273" class="node">
 <title>Additional Codes</title>
 <polygon fill="none" stroke="black" points="242.5,-145 242.5,-161 389.5,-161 389.5,-145 242.5,-145"/>
 <text text-anchor="start" x="280.5" y="-150.8" font-family="Arial" font-size="9.00">Additional Codes</text>
@@ -813,7 +816,7 @@
 <polygon fill="none" stroke="black" points="241,-80 241,-162 390,-162 390,-80 241,-80"/>
 </g>
 <!-- Additional Code Types -->
-<g id="table_617" class="node">
+<g id="table_988" class="node">
 <title>Additional Code Types</title>
 <polygon fill="none" stroke="black" points="443,-129 443,-145 639,-145 639,-129 443,-129"/>
 <text text-anchor="start" x="494" y="-134.8" font-family="Arial" font-size="9.00">Additional Code Types</text>
@@ -848,13 +851,13 @@
 <polygon fill="none" stroke="black" points="442,-48 442,-146 640,-146 640,-48 442,-48"/>
 </g>
 <!-- Additional Codes&#45;&gt;Additional Code Types -->
-<g id="database_79_edge1" class="edge">
+<g id="database_411_edge1" class="edge">
 <title>Additional Codes:e&#45;&gt;Additional Code Types:w</title>
 <path fill="none" stroke="black" d="M390.5,-121C410.53,-121 417.41,-121 434.15,-121"/>
 <polygon fill="black" stroke="black" points="434.5,-123.63 442,-121 434.5,-118.38 434.5,-123.63"/>
 </g>
 <!-- Additional Code Descriptions -->
-<g id="table_679" class="node">
+<g id="table_207" class="node">
 <title>Additional Code Descriptions</title>
 <polygon fill="none" stroke="black" points="9.5,-285 9.5,-301 188.5,-301 188.5,-285 9.5,-285"/>
 <text text-anchor="start" x="39" y="-290.8" font-family="Arial" font-size="9.00">Additional Code Descriptions</text>
@@ -884,13 +887,13 @@
 <polygon fill="none" stroke="black" points="8,-220 8,-302 189,-302 189,-220 8,-220"/>
 </g>
 <!-- Additional Code Descriptions&#45;&gt;Additional Codes -->
-<g id="database_79_edge2" class="edge">
+<g id="database_411_edge2" class="edge">
 <title>Additional Code Descriptions:e&#45;&gt;Additional Codes:w</title>
 <path fill="none" stroke="black" d="M189.5,-261C246.46,-261 187.79,-148.35 233.91,-137.79"/>
 <polygon fill="black" stroke="black" points="234.31,-140.39 241.5,-137 233.77,-135.17 234.31,-140.39"/>
 </g>
 <!-- Measure Additional Code Types -->
-<g id="table_646" class="node">
+<g id="table_704" class="node">
 <title>Measure Additional Code Types</title>
 <polygon fill="none" stroke="black" points="693.5,-129 693.5,-145 860.5,-145 860.5,-129 693.5,-129"/>
 <text text-anchor="start" x="711" y="-134.8" font-family="Arial" font-size="9.00">Measure Additional Code Types</text>
@@ -918,13 +921,13 @@
 <polygon fill="none" stroke="black" points="692,-64 692,-146 861,-146 861,-64 692,-64"/>
 </g>
 <!-- Additional Code Types&#45;&gt;Measure Additional Code Types -->
-<g id="database_79_edge5" class="edge">
+<g id="database_411_edge5" class="edge">
 <title>Additional Code Types:e&#45;&gt;Measure Additional Code Types:w</title>
 <path fill="none" stroke="black" d="M640,-121C660.6,-121 667.56,-121 684.96,-121"/>
 <polygon fill="black" stroke="black" points="685,-123.63 692.5,-121 685,-118.38 685,-123.63"/>
 </g>
 <!-- Footnote Additional Code Associations -->
-<g id="table_214" class="node">
+<g id="table_753" class="node">
 <title>Footnote Additional Code Associations</title>
 <polygon fill="none" stroke="black" points="16.5,-177 16.5,-193 181.5,-193 181.5,-177 16.5,-177"/>
 <text text-anchor="start" x="19.5" y="-182.8" font-family="Arial" font-size="9.00">Footnote Additional Code Associations</text>
@@ -960,13 +963,13 @@
 <polygon fill="none" stroke="black" points="15,-96 15,-194 182,-194 182,-96 15,-96"/>
 </g>
 <!-- Footnote Additional Code Associations&#45;&gt;Additional Codes -->
-<g id="database_79_edge3" class="edge">
+<g id="database_411_edge3" class="edge">
 <title>Footnote Additional Code Associations:e&#45;&gt;Additional Codes:w</title>
 <path fill="none" stroke="black" d="M182.5,-137C205.96,-137 213.68,-137 233.81,-137"/>
 <polygon fill="black" stroke="black" points="234,-139.63 241.5,-137 234,-134.38 234,-139.63"/>
 </g>
 <!-- Measures -->
-<g id="table_0" class="node">
+<g id="table_519" class="node">
 <title>Measures</title>
 <polygon fill="none" stroke="black" points="44.5,-53 44.5,-69 153.5,-69 153.5,-53 44.5,-53"/>
 <text text-anchor="start" x="78.5" y="-58.8" font-family="Arial" font-size="9.00">Measures</text>
@@ -988,13 +991,13 @@
 <polygon fill="none" stroke="black" points="43,-4 43,-70 154,-70 154,-4 43,-4"/>
 </g>
 <!-- Measures&#45;&gt;Additional Codes -->
-<g id="database_79_edge4" class="edge">
+<g id="database_411_edge4" class="edge">
 <title>Measures:e&#45;&gt;Additional Codes:w</title>
 <path fill="none" stroke="black" d="M154.5,-29C213.37,-29 182.92,-127.51 233.77,-136.37"/>
 <polygon fill="black" stroke="black" points="233.81,-139 241.5,-137 234.24,-133.77 233.81,-139"/>
 </g>
 <!-- Measure Types -->
-<g id="table_86" class="node">
+<g id="table_509" class="node">
 <title>Measure Types</title>
 <polygon fill="none" stroke="black" points="914,-113 914,-129 1016,-129 1016,-113 914,-113"/>
 <text text-anchor="start" x="933" y="-118.8" font-family="Arial" font-size="9.00">Measure Types</text>
@@ -1011,15 +1014,119 @@
 <polygon fill="none" stroke="black" points="913,-80 913,-130 1017,-130 1017,-80 913,-80"/>
 </g>
 <!-- Measure Additional Code Types&#45;&gt;Measure Types -->
-<g id="database_79_edge6" class="edge">
+<g id="database_411_edge6" class="edge">
 <title>Measure Additional Code Types:e&#45;&gt;Measure Types:w</title>
 <path fill="none" stroke="black" d="M861.5,-105C881.53,-105 888.41,-105 905.15,-105"/>
 <polygon fill="black" stroke="black" points="905.5,-107.63 913,-105 905.5,-102.38 905.5,-107.63"/>
 </g>
 </g>
 </svg><h2 id="business-rules">Business rules</h2>
-<p>Read the business rules for additional codes in the <a href="https://uktrade.github.io/tamato/html/business_rules/additional_codes.html">system documentation</a>.
-<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
+<p>Read the business rules for additional codes in the <a href="https://uktrade.github.io/tamato/html/business_rules/additional_codes.html">system documentation</a>.</p>
+<h2 id="how-additional-codes-apply">How additional codes apply</h2>
+<p>Additional codes can only be applied to particular types of measures. Types 8, A, B and C can only be used with trade remedies, the full list of measure types that can apply to additional code typesis shown below.</p>
+<h3 id="prohibition-restriction-surveillance-3">Prohibition/Restriction/Surveillance (3)</h3>
+<table>
+    <thead>
+      <tr>
+        <th>Measure Type</th><th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>089</td><td>The Washington Convention</td></tr><tr><td>092</td><td>The Washington Convention (export)</td></tr><tr><td>143</td><td>Preferential tariff quota</td></tr><tr><td>146</td><td>Preferential tariff quota under end-use</td></tr><tr><td>277</td><td>Import prohibition</td></tr><tr><td>278</td><td>Export prohibition</td></tr><tr><td>420</td><td>Entry into free circulation (prior surveillance)</td></tr><tr><td>462</td><td>Posterior import surveillance</td></tr><tr><td>463</td><td>Posterior export surveillance</td></tr><tr><td>465</td><td>Restriction on entry into free circulation</td></tr><tr><td>466</td><td>Outward processing post. surveillance</td></tr><tr><td>467</td><td>Restriction on export</td></tr><tr><td>468</td><td>GSP Confidential Surveillance</td></tr><tr><td>470</td><td>Export surveillance</td></tr><tr><td>473</td><td>Export authorization</td></tr><tr><td>474</td><td>Entry into free circulation (quantitative limitation)</td></tr><tr><td>475</td><td>Restriction on entry into free circulation</td></tr><tr><td>476</td><td>Restriction on export</td></tr><tr><td>477</td><td>Entry into free circulation (outward processing traffic)</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=2>
+          Last updated 11 Sep 2023
+        </td>
+      </tr>
+    </tfoot>
+  </table><h3 id="dual-use-d">Dual Use (D)</h3>
+<table>
+    <thead>
+      <tr>
+        <th>Measure Type</th><th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>476</td><td>Restriction on export</td></tr><tr><td>478</td><td>Export authorization (Dual use)</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=2>
+          Last updated 11 Sep 2023
+        </td>
+      </tr>
+    </tfoot>
+  </table><h3 id="agricultural-tables-non-meursing-6">Agricultural Tables (non-Meursing) (6)</h3>
+<table>
+    <thead>
+      <tr>
+        <th>Measure Type</th><th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>630</td><td>Differences in prices for basic products</td></tr><tr><td>672</td><td>Amount of additional duty on sugar</td></tr><tr><td>673</td><td>Amount of additional duty on flour</td></tr><tr><td>674</td><td>Agricultural component</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=2>
+          Last updated 11 Sep 2023
+        </td>
+      </tr>
+    </tfoot>
+  </table><h3 id="tariff-preference-2">Tariff Preference (2)</h3>
+<table>
+    <thead>
+      <tr>
+        <th>Measure Type</th><th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>103</td><td>Third country duty</td></tr><tr><td>105</td><td>Non preferential duty under end-use</td></tr><tr><td>112</td><td>Autonomous tariff suspension</td></tr><tr><td>122</td><td>Non preferential tariff quota</td></tr><tr><td>123</td><td>Non preferential tariff quota under end-use</td></tr><tr><td>142</td><td>Tariff preference</td></tr><tr><td>143</td><td>Preferential tariff quota</td></tr><tr><td>144</td><td>Preferential ceiling</td></tr><tr><td>145</td><td>Preference under end-use</td></tr><tr><td>146</td><td>Preferential tariff quota under end-use</td></tr><tr><td>695</td><td>Additional duties</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=2>
+          Last updated 11 Sep 2023
+        </td>
+      </tr>
+    </tfoot>
+  </table><h3 id="restrictions-4">Restrictions (4)</h3>
+<table>
+    <thead>
+      <tr>
+        <th>Measure Type</th><th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>089</td><td>The Washington Convention</td></tr><tr><td>092</td><td>The Washington Convention (export)</td></tr><tr><td>277</td><td>Import prohibition</td></tr><tr><td>278</td><td>Export prohibition</td></tr><tr><td>420</td><td>Entry into free circulation (prior surveillance)</td></tr><tr><td>462</td><td>Posterior import surveillance</td></tr><tr><td>463</td><td>Posterior export surveillance</td></tr><tr><td>465</td><td>Restriction on entry into free circulation</td></tr><tr><td>466</td><td>Outward processing post. surveillance</td></tr><tr><td>467</td><td>Restriction on export</td></tr><tr><td>473</td><td>Export authorization</td></tr><tr><td>474</td><td>Entry into free circulation (quantitative limitation)</td></tr><tr><td>475</td><td>Restriction on entry into free circulation</td></tr><tr><td>476</td><td>Restriction on export</td></tr><tr><td>725</td><td>Export control on ozone-depleting substances</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=2>
+          Last updated 11 Sep 2023
+        </td>
+      </tr>
+    </tfoot>
+  </table><h3 id="anti-dumping-countervailing-measures-8-a-b-c">Anti-dumping/countervailing measures (8,A,B,C)</h3>
+<table>
+    <thead>
+      <tr>
+        <th>Measure Type</th><th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>166</td><td>Provisional exclusion</td></tr><tr><td>420</td><td>Entry into free circulation (prior surveillance)</td></tr><tr><td>464</td><td>Declaration of subheading submitted to end-use provisions</td></tr><tr><td>465</td><td>Restriction on entry into free circulation</td></tr><tr><td>551</td><td>Provisional anti-dumping duty</td></tr><tr><td>552</td><td>Definitive anti-dumping duty</td></tr><tr><td>553</td><td>Provisional countervailing duty</td></tr><tr><td>554</td><td>Definitive countervailing duty</td></tr><tr><td>555</td><td>Anti-dumping/countervailing duty - Pending collection</td></tr><tr><td>561</td><td>Notice of initiation of an anti-dumping or countervailing proceeding</td></tr><tr><td>562</td><td>Suspended anti-dumping or countervailing duty</td></tr><tr><td>563</td><td>Dump Undertakings</td></tr><tr><td>564</td><td>Anti-dumping or countervailing registration</td></tr><tr><td>565</td><td>Anti-dumping/countervailing review</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=2>
+          Last updated 11 Sep 2023
+        </td>
+      </tr>
+    </tfoot>
+  </table><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
