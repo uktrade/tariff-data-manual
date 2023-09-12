@@ -717,13 +717,16 @@
 </ul>
 <p>There must always be exactly one of this type of <a href="#">subrecord</a> that is
 <a href="/tariff-data-manual/documentation/data-structures/validity-dates.html">live</a> for the full lifetime of the record.</p>
-<p>This means that:
-* There must be at least one of this subrecord
-* There must be at least one subrecord with a start date equal to the start date
-  of the record
-* Every subrecord must have a unique start date
-* The start date of the subrecord must be before or equal to the end date of the
-  record</p>
+<p>This means that:</p>
+
+<ul>
+<li>There must be at least one of this subrecord</li>
+<li>There must be at least one subrecord with a start date equal to the start date
+of the record</li>
+<li>Every subrecord must have a unique start date</li>
+<li>The start date of the subrecord must be before or equal to the end date of the
+record</li>
+</ul>
 <p>Because validity rules are applied at the end of a transaction, this rule
 requires the first subrecord to be created in the same transaction as the
 record.</p>
