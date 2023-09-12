@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Most favoured nation duties - Tariff Data Manual</title>
+    <title>Mandatory subrecord - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Most favoured nation duties - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html" />
+      <meta name="twitter:title" content="Mandatory subrecord - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Most favoured nation duties" />
+      <meta property="og:title" content="Mandatory subrecord" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/most-favoured-nation-duties.html" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html" />
 
     
   </head>
@@ -705,105 +705,158 @@
 
         <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="most-favoured-nation-duties">Most favoured nation duties</h1>
+            <h1 id="mandatory-subrecord">Mandatory subrecord</h1>
 
 <ul>
 <li>
-<a href="#what-most-favoured-nation-is">What most favoured nation is</a>
+<a href="#example">Example</a>
 </li>
 <li>
-<a href="#exceptions-to-most-favoured-nation">Exceptions to most favoured nation</a>
-<ul>
-<li>
-<a href="#free-trade-agreements">Free trade agreements</a>
-</li>
-<li>
-<a href="#trading-with-developing-nations">Trading with developing nations</a>
-</li>
-<li>
-<a href="#trade-barriers">Trade barriers</a>
+<a href="#test-data">Test data</a>
 </li>
 </ul>
-<p></li>
-<li>
-<a href="#creating-mfn-duties-in-the-tariff">Creating MFN duties in the tariff</a>
-<ul>
-<li>
-<a href="#attaching-mfn-duties-in-the-commodity-code-hierarchy">Attaching MFN duties in the commodity code hierarchy</a>
-</li>
-<li>
-<a href="#attaching-mfn-duties-to-a-geographical-area">Attaching MFN duties to a geographical area</a>
-</li>
-</ul>
-</li>
-</ul></p>
-<h2 id="what-most-favoured-nation-is">What most favoured nation is</h2>
-<p>Most favoured nation (MFN) is a principle of the World Trade Organization (WTO).</p>
-<p>It means members of the WTO cannot usually discriminate between their trading partners.</p>
-<p>Countries must offer access to their market on the same terms for all members of the WTO.</p>
-<p>Any favour offered to one country must be offered to everyone. For example, if you offer a lower rate of customs duty to a country for one of its products, you must do the same for all countries.</p>
-<h2 id="exceptions-to-most-favoured-nation">Exceptions to most favoured nation</h2>
-<p>There are some exceptions to MFN treatment.</p>
-<h3 id="free-trade-agreements">Free trade agreements</h3>
-<p>Countries can negotiate a free trade agreement.</p>
-<p>Free trade agreements set out the rules that cover trade between 2 or more countries.</p>
-<p>They aim to make trading easier between only those countries. They do this by reducing the restrictions on imports and exports between them.
-Learn more about <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-policy/free-trade-agreements.html#free-trade-agreements">how free trade agreements work</a>.</p>
-<p>Read about <a href="https://www.gov.uk/government/collections/the-uks-trade-agreements">the UK’s trade agreements</a> on GOV.UK.</p>
-<h3 id="trading-with-developing-nations">Trading with developing nations</h3>
-<p>Countries can give developing nations special access to their markets. These are known as <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-policy/unilateral-preferences.html#unilateral-preferences">unilateral preferences</a>.</p>
-<p>Eligible countries can pay less or no duties on some goods they import under the UK Generalised Scheme of Preferences (GSP).
-Read <a href="https://www.gov.uk/guidance/use-the-generalised-scheme-of-preferences-to-import-and-export-goods">more about GSP</a> on GOV.UK.</p>
-<h3 id="trade-barriers">Trade barriers</h3>
-<p>Countries can make it more difficult for other nations or traders to import products they believe are being traded unfairly.
-They do this by raising trade barriers.</p>
-<p>Trade barriers can include:</p>
-
-<ul>
-<li>taxes on imported goods</li>
-<li>import quotas or price controls (including limits on the amount of goods that can be imported)</li>
-<li>requirements for goods to be locally produced</li>
-</ul>
-<p>Read <a href="https://www.gov.uk/guidance/report-a-trade-barrier">about trade barriers</a> on GOV.UK.</p>
-<h2 id="creating-mfn-duties-in-the-tariff">Creating MFN duties in the tariff</h2>
-<p>There are about 24,500 commodity codes in the Tariff.</p>
-<p>Every commodity code must have one or both of the following MFN measure types attached to it:</p>
-
-<ul>
-<li>103 (Third country duty)</li>
-<li>105 (Non preferential duty under end-use)</li>
-</ul>
-<p>About 16,500 of the total number of commodity codes are declarable end-lines. An end-line is the most specific classification of a product.</p>
-<p>Each end-line has an MFN duty attached to it.</p>
-<p>Often, the MFN duty is 0%. However, it does not matter what the duty is, it must be set against the commodity code in the Tariff.</p>
-<h3 id="attaching-mfn-duties-in-the-commodity-code-hierarchy">Attaching MFN duties in the commodity code hierarchy</h3>
-<p>You can attach the MFN duty to any tier in the commodity code hierarchy. All the codes below it in the hierarchy inherit the same duty.</p>
-<p>For example, the commodity code for Natural Chilean sodium nitrate is 3102500010.</p>
-<p><img width="1132" alt="Commodity code hierarchy for Natural Chilean sodium nitrate" src="https://user-images.githubusercontent.com/82160410/142454179-e1b15b28-9190-4af5-9394-c2077378b459.png"></p>
-<p>This is made up of:</p>
-
-<ul>
-<li>HS chapter: 31 Fertilisers</li>
-<li>HS heading: 02 Mineral or chemical fertilisers, nitrogenous</li>
-<li>HS subheading: 50 Sodium nitrate</li>
-<li>CN subheading: 00 (not set)</li>
-<li>Taric code: 10 Natural Chilean sodium nitrate</li>
-</ul>
-<p>If the MFN duty on &lsquo;31 Fertilisers&rsquo; is 0%, all the codes below it in the hierarchy inherit the 0% MFN duty.</p>
-<p>Read more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/nomenclature.html#commodity-codes">about commodity codes</a>.</p>
-<h3 id="attaching-mfn-duties-to-a-geographical-area">Attaching MFN duties to a geographical area</h3>
-<p>You must create all MFN duties (103s and 105s) against ‘Erga Omnes’.</p>
-<p>Erga Omnes is a Latin phrase which means ‘towards all’ or ‘towards everyone’. In trade terms, Erga Omnes is the geographical area group which covers the whole world.</p>
-<p>Erga Omnes has a geographical area ID of 1011. This country group includes the UK.</p>
-<p>There is also a country group called ‘All third countries’. This group has the ID 1008. This country group excludes the UK.</p>
-
+<p>There must always be exactly one of this type of <a href="#">subrecord</a> that is
+<a href="/tariff-data-manual/documentation/data-structures/validity-dates.html">live</a> for the full lifetime of the record.</p>
+<p>This means that:
+* There must be at least one of this subrecord
+* There must be at least one subrecord with a start date equal to the start date
+  of the record
+* Every subrecord must have a unique start date
+* The start date of the subrecord must be before or equal to the end date of the
+  record</p>
+<p>Because validity rules are applied at the end of a transaction, this rule
+requires the first subrecord to be created in the same transaction as the
+record.</p>
+<p>If the record is updated to move the start date earlier, the start date of the
+first subrecord must be moved earlier in the same transaction or a new subrecord
+introduced to cover the new period.</p>
+<p>If the record is updated to move the start date later, the start date of the
+first subrecord must be moved later in the same transaction or the first
+subrecord deleted if a later subrecord covers the new start date.</p>
+<p>This rule ensures that the subrecord in question always has a unambiguous value
+for as long as the record is live. This is used when the subrecord represents
+some mandatory property of the record that can change over time.</p>
+<h2 id="example">Example</h2>
+<p>A footnote description is a mandatory subrecord for a footnote.</p>
+<p>If a footnote is created in transaction 1 and a footnote description is created
+in transaction 2, then transaction 1 would fail this rule. If both the footnote
+and footnote description are created in transaction 1, then it would pass this
+rule.</p>
+<p>If a footnote is created with validity start <code>2021-01-01</code> and a footnote
+description record is created with validity start <code>2021-02-01</code> then the
+transaction will fail this rule because the footnote exists for 1 month without
+a footnote description. If the footnote description is created with validity
+start <code>2020-12-01</code> then this rule would still fail because the footnote
+description is live for 1 month before the footnote. To pass the rule, the
+footnote description and footnote need to have the same <code>2021-01-01</code> start date.</p>
+<p>If the footnote is updated to start <code>2021-02-01</code> but the footnote description is
+not changed, then the update transaction would fail this rule because the footnote
+description is again live before the footnote.</p>
+<p>If a second footnote description is added with the same start date of
+<code>2021-01-01</code> then the transaction will fail this rule because the two footnote
+descriptions start at the same moment. If the second description starts a day
+later on <code>2021-01-02</code> then this rule will pass.</p>
+<p>If the footnote is updated to also have a validity end date of <code>2021-01-01</code> (so
+it is live for one day) then the transaction will fail because the second
+footnote now starts after the end date of the footnote. If the second footnote
+is deleted in the same transaction, then this rule will pass.</p>
+<h2 id="test-data">Test data</h2>
+<p>In this test data each row represents a transaction. Each transaction builds on
+the data added in previous transactions that have passed the validity rule.
+Transactions that have failed the validity rule are not persisted and do not
+affect later transactions.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>#</th>
+<th>Foonote</th>
+<th>First description</th>
+<th>Second description</th>
+<th>Pass/fail</th>
+</tr><tr>
+<td>1</td>
+<td>Created, starting <code>2021-01-01</code>
+</td>
+<td></td>
+<td></td>
+<td>Fail - no description</td>
+</tr><tr>
+<td>2</td>
+<td>Created, starting <code>2021-01-01</code>
+</td>
+<td>Created, starting <code>2021-02-01</code>
+</td>
+<td></td>
+<td>Fail - period with no description</td>
+</tr><tr>
+<td>3</td>
+<td>Created, starting <code>2021-01-01</code>
+</td>
+<td>Created, starting <code>2020-12-01</code>
+</td>
+<td></td>
+<td>Fail - description live before footnote</td>
+</tr><tr>
+<td>4</td>
+<td>Created, starting <code>2021-01-01</code>
+</td>
+<td>Created, starting <code>2021-01-01</code>
+</td>
+<td></td>
+<td>Pass</td>
+</tr><tr>
+<td>5</td>
+<td>Updated, starting <code>2021-02-01</code>
+</td>
+<td>No change</td>
+<td></td>
+<td>Fail - description live before footnote</td>
+</tr><tr>
+<td>6</td>
+<td>Updated, starting <code>2021-02-01</code>
+</td>
+<td>Updated, starting <code>2021-02-01</code>
+</td>
+<td></td>
+<td>Pass</td>
+</tr><tr>
+<td>7</td>
+<td>No change</td>
+<td>No change</td>
+<td>Created, starting <code>2021-01-01</code>
+</td>
+<td>Fail - two descriptions with same date</td>
+</tr><tr>
+<td>8</td>
+<td>No change</td>
+<td>No change</td>
+<td>Created, starting <code>2021-02-01</code>
+</td>
+<td>Pass</td>
+</tr><tr>
+<td>9</td>
+<td>Updated, ending <code>2021-01-01</code>
+</td>
+<td>No change</td>
+<td>No change</td>
+<td>Fail - description live after footnote</td>
+</tr><tr>
+<td>10</td>
+<td>Updated, ending <code>2021-01-01</code>
+</td>
+<td>No change</td>
+<td>Deleted</td>
+<td>Pass</td>
+</tr>
+        </table>
+      </div>
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Trade-policies;-Most-favoured-nation-duties">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Most+favoured+nation+duties%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Ftrade-policies%2Fmost-favoured-nation-duties.html%29&amp;labels=bug&amp;title=Re%3A+%27Most+favoured+nation+duties%27">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Validation-rules;-Mandatory-subrecord">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Mandatory+subrecord%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fvalidation-rules%2Fmandatory-subrecord.html%29&amp;labels=bug&amp;title=Re%3A+%27Mandatory+subrecord%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
