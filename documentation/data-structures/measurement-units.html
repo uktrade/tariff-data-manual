@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Validity dates - Tariff Data Manual</title>
+    <title>Measurement units - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/validity-dates.html">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/measurement-units.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Validity dates - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/validity-dates.html" />
+      <meta name="twitter:title" content="Measurement units - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/measurement-units.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Validity dates" />
+      <meta property="og:title" content="Measurement units" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/validity-dates.html" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/measurement-units.html" />
 
     
   </head>
@@ -114,7 +114,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measurement-units-and-abbreviations"><span>Measurement units and abbreviations</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-components-measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-component-data-structures"><span>Measure component data structures</span></a>
@@ -198,7 +198,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#entity-relationship-diagram-of-the-relevant-records"><span>Entity-Relationship Diagram of the relevant records</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#validation-rules"><span>Validation rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#geographical-areas-validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
   </li>
@@ -246,13 +246,13 @@
         <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#measurement-unit-codes-and-abbreviations"><span>Measurement unit codes and abbreviations</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#measurement-units-measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#entity-relationship-diagram-for-measurement-units"><span>Entity-relationship diagram for measurement units</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#measurement-units-validation-rules"><span>Validation rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
   </li>
@@ -725,44 +725,327 @@
 
         <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="validity-dates">Validity dates</h1>
+            <h1 id="measurement-units">Measurement units</h1>
 
 <ul>
 <li>
-<a href="#ending-validity-of-measures">Ending validity of measures</a>
+<a href="#what-are-measurement-units">What are measurement units?</a>
 </li>
 <li>
-<a href="#validity-dates-on-descriptions">Validity dates on descriptions</a>
+<a href="#measurement-unit-codes-and-abbreviations">Measurement unit codes and abbreviations</a>
+</li>
+<li>
+<a href="#measurement-unit-qualifiers">Measurement unit qualifiers</a>
+</li>
+<li>
+<a href="#entity-relationship-diagram-for-measurement-units">Entity-relationship diagram for measurement units</a>
+</li>
+<li>
+<a href="#validation-rules">Validation rules</a>
+<ul>
+<li>
+<a href="#measurement-units-in-measure-components">Measurement Units in Measure Components</a>
+</li>
+<li>
+<a href="#measurement-units-in-measure-conditions">Measurement Units in Measure Conditions</a>
 </li>
 </ul>
-<p>Validity dates show when tariff elements, such as measures, are live.</p>
-<p>Most elements use a pair of validity dates. The element is live between the validity start date and validity end date.</p>
-<p>If the validity end date is blank the element is live forever.</p>
-<p>Validity dates can be changed after a tariff element is created. End dates can be added if they were not specified before and existing dates can be updated.</p>
-<p>Validity start and end dates are inclusive. This means the element is live from the beginning of the start date to the end of the end date.</p>
-<p>An element with the same start and end date is live for one day.</p>
-<h2 id="ending-validity-of-measures">Ending validity of measures</h2>
-<p>There are 4 ways to end-date a measure:</p>
+<p></li>
+</ul></p>
+<h2 id="what-are-measurement-units">What are measurement units?</h2>
+<p>Duty rates and measure conditions often vary based on a measurement of a commodity (e.g. a duty rate of 33 GPB per 100kg).</p>
+<p>Measurement units define the units of measurement used in such circumstances, as well as setting the appropriate units of measurement to be used in goods declarations.</p>
+<p>For example, when a trader declares goods for import, they usually have to declare the weight of their goods in kilograms (KGM), but goods may also be measured in other units including (but not limited to):</p>
 
-<ol>
-<li>The measure is given an explicit end date on the measure record itself</li>
-<li>The measure&rsquo;s generating regulation is a base regulation, and the base regulation itself is end-dated</li>
-<li>The measure&rsquo;s generating regulation is a modification regulation, and the modification regulation itself is end-dated</li>
-<li>The measure&rsquo;s generating regulation is a base regulation, and any of the modification regulations that modify it are end-dated</li>
-<li>The measure&rsquo;s generating regulation is a modification regulation, and the base regulation that it modifies is end-dated</li>
-</ol>
-<p>In the UK Tariff, we do not use regulation end dates. Validity end dates are added to the measure explicitly (as per point 1).</p>
-<h2 id="validity-dates-on-descriptions">Validity dates on descriptions</h2>
-<p>Footnotes, certificates, additional codes and geographical areas all have descriptions which can change over time. There must always be only one description valid at any time.</p>
-<p>For this reason, descriptions do not have end dates and only have a start date. The description is live until the start date of the next description, or indefinitely if there are future descriptions.</p>
+<ul>
+<li>number of items for livestock</li>
+<li>volume in litres for liquid items</li>
+<li>number of pairs for socks</li>
+</ul>
+<h2 id="measurement-unit-codes-and-abbreviations">Measurement unit codes and abbreviations</h2>
+<p>Measurements are defined by a three letter code, as detailed in the table below. These codes are consistent across government services. Human readable abbreviations are often also used, these are also shown in the table, although they may differ across government services.</p>
+<table>
+    <thead>
+      <tr>
+        <th>Code</th><th>Unit</th><th>Abbreviation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>GRT</td><td>Gross tonnage</td><td></td></tr><tr><td>TJO</td><td>Terajoule (gross calorific value)</td><td>TJ</td></tr><tr><td>NAR</td><td>Number of items</td><td>p/st</td></tr><tr><td>MWH</td><td>1000 kilowatt hours</td><td>1,000 kWh</td></tr><tr><td>MIL</td><td>1000 items</td><td>1,000 p/st</td></tr><tr><td>KAC</td><td>Kilogram net of acesulfame potassium</td><td></td></tr><tr><td>KGM</td><td>Kilogram</td><td>kg</td></tr><tr><td>MTR</td><td>Metre</td><td>m</td></tr><tr><td>TNE</td><td>Tonne</td><td>1,000 kg</td></tr><tr><td>KNI</td><td>Kilogram of nitrogen</td><td>kg N</td></tr><tr><td>GFI</td><td>Gram of fissile isotopes</td><td>gi F/S</td></tr><tr><td>KMA</td><td>Kilogram of methylamines</td><td>kg met.am.</td></tr><tr><td>LPA</td><td>Litre pure (100%) alcohol</td><td>l alc. 100%</td></tr><tr><td>MTK</td><td>Square metre</td><td>m2</td></tr><tr><td>HLT</td><td>Hectolitre</td><td>hl</td></tr><tr><td>KUR</td><td>Kilogram of uranium</td><td>kg U</td></tr><tr><td>MPR</td><td>1000 pairs (used for statistical surveillance)</td><td></td></tr><tr><td>NCL</td><td>Number of cells</td><td>ce/el</td></tr><tr><td>KLT</td><td>1000 litres</td><td>1,000 l</td></tr><tr><td>NPR</td><td>Number of pairs</td><td>pa</td></tr><tr><td>KPO</td><td>Kilogram of potassium oxide</td><td>kg K2O</td></tr><tr><td>WAT</td><td>Number of Watt</td><td></td></tr><tr><td>KMT</td><td>Kilometre</td><td></td></tr><tr><td>EUR</td><td>Euro (used for statistical surveillance)</td><td></td></tr><tr><td>DAP</td><td>Decatonne, corrected according to polarisation</td><td>10,000 kg/polar</td></tr><tr><td>KCC</td><td>Kilogram of choline chloride</td><td></td></tr><tr><td>KPH</td><td>Kilogram of potassium hydroxide (caustic potash)</td><td>kg KOH</td></tr><tr><td>KSD</td><td>Kilogram of substance 90 % dry</td><td>kg 90 % sdt</td></tr><tr><td>HMT</td><td>Hectometre</td><td>100 m</td></tr><tr><td>DHS</td><td>Kilogram of dihydrostreptomycin</td><td></td></tr><tr><td>CEN</td><td>Hundred items</td><td>100 p/st</td></tr><tr><td>KCL</td><td>Tonne of potassium chloride</td><td></td></tr><tr><td>DTN</td><td>Hectokilogram</td><td>100 kg</td></tr><tr><td>GRM</td><td>Gram</td><td>g</td></tr><tr><td>CTM</td><td>Carats (one metric carat = 2 x 10$-<sup>4</sup>kg)</td><td>c/k</td></tr><tr><td>CCT</td><td>Carrying capacity in metric tonnes</td><td>ct/l</td></tr><tr><td>KPP</td><td>Kilogram of diphosphorus pentaoxide</td><td>kg P2O5</td></tr><tr><td>MTQ</td><td>Cubic meter</td><td>m3</td></tr><tr><td>ASV</td><td>%vol</td><td>% vol</td></tr><tr><td>KNS</td><td>Kilogram of hydrogen peroxide</td><td>kg H2O2</td></tr><tr><td>KSH</td><td>Kilogram of sodium hydroxide (caustic soda)</td><td>kg NaOH</td></tr><tr><td>LTR</td><td>Litre</td><td>l</td></tr><tr><td>MGM</td><td>Milligram</td><td></td></tr><tr><td>MCG</td><td>Microgram</td><td></td></tr><tr><td>MLT</td><td>Millilitre</td><td></td></tr><tr><td>MCL</td><td>Microlitre</td><td></td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=3>
+          Last updated 14 Sep 2023
+        </td>
+      </tr>
+    </tfoot>
+  </table><h2 id="measurement-unit-qualifiers">Measurement unit qualifiers</h2>
+<p>Measurement unit qualifiers can only be applied to some measurement units.</p>
+<p>The measurement units that are commonly used are Number of Articles (NAR), which are also referred to as:</p>
+
+<ul>
+<li>&lsquo;p/s&rsquo; for items in French or German, or</li>
+<li>&lsquo;heads&rsquo; in reference to livestock</li>
+</ul>
+<p>The following table is used to identify which qualifiers can be used alongside which measurement codes. Combinations of unit and qualifier not specified in the measurements table are not permitted.</p>
+<table>
+    <thead>
+      <tr>
+        <th>Unit Code</th><th>Unit Description</th><th>Unit Qualifier Code</th><th>Unit Qualifier Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>ASV</td><td>%vol</td><td>X</td><td>Hectolitre</td></tr><tr><td>DTN</td><td>Hectokilogram</td><td>E</td><td>net of drained weight</td></tr><tr><td>DTN</td><td>Hectokilogram</td><td>F</td><td>of common wheat</td></tr><tr><td>DTN</td><td>Hectokilogram</td><td>G</td><td>Gross</td></tr><tr><td>DTN</td><td>Hectokilogram</td><td>L</td><td>of live weight</td></tr><tr><td>DTN</td><td>Hectokilogram</td><td>M</td><td>net of dry matter</td></tr><tr><td>DTN</td><td>Hectokilogram</td><td>N</td><td>Net</td></tr><tr><td>DTN</td><td>Hectokilogram</td><td>R</td><td>of the standard quality</td></tr><tr><td>DTN</td><td>Hectokilogram</td><td>S</td><td>of sugar with a yield in white sugar of 92%</td></tr><tr><td>DTN</td><td>Hectokilogram</td><td>Z</td><td>per 1% by weight of sucrose</td></tr><tr><td>KGM</td><td>Kilogram</td><td>A</td><td>Total alcohol</td></tr><tr><td>KGM</td><td>Kilogram</td><td>E</td><td>net of drained weight</td></tr><tr><td>KGM</td><td>Kilogram</td><td>G</td><td>Gross</td></tr><tr><td>KGM</td><td>Kilogram</td><td>N</td><td>Net</td></tr><tr><td>KGM</td><td>Kilogram</td><td>P</td><td>of lactic matter</td></tr><tr><td>KGM</td><td>Kilogram</td><td>S</td><td>of sugar with a yield in white sugar of 92%</td></tr><tr><td>KGM</td><td>Kilogram</td><td>T</td><td>of dry lactic matter</td></tr><tr><td>LTR</td><td>Litre</td><td>A</td><td>Total alcohol</td></tr><tr><td>MTQ</td><td>Cubic meter</td><td>C</td><td>1 000</td></tr><tr><td>NAR</td><td>Number of items</td><td>B</td><td>per flask</td></tr><tr><td>TNE</td><td>Tonne</td><td>E</td><td>net of drained weight</td></tr><tr><td>TNE</td><td>Tonne</td><td>G</td><td>Gross</td></tr><tr><td>TNE</td><td>Tonne</td><td>I</td><td>of biodiesel content</td></tr><tr><td>TNE</td><td>Tonne</td><td>J</td><td>of fuel content (usually in form of tallow, stearin, paraffin wax or other waxes, including the wick)</td></tr><tr><td>TNE</td><td>Tonne</td><td>K</td><td>of bioethanol content</td></tr><tr><td>TNE</td><td>Tonne</td><td>M</td><td>net of dry matter</td></tr><tr><td>TNE</td><td>Tonne</td><td>N</td><td>Net</td></tr><tr><td>TNE</td><td>Tonne</td><td>R</td><td>of the standard quality</td></tr><tr><td>TNE</td><td>Tonne</td><td>Z</td><td>per 1% by weight of sucrose</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=4>
+          Last updated 14 Sep 2023
+        </td>
+      </tr>
+    </tfoot>
+  </table><h2 id="entity-relationship-diagram-for-measurement-units">Entity-relationship diagram for measurement units</h2>
+<svg width="600pt" height="262pt"
+ viewBox="0.00 0.00 600.00 262.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_232" class="graph" transform="scale(1 1) rotate(0) translate(4 258)">
+<title>Database</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-258 596,-258 596,4 -4,4"/>
+<!-- Measurement Units -->
+<g id="table_80" class="node">
+<title>Measurement Units</title>
+<polygon fill="none" stroke="black" points="425,-209 425,-225 579,-225 579,-209 425,-209"/>
+<text text-anchor="start" x="462" y="-214.8" font-family="Arial" font-size="9.00">Measurement Units</text>
+<polygon fill="none" stroke="black" points="425,-193 425,-209 483,-209 483,-193 425,-193"/>
+<text text-anchor="start" x="433" y="-198.8" font-family="Arial" font-size="9.00">Unit Code</text>
+<polygon fill="none" stroke="black" points="483,-193 483,-209 542,-209 542,-193 483,-193"/>
+<text text-anchor="start" x="497.5" y="-198.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="542,-193 542,-209 579,-209 579,-193 542,-193"/>
+<text text-anchor="start" x="555.5" y="-198.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="425,-177 425,-193 483,-193 483,-177 425,-177"/>
+<text text-anchor="start" x="430.5" y="-182.8" font-family="Arial" font-size="9.00">Description</text>
+<polygon fill="none" stroke="black" points="483,-177 483,-193 542,-193 542,-177 483,-177"/>
+<text text-anchor="start" x="486" y="-182.8" font-family="Arial" font-size="9.00">varchar(225)</text>
+<polygon fill="none" stroke="black" points="542,-177 542,-193 579,-193 579,-177 542,-177"/>
+<polygon fill="none" stroke="black" points="425,-161 425,-177 483,-177 483,-161 425,-161"/>
+<text text-anchor="start" x="428" y="-166.8" font-family="Arial" font-size="9.00">Abbreviation</text>
+<polygon fill="none" stroke="black" points="483,-161 483,-177 542,-177 542,-161 483,-161"/>
+<text text-anchor="start" x="488.5" y="-166.8" font-family="Arial" font-size="9.00">varchar(20)</text>
+<polygon fill="none" stroke="black" points="542,-161 542,-177 579,-177 579,-161 542,-161"/>
+<polygon fill="none" stroke="black" points="425,-145 425,-161 483,-161 483,-145 425,-145"/>
+<text text-anchor="start" x="428.5" y="-150.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="483,-145 483,-161 542,-161 542,-145 483,-145"/>
+<text text-anchor="start" x="503" y="-150.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="542,-145 542,-161 579,-161 579,-145 542,-145"/>
+<text text-anchor="start" x="545" y="-150.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="425,-129 425,-145 483,-145 483,-129 425,-129"/>
+<text text-anchor="start" x="429.5" y="-134.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="483,-129 483,-145 542,-145 542,-129 483,-129"/>
+<text text-anchor="start" x="503" y="-134.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="542,-129 542,-145 579,-145 579,-129 542,-129"/>
+<polygon fill="none" stroke="black" points="424,-128 424,-226 580,-226 580,-128 424,-128"/>
+</g>
+<!-- Measurement Qualifiers -->
+<g id="table_42" class="node">
+<title>Measurement Qualifiers</title>
+<polygon fill="none" stroke="black" points="421,-85 421,-101 583,-101 583,-85 421,-85"/>
+<text text-anchor="start" x="453" y="-90.8" font-family="Arial" font-size="9.00">Measurement Qualifiers</text>
+<polygon fill="none" stroke="black" points="421,-69 421,-85 487,-85 487,-69 421,-69"/>
+<text text-anchor="start" x="424" y="-74.8" font-family="Arial" font-size="9.00">Qualifier Code</text>
+<polygon fill="none" stroke="black" points="487,-69 487,-85 546,-85 546,-69 487,-69"/>
+<text text-anchor="start" x="501.5" y="-74.8" font-family="Arial" font-size="9.00">char(1)</text>
+<polygon fill="none" stroke="black" points="546,-69 546,-85 583,-85 583,-69 546,-69"/>
+<text text-anchor="start" x="559.5" y="-74.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="421,-53 421,-69 487,-69 487,-53 421,-53"/>
+<text text-anchor="start" x="430.5" y="-58.8" font-family="Arial" font-size="9.00">Description</text>
+<polygon fill="none" stroke="black" points="487,-53 487,-69 546,-69 546,-53 487,-53"/>
+<text text-anchor="start" x="490" y="-58.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="546,-53 546,-69 583,-69 583,-53 546,-53"/>
+<text text-anchor="start" x="549" y="-58.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="421,-37 421,-53 487,-53 487,-37 421,-37"/>
+<text text-anchor="start" x="428" y="-42.8" font-family="Arial" font-size="9.00">Abbreviation</text>
+<polygon fill="none" stroke="black" points="487,-37 487,-53 546,-53 546,-37 487,-37"/>
+<text text-anchor="start" x="492.5" y="-42.8" font-family="Arial" font-size="9.00">varchar(30)</text>
+<polygon fill="none" stroke="black" points="546,-37 546,-53 583,-53 583,-37 546,-37"/>
+<polygon fill="none" stroke="black" points="421,-21 421,-37 487,-37 487,-21 421,-21"/>
+<text text-anchor="start" x="428.5" y="-26.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="487,-21 487,-37 546,-37 546,-21 487,-21"/>
+<text text-anchor="start" x="507" y="-26.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="546,-21 546,-37 583,-37 583,-21 546,-21"/>
+<text text-anchor="start" x="549" y="-26.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="421,-5 421,-21 487,-21 487,-5 421,-5"/>
+<text text-anchor="start" x="429.5" y="-10.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="487,-5 487,-21 546,-21 546,-5 487,-5"/>
+<text text-anchor="start" x="507" y="-10.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="546,-5 546,-21 583,-21 583,-5 546,-5"/>
+<polygon fill="none" stroke="black" points="420,-4 420,-102 584,-102 584,-4 420,-4"/>
+</g>
+<!-- Measurements -->
+<g id="table_788" class="node">
+<title>Measurements</title>
+<polygon fill="none" stroke="black" points="221,-171 221,-187 367,-187 367,-171 221,-171"/>
+<text text-anchor="start" x="263.5" y="-176.8" font-family="Arial" font-size="9.00">Measurements</text>
+<polygon fill="none" stroke="black" points="221,-155 221,-171 294,-171 294,-155 221,-155"/>
+<text text-anchor="start" x="224" y="-160.8" font-family="Arial" font-size="9.00">Measurement Id</text>
+<polygon fill="none" stroke="black" points="294,-155 294,-171 330,-171 330,-155 294,-155"/>
+<text text-anchor="start" x="307" y="-160.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="330,-155 330,-171 367,-171 367,-155 330,-155"/>
+<text text-anchor="start" x="343.5" y="-160.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="221,-139 221,-155 294,-155 294,-139 221,-139"/>
+<text text-anchor="start" x="236.5" y="-144.8" font-family="Arial" font-size="9.00">Unit Code</text>
+<polygon fill="none" stroke="black" points="294,-139 294,-155 330,-155 330,-139 294,-139"/>
+<text text-anchor="start" x="297" y="-144.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="330,-139 330,-155 367,-155 367,-139 330,-139"/>
+<text text-anchor="start" x="343.5" y="-144.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="221,-123 221,-139 294,-139 294,-123 221,-123"/>
+<text text-anchor="start" x="227.5" y="-128.8" font-family="Arial" font-size="9.00">Qualifier Code</text>
+<polygon fill="none" stroke="black" points="294,-123 294,-139 330,-139 330,-123 294,-123"/>
+<text text-anchor="start" x="297" y="-128.8" font-family="Arial" font-size="9.00">char(1)</text>
+<polygon fill="none" stroke="black" points="330,-123 330,-139 367,-139 367,-123 330,-123"/>
+<text text-anchor="start" x="343.5" y="-128.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="221,-107 221,-123 294,-123 294,-107 221,-107"/>
+<text text-anchor="start" x="232" y="-112.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="294,-107 294,-123 330,-123 330,-107 294,-107"/>
+<text text-anchor="start" x="302.5" y="-112.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="330,-107 330,-123 367,-123 367,-107 330,-107"/>
+<text text-anchor="start" x="333" y="-112.8" font-family="Arial" font-size="9.00">not null</text>
+<polygon fill="none" stroke="black" points="221,-91 221,-107 294,-107 294,-91 221,-91"/>
+<text text-anchor="start" x="233" y="-96.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="294,-91 294,-107 330,-107 330,-91 294,-91"/>
+<text text-anchor="start" x="302.5" y="-96.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="330,-91 330,-107 367,-107 367,-91 330,-91"/>
+<polygon fill="none" stroke="black" points="220,-90 220,-188 368,-188 368,-90 220,-90"/>
+</g>
+<!-- Measurements&#45;&gt;Measurement Units -->
+<g id="database_232_edge1" class="edge">
+<title>Measurements:e&#45;&gt;Measurement Units:w</title>
+<path fill="none" stroke="black" d="M368,-147C399.74,-147 391.26,-192.5 416.4,-199.97"/>
+<polygon fill="black" stroke="black" points="416.22,-202.59 424,-201 416.92,-197.39 416.22,-202.59"/>
+</g>
+<!-- Measurements&#45;&gt;Measurement Qualifiers -->
+<g id="database_232_edge2" class="edge">
+<title>Measurements:e&#45;&gt;Measurement Qualifiers:w</title>
+<path fill="none" stroke="black" d="M368,-131C398.46,-131 388.84,-85.88 412.41,-78.13"/>
+<polygon fill="black" stroke="black" points="412.97,-80.7 420,-77 412.2,-75.51 412.97,-80.7"/>
+</g>
+<!-- Measure Components -->
+<g id="table_209" class="node">
+<title>Measure Components</title>
+<polygon fill="none" stroke="black" points="9,-233 9,-249 167,-249 167,-233 9,-233"/>
+<text text-anchor="start" x="42.5" y="-238.8" font-family="Arial" font-size="9.00">Measure Components</text>
+<polygon fill="none" stroke="black" points="9,-217 9,-233 132,-233 132,-217 9,-217"/>
+<text text-anchor="start" x="22" y="-222.8" font-family="Arial" font-size="9.00">Component Measure Id</text>
+<polygon fill="none" stroke="black" points="132,-217 132,-233 151,-233 151,-217 132,-217"/>
+<text text-anchor="start" x="136.5" y="-222.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="151,-217 151,-233 167,-233 167,-217 151,-217"/>
+<text text-anchor="start" x="154" y="-222.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="9,-201 9,-217 132,-217 132,-201 9,-201"/>
+<text text-anchor="start" x="12" y="-206.8" font-family="Arial" font-size="9.00">Component Measurement Id</text>
+<polygon fill="none" stroke="black" points="132,-201 132,-217 151,-217 151,-201 132,-201"/>
+<text text-anchor="start" x="136.5" y="-206.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="151,-201 151,-217 167,-217 167,-201 151,-201"/>
+<text text-anchor="start" x="154" y="-206.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="9,-185 9,-201 132,-201 132,-185 9,-185"/>
+<text text-anchor="start" x="67" y="-190.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="132,-185 132,-201 151,-201 151,-185 132,-185"/>
+<text text-anchor="start" x="135" y="-190.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="151,-185 151,-201 167,-201 167,-185 151,-185"/>
+<polygon fill="none" stroke="black" points="8,-184 8,-250 168,-250 168,-184 8,-184"/>
+</g>
+<!-- Measure Components&#45;&gt;Measurements -->
+<g id="database_232_edge3" class="edge">
+<title>Measure Components:e&#45;&gt;Measurements:w</title>
+<path fill="none" stroke="black" d="M168,-209C195.96,-209 190.61,-171.22 212.32,-164.14"/>
+<polygon fill="black" stroke="black" points="212.97,-166.7 220,-163 212.2,-161.5 212.97,-166.7"/>
+</g>
+<!-- Measure Condition Components -->
+<g id="table_142" class="node">
+<title>Measure Condition Components</title>
+<polygon fill="none" stroke="black" points="9,-141 9,-157 167,-157 167,-141 9,-141"/>
+<text text-anchor="start" x="21.5" y="-146.8" font-family="Arial" font-size="9.00">Measure Condition Components</text>
+<polygon fill="none" stroke="black" points="9,-125 9,-141 132,-141 132,-125 9,-125"/>
+<text text-anchor="start" x="45.5" y="-130.8" font-family="Arial" font-size="9.00">Condition Id</text>
+<polygon fill="none" stroke="black" points="132,-125 132,-141 151,-141 151,-125 132,-125"/>
+<text text-anchor="start" x="136.5" y="-130.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="151,-125 151,-141 167,-141 167,-125 151,-125"/>
+<text text-anchor="start" x="154" y="-130.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="9,-109 9,-125 132,-125 132,-109 9,-109"/>
+<text text-anchor="start" x="12" y="-114.8" font-family="Arial" font-size="9.00">Component Measurement Id</text>
+<polygon fill="none" stroke="black" points="132,-109 132,-125 151,-125 151,-109 132,-109"/>
+<text text-anchor="start" x="136.5" y="-114.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="151,-109 151,-125 167,-125 167,-109 151,-109"/>
+<text text-anchor="start" x="154" y="-114.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="9,-93 9,-109 132,-109 132,-93 9,-93"/>
+<text text-anchor="start" x="67" y="-98.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="132,-93 132,-109 151,-109 151,-93 132,-93"/>
+<text text-anchor="start" x="135" y="-98.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="151,-93 151,-109 167,-109 167,-93 151,-93"/>
+<polygon fill="none" stroke="black" points="8,-92 8,-158 168,-158 168,-92 8,-92"/>
+</g>
+<!-- Measure Condition Components&#45;&gt;Measurements -->
+<g id="database_232_edge4" class="edge">
+<title>Measure Condition Components:e&#45;&gt;Measurements:w</title>
+<path fill="none" stroke="black" d="M168,-117C195.96,-117 190.61,-154.78 212.32,-161.86"/>
+<polygon fill="black" stroke="black" points="212.2,-164.5 220,-163 212.97,-159.3 212.2,-164.5"/>
+</g>
+</g>
+</svg><h2 id="validation-rules">Validation rules</h2>
+<p>There are no validity rules that apply to measurement units independently of measures, however the following are applicable when measurement units are used within measures.</p>
+<h3 id="measurement-units-in-measure-components">Measurement Units in Measure Components</h3>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code</th>
+<th>Description</th>
+</tr><tr>
+<td>ME47</td>
+<td>If the flag “measurement unit” on duty expression is “mandatory” then a measurement unit must be specified. If the flag is set “not permitted” then no measurement unit may be entered.</td>
+</tr><tr>
+<td>ME50</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule that the combination of measurement unit and measurement unit qualifier referenced in a measure must exist.</td>
+</tr><tr>
+<td>ME51</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule requiring measurement unit validity to encompass the validity of measures they are referenced in.</td>
+</tr><tr>
+<td>ME52</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule requiring measurement unit qualifier validity to encompass the validity of measures they are referenced in.</td>
+</tr>
+        </table>
+      </div><h3 id="measurement-units-in-measure-conditions">Measurement Units in Measure Conditions</h3>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code</th>
+<th>Description</th>
+</tr><tr>
+<td>ME62</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule that the combination of measurement unit and measurement unit qualifier referenced in a measure must exist.</td>
+</tr><tr>
+<td>ME63</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule requiring measurement unit validity to encompass the validity of measures they are referenced in.</td>
+</tr><tr>
+<td>ME64</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule requiring measurement unit qualifier validity to encompass the validity of measures they are referenced in.</td>
+</tr><tr>
+<td>ME111</td>
+<td>If the flag ‘measurement unit’ on duty expression is ‘mandatory’ then a measurement unit must be specified. If the flag is set to ‘not permitted’ then no measurement unit may be entered.</td>
+</tr>
+        </table>
+      </div><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Validity-dates">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Validity+dates%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fdata-structures%2Fvalidity-dates.html%29&amp;labels=bug&amp;title=Re%3A+%27Validity+dates%27">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-Structures;-Measurement-Units">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Measurement+units%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fdata-structures%2Fmeasurement-units.html%29&amp;labels=bug&amp;title=Re%3A+%27Measurement+units%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
