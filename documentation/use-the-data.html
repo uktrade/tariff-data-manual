@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Additional codes - Tariff Data Manual</title>
+    <title>Use the data - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/additional-codes.html">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/use-the-data.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Additional codes - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/additional-codes.html" />
+      <meta name="twitter:title" content="Use the data - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/use-the-data.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Additional codes" />
+      <meta property="og:title" content="Use the data" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/additional-codes.html" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/use-the-data.html" />
 
     
   </head>
@@ -356,7 +356,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#entity-relationship-diagram-of-the-relevant-records"><span>Entity-Relationship Diagram of the relevant records</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#geographical-areas-validation-rules"><span>Validation rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
   </li>
@@ -567,7 +567,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#additional-code-types"><span>Additional Code Types</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#validation-rules"><span>Validation rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#additional-codes-validation-rules"><span>Validation rules</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/additional-codes.html#how-additional-codes-apply"><span>How additional codes apply</span></a>
@@ -752,490 +752,15 @@
 
         <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="additional-codes">Additional codes</h1>
-
-<ul>
-<li>
-<a href="#what-additional-codes-are">What additional codes are</a>
-</li>
-<li>
-<a href="#how-additional-codes-work">How additional codes work</a>
-</li>
-<li>
-<a href="#additional-code-types">Additional Code Types</a>
-<ul>
-<li>
-<a href="#entity-relationship-diagram-for-additional-codes">Entity-relationship diagram for additional codes</a>
-</li>
-</ul>
-<p></li>
-<li>
-<a href="#validation-rules">Validation rules</a>
-<ul>
-<li>
-<a href="#additional-codes">Additional Codes</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#how-additional-codes-apply">How additional codes apply</a>
-<ul>
-<li>
-<a href="#prohibition-restriction-surveillance-3">Prohibition/Restriction/Surveillance (3)</a>
-</li>
-<li>
-<a href="#dual-use-d">Dual Use (D)</a>
-</li>
-<li>
-<a href="#agricultural-tables-non-meursing-6">Agricultural Tables (non-Meursing) (6)</a>
-</li>
-<li>
-<a href="#tariff-preference-2">Tariff Preference (2)</a>
-</li>
-<li>
-<a href="#restrictions-4">Restrictions (4)</a>
-</li>
-<li>
-<a href="#anti-dumping-countervailing-measures-8-a-b-c">Anti-dumping/countervailing measures (8,A,B,C)</a>
-</li>
-</ul>
-</li>
-</ul></p>
-<h2 id="what-additional-codes-are">What additional codes are</h2>
-<p>Goods are usually identified by their 10-digit <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/nomenclature.html#commodity-codes">commodity code</a>.</p>
-<p>Sometimes additional context is needed, beyond just the type of good identified by the commodity code, to ensure that the apporpriate tariffs and/or restrictions are applied, in these cases additional codes are used. Additional codes identify:</p>
-
-<ul>
-<li>whether a company is subject to punitive measures, such as anti-dumping duties</li>
-<li>products which have reduced duties because they are for pharmaceutical use</li>
-<li>the route goods take into the UK and how different tariff or regulatory treatments apply</li>
-<li>stolen works of art, for example from Syria or Iraq as a result of military conflict</li>
-</ul>
-<p>Additional codes can be applied to more than one commodity code.</p>
-<h2 id="how-additional-codes-work">How additional codes work</h2>
-<p>Additional codes are 4 digits combining the following 2 elements:</p>
-
-<ul>
-<li>a code type</li>
-<li>a 3-character ID (which can also include letters)</li>
-</ul>
-<p>The additional code type defines the additional code that is being addressed.</p>
-<p>For example, the additional code C233 is made up of type C and specific ID 233.</p>
-<p>Numeric IDs from 001 to 999 can be reused across multiple additional code type IDs. Numeric IDs are unique only when they are used with a character code.</p>
-<p>The list of addional codes is frequently updated, with tens of new codes being added each year.</p>
-<h2 id="additional-code-types">Additional Code Types</h2>
-<table>
-    <thead>
-      <tr>
-        <th>Code Type</th><th>Description</th><th>Applicability</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>3</td><td>Prohibition/Restriction/Surveillance</td><td>Additional codes</td></tr><tr><td>8</td><td>Anti-dumping/countervailing</td><td>Additional codes</td></tr><tr><td>7</td><td>Agricultural Tables (Meursing)</td><td>Meursing additional codes</td></tr><tr><td>F</td><td>Reference prices fishery products</td><td>Additional codes</td></tr><tr><td>D</td><td>Dual Use</td><td>Additional codes</td></tr><tr><td>P</td><td>Refund for basic products</td><td>Export refund for processed agricultural goods</td></tr><tr><td>B</td><td>Anti-dumping/countervailing</td><td>Additional codes</td></tr><tr><td>6</td><td>Agricultural Tables (non-Meursing)</td><td>Additional codes</td></tr><tr><td>9</td><td>Export Refunds</td><td>Export refund nomenclature</td></tr><tr><td>2</td><td>Tariff preference</td><td>Additional codes</td></tr><tr><td>A</td><td>Anti-dumping/countervailing</td><td>Additional codes</td></tr><tr><td>4</td><td>Restrictions</td><td>Additional codes</td></tr><tr><td>C</td><td>Anti-dumping/countervailing</td><td>Additional codes</td></tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan=3>
-          Last updated 19 Sep 2023
-        </td>
-      </tr>
-    </tfoot>
-  </table><p>The list of additional code types is set by DBT, and rarely changes as it requires extensive updates to downstream systems. The only changes in the last two decades have been the addition of code type C in 2009, and the end of code type F in 2016.</p>
-<p>Applicability indicates the data type the additional codes apply to. Only those labelled &ldquo;Additional Codes&rdquo; are still in use, however the remainder still appear in the data and are included here for completeness.</p>
-<h3 id="entity-relationship-diagram-for-additional-codes">Entity-relationship diagram for additional codes</h3>
-<svg width="1033pt" height="314pt"
- viewBox="0.00 0.00 1033.00 314.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_249" class="graph" transform="scale(1 1) rotate(0) translate(4 310)">
-<title>Database</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-310 1029,-310 1029,4 -4,4"/>
-<!-- Additional Codes -->
-<g id="table_141" class="node">
-<title>Additional Codes</title>
-<polygon fill="none" stroke="black" points="242.5,-145 242.5,-161 389.5,-161 389.5,-145 242.5,-145"/>
-<text text-anchor="start" x="280.5" y="-150.8" font-family="Arial" font-size="9.00">Additional Codes</text>
-<polygon fill="none" stroke="black" points="242.5,-129 242.5,-145 303.5,-145 303.5,-129 242.5,-129"/>
-<text text-anchor="start" x="256.5" y="-134.8" font-family="Arial" font-size="9.00">Code Id</text>
-<polygon fill="none" stroke="black" points="303.5,-129 303.5,-145 352.5,-145 352.5,-129 303.5,-129"/>
-<text text-anchor="start" x="313" y="-134.8" font-family="Arial" font-size="9.00">char(3)</text>
-<polygon fill="none" stroke="black" points="352.5,-129 352.5,-145 389.5,-145 389.5,-129 352.5,-129"/>
-<text text-anchor="start" x="366" y="-134.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="242.5,-113 242.5,-129 303.5,-129 303.5,-113 242.5,-113"/>
-<text text-anchor="start" x="245.5" y="-118.8" font-family="Arial" font-size="9.00">Code Type Id</text>
-<polygon fill="none" stroke="black" points="303.5,-113 303.5,-129 352.5,-129 352.5,-113 303.5,-113"/>
-<text text-anchor="start" x="306.5" y="-118.8" font-family="Arial" font-size="9.00">varchar(4)</text>
-<polygon fill="none" stroke="black" points="352.5,-113 352.5,-129 389.5,-129 389.5,-113 352.5,-113"/>
-<text text-anchor="start" x="366" y="-118.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="242.5,-97 242.5,-113 303.5,-113 303.5,-97 242.5,-97"/>
-<text text-anchor="start" x="247.5" y="-102.8" font-family="Arial" font-size="9.00">Validity Start</text>
-<polygon fill="none" stroke="black" points="303.5,-97 303.5,-113 352.5,-113 352.5,-97 303.5,-97"/>
-<text text-anchor="start" x="318.5" y="-102.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="352.5,-97 352.5,-113 389.5,-113 389.5,-97 352.5,-97"/>
-<text text-anchor="start" x="355.5" y="-102.8" font-family="Arial" font-size="9.00">not null</text>
-<polygon fill="none" stroke="black" points="242.5,-81 242.5,-97 303.5,-97 303.5,-81 242.5,-81"/>
-<text text-anchor="start" x="248.5" y="-86.8" font-family="Arial" font-size="9.00">Validity End</text>
-<polygon fill="none" stroke="black" points="303.5,-81 303.5,-97 352.5,-97 352.5,-81 303.5,-81"/>
-<text text-anchor="start" x="318.5" y="-86.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="352.5,-81 352.5,-97 389.5,-97 389.5,-81 352.5,-81"/>
-<polygon fill="none" stroke="black" points="241,-80 241,-162 390,-162 390,-80 241,-80"/>
-</g>
-<!-- Additional Code Types -->
-<g id="table_12" class="node">
-<title>Additional Code Types</title>
-<polygon fill="none" stroke="black" points="443,-129 443,-145 639,-145 639,-129 443,-129"/>
-<text text-anchor="start" x="494" y="-134.8" font-family="Arial" font-size="9.00">Additional Code Types</text>
-<polygon fill="none" stroke="black" points="443,-113 443,-129 543,-129 543,-113 443,-113"/>
-<text text-anchor="start" x="465.5" y="-118.8" font-family="Arial" font-size="9.00">Code Type Id</text>
-<polygon fill="none" stroke="black" points="543,-113 543,-129 602,-129 602,-113 543,-113"/>
-<text text-anchor="start" x="557.5" y="-118.8" font-family="Arial" font-size="9.00">char(1)</text>
-<polygon fill="none" stroke="black" points="602,-113 602,-129 639,-129 639,-113 602,-113"/>
-<text text-anchor="start" x="615.5" y="-118.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="443,-97 443,-113 543,-113 543,-97 443,-97"/>
-<text text-anchor="start" x="446" y="-102.8" font-family="Arial" font-size="9.00">Code Type Description</text>
-<polygon fill="none" stroke="black" points="543,-97 543,-113 602,-113 602,-97 543,-97"/>
-<text text-anchor="start" x="546" y="-102.8" font-family="Arial" font-size="9.00">varchar(255)</text>
-<polygon fill="none" stroke="black" points="602,-97 602,-113 639,-113 639,-97 602,-97"/>
-<polygon fill="none" stroke="black" points="443,-81 443,-97 543,-97 543,-81 443,-81"/>
-<text text-anchor="start" x="457.5" y="-86.8" font-family="Arial" font-size="9.00">Application Code</text>
-<polygon fill="none" stroke="black" points="543,-81 543,-97 602,-97 602,-81 543,-81"/>
-<text text-anchor="start" x="557.5" y="-86.8" font-family="Arial" font-size="9.00">char(1)</text>
-<polygon fill="none" stroke="black" points="602,-81 602,-97 639,-97 639,-81 602,-81"/>
-<text text-anchor="start" x="605" y="-86.8" font-family="Arial" font-size="9.00">not null</text>
-<polygon fill="none" stroke="black" points="443,-65 443,-81 543,-81 543,-65 443,-65"/>
-<text text-anchor="start" x="467.5" y="-70.8" font-family="Arial" font-size="9.00">Validity Start</text>
-<polygon fill="none" stroke="black" points="543,-65 543,-81 602,-81 602,-65 543,-65"/>
-<text text-anchor="start" x="563" y="-70.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="602,-65 602,-81 639,-81 639,-65 602,-65"/>
-<text text-anchor="start" x="605" y="-70.8" font-family="Arial" font-size="9.00">not null</text>
-<polygon fill="none" stroke="black" points="443,-49 443,-65 543,-65 543,-49 443,-49"/>
-<text text-anchor="start" x="468.5" y="-54.8" font-family="Arial" font-size="9.00">Validity End</text>
-<polygon fill="none" stroke="black" points="543,-49 543,-65 602,-65 602,-49 543,-49"/>
-<text text-anchor="start" x="563" y="-54.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="602,-49 602,-65 639,-65 639,-49 602,-49"/>
-<polygon fill="none" stroke="black" points="442,-48 442,-146 640,-146 640,-48 442,-48"/>
-</g>
-<!-- Additional Codes&#45;&gt;Additional Code Types -->
-<g id="database_249_edge1" class="edge">
-<title>Additional Codes:e&#45;&gt;Additional Code Types:w</title>
-<path fill="none" stroke="black" d="M390.5,-121C410.53,-121 417.41,-121 434.15,-121"/>
-<polygon fill="black" stroke="black" points="434.5,-123.63 442,-121 434.5,-118.38 434.5,-123.63"/>
-</g>
-<!-- Additional Code Descriptions -->
-<g id="table_281" class="node">
-<title>Additional Code Descriptions</title>
-<polygon fill="none" stroke="black" points="9.5,-285 9.5,-301 188.5,-301 188.5,-285 9.5,-285"/>
-<text text-anchor="start" x="39" y="-290.8" font-family="Arial" font-size="9.00">Additional Code Descriptions</text>
-<polygon fill="none" stroke="black" points="9.5,-269 9.5,-285 92.5,-285 92.5,-269 9.5,-269"/>
-<text text-anchor="start" x="22.5" y="-274.8" font-family="Arial" font-size="9.00">Description Id</text>
-<polygon fill="none" stroke="black" points="92.5,-269 92.5,-285 151.5,-285 151.5,-269 92.5,-269"/>
-<text text-anchor="start" x="117" y="-274.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="151.5,-269 151.5,-285 188.5,-285 188.5,-269 151.5,-269"/>
-<text text-anchor="start" x="165" y="-274.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="9.5,-253 9.5,-269 92.5,-269 92.5,-253 9.5,-253"/>
-<text text-anchor="start" x="12.5" y="-258.8" font-family="Arial" font-size="9.00">Described Code Id</text>
-<polygon fill="none" stroke="black" points="92.5,-253 92.5,-269 151.5,-269 151.5,-253 92.5,-253"/>
-<text text-anchor="start" x="107" y="-258.8" font-family="Arial" font-size="9.00">char(3)</text>
-<polygon fill="none" stroke="black" points="151.5,-253 151.5,-269 188.5,-269 188.5,-253 151.5,-253"/>
-<text text-anchor="start" x="165" y="-258.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="9.5,-237 9.5,-253 92.5,-253 92.5,-237 9.5,-237"/>
-<text text-anchor="start" x="27.5" y="-242.8" font-family="Arial" font-size="9.00">Description</text>
-<polygon fill="none" stroke="black" points="92.5,-237 92.5,-253 151.5,-253 151.5,-237 92.5,-237"/>
-<text text-anchor="start" x="95.5" y="-242.8" font-family="Arial" font-size="9.00">varchar(255)</text>
-<polygon fill="none" stroke="black" points="151.5,-237 151.5,-253 188.5,-253 188.5,-237 151.5,-237"/>
-<polygon fill="none" stroke="black" points="9.5,-221 9.5,-237 92.5,-237 92.5,-221 9.5,-221"/>
-<text text-anchor="start" x="25.5" y="-226.8" font-family="Arial" font-size="9.00">Validity Start</text>
-<polygon fill="none" stroke="black" points="92.5,-221 92.5,-237 151.5,-237 151.5,-221 92.5,-221"/>
-<text text-anchor="start" x="112.5" y="-226.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="151.5,-221 151.5,-237 188.5,-237 188.5,-221 151.5,-221"/>
-<text text-anchor="start" x="154.5" y="-226.8" font-family="Arial" font-size="9.00">not null</text>
-<polygon fill="none" stroke="black" points="8,-220 8,-302 189,-302 189,-220 8,-220"/>
-</g>
-<!-- Additional Code Descriptions&#45;&gt;Additional Codes -->
-<g id="database_249_edge2" class="edge">
-<title>Additional Code Descriptions:e&#45;&gt;Additional Codes:w</title>
-<path fill="none" stroke="black" d="M189.5,-261C246.46,-261 187.79,-148.35 233.91,-137.79"/>
-<polygon fill="black" stroke="black" points="234.31,-140.39 241.5,-137 233.77,-135.17 234.31,-140.39"/>
-</g>
-<!-- Measure Additional Code Types -->
-<g id="table_558" class="node">
-<title>Measure Additional Code Types</title>
-<polygon fill="none" stroke="black" points="693.5,-129 693.5,-145 860.5,-145 860.5,-129 693.5,-129"/>
-<text text-anchor="start" x="711" y="-134.8" font-family="Arial" font-size="9.00">Measure Additional Code Types</text>
-<polygon fill="none" stroke="black" points="693.5,-113 693.5,-129 798.5,-129 798.5,-113 693.5,-113"/>
-<text text-anchor="start" x="696.5" y="-118.8" font-family="Arial" font-size="9.00">Additional Code Type Id</text>
-<polygon fill="none" stroke="black" points="798.5,-113 798.5,-129 823.5,-129 823.5,-113 798.5,-113"/>
-<text text-anchor="start" x="803.5" y="-118.8" font-family="Arial" font-size="9.00">[pk]</text>
-<polygon fill="none" stroke="black" points="823.5,-113 823.5,-129 860.5,-129 860.5,-113 823.5,-113"/>
-<polygon fill="none" stroke="black" points="693.5,-97 693.5,-113 798.5,-113 798.5,-97 693.5,-97"/>
-<text text-anchor="start" x="711.5" y="-102.8" font-family="Arial" font-size="9.00">Measure Type Id</text>
-<polygon fill="none" stroke="black" points="798.5,-97 798.5,-113 823.5,-113 823.5,-97 798.5,-97"/>
-<text text-anchor="start" x="803.5" y="-102.8" font-family="Arial" font-size="9.00">[pk]</text>
-<polygon fill="none" stroke="black" points="823.5,-97 823.5,-113 860.5,-113 860.5,-97 823.5,-97"/>
-<polygon fill="none" stroke="black" points="693.5,-81 693.5,-97 798.5,-97 798.5,-81 693.5,-81"/>
-<text text-anchor="start" x="720.5" y="-86.8" font-family="Arial" font-size="9.00">Validity Start</text>
-<polygon fill="none" stroke="black" points="798.5,-81 798.5,-97 823.5,-97 823.5,-81 798.5,-81"/>
-<text text-anchor="start" x="801.5" y="-86.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="823.5,-81 823.5,-97 860.5,-97 860.5,-81 823.5,-81"/>
-<text text-anchor="start" x="826.5" y="-86.8" font-family="Arial" font-size="9.00">not null</text>
-<polygon fill="none" stroke="black" points="693.5,-65 693.5,-81 798.5,-81 798.5,-65 693.5,-65"/>
-<text text-anchor="start" x="721.5" y="-70.8" font-family="Arial" font-size="9.00">Validity End</text>
-<polygon fill="none" stroke="black" points="798.5,-65 798.5,-81 823.5,-81 823.5,-65 798.5,-65"/>
-<text text-anchor="start" x="801.5" y="-70.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="823.5,-65 823.5,-81 860.5,-81 860.5,-65 823.5,-65"/>
-<polygon fill="none" stroke="black" points="692,-64 692,-146 861,-146 861,-64 692,-64"/>
-</g>
-<!-- Additional Code Types&#45;&gt;Measure Additional Code Types -->
-<g id="database_249_edge5" class="edge">
-<title>Additional Code Types:e&#45;&gt;Measure Additional Code Types:w</title>
-<path fill="none" stroke="black" d="M640,-121C660.6,-121 667.56,-121 684.96,-121"/>
-<polygon fill="black" stroke="black" points="685,-123.63 692.5,-121 685,-118.38 685,-123.63"/>
-</g>
-<!-- Footnote Additional Code Associations -->
-<g id="table_96" class="node">
-<title>Footnote Additional Code Associations</title>
-<polygon fill="none" stroke="black" points="16.5,-177 16.5,-193 181.5,-193 181.5,-177 16.5,-177"/>
-<text text-anchor="start" x="19.5" y="-182.8" font-family="Arial" font-size="9.00">Footnote Additional Code Associations</text>
-<polygon fill="none" stroke="black" points="16.5,-161 16.5,-177 103.5,-177 103.5,-161 16.5,-161"/>
-<text text-anchor="start" x="30.5" y="-166.8" font-family="Arial" font-size="9.00">Footnote Type</text>
-<polygon fill="none" stroke="black" points="103.5,-161 103.5,-177 141.5,-177 141.5,-161 103.5,-161"/>
-<text text-anchor="start" x="107.5" y="-166.8" font-family="Arial" font-size="9.00">char(2)</text>
-<polygon fill="none" stroke="black" points="141.5,-161 141.5,-177 181.5,-177 181.5,-161 141.5,-161"/>
-<text text-anchor="start" x="156.5" y="-166.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="16.5,-145 16.5,-161 103.5,-161 103.5,-145 16.5,-145"/>
-<text text-anchor="start" x="29.5" y="-150.8" font-family="Arial" font-size="9.00">Footnote Code</text>
-<polygon fill="none" stroke="black" points="103.5,-145 103.5,-161 141.5,-161 141.5,-145 103.5,-145"/>
-<text text-anchor="start" x="107.5" y="-150.8" font-family="Arial" font-size="9.00">char(3)</text>
-<polygon fill="none" stroke="black" points="141.5,-145 141.5,-161 181.5,-161 181.5,-145 141.5,-145"/>
-<text text-anchor="start" x="156.5" y="-150.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="16.5,-129 16.5,-145 103.5,-145 103.5,-129 16.5,-129"/>
-<text text-anchor="start" x="22" y="-134.8" font-family="Arial" font-size="9.00">Additional Code Id</text>
-<polygon fill="none" stroke="black" points="103.5,-129 103.5,-145 141.5,-145 141.5,-129 103.5,-129"/>
-<text text-anchor="start" x="117.5" y="-134.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="141.5,-129 141.5,-145 181.5,-145 181.5,-129 141.5,-129"/>
-<text text-anchor="start" x="156.5" y="-134.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="16.5,-113 16.5,-129 103.5,-129 103.5,-113 16.5,-113"/>
-<text text-anchor="start" x="34.5" y="-118.8" font-family="Arial" font-size="9.00">Validity Start</text>
-<polygon fill="none" stroke="black" points="103.5,-113 103.5,-129 141.5,-129 141.5,-113 103.5,-113"/>
-<text text-anchor="start" x="113" y="-118.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="141.5,-113 141.5,-129 181.5,-129 181.5,-113 141.5,-113"/>
-<text text-anchor="start" x="146" y="-118.8" font-family="Arial" font-size="9.00">not null</text>
-<polygon fill="none" stroke="black" points="16.5,-97 16.5,-113 103.5,-113 103.5,-97 16.5,-97"/>
-<text text-anchor="start" x="35.5" y="-102.8" font-family="Arial" font-size="9.00">Validity End</text>
-<polygon fill="none" stroke="black" points="103.5,-97 103.5,-113 141.5,-113 141.5,-97 103.5,-97"/>
-<text text-anchor="start" x="113" y="-102.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="141.5,-97 141.5,-113 181.5,-113 181.5,-97 141.5,-97"/>
-<polygon fill="none" stroke="black" points="15,-96 15,-194 182,-194 182,-96 15,-96"/>
-</g>
-<!-- Footnote Additional Code Associations&#45;&gt;Additional Codes -->
-<g id="database_249_edge3" class="edge">
-<title>Footnote Additional Code Associations:e&#45;&gt;Additional Codes:w</title>
-<path fill="none" stroke="black" d="M182.5,-137C205.96,-137 213.68,-137 233.81,-137"/>
-<polygon fill="black" stroke="black" points="234,-139.63 241.5,-137 234,-134.38 234,-139.63"/>
-</g>
-<!-- Measures -->
-<g id="table_616" class="node">
-<title>Measures</title>
-<polygon fill="none" stroke="black" points="44.5,-53 44.5,-69 153.5,-69 153.5,-53 44.5,-53"/>
-<text text-anchor="start" x="78.5" y="-58.8" font-family="Arial" font-size="9.00">Measures</text>
-<polygon fill="none" stroke="black" points="44.5,-37 44.5,-53 126.5,-53 126.5,-37 44.5,-37"/>
-<text text-anchor="start" x="62.5" y="-42.8" font-family="Arial" font-size="9.00">Measure Id</text>
-<polygon fill="none" stroke="black" points="126.5,-37 126.5,-53 147.5,-53 147.5,-37 126.5,-37"/>
-<text text-anchor="start" x="129.5" y="-42.8" font-family="Arial" font-size="9.00">[pk]</text>
-<polygon fill="none" stroke="black" points="147.5,-37 147.5,-53 153.5,-53 153.5,-37 147.5,-37"/>
-<polygon fill="none" stroke="black" points="44.5,-21 44.5,-37 126.5,-37 126.5,-21 44.5,-21"/>
-<text text-anchor="start" x="47.5" y="-26.8" font-family="Arial" font-size="9.00">Additional Code Id</text>
-<polygon fill="none" stroke="black" points="126.5,-21 126.5,-37 147.5,-37 147.5,-21 126.5,-21"/>
-<text text-anchor="start" x="129.5" y="-26.8" font-family="Arial" font-size="9.00">[pk]</text>
-<polygon fill="none" stroke="black" points="147.5,-21 147.5,-37 153.5,-37 153.5,-21 147.5,-21"/>
-<polygon fill="none" stroke="black" points="44.5,-5 44.5,-21 126.5,-21 126.5,-5 44.5,-5"/>
-<text text-anchor="start" x="82" y="-10.8" font-family="Arial" font-size="9.00">&hellip;</text>
-<polygon fill="none" stroke="black" points="126.5,-5 126.5,-21 147.5,-21 147.5,-5 126.5,-5"/>
-<text text-anchor="start" x="130.5" y="-10.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
-<polygon fill="none" stroke="black" points="147.5,-5 147.5,-21 153.5,-21 153.5,-5 147.5,-5"/>
-<polygon fill="none" stroke="black" points="43,-4 43,-70 154,-70 154,-4 43,-4"/>
-</g>
-<!-- Measures&#45;&gt;Additional Codes -->
-<g id="database_249_edge4" class="edge">
-<title>Measures:e&#45;&gt;Additional Codes:w</title>
-<path fill="none" stroke="black" d="M154.5,-29C213.37,-29 182.92,-127.51 233.77,-136.37"/>
-<polygon fill="black" stroke="black" points="233.81,-139 241.5,-137 234.24,-133.77 233.81,-139"/>
-</g>
-<!-- Measure Types -->
-<g id="table_885" class="node">
-<title>Measure Types</title>
-<polygon fill="none" stroke="black" points="914,-113 914,-129 1016,-129 1016,-113 914,-113"/>
-<text text-anchor="start" x="933" y="-118.8" font-family="Arial" font-size="9.00">Measure Types</text>
-<polygon fill="none" stroke="black" points="914,-97 914,-113 989,-113 989,-97 914,-97"/>
-<text text-anchor="start" x="917" y="-102.8" font-family="Arial" font-size="9.00">Measure Type Id</text>
-<polygon fill="none" stroke="black" points="989,-97 989,-113 1010,-113 1010,-97 989,-97"/>
-<text text-anchor="start" x="992" y="-102.8" font-family="Arial" font-size="9.00">[pk]</text>
-<polygon fill="none" stroke="black" points="1010,-97 1010,-113 1016,-113 1016,-97 1010,-97"/>
-<polygon fill="none" stroke="black" points="914,-81 914,-97 989,-97 989,-81 914,-81"/>
-<text text-anchor="start" x="948" y="-86.8" font-family="Arial" font-size="9.00">&hellip;</text>
-<polygon fill="none" stroke="black" points="989,-81 989,-97 1010,-97 1010,-81 989,-81"/>
-<text text-anchor="start" x="993" y="-86.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
-<polygon fill="none" stroke="black" points="1010,-81 1010,-97 1016,-97 1016,-81 1010,-81"/>
-<polygon fill="none" stroke="black" points="913,-80 913,-130 1017,-130 1017,-80 913,-80"/>
-</g>
-<!-- Measure Additional Code Types&#45;&gt;Measure Types -->
-<g id="database_249_edge6" class="edge">
-<title>Measure Additional Code Types:e&#45;&gt;Measure Types:w</title>
-<path fill="none" stroke="black" d="M861.5,-105C881.53,-105 888.41,-105 905.15,-105"/>
-<polygon fill="black" stroke="black" points="905.5,-107.63 913,-105 905.5,-102.38 905.5,-107.63"/>
-</g>
-</g>
-</svg><h2 id="validation-rules">Validation rules</h2>
-<h3 id="validation-rules-additional-codes">Additional Codes</h3>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Code</th>
-<th>Description</th>
-</tr><tr>
-<td>ACN1</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> for combination of fields additional code type, additional code ID and start date.</td>
-</tr><tr>
-<td>ACN13</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule requiring that when an additional code is referred to in a <a href="/tariff-data-manual/documentation/data-structures/measure.html">measure</a>, the validity period of the code must span the validity period of the measure.</td>
-</tr><tr>
-<td>ACN14</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> for additional codes that are used in a <a href="/tariff-data-manual/documentation/data-structures/measure.html">measure</a>.</td>
-</tr><tr>
-<td>ACN17</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for the additional code type the additional code belongs to.</td>
-</tr><tr>
-<td>ACN2</td>
-<td>The referenced additional code type must exist and have as application code “non-Meursing” or “Export Refund for Processed Agricultural Goods.</td>
-</tr><tr>
-<td>ACN4</td>
-<td>The validity period of the additional code must not overlap any other additional code with the same additional code type, additional code ID and start date.</td>
-</tr><tr>
-<td>ACN5</td>
-<td>
-<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for additional code descriptions. The start date of the first description period must be equal to the start date of the additional code. No two associated description periods may have the same start date. The start date must be less than or equal to the end date of the additional code.</td>
-</tr><tr>
-<td>CT1</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for additional code types.</td>
-</tr>
-        </table>
-      </div><p>Read the validation rules for additional codes in the <a href="https://uktrade.github.io/tamato/html/business_rules/additional_codes.html">system documentation</a>.</p>
-<h2 id="how-additional-codes-apply">How additional codes apply</h2>
-<p>Additional codes can only be applied to particular types of measures. For example, types 8, A, B and C can only be used with trade remedies. The full lists of measure types that can reference additional code types are shown below for each code type.</p>
-<h3 id="prohibition-restriction-surveillance-3">Prohibition/Restriction/Surveillance (3)</h3>
-<table>
-    <thead>
-      <tr>
-        <th>Measure Type</th><th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>089</td><td>The Washington Convention</td></tr><tr><td>092</td><td>The Washington Convention (export)</td></tr><tr><td>143</td><td>Preferential tariff quota</td></tr><tr><td>146</td><td>Preferential tariff quota under end-use</td></tr><tr><td>277</td><td>Import prohibition</td></tr><tr><td>278</td><td>Export prohibition</td></tr><tr><td>420</td><td>Entry into free circulation (prior surveillance)</td></tr><tr><td>462</td><td>Posterior import surveillance</td></tr><tr><td>463</td><td>Posterior export surveillance</td></tr><tr><td>465</td><td>Restriction on entry into free circulation</td></tr><tr><td>466</td><td>Outward processing post. surveillance</td></tr><tr><td>467</td><td>Restriction on export</td></tr><tr><td>468</td><td>GSP Confidential Surveillance</td></tr><tr><td>470</td><td>Export surveillance</td></tr><tr><td>473</td><td>Export authorization</td></tr><tr><td>474</td><td>Entry into free circulation (quantitative limitation)</td></tr><tr><td>475</td><td>Restriction on entry into free circulation</td></tr><tr><td>476</td><td>Restriction on export</td></tr><tr><td>477</td><td>Entry into free circulation (outward processing traffic)</td></tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan=2>
-          Last updated 19 Sep 2023
-        </td>
-      </tr>
-    </tfoot>
-  </table><h3 id="dual-use-d">Dual Use (D)</h3>
-<table>
-    <thead>
-      <tr>
-        <th>Measure Type</th><th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>476</td><td>Restriction on export</td></tr><tr><td>478</td><td>Export authorization (Dual use)</td></tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan=2>
-          Last updated 19 Sep 2023
-        </td>
-      </tr>
-    </tfoot>
-  </table><h3 id="agricultural-tables-non-meursing-6">Agricultural Tables (non-Meursing) (6)</h3>
-<table>
-    <thead>
-      <tr>
-        <th>Measure Type</th><th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>630</td><td>Differences in prices for basic products</td></tr><tr><td>672</td><td>Amount of additional duty on sugar</td></tr><tr><td>673</td><td>Amount of additional duty on flour</td></tr><tr><td>674</td><td>Agricultural component</td></tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan=2>
-          Last updated 19 Sep 2023
-        </td>
-      </tr>
-    </tfoot>
-  </table><h3 id="tariff-preference-2">Tariff Preference (2)</h3>
-<table>
-    <thead>
-      <tr>
-        <th>Measure Type</th><th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>103</td><td>Third country duty</td></tr><tr><td>105</td><td>Non preferential duty under end-use</td></tr><tr><td>112</td><td>Autonomous tariff suspension</td></tr><tr><td>122</td><td>Non preferential tariff quota</td></tr><tr><td>123</td><td>Non preferential tariff quota under end-use</td></tr><tr><td>142</td><td>Tariff preference</td></tr><tr><td>143</td><td>Preferential tariff quota</td></tr><tr><td>144</td><td>Preferential ceiling</td></tr><tr><td>145</td><td>Preference under end-use</td></tr><tr><td>146</td><td>Preferential tariff quota under end-use</td></tr><tr><td>695</td><td>Additional duties</td></tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan=2>
-          Last updated 19 Sep 2023
-        </td>
-      </tr>
-    </tfoot>
-  </table><h3 id="restrictions-4">Restrictions (4)</h3>
-<table>
-    <thead>
-      <tr>
-        <th>Measure Type</th><th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>089</td><td>The Washington Convention</td></tr><tr><td>092</td><td>The Washington Convention (export)</td></tr><tr><td>277</td><td>Import prohibition</td></tr><tr><td>278</td><td>Export prohibition</td></tr><tr><td>420</td><td>Entry into free circulation (prior surveillance)</td></tr><tr><td>462</td><td>Posterior import surveillance</td></tr><tr><td>463</td><td>Posterior export surveillance</td></tr><tr><td>465</td><td>Restriction on entry into free circulation</td></tr><tr><td>466</td><td>Outward processing post. surveillance</td></tr><tr><td>467</td><td>Restriction on export</td></tr><tr><td>473</td><td>Export authorization</td></tr><tr><td>474</td><td>Entry into free circulation (quantitative limitation)</td></tr><tr><td>475</td><td>Restriction on entry into free circulation</td></tr><tr><td>476</td><td>Restriction on export</td></tr><tr><td>725</td><td>Export control on ozone-depleting substances</td></tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan=2>
-          Last updated 19 Sep 2023
-        </td>
-      </tr>
-    </tfoot>
-  </table><h3 id="anti-dumping-countervailing-measures-8-a-b-c">Anti-dumping/countervailing measures (8,A,B,C)</h3>
-<table>
-    <thead>
-      <tr>
-        <th>Measure Type</th><th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>166</td><td>Provisional exclusion</td></tr><tr><td>420</td><td>Entry into free circulation (prior surveillance)</td></tr><tr><td>464</td><td>Declaration of subheading submitted to end-use provisions</td></tr><tr><td>465</td><td>Restriction on entry into free circulation</td></tr><tr><td>551</td><td>Provisional anti-dumping duty</td></tr><tr><td>552</td><td>Definitive anti-dumping duty</td></tr><tr><td>553</td><td>Provisional countervailing duty</td></tr><tr><td>554</td><td>Definitive countervailing duty</td></tr><tr><td>555</td><td>Anti-dumping/countervailing duty - Pending collection</td></tr><tr><td>561</td><td>Notice of initiation of an anti-dumping or countervailing proceeding</td></tr><tr><td>562</td><td>Suspended anti-dumping or countervailing duty</td></tr><tr><td>563</td><td>Dump Undertakings</td></tr><tr><td>564</td><td>Anti-dumping or countervailing registration</td></tr><tr><td>565</td><td>Anti-dumping/countervailing review</td></tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan=2>
-          Last updated 19 Sep 2023
-        </td>
-      </tr>
-    </tfoot>
-  </table><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
+            <h1 id="use-the-data">Use the data</h1>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Additional-codes">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Additional+codes%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fdata-structures%2Fadditional-codes.html%29&amp;labels=bug&amp;title=Re%3A+%27Additional+codes%27">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Use-the-data">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Use+the+data%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fuse-the-data.html%29&amp;labels=bug&amp;title=Re%3A+%27Use+the+data%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
