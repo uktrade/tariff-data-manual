@@ -8,6 +8,20 @@ svg {
       fill: none;
     }
 
+    // Highlight edges between tables when they are hovered.
+    .edge:hover {
+      path {
+        stroke: red;
+        stroke-width: 4px;
+      }
+
+      polygon {
+        stroke: red;
+        stroke-width: 4px;
+        fill: red;
+      }
+    }
+
     .node[id^='table'] {
       text:first-of-type {
         font-weight: bold;
