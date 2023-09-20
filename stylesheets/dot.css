@@ -4,6 +4,15 @@ svg * {
 svg .graph[id^='database'] > polygon {
   fill: none; }
 
+svg [id^='database'] .edge:hover path {
+  stroke: red;
+  stroke-width: 4px; }
+
+svg [id^='database'] .edge:hover polygon {
+  stroke: red;
+  stroke-width: 4px;
+  fill: red; }
+
 svg [id^='database'] .node[id^='table'] text:first-of-type {
   font-weight: bold; }
 

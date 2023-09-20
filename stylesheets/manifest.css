@@ -3914,6 +3914,10 @@
 main svg {
   max-width: 100%; }
 
+@media screen and (min-width: 40.0625em) {
+  main svg {
+    max-width: calc(100vw - 390px); } }
+
 p:empty {
   display: none; }
 
