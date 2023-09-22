@@ -771,14 +771,14 @@ isn&rsquo;t possible to <code>UPDATE</code> its identifying fields.</p>
 identified when changes to a record are communicated, because records being
 updated in the transaction stream are identified by their identifying fields.</p>
 <h2 id="examples">Examples</h2>
-<p>An additional code has type <code>A</code>, code <code>123</code> and start date <code>2021-01-01</code>. If
+<p>An additional code has type <code>A</code>, code <code>123</code> and start date <code>20210101</code>. If
 another additional code is created with type <code>A</code>, code <code>123</code> and start date
-<code>2021-01-01</code>, then the creation will fail this rule.</p>
+<code>20210101</code>, then the creation will fail this rule.</p>
 <p>If another additional code is created with a different start date (e.g. created
-with type <code>A</code>, code <code>123</code> and start date <code>2021-01-02</code>) then it will not fail
+with type <code>A</code>, code <code>123</code> and start date <code>20210102</code>) then it will not fail
 this rule (although it may fail another rule about overlapping dates.)</p>
 <p>If the first original code is deleted, then creating a new additional code with
-type <code>A</code>, code <code>123</code> and start date <code>2021-01-01</code> will then not fail the rule.</p>
+type <code>A</code>, code <code>123</code> and start date <code>20210101</code> will then not fail the rule.</p>
 
             
           </main>
