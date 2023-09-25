@@ -912,7 +912,79 @@
 </ul>
 <p>The physical indent on the description matches the indent field. So, ‘Horses’ is a ‘child’ of ‘Live horses, asses, mules and hinnies’ and ‘Pure-bred breeding animals’ is a child of ‘Horses’.</p>
 <p>The HS chapter and the HS heading use an indent of zero to show they are not indented.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93875201-75e9b580-fccc-11ea-86b6-7f6917067959.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93875201-75e9b580-fccc-11ea-86b6-7f6917067959.png" alt="image" /></a></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Commodity</th>
+<th>Suffix</th>
+<th>Indents</th>
+<th>Description</th>
+</tr><tr>
+<td>
+<span class="cc0">0100</span><span class="cc1">00</span><span class="cc2">00</span><span class="cc3">00</span>
+</td>
+<td>80</td>
+<td>0</td>
+<td><strong>LIVE ANIMALS</strong></td>
+</tr><tr>
+<td>
+<span class="cc0">0101</span><span class="cc1">00</span><span class="cc2">00</span><span class="cc3">00</span>
+</td>
+<td>80</td>
+<td>0</td>
+<td><strong>live horses, asses mules and hinnies</strong></td>
+</tr><tr>
+<td>
+<span class="cc0">0101</span><span class="cc1">21</span><span class="cc2">00</span><span class="cc3">00</span>
+</td>
+<td>10</td>
+<td>1</td>
+<td>Horses</td>
+</tr><tr>
+<td>
+<span class="cc0">0101</span><span class="cc1">21</span><span class="cc2">00</span><span class="cc3">00</span>
+</td>
+<td>80</td>
+<td>2</td>
+<td>Pure-bred breeding animals</td>
+</tr><tr>
+<td>
+<span class="cc0">0101</span><span class="cc1">29</span><span class="cc2">00</span><span class="cc3">00</span>
+</td>
+<td>80</td>
+<td>2</td>
+<td>Other</td>
+</tr><tr>
+<td>
+<span class="cc0">0101</span><span class="cc1">29</span><span class="cc2">10</span><span class="cc3">00</span>
+</td>
+<td>80</td>
+<td>3</td>
+<td>For slaughter</td>
+</tr><tr>
+<td>
+<span class="cc0">0101</span><span class="cc1">29</span><span class="cc2">90</span><span class="cc3">00</span>
+</td>
+<td>80</td>
+<td>3</td>
+<td>Other</td>
+</tr><tr>
+<td>
+<span class="cc0">0101</span><span class="cc1">30</span><span class="cc2">00</span><span class="cc3">00</span>
+</td>
+<td>80</td>
+<td>1</td>
+<td>Asses</td>
+</tr><tr>
+<td>
+<span class="cc0">0101</span><span class="cc1">90</span><span class="cc2">00</span><span class="cc3">00</span>
+</td>
+<td>80</td>
+<td>1</td>
+<td>Other</td>
+</tr>
+        </table>
+      </div><p><a href="https://user-images.githubusercontent.com/61055197/93875201-75e9b580-fccc-11ea-86b6-7f6917067959.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93875201-75e9b580-fccc-11ea-86b6-7f6917067959.png" alt="image" /></a></p>
 <h2 id="defining-if-a-product-is-declarable-the-product-line-suffix">Defining if a product is declarable: the product line suffix</h2>
 <p>A product line suffix is a separate pair of numbers shown beside the commodity code.</p>
 <p>A value of 80 means the commodity code could in theory be declared. A value of less than 80, such as 10 or 20, means the commodity code is being used for grouping and structure purposes only. Measures can only be attached to codes with a suffix of 80.</p>
