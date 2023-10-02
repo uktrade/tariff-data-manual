@@ -3934,7 +3934,8 @@ p:empty {
 [class^=cc] {
   padding: 0px 3px;
   display: inline-block;
-  font-variant-numeric: tabular-nums; }
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9em; }
 
 
 
