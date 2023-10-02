@@ -3,17 +3,30 @@ require 'sqlite3'
 DB = SQLite3::Database.new(ENV['LOCAL_DATABASE'] || 'tariff.sqlite')
 
 STATEMENTS = Hash.new do |hash, sql|
-  hash[sql] = DB.prepare sql
+  hash[sql] = []
 end
 
 RESULTS = Hash.new do |hash, sql|
-  STDERR.puts sql
-  hash[sql] = STATEMENTS[sql].execute!
+  hash[sql] = []
+  remainder = sql
+  loop do
+    stmt = DB.prepare remainder
+    remainder = stmt.remainder.strip
+    result = stmt.execute!
+
+    # Return the last non-empty result set.
+    unless result.empty?
+      hash[sql] = result
+      STATEMENTS[sql] << stmt
+    end
+    break if remainder.empty?
+  end
+  hash[sql]
 end
 
 def sql_to_table sql
-  statement = STATEMENTS[sql]
   rows = RESULTS[sql]
+  statement = STATEMENTS[sql].last
 
   "<table>
     <thead>
