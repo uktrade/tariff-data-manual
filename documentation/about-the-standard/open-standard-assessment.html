@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Measure components - Tariff Data Manual</title>
+    <title>Open standard assessment - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/measure-components.html">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/open-standard-assessment.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Measure components - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/measure-components.html" />
+      <meta name="twitter:title" content="Open standard assessment - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/open-standard-assessment.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Measure components" />
+      <meta property="og:title" content="Open standard assessment" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/measure-components.html" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/open-standard-assessment.html" />
 
     
   </head>
@@ -289,7 +289,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#condition-codes-in-detail"><span>Condition codes in detail</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions-business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -320,7 +320,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#measurement-unit-codes-and-abbreviations"><span>Measurement unit codes and abbreviations</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#measurement-units-measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#entity-relationship-diagram-for-measurement-units"><span>Entity-relationship diagram for measurement units</span></a>
@@ -593,13 +593,13 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measurement-units-and-abbreviations"><span>Measurement units and abbreviations</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-components-measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-component-data-structures"><span>Measure component data structures</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-components-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -809,469 +809,454 @@
 
         <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="measure-components">Measure components</h1>
+            <h1 id="open-standard-assessment">Open standard assessment</h1>
 
 <ul>
 <li>
-<a href="#what-measure-components-are">What measure components are</a>
-</li>
-<li>
-<a href="#types-of-duty-applied-to-measures">Types of duty applied to measures</a>
-</li>
-<li>
-<a href="#breaking-down-a-duty-string">Breaking down a duty string</a>
-</li>
-<li>
-<a href="#duty-expressions">Duty expressions</a>
-</li>
-<li>
-<a href="#duty-expression-sequencing-and-duality">Duty expression sequencing and duality</a>
-</li>
-<li>
-<a href="#how-to-group-duty-expressions">How to group duty expressions</a>
-</li>
-<li>
-<a href="#measurement-units-and-abbreviations">Measurement units and abbreviations</a>
-</li>
-<li>
-<a href="#measurement-unit-qualifiers">Measurement unit qualifiers</a>
+<a href="#formal-specification">Formal specification</a>
 <ul>
 <li>
-<a href="#managing-duties">Managing duties</a>
+<a href="#1-does-it-address-and-aid-interoperability-between-public-administrations">1: Does it address and aid interoperability between public administrations?</a>
+</li>
+<li>
+<a href="#2-does-it-address-and-aid-the-development-of-digital-services-in-government">2: Does it address and aid the development of digital services in government?</a>
+</li>
+<li>
+<a href="#3-are-the-functional-and-non-functional-requirements-for-the-use-and-implementation-of-the-specification-clearly-defined">3: Are the functional and non-functional requirements for the use and implementation of the specification clearly defined?</a>
+</li>
+<li>
+<a href="#4-is-it-possible-to-implement-the-specification-across-different-domains">4: Is it possible to implement the specification across different domains?</a>
+</li>
+<li>
+<a href="#5-is-it-largely-independent-from-products-of-single-providers-either-open-source-or-proprietary">5: Is it largely independent from products of single providers, either open source or proprietary?</a>
+</li>
+<li>
+<a href="#6-is-it-largely-independent-from-specific-platforms">6: Is it largely independent from specific platforms?</a>
+</li>
+<li>
+<a href="#7-has-the-standard-been-written-so-that-it-can-be-delivered-or-used-with-more-than-one-technology-for-example-xml-and-json">7: Has the standard been written so that it can be delivered or used with more than one technology (for example XML and JSON)?</a>
+</li>
+<li>
+<a href="#8-has-the-specification-been-sufficiently-developed-and-existed-long-enough-to-overcome-most-of-its-initial-problems">8: Has the specification been sufficiently developed and existed long enough to overcome most of its initial problems?</a>
+</li>
+<li>
+<a href="#9-are-there-existing-or-planned-mechanisms-to-assess-its-conformity-and-implementation-for-example-conformity-tests-certifications-and-plugfests">9: Are there existing or planned mechanisms to assess its conformity and implementation - for example conformity tests, certifications and plugfests?</a>
+</li>
+<li>
+<a href="#10-does-it-have-sufficient-detail-consistency-and-completeness-for-the-use-and-development-of-products">10: Does it have sufficient detail, consistency and completeness for the use and development of products?</a>
 </li>
 </ul>
 <p></li>
 <li>
-<a href="#measure-component-data-structures">Measure component data structures</a>
+<a href="#implementation-of-the-formal-specification">Implementation of the formal specification</a>
 <ul>
 <li>
-<a href="#measure-condition-components">Measure condition components</a>
+<a href="#11-does-it-provide-current-implementation-guidelines-and-documentation-for-the-implementation-of-products">11: Does it provide current implementation guidelines and documentation for the implementation of products?</a>
+</li>
+<li>
+<a href="#12-does-it-provide-a-reference-or-open-source-implementation">12: Does it provide a reference (or open source) implementation?</a>
+</li>
+<li>
+<a href="#13-does-it-address-backwards-compatibility-with-previous-versions">13: Does it address backwards compatibility with previous versions?</a>
+</li>
+<li>
+<a href="#14-are-the-underlying-technologies-for-implementing-it-proven-stable-and-clearly-defined">14:. Are the underlying technologies for implementing it proven, stable and clearly defined?</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="#business-rules">Business rules</a>
+<a href="#openness">Openness</a>
+<ul>
+<li>
+<a href="#15-is-information-on-the-terms-and-policies-for-the-establishment-and-operation-of-the-standardisation-organisation-publicly-available">15: Is information on the terms and policies for the establishment and operation of the standardisation organisation publicly available?</a>
+</li>
+<li>
+<a href="#16-is-participation-in-the-creation-process-of-the-formal-specification-open-to-all-relevant-stakeholders-such-as-organisations-companies-or-individuals">16: Is participation in the creation process of the formal specification open to all relevant stakeholders (such as organisations, companies or individuals)?</a>
+</li>
+<li>
+<a href="#17-is-information-on-the-standardisation-process-publicly-available">17: Is information on the standardisation process publicly available?</a>
+</li>
+<li>
+<a href="#18-is-information-on-the-decision-making-process-for-approving-formal-specifications-is-publicly-available">18: Is information on the decision-making process for approving formal specifications is publicly available?</a>
+</li>
+<li>
+<a href="#19-are-the-formal-specifications-approved-in-a-decision-making-process-which-aims-at-reaching-consensus">19: Are the formal specifications approved in a decision-making process which aims at reaching consensus?</a>
+</li>
+<li>
+<a href="#20-are-the-formal-specifications-reviewed-using-a-formal-review-process-with-all-relevant-external-stakeholders-such-as-public-consultation">20: Are the formal specifications reviewed using a formal review process with all relevant external stakeholders (such as public consultation)?</a>
+</li>
+<li>
+<a href="#21-can-all-relevant-stakeholders-formally-appeal-or-raise-objections-to-the-development-and-approval-of-formal-specifications">21: Can all relevant stakeholders formally appeal or raise objections to the development and approval of formal specifications?</a>
+</li>
+<li>
+<a href="#22-is-relevant-documentation-of-the-development-and-approval-process-of-formal-specifications-publicly-available-such-as-preliminary-results-and-committee-meeting-notes">22: Is relevant documentation of the development and approval process of formal specifications publicly available (such as preliminary results and committee meeting notes)?</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#access-to-the-formal-specification">Access to the formal specification</a>
+<ul>
+<li>
+<a href="#23-is-the-documentation-publicly-available-for-implementation-and-use-at-zero-or-low-cost">23:. Is the documentation publicly available for implementation and use at zero or low cost?</a>
+</li>
+<li>
+<a href="#24-is-the-documentation-of-the-intellectual-property-rights-publicly-available-is-there-a-clear-and-complete-set-of-licence-terms">24: Is the documentation of the intellectual property rights publicly available (is there a clear and complete set of licence terms)?</a>
+</li>
+<li>
+<a href="#25-is-it-licensed-on-a-royalty-free-basis">25: Is it licensed on a royalty-free basis?</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#versatility-flexibility-of-the-proposed-standard">Versatility/flexibility of the proposed standard</a>
+<ul>
+<li>
+<a href="#26-has-the-formal-specification-been-used-for-different-implementations-by-different-vendors-suppliers">26: Has the formal specification been used for different implementations by different vendors/suppliers?</a>
+</li>
+<li>
+<a href="#27-has-the-formal-specification-been-used-in-different-industries-business-sectors-or-functions">27:. Has the formal specification been used in different industries, business sectors or functions?</a>
+</li>
+<li>
+<a href="#28-has-interoperability-been-demonstrated-across-different-implementations-by-different-vendors-suppliers">28: Has interoperability been demonstrated across different implementations by different vendors/suppliers?</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#end-user-effect-of-the-formal-specification">End-user effect of the formal specification</a>
+<ul>
+<li>
+<a href="#29-do-the-products-that-implement-it-have-a-significant-market-share-of-adoption">29: Do the products that implement it have a significant market share of adoption?</a>
+</li>
+<li>
+<a href="#30-do-the-products-that-implement-it-target-a-broad-spectrum-of-end-uses">30:. Do the products that implement it target a broad spectrum of end-uses?</a>
+</li>
+<li>
+<a href="#31-does-it-have-strong-support-from-different-interest-groups">31: Does it have strong support from different interest groups?</a>
+</li>
+<li>
+<a href="#32-is-there-evidence-that-the-adoption-of-it-supports-improving-efficiency-and-effectiveness-of-organisational-process">32: Is there evidence that the adoption of it supports improving efficiency and effectiveness of organisational process?</a>
+</li>
+<li>
+<a href="#33-is-there-evidence-that-the-adoption-of-it-makes-it-easier-to-migrate-between-different-solutions-from-different-providers">33: Is there evidence that the adoption of it makes it easier to migrate between different solutions from different providers?</a>
+</li>
+<li>
+<a href="#34-is-there-evidence-that-the-adoption-of-it-positively-impacts-the-environment">34: Is there evidence that the adoption of it positively impacts the environment?</a>
+</li>
+<li>
+<a href="#35-is-there-evidence-that-the-adoption-of-it-positively-impacts-financial-costs">35: Is there evidence that the adoption of it positively impacts financial costs?</a>
+</li>
+<li>
+<a href="#36-is-there-evidence-that-the-adoption-of-it-positively-impacts-security">36: Is there evidence that the adoption of it positively impacts security?</a>
+</li>
+<li>
+<a href="#37-is-there-evidence-that-the-adoption-of-it-can-be-implemented-alongside-enterprise-security-technologies">37: Is there evidence that the adoption of it can be implemented alongside enterprise security technologies?</a>
+</li>
+<li>
+<a href="#38-is-there-evidence-that-the-adoption-of-it-positively-impacts-privacy">38: Is there evidence that the adoption of it positively impacts privacy?</a>
+</li>
+<li>
+<a href="#39-is-it-largely-compatible-with-related-not-alternative-formal-specifications-in-the-same-area-of-application">39: Is it largely compatible with related (not alternative) formal specifications in the same area of application?</a>
+</li>
+<li>
+<a href="#40-is-there-evidence-that-the-adoption-of-it-positively-impacts-accessibility-and-inclusion">40: Is there evidence that the adoption of it positively impacts accessibility and inclusion?</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#maintenance-of-the-formal-specification">Maintenance of the formal specification</a>
+<ul>
+<li>
+<a href="#41-does-it-have-a-defined-maintenance-organisation">41: Does it have a defined maintenance organisation?</a>
+</li>
+<li>
+<a href="#42-does-the-maintenance-organisation-provide-sufficient-finance-and-resource-to-control-short-to-medium-term-threats">42: Does the maintenance organisation provide sufficient finance and resource to control short-to-medium-term threats?</a>
+</li>
+<li>
+<a href="#43-does-the-maintenance-organisation-have-a-public-statement-on-intention-to-transfer-responsibility-for-maintenance-of-it-if-the-organisation-were-no-longer-able-to-continue">43: Does the maintenance organisation have a public statement on intention to transfer responsibility for maintenance of it, if the organisation were no longer able to continue?</a>
+</li>
+<li>
+<a href="#44-does-it-have-a-defined-maintenance-and-support-process">44: Does it have a defined maintenance and support process?</a>
+</li>
+<li>
+<a href="#45-does-it-have-a-defined-policy-for-version-management">45: Does it have a defined policy for version management?</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#related-european-standards">Related European standards</a>
+<ul>
+<li>
+<a href="#46-is-this-an-existing-european-standard-or-an-identified-technical-specification-in-europe-note-cen-cenelec-or-etsi-are-the-european-standards-bodies-technical-specifications-provided-by-organisations-other-than-cen-cenelec-or-etsi-can-be-under-consideration-to-become-a-european-standard-or-an-identified-technical-specification-in-europe">46: Is this an existing European standard or an identified technical specification in Europe? (Note: CEN, CENELEC or ETSI are the European standards bodies. Technical specifications provided by organisations other than CEN, CENELEC or ETSI can be under consideration to become a European standard or an identified technical specification in Europe.)</a>
+</li>
+<li>
+<a href="#47-does-this-specification-or-standard-cover-an-area-different-from-those-already-identified-or-currently-under-consideration-as-an-identified-european-standard-or-specification">47: Does this specification or standard cover an area different from those already identified or currently under consideration as an identified European standard or specification?</a>
+</li>
+</ul>
 </li>
 </ul></p>
-<h2 id="what-measure-components-are">What measure components are</h2>
-<p>Measure components are the elements that make up a tariff duty.</p>
-<p>Not all tariff measures have duties associated with them. For example, measure types which do need duties include:</p>
+<p>This page contains information about the standard in response to 47 questions.
+The questions are used to assess whether standards are open and should be
+recognised as official Government standards of the UK.</p>
+<h2 id="formal-specification">Formal specification</h2>
+<h3 id="1-does-it-address-and-aid-interoperability-between-public-administrations">1: Does it address and aid interoperability between public administrations?</h3>
+<p>✅ <strong>Yes</strong>. The data standard is currently used to make tariff policy
+interoperable between administrations that author it (such as the Department for
+Business and Trade) and administrations that operationalise it (such as His
+Majesty&rsquo;s Revenue and Customs, or Jersey and Guernsey).</p>
+<p>The standard specifies an unambiguous way for multiple administrations to
+collaborate on tariff policy without needing constant communication about intent
+or configuration.</p>
+<p>For example, the Department for Business and Trade can use the standard to
+encode a new tariff rate for the import of goods which can be consumed by border
+systems at both HMRC and Jersey and Guernsey and unambiguously applied to future
+import declarations with no further manual or human input required.</p>
+<h3 id="2-does-it-address-and-aid-the-development-of-digital-services-in-government">2: Does it address and aid the development of digital services in government?</h3>
+<p>✅ <strong>Yes</strong>. The <a href="https://www.trade-tariff.service.gov.uk/">Online Tariff Service</a>
+run by HMRC is a digital service that consumes data adhering to this standard
+and provides a search engine and lookup tool for international traders. The
+standard allows this service to consume a data feed and automatically update its
+content in response to new data being published.</p>
+<p>Furthermore, there are a number of other services in the international trade
+domain that provide guidance or operational functions such as the <a href="https://www.check-duties-customs-exporting-goods.service.gov.uk/">Check How to
+Export Goods</a>
+service or the Single Trade Window. Understanding the correct rules and fees for
+international trade is key to the delivery of those services, and data adhering
+to this standard allows them to do this unambiguously.</p>
+<h3 id="3-are-the-functional-and-non-functional-requirements-for-the-use-and-implementation-of-the-specification-clearly-defined">3: Are the functional and non-functional requirements for the use and implementation of the specification clearly defined?</h3>
+<p>✅ <strong>Yes</strong>. The functional and non-functional requirements are clearly defined by
+a <a href="https://uktrade.github.io/tariff-data-manual">repository of documentation</a>.</p>
+<h3 id="4-is-it-possible-to-implement-the-specification-across-different-domains">4: Is it possible to implement the specification across different domains?</h3>
+<p>✅ <strong>Yes</strong>. Although the standard is used to define information for rules and
+fees designed to be operationalised at a national border, the domains within
+that scope are extremely broad and cover all aspects of international trade.</p>
+<p>For example, the tariff data contains conditions relating to export of nuclear
+material, import of animal or plant products, or application of political
+sanctions.</p>
+<p>The data in this format published by Department of Business and Trade is
+authored by teams in at least 30 different policy areas across 11 public
+administrations.</p>
+<h3 id="5-is-it-largely-independent-from-products-of-single-providers-either-open-source-or-proprietary">5: Is it largely independent from products of single providers, either open source or proprietary?</h3>
+<p>✅ <strong>Yes</strong>. The standard is based on and remains compatible with a European Union
+standard with the same purpose that has been in use for a number of decades.
+Each Member State of the European Union needs a system that is capable of
+consuming data in this format. As such there are a number of providers with
+expertise in the standard.</p>
+<p>There are specific examples:</p>
 
 <ul>
-<li>third country duty (103)</li>
-<li>tariff preference (142)</li>
-<li>preferential tariff rate quota (143) </li>
+<li>The Department for Business and Trade maintains the <a href="https://github.com/uktrade/tamato">Tariff Management
+Tool</a> as an open-source tool that produces
+data implementing the standard</li>
+<li>HMRC&rsquo;s <a href="https://github.com/trade-tariff">Online Tariff Service</a> is an
+open-source implementation that can read data in this format</li>
+<li>Jersey and Guernsey&rsquo;s border systems that consume the standard are currently
+provided by a UK-based supplier</li>
+<li>There are at least three other United Kingdom-based suppliers who have
+experience implementing systems to work with this data and several more in the
+European Union</li>
 </ul>
-<p>The import prohibition measure type (277) does not.</p>
-<h2 id="types-of-duty-applied-to-measures">Types of duty applied to measures</h2>
-<p>The types of duties that can be applied to a measure are:</p>
+<h3 id="6-is-it-largely-independent-from-specific-platforms">6: Is it largely independent from specific platforms?</h3>
+<p>✅ <strong>Yes</strong>. There are no requirements on platform. Python, Ruby and Java are
+programming languages that have been used to build systems to manage and consume
+the data.</p>
+<h3 id="7-has-the-standard-been-written-so-that-it-can-be-delivered-or-used-with-more-than-one-technology-for-example-xml-and-json">7: Has the standard been written so that it can be delivered or used with more than one technology (for example XML and JSON)?</h3>
+<p>✅ <strong>Yes</strong>. There is an XML schema and SQLite schema that can be used to encode
+data to the standard. The Online Tariff Service also provides a JSON API that
+communicates data in the standard.</p>
+<h3 id="8-has-the-specification-been-sufficiently-developed-and-existed-long-enough-to-overcome-most-of-its-initial-problems">8: Has the specification been sufficiently developed and existed long enough to overcome most of its initial problems?</h3>
+<p>✅ <strong>Yes</strong>. The specification is based on and remains compatible with TARIC3
+which has been used by the European Union for several decades. It is used in the
+EU on a daily basis to transmit changes in tariff policy.</p>
+<p>The UK&rsquo;s application of the standard predates Brexit as it was used to receive
+tariff data from the EU when the UK was a member state.</p>
+<p>A renewed interest in the standard and some UK-specific modifications coincided
+with the need for the UK to set an independent trade policy. The standard was
+successfully used to author and transmit UK-specific data prior to the end of
+the Implementation Period. This process has been in BAU since January 1st 2021.</p>
+<h3 id="9-are-there-existing-or-planned-mechanisms-to-assess-its-conformity-and-implementation-for-example-conformity-tests-certifications-and-plugfests">9: Are there existing or planned mechanisms to assess its conformity and implementation - for example conformity tests, certifications and plugfests?</h3>
+<p>✅ <strong>Yes</strong>. There are a number of data-based test cases included with the
+validation rules that allow implementors to check their implementation. We don&rsquo;t
+believe more formal certification is required or would justify the effort.</p>
+<h3 id="10-does-it-have-sufficient-detail-consistency-and-completeness-for-the-use-and-development-of-products">10: Does it have sufficient detail, consistency and completeness for the use and development of products?</h3>
+<p>✅ <strong>Yes</strong>. There are a number of &lsquo;products&rsquo; based on the standard as referenced
+in question 5, all of which have been successful in using the standard to
+collect and interpret tariff policy.</p>
+<h2 id="implementation-of-the-formal-specification">Implementation of the formal specification</h2>
+<h3 id="11-does-it-provide-current-implementation-guidelines-and-documentation-for-the-implementation-of-products">11: Does it provide current implementation guidelines and documentation for the implementation of products?</h3>
+<p>✅ <strong>Yes</strong>. The standard provides guidance to implementors on how to manage
+updates and data versions, including an example schema in the form of an SQLite
+database.</p>
+<h3 id="12-does-it-provide-a-reference-or-open-source-implementation">12: Does it provide a reference (or open source) implementation?</h3>
+<p>✅ <strong>Yes</strong>. The products mentioned in question 5 include open source
+implementations of both data creation and data consumption systems.</p>
+<p>In particular, the Tariff Management Tool maintained by the Department for
+Business and Trade is intended as the reference implementation of validation
+logic.</p>
+<h3 id="13-does-it-address-backwards-compatibility-with-previous-versions">13: Does it address backwards compatibility with previous versions?</h3>
+<p>✅ <strong>Yes</strong>. Places where the UK standard differs from TARIC3 as defined by the EU
+(mostly in areas where the UK requires stricter conformance or is no longer
+using the full expressivity of the EU model) have been clearly documented.
+Historical data continues to be allowed to ensure backwards compatibility.</p>
+<h3 id="14-are-the-underlying-technologies-for-implementing-it-proven-stable-and-clearly-defined">14:. Are the underlying technologies for implementing it proven, stable and clearly defined?</h3>
+<p>✅ <strong>Yes</strong>. The standard is a data standard and as such is mainly concerned with
+semantic meaning and data formats that can be implemented in a number of
+technologies.</p>
+<p>However, the canonical encodings of the data include XML and SQLite, both of
+which are widely recognised technologies, have support in all major programming
+systems and number billions of implementing devices worldwide.</p>
+<h2 id="openness">Openness</h2>
+<h3 id="15-is-information-on-the-terms-and-policies-for-the-establishment-and-operation-of-the-standardisation-organisation-publicly-available">15: Is information on the terms and policies for the establishment and operation of the standardisation organisation publicly available?</h3>
+<p>✅ <strong>Yes</strong>. The terms of reference and governance arrangements are documented as
+part of the documentation repository and on <a href="https://github.com/uktrade/tariff-data-manual/discussions">the repository&rsquo;s Github
+page</a>.</p>
+<h3 id="16-is-participation-in-the-creation-process-of-the-formal-specification-open-to-all-relevant-stakeholders-such-as-organisations-companies-or-individuals">16: Is participation in the creation process of the formal specification open to all relevant stakeholders (such as organisations, companies or individuals)?</h3>
+<p>✅ <strong>Yes</strong>. The creation process is handled using an asynchronous mechanism <a href="https://github.com/uktrade/tariff-data-manual/discussions">on
+Github Discussions</a>
+which is used as an open discussion forum. There are also ad-hoc synchronous
+discussions held via a suitable video conferencing platform. Both media are open
+to any interested party.</p>
+<p>There is a core stakeholder group which includes Government data architects and
+external system implementors. Changes to the standard requires unanimous
+approval of this group. Other relevant stakeholders not on this group are able
+and encouraged to engage with discussion on the open forum or as part of video
+discussion.</p>
+<h3 id="17-is-information-on-the-standardisation-process-publicly-available">17: Is information on the standardisation process publicly available?</h3>
+<p>✅ <strong>Yes</strong>. The full standards process is carried out in the open as above.</p>
+<h3 id="18-is-information-on-the-decision-making-process-for-approving-formal-specifications-is-publicly-available">18: Is information on the decision-making process for approving formal specifications is publicly available?</h3>
+<p>✅ <strong>Yes</strong>. The full standards process is carried out in the open as above.</p>
+<h3 id="19-are-the-formal-specifications-approved-in-a-decision-making-process-which-aims-at-reaching-consensus">19: Are the formal specifications approved in a decision-making process which aims at reaching consensus?</h3>
+<p>✅ <strong>Yes</strong>. The full standards process requires unanimous support of a
+stakeholder group, which is used as a proxy for consensus amongst the user base.</p>
+<h3 id="20-are-the-formal-specifications-reviewed-using-a-formal-review-process-with-all-relevant-external-stakeholders-such-as-public-consultation">20: Are the formal specifications reviewed using a formal review process with all relevant external stakeholders (such as public consultation)?</h3>
+<p>✅ <strong>Yes</strong>. Proposals are made in the open and all relevant external stakeholders
+are encouraged to take part in this discussion process.</p>
+<h3 id="21-can-all-relevant-stakeholders-formally-appeal-or-raise-objections-to-the-development-and-approval-of-formal-specifications">21: Can all relevant stakeholders formally appeal or raise objections to the development and approval of formal specifications?</h3>
+<p>✅ <strong>Yes</strong>. All relevant stakeholders are encouraged to raise their objections to
+any proposals.</p>
+<h3 id="22-is-relevant-documentation-of-the-development-and-approval-process-of-formal-specifications-publicly-available-such-as-preliminary-results-and-committee-meeting-notes">22: Is relevant documentation of the development and approval process of formal specifications publicly available (such as preliminary results and committee meeting notes)?</h3>
+<p>✅ <strong>Yes</strong>. The full standards process is carried out in the open as above.</p>
+<h2 id="access-to-the-formal-specification">Access to the formal specification</h2>
+<h3 id="23-is-the-documentation-publicly-available-for-implementation-and-use-at-zero-or-low-cost">23:. Is the documentation publicly available for implementation and use at zero or low cost?</h3>
+<p>✅ <strong>Yes</strong>. All documentation for the standard is publicly available for zero
+cost in an open <a href="https://uktrade.github.io/tariff-data-manual">repository of
+documentation</a>.</p>
+<h3 id="24-is-the-documentation-of-the-intellectual-property-rights-publicly-available-is-there-a-clear-and-complete-set-of-licence-terms">24: Is the documentation of the intellectual property rights publicly available (is there a clear and complete set of licence terms)?</h3>
+<p>✅ <strong>Yes</strong>. All documentation is available under the Open Government Licence v3.</p>
+<h3 id="25-is-it-licensed-on-a-royalty-free-basis">25: Is it licensed on a royalty-free basis?</h3>
+<p>✅ <strong>Yes</strong>. All documentation is available under the Open Government Licence v3.</p>
+<h2 id="versatility-flexibility-of-the-proposed-standard">Versatility/flexibility of the proposed standard</h2>
+<h3 id="26-has-the-formal-specification-been-used-for-different-implementations-by-different-vendors-suppliers">26: Has the formal specification been used for different implementations by different vendors/suppliers?</h3>
+<p>✅ <strong>Yes</strong>. As discussed in question 5, there are a number of different
+implementations from different organisations that implement the specification.</p>
+<h3 id="27-has-the-formal-specification-been-used-in-different-industries-business-sectors-or-functions">27:. Has the formal specification been used in different industries, business sectors or functions?</h3>
+<p>✅ <strong>Yes</strong>. The projects discussed in question 5 include data management
+functions, border operations functions, and information and guidance functions.
+Within the private sector, some vendors provide re-sale functions by combining
+data implementing the specification with data from other national tariffs.</p>
+<h3 id="28-has-interoperability-been-demonstrated-across-different-implementations-by-different-vendors-suppliers">28: Has interoperability been demonstrated across different implementations by different vendors/suppliers?</h3>
+<p>✅ <strong>Yes</strong>. The UK Border is currently implemented using several interoperable
+data systems all provided by different vendors.</p>
+<p>These include:</p>
 
 <ul>
-<li>ad valorem duty - for example 0.00% or 3.60% (a percentage additional duty applied to the import duty of the goods)</li>
-<li>specific duty - an amount based on the weight or volume of the imported goods rather than the price</li>
-<li>compound duty - a combination of ad valorem and specific duties</li>
+<li>The Tariff Management Tool (TaMaTo), implemented by the Department for
+Business and Trade.</li>
+<li>Customs Declaration System (CDS), implemented by European Dynamics and HMRC.</li>
+<li>IPAFFS, implemented by the Department for Environment, Food and Rural Affairs.</li>
+<li>The Online Tariff Service, implemented by Engine and HMRC.</li>
 </ul>
-<h2 id="breaking-down-a-duty-string">Breaking down a duty string</h2>
-<p><a href="https://user-images.githubusercontent.com/61055197/93507767-124f3900-f916-11ea-994c-21ebb8b2a923.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93507767-124f3900-f916-11ea-994c-21ebb8b2a923.png" alt="image" /></a></p>
-<h2 id="duty-expressions">Duty expressions</h2>
-<p>Duty expressions indicate to the border system how the values that are attributed to the other columns in the measure component table should be treated.</p>
-<p>Duty expressions cannot be changed, appended or deleted.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93519105-b391bb80-f925-11ea-8ce6-31761d89017c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519105-b391bb80-f925-11ea-8ce6-31761d89017c.png" alt="image" /></a></p>
-<h2 id="duty-expression-sequencing-and-duality">Duty expression sequencing and duality</h2>
-<p><a href="https://user-images.githubusercontent.com/61055197/93519438-2c911300-f926-11ea-94d3-e60cb9a3c569.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519438-2c911300-f926-11ea-94d3-e60cb9a3c569.png" alt="image" /></a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93519449-3155c700-f926-11ea-9ff6-926aa8f00b63.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519449-3155c700-f926-11ea-9ff6-926aa8f00b63.png" alt="image" /></a></p>
-<h2 id="how-to-group-duty-expressions">How to group duty expressions</h2>
-<p>You cannot choose which of the grouped duty expressions to select. You must use 01 on all occasions for an ad valorem duty or specific duties unless there is a compound duty. If there&rsquo;s a compound duty, use 01 followed by 04.</p>
-<p>For standard duty expressions (excluding <a href="https://uktrade.github.io/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#meursing-code">Meursing</a> and <a href="https://uktrade.github.io/tariff-data-manual/documentation/trade-policies/supplementary-units.html#supplementary-units">supplementary units</a>) there&rsquo;s a specific duty for a set monetary unit. If there is no value, then it is an ad valorem duty. This is why the duty expression description is &lsquo;% or amount&rsquo;.</p>
-<p>For a specified monetary unit, there must be a measurement unit. For a specified measurement unit, you can also apply a qualifier which is used to specify measurement units such as &lsquo;kg net weight&rsquo; or &lsquo;kg gross weight&rsquo;.</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Requirement</th>
-<th>Use duty expression …</th>
-</tr><tr>
-<td>To   add an ad valorem duty or specific duties …</td>
-<td>01,   04, 19 and 20</td>
-</tr><tr>
-<td>To   add an ad valorem duty or specific duties after a MAX clause</td>
-<td>17   and 35</td>
-</tr><tr>
-<td>To   add an ad valorem duty or specific duties after a MIN clause</td>
-<td>15</td>
-</tr><tr>
-<td>To   add a Meursing placeholder …</td>
-<td>12,   14, 21, 25, 27 and 29</td>
-</tr><tr>
-<td>To   add a supplementary unit</td>
-<td>99</td>
-</tr>
-        </table>
-      </div><h2 id="measurement-units-and-abbreviations">Measurement units and abbreviations</h2>
-<p>Duty rates can vary based on the weight or other measurement of a commodity. For example, a duty rate of 33 GBP per 100kg.</p>
-<p>In the Tariff Management Tool (TaMaTo), you should use the following abbreviations to add measurement units:</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Code</th>
-<th>Unit</th>
-<th>Abbreviation</th>
-</tr><tr>
-<td>GRT</td>
-<td>Gross tonnage</td>
-<td></td>
-</tr><tr>
-<td>TJO</td>
-<td>Terajoule (gross calorific value)</td>
-<td>TJ</td>
-</tr><tr>
-<td>NAR</td>
-<td>Number of items</td>
-<td>p/st</td>
-</tr><tr>
-<td>MWH</td>
-<td>1000 kilowatt hours</td>
-<td>1,000 kWh</td>
-</tr><tr>
-<td>MIL</td>
-<td>1000 items</td>
-<td>1,000 p/st</td>
-</tr><tr>
-<td>KAC</td>
-<td>Kilogram net of acesulfame potassium</td>
-<td></td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>kg</td>
-</tr><tr>
-<td>MTR</td>
-<td>Metre</td>
-<td>m</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>1,000 kg</td>
-</tr><tr>
-<td>KNI</td>
-<td>Kilogram of nitrogen</td>
-<td>kg N</td>
-</tr><tr>
-<td>GFI</td>
-<td>Gram of fissile isotopes</td>
-<td>gi F/S</td>
-</tr><tr>
-<td>KMA</td>
-<td>Kilogram of methylamines</td>
-<td>kg met.am.</td>
-</tr><tr>
-<td>LPA</td>
-<td>Litre pure (100%) alcohol</td>
-<td>l alc. 100%</td>
-</tr><tr>
-<td>MTK</td>
-<td>Square metre</td>
-<td>m2</td>
-</tr><tr>
-<td>HLT</td>
-<td>Hectolitre</td>
-<td>hl</td>
-</tr><tr>
-<td>KUR</td>
-<td>Kilogram of uranium</td>
-<td>kg U</td>
-</tr><tr>
-<td>MPR</td>
-<td>1000 pairs (used for statistical surveillance)</td>
-<td></td>
-</tr><tr>
-<td>NCL</td>
-<td>Number of cells</td>
-<td>ce/el</td>
-</tr><tr>
-<td>KLT</td>
-<td>1000 litres</td>
-<td>1,000 l</td>
-</tr><tr>
-<td>NPR</td>
-<td>Number of pairs</td>
-<td>pa</td>
-</tr><tr>
-<td>KPO</td>
-<td>Kilogram of potassium oxide</td>
-<td>kg K2O</td>
-</tr><tr>
-<td>WAT</td>
-<td>Number of Watt</td>
-<td></td>
-</tr><tr>
-<td>KMT</td>
-<td>Kilometre</td>
-<td></td>
-</tr><tr>
-<td>EUR</td>
-<td>Euro (used for statistical surveillance)</td>
-<td></td>
-</tr><tr>
-<td>DAP</td>
-<td>Decatonne, corrected according to polarisation</td>
-<td>10,000 kg/polar</td>
-</tr><tr>
-<td>KCC</td>
-<td>Kilogram of choline chloride</td>
-<td></td>
-</tr><tr>
-<td>KPH</td>
-<td>Kilogram of potassium hydroxide (caustic potash)</td>
-<td>kg KOH</td>
-</tr><tr>
-<td>KSD</td>
-<td>Kilogram of substance 90Â % dry</td>
-<td>kg 90 % sdt</td>
-</tr><tr>
-<td>HMT</td>
-<td>Hectometre</td>
-<td>100 m</td>
-</tr><tr>
-<td>DHS</td>
-<td>Kilogram of dihydrostreptomycin</td>
-<td></td>
-</tr><tr>
-<td>CEN</td>
-<td>Hundred items</td>
-<td>100 p/st</td>
-</tr><tr>
-<td>KCL</td>
-<td>Tonne of potassium chloride</td>
-<td></td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>100 kg</td>
-</tr><tr>
-<td>GRM</td>
-<td>Gram</td>
-<td>g</td>
-</tr><tr>
-<td>CTM</td>
-<td>Carats (one metric carat = 2 x 10$-<sup>4</sup>kg)</td>
-<td>c/k</td>
-</tr><tr>
-<td>CCT</td>
-<td>Carrying capacity in metric tonnes</td>
-<td>ct/l</td>
-</tr><tr>
-<td>KPP</td>
-<td>Kilogram of diphosphorus pentaoxide</td>
-<td>kg P2O5</td>
-</tr><tr>
-<td>MTQ</td>
-<td>Cubic meter</td>
-<td>m3</td>
-</tr><tr>
-<td>ASV</td>
-<td>%vol</td>
-<td>% vol</td>
-</tr><tr>
-<td>KNS</td>
-<td>Kilogram of hydrogen peroxide</td>
-<td>kg H2O2</td>
-</tr><tr>
-<td>KSH</td>
-<td>Kilogram of sodium hydroxide (caustic soda)</td>
-<td>kg NaOH</td>
-</tr><tr>
-<td>LTR</td>
-<td>Litre</td>
-<td>l</td>
-</tr><tr>
-<td>MGM</td>
-<td>Milligram</td>
-<td></td>
-</tr><tr>
-<td>MCG</td>
-<td>Microgram</td>
-<td></td>
-</tr><tr>
-<td>MLT</td>
-<td>Millilitre</td>
-<td></td>
-</tr><tr>
-<td>MCL</td>
-<td>Microlitre</td>
-<td></td>
-</tr>
-        </table>
-      </div><h2 id="measurement-unit-qualifiers">Measurement unit qualifiers</h2>
-<p>Measurement unit qualifiers can only be applied to some measurement units.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93520800-f56f3180-f926-11ea-9788-82ad0ec18110.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93520800-f56f3180-f926-11ea-9788-82ad0ec18110.png" alt="image" /></a></p>
-<p>The measurement units that are commonly used are Number of Articles (NAR), which are also referred to as:</p>
+<h2 id="end-user-effect-of-the-formal-specification">End-user effect of the formal specification</h2>
+<h3 id="29-do-the-products-that-implement-it-have-a-significant-market-share-of-adoption">29: Do the products that implement it have a significant market share of adoption?</h3>
+<p>✅ <strong>Yes</strong>. Within the UK and EU tariff and border control process, the vast
+majority of systems correctly implement the standard.</p>
+<h3 id="30-do-the-products-that-implement-it-target-a-broad-spectrum-of-end-uses">30:. Do the products that implement it target a broad spectrum of end-uses?</h3>
+<p>✅ <strong>Yes</strong>. For the products mentioned in question 28:</p>
 
 <ul>
-<li>&lsquo;p/s&rsquo; for items in French or German, or</li>
-<li>&lsquo;heads&rsquo; in reference to livestock</li>
+<li>The Tariff Management Tool targets data managers and policy experts</li>
+<li>Customs Declaration System (CDS) targets traders lodging customs declarations
+and larger traders with dedicated data functions</li>
+<li>IPAFFS targets traders importing or exporting plant or animal products</li>
+<li>The Online Tariff Service targets smaller, independent traders without systems
+integrations or access to data feeds</li>
 </ul>
-<p>The following table identifies the measurement unit qualifiers that can be used. Those highlighted in yellow are those that have been used since Jan 2021.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93520975-3d8e5400-f927-11ea-9619-752b32412f5e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93520975-3d8e5400-f927-11ea-9619-752b32412f5e.png" alt="image" /></a></p>
-<p>The following table is used to identify which qualifiers can be used alongside which measurement codes. It’s vital that the Tariff Application Platform does not allow any combination of unit and qualifier not specified in the measurements table.</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Measurement unit</th>
-<th>Description</th>
-<th>Measurement unit qualifier</th>
-<th>Description</th>
-</tr><tr>
-<td>ASV</td>
-<td>%vol</td>
-<td>X</td>
-<td>Hectolitre</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>E</td>
-<td>net of drained weight</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>F</td>
-<td>of common wheat</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>G</td>
-<td>Gross</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>L</td>
-<td>of live weight</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>M</td>
-<td>net of dry matter</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>R</td>
-<td>of the standard quality</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>S</td>
-<td>of sugar with a yield in white sugar of 92%</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>Z</td>
-<td>per 1% by weight of sucrose</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>A</td>
-<td>Total alcohol</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>E</td>
-<td>net of drained weight</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>G</td>
-<td>Gross</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>P</td>
-<td>of lactic matter</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>S</td>
-<td>of sugar with a yield in white sugar of 92%</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>T</td>
-<td>of dry lactic matter</td>
-</tr><tr>
-<td>LTR</td>
-<td>Litre</td>
-<td>A</td>
-<td>Total alcohol</td>
-</tr><tr>
-<td>MTQ</td>
-<td>Cubic meter</td>
-<td>C</td>
-<td>1 000</td>
-</tr><tr>
-<td>NAR</td>
-<td>Number of items</td>
-<td>B</td>
-<td>per flask</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>E</td>
-<td>net of drained weight</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>I</td>
-<td>of biodiesel content</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>J</td>
-<td>of fuel content (usually in form of tallow, stearin, paraffin wax or   other waxes, including the wick)</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>K</td>
-<td>of bioethanol content</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>M</td>
-<td>net of dry matter</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>R</td>
-<td>of the standard quality</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>Z</td>
-<td>per 1% by weight of sucrose</td>
-</tr>
-        </table>
-      </div><h3 id="managing-duties">Managing duties</h3>
-<p>When a trader declares goods for import, they usually have to declare the weight of their goods in kilograms (KGM), but goods may also be measured in:</p>
-
-<ul>
-<li>number of items for livestock</li>
-<li>volume in litres for liquid items</li>
-<li>number of pairs for socks</li>
-</ul>
-<p>The trader is asked to complete Box 41 on the single administrative document (SAD) form. The trader must enter the numeric value and the supplementary unit, for example 247 items (NAR) or 15,000 litres of pure alcohol (LPA).</p>
-<h2 id="measure-component-data-structures">Measure component data structures</h2>
-<p><a href="https://user-images.githubusercontent.com/61055197/93506190-d4511580-f913-11ea-878a-924132f86482.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93506190-d4511580-f913-11ea-878a-924132f86482.png" alt="image" /></a></p>
-<h3 id="measure-condition-components">Measure condition components</h3>
-<p><a href="https://user-images.githubusercontent.com/61055197/93506182-cf8c6180-f913-11ea-8a06-49b983015b3d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93506182-cf8c6180-f913-11ea-8a06-49b983015b3d.png" alt="image" /></a></p>
-<p>Measure conditions may be attached to conditions instead of to measures themselves. Measure condition components differ from measure components only in that they are attached to the condition and not the measure itself.</p>
-<p>Measure condition components and measure components must not be applied together.</p>
-<h2 id="business-rules">Business rules</h2>
-<p>Read the business rules for measure components in the <a href="https://uktrade.github.io/tamato/html/business_rules/measures.html">system documentation</a>.</p>
+<h3 id="31-does-it-have-strong-support-from-different-interest-groups">31: Does it have strong support from different interest groups?</h3>
+<p>✅ <strong>Yes</strong>. All of the above groups mentioned in question 30 are taking part in
+the evolution of the data standard.</p>
+<h3 id="32-is-there-evidence-that-the-adoption-of-it-supports-improving-efficiency-and-effectiveness-of-organisational-process">32: Is there evidence that the adoption of it supports improving efficiency and effectiveness of organisational process?</h3>
+<p>✅ <strong>Yes</strong>, anecdotally. The UK&rsquo;s legacy customs system CHIEF previously required
+a large data entry team to manually update European Union and UK trade policy.
+Since the retirement of CHIEF and the switchover to CDS, this team has largely
+been redeployed on higher value functions such as policy support and quality
+assurance.</p>
+<h3 id="33-is-there-evidence-that-the-adoption-of-it-makes-it-easier-to-migrate-between-different-solutions-from-different-providers">33: Is there evidence that the adoption of it makes it easier to migrate between different solutions from different providers?</h3>
+<p>✅ <strong>Yes</strong>. DBT&rsquo;s Tariff Management Tool was created to provide a UK equivalent
+for a data authoring system used by the EU to manage its own tariff. The
+standard allowed this new iteration to successfully send compatible data to HMRC
+with almost zero contact between the new implementation team and the supplier of
+the EU system.</p>
+<h3 id="34-is-there-evidence-that-the-adoption-of-it-positively-impacts-the-environment">34: Is there evidence that the adoption of it positively impacts the environment?</h3>
+<p>⚪️ <strong>Not applicable</strong>. Beyond the self-evident reduction in carbon through more
+streamlined communication, there is little impact that is possible for a
+standard of this kind in this domain.</p>
+<h3 id="35-is-there-evidence-that-the-adoption-of-it-positively-impacts-financial-costs">35: Is there evidence that the adoption of it positively impacts financial costs?</h3>
+<p>✅ <strong>Yes</strong>, anecdotally, as discussed in question 32.</p>
+<h3 id="36-is-there-evidence-that-the-adoption-of-it-positively-impacts-security">36: Is there evidence that the adoption of it positively impacts security?</h3>
+<p>✅ <strong>Yes</strong>. The data model includes a number of security protections such as an
+audit log that makes visible all data changes. This mechanism significantly
+increases the likelihood of malicious actors being caught and any malicious
+changes being removed.</p>
+<h3 id="37-is-there-evidence-that-the-adoption-of-it-can-be-implemented-alongside-enterprise-security-technologies">37: Is there evidence that the adoption of it can be implemented alongside enterprise security technologies?</h3>
+<p>✅ <strong>Yes</strong>. The implementing systems discussed in 5 make use of enterprise
+security technologies as part of their cloud deployments.</p>
+<h3 id="38-is-there-evidence-that-the-adoption-of-it-positively-impacts-privacy">38: Is there evidence that the adoption of it positively impacts privacy?</h3>
+<p>⚪️ <strong>Not applicable</strong>. There is no personal data included in the data governed
+by the standard.</p>
+<h3 id="39-is-it-largely-compatible-with-related-not-alternative-formal-specifications-in-the-same-area-of-application">39: Is it largely compatible with related (not alternative) formal specifications in the same area of application?</h3>
+<p>✅ <strong>Yes</strong>. This data standard remains compatible with the EU standard from which
+it is derived. Both standards include a number of external sources such as ISO
+standards for measurement units and nationally recognised lists of countries.</p>
+<h3 id="40-is-there-evidence-that-the-adoption-of-it-positively-impacts-accessibility-and-inclusion">40: Is there evidence that the adoption of it positively impacts accessibility and inclusion?</h3>
+<p>✅ <strong>Yes</strong>, anecdotally. The canonical source for data encoded in this standard
+is tariff legislation encoded as PDF. Using this standard to provide a more
+granular and structured representation should contribute positively to
+accessibility because services like the Online Tariff Service can provided more
+accessible views of the data.</p>
+<h2 id="maintenance-of-the-formal-specification">Maintenance of the formal specification</h2>
+<h3 id="41-does-it-have-a-defined-maintenance-organisation">41: Does it have a defined maintenance organisation?</h3>
+<p>✅ <strong>Yes</strong>. The Secretariat is provided by the Department for Business and Trade
+and is responsible for maintenance of the standard.</p>
+<h3 id="42-does-the-maintenance-organisation-provide-sufficient-finance-and-resource-to-control-short-to-medium-term-threats">42: Does the maintenance organisation provide sufficient finance and resource to control short-to-medium-term threats?</h3>
+<p>✅ <strong>Yes</strong>. Tariff management remains a business function with budgetary approval
+for DBT with no plans for this to change.</p>
+<h3 id="43-does-the-maintenance-organisation-have-a-public-statement-on-intention-to-transfer-responsibility-for-maintenance-of-it-if-the-organisation-were-no-longer-able-to-continue">43: Does the maintenance organisation have a public statement on intention to transfer responsibility for maintenance of it, if the organisation were no longer able to continue?</h3>
+<p>❌ <strong>No</strong>. DBT does not foresee a transfer of responsibility.</p>
+<h3 id="44-does-it-have-a-defined-maintenance-and-support-process">44: Does it have a defined maintenance and support process?</h3>
+<p>✅ <strong>Yes</strong>. DBT maintains the open discussion forum and email inbox to provide
+support for standards users. There are already examples of this support being
+provided.</p>
+<h3 id="45-does-it-have-a-defined-policy-for-version-management">45: Does it have a defined policy for version management?</h3>
+<p>✅ <strong>Yes</strong>. A standards changelog is maintained as part of the documentation
+repository.</p>
+<h2 id="related-european-standards">Related European standards</h2>
+<h3 id="46-is-this-an-existing-european-standard-or-an-identified-technical-specification-in-europe-note-cen-cenelec-or-etsi-are-the-european-standards-bodies-technical-specifications-provided-by-organisations-other-than-cen-cenelec-or-etsi-can-be-under-consideration-to-become-a-european-standard-or-an-identified-technical-specification-in-europe">46: Is this an existing European standard or an identified technical specification in Europe? (Note: CEN, CENELEC or ETSI are the European standards bodies. Technical specifications provided by organisations other than CEN, CENELEC or ETSI can be under consideration to become a European standard or an identified technical specification in Europe.)</h3>
+<p>❌ <strong>No</strong>. Whilst this standard is based on an EU standard (TARIC) it is not
+standardised at any of the above bodies.</p>
+<h3 id="47-does-this-specification-or-standard-cover-an-area-different-from-those-already-identified-or-currently-under-consideration-as-an-identified-european-standard-or-specification">47: Does this specification or standard cover an area different from those already identified or currently under consideration as an identified European standard or specification?</h3>
+<p>✅ <strong>Yes</strong>. Whilst this standard is based on an EU standard (TARIC), the UK&rsquo;s use
+of the standard has diverged from the EU. Whilst there remains compatibility on
+a technical level (such that any system that can consume EU data can also
+consume UK data), there are some important semantic differences. Further, this
+standard is now governed by a UK group who will assess the relevance of upstream
+EU standards changes.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Measure-components">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Measure+components%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fdata-structures%2Fmeasure-components.html%29&amp;labels=bug&amp;title=Re%3A+%27Measure+components%27">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/About-the-standard;-Open-standard-assessment">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Open+standard+assessment%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fabout-the-standard%2Fopen-standard-assessment.html%29&amp;labels=bug&amp;title=Re%3A+%27Open+standard+assessment%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
