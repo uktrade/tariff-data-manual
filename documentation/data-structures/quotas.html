@@ -1164,7 +1164,147 @@
 <p>Eight additional tables are linked to the definition tables (see the figure below). The two period tables (highlighted in red in the figure) are useful – these are discussed in the relevant documents (blocking and suspending quotas).</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" alt="image" /></a></p>
 <h2 id="business-rules">Business rules</h2>
-<p>Read the business rules for quotas in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code</th>
+<th>Description</th>
+</tr><tr>
+<td>BlockingOnlyOfFCFSQuotas</td>
+<td>Blocking periods are only applicable to FCFS quotas.</td>
+</tr><tr>
+<td>CertificateValidityPeriodMustSpanQuotaOrderNumber</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule requiring that the validity period of the required certificates must span that of the quota order number.</td>
+</tr><tr>
+<td>CertificatesMustExist</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule that referenced certificates must exist.</td>
+</tr><tr>
+<td>ON1</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for fields <code>quotaordernumberid</code> and <code>startdate</code>.</td>
+</tr><tr>
+<td>ON10</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for when quota order numbers are referenced in a measure, their validity period must contain that of the measure.</td>
+</tr><tr>
+<td>ON11</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for quota order numbers that are used in measures.</td>
+</tr><tr>
+<td>ON12</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for quota order number origins that are used in measures.</td>
+</tr><tr>
+<td>ON13</td>
+<td>An exclusion can only be entered if the order number origin is a geographical area group (area code = 1).</td>
+</tr><tr>
+<td>ON14</td>
+<td>The excluded geographical area must be a member of the geographical area group.</td>
+</tr><tr>
+<td>ON2</td>
+<td>There may be no overlap in time of two quota order numbers with the same quota order number id.</td>
+</tr><tr>
+<td>ON4</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule that referenced geographical areas must exist.</td>
+</tr><tr>
+<td>ON5</td>
+<td>There may be no overlap in time of two quota order number origins with the same quota order number SID and geographical area id.</td>
+</tr><tr>
+<td>ON6</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for geographical areas referenced by quota order number origins, that the validity period of the former must span the validity period of the latter.</td>
+</tr><tr>
+<td>ON7</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for quota order numbers referenced by quota order number origins, that the validity period of the former must span the validity period of the latter.</td>
+</tr><tr>
+<td>ON8</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule that the validity period of the quota order number must span the validity period of the referencing quota definition.</td>
+</tr><tr>
+<td>ON9</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for when a quota order number is referenced in a measue, the validity period of the former must span the validity period of the latter.</td>
+</tr><tr>
+<td>OverlappingQuotaDefinition</td>
+<td>There may be no overlap in time of two quota definitions with the same quota order number id.</td>
+</tr><tr>
+<td>PreventDeletingLinkedQuotaDefinitions</td>
+<td>A deleted Quota Definition must not be referred to by a non-deleted relation.</td>
+</tr><tr>
+<td>PreventQuotaDefinitionDeletion</td>
+<td>A Quota Definition cannot be deleted once the start date is in the past. The Quota Definition may be end-dated instead.</td>
+</tr><tr>
+<td>QA1</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for the association between two quota definitions.</td>
+</tr><tr>
+<td>QA2</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for sub-quota validity periods, they must be contained by the validity period of the main quota.</td>
+</tr><tr>
+<td>QA3</td>
+<td>When converted to the measurement unit of the main quota, the volume of a sub-quota must always be lower than or equal to the volume of the main quota.</td>
+</tr><tr>
+<td>QA4</td>
+<td>Whenever a sub-quota receives a coefficient, this has to be a strictly positive decimal number. When it is not specified a value 1 is always assumed.</td>
+</tr><tr>
+<td>QA5</td>
+<td>Whenever a sub-quota is defined with the ‘equivalent’ type, it must have the same volume as the ones associated with the parent quota. Moreover it must be defined with a coefficient not equal to 1. A sub-quota defined with the ‘normal’ type must have a coefficient of 1.</td>
+</tr><tr>
+<td>QA6</td>
+<td>Sub-quotas associated with the same main quota must have the same relation type.</td>
+</tr><tr>
+<td>QBP2</td>
+<td>The start date of the quota blocking period must be later than or equal to the start date of the quota validity period.</td>
+</tr><tr>
+<td>QD1</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for quota order number id and start date.</td>
+</tr><tr>
+<td>QD10</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule that the validity period measurement unit code must span the validity period of the quota definition.</td>
+</tr><tr>
+<td>QD11</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule that the validity period measurement unit qualifier code must span the validity period of the quota definition.</td>
+</tr><tr>
+<td>QD7</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule that the validity period of the quota definition must be spanned by one of the validity periods of the referenced quota order number.</td>
+</tr><tr>
+<td>QD8</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule that the validity period of the monetary unit code must span the validity period of the quota definition.</td>
+</tr><tr>
+<td>QSP2</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule that validity period of the quota must span the quota suspension period.</td>
+</tr><tr>
+<td>QuotaAssociationMustReferToANonDeletedSubQuota</td>
+<td>A Quota Association must refer to a non-deleted sub quota.</td>
+</tr><tr>
+<td>QuotaBlockingPeriodMustReferToANonDeletedQuotaDefinition</td>
+<td>A Quota Blocking Period must refer to a non-deleted Quota Definition.</td>
+</tr><tr>
+<td>QuotaSuspensionMustReferToANonDeletedQuotaDefinition</td>
+<td>A Quota Suspension must refer to a non-deleted Quota Definition.</td>
+</tr><tr>
+<td>SameMainAndSubQuota</td>
+<td>A quota association may only exist between two distinct quota definitions.</td>
+</tr><tr>
+<td>SuspensionsOnlyToFCFSQuotas</td>
+<td>Quota suspensions are only applicable to First Come First Served quotas.</td>
+</tr><tr>
+<td>VolumeAndInitialVolumeMustMatch</td>
+<td>Unless it is the main quota in a quota association, a definition’s volume and initial_volume values should always be the same. The exception is when we are updating quotas in the current period, these can have differing volume and initial volume.</td>
+</tr>
+        </table>
+      </div><p>Read the business rules for quotas in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
 
             
           </main>
