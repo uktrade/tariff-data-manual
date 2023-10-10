@@ -18,8 +18,8 @@ def dbml_to_dot code
     edge [arrowsize=0.75]
     node [shape=none, fontsize=9]
 
-    #{project.tables.map do |table|
-      %{"#{table.name}" [id=#{unique_id :table} label=<<TABLE ALIGN="LEFT" CELLSPACING="0" CELLPADDING="2" CELLBORDER="1">
+    #{project.tables.each_with_index.map do |table, index|
+      %{"#{table.name}" [id=#{unique_id :table} class=index#{index} label=<<TABLE ALIGN="LEFT" CELLSPACING="0" CELLPADDING="2" CELLBORDER="1">
         <TR>
           <TD COLSPAN="3">#{table.name}</TD>
         </TR>
@@ -42,6 +42,15 @@ def dbml_to_dot code
     #{project.relationships.map do |relationship| %{
       "#{relationship.left_table}":"#{relationship.left_fields.first}_attribs":e -> "#{relationship.right_table}":"#{relationship.right_fields.first}_name":w
     } end.join("\n")}
+
+    #{project.table_groups.map do |table_group|
+      %{subgraph #{unique_id :cluster} {
+        label = "#{table_group.name}"
+        labeljust = "l"
+        lheight = 0.5
+        #{table_group.tables.map {|table| "\"#{table}\""}.join("\n")}
+      }}
+    end.join("\n")}
   }}
 end
 

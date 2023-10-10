@@ -35,9 +35,15 @@ svg {
         stroke: none;
       }
 
-      &:first-of-type polygon:first-of-type {
-        fill: #7ea6e0;
+      &:first-of-type, &.index0 {
+        polygon:first-of-type {
+          fill: #7ea6e0;
+        }
       }
+    }
+
+    .cluster > text {
+      font-size: 0.6em;
     }
 
     .node[id^='note'] {
