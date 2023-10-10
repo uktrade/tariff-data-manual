@@ -22,8 +22,11 @@ svg [id^='database'] .node[id^='table'] polygon:first-of-type {
 svg [id^='database'] .node[id^='table'] :last-of-type {
   stroke: none; }
 
-svg [id^='database'] .node[id^='table']:first-of-type polygon:first-of-type {
+svg [id^='database'] .node[id^='table']:first-of-type polygon:first-of-type, svg [id^='database'] .node.index0[id^='table'] polygon:first-of-type {
   fill: #7ea6e0; }
+
+svg [id^='database'] .cluster > text {
+  font-size: 0.6em; }
 
 svg [id^='database'] .node[id^='note'] polygon {
   fill: #e0d37d; }
