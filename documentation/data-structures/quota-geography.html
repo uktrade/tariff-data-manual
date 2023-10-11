@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Retaliatory measures - Tariff Data Manual</title>
+    <title>Quota geography - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-geography.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Retaliatory measures - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html" />
+      <meta name="twitter:title" content="Quota geography - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-geography.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Retaliatory measures" />
+      <meta property="og:title" content="Quota geography" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/trade-policies/retaliatory-measures.html" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/quota-geography.html" />
 
     
   </head>
@@ -564,7 +564,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas-how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#assigning-quotas-to-geographical-areas"><span>Assigning quotas to geographical areas</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas-assigning-quotas-to-geographical-areas"><span>Assigning quotas to geographical areas</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quotas-business-rules"><span>Business rules</span></a>
@@ -650,13 +650,13 @@
     <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html"><span>Assigning quotas to geographical areas</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#assigning-quotas-to-geographical-areas-2-managing-geography"><span>Managing geography</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#managing-geography"><span>Managing geography</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#assigning-quotas-to-geographical-areas-2-strategies-for-managing-origins-and-exclusions"><span>Strategies for managing origins and exclusions</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#strategies-for-managing-origins-and-exclusions"><span>Strategies for managing origins and exclusions</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#assigning-quotas-to-geographical-areas-2-quota-exception-periods-and-events"><span>Quota exception periods and events</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#quota-exception-periods-and-events"><span>Quota exception periods and events</span></a>
       </li>
     </ul>
   </li>
@@ -826,32 +826,112 @@
 
         <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="retaliatory-measures">Retaliatory measures</h1>
-<p>A retaliatory measure is when:</p>
-
-<blockquote>
-<p>Country A charges a tax on imports from Country B, so Country B responds by charging a tax on Country A&rsquo;s imports.</p>
-</blockquote>
-<p>For example, the EU and US have been involved in trade conflicts relating to steel, aluminium and aerospace tariffs for several years.</p>
-<p>In March 2018 the US imposed a tariff increase on EU imports of certain steel and aluminium products. The 25% tariff increase came into effect in June 2018 with an unlimited duration.</p>
-<p>The EU responded by imposing a retaliatory measure of type 695. Duties have been applied to certain products that are considered important to the US economy, such as:</p>
+            <h1 id="assigning-quotas-to-geographical-areas">Assigning quotas to geographical areas</h1>
 
 <ul>
-<li>maize</li>
-<li>fabricated machine parts</li>
-<li>motorcycles</li>
-<li>US whiskey</li>
+<li>
+<a href="#managing-geography">Managing geography</a>
+<ul>
+<li>
+<a href="#quota-order-number-origins-and-exclusions-table">Quota order number origins and exclusions table</a>
+</li>
 </ul>
-<p>In the Tariff, these are shown as ‘retaliatory measures’.</p>
-<p>In December 2020, the UK Government announced it was launching an independent approach to the conflicts. Read more detail in the <a href="https://www.gov.uk/government/news/uk-announces-new-approach-on-us-tariffs">press release on GOV.UK</a>.</p>
+<p></li>
+<li>
+<a href="#strategies-for-managing-origins-and-exclusions">Strategies for managing origins and exclusions</a>
+</li>
+<li>
+<a href="#quota-exception-periods-and-events">Quota exception periods and events</a>
+</li>
+</ul></p>
+<p>A quota can be assigned either to an individual country or to a group of countries.</p>
+<p>It is also common to exclude countries from a country group.</p>
+<p>Read more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas">about geographical areas</a>.</p>
+<h2 id="managing-geography">Managing geography</h2>
+<p>A first come, first serve quota only works when the full set of quota tables and measure tables are all set up and synchronised. It is important to understand a few points around the geography of these 2 entities in order to create the right data.</p>
+<p>Geography has to be set correctly against both the measure and the quota order number.</p>
+<p>While the measures table has a 1-2-1 relationship with geographical areas, the quota order number table can relate to multiple origins via the many-to-many linking table ‘quota order number origins’.</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" alt="image" /></a></p>
+<h3 id="quota-order-number-origins-and-exclusions-table">Quota order number origins and exclusions table</h3>
+<p>Any entries made in these two quota origin-related tables must also be matched by entries in the measures and measure_excluded_geographical_areas tables.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>
+<br>Field</th>
+<th>
+<br>Notes</th>
+</tr><tr>
+<td>
+<br>quota_order_number_origin_sid</td>
+<td>
+<br>•A unique sequential numeric   (internal) identifier for the quota origin.<br>   <br>•There may be more than one origin   assigned to a quota order number ID</td>
+</tr><tr>
+<td>
+<br>quota_order_number_sid</td>
+<td>
+<br>•Foreign key to the SID of the   order number to which the origin links</td>
+</tr><tr>
+<td>
+<br>geographical_area_id</td>
+<td>
+<br>•ID (e.g. NO for Norway) to which   the origin applies</td>
+</tr><tr>
+<td>
+<br>validity_start_date</td>
+<td>
+<br>•Date from which the origin   applies to the quota order number</td>
+</tr><tr>
+<td>
+<br>validity_end_date</td>
+<td>
+<br>•Date to which the origin applies   to the quota order number</td>
+</tr><tr>
+<td>
+<br>geographical_area_sid</td>
+<td>
+<br>•Foreign key to the SID of the   geographical area to which the origin links</td>
+</tr>
+        </table>
+      </div><div class="table-container">
+        <table>
+          <tr>
+<th>
+<br>Field</th>
+<th>
+<br>Notes</th>
+</tr><tr>
+<td>
+<br>quota_order_number_origin_sid</td>
+<td>
+<br>•Foreign key to the SID of the   origin from which the country is to be excluded</td>
+</tr><tr>
+<td>
+<br>excluded_geographical_area_sid</td>
+<td>
+<br>•Foreign key to the SID of the   excluded geographical area</td>
+</tr>
+        </table>
+      </div><h2 id="strategies-for-managing-origins-and-exclusions">Strategies for managing origins and exclusions</h2>
+<p>Quota order number origins have start dates and end dates.</p>
+<p>Quota order number origin exclusions do not have start dates and end dates.</p>
+<p>If you want to alter the quota order number origin exclusions for a quota, and you do not want it to happen immediately, you cannot just add the exclusion to the origin: it will take effect immediately, which is almost certainly not the requirement. In this case, there are 2 options:</p>
+
+<ul>
+<li>either end the origin and start another origin</li>
+<li>or end the quota order number and start another quota order number with a new origin</li>
+</ul>
+<h2 id="quota-exception-periods-and-events">Quota exception periods and events</h2>
+<p>Eight additional tables are linked to the definition tables (see the figure below). The two period tables (highlighted in red in the figure) are useful – these are discussed in the relevant documents (blocking and suspending quotas).</p>
+<p><a href="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" alt="image" /></a></p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Trade-policies;-Retaliatory-measures">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Retaliatory+measures%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Ftrade-policies%2Fretaliatory-measures.html%29&amp;labels=bug&amp;title=Re%3A+%27Retaliatory+measures%27">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Quota-geography">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Quota+geography%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fdata-structures%2Fquota-geography.html%29&amp;labels=bug&amp;title=Re%3A+%27Quota+geography%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
