@@ -965,8 +965,173 @@
 <p>During the introductory period, only a proportion of the total quota balance is available to traders.</p>
 <h2 id="how-the-data-is-structured">How the data is structured</h2>
 <p>There are more data objects for first come, first serve quotas than for licensed quotas.</p>
-<p>Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" alt="image" /></a></p>
+<p>Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances. Note that wile quotas themselves are managed by DBT, quota balances are managed and updated by HMRC.</p>
+<svg width="459pt" height="382pt"
+ viewBox="0.00 0.00 459.00 382.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_167" class="graph" transform="scale(1 1) rotate(0) translate(4 378)">
+<title>Database</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-378 455,-378 455,4 -4,4"/>
+<!-- Measures -->
+<g id="table_745" class="node index0">
+<title>Measures</title>
+<polygon fill="none" stroke="black" points="38,-353 38,-369 199,-369 199,-353 38,-353"/>
+<text text-anchor="start" x="98" y="-358.8" font-family="Arial" font-size="9.00">Measures</text>
+<polygon fill="none" stroke="black" points="38,-337 38,-353 147,-353 147,-337 38,-337"/>
+<text text-anchor="start" x="65.5" y="-342.8" font-family="Arial" font-size="9.00">Measure SID</text>
+<polygon fill="none" stroke="black" points="147,-337 147,-353 183,-353 183,-337 147,-337"/>
+<text text-anchor="start" x="160" y="-342.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="183,-337 183,-353 199,-353 199,-337 183,-337"/>
+<text text-anchor="start" x="186" y="-342.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="38,-321 38,-337 147,-337 147,-321 38,-321"/>
+<text text-anchor="start" x="45" y="-326.8" font-family="Arial" font-size="9.00">Geographical Area SID</text>
+<polygon fill="none" stroke="black" points="147,-321 147,-337 183,-337 183,-321 147,-321"/>
+<text text-anchor="start" x="160" y="-326.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="183,-321 183,-337 199,-337 199,-321 183,-321"/>
+<text text-anchor="start" x="186" y="-326.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="38,-305 38,-321 147,-321 147,-305 38,-305"/>
+<text text-anchor="start" x="48" y="-310.8" font-family="Arial" font-size="9.00">Geographical Area ID</text>
+<polygon fill="none" stroke="black" points="147,-305 147,-321 183,-321 183,-305 147,-305"/>
+<text text-anchor="start" x="150" y="-310.8" font-family="Arial" font-size="9.00">char(4)</text>
+<polygon fill="none" stroke="black" points="183,-305 183,-321 199,-321 199,-305 183,-305"/>
+<polygon fill="none" stroke="black" points="38,-289 38,-305 147,-305 147,-289 38,-289"/>
+<text text-anchor="start" x="41" y="-294.8" font-family="Arial" font-size="9.00">Quota Order Number SID</text>
+<polygon fill="none" stroke="black" points="147,-289 147,-305 183,-305 183,-289 147,-289"/>
+<text text-anchor="start" x="160" y="-294.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="183,-289 183,-305 199,-305 199,-289 183,-289"/>
+<text text-anchor="start" x="186" y="-294.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="38,-273 38,-289 147,-289 147,-273 38,-273"/>
+<text text-anchor="start" x="89" y="-278.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="147,-273 147,-289 183,-289 183,-273 147,-273"/>
+<text text-anchor="start" x="158.5" y="-278.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="183,-273 183,-289 199,-289 199,-273 183,-273"/>
+<polygon fill="none" stroke="black" points="36.5,-272 36.5,-370 199.5,-370 199.5,-272 36.5,-272"/>
+</g>
+<!-- Quota Order Numbers -->
+<g id="table_50" class="node index1">
+<title>Quota Order Numbers</title>
+<polygon fill="none" stroke="black" points="281.5,-85 281.5,-101 442.5,-101 442.5,-85 281.5,-85"/>
+<text text-anchor="start" x="316.5" y="-90.8" font-family="Arial" font-size="9.00">Quota Order Numbers</text>
+<polygon fill="none" stroke="black" points="281.5,-69 281.5,-85 390.5,-85 390.5,-69 281.5,-69"/>
+<text text-anchor="start" x="284.5" y="-74.8" font-family="Arial" font-size="9.00">Quota Order Number SID</text>
+<polygon fill="none" stroke="black" points="390.5,-69 390.5,-85 426.5,-85 426.5,-69 390.5,-69"/>
+<text text-anchor="start" x="403.5" y="-74.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="426.5,-69 426.5,-85 442.5,-85 442.5,-69 426.5,-69"/>
+<text text-anchor="start" x="429.5" y="-74.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="281.5,-53 281.5,-69 390.5,-69 390.5,-53 281.5,-53"/>
+<text text-anchor="start" x="287.5" y="-58.8" font-family="Arial" font-size="9.00">Quota Order Number ID</text>
+<polygon fill="none" stroke="black" points="390.5,-53 390.5,-69 426.5,-69 426.5,-53 390.5,-53"/>
+<text text-anchor="start" x="393.5" y="-58.8" font-family="Arial" font-size="9.00">char(6)</text>
+<polygon fill="none" stroke="black" points="426.5,-53 426.5,-69 442.5,-69 442.5,-53 426.5,-53"/>
+<polygon fill="none" stroke="black" points="281.5,-37 281.5,-53 390.5,-53 390.5,-37 281.5,-37"/>
+<text text-anchor="start" x="310.5" y="-42.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="390.5,-37 390.5,-53 426.5,-53 426.5,-37 390.5,-37"/>
+<text text-anchor="start" x="399" y="-42.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="426.5,-37 426.5,-53 442.5,-53 442.5,-37 426.5,-37"/>
+<polygon fill="none" stroke="black" points="281.5,-21 281.5,-37 390.5,-37 390.5,-21 281.5,-21"/>
+<text text-anchor="start" x="311.5" y="-26.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="390.5,-21 390.5,-37 426.5,-37 426.5,-21 390.5,-21"/>
+<text text-anchor="start" x="399" y="-26.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="426.5,-21 426.5,-37 442.5,-37 442.5,-21 426.5,-21"/>
+<polygon fill="none" stroke="black" points="280,-20 280,-102 443,-102 443,-20 280,-20"/>
+</g>
+<!-- Measures&#45;&gt;Quota Order Numbers -->
+<g id="database_167_edge1" class="edge">
+<title>Measures:e&#45;&gt;Quota Order Numbers:w</title>
+<path fill="none" stroke="black" d="M200,-297C301.47,-297 182.72,-88.03 273.01,-77.42"/>
+<polygon fill="black" stroke="black" points="273.16,-80.04 280.5,-77 272.87,-74.8 273.16,-80.04"/>
+</g>
+<!-- Quota Definintions -->
+<g id="table_95" class="node index2">
+<title>Quota Definintions</title>
+<polygon fill="none" stroke="black" points="9,-229 9,-245 227,-245 227,-229 9,-229"/>
+<text text-anchor="start" x="80" y="-234.8" font-family="Arial" font-size="9.00">Quota Definintions</text>
+<polygon fill="none" stroke="black" points="9,-213 9,-229 152,-229 152,-213 9,-213"/>
+<text text-anchor="start" x="38.5" y="-218.8" font-family="Arial" font-size="9.00">Quota Definition SID</text>
+<polygon fill="none" stroke="black" points="152,-213 152,-229 211,-229 211,-213 152,-213"/>
+<text text-anchor="start" x="176.5" y="-218.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="211,-213 211,-229 227,-229 227,-213 211,-213"/>
+<text text-anchor="start" x="214" y="-218.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="9,-197 9,-213 152,-213 152,-197 9,-197"/>
+<text text-anchor="start" x="57" y="-202.8" font-family="Arial" font-size="9.00">Description</text>
+<polygon fill="none" stroke="black" points="152,-197 152,-213 211,-213 211,-197 152,-197"/>
+<text text-anchor="start" x="155" y="-202.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="211,-197 211,-213 227,-213 227,-197 211,-197"/>
+<polygon fill="none" stroke="black" points="9,-181 9,-197 152,-197 152,-181 9,-181"/>
+<text text-anchor="start" x="12" y="-186.8" font-family="Arial" font-size="9.00">Measurement Unit Qualifier Code</text>
+<polygon fill="none" stroke="black" points="152,-181 152,-197 211,-197 211,-181 152,-181"/>
+<text text-anchor="start" x="166.5" y="-186.8" font-family="Arial" font-size="9.00">char(1)</text>
+<polygon fill="none" stroke="black" points="211,-181 211,-197 227,-197 227,-181 211,-181"/>
+<polygon fill="none" stroke="black" points="9,-165 9,-181 152,-181 152,-165 9,-165"/>
+<text text-anchor="start" x="39.5" y="-170.8" font-family="Arial" font-size="9.00">Monetary Unit Code</text>
+<polygon fill="none" stroke="black" points="152,-165 152,-181 211,-181 211,-165 152,-165"/>
+<text text-anchor="start" x="166.5" y="-170.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="211,-165 211,-181 227,-181 227,-165 211,-165"/>
+<polygon fill="none" stroke="black" points="9,-149 9,-165 152,-165 152,-149 9,-149"/>
+<text text-anchor="start" x="44" y="-154.8" font-family="Arial" font-size="9.00">Critical Threshold</text>
+<polygon fill="none" stroke="black" points="152,-149 152,-165 211,-165 211,-149 152,-149"/>
+<text text-anchor="start" x="176.5" y="-154.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="211,-149 211,-165 227,-165 227,-149 211,-149"/>
+<polygon fill="none" stroke="black" points="9,-133 9,-149 152,-149 152,-133 9,-133"/>
+<text text-anchor="start" x="54.5" y="-138.8" font-family="Arial" font-size="9.00">Critical State</text>
+<polygon fill="none" stroke="black" points="152,-133 152,-149 211,-149 211,-133 152,-133"/>
+<text text-anchor="start" x="172" y="-138.8" font-family="Arial" font-size="9.00">bool</text>
+<polygon fill="none" stroke="black" points="211,-133 211,-149 227,-149 227,-133 211,-133"/>
+<polygon fill="none" stroke="black" points="9,-117 9,-133 152,-133 152,-117 9,-117"/>
+<text text-anchor="start" x="40" y="-122.8" font-family="Arial" font-size="9.00">Maximum Precision</text>
+<polygon fill="none" stroke="black" points="152,-117 152,-133 211,-133 211,-117 152,-117"/>
+<text text-anchor="start" x="176.5" y="-122.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="211,-117 211,-133 227,-133 227,-117 211,-117"/>
+<polygon fill="none" stroke="black" points="9,-101 9,-117 152,-117 152,-101 9,-101"/>
+<text text-anchor="start" x="30.5" y="-106.8" font-family="Arial" font-size="9.00">Measurement Unit Code</text>
+<polygon fill="none" stroke="black" points="152,-101 152,-117 211,-117 211,-101 152,-101"/>
+<text text-anchor="start" x="166.5" y="-106.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="211,-101 211,-117 227,-117 227,-101 211,-101"/>
+<polygon fill="none" stroke="black" points="9,-85 9,-101 152,-101 152,-85 9,-85"/>
+<text text-anchor="start" x="53" y="-90.8" font-family="Arial" font-size="9.00">Initial Volume</text>
+<polygon fill="none" stroke="black" points="152,-85 152,-101 211,-101 211,-85 152,-85"/>
+<text text-anchor="start" x="165" y="-90.8" font-family="Arial" font-size="9.00">decimal</text>
+<polygon fill="none" stroke="black" points="211,-85 211,-101 227,-101 227,-85 211,-85"/>
+<polygon fill="none" stroke="black" points="9,-69 9,-85 152,-85 152,-69 9,-69"/>
+<text text-anchor="start" x="65" y="-74.8" font-family="Arial" font-size="9.00">Volume</text>
+<polygon fill="none" stroke="black" points="152,-69 152,-85 211,-85 211,-69 152,-69"/>
+<text text-anchor="start" x="165" y="-74.8" font-family="Arial" font-size="9.00">decimal</text>
+<polygon fill="none" stroke="black" points="211,-69 211,-85 227,-85 227,-69 211,-69"/>
+<polygon fill="none" stroke="black" points="9,-53 9,-69 152,-69 152,-53 9,-53"/>
+<text text-anchor="start" x="32" y="-58.8" font-family="Arial" font-size="9.00">Quota Order Number ID</text>
+<polygon fill="none" stroke="black" points="152,-53 152,-69 211,-69 211,-53 152,-53"/>
+<text text-anchor="start" x="166.5" y="-58.8" font-family="Arial" font-size="9.00">char(6)</text>
+<polygon fill="none" stroke="black" points="211,-53 211,-69 227,-69 227,-53 211,-53"/>
+<polygon fill="none" stroke="black" points="9,-37 9,-53 152,-53 152,-37 9,-37"/>
+<text text-anchor="start" x="29" y="-42.8" font-family="Arial" font-size="9.00">Quota Order Number SID</text>
+<polygon fill="none" stroke="black" points="152,-37 152,-53 211,-53 211,-37 152,-37"/>
+<text text-anchor="start" x="176.5" y="-42.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="211,-37 211,-53 227,-53 227,-37 211,-37"/>
+<polygon fill="none" stroke="black" points="9,-21 9,-37 152,-37 152,-21 9,-21"/>
+<text text-anchor="start" x="55" y="-26.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="152,-21 152,-37 211,-37 211,-21 152,-21"/>
+<text text-anchor="start" x="172" y="-26.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="211,-21 211,-37 227,-37 227,-21 211,-21"/>
+<polygon fill="none" stroke="black" points="9,-5 9,-21 152,-21 152,-5 9,-5"/>
+<text text-anchor="start" x="56" y="-10.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="152,-5 152,-21 211,-21 211,-5 152,-5"/>
+<text text-anchor="start" x="172" y="-10.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="211,-5 211,-21 227,-21 227,-5 211,-5"/>
+<polygon fill="none" stroke="black" points="8,-4 8,-246 228,-246 228,-4 8,-4"/>
+</g>
+<!-- Quota Definintions&#45;&gt;Quota Order Numbers -->
+<g id="database_167_edge2" class="edge">
+<title>Quota Definintions:e&#45;&gt;Quota Order Numbers:w</title>
+<path fill="none" stroke="black" d="M228,-45C252.55,-45 253.31,-70.83 273.02,-76.08"/>
+<polygon fill="black" stroke="black" points="272.73,-78.69 280.5,-77 273.38,-73.48 272.73,-78.69"/>
+</g>
+<!-- Quota Definintions&#45;&gt;Quota Order Numbers -->
+<g id="database_167_edge3" class="edge">
+<title>Quota Definintions:e&#45;&gt;Quota Order Numbers:w</title>
+<path fill="none" stroke="black" d="M228,-61C248.6,-61 255.56,-61 272.96,-61"/>
+<polygon fill="black" stroke="black" points="273,-63.63 280.5,-61 273,-58.38 273,-63.63"/>
+</g>
+</g>
+</svg><p><a href="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" alt="image" /></a></p>
 <h3 id="the-quota-order-number-table">The quota order number table</h3>
 <p>The quota order number table’s quota order number ID is linked to the measures table via the measures table’s order number field (one of many examples where common field names do not match in TARIC).</p>
 <div class="table-container">
@@ -1090,7 +1255,7 @@
 <li>the geographical areas from which goods can be imported</li>
 <li>the in quota duties that apply</li>
 </ul>
-<p>There are a lot of tables that impact quotas, but the 4 in the figure below do the bulk of the work – the division of labour is noted.</p>
+<p>There are a lot of tables that impact quotas, but the 4 in the figure below do the bulk of the work – the division of labour is noted. The second of these &lsquo;Quota Order Number Origins&rsquo; is detailed in <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html">Quota geography</a></p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94042165-20440480-fdc3-11ea-9fa4-1ca0392c15b9.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94042165-20440480-fdc3-11ea-9fa4-1ca0392c15b9.png" alt="image" /></a></p>
 <p>This graphic shows the relationship between quota order numbers and quota definitions (quotas are invented).</p>
 <p>Imagine that a brand new regime starts on 1 January. It is a new policy with nothing preceding it.</p>
@@ -1318,7 +1483,8 @@
 <td>Unless it is the main quota in a quota association, a definition’s volume and initial_volume values should always be the same. The exception is when we are updating quotas in the current period, these can have differing volume and initial volume.</td>
 </tr>
         </table>
-      </div><p>Read the business rules for quotas in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.</p>
+      </div><p>Read the business rules for quotas in the <a href="https://uktrade.github.io/tamato/html/business_rules/quotas.html">system documentation</a>.
+<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
