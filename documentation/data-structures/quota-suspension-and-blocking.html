@@ -166,7 +166,7 @@
         <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#what-happens-if-a-specific-quota-volume-runs-out"><span>What happens if a specific quota volume runs out</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#steel-safeguard-how-the-data-is-structured"><span>How the data is structured</span></a>
+        <a href="/tariff-data-manual/documentation/trade-policies/steel-safeguard.html#how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
     </ul>
   </li>
@@ -478,9 +478,6 @@
         <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#why-suspensions-are-used"><span>Why suspensions are used</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#how-the-data-is-structured"><span>How the data is structured</span></a>
-      </li>
-      <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#where-quota-suspensions-are-used-in-the-tariff"><span>Where quota suspensions are used in the Tariff</span></a>
       </li>
       <li>
@@ -488,9 +485,6 @@
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#why-quotas-are-blocked"><span>Why quotas are blocked</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#quota-suspensions-how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#validation-rules"><span>Validation rules</span></a>
@@ -842,14 +836,6 @@
 <a href="#why-suspensions-are-used">Why suspensions are used</a>
 </li>
 <li>
-<a href="#how-the-data-is-structured">How the data is structured</a>
-<ul>
-<li>
-<a href="#quota-suspension-data-object-in-detail">Quota suspension data object in detail</a>
-</li>
-</ul>
-<p></li>
-<li>
 <a href="#where-quota-suspensions-are-used-in-the-tariff">Where quota suspensions are used in the Tariff</a>
 </li>
 <li>
@@ -857,22 +843,17 @@
 </li>
 <li>
 <a href="#why-quotas-are-blocked">Why quotas are blocked</a>
-</li>
-<li>
-<a href="#how-the-data-is-structured">How the data is structured</a>
 <ul>
-<li>
-<a href="#quota-blocking-data-object-in-detail">Quota blocking data object in detail</a>
-</li>
 <li>
 <a href="#where-quota-blocks-are-used-in-the-tariff">Where quota blocks are used in the Tariff</a>
 </li>
 </ul>
-</li>
+<p></li>
 <li>
 <a href="#validation-rules">Validation rules</a>
 </li>
 </ul></p>
+<p>Once they have been deployed, quotas may be halted through one of two methods: blocking and suspensions.</p>
 
 <blockquote>
 <p>Quota suspensions invalidate quotas.</p>
@@ -884,104 +865,7 @@
 <p>For example, quota 09.0792 runs annually from 1 January to 31 December on commodity code 0303510000.</p>
 <p>The MFN rate is 15% all year round, except for the period between 15 February and 15 June, where it&rsquo;s 0% (tariff free).</p>
 <p>The quota is suspended for the period where the MFN is zero.  This is because a trader will not gain anything by applying to use a quota during this period.</p>
-<h2 id="how-the-data-is-structured">How the data is structured</h2>
-<p><a href="https://user-images.githubusercontent.com/61055197/94136612-17a00c80-fe5d-11ea-8089-bdc32b48108b.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94136612-17a00c80-fe5d-11ea-8089-bdc32b48108b.png" alt="image" /></a></p>
-<h3 id="quota-suspension-data-object-in-detail">Quota suspension data object in detail</h3>
-<p>There are only 3 fields you must define in the database.</p>
-<svg width="687pt" height="206pt"
- viewBox="0.00 0.00 687.00 206.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_881" class="graph" transform="scale(1 1) rotate(0) translate(4 202)">
-<title>Database</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-202 683,-202 683,4 -4,4"/>
-<!-- Quota suspension -->
-<g id="table_566" class="node index0">
-<title>Quota suspension</title>
-<polygon fill="none" stroke="black" points="431.5,-147 431.5,-163 670.5,-163 670.5,-147 431.5,-147"/>
-<text text-anchor="start" x="513.5" y="-152.8" font-family="Arial" font-size="9.00">Quota suspension</text>
-<polygon fill="none" stroke="black" points="431.5,-131 431.5,-147 562.5,-147 562.5,-131 431.5,-131"/>
-<text text-anchor="start" x="434.5" y="-136.8" font-family="Arial" font-size="9.00">quota_suspension_period_sid</text>
-<polygon fill="none" stroke="black" points="562.5,-131 562.5,-147 621.5,-147 621.5,-131 562.5,-131"/>
-<text text-anchor="start" x="587" y="-136.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="621.5,-131 621.5,-147 670.5,-147 670.5,-131 621.5,-131"/>
-<text text-anchor="start" x="624.5" y="-136.8" font-family="Arial" font-size="9.00">pk, unique</text>
-<polygon fill="none" stroke="black" points="431.5,-115 431.5,-131 562.5,-131 562.5,-115 431.5,-115"/>
-<text text-anchor="start" x="455" y="-120.8" font-family="Arial" font-size="9.00">quota_definition_sid</text>
-<polygon fill="none" stroke="black" points="562.5,-115 562.5,-131 621.5,-131 621.5,-115 562.5,-115"/>
-<text text-anchor="start" x="587" y="-120.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="621.5,-115 621.5,-131 670.5,-131 670.5,-115 621.5,-115"/>
-<text text-anchor="start" x="642.5" y="-120.8" font-family="Arial" font-size="9.00">fk</text>
-<polygon fill="none" stroke="black" points="431.5,-99 431.5,-115 562.5,-115 562.5,-99 431.5,-99"/>
-<text text-anchor="start" x="450" y="-104.8" font-family="Arial" font-size="9.00">suspension_start_date</text>
-<polygon fill="none" stroke="black" points="562.5,-99 562.5,-115 621.5,-115 621.5,-99 562.5,-99"/>
-<text text-anchor="start" x="582.5" y="-104.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="621.5,-99 621.5,-115 670.5,-115 670.5,-99 621.5,-99"/>
-<polygon fill="none" stroke="black" points="431.5,-83 431.5,-99 562.5,-99 562.5,-83 431.5,-83"/>
-<text text-anchor="start" x="451" y="-88.8" font-family="Arial" font-size="9.00">suspension_end_date</text>
-<polygon fill="none" stroke="black" points="562.5,-83 562.5,-99 621.5,-99 621.5,-83 562.5,-83"/>
-<text text-anchor="start" x="582.5" y="-88.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="621.5,-83 621.5,-99 670.5,-99 670.5,-83 621.5,-83"/>
-<polygon fill="none" stroke="black" points="431.5,-67 431.5,-83 562.5,-83 562.5,-67 431.5,-67"/>
-<text text-anchor="start" x="472" y="-72.8" font-family="Arial" font-size="9.00">descriptionv</text>
-<polygon fill="none" stroke="black" points="562.5,-67 562.5,-83 621.5,-83 621.5,-67 562.5,-67"/>
-<text text-anchor="start" x="565.5" y="-72.8" font-family="Arial" font-size="9.00">varchar(500)</text>
-<polygon fill="none" stroke="black" points="621.5,-67 621.5,-83 670.5,-83 670.5,-67 621.5,-67"/>
-<text text-anchor="start" x="638" y="-72.8" font-family="Arial" font-size="9.00">null</text>
-<polygon fill="none" stroke="black" points="430,-66 430,-164 671,-164 671,-66 430,-66"/>
-</g>
-<!-- quota_definition_sid Note -->
-<g id="note_540" class="node">
-<title>quota_definition_sid Note</title>
-<polygon fill="none" stroke="black" points="271,-198 109,-198 109,-162 277,-162 277,-192 271,-198"/>
-<polyline fill="none" stroke="black" points="271,-198 271,-192 "/>
-<polyline fill="none" stroke="black" points="277,-192 271,-192 "/>
-<text text-anchor="middle" x="193" y="-177.8" font-family="Arial" font-size="9.00">The quota definition to be suspended</text>
-</g>
-<!-- quota_definition_sid Note&#45;&gt;Quota suspension -->
-<g id="database_881_edge1" class="edge">
-<title>quota_definition_sid Note&#45;&gt;Quota suspension:quota_definition_sid_name</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M277.33,-176.52C311.85,-172.99 351.75,-166.15 386,-153 408.27,-144.45 406.65,-123 430.5,-123"/>
-</g>
-<!-- suspension_start_date Note -->
-<g id="note_206" class="node">
-<title>suspension_start_date Note</title>
-<polygon fill="none" stroke="black" points="363.5,-144 16.5,-144 16.5,-108 369.5,-108 369.5,-138 363.5,-144"/>
-<polyline fill="none" stroke="black" points="363.5,-144 363.5,-138 "/>
-<polyline fill="none" stroke="black" points="369.5,-138 363.5,-138 "/>
-<text text-anchor="middle" x="193" y="-123.8" font-family="Arial" font-size="9.00">The start date of the suspension period – i.e. midnight at the start of the chosen day</text>
-</g>
-<!-- suspension_start_date Note&#45;&gt;Quota suspension -->
-<g id="database_881_edge2" class="edge">
-<title>suspension_start_date Note&#45;&gt;Quota suspension:suspension_start_date_name</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M369.52,-108.75C390.06,-107.67 410.73,-107 430.5,-107"/>
-</g>
-<!-- suspension_end_date Note -->
-<g id="note_305" class="node">
-<title>suspension_end_date Note</title>
-<polygon fill="none" stroke="black" points="380,-90 0,-90 0,-54 386,-54 386,-84 380,-90"/>
-<polyline fill="none" stroke="black" points="380,-90 380,-84 "/>
-<polyline fill="none" stroke="black" points="386,-84 380,-84 "/>
-<text text-anchor="middle" x="193" y="-69.8" font-family="Arial" font-size="9.00">The end date of the suspension blocking period – i.e. midnight at the end of the chosen day</text>
-</g>
-<!-- suspension_end_date Note&#45;&gt;Quota suspension -->
-<g id="database_881_edge3" class="edge">
-<title>suspension_end_date Note&#45;&gt;Quota suspension:suspension_end_date_name</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M385.57,-90.01C400.76,-90.63 415.88,-91 430.5,-91"/>
-</g>
-<!-- descriptionv Note -->
-<g id="note_806" class="node">
-<title>descriptionv Note</title>
-<polygon fill="none" stroke="black" points="302,-36 78,-36 78,0 308,0 308,-30 302,-36"/>
-<polyline fill="none" stroke="black" points="302,-36 302,-30 "/>
-<polyline fill="none" stroke="black" points="308,-30 302,-30 "/>
-<text text-anchor="middle" x="193" y="-15.8" font-family="Arial" font-size="9.00">Helps to define the suspension and the reasons for it</text>
-</g>
-<!-- descriptionv Note&#45;&gt;Quota suspension -->
-<g id="database_881_edge4" class="edge">
-<title>descriptionv Note&#45;&gt;Quota suspension:descriptionv_name</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M308.09,-25.4C334.26,-29.45 361.57,-35.62 386,-45 408.27,-53.55 406.65,-75 430.5,-75"/>
-</g>
-</g>
-</svg><h2 id="where-quota-suspensions-are-used-in-the-tariff">Where quota suspensions are used in the Tariff</h2>
+<h2 id="where-quota-suspensions-are-used-in-the-tariff">Where quota suspensions are used in the Tariff</h2>
 <p>A quota order number is made up of many definition periods.</p>
 <p>Definition periods may be of any length. Usually, they last no longer than a year. The most typical lengths are annual and quarterly.</p>
 <p>A quota suspension is defined against a quota definition period.</p>
@@ -1066,54 +950,182 @@
 <br>8</td>
 </tr>
         </table>
-      </div><h2 id="quota-suspensions-how-the-data-is-structured">How the data is structured</h2>
-<p><a href="https://user-images.githubusercontent.com/61055197/94176946-bb56e000-fe90-11ea-93c9-0d1911caa7b7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94176946-bb56e000-fe90-11ea-93c9-0d1911caa7b7.png" alt="image" /></a></p>
-<h3 id="quota-blocking-data-object-in-detail">Quota blocking data object in detail</h3>
-<p>There are only 3 fields you must define in the database.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94177037-df1a2600-fe90-11ea-9bb5-a972e1814a40.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177037-df1a2600-fe90-11ea-9bb5-a972e1814a40.png" alt="image" /></a></p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>
-<br>Field</th>
-<th>
-<br>Description</th>
-</tr><tr>
-<td>
-<br>quota_blocking_period_sid</td>
-<td>
-<br>Unique   identifier, automatically generated</td>
-</tr><tr>
-<td>
-<br>quota_definition_sid</td>
-<td>
-<br>The   quota definition to which the suspension is to be attached</td>
-</tr><tr>
-<td>
-<br>blocking_start_date</td>
-<td>
-<br>The   start date of the suspension blocking period – i.e. 00:00 at the start of the   chosen day</td>
-</tr><tr>
-<td>
-<br>blocking_end_date</td>
-<td>
-<br>The   end date of the suspension blocking period – i.e. 00:00 at the end of the   chosen day</td>
-</tr><tr>
-<td>
-<br>blocking_periods_type</td>
-<td>
-<br>One   of the 8 options noted previously – largely options 1 or 3</td>
-</tr><tr>
-<td>
-<br>description</td>
-<td>
-<br>An   optional field, up to 500 characters in length, that helps to define the   blocking period and the reasons for it.</td>
-</tr>
-        </table>
       </div><h3 id="where-quota-blocks-are-used-in-the-tariff">Where quota blocks are used in the Tariff</h3>
 <p>A quota blocking period usually coincides with the start of a definition period.</p>
 <p>A blocking period must also fit within a definition period. It must not straddle the boundary of the definition. If you need to straddle a boundary, you must create 2 blocking periods.</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94177179-12f54b80-fe91-11ea-9a95-59fd7fdaac68.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94177179-12f54b80-fe91-11ea-9a95-59fd7fdaac68.png" alt="image" /></a></p>
+<p>Every quota order number is divided into many quota definition periods, each with its own balance and measurement unit, and which must all have a start and end date. Quota blocks and suspensions are assigned against specific quota definition periods, rather than against the order numbers, and their periods must be within that of the associated quota description period.</p>
+<svg width="502pt" height="344pt"
+ viewBox="0.00 0.00 502.00 344.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_750" class="graph" transform="scale(1 1) rotate(0) translate(4 340)">
+<title>Database</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-340 498,-340 498,4 -4,4"/>
+<!-- Quota Definintions -->
+<g id="table_801" class="node index0">
+<title>Quota Definintions</title>
+<polygon fill="none" stroke="black" points="267,-229 267,-245 485,-245 485,-229 267,-229"/>
+<text text-anchor="start" x="338" y="-234.8" font-family="Arial" font-size="9.00">Quota Definintions</text>
+<polygon fill="none" stroke="black" points="267,-213 267,-229 410,-229 410,-213 267,-213"/>
+<text text-anchor="start" x="296.5" y="-218.8" font-family="Arial" font-size="9.00">Quota Definition SID</text>
+<polygon fill="none" stroke="black" points="410,-213 410,-229 469,-229 469,-213 410,-213"/>
+<text text-anchor="start" x="434.5" y="-218.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="469,-213 469,-229 485,-229 485,-213 469,-213"/>
+<text text-anchor="start" x="472" y="-218.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="267,-197 267,-213 410,-213 410,-197 267,-197"/>
+<text text-anchor="start" x="315" y="-202.8" font-family="Arial" font-size="9.00">Description</text>
+<polygon fill="none" stroke="black" points="410,-197 410,-213 469,-213 469,-197 410,-197"/>
+<text text-anchor="start" x="413" y="-202.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="469,-197 469,-213 485,-213 485,-197 469,-197"/>
+<polygon fill="none" stroke="black" points="267,-181 267,-197 410,-197 410,-181 267,-181"/>
+<text text-anchor="start" x="270" y="-186.8" font-family="Arial" font-size="9.00">Measurement Unit Qualifier Code</text>
+<polygon fill="none" stroke="black" points="410,-181 410,-197 469,-197 469,-181 410,-181"/>
+<text text-anchor="start" x="424.5" y="-186.8" font-family="Arial" font-size="9.00">char(1)</text>
+<polygon fill="none" stroke="black" points="469,-181 469,-197 485,-197 485,-181 469,-181"/>
+<polygon fill="none" stroke="black" points="267,-165 267,-181 410,-181 410,-165 267,-165"/>
+<text text-anchor="start" x="297.5" y="-170.8" font-family="Arial" font-size="9.00">Monetary Unit Code</text>
+<polygon fill="none" stroke="black" points="410,-165 410,-181 469,-181 469,-165 410,-165"/>
+<text text-anchor="start" x="424.5" y="-170.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="469,-165 469,-181 485,-181 485,-165 469,-165"/>
+<polygon fill="none" stroke="black" points="267,-149 267,-165 410,-165 410,-149 267,-149"/>
+<text text-anchor="start" x="302" y="-154.8" font-family="Arial" font-size="9.00">Critical Threshold</text>
+<polygon fill="none" stroke="black" points="410,-149 410,-165 469,-165 469,-149 410,-149"/>
+<text text-anchor="start" x="434.5" y="-154.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="469,-149 469,-165 485,-165 485,-149 469,-149"/>
+<polygon fill="none" stroke="black" points="267,-133 267,-149 410,-149 410,-133 267,-133"/>
+<text text-anchor="start" x="312.5" y="-138.8" font-family="Arial" font-size="9.00">Critical State</text>
+<polygon fill="none" stroke="black" points="410,-133 410,-149 469,-149 469,-133 410,-133"/>
+<text text-anchor="start" x="430" y="-138.8" font-family="Arial" font-size="9.00">bool</text>
+<polygon fill="none" stroke="black" points="469,-133 469,-149 485,-149 485,-133 469,-133"/>
+<polygon fill="none" stroke="black" points="267,-117 267,-133 410,-133 410,-117 267,-117"/>
+<text text-anchor="start" x="298" y="-122.8" font-family="Arial" font-size="9.00">Maximum Precision</text>
+<polygon fill="none" stroke="black" points="410,-117 410,-133 469,-133 469,-117 410,-117"/>
+<text text-anchor="start" x="434.5" y="-122.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="469,-117 469,-133 485,-133 485,-117 469,-117"/>
+<polygon fill="none" stroke="black" points="267,-101 267,-117 410,-117 410,-101 267,-101"/>
+<text text-anchor="start" x="288.5" y="-106.8" font-family="Arial" font-size="9.00">Measurement Unit Code</text>
+<polygon fill="none" stroke="black" points="410,-101 410,-117 469,-117 469,-101 410,-101"/>
+<text text-anchor="start" x="424.5" y="-106.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="469,-101 469,-117 485,-117 485,-101 469,-101"/>
+<polygon fill="none" stroke="black" points="267,-85 267,-101 410,-101 410,-85 267,-85"/>
+<text text-anchor="start" x="311" y="-90.8" font-family="Arial" font-size="9.00">Initial Volume</text>
+<polygon fill="none" stroke="black" points="410,-85 410,-101 469,-101 469,-85 410,-85"/>
+<text text-anchor="start" x="423" y="-90.8" font-family="Arial" font-size="9.00">decimal</text>
+<polygon fill="none" stroke="black" points="469,-85 469,-101 485,-101 485,-85 469,-85"/>
+<polygon fill="none" stroke="black" points="267,-69 267,-85 410,-85 410,-69 267,-69"/>
+<text text-anchor="start" x="323" y="-74.8" font-family="Arial" font-size="9.00">Volume</text>
+<polygon fill="none" stroke="black" points="410,-69 410,-85 469,-85 469,-69 410,-69"/>
+<text text-anchor="start" x="423" y="-74.8" font-family="Arial" font-size="9.00">decimal</text>
+<polygon fill="none" stroke="black" points="469,-69 469,-85 485,-85 485,-69 469,-69"/>
+<polygon fill="none" stroke="black" points="267,-53 267,-69 410,-69 410,-53 267,-53"/>
+<text text-anchor="start" x="290" y="-58.8" font-family="Arial" font-size="9.00">Quota Order Number ID</text>
+<polygon fill="none" stroke="black" points="410,-53 410,-69 469,-69 469,-53 410,-53"/>
+<text text-anchor="start" x="424.5" y="-58.8" font-family="Arial" font-size="9.00">char(6)</text>
+<polygon fill="none" stroke="black" points="469,-53 469,-69 485,-69 485,-53 469,-53"/>
+<polygon fill="none" stroke="black" points="267,-37 267,-53 410,-53 410,-37 267,-37"/>
+<text text-anchor="start" x="287" y="-42.8" font-family="Arial" font-size="9.00">Quota Order Number SID</text>
+<polygon fill="none" stroke="black" points="410,-37 410,-53 469,-53 469,-37 410,-37"/>
+<text text-anchor="start" x="434.5" y="-42.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="469,-37 469,-53 485,-53 485,-37 469,-37"/>
+<text text-anchor="start" x="473.5" y="-42.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="267,-21 267,-37 410,-37 410,-21 267,-21"/>
+<text text-anchor="start" x="313" y="-26.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="410,-21 410,-37 469,-37 469,-21 410,-21"/>
+<text text-anchor="start" x="430" y="-26.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="469,-21 469,-37 485,-37 485,-21 469,-21"/>
+<polygon fill="none" stroke="black" points="267,-5 267,-21 410,-21 410,-5 267,-5"/>
+<text text-anchor="start" x="314" y="-10.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="410,-5 410,-21 469,-21 469,-5 410,-5"/>
+<text text-anchor="start" x="430" y="-10.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="469,-5 469,-21 485,-21 485,-5 469,-5"/>
+<polygon fill="none" stroke="black" points="266,-4 266,-246 486,-246 486,-4 266,-4"/>
+</g>
+<!-- Quota Blocking Periods -->
+<g id="table_867" class="node index1">
+<title>Quota Blocking Periods</title>
+<polygon fill="none" stroke="black" points="16,-315 16,-331 206,-331 206,-315 16,-315"/>
+<text text-anchor="start" x="62.5" y="-320.8" font-family="Arial" font-size="9.00">Quota Blocking Periods</text>
+<polygon fill="none" stroke="black" points="16,-299 16,-315 131,-315 131,-299 16,-299"/>
+<text text-anchor="start" x="19" y="-304.8" font-family="Arial" font-size="9.00">Quota Blocking Period SID</text>
+<polygon fill="none" stroke="black" points="131,-299 131,-315 190,-315 190,-299 131,-299"/>
+<text text-anchor="start" x="155.5" y="-304.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="190,-299 190,-315 206,-315 206,-299 190,-299"/>
+<text text-anchor="start" x="193" y="-304.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="16,-283 16,-299 131,-299 131,-283 16,-283"/>
+<text text-anchor="start" x="31.5" y="-288.8" font-family="Arial" font-size="9.00">Quota Definition SID</text>
+<polygon fill="none" stroke="black" points="131,-283 131,-299 190,-299 190,-283 131,-283"/>
+<text text-anchor="start" x="155.5" y="-288.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="190,-283 190,-299 206,-299 206,-283 190,-283"/>
+<text text-anchor="start" x="193" y="-288.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="16,-267 16,-283 131,-283 131,-267 16,-267"/>
+<text text-anchor="start" x="34" y="-272.8" font-family="Arial" font-size="9.00">Blocking Start Date</text>
+<polygon fill="none" stroke="black" points="131,-267 131,-283 190,-283 190,-267 131,-267"/>
+<text text-anchor="start" x="151" y="-272.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="190,-267 190,-283 206,-283 206,-267 190,-267"/>
+<polygon fill="none" stroke="black" points="16,-251 16,-267 131,-267 131,-251 16,-251"/>
+<text text-anchor="start" x="35.5" y="-256.8" font-family="Arial" font-size="9.00">Blocking End Date</text>
+<polygon fill="none" stroke="black" points="131,-251 131,-267 190,-267 190,-251 131,-251"/>
+<text text-anchor="start" x="151" y="-256.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="190,-251 190,-267 206,-267 206,-251 190,-251"/>
+<polygon fill="none" stroke="black" points="16,-235 16,-251 131,-251 131,-235 16,-235"/>
+<text text-anchor="start" x="29.5" y="-240.8" font-family="Arial" font-size="9.00">Blocking Period Type</text>
+<polygon fill="none" stroke="black" points="131,-235 131,-251 190,-251 190,-235 131,-235"/>
+<text text-anchor="start" x="155.5" y="-240.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="190,-235 190,-251 206,-251 206,-235 190,-235"/>
+<polygon fill="none" stroke="black" points="16,-219 16,-235 131,-235 131,-219 16,-219"/>
+<text text-anchor="start" x="50" y="-224.8" font-family="Arial" font-size="9.00">Description</text>
+<polygon fill="none" stroke="black" points="131,-219 131,-235 190,-235 190,-219 131,-219"/>
+<text text-anchor="start" x="134" y="-224.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="190,-219 190,-235 206,-235 206,-219 190,-219"/>
+<polygon fill="none" stroke="black" points="15,-218 15,-332 207,-332 207,-218 15,-218"/>
+</g>
+<!-- Quota Blocking Periods&#45;&gt;Quota Definintions -->
+<g id="database_750_edge1" class="edge">
+<title>Quota Blocking Periods:e&#45;&gt;Quota Definintions:w</title>
+<path fill="none" stroke="black" d="M207,-291C244.83,-291 228.15,-230.5 258.31,-221.99"/>
+<polygon fill="black" stroke="black" points="258.9,-224.56 266,-221 258.23,-219.35 258.9,-224.56"/>
+</g>
+<!-- Quota Suspension Periods -->
+<g id="table_949" class="node index2">
+<title>Quota Suspension Periods</title>
+<polygon fill="none" stroke="black" points="9,-175 9,-191 213,-191 213,-175 9,-175"/>
+<text text-anchor="start" x="56" y="-180.8" font-family="Arial" font-size="9.00">Quota Suspension Periods</text>
+<polygon fill="none" stroke="black" points="9,-159 9,-175 138,-175 138,-159 9,-159"/>
+<text text-anchor="start" x="12" y="-164.8" font-family="Arial" font-size="9.00">Quota Suspension Period SID</text>
+<polygon fill="none" stroke="black" points="138,-159 138,-175 197,-175 197,-159 138,-159"/>
+<text text-anchor="start" x="162.5" y="-164.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="197,-159 197,-175 213,-175 213,-159 197,-159"/>
+<text text-anchor="start" x="200" y="-164.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="9,-143 9,-159 138,-159 138,-143 9,-143"/>
+<text text-anchor="start" x="31.5" y="-148.8" font-family="Arial" font-size="9.00">Quota Definition SID</text>
+<polygon fill="none" stroke="black" points="138,-143 138,-159 197,-159 197,-143 138,-143"/>
+<text text-anchor="start" x="162.5" y="-148.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="197,-143 197,-159 213,-159 213,-143 197,-143"/>
+<text text-anchor="start" x="200" y="-148.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="9,-127 9,-143 138,-143 138,-127 9,-127"/>
+<text text-anchor="start" x="27.5" y="-132.8" font-family="Arial" font-size="9.00">Suspension Start Date</text>
+<polygon fill="none" stroke="black" points="138,-127 138,-143 197,-143 197,-127 138,-127"/>
+<text text-anchor="start" x="158" y="-132.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="197,-127 197,-143 213,-143 213,-127 197,-127"/>
+<polygon fill="none" stroke="black" points="9,-111 9,-127 138,-127 138,-111 9,-111"/>
+<text text-anchor="start" x="28.5" y="-116.8" font-family="Arial" font-size="9.00">Suspension End Date</text>
+<polygon fill="none" stroke="black" points="138,-111 138,-127 197,-127 197,-111 138,-111"/>
+<text text-anchor="start" x="158" y="-116.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="197,-111 197,-127 213,-127 213,-111 197,-111"/>
+<polygon fill="none" stroke="black" points="9,-95 9,-111 138,-111 138,-95 9,-95"/>
+<text text-anchor="start" x="50" y="-100.8" font-family="Arial" font-size="9.00">Description</text>
+<polygon fill="none" stroke="black" points="138,-95 138,-111 197,-111 197,-95 138,-95"/>
+<text text-anchor="start" x="141" y="-100.8" font-family="Arial" font-size="9.00">varchar(255)</text>
+<polygon fill="none" stroke="black" points="197,-95 197,-111 213,-111 213,-95 197,-95"/>
+<polygon fill="none" stroke="black" points="8,-94 8,-192 214,-192 214,-94 8,-94"/>
+</g>
+<!-- Quota Suspension Periods&#45;&gt;Quota Definintions -->
+<g id="database_750_edge2" class="edge">
+<title>Quota Suspension Periods:e&#45;&gt;Quota Definintions:w</title>
+<path fill="none" stroke="black" d="M214,-151C249.88,-151 230.68,-210.99 258.38,-219.9"/>
+<polygon fill="black" stroke="black" points="258.2,-222.53 266,-221 258.95,-217.33 258.2,-222.53"/>
+</g>
+</g>
+</svg><p>For both blocks and suspensions there are three fields that must be defined, the associated quota definition SID, the start date and the end date. Each also had an optional description field where additional information on the block or suspension and the reasons behind it can be given. In the case of quots blocks you must also define the blocking period type, from the eight listed earlier.</p>
 <h2 id="validation-rules">Validation rules</h2>
 <p>See the main <a href="/tariff-data-manual/documentation/data-structures/quotas.html">quotas page</a> for the validation rules that affect quotas
 <link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
