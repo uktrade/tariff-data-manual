@@ -904,10 +904,16 @@
 <h3 id="an-example-importing-lamb">An example: importing lamb</h3>
 <p>The following example shows a quota associated with the import of lamb on commodity code 0204100010.</p>
 <p>Third country duty (available to all countries) was 12% + £143.00 GBP per 100kg.</p>
-<p><img width="1142" alt="Third country duty for carcases and half carcasses of domestic lamb, fresh or chilled" src="https://user-images.githubusercontent.com/82160410/143476323-b280eaba-1f41-448b-9f91-6abe86f35a23.png"></p>
 <p>There was a non-preferential tariff quota (order number 052016) applied to the commodity code. This allowed a certain volume of goods into the UK at 0.00%. The quota ran from 1 January 2021 to 31 December 2021.</p>
-<p><img width="1128" alt="Non preferential tariff quota for carcases and half carcasses of domestic lamb, fresh or chilled" src="https://user-images.githubusercontent.com/82160410/143476669-65098741-cb0b-4a32-83eb-5de631ed1641.png"></p>
 <p>The following image shows the opening balance was 22000.0kg and the current balance was 1727.2kg.</p>
+<p>| Quota order number | 52016 |
+| Current balance | 1727.2 Kilogram (kg) |
+| Opening balance | 22000.0 kilogram (kg) |
+| Status | Critical |
+| Start and end dates | 1st January 2021 and 31st December 2021 |
+| Last allocation date | 17th January 2021 |
+| Suspension period | n/a |
+| Blocking period | n/a |</p>
 <p><img width="924" alt="Screen Shot 2021-11-25 at 4 39 11 PM" src="https://user-images.githubusercontent.com/82160410/143480188-bd0714bf-08d4-4ed4-80ae-da6481d80b8b.png"></p>
 <h2 id="defining-and-grouping-quotas">Defining and grouping quotas</h2>
 <p>The following diagram shows the relationships between the different types of quotas.</p>
@@ -937,14 +943,14 @@
 <p>During the introductory period, only a proportion of the total quota balance is available to traders.</p>
 <h2 id="how-the-data-is-structured">How the data is structured</h2>
 <p>There are more data objects for first come, first serve quotas than for licensed quotas.</p>
-<p>Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances. Note that wile quotas themselves are managed by DBT, quota balances are managed and updated by HMRC.</p>
+<p>Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances. Note that while quotas themselves are managed by DBT, quota balances are managed and updated by HMRC.</p>
 <svg width="459pt" height="382pt"
  viewBox="0.00 0.00 459.00 382.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_47" class="graph" transform="scale(1 1) rotate(0) translate(4 378)">
+<g id="database_398" class="graph" transform="scale(1 1) rotate(0) translate(4 378)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-378 455,-378 455,4 -4,4"/>
 <!-- Measures -->
-<g id="table_347" class="node index0">
+<g id="table_459" class="node index0">
 <title>Measures</title>
 <polygon fill="none" stroke="black" points="38,-353 38,-369 199,-369 199,-353 38,-353"/>
 <text text-anchor="start" x="98" y="-358.8" font-family="Arial" font-size="9.00">Measures</text>
@@ -979,7 +985,7 @@
 <polygon fill="none" stroke="black" points="36.5,-272 36.5,-370 199.5,-370 199.5,-272 36.5,-272"/>
 </g>
 <!-- Quota Order Numbers -->
-<g id="table_930" class="node index1">
+<g id="table_890" class="node index1">
 <title>Quota Order Numbers</title>
 <polygon fill="none" stroke="black" points="281.5,-85 281.5,-101 442.5,-101 442.5,-85 281.5,-85"/>
 <text text-anchor="start" x="316.5" y="-90.8" font-family="Arial" font-size="9.00">Quota Order Numbers</text>
@@ -1007,13 +1013,13 @@
 <polygon fill="none" stroke="black" points="280,-20 280,-102 443,-102 443,-20 280,-20"/>
 </g>
 <!-- Measures&#45;&gt;Quota Order Numbers -->
-<g id="database_47_edge1" class="edge">
+<g id="database_398_edge1" class="edge">
 <title>Measures:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M200,-297C301.47,-297 182.72,-88.03 273.01,-77.42"/>
 <polygon fill="black" stroke="black" points="273.16,-80.04 280.5,-77 272.87,-74.8 273.16,-80.04"/>
 </g>
 <!-- Quota Definintions -->
-<g id="table_835" class="node index2">
+<g id="table_521" class="node index2">
 <title>Quota Definintions</title>
 <polygon fill="none" stroke="black" points="9,-229 9,-245 227,-245 227,-229 9,-229"/>
 <text text-anchor="start" x="80" y="-234.8" font-family="Arial" font-size="9.00">Quota Definintions</text>
@@ -1091,20 +1097,19 @@
 <polygon fill="none" stroke="black" points="8,-4 8,-246 228,-246 228,-4 8,-4"/>
 </g>
 <!-- Quota Definintions&#45;&gt;Quota Order Numbers -->
-<g id="database_47_edge2" class="edge">
+<g id="database_398_edge2" class="edge">
 <title>Quota Definintions:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M228,-45C252.55,-45 253.31,-70.83 273.02,-76.08"/>
 <polygon fill="black" stroke="black" points="272.73,-78.69 280.5,-77 273.38,-73.48 272.73,-78.69"/>
 </g>
 <!-- Quota Definintions&#45;&gt;Quota Order Numbers -->
-<g id="database_47_edge3" class="edge">
+<g id="database_398_edge3" class="edge">
 <title>Quota Definintions:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M228,-61C248.6,-61 255.56,-61 272.96,-61"/>
 <polygon fill="black" stroke="black" points="273,-63.63 280.5,-61 273,-58.38 273,-63.63"/>
 </g>
 </g>
-</svg><p><a href="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94019977-4610df80-fdaa-11ea-982f-dcd1bb0cb840.png" alt="image" /></a></p>
-<h3 id="the-quota-order-number-table">The quota order number table</h3>
+</svg><h3 id="the-quota-order-number-table">The quota order number table</h3>
 <p>The quota order number table’s quota order number ID is linked to the measures table via the measures table’s order number field (one of many examples where common field names do not match in TARIC).</p>
 <div class="table-container">
         <table>
