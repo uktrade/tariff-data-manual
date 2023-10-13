@@ -899,7 +899,7 @@
 <p>Origin quotas allow specific quantities of some goods to get preferential tariff treatment. The goods must meet certain conditions.</p>
 <p>Read more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-idioms/origin-quotas.html#origin-quotas">about origin quotas</a>.</p>
 <h3 id="safeguard-quotas">Safeguard quotas</h3>
-<p>Safeguard quotas aim to prevent dumping of products by placing a cap on the volume that can be imported.</p>
+<p>Safeguard quotas aim to prevent dumping of products by placing a cap on the volume that can be imported. Safeguard quotas are only FCFS (note that this is empirical rather than established fact).</p>
 <p>Read <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-idioms/steel-safeguard.html#steel-safeguard">about safeguard quotas</a>.</p>
 <h3 id="an-example-importing-lamb">An example: importing lamb</h3>
 <p>The following example shows a quota associated with the import of lamb on commodity code 0204100010.</p>
@@ -946,11 +946,39 @@
 <p>Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances. Note that while quotas themselves are managed by DBT, quota balances are managed and updated by HMRC.</p>
 <svg width="459pt" height="382pt"
  viewBox="0.00 0.00 459.00 382.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_398" class="graph" transform="scale(1 1) rotate(0) translate(4 378)">
+<g id="database_320" class="graph" transform="scale(1 1) rotate(0) translate(4 378)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-378 455,-378 455,4 -4,4"/>
+<!-- Quota Order Numbers -->
+<g id="table_455" class="node index0">
+<title>Quota Order Numbers</title>
+<polygon fill="none" stroke="black" points="281.5,-85 281.5,-101 442.5,-101 442.5,-85 281.5,-85"/>
+<text text-anchor="start" x="316.5" y="-90.8" font-family="Arial" font-size="9.00">Quota Order Numbers</text>
+<polygon fill="none" stroke="black" points="281.5,-69 281.5,-85 390.5,-85 390.5,-69 281.5,-69"/>
+<text text-anchor="start" x="284.5" y="-74.8" font-family="Arial" font-size="9.00">Quota Order Number SID</text>
+<polygon fill="none" stroke="black" points="390.5,-69 390.5,-85 426.5,-85 426.5,-69 390.5,-69"/>
+<text text-anchor="start" x="403.5" y="-74.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="426.5,-69 426.5,-85 442.5,-85 442.5,-69 426.5,-69"/>
+<text text-anchor="start" x="429.5" y="-74.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="281.5,-53 281.5,-69 390.5,-69 390.5,-53 281.5,-53"/>
+<text text-anchor="start" x="287.5" y="-58.8" font-family="Arial" font-size="9.00">Quota Order Number ID</text>
+<polygon fill="none" stroke="black" points="390.5,-53 390.5,-69 426.5,-69 426.5,-53 390.5,-53"/>
+<text text-anchor="start" x="393.5" y="-58.8" font-family="Arial" font-size="9.00">char(6)</text>
+<polygon fill="none" stroke="black" points="426.5,-53 426.5,-69 442.5,-69 442.5,-53 426.5,-53"/>
+<polygon fill="none" stroke="black" points="281.5,-37 281.5,-53 390.5,-53 390.5,-37 281.5,-37"/>
+<text text-anchor="start" x="310.5" y="-42.8" font-family="Arial" font-size="9.00">Validity Start</text>
+<polygon fill="none" stroke="black" points="390.5,-37 390.5,-53 426.5,-53 426.5,-37 390.5,-37"/>
+<text text-anchor="start" x="399" y="-42.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="426.5,-37 426.5,-53 442.5,-53 442.5,-37 426.5,-37"/>
+<polygon fill="none" stroke="black" points="281.5,-21 281.5,-37 390.5,-37 390.5,-21 281.5,-21"/>
+<text text-anchor="start" x="311.5" y="-26.8" font-family="Arial" font-size="9.00">Validity End</text>
+<polygon fill="none" stroke="black" points="390.5,-21 390.5,-37 426.5,-37 426.5,-21 390.5,-21"/>
+<text text-anchor="start" x="399" y="-26.8" font-family="Arial" font-size="9.00">date</text>
+<polygon fill="none" stroke="black" points="426.5,-21 426.5,-37 442.5,-37 442.5,-21 426.5,-21"/>
+<polygon fill="none" stroke="black" points="280,-20 280,-102 443,-102 443,-20 280,-20"/>
+</g>
 <!-- Measures -->
-<g id="table_459" class="node index0">
+<g id="table_776" class="node index1">
 <title>Measures</title>
 <polygon fill="none" stroke="black" points="38,-353 38,-369 199,-369 199,-353 38,-353"/>
 <text text-anchor="start" x="98" y="-358.8" font-family="Arial" font-size="9.00">Measures</text>
@@ -984,42 +1012,14 @@
 <polygon fill="none" stroke="black" points="183,-273 183,-289 199,-289 199,-273 183,-273"/>
 <polygon fill="none" stroke="black" points="36.5,-272 36.5,-370 199.5,-370 199.5,-272 36.5,-272"/>
 </g>
-<!-- Quota Order Numbers -->
-<g id="table_890" class="node index1">
-<title>Quota Order Numbers</title>
-<polygon fill="none" stroke="black" points="281.5,-85 281.5,-101 442.5,-101 442.5,-85 281.5,-85"/>
-<text text-anchor="start" x="316.5" y="-90.8" font-family="Arial" font-size="9.00">Quota Order Numbers</text>
-<polygon fill="none" stroke="black" points="281.5,-69 281.5,-85 390.5,-85 390.5,-69 281.5,-69"/>
-<text text-anchor="start" x="284.5" y="-74.8" font-family="Arial" font-size="9.00">Quota Order Number SID</text>
-<polygon fill="none" stroke="black" points="390.5,-69 390.5,-85 426.5,-85 426.5,-69 390.5,-69"/>
-<text text-anchor="start" x="403.5" y="-74.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="426.5,-69 426.5,-85 442.5,-85 442.5,-69 426.5,-69"/>
-<text text-anchor="start" x="429.5" y="-74.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="281.5,-53 281.5,-69 390.5,-69 390.5,-53 281.5,-53"/>
-<text text-anchor="start" x="287.5" y="-58.8" font-family="Arial" font-size="9.00">Quota Order Number ID</text>
-<polygon fill="none" stroke="black" points="390.5,-53 390.5,-69 426.5,-69 426.5,-53 390.5,-53"/>
-<text text-anchor="start" x="393.5" y="-58.8" font-family="Arial" font-size="9.00">char(6)</text>
-<polygon fill="none" stroke="black" points="426.5,-53 426.5,-69 442.5,-69 442.5,-53 426.5,-53"/>
-<polygon fill="none" stroke="black" points="281.5,-37 281.5,-53 390.5,-53 390.5,-37 281.5,-37"/>
-<text text-anchor="start" x="310.5" y="-42.8" font-family="Arial" font-size="9.00">Validity Start</text>
-<polygon fill="none" stroke="black" points="390.5,-37 390.5,-53 426.5,-53 426.5,-37 390.5,-37"/>
-<text text-anchor="start" x="399" y="-42.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="426.5,-37 426.5,-53 442.5,-53 442.5,-37 426.5,-37"/>
-<polygon fill="none" stroke="black" points="281.5,-21 281.5,-37 390.5,-37 390.5,-21 281.5,-21"/>
-<text text-anchor="start" x="311.5" y="-26.8" font-family="Arial" font-size="9.00">Validity End</text>
-<polygon fill="none" stroke="black" points="390.5,-21 390.5,-37 426.5,-37 426.5,-21 390.5,-21"/>
-<text text-anchor="start" x="399" y="-26.8" font-family="Arial" font-size="9.00">date</text>
-<polygon fill="none" stroke="black" points="426.5,-21 426.5,-37 442.5,-37 442.5,-21 426.5,-21"/>
-<polygon fill="none" stroke="black" points="280,-20 280,-102 443,-102 443,-20 280,-20"/>
-</g>
 <!-- Measures&#45;&gt;Quota Order Numbers -->
-<g id="database_398_edge1" class="edge">
+<g id="database_320_edge1" class="edge">
 <title>Measures:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M200,-297C301.47,-297 182.72,-88.03 273.01,-77.42"/>
 <polygon fill="black" stroke="black" points="273.16,-80.04 280.5,-77 272.87,-74.8 273.16,-80.04"/>
 </g>
 <!-- Quota Definintions -->
-<g id="table_521" class="node index2">
+<g id="table_609" class="node index2">
 <title>Quota Definintions</title>
 <polygon fill="none" stroke="black" points="9,-229 9,-245 227,-245 227,-229 9,-229"/>
 <text text-anchor="start" x="80" y="-234.8" font-family="Arial" font-size="9.00">Quota Definintions</text>
@@ -1097,13 +1097,13 @@
 <polygon fill="none" stroke="black" points="8,-4 8,-246 228,-246 228,-4 8,-4"/>
 </g>
 <!-- Quota Definintions&#45;&gt;Quota Order Numbers -->
-<g id="database_398_edge2" class="edge">
+<g id="database_320_edge2" class="edge">
 <title>Quota Definintions:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M228,-45C252.55,-45 253.31,-70.83 273.02,-76.08"/>
 <polygon fill="black" stroke="black" points="272.73,-78.69 280.5,-77 273.38,-73.48 272.73,-78.69"/>
 </g>
 <!-- Quota Definintions&#45;&gt;Quota Order Numbers -->
-<g id="database_398_edge3" class="edge">
+<g id="database_320_edge3" class="edge">
 <title>Quota Definintions:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M228,-61C248.6,-61 255.56,-61 272.96,-61"/>
 <polygon fill="black" stroke="black" points="273,-63.63 280.5,-61 273,-58.38 273,-63.63"/>
@@ -1232,8 +1232,7 @@
 <li>the geographical areas from which goods can be imported</li>
 <li>the in quota duties that apply</li>
 </ul>
-<p>There are a lot of tables that impact quotas, but the 4 in the figure below do the bulk of the work – the division of labour is noted. The second of these &lsquo;Quota Order Number Origins&rsquo; is detailed in <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html">Quota geography</a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94042165-20440480-fdc3-11ea-9fa4-1ca0392c15b9.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94042165-20440480-fdc3-11ea-9fa4-1ca0392c15b9.png" alt="image" /></a></p>
+<p>It is important to note the distinction between quota order numbers and quota definitions. Quota order numbers are the actual 6-digit order number that are assigned when the quota is established and remain active until it is abolished. Quota definitions deal with specific instances of the quota, listing the period for which it runs, the initial and current balances and the measurement units. E.g. a quota may be in place for several years, but within that time it will have many periods (maybe one each year running for the full year), each with their own total balance. Within the measures table the commodities included within the quota nad the in-quota duties are shown.</p>
 <p>This graphic shows the relationship between quota order numbers and quota definitions (quotas are invented).</p>
 <p>Imagine that a brand new regime starts on 1 January. It is a new policy with nothing preceding it.</p>
 <p>We want all quotas to start as soon as possible (unless set to specific seasonal periods).</p>
