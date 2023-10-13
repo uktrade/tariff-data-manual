@@ -346,7 +346,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#how-quota-types-are-defined"><span>How quota types are defined</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#quota-associations-business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html#quota-associations-validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
   </li>
@@ -390,23 +390,6 @@
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#measure-types-business-rules"><span>Business rules</span></a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html"><span>Quota blocking</span></a>
-    <ul>
-      <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#how-long-quota-blocks-last"><span>How long quota blocks last</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#why-quotas-are-blocked"><span>Why quotas are blocked</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#quota-blocking-how-the-data-is-structured"><span>How the data is structured</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-blocking.html#quota-blocking-business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -481,10 +464,10 @@
         <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#where-quota-suspensions-are-used-in-the-tariff"><span>Where quota suspensions are used in the Tariff</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#quota-suspensions-how-long-quota-blocks-last"><span>How long quota blocks last</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#how-long-quota-blocks-last"><span>How long quota blocks last</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#quota-suspensions-why-quotas-are-blocked"><span>Why quotas are blocked</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#why-quotas-are-blocked"><span>Why quotas are blocked</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quota-suspension-and-blocking.html#quota-suspensions-validation-rules"><span>Validation rules</span></a>
@@ -567,7 +550,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/quotas.html#how-the-data-is-structured"><span>How the data is structured</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#assigning-quotas-to-geographical-areas"><span>Assigning quotas to geographical areas</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quotas.html#quota-geography-associations-blocking-and-suspensions"><span>Quota geography, associations, blocking and suspensions</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/quotas.html#business-rules"><span>Business rules</span></a>
@@ -653,13 +636,13 @@
     <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html"><span>Assigning quotas to geographical areas</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#assigning-quotas-to-geographical-areas-2-managing-geography"><span>Managing geography</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#managing-geography"><span>Managing geography</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#assigning-quotas-to-geographical-areas-2-strategies-for-managing-origins-and-exclusions"><span>Strategies for managing origins and exclusions</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#strategies-for-managing-origins-and-exclusions"><span>Strategies for managing origins and exclusions</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#assigning-quotas-to-geographical-areas-2-quota-exception-periods-and-events"><span>Quota exception periods and events</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/quota-geography.html#assigning-quotas-to-geographical-areas-validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
   </li>
@@ -882,21 +865,7 @@
 </ul>
 </li>
 <li>
-<a href="#assigning-quotas-to-geographical-areas">Assigning quotas to geographical areas</a>
-<ul>
-<li>
-<a href="#managing-geography">Managing geography</a>
-</li>
-<li>
-<a href="#quota-order-number-origins-and-exclusions-table">Quota order number origins and exclusions table</a>
-</li>
-<li>
-<a href="#strategies-for-managing-origins-and-exclusions">Strategies for managing origins and exclusions</a>
-</li>
-<li>
-<a href="#quota-exception-periods-and-events">Quota exception periods and events</a>
-</li>
-</ul>
+<a href="#quota-geography-associations-blocking-and-suspensions">Quota geography, associations, blocking and suspensions</a>
 </li>
 <li>
 <a href="#business-rules">Business rules</a>
@@ -971,11 +940,11 @@
 <p>Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances. Note that wile quotas themselves are managed by DBT, quota balances are managed and updated by HMRC.</p>
 <svg width="459pt" height="382pt"
  viewBox="0.00 0.00 459.00 382.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_851" class="graph" transform="scale(1 1) rotate(0) translate(4 378)">
+<g id="database_362" class="graph" transform="scale(1 1) rotate(0) translate(4 378)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-378 455,-378 455,4 -4,4"/>
 <!-- Measures -->
-<g id="table_564" class="node index0">
+<g id="table_209" class="node index0">
 <title>Measures</title>
 <polygon fill="none" stroke="black" points="38,-353 38,-369 199,-369 199,-353 38,-353"/>
 <text text-anchor="start" x="98" y="-358.8" font-family="Arial" font-size="9.00">Measures</text>
@@ -1010,7 +979,7 @@
 <polygon fill="none" stroke="black" points="36.5,-272 36.5,-370 199.5,-370 199.5,-272 36.5,-272"/>
 </g>
 <!-- Quota Order Numbers -->
-<g id="table_638" class="node index1">
+<g id="table_630" class="node index1">
 <title>Quota Order Numbers</title>
 <polygon fill="none" stroke="black" points="281.5,-85 281.5,-101 442.5,-101 442.5,-85 281.5,-85"/>
 <text text-anchor="start" x="316.5" y="-90.8" font-family="Arial" font-size="9.00">Quota Order Numbers</text>
@@ -1038,13 +1007,13 @@
 <polygon fill="none" stroke="black" points="280,-20 280,-102 443,-102 443,-20 280,-20"/>
 </g>
 <!-- Measures&#45;&gt;Quota Order Numbers -->
-<g id="database_851_edge1" class="edge">
+<g id="database_362_edge1" class="edge">
 <title>Measures:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M200,-297C301.47,-297 182.72,-88.03 273.01,-77.42"/>
 <polygon fill="black" stroke="black" points="273.16,-80.04 280.5,-77 272.87,-74.8 273.16,-80.04"/>
 </g>
 <!-- Quota Definintions -->
-<g id="table_676" class="node index2">
+<g id="table_280" class="node index2">
 <title>Quota Definintions</title>
 <polygon fill="none" stroke="black" points="9,-229 9,-245 227,-245 227,-229 9,-229"/>
 <text text-anchor="start" x="80" y="-234.8" font-family="Arial" font-size="9.00">Quota Definintions</text>
@@ -1122,13 +1091,13 @@
 <polygon fill="none" stroke="black" points="8,-4 8,-246 228,-246 228,-4 8,-4"/>
 </g>
 <!-- Quota Definintions&#45;&gt;Quota Order Numbers -->
-<g id="database_851_edge2" class="edge">
+<g id="database_362_edge2" class="edge">
 <title>Quota Definintions:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M228,-45C252.55,-45 253.31,-70.83 273.02,-76.08"/>
 <polygon fill="black" stroke="black" points="272.73,-78.69 280.5,-77 273.38,-73.48 272.73,-78.69"/>
 </g>
 <!-- Quota Definintions&#45;&gt;Quota Order Numbers -->
-<g id="database_851_edge3" class="edge">
+<g id="database_362_edge3" class="edge">
 <title>Quota Definintions:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M228,-61C248.6,-61 255.56,-61 272.96,-61"/>
 <polygon fill="black" stroke="black" points="273,-63.63 280.5,-61 273,-58.38 273,-63.63"/>
@@ -1264,87 +1233,8 @@
 <p>Imagine that a brand new regime starts on 1 January. It is a new policy with nothing preceding it.</p>
 <p>We want all quotas to start as soon as possible (unless set to specific seasonal periods).</p>
 <p><a href="https://user-images.githubusercontent.com/61055197/94042307-4c5f8580-fdc3-11ea-8c27-fe9550714d24.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94042307-4c5f8580-fdc3-11ea-8c27-fe9550714d24.png" alt="image" /></a></p>
-<h2 id="assigning-quotas-to-geographical-areas">Assigning quotas to geographical areas</h2>
-<p>A quota can be assigned either to an individual country or to a group of countries.</p>
-<p>It is also common to exclude countries from a country group.</p>
-<p>Read more <a href="https://uktrade.github.io/tariff-data-manual/documentation/tariff-data-structures/geographical-areas.html#geographical-areas">about geographical areas</a>.</p>
-<h3 id="managing-geography">Managing geography</h3>
-<p>A first come, first serve quota only works when the full set of quota tables and measure tables are all set up and synchronised. It is important to understand a few points around the geography of these 2 entities in order to create the right data.</p>
-<p>Geography has to be set correctly against both the measure and the quota order number.</p>
-<p>While the measures table has a 1-2-1 relationship with geographical areas, the quota order number table can relate to multiple origins via the many-to-many linking table ‘quota order number origins’.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94044265-d3156200-fdc5-11ea-9918-cf3f3e81f83f.png" alt="image" /></a></p>
-<h3 id="quota-order-number-origins-and-exclusions-table">Quota order number origins and exclusions table</h3>
-<p>Any entries made in these two quota origin-related tables must also be matched by entries in the measures and measure_excluded_geographical_areas tables.</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>
-<br>Field</th>
-<th>
-<br>Notes</th>
-</tr><tr>
-<td>
-<br>quota_order_number_origin_sid</td>
-<td>
-<br>•A unique sequential numeric   (internal) identifier for the quota origin.<br>   <br>•There may be more than one origin   assigned to a quota order number ID</td>
-</tr><tr>
-<td>
-<br>quota_order_number_sid</td>
-<td>
-<br>•Foreign key to the SID of the   order number to which the origin links</td>
-</tr><tr>
-<td>
-<br>geographical_area_id</td>
-<td>
-<br>•ID (e.g. NO for Norway) to which   the origin applies</td>
-</tr><tr>
-<td>
-<br>validity_start_date</td>
-<td>
-<br>•Date from which the origin   applies to the quota order number</td>
-</tr><tr>
-<td>
-<br>validity_end_date</td>
-<td>
-<br>•Date to which the origin applies   to the quota order number</td>
-</tr><tr>
-<td>
-<br>geographical_area_sid</td>
-<td>
-<br>•Foreign key to the SID of the   geographical area to which the origin links</td>
-</tr>
-        </table>
-      </div><div class="table-container">
-        <table>
-          <tr>
-<th>
-<br>Field</th>
-<th>
-<br>Notes</th>
-</tr><tr>
-<td>
-<br>quota_order_number_origin_sid</td>
-<td>
-<br>•Foreign key to the SID of the   origin from which the country is to be excluded</td>
-</tr><tr>
-<td>
-<br>excluded_geographical_area_sid</td>
-<td>
-<br>•Foreign key to the SID of the   excluded geographical area</td>
-</tr>
-        </table>
-      </div><h3 id="strategies-for-managing-origins-and-exclusions">Strategies for managing origins and exclusions</h3>
-<p>Quota order number origins have start dates and end dates.</p>
-<p>Quota order number origin exclusions do not have start dates and end dates.</p>
-<p>If you want to alter the quota order number origin exclusions for a quota, and you do not want it to happen immediately, you cannot just add the exclusion to the origin: it will take effect immediately, which is almost certainly not the requirement. In this case, there are 2 options:</p>
-
-<ul>
-<li>either end the origin and start another origin</li>
-<li>or end the quota order number and start another quota order number with a new origin</li>
-</ul>
-<h3 id="quota-exception-periods-and-events">Quota exception periods and events</h3>
-<p>Eight additional tables are linked to the definition tables (see the figure below). The two period tables (highlighted in red in the figure) are useful – these are discussed in the relevant documents (blocking and suspending quotas).</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/94045308-3358d380-fdc7-11ea-9430-87a185c8d29f.png" alt="image" /></a></p>
+<h2 id="quota-geography-associations-blocking-and-suspensions">Quota geography, associations, blocking and suspensions</h2>
+<p><a href="/tariff-data-manual/documentation/data-structures/quota-geography.html">Quota geography</a>, <a href="/tariff-data-manual/documentation/data-structures/quota-associations.html">quota associations</a> and <a href="/tariff-data-manual/documentation/data-structures/quota-blocking-and-suspensions.html">quota blocking and suspensions</a> all have their own pages which go into detail on these aspects of quotas.</p>
 <h2 id="business-rules">Business rules</h2>
 <div class="table-container">
         <table>
