@@ -248,6 +248,20 @@
 <li><a href="/tariff-data-manual/documentation/data-structures.html"><span>Data structures</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/data-structures/transactions.html"><span>Transactions</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/transactions.html#transaction-streams"><span>Transaction streams</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/transactions.html#transactions-are-atomic"><span>Transactions are atomic</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/transactions.html#validation-rules"><span>Validation rules</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
     <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html"><span>Geographical areas</span></a>
     <ul>
       <li>
@@ -272,7 +286,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#entity-relationship-diagram-of-the-relevant-records"><span>Entity-Relationship Diagram of the relevant records</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#validation-rules"><span>Validation rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#geographical-areas-validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
   </li>
@@ -668,7 +682,7 @@
         <a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html#example"><span>Example</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html#test-data"><span>Test data</span></a>
+        <a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html#mandatory-subrecord-test-data"><span>Test data</span></a>
       </li>
     </ul>
   </li>
@@ -860,7 +874,8 @@ then its identifying fields may be reused. Note that once a record exists it
 isn&rsquo;t possible to <code>UPDATE</code> its identifying fields.</p>
 <p>This rule ensures that the correct record to modify can be unambiguously
 identified when changes to a record are communicated, because records being
-updated in the transaction stream are identified by their identifying fields.</p>
+updated in the <a href="/tariff-data-manual/documentation/data-structures/transactions.html">transaction stream</a> are
+identified by their identifying fields.</p>
 <h2 id="examples">Examples</h2>
 <p>An additional code has type <code>A</code>, code <code>123</code> and start date <code>2021-01-01</code>. If
 another additional code is created with type <code>A</code>, code <code>123</code> and start date

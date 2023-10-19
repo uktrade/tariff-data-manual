@@ -248,6 +248,20 @@
 <li><a href="/tariff-data-manual/documentation/data-structures.html"><span>Data structures</span></a>
 <ul>
   <li>
+    <a href="/tariff-data-manual/documentation/data-structures/transactions.html"><span>Transactions</span></a>
+    <ul>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/transactions.html#transaction-streams"><span>Transaction streams</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/transactions.html#transactions-are-atomic"><span>Transactions are atomic</span></a>
+      </li>
+      <li>
+        <a href="/tariff-data-manual/documentation/data-structures/transactions.html#validation-rules"><span>Validation rules</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
     <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html"><span>Geographical areas</span></a>
     <ul>
       <li>
@@ -272,7 +286,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#entity-relationship-diagram-of-the-relevant-records"><span>Entity-Relationship Diagram of the relevant records</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#validation-rules"><span>Validation rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html#geographical-areas-validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
   </li>
@@ -868,9 +882,9 @@ of the record</li>
 <li>The start date of the subrecord must be before or equal to the end date of the
 record</li>
 </ul>
-<p>Because validity rules are applied at the end of a transaction, this rule
-requires the first subrecord to be created in the same transaction as the
-record.</p>
+<p>Because <a href="/tariff-data-manual/documentation/data-structures/transactions.html">validity rules are applied at the end of a
+transaction</a>, this rule requires the first
+subrecord to be created in the same transaction as the record.</p>
 <p>If the record is updated to move the start date earlier, the start date of the
 first subrecord must be moved earlier in the same transaction or a new subrecord
 introduced to cover the new period.</p>

@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Weeknote 4 - Tariff Data Manual</title>
+    <title>Transactions - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/weeknotes/weeknote-4.html">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/transactions.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Weeknote 4 - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/weeknotes/weeknote-4.html" />
+      <meta name="twitter:title" content="Transactions - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/transactions.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Weeknote 4" />
+      <meta property="og:title" content="Transactions" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/weeknotes/weeknote-4.html" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/data-structures/transactions.html" />
 
     
   </head>
@@ -860,50 +860,355 @@
 
         <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="weeknote-4-w-c-2023-09-04">Weeknote #4: w/c 2023-09-04</h1>
+            <h1 id="transactions">Transactions</h1>
 
 <ul>
 <li>
-<a href="#who-our-users-are">Who our users are</a>
+<a href="#transaction-streams">Transaction streams</a>
 </li>
 <li>
-<a href="#what-our-users-need-to-know">What our users need to know</a>
+<a href="#transactions-are-atomic">Transactions are atomic</a>
+<ul>
+<li>
+<a href="#validation-rules-are-applied-after-transaction">Validation rules are applied after transaction</a>
+</li>
+<li>
+<a href="#errored-transactions-must-be-removed-in-full">Errored transactions must be removed in full</a>
 </li>
 </ul>
-<p>Welcome to another data standards week note where we update you on our journey towards an officially recognised UK tariff data standard. It&rsquo;s Simon Worthington <a href="/tariff-data-manual/documentation/about-the-standard/weeknotes/weeknote-2.html">here again</a> with another update on what we&rsquo;ve been doing this week.</p>
-<p>We&rsquo;ve been gaining momentum on the documentation task this week. Through another pair writing session with Patrick, we&rsquo;ve updated <a href="/tariff-data-manual/documentation/home.html">the front page</a> that users will see on first landing on the documentation site to better explain what the standard is and who it is for. For the first time we&rsquo;ve also written down publicly <a href="/tariff-data-manual/documentation/about-the-standard/relationship-with-taric.html">what our relationship is with the EU tariff data standard</a> which we adopted at the end of the transition period and what changes we&rsquo;ve made to it to better fit the UK.</p>
-<p>The new front page is designed to serve the needs of users discovering the data standard for the first time. But who are those users and what are their needs?</p>
-<h2 id="who-our-users-are">Who our users are</h2>
-<p>Broadly, our users are people who want to build systems that contribute or consume tariff data. On the consume side, this includes other government departments in the international trade domain like HMRC, Border Force and DEFRA. It also includes non-governmental public bodies such as the customs offices of Jersey and Guernsey. In the private sector, we know logistics companies, supermarkets and other governments all consume our tariff data for operations and decision-making.</p>
-<p>Notice also that I mentioned people who want to &ldquo;contribute&rdquo; tariff data. Whilst the Department for Business and Trade does the lion&rsquo;s share of data management for the UK Tariff, we work with over 30 different policy teams from 11 departments who are actually setting the trade policy. HMRC also contributes quota volumes and VAT/excide rates to the final dataset. In the future, we expect more of those departments to want to hold and contribute data about their policy directly. Part of our mission with setting out this standard is to make it easier for those teams to understand how to contribute.</p>
-<p>A data standard is not just for use by technical staff. Whilst we know technical architects and engineers will need to consult the standard to learn about its data structures, we also think there are plenty of non-technical users who need information from the standard too.</p>
-<p>They are:</p>
+<p></li>
+<li>
+<a href="#validation-rules">Validation rules</a>
+<ul>
+<li>
+<a href="#a-record-or-subrecord-may-only-appear-once-per-transaction">A record or subrecord may only appear once per transaction</a>
+<ul>
+<li>
+<a href="#test-data">Test data</a>
+<ul>
+<li>
+<a href="#case-1-modifying-a-record-multiple-times-in-the-same-transaction">Case 1: Modifying a record multiple times in the same transaction</a>
+</li>
+<li>
+<a href="#case-2-modifying-a-record-in-different-transactions">Case 2: Modifying a record in different transactions</a>
+</li>
+<li>
+<a href="#case-3-modifying-a-record-and-subrecord-in-the-same-transaction">Case 3: Modifying a record and subrecord in the same transaction</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></p>
+<p>Updates to the Tariff are communicated as an ordered sequence of data changes.
+This allows Tariff modifications to be efficiently shared. If the Tariff was
+only ever published in full, data consumers would need to download and process
+many millions of unchanged records every time a change is made. Communicating
+only changes to the data means changes can be frequent and simple.</p>
+<p>A <strong>transaction</strong> is a set of changes to tariff records that must be considered
+together. Each transaction contains one or more unordered record
+changes that add a new <a href="#">version</a> of the record.</p>
+<p>Data is only guaranteed to make correct sense or comply with business rules
+after a whole transaction has been processed. This is because a compliant change
+to one record may require first making changes to other records which by
+themselves would not be valid.</p>
+<p>For example, modifying the start date of a <a href="#">described record</a> involves
+modifying the start date on the record itself and also modifying the start date
+on its earliest description period record. A <a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">validation rule
+failure</a> would occur if either change
+was done in isolation, so the changes need to be grouped together in a
+transaction.</p>
+<p>Note that a transaction <strong>should not</strong> represent a logical unit of work of
+arbitrary size which corresponds to modifications to a number of independent
+records. A transaction should contain only the minimum unit of work that is
+permissable to pass validation rules. A single transaction should only make
+changes to a single record or its subrecords.</p>
+<p>For example, adding an end date to a <a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html">commodity
+code</a> may also require adding end dates to
+any <a href="/tariff-data-manual/documentation/data-structures/measures.html">measures</a> that reference the code. These
+changes should be split across multiple transactions: first there would be one
+transaction per measure to add an end date to each measure and then a final
+transaction to add the end date to the commodity code.</p>
+<p>Transactions have an identifier that is unique within each <a href="#transaction-streams">transaction
+stream</a>. All records with the same transaction identifier
+are considered part of the same transaction.</p>
+<p>Each implementing format uses a different physical data model for transactions.
+For example, in the <a href="/tariff-data-manual/documentation/use-the-data/sqlite-database.html">SQLite format</a>
+transactions are implemented as a separate database table whereas in the <a href="#">XML
+format</a> transactions are somewhat ephemeral and are referred to by identifier
+only.</p>
+<h2 id="transaction-streams">Transaction streams</h2>
+<p>A <strong>transaction stream</strong> is simply an ordered sequence of transactions from a
+single source. Each transaction is part of a single transaction stream.</p>
+<p>Transaction streams are append-only. Once a transaction has been published as
+part of a transaction stream, it cannot be removed.</p>
+<p>Each transaction stream has its own sequence of transaction identifiers. It is
+not required that identifiers must be contiguous within a stream (i.e.
+transaction 1 does not need to be followed by transaction 2) but subsequent
+transactions must have a larger identifier than previous transactions (i.e.
+transaction 1 only needs to be followed by a transaction with ID greater than
+1).</p>
+<p>This means that, without additional context, it&rsquo;s ambiguous to refer to
+&ldquo;transaction 1&rdquo; without also specifying the transaction stream, e.g. as
+&ldquo;transaction 1 from the UK transaction stream&rdquo;. Each transaction stream may have
+its own &ldquo;transaction 1&rdquo;.</p>
+<svg width="472pt" height="192pt"
+ viewBox="0.00 0.00 471.98 192.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 188)">
+<title>Transaction Model</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-188 467.98,-188 467.98,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_stream1</title>
+<polygon fill="none" stroke="black" points="0,-8 0,-176 463.98,-176 463.98,-8 0,-8"/>
+<text text-anchor="middle" x="231.99" y="-160.8" font-family="Times,serif" font-size="14.00">Transaction Stream &lsquo;UK&rsquo;</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_transaction1</title>
+<polygon fill="none" stroke="black" points="8,-16 8,-145 133.99,-145 133.99,-16 8,-16"/>
+<text text-anchor="middle" x="71" y="-129.8" font-family="Times,serif" font-size="14.00">Transaction #1</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_transaction2</title>
+<polygon fill="none" stroke="black" points="168.99,-16 168.99,-145 294.99,-145 294.99,-16 168.99,-16"/>
+<text text-anchor="middle" x="231.99" y="-129.8" font-family="Times,serif" font-size="14.00">Transaction #2</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_transaction3</title>
+<polygon fill="none" stroke="black" points="329.99,-16 329.99,-145 455.98,-145 455.98,-16 329.99,-16"/>
+<text text-anchor="middle" x="392.98" y="-129.8" font-family="Times,serif" font-size="14.00">Transaction #3</text>
+</g>
+<!-- r1 -->
+<g id="node1" class="node">
+<title>r1</title>
+<ellipse fill="none" stroke="black" cx="71" cy="-96" rx="38.99" ry="18"/>
+<text text-anchor="middle" x="71" y="-92.3" font-family="Arial" font-size="14.00">Record</text>
+</g>
+<!-- r3 -->
+<g id="node3" class="node">
+<title>r3</title>
+<ellipse fill="none" stroke="black" cx="231.99" cy="-96" rx="38.99" ry="18"/>
+<text text-anchor="middle" x="231.99" y="-92.3" font-family="Arial" font-size="14.00">Record</text>
+</g>
+<!-- r1&#45;&gt;r3 -->
+<g id="edge1" class="edge">
+<title>r1&#45;&gt;r3</title>
+<path fill="none" stroke="black" d="M133.99,-96C142.07,-96 150.41,-96 158.64,-96"/>
+<polygon fill="black" stroke="black" points="159,-99.5 169,-96 159,-92.5 159,-99.5"/>
+</g>
+<!-- r2 -->
+<g id="node2" class="node">
+<title>r2</title>
+<ellipse fill="none" stroke="black" cx="71" cy="-42" rx="38.99" ry="18"/>
+<text text-anchor="middle" x="71" y="-38.3" font-family="Arial" font-size="14.00">Record</text>
+</g>
+<!-- r5 -->
+<g id="node5" class="node">
+<title>r5</title>
+<ellipse fill="none" stroke="black" cx="392.98" cy="-96" rx="38.99" ry="18"/>
+<text text-anchor="middle" x="392.98" y="-92.3" font-family="Arial" font-size="14.00">Record</text>
+</g>
+<!-- r3&#45;&gt;r5 -->
+<g id="edge2" class="edge">
+<title>r3&#45;&gt;r5</title>
+<path fill="none" stroke="black" d="M294.98,-96C303.07,-96 311.4,-96 319.63,-96"/>
+<polygon fill="black" stroke="black" points="319.99,-99.5 329.99,-96 319.99,-92.5 319.99,-99.5"/>
+</g>
+<!-- r4 -->
+<g id="node4" class="node">
+<title>r4</title>
+<ellipse fill="none" stroke="black" cx="231.99" cy="-42" rx="38.99" ry="18"/>
+<text text-anchor="middle" x="231.99" y="-38.3" font-family="Arial" font-size="14.00">Record</text>
+</g>
+<!-- r6 -->
+<g id="node6" class="node">
+<title>r6</title>
+<ellipse fill="none" stroke="black" cx="392.98" cy="-42" rx="38.99" ry="18"/>
+<text text-anchor="middle" x="392.98" y="-38.3" font-family="Arial" font-size="14.00">Record</text>
+</g>
+</g>
+</svg><p>Transaction streams exist to multiple sources to create transactions without
+each source needing to share a global sequence number. This allows sources to be
+independent of each other.</p>
+<p>For example, tariff updates from the EU form one transaction stream and tariff
+updates from the UK form another. An implementing system can ingest data from
+both sources as long as it keeps track of which transaction stream the
+transactions are coming from, and applies validation logic accordingly.</p>
+<p>Each system that authors tariff data should begin a new transaction stream with
+its own set of unique transaction identifiers. Systems that only filter
+transactions or modify transactions without authoring new ones do not need to
+make a new stream. Systems that merge transactions from different streams and
+publish the resulting transactions should use their own transaction stream.</p>
+<h2 id="transactions-are-atomic">Transactions are atomic</h2>
+<p>Each transaction represents an indivisible set of changes. There is no
+intermediate step between &ldquo;before&rdquo; a transaction and &ldquo;after&rdquo; it – either all the
+changes to records in a transaction are considered or none are considered at
+all.</p>
+<h3 id="validation-rules-are-applied-after-transaction">Validation rules are applied after transaction</h3>
+<p>Validation rules should be applied to every transaction.</p>
+<p>Records within a transaction should not be considered to be in any specific
+order. Even if a record is physically transmitted first, no validation rules
+should be applied to it until after the rest of the transaction is processed.</p>
+<p>Validation rules must operate over the full state of the data resulting from all
+of the changes in the transaction have been applied.</p>
+<p>Implementations may try to apply validation rules as each record is received
+if subsequent records received in the same transaction would not affect the
+result. In this case, implementations must verify their assumptions about what
+is allowed to be contained in the rest of the transaction, e.g. by applying the
+transaction validation rules described below.</p>
+<h3 id="errored-transactions-must-be-removed-in-full">Errored transactions must be removed in full</h3>
+<p>If any validation rule fails for records contained within the transaction, <em>all</em>
+of the records contained in the transaction must be completely ignored. A
+transaction should not be accepted if any business rule fails.</p>
+<p>Once a transaction has failed, further transactions should not be processed.
+This is because further transactions may rely on records in the errored
+transaction and will produce spurious validation rule failures.</p>
+<p>When a transaction has failed, implementations should immediately stop and show
+the validation rule failures via an appropriate method.</p>
+<h2 id="validation-rules">Validation rules</h2>
+<h3 id="a-record-or-subrecord-may-only-appear-once-per-transaction">A record or subrecord may only appear once per transaction</h3>
+<p>This record means that a transaction cannot contain change the same record
+twice. For example:</p>
 
 <ul>
-<li>User-centred designers and business analysts who will need to understand what each part of the tariff data means and how it changes to integrate the data into their services and processes</li>
-<li>Project managers who will want to know about upcoming changes so that they can plan work effectively </li>
-<li>Perhaps most importantly, policy owners themselves who need to design policy that is easy to operationalise – experience tells us that the simpler a policy is, the more easily it can be explained to traders and enforced at the border.</li>
+<li>If a record is created in a transaction, the same transaction cannot update
+or delete it.</li>
+<li>Similarly if a record is updated in a transaction, the same transaction cannot
+update it again or delete it.</li>
 </ul>
-<h2 id="what-our-users-need-to-know">What our users need to know</h2>
-<p>Users have different information needs at different times. We segment our users according to where they are on their &ldquo;data usage journey&rdquo;. The further along the journey they are, the more knowledge they will have amassed and the more precise and detailed their questions become.</p>
-<p>The journey as we model it is:</p>
-
-<ol>
-<li>Discover: users are trying to find data that is potentially relevant. They need a very high-level description of what is in the standard to make a quick assessment about whether it is likely to be useful to them. They may not know anything about the domain or major actors and we assume very little knowledge of trade.</li>
-<li>Evaluate: users are doing an in-depth evaluation to decide if the data will meet their needs. They need to understand what meaning the data contains and what they can use it for. They are starting to understand whether the licensing, quality and reliability are appropriate for them. At this point we assume they are operating in and have some knowledge of the trade domain.</li>
-<li>Integrate: users have decided to build the data into their process or service. They need to know how to extract the meaning they need, including precise definitions of technical formats. They are thinking about their own SLAs and how to work with quality or access issues with the data. They are starting to take in interest in the standard itself and how it is changing.</li>
-<li>Maintain: users are running a live service that relies on the data. They are interested in long-term stability of their service, and so want to plan for any major changes in the data. They may also be encountering quality issues with the data and are incentivised to feed back to have them corrected. Now that they have a vested interest in the standard, they are likely to want to keep up with changes or be part of the working group.</li>
-</ol>
-<p>We&rsquo;re using this model to work out what needs to be in our documentation. Our new front page is designed to cater to users in the &ldquo;discover&rdquo; stage. It now answers a broad set of questions at a high-level and provides links off to further reading that starts to answer questions at the &ldquo;evaluate&rdquo; level.</p>
-<p>I hope this has been a useful insight into how we&rsquo;re getting ready for standardisation. Next week we&rsquo;ll be back with more updates on our progress and more insight into our approach.</p>
+<h4 id="test-data">Test data</h4>
+<p>In this test data each table represents a record in a transaction. The
+transaction is identified by <code>Txn #</code>.</p>
+<p>The <code>Record ID</code> is the identifying field for the record type. If the <code>A</code> is a
+record identifier, then <code>A.B</code> denotes some subrecord of the record.</p>
+<h5 id="case-1-modifying-a-record-multiple-times-in-the-same-transaction">Case 1: Modifying a record multiple times in the same transaction</h5>
+<p>The following transactions should fail this rule:</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Txn #</th>
+<th>Record ID</th>
+<th>Update type</th>
+</tr><tr>
+<td>1</td>
+<td>A</td>
+<td>CREATE</td>
+</tr><tr>
+<td>1</td>
+<td>A</td>
+<td>UPDATE</td>
+</tr><tr>
+<td>2</td>
+<td>B</td>
+<td>CREATE</td>
+</tr><tr>
+<td>2</td>
+<td>B</td>
+<td>DELETE</td>
+</tr><tr>
+<td>3</td>
+<td>C.D</td>
+<td>UPDATE</td>
+</tr><tr>
+<td>3</td>
+<td>C.D</td>
+<td>DELETE</td>
+</tr>
+        </table>
+      </div><h5 id="case-2-modifying-a-record-in-different-transactions">Case 2: Modifying a record in different transactions</h5>
+<p>The following transactions should pass this rule:</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Txn #</th>
+<th>Record ID</th>
+<th>Update type</th>
+</tr><tr>
+<td>1</td>
+<td>A</td>
+<td>CREATE</td>
+</tr><tr>
+<td>2</td>
+<td>A</td>
+<td>UPDATE</td>
+</tr><tr>
+<td>3</td>
+<td>B</td>
+<td>CREATE</td>
+</tr><tr>
+<td>4</td>
+<td>B</td>
+<td>DELETE</td>
+</tr><tr>
+<td>5</td>
+<td>C</td>
+<td>UPDATE</td>
+</tr><tr>
+<td>6</td>
+<td>C</td>
+<td>DELETE</td>
+</tr>
+        </table>
+      </div><h5 id="case-3-modifying-a-record-and-subrecord-in-the-same-transaction">Case 3: Modifying a record and subrecord in the same transaction</h5>
+<p>The following transactions should pass this rule:</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Txn #</th>
+<th>Record ID</th>
+<th>Update type</th>
+</tr><tr>
+<td>1</td>
+<td>A</td>
+<td>CREATE</td>
+</tr><tr>
+<td>1</td>
+<td>A.B</td>
+<td>CREATE</td>
+</tr><tr>
+<td>2</td>
+<td>C</td>
+<td>UPDATE</td>
+</tr><tr>
+<td>2</td>
+<td>C.D</td>
+<td>CREATE</td>
+</tr><tr>
+<td>3</td>
+<td>E</td>
+<td>UPDATE</td>
+</tr><tr>
+<td>3</td>
+<td>E.F</td>
+<td>DELETE</td>
+</tr><tr>
+<td>4</td>
+<td>G</td>
+<td>DELETE</td>
+</tr><tr>
+<td>4</td>
+<td>G.H</td>
+<td>DELETE</td>
+</tr><tr>
+<td>5</td>
+<td>I</td>
+<td>UPDATE</td>
+</tr><tr>
+<td>5</td>
+<td>I.J</td>
+<td>UPDATE</td>
+</tr>
+        </table>
+      </div><p><link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/About-the-standard;-Weeknotes;-Weeknote-4">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Weeknote+4%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fabout-the-standard%2Fweeknotes%2Fweeknote-4.html%29&amp;labels=bug&amp;title=Re%3A+%27Weeknote+4%27">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Data-structures;-Transactions">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Transactions%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fdata-structures%2Ftransactions.html%29&amp;labels=bug&amp;title=Re%3A+%27Transactions%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
