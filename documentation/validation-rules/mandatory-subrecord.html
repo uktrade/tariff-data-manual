@@ -886,21 +886,21 @@ some mandatory property of the record that can change over time.</p>
 in transaction 2, then transaction 1 would fail this rule. If both the footnote
 and footnote description are created in transaction 1, then it would pass this
 rule.</p>
-<p>If a footnote is created with validity start <code>20210101</code> and a footnote
-description record is created with validity start <code>20210201</code> then the
+<p>If a footnote is created with validity start <code>2021-01-01</code> and a footnote
+description record is created with validity start <code>2021-02-01</code> then the
 transaction will fail this rule because the footnote exists for 1 month without
 a footnote description. If the footnote description is created with validity
-start <code>20201201</code> then this rule would still fail because the footnote
+start <code>2020-12-01</code> then this rule would still fail because the footnote
 description is live for 1 month before the footnote. To pass the rule, the
-footnote description and footnote need to have the same <code>20210101</code> start date.</p>
-<p>If the footnote is updated to start <code>20210201</code> but the footnote description is
+footnote description and footnote need to have the same <code>2021-01-01</code> start date.</p>
+<p>If the footnote is updated to start <code>2021-02-01</code> but the footnote description is
 not changed, then the update transaction would fail this rule because the footnote
 description is again live before the footnote.</p>
 <p>If a second footnote description is added with the same start date of
-<code>20210101</code> then the transaction will fail this rule because the two footnote
+<code>2021-01-01</code> then the transaction will fail this rule because the two footnote
 descriptions start at the same moment. If the second description starts a day
-later on <code>20210102</code> then this rule will pass.</p>
-<p>If the footnote is updated to also have a validity end date of <code>20210101</code> (so
+later on <code>2021-01-02</code> then this rule will pass.</p>
+<p>If the footnote is updated to also have a validity end date of <code>2021-01-01</code> (so
 it is live for one day) then the transaction will fail because the second
 footnote now starts after the end date of the footnote. If the second footnote
 is deleted in the same transaction, then this rule will pass.</p>
@@ -919,47 +919,47 @@ affect later transactions.</p>
 <th>Pass/fail</th>
 </tr><tr>
 <td>1</td>
-<td>Created, starting <code>20210101</code>
+<td>Created, starting <code>2021-01-01</code>
 </td>
 <td></td>
 <td></td>
 <td>Fail - no description</td>
 </tr><tr>
 <td>2</td>
-<td>Created, starting <code>20210101</code>
+<td>Created, starting <code>2021-01-01</code>
 </td>
-<td>Created, starting <code>20210201</code>
+<td>Created, starting <code>2021-02-01</code>
 </td>
 <td></td>
 <td>Fail - period with no description</td>
 </tr><tr>
 <td>3</td>
-<td>Created, starting <code>20210101</code>
+<td>Created, starting <code>2021-01-01</code>
 </td>
-<td>Created, starting <code>20201201</code>
+<td>Created, starting <code>2020-12-01</code>
 </td>
 <td></td>
 <td>Fail - description live before footnote</td>
 </tr><tr>
 <td>4</td>
-<td>Created, starting <code>20210101</code>
+<td>Created, starting <code>2021-01-01</code>
 </td>
-<td>Created, starting <code>20210101</code>
+<td>Created, starting <code>2021-01-01</code>
 </td>
 <td></td>
 <td>Pass</td>
 </tr><tr>
 <td>5</td>
-<td>Updated, starting <code>20210201</code>
+<td>Updated, starting <code>2021-02-01</code>
 </td>
 <td>No change</td>
 <td></td>
 <td>Fail - description live before footnote</td>
 </tr><tr>
 <td>6</td>
-<td>Updated, starting <code>20210201</code>
+<td>Updated, starting <code>2021-02-01</code>
 </td>
-<td>Updated, starting <code>20210201</code>
+<td>Updated, starting <code>2021-02-01</code>
 </td>
 <td></td>
 <td>Pass</td>
@@ -967,26 +967,26 @@ affect later transactions.</p>
 <td>7</td>
 <td>No change</td>
 <td>No change</td>
-<td>Created, starting <code>20210101</code>
+<td>Created, starting <code>2021-01-01</code>
 </td>
 <td>Fail - two descriptions with same date</td>
 </tr><tr>
 <td>8</td>
 <td>No change</td>
 <td>No change</td>
-<td>Created, starting <code>20210201</code>
+<td>Created, starting <code>2021-02-01</code>
 </td>
 <td>Pass</td>
 </tr><tr>
 <td>9</td>
-<td>Updated, ending <code>20210101</code>
+<td>Updated, ending <code>2021-01-01</code>
 </td>
 <td>No change</td>
 <td>No change</td>
 <td>Fail - description live after footnote</td>
 </tr><tr>
 <td>10</td>
-<td>Updated, ending <code>20210101</code>
+<td>Updated, ending <code>2021-01-01</code>
 </td>
 <td>No change</td>
 <td>Deleted</td>

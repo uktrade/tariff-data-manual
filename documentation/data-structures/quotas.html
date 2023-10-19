@@ -1003,11 +1003,11 @@
 <p>Licensed quotas essentially use just measures not any of the other quota related tables. That is because all the other tables are set up uniquely to manage the set up and decrementing of quota balances. Note that while quotas themselves are managed by DBT, quota balances are managed and updated by HMRC.</p>
 <svg width="459pt" height="382pt"
  viewBox="0.00 0.00 459.00 382.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_559" class="graph" transform="scale(1 1) rotate(0) translate(4 378)">
+<g id="database_267" class="graph" transform="scale(1 1) rotate(0) translate(4 378)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-378 455,-378 455,4 -4,4"/>
 <!-- Quota Order Numbers -->
-<g id="table_768" class="node index0">
+<g id="table_762" class="node index0">
 <title>Quota Order Numbers</title>
 <polygon fill="none" stroke="black" points="281.5,-85 281.5,-101 442.5,-101 442.5,-85 281.5,-85"/>
 <text text-anchor="start" x="316.5" y="-90.8" font-family="Arial" font-size="9.00">Quota Order Numbers</text>
@@ -1035,7 +1035,7 @@
 <polygon fill="none" stroke="black" points="280,-20 280,-102 443,-102 443,-20 280,-20"/>
 </g>
 <!-- Measures -->
-<g id="table_183" class="node index1">
+<g id="table_1" class="node index1">
 <title>Measures</title>
 <polygon fill="none" stroke="black" points="38,-353 38,-369 199,-369 199,-353 38,-353"/>
 <text text-anchor="start" x="98" y="-358.8" font-family="Arial" font-size="9.00">Measures</text>
@@ -1070,13 +1070,13 @@
 <polygon fill="none" stroke="black" points="36.5,-272 36.5,-370 199.5,-370 199.5,-272 36.5,-272"/>
 </g>
 <!-- Measures&#45;&gt;Quota Order Numbers -->
-<g id="database_559_edge1" class="edge">
+<g id="database_267_edge1" class="edge">
 <title>Measures:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M200,-297C301.47,-297 182.72,-88.03 273.01,-77.42"/>
 <polygon fill="black" stroke="black" points="273.16,-80.04 280.5,-77 272.87,-74.8 273.16,-80.04"/>
 </g>
 <!-- Quota Definintions -->
-<g id="table_421" class="node index2">
+<g id="table_430" class="node index2">
 <title>Quota Definintions</title>
 <polygon fill="none" stroke="black" points="9,-229 9,-245 227,-245 227,-229 9,-229"/>
 <text text-anchor="start" x="80" y="-234.8" font-family="Arial" font-size="9.00">Quota Definintions</text>
@@ -1154,20 +1154,20 @@
 <polygon fill="none" stroke="black" points="8,-4 8,-246 228,-246 228,-4 8,-4"/>
 </g>
 <!-- Quota Definintions&#45;&gt;Quota Order Numbers -->
-<g id="database_559_edge2" class="edge">
+<g id="database_267_edge2" class="edge">
 <title>Quota Definintions:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M228,-45C252.55,-45 253.31,-70.83 273.02,-76.08"/>
 <polygon fill="black" stroke="black" points="272.73,-78.69 280.5,-77 273.38,-73.48 272.73,-78.69"/>
 </g>
 <!-- Quota Definintions&#45;&gt;Quota Order Numbers -->
-<g id="database_559_edge3" class="edge">
+<g id="database_267_edge3" class="edge">
 <title>Quota Definintions:e&#45;&gt;Quota Order Numbers:w</title>
 <path fill="none" stroke="black" d="M228,-61C248.6,-61 255.56,-61 272.96,-61"/>
 <polygon fill="black" stroke="black" points="273,-63.63 280.5,-61 273,-58.38 273,-63.63"/>
 </g>
 </g>
 </svg><h3 id="the-quota-order-number-table">The quota order number table</h3>
-<p>The quota order number table’s quota order number ID is linked to the measures table via the measures table’s <code>quotaordernumberSID</code> field (one of many examples where common field names do not match in TARIC).</p>
+<p>The quota order number table’s quota order number ID is linked to the measures table via the measures table’s <code>quota order number SID</code> field (one of many examples where common field names do not match in TARIC).</p>
 <div class="table-container">
         <table>
           <tr>
@@ -1190,13 +1190,13 @@
 <br>6-digit numerical field, e.g.   ‘091234’. In all current cases, the quota order number begins with the 2   digits ‘05’.<br>   <br>If the third digit is ‘4’, then the quota must be a licensed quota.<br>      <br>Quota order numbers are not a   unique key: it it possible, and is frequently the case that an order number   is set up for a given period of time, then terminated, and restarted again at   a later date, either to reuse the order number for other purposes or because   the policy returns after an intermission.<br>   <br>Additionally, quota order numbers   are terminated then restarted when the origins or origin exclusions change<br>   <br>When a quota order number is used   on multiple occasions, a new record with a unique quota_order_number_sid   is created.</td>
 </tr><tr>
 <td>
-<br><code>Validitystart</code>
+<br><code>Validity start</code>
 </td>
 <td>
 <br>The   date on which a quota is first set up for use. A quota will then have   multiple periods either in-year or across multiple years, potentially with   introductory custom periods before the regular cadence commences</td>
 </tr><tr>
 <td>
-<br><code>Validityend</code>
+<br><code>Validity end</code>
 </td>
 <td>
 <br>The   date on which the quota order number record terminates – this should, in   nearly every circumstance, be left blank – see pages on origins and origin   exclusions below for the exceptions</td>
@@ -1327,7 +1327,7 @@
 </tr><tr>
 <td>ON1</td>
 <td>
-<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for fields <code>quotaordernumberid</code> and <code>startdate</code>.</td>
+<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for fields <code>quota order number id</code> and <code>start date</code>.</td>
 </tr><tr>
 <td>ON10</td>
 <td>
