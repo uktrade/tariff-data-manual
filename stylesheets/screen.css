@@ -3936,3 +3936,6 @@ p:empty {
   display: inline-block;
   font-variant-numeric: tabular-nums;
   font-size: 0.9em; }
+
+table code {
+  white-space: nowrap; }
