@@ -51,8 +51,8 @@ GovukTechDocs::TechDocsHTMLRenderer.prepend(RetargetLinks)
 
 module CommodityCodes
   def codespan code
-    code = code.gsub(/\W+/, '')
-    if code =~ /^[0-9]{10}$/
+    if code.gsub(/\W+/, '') =~ /^[0-9]{10}$/
+      code = code.gsub(/\W+/, '')
       parts = [code[0..3], code[4..5], code[6..7], code[8..9]]
       parts.each_with_index.map {|code, index| "<span class=\"cc#{index}\">#{code}</span>" }.join('')
     else
