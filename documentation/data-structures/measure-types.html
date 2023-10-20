@@ -953,91 +953,38 @@
 <h2 id="existing-measure-type-series">Existing measure type series</h2>
 <p>The following table shows how TARIC-based border systems apply the measures that DIT has supplied.</p>
 <p>The alphabetical sequence of measure type series is the sequence in which CDS will look to implement the measures.</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>ID</th>
-<th>Measure type combination</th>
-<th>Description</th>
-</tr><tr>
-<td>A</td>
-<td>0</td>
-<td>Importation and/or exportation prohibited</td>
-</tr><tr>
-<td>B</td>
-<td>1</td>
-<td>Entry into free circulation or exportation subject to conditions</td>
-</tr><tr>
-<td>C</td>
-<td>0</td>
-<td>Applicable duty</td>
-</tr><tr>
-<td>D</td>
-<td>1</td>
-<td>Anti-dumping or countervailing duties</td>
-</tr><tr>
-<td>E</td>
-<td>0</td>
-<td>Levies, export refunds and other agricultural amounts</td>
-</tr><tr>
-<td>F</td>
-<td>0</td>
-<td>Additional duty on sugar, flour</td>
-</tr><tr>
-<td>G</td>
-<td>0</td>
-<td>Monetary compensatory amount</td>
-</tr><tr>
-<td>H</td>
-<td>0</td>
-<td>Accession compensatory amount</td>
-</tr><tr>
-<td>J</td>
-<td>1</td>
-<td>Countervailing charge</td>
-</tr><tr>
-<td>K</td>
-<td>0</td>
-<td>Reference price</td>
-</tr><tr>
-<td>L</td>
-<td>0</td>
-<td>Complementary trade mechanism</td>
-</tr><tr>
-<td>M</td>
-<td>0</td>
-<td>Unit price, standard import value, representative price (poultry/sugar)</td>
-</tr><tr>
-<td>N</td>
-<td>1</td>
-<td>Posterior surveillance</td>
-</tr><tr>
-<td>o</td>
-<td>0</td>
-<td>Supplementary unit</td>
-</tr><tr>
-<td>P</td>
-<td>0</td>
-<td>VAT</td>
-</tr><tr>
-<td>Q</td>
-<td>0</td>
-<td>Excises</td>
-</tr><tr>
-<td>R</td>
-<td>0</td>
-<td>Provisional exclusion</td>
-</tr><tr>
-<td>S</td>
-<td>0</td>
-<td>Supplementary amount</td>
-</tr><tr>
-<td>Z</td>
-<td>0</td>
-<td>Archived measure type</td>
-</tr>
-        </table>
-      </div><p>Any complete prohibitions are dealt with first. These are dealt with via measures of type series A (Importation and/or exportation prohibited). If there is a complete prohibition that applies to the specific circumstances of the trade, such as the combination of commodity and origin, the trade cannot continue.</p>
+<table>
+    <thead>
+      <tr>
+        <th>SID</th><th>Measure Type Combination</th><th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>A</td><td>0</td><td>Importation and/or exportation prohibited</td></tr><tr><td>B</td><td>1</td><td>Entry into free circulation or exportation subject to conditions</td></tr><tr><td>C</td><td>0</td><td>Applicable duty</td></tr><tr><td>D</td><td>1</td><td>Anti-dumping or countervailing duties</td></tr><tr><td>E</td><td>0</td><td>Levies, export refunds and other agricultural amounts</td></tr><tr><td>F</td><td>0</td><td>Additional duty on sugar, flour</td></tr><tr><td>G</td><td>0</td><td>Monetary compensatory amount</td></tr><tr><td>H</td><td>0</td><td>Accession compensatory amount</td></tr><tr><td>J</td><td>1</td><td>Countervailing charge</td></tr><tr><td>K</td><td>0</td><td>Reference price</td></tr><tr><td>L</td><td>0</td><td>Complementary trade mechanism</td></tr><tr><td>M</td><td>0</td><td>Unit price, standard import value, representative price (poultry, sugar)</td></tr><tr><td>N</td><td>1</td><td>Posterior surveillance</td></tr><tr><td>O</td><td>0</td><td>Supplementary unit</td></tr><tr><td>P</td><td>0</td><td>VAT</td></tr><tr><td>Q</td><td>0</td><td>Excises</td></tr><tr><td>R</td><td>0</td><td>Provisional exclusion</td></tr><tr><td>S</td><td>0</td><td>Supplementary amount</td></tr><tr><td>Z</td><td>0</td><td>Archived measure type</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=3>
+          Last updated 20 Oct 2023
+        </td>
+      </tr>
+      <tr>
+        <td colspan=3>
+          <details>
+            <summary>See the SQL query that generated this table</summary>
+            <p>This table was automatically generated from the open SQLite database providing the UK Tariff.</p>
+            <p>The following query was used to generate the table:</p>
+            <pre>SELECT sid AS SID,
+    measure_type_combination AS 'Measure Type Combination',
+    description AS Description
+FROM measure_type_series
+WHERE (measure_type_series.validity_end IS NULL OR measure_type_series.validity_end > DATE('now'))
+ORDER BY sid</pre>
+          </details>
+        </td>
+      </tr>
+    </tfoot>
+  </table><p>Any complete prohibitions are dealt with first. These are dealt with via measures of type series A (Importation and/or exportation prohibited). If there is a complete prohibition that applies to the specific circumstances of the trade, such as the combination of commodity and origin, the trade cannot continue.</p>
 <p>If there is no complete prohibition on the trade, the second step is to work out if the trader has the necessary conditions in place, such as certification or licensing, to allow the trade to pass (type series B).</p>
 <p>These 2 measure type series apply equally to imports and exports.</p>
 <p>Thirdly, after application of the prohibitions and restrictions, measure type series C is checked (applicable duty).</p>
@@ -1050,81 +997,47 @@
 <p>Series S contains the additional duties required by agricultural safeguards in relation to chicken and other poultry goods. These are applied over and above any standard duty from series C.</p>
 <h3 id="measure-types-per-measure-type-series">Measure types per measure type series</h3>
 <p>The following table illustrates the measure types (per measure series) that have not been end-dated.</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Series</th>
-<th>Description</th>
-<th>Measures</th>
-<th>#</th>
-</tr><tr>
-<td>A</td>
-<td>Importation   and/or exportation prohibited</td>
-<td>277, 278, 481,   485</td>
-<td>3</td>
-</tr><tr>
-<td>B</td>
-<td>Entry   into free circulation or exportation subject to conditions</td>
-<td>410, 420, 464, 465, 467, 473, 474, 475, 476,   477, 478,   479, 482, 483, 705,   706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 722,   724, 725, 728, 730, 735, 740, 745, 746, 747, 748, 749, 750, 751, 755, 760,   761,   770, 771, 772, 773, 774, AHC, AIL, ATT, CEX, CHM, COE, COI, CVD, DPO, ECM, EHC, EQC,   EWP, HOP, HSE, IWP, PHC, PRE, PRT, QRC,   SFS</td>
-<td>58</td>
-</tr><tr>
-<td>C</td>
-<td>Applicable   duty</td>
-<td>103, 105, 106, 112, 115, 117,   119, 122, 123, 140, 141, 142, 143, 144, 145,   146, 147</td>
-<td>13</td>
-</tr><tr>
-<td>D</td>
-<td>Anti-dumping   or countervailing duties</td>
-<td>551, 552, 553, 554, 555, 561,   562, 564, 565, 566, 570</td>
-<td>11</td>
-</tr><tr>
-<td>E</td>
-<td>Levies,   export refunds and other agricultural amounts</td>
-<td>674, 680, 681, 683, 684, 685, 686,   687, 688</td>
-<td>1</td>
-</tr><tr>
-<td>F</td>
-<td>Additional   duty on sugar, flour</td>
-<td>672, 673</td>
-<td>2</td>
-</tr><tr>
-<td>J</td>
-<td>Countervailing   charge</td>
-<td>690, 695, 696</td>
-<td>2</td>
-</tr><tr>
-<td>M</td>
-<td>Unit   price, standard import value, representative price (poultry, sugar)</td>
-<td>488, 489, 490</td>
-<td>3</td>
-</tr><tr>
-<td>N</td>
-<td>Posterior   surveillance</td>
-<td>430, 431,   440, 442,   445, 447,   450, 455, 456, 457, 460, 461, 462, 463, 468, 469, 470, 471, 472</td>
-<td>4</td>
-</tr><tr>
-<td>O</td>
-<td>Supplementary   unit</td>
-<td>109, 110</td>
-<td>2</td>
-</tr><tr>
-<td>P</td>
-<td>VAT   (HMRC responsibility)</td>
-<td>305, VTA, VTE, VTS, VTZ</td>
-<td>5</td>
-</tr><tr>
-<td>Q</td>
-<td>Excises   (HMRC responsibility)</td>
-<td>306, DAA, DAB, DAC, DAE, DAI,   DBA, DBB, DBC, DBE, DBI, DCA, DCC, DCE, DCH, DDA, DDB, DDC, DDD, DDE, DDF,   DDG, DDJ, DEA, DFA, DFB, DFC, DGC, DHA, DHC, DHE, EAA, EAE, EBA, EBB, EBE,   EBJ, EDA, EDB, EDE, EDJ, EEA, EEF, EFA, EFJ, EGA, EGB, EGJ, EHI, EIA, EIB,   EIC, EID, EIE, EIJ, EXA, EXB, EXC, EXD, FAA, FAE, FAI, FBC, FBG, LAA, LAE,   LBA, LBB, LBE, LBJ, LDA, LEA, LEF, LFA, LGJ</td>
-<td>♾</td>
-</tr><tr>
-<td>S</td>
-<td>Supplementary   amount</td>
-<td>651, 652, 653, 654,   655, 656, 657, 658</td>
-<td>4</td>
-</tr>
-        </table>
-      </div><h3 id="measure-type-696">Measure type 696</h3>
+<table>
+    <thead>
+      <tr>
+        <th>SID</th><th>Description</th><th>List of Active Measure Types</th><th>Number of Active Measure Types</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>A</td><td>Importation and/or exportation prohibited</td><td>277,278,481,485</td><td>4</td></tr><tr><td>B</td><td>Entry into free circulation or exportation subject to conditions</td><td>350,351,352,353,353,354,355,356,357,358,359,359,360,361,362,363,410,420,464,464,465,467,473,474,475,476,477,478,479,482,483,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,719,722,724,725,728,730,735,740,745,746,747,748,749,750,751,755,760,761,766,770,771,772,773,774</td><td>70</td></tr><tr><td>C</td><td>Applicable duty</td><td>103,105,105,106,112,115,115,117,119,122,123,123,140,141,142,143,144,145,145,146,146,147</td><td>22</td></tr><tr><td>D</td><td>Anti-dumping or countervailing duties</td><td>551,552,553,554,555,561,562,564,565,566,570</td><td>11</td></tr><tr><td>E</td><td>Levies, export refunds and other agricultural amounts</td><td>674,680,681,683,684,685,686,687,688</td><td>9</td></tr><tr><td>F</td><td>Additional duty on sugar, flour</td><td>672,673</td><td>2</td></tr><tr><td>J</td><td>Countervailing charge</td><td>690,695,696</td><td>3</td></tr><tr><td>M</td><td>Unit price, standard import value, representative price (poultry, sugar)</td><td>488,489,490</td><td>3</td></tr><tr><td>N</td><td>Posterior surveillance</td><td>430,431,440,442,445,447,450,455,456,457,460,461,462,463,468,469,470,471,472</td><td>19</td></tr><tr><td>O</td><td>Supplementary unit</td><td>109,110</td><td>2</td></tr><tr><td>P</td><td>VAT</td><td>305</td><td>1</td></tr><tr><td>Q</td><td>Excises</td><td>306</td><td>1</td></tr><tr><td>S</td><td>Supplementary amount</td><td>651,652,653,654,655,656,657,658</td><td>8</td></tr><tr><td>Z</td><td>Archived measure type</td><td></td><td>0</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=4>
+          Last updated 20 Oct 2023
+        </td>
+      </tr>
+      <tr>
+        <td colspan=4>
+          <details>
+            <summary>See the SQL query that generated this table</summary>
+            <p>This table was automatically generated from the open SQLite database providing the UK Tariff.</p>
+            <p>The following query was used to generate the table:</p>
+            <pre>WITH live_measure_types AS (
+    SELECT sid, measure_type_series_id
+    FROM measure_types
+    WHERE validity_end IS NULL OR validity_end > DATE('now')
+    )
+
+SELECT measure_type_series.sid AS SID,
+    measure_type_series.description AS Description,
+    group_concat(live_measure_types.sid) AS 'List of Active Measure Types',
+    COUNT(live_measure_types.sid) AS 'Number of Active Measure Types'
+FROM measure_type_series
+LEFT OUTER JOIN live_measure_types ON live_measure_types.measure_type_series_id = measure_type_series.trackedmodel_ptr_id
+WHERE (measure_type_series.validity_end IS NULL OR measure_type_series.validity_end > DATE('now'))
+GROUP BY live_measure_types.measure_type_series_id
+ORDER BY sid</pre>
+          </details>
+        </td>
+      </tr>
+    </tfoot>
+  </table><h3 id="measure-type-696">Measure type 696</h3>
 <p>Measure type 696 is the measure used to impose safeguards on imports of steel from many countries around the world.</p>
 <p>Safeguards are made up of 2 elements:</p>
 
@@ -1185,11 +1098,11 @@
 <p>Additional codes cannot be assigned to measures of all types. The following table titled &lsquo;additional code type measure types&rsquo; manages the limitations of which additional codes can be applied to which measure types.</p>
 <svg width="457pt" height="323pt"
  viewBox="0.00 0.00 457.00 323.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_331" class="graph" transform="scale(1 1) rotate(0) translate(4 319)">
+<g id="database_597" class="graph" transform="scale(1 1) rotate(0) translate(4 319)">
 <title>Database</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-319 453,-319 453,4 -4,4"/>
 <!-- Measure Types -->
-<g id="table_497" class="node index0">
+<g id="table_924" class="node index0">
 <title>Measure Types</title>
 <polygon fill="none" stroke="black" points="223.5,-294 223.5,-310 440.5,-310 440.5,-294 223.5,-294"/>
 <text text-anchor="start" x="300" y="-299.8" font-family="Arial" font-size="9.00">Measure Types</text>
@@ -1248,7 +1161,7 @@
 <polygon fill="none" stroke="black" points="222,-133 222,-311 441,-311 441,-133 222,-133"/>
 </g>
 <!-- Additional Code Type Measure Types -->
-<g id="table_634" class="node index1">
+<g id="table_975" class="node index1">
 <title>Additional Code Type Measure Types</title>
 <polygon fill="none" stroke="black" points="9,-208 9,-224 169,-224 169,-208 9,-208"/>
 <text text-anchor="start" x="12" y="-213.8" font-family="Arial" font-size="9.00">Additional Code Type Measure Types</text>
@@ -1277,13 +1190,13 @@
 <polygon fill="none" stroke="black" points="8,-143 8,-225 170,-225 170,-143 8,-143"/>
 </g>
 <!-- Additional Code Type Measure Types&#45;&gt;Measure Types -->
-<g id="database_331_edge2" class="edge">
+<g id="database_597_edge2" class="edge">
 <title>Additional Code Type Measure Types:e&#45;&gt;Measure Types:w</title>
 <path fill="none" stroke="black" d="M170,-200C211.98,-200 182.03,-275.59 215.02,-285.03"/>
 <polygon fill="black" stroke="black" points="214.73,-287.64 222.5,-286 215.4,-282.44 214.73,-287.64"/>
 </g>
 <!-- Additional Code Types -->
-<g id="table_881" class="node index2">
+<g id="table_730" class="node index2">
 <title>Additional Code Types</title>
 <polygon fill="none" stroke="black" points="255.5,-90 255.5,-106 407.5,-106 407.5,-90 255.5,-90"/>
 <text text-anchor="start" x="284.5" y="-95.8" font-family="Arial" font-size="9.00">Additional Code Types</text>
@@ -1316,13 +1229,13 @@
 <polygon fill="none" stroke="black" points="254.5,-9 254.5,-107 408.5,-107 408.5,-9 254.5,-9"/>
 </g>
 <!-- Additional Code Type Measure Types&#45;&gt;Additional Code Types -->
-<g id="database_331_edge3" class="edge">
+<g id="database_597_edge3" class="edge">
 <title>Additional Code Type Measure Types:e&#45;&gt;Additional Code Types:w</title>
 <path fill="none" stroke="black" d="M170,-184C204.52,-184 191.51,-146.18 214,-120 228.2,-103.47 229.66,-86.51 246.78,-82.76"/>
 <polygon fill="black" stroke="black" points="247.29,-85.35 254.5,-82 246.78,-80.13 247.29,-85.35"/>
 </g>
 <!-- meursing_table_plan_id Note -->
-<g id="note_271" class="node">
+<g id="note_89" class="node">
 <title>meursing_table_plan_id Note</title>
 <polygon fill="none" stroke="black" points="136.5,-36 35.5,-36 35.5,0 142.5,0 142.5,-30 136.5,-36"/>
 <polyline fill="none" stroke="black" points="136.5,-36 136.5,-30 "/>
@@ -1330,7 +1243,7 @@
 <text text-anchor="middle" x="89" y="-15.8" font-family="Arial" font-size="9.00">Always null in UK tariff</text>
 </g>
 <!-- meursing_table_plan_id Note&#45;&gt;Additional Code Types -->
-<g id="database_331_edge1" class="edge">
+<g id="database_597_edge1" class="edge">
 <title>meursing_table_plan_id Note&#45;&gt;Additional Code Types:meursing_table_plan_id_name</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M142.6,-18C174.89,-18 217.09,-18 254.5,-18"/>
 </g>
