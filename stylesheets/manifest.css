@@ -3940,5 +3940,8 @@ p:empty {
 table code {
   white-space: nowrap; }
 
+.technical-documentation summary + p {
+  margin-top: 10px; }
+
 
 
