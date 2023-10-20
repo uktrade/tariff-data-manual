@@ -49,6 +49,16 @@ def sql_to_table sql
           Last updated #{Time.now.strftime('%d %b %Y')}
         </td>
       </tr>
+      <tr>
+        <td colspan=#{statement.columns.size}>
+          <details>
+            <summary>See the SQL query that generated this table</summary>
+            <p>This table was automatically generated from the open SQLite database providing the UK Tariff.</p>
+            <p>The following query was used to generate the table:</p>
+            <pre>#{sql.strip}</pre>
+          </details>
+        </td>
+      </tr>
     </tfoot>
   </table>"
 end

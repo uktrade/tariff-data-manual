@@ -57,3 +57,8 @@ p:empty {
 table code {
     white-space: nowrap;
 }
+
+// Ensure paragraphs in a details block in a table have space.
+.technical-documentation summary + p {
+  margin-top: 10px;
+}
