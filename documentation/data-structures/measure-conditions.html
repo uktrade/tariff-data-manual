@@ -865,7 +865,15 @@
 </li>
 <li>
 <a href="#condition-codes">Condition codes</a>
+<ul>
+<li>
+<a href="#does-the-trader-have-the-right-documentation">Does the trader have the right documentation?</a>
 </li>
+<li>
+<a href="#is-the-price-higher-than-a-reference-price">Is the price higher than a reference price?</a>
+</li>
+</ul>
+<p></li>
 <li>
 <a href="#action-codes">Action codes</a>
 <ul>
@@ -873,7 +881,7 @@
 <a href="#action-codes-that-go-together">Action codes that go together</a>
 </li>
 </ul>
-<p></li>
+</li>
 <li>
 <a href="#how-conditions-are-used">How conditions are used</a>
 </li>
@@ -934,318 +942,318 @@
 <p>In the Tariff, the conditions for a commodity code are listed under the &lsquo;conditions&rsquo; column.</p>
 <h2 id="how-conditions-are-structured">How conditions are structured</h2>
 <p>The following diagrams illustrate the primary data fields associated with a measure condition, and the relationships of the measure conditions with other data entities. Focus on measure conditions, measures and measure condition components, as the rest are foreign key tables.</p>
-<svg width="779pt" height="506pt"
- viewBox="0.00 0.00 779.00 506.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="database_124" class="graph" transform="scale(1 1) rotate(0) translate(4 502)">
+<svg width="817pt" height="582pt"
+ viewBox="0.00 0.00 817.00 582.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_525" class="graph" transform="scale(1 1) rotate(0) translate(4 578)">
 <title>Database</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-502 775,-502 775,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-578 813,-578 813,4 -4,4"/>
 <!-- Measure Conditions -->
-<g id="table_931" class="node index0">
+<g id="table_857" class="node index0">
 <title>Measure Conditions</title>
-<polygon fill="none" stroke="black" points="292,-349 292,-365 564,-365 564,-349 292,-349"/>
-<text text-anchor="start" x="386.5" y="-354.8" font-family="Arial" font-size="9.00">Measure Conditions</text>
-<polygon fill="none" stroke="black" points="292,-333 292,-349 482,-349 482,-333 292,-333"/>
-<text text-anchor="start" x="338.5" y="-338.8" font-family="Arial" font-size="9.00">measure_condition_sid</text>
-<polygon fill="none" stroke="black" points="482,-333 482,-349 531,-349 531,-333 482,-333"/>
-<text text-anchor="start" x="501.5" y="-338.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="531,-333 531,-349 564,-349 564,-333 531,-333"/>
-<text text-anchor="start" x="542.5" y="-338.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="292,-317 292,-333 482,-333 482,-317 292,-317"/>
-<text text-anchor="start" x="360" y="-322.8" font-family="Arial" font-size="9.00">measure_sid</text>
-<polygon fill="none" stroke="black" points="482,-317 482,-333 531,-333 531,-317 482,-317"/>
-<text text-anchor="start" x="501.5" y="-322.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="531,-317 531,-333 564,-333 564,-317 531,-317"/>
-<text text-anchor="start" x="544" y="-322.8" font-family="Arial" font-size="9.00">fk</text>
-<polygon fill="none" stroke="black" points="292,-301 292,-317 482,-317 482,-301 292,-301"/>
-<text text-anchor="start" x="355" y="-306.8" font-family="Arial" font-size="9.00">condition_code</text>
-<polygon fill="none" stroke="black" points="482,-301 482,-317 531,-317 531,-301 482,-301"/>
-<text text-anchor="start" x="485" y="-306.8" font-family="Arial" font-size="9.00">varchar(1)</text>
-<polygon fill="none" stroke="black" points="531,-301 531,-317 564,-317 564,-301 531,-301"/>
-<text text-anchor="start" x="544" y="-306.8" font-family="Arial" font-size="9.00">fk</text>
-<polygon fill="none" stroke="black" points="292,-285 292,-301 482,-301 482,-285 292,-285"/>
-<text text-anchor="start" x="322.5" y="-290.8" font-family="Arial" font-size="9.00">component_sequence_number</text>
-<polygon fill="none" stroke="black" points="482,-285 482,-301 531,-301 531,-285 482,-285"/>
-<text text-anchor="start" x="501.5" y="-290.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="531,-285 531,-301 564,-301 564,-285 531,-285"/>
-<polygon fill="none" stroke="black" points="292,-269 292,-285 482,-285 482,-269 292,-269"/>
-<text text-anchor="start" x="338.5" y="-274.8" font-family="Arial" font-size="9.00">condition_duty_amount</text>
-<polygon fill="none" stroke="black" points="482,-269 482,-285 531,-285 531,-269 482,-269"/>
-<text text-anchor="start" x="497.5" y="-274.8" font-family="Arial" font-size="9.00">float</text>
-<polygon fill="none" stroke="black" points="531,-269 531,-285 564,-285 564,-269 531,-269"/>
-<text text-anchor="start" x="539.5" y="-274.8" font-family="Arial" font-size="9.00">null</text>
-<polygon fill="none" stroke="black" points="292,-253 292,-269 482,-269 482,-253 292,-253"/>
-<text text-anchor="start" x="323.5" y="-258.8" font-family="Arial" font-size="9.00">condition_monetary_unit_code</text>
-<polygon fill="none" stroke="black" points="482,-253 482,-269 531,-269 531,-253 482,-253"/>
-<text text-anchor="start" x="485" y="-258.8" font-family="Arial" font-size="9.00">varchar(3)</text>
-<polygon fill="none" stroke="black" points="531,-253 531,-269 564,-269 564,-253 531,-253"/>
-<text text-anchor="start" x="534" y="-258.8" font-family="Arial" font-size="9.00">fk, null</text>
-<polygon fill="none" stroke="black" points="292,-237 292,-253 482,-253 482,-237 292,-237"/>
-<text text-anchor="start" x="314.5" y="-242.8" font-family="Arial" font-size="9.00">condition_measurement_unit_code</text>
-<polygon fill="none" stroke="black" points="482,-237 482,-253 531,-253 531,-237 482,-237"/>
-<text text-anchor="start" x="485" y="-242.8" font-family="Arial" font-size="9.00">varchar(3)</text>
-<polygon fill="none" stroke="black" points="531,-237 531,-253 564,-253 564,-237 531,-237"/>
-<text text-anchor="start" x="534" y="-242.8" font-family="Arial" font-size="9.00">fk, null</text>
-<polygon fill="none" stroke="black" points="292,-221 292,-237 482,-237 482,-221 292,-221"/>
-<text text-anchor="start" x="295" y="-226.8" font-family="Arial" font-size="9.00">condition_meausrement_unit_qualifier_code</text>
-<polygon fill="none" stroke="black" points="482,-221 482,-237 531,-237 531,-221 482,-221"/>
-<text text-anchor="start" x="485" y="-226.8" font-family="Arial" font-size="9.00">varchar(1)</text>
-<polygon fill="none" stroke="black" points="531,-221 531,-237 564,-237 564,-221 531,-221"/>
-<text text-anchor="start" x="534" y="-226.8" font-family="Arial" font-size="9.00">fk, null</text>
-<polygon fill="none" stroke="black" points="292,-205 292,-221 482,-221 482,-205 292,-205"/>
-<text text-anchor="start" x="361.5" y="-210.8" font-family="Arial" font-size="9.00">action_code</text>
-<polygon fill="none" stroke="black" points="482,-205 482,-221 531,-221 531,-205 482,-205"/>
-<text text-anchor="start" x="485" y="-210.8" font-family="Arial" font-size="9.00">varchar(2)</text>
-<polygon fill="none" stroke="black" points="531,-205 531,-221 564,-221 564,-205 531,-205"/>
-<text text-anchor="start" x="544" y="-210.8" font-family="Arial" font-size="9.00">fk</text>
-<polygon fill="none" stroke="black" points="292,-189 292,-205 482,-205 482,-189 292,-189"/>
-<text text-anchor="start" x="343" y="-194.8" font-family="Arial" font-size="9.00">certificate_type_code</text>
-<polygon fill="none" stroke="black" points="482,-189 482,-205 531,-205 531,-189 482,-189"/>
-<text text-anchor="start" x="485" y="-194.8" font-family="Arial" font-size="9.00">varchar(1)</text>
-<polygon fill="none" stroke="black" points="531,-189 531,-205 564,-205 564,-189 531,-189"/>
-<text text-anchor="start" x="534" y="-194.8" font-family="Arial" font-size="9.00">fk, null</text>
-<polygon fill="none" stroke="black" points="292,-173 292,-189 482,-189 482,-173 292,-173"/>
-<text text-anchor="start" x="354.5" y="-178.8" font-family="Arial" font-size="9.00">certificate_code</text>
-<polygon fill="none" stroke="black" points="482,-173 482,-189 531,-189 531,-173 482,-173"/>
-<text text-anchor="start" x="485" y="-178.8" font-family="Arial" font-size="9.00">varchar(3)</text>
-<polygon fill="none" stroke="black" points="531,-173 531,-189 564,-189 564,-173 531,-173"/>
-<text text-anchor="start" x="534" y="-178.8" font-family="Arial" font-size="9.00">fk, null</text>
-<polygon fill="none" stroke="black" points="291,-172 291,-366 565,-366 565,-172 291,-172"/>
+<polygon fill="none" stroke="black" points="292,-391 292,-407 564,-407 564,-391 292,-391"/>
+<text text-anchor="start" x="386.5" y="-396.8" font-family="Arial" font-size="9.00">Measure Conditions</text>
+<polygon fill="none" stroke="black" points="292,-375 292,-391 482,-391 482,-375 292,-375"/>
+<text text-anchor="start" x="338.5" y="-380.8" font-family="Arial" font-size="9.00">measure_condition_sid</text>
+<polygon fill="none" stroke="black" points="482,-375 482,-391 531,-391 531,-375 482,-375"/>
+<text text-anchor="start" x="501.5" y="-380.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="531,-375 531,-391 564,-391 564,-375 531,-375"/>
+<text text-anchor="start" x="542.5" y="-380.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="292,-359 292,-375 482,-375 482,-359 292,-359"/>
+<text text-anchor="start" x="360" y="-364.8" font-family="Arial" font-size="9.00">measure_sid</text>
+<polygon fill="none" stroke="black" points="482,-359 482,-375 531,-375 531,-359 482,-359"/>
+<text text-anchor="start" x="501.5" y="-364.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="531,-359 531,-375 564,-375 564,-359 531,-359"/>
+<text text-anchor="start" x="544" y="-364.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="292,-343 292,-359 482,-359 482,-343 292,-343"/>
+<text text-anchor="start" x="355" y="-348.8" font-family="Arial" font-size="9.00">condition_code</text>
+<polygon fill="none" stroke="black" points="482,-343 482,-359 531,-359 531,-343 482,-343"/>
+<text text-anchor="start" x="485" y="-348.8" font-family="Arial" font-size="9.00">varchar(1)</text>
+<polygon fill="none" stroke="black" points="531,-343 531,-359 564,-359 564,-343 531,-343"/>
+<text text-anchor="start" x="544" y="-348.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="292,-327 292,-343 482,-343 482,-327 292,-327"/>
+<text text-anchor="start" x="322.5" y="-332.8" font-family="Arial" font-size="9.00">component_sequence_number</text>
+<polygon fill="none" stroke="black" points="482,-327 482,-343 531,-343 531,-327 482,-327"/>
+<text text-anchor="start" x="501.5" y="-332.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="531,-327 531,-343 564,-343 564,-327 531,-327"/>
+<polygon fill="none" stroke="black" points="292,-311 292,-327 482,-327 482,-311 292,-311"/>
+<text text-anchor="start" x="338.5" y="-316.8" font-family="Arial" font-size="9.00">condition_duty_amount</text>
+<polygon fill="none" stroke="black" points="482,-311 482,-327 531,-327 531,-311 482,-311"/>
+<text text-anchor="start" x="497.5" y="-316.8" font-family="Arial" font-size="9.00">float</text>
+<polygon fill="none" stroke="black" points="531,-311 531,-327 564,-327 564,-311 531,-311"/>
+<text text-anchor="start" x="539.5" y="-316.8" font-family="Arial" font-size="9.00">null</text>
+<polygon fill="none" stroke="black" points="292,-295 292,-311 482,-311 482,-295 292,-295"/>
+<text text-anchor="start" x="323.5" y="-300.8" font-family="Arial" font-size="9.00">condition_monetary_unit_code</text>
+<polygon fill="none" stroke="black" points="482,-295 482,-311 531,-311 531,-295 482,-295"/>
+<text text-anchor="start" x="485" y="-300.8" font-family="Arial" font-size="9.00">varchar(3)</text>
+<polygon fill="none" stroke="black" points="531,-295 531,-311 564,-311 564,-295 531,-295"/>
+<text text-anchor="start" x="534" y="-300.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="292,-279 292,-295 482,-295 482,-279 292,-279"/>
+<text text-anchor="start" x="314.5" y="-284.8" font-family="Arial" font-size="9.00">condition_measurement_unit_code</text>
+<polygon fill="none" stroke="black" points="482,-279 482,-295 531,-295 531,-279 482,-279"/>
+<text text-anchor="start" x="485" y="-284.8" font-family="Arial" font-size="9.00">varchar(3)</text>
+<polygon fill="none" stroke="black" points="531,-279 531,-295 564,-295 564,-279 531,-279"/>
+<text text-anchor="start" x="534" y="-284.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="292,-263 292,-279 482,-279 482,-263 292,-263"/>
+<text text-anchor="start" x="295" y="-268.8" font-family="Arial" font-size="9.00">condition_meausrement_unit_qualifier_code</text>
+<polygon fill="none" stroke="black" points="482,-263 482,-279 531,-279 531,-263 482,-263"/>
+<text text-anchor="start" x="485" y="-268.8" font-family="Arial" font-size="9.00">varchar(1)</text>
+<polygon fill="none" stroke="black" points="531,-263 531,-279 564,-279 564,-263 531,-263"/>
+<text text-anchor="start" x="534" y="-268.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="292,-247 292,-263 482,-263 482,-247 292,-247"/>
+<text text-anchor="start" x="361.5" y="-252.8" font-family="Arial" font-size="9.00">action_code</text>
+<polygon fill="none" stroke="black" points="482,-247 482,-263 531,-263 531,-247 482,-247"/>
+<text text-anchor="start" x="485" y="-252.8" font-family="Arial" font-size="9.00">varchar(2)</text>
+<polygon fill="none" stroke="black" points="531,-247 531,-263 564,-263 564,-247 531,-247"/>
+<text text-anchor="start" x="544" y="-252.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="292,-231 292,-247 482,-247 482,-231 292,-231"/>
+<text text-anchor="start" x="343" y="-236.8" font-family="Arial" font-size="9.00">certificate_type_code</text>
+<polygon fill="none" stroke="black" points="482,-231 482,-247 531,-247 531,-231 482,-231"/>
+<text text-anchor="start" x="485" y="-236.8" font-family="Arial" font-size="9.00">varchar(1)</text>
+<polygon fill="none" stroke="black" points="531,-231 531,-247 564,-247 564,-231 531,-231"/>
+<text text-anchor="start" x="534" y="-236.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="292,-215 292,-231 482,-231 482,-215 292,-215"/>
+<text text-anchor="start" x="354.5" y="-220.8" font-family="Arial" font-size="9.00">certificate_code</text>
+<polygon fill="none" stroke="black" points="482,-215 482,-231 531,-231 531,-215 482,-215"/>
+<text text-anchor="start" x="485" y="-220.8" font-family="Arial" font-size="9.00">varchar(3)</text>
+<polygon fill="none" stroke="black" points="531,-215 531,-231 564,-231 564,-215 531,-215"/>
+<text text-anchor="start" x="534" y="-220.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="291,-214 291,-408 565,-408 565,-214 291,-214"/>
 </g>
 <!-- Measures -->
-<g id="table_840" class="node index1">
+<g id="table_945" class="node index1">
 <title>Measures</title>
-<polygon fill="none" stroke="black" points="644,-477 644,-493 736,-493 736,-477 644,-477"/>
-<text text-anchor="start" x="669.5" y="-482.8" font-family="Arial" font-size="9.00">Measures</text>
-<polygon fill="none" stroke="black" points="644,-461 644,-477 704,-477 704,-461 644,-461"/>
-<text text-anchor="start" x="647" y="-466.8" font-family="Arial" font-size="9.00">measure_sid</text>
-<polygon fill="none" stroke="black" points="704,-461 704,-477 720,-477 720,-461 704,-461"/>
-<text text-anchor="start" x="707" y="-466.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="720,-461 720,-477 736,-477 736,-461 720,-461"/>
-<text text-anchor="start" x="723" y="-466.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="643,-460 643,-494 737,-494 737,-460 643,-460"/>
+<polygon fill="none" stroke="black" points="663,-553 663,-569 755,-569 755,-553 663,-553"/>
+<text text-anchor="start" x="688.5" y="-558.8" font-family="Arial" font-size="9.00">Measures</text>
+<polygon fill="none" stroke="black" points="663,-537 663,-553 723,-553 723,-537 663,-537"/>
+<text text-anchor="start" x="666" y="-542.8" font-family="Arial" font-size="9.00">measure_sid</text>
+<polygon fill="none" stroke="black" points="723,-537 723,-553 739,-553 739,-537 723,-537"/>
+<text text-anchor="start" x="726" y="-542.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="739,-537 739,-553 755,-553 755,-537 739,-537"/>
+<text text-anchor="start" x="742" y="-542.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="662,-536 662,-570 756,-570 756,-536 662,-536"/>
 </g>
 <!-- Measure Conditions&#45;&gt;Measures -->
-<g id="database_124_edge2" class="edge">
+<g id="database_525_edge2" class="edge">
 <title>Measure Conditions:e&#45;&gt;Measures:w</title>
-<path fill="none" stroke="black" d="M565,-325C622.64,-325 573.15,-401.87 609,-447 618.45,-458.89 623.34,-466.38 635.45,-468.43"/>
-<polygon fill="black" stroke="black" points="635.32,-471.05 643,-469 635.72,-465.81 635.32,-471.05"/>
+<path fill="none" stroke="black" d="M565,-367C637.04,-367 561.17,-469.13 609,-523 624.15,-540.06 634.2,-544.2 654.4,-544.89"/>
+<polygon fill="black" stroke="black" points="654.46,-547.51 662,-545 654.54,-542.26 654.46,-547.51"/>
 </g>
 <!-- Measure Actions -->
-<g id="table_926" class="node index3">
+<g id="table_318" class="node index3">
 <title>Measure Actions</title>
-<polygon fill="none" stroke="black" points="624,-189 624,-205 757,-205 757,-189 624,-189"/>
-<text text-anchor="start" x="656" y="-194.8" font-family="Arial" font-size="9.00">Measure Actions</text>
-<polygon fill="none" stroke="black" points="624,-173 624,-189 722,-189 722,-173 624,-173"/>
-<text text-anchor="start" x="627" y="-178.8" font-family="Arial" font-size="9.00">measure_action_code</text>
-<polygon fill="none" stroke="black" points="722,-173 722,-189 741,-189 741,-173 722,-173"/>
-<text text-anchor="start" x="726.5" y="-178.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="741,-173 741,-189 757,-189 757,-173 741,-173"/>
-<text text-anchor="start" x="744" y="-178.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="624,-157 624,-173 722,-173 722,-157 624,-157"/>
-<text text-anchor="start" x="669.5" y="-162.8" font-family="Arial" font-size="9.00">&hellip;</text>
-<polygon fill="none" stroke="black" points="722,-157 722,-173 741,-173 741,-157 722,-157"/>
-<text text-anchor="start" x="725" y="-162.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
-<polygon fill="none" stroke="black" points="741,-157 741,-173 757,-173 757,-157 741,-157"/>
-<polygon fill="none" stroke="black" points="622.5,-156 622.5,-206 757.5,-206 757.5,-156 622.5,-156"/>
+<polygon fill="none" stroke="black" points="643,-189 643,-205 776,-205 776,-189 643,-189"/>
+<text text-anchor="start" x="675" y="-194.8" font-family="Arial" font-size="9.00">Measure Actions</text>
+<polygon fill="none" stroke="black" points="643,-173 643,-189 741,-189 741,-173 643,-173"/>
+<text text-anchor="start" x="646" y="-178.8" font-family="Arial" font-size="9.00">measure_action_code</text>
+<polygon fill="none" stroke="black" points="741,-173 741,-189 760,-189 760,-173 741,-173"/>
+<text text-anchor="start" x="745.5" y="-178.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="760,-173 760,-189 776,-189 776,-173 760,-173"/>
+<text text-anchor="start" x="763" y="-178.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="643,-157 643,-173 741,-173 741,-157 643,-157"/>
+<text text-anchor="start" x="688.5" y="-162.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="741,-157 741,-173 760,-173 760,-157 741,-157"/>
+<text text-anchor="start" x="744" y="-162.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="760,-157 760,-173 776,-173 776,-157 760,-157"/>
+<polygon fill="none" stroke="black" points="641.5,-156 641.5,-206 776.5,-206 776.5,-156 641.5,-156"/>
 </g>
 <!-- Measure Conditions&#45;&gt;Measure Actions -->
-<g id="database_124_edge3" class="edge">
+<g id="database_525_edge3" class="edge">
 <title>Measure Conditions:e&#45;&gt;Measure Actions:w</title>
-<path fill="none" stroke="black" d="M565,-213C591.68,-213 593.46,-186.72 615.47,-181.79"/>
-<polygon fill="black" stroke="black" points="615.82,-184.39 623,-181 615.27,-179.17 615.82,-184.39"/>
+<path fill="none" stroke="black" d="M565,-255C609.68,-255 596.41,-189.42 634.3,-181.73"/>
+<polygon fill="black" stroke="black" points="634.78,-184.32 642,-181 634.29,-179.1 634.78,-184.32"/>
 </g>
 <!-- Certificate Types -->
-<g id="table_590" class="node index4">
+<g id="table_456" class="node index4">
 <title>Certificate Types</title>
-<polygon fill="none" stroke="black" points="626,-113 626,-129 755,-129 755,-113 626,-113"/>
-<text text-anchor="start" x="656" y="-118.8" font-family="Arial" font-size="9.00">Certificate Types</text>
-<polygon fill="none" stroke="black" points="626,-97 626,-113 720,-113 720,-97 626,-97"/>
-<text text-anchor="start" x="629" y="-102.8" font-family="Arial" font-size="9.00">certificate_type_code</text>
-<polygon fill="none" stroke="black" points="720,-97 720,-113 739,-113 739,-97 720,-97"/>
-<text text-anchor="start" x="724.5" y="-102.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="739,-97 739,-113 755,-113 755,-97 739,-97"/>
-<text text-anchor="start" x="742" y="-102.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="626,-81 626,-97 720,-97 720,-81 626,-81"/>
-<text text-anchor="start" x="669.5" y="-86.8" font-family="Arial" font-size="9.00">&hellip;</text>
-<polygon fill="none" stroke="black" points="720,-81 720,-97 739,-97 739,-81 720,-81"/>
-<text text-anchor="start" x="723" y="-86.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
-<polygon fill="none" stroke="black" points="739,-81 739,-97 755,-97 755,-81 739,-81"/>
-<polygon fill="none" stroke="black" points="624.5,-80 624.5,-130 755.5,-130 755.5,-80 624.5,-80"/>
+<polygon fill="none" stroke="black" points="645,-113 645,-129 774,-129 774,-113 645,-113"/>
+<text text-anchor="start" x="675" y="-118.8" font-family="Arial" font-size="9.00">Certificate Types</text>
+<polygon fill="none" stroke="black" points="645,-97 645,-113 739,-113 739,-97 645,-97"/>
+<text text-anchor="start" x="648" y="-102.8" font-family="Arial" font-size="9.00">certificate_type_code</text>
+<polygon fill="none" stroke="black" points="739,-97 739,-113 758,-113 758,-97 739,-97"/>
+<text text-anchor="start" x="743.5" y="-102.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="758,-97 758,-113 774,-113 774,-97 758,-97"/>
+<text text-anchor="start" x="761" y="-102.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="645,-81 645,-97 739,-97 739,-81 645,-81"/>
+<text text-anchor="start" x="688.5" y="-86.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="739,-81 739,-97 758,-97 758,-81 739,-81"/>
+<text text-anchor="start" x="742" y="-86.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="758,-81 758,-97 774,-97 774,-81 758,-81"/>
+<polygon fill="none" stroke="black" points="643.5,-80 643.5,-130 774.5,-130 774.5,-80 643.5,-80"/>
 </g>
 <!-- Measure Conditions&#45;&gt;Certificate Types -->
-<g id="database_124_edge4" class="edge">
+<g id="database_525_edge4" class="edge">
 <title>Measure Conditions:e&#45;&gt;Certificate Types:w</title>
-<path fill="none" stroke="black" d="M565,-197C610.96,-197 580.3,-115.47 617.27,-105.91"/>
-<polygon fill="black" stroke="black" points="617.86,-108.48 625,-105 617.24,-103.27 617.86,-108.48"/>
+<path fill="none" stroke="black" d="M565,-239C631.43,-239 579.3,-115.26 636.47,-105.6"/>
+<polygon fill="black" stroke="black" points="636.73,-108.21 644,-105 636.32,-102.98 636.73,-108.21"/>
 </g>
 <!-- Certificates -->
-<g id="table_702" class="node index5">
+<g id="table_494" class="node index5">
 <title>Certificates</title>
-<polygon fill="none" stroke="black" points="637,-37 637,-53 743,-53 743,-37 637,-37"/>
-<text text-anchor="start" x="667" y="-42.8" font-family="Arial" font-size="9.00">Certificates</text>
-<polygon fill="none" stroke="black" points="637,-21 637,-37 708,-37 708,-21 637,-21"/>
-<text text-anchor="start" x="640" y="-26.8" font-family="Arial" font-size="9.00">certificate_code</text>
-<polygon fill="none" stroke="black" points="708,-21 708,-37 727,-37 727,-21 708,-21"/>
-<text text-anchor="start" x="712.5" y="-26.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="727,-21 727,-37 743,-37 743,-21 727,-21"/>
-<text text-anchor="start" x="730" y="-26.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="637,-5 637,-21 708,-21 708,-5 637,-5"/>
-<text text-anchor="start" x="669" y="-10.8" font-family="Arial" font-size="9.00">&hellip;</text>
-<polygon fill="none" stroke="black" points="708,-5 708,-21 727,-21 727,-5 708,-5"/>
-<text text-anchor="start" x="711" y="-10.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
-<polygon fill="none" stroke="black" points="727,-5 727,-21 743,-21 743,-5 727,-5"/>
-<polygon fill="none" stroke="black" points="636,-4 636,-54 744,-54 744,-4 636,-4"/>
+<polygon fill="none" stroke="black" points="656,-37 656,-53 762,-53 762,-37 656,-37"/>
+<text text-anchor="start" x="686" y="-42.8" font-family="Arial" font-size="9.00">Certificates</text>
+<polygon fill="none" stroke="black" points="656,-21 656,-37 727,-37 727,-21 656,-21"/>
+<text text-anchor="start" x="659" y="-26.8" font-family="Arial" font-size="9.00">certificate_code</text>
+<polygon fill="none" stroke="black" points="727,-21 727,-37 746,-37 746,-21 727,-21"/>
+<text text-anchor="start" x="731.5" y="-26.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="746,-21 746,-37 762,-37 762,-21 746,-21"/>
+<text text-anchor="start" x="749" y="-26.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="656,-5 656,-21 727,-21 727,-5 656,-5"/>
+<text text-anchor="start" x="688" y="-10.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="727,-5 727,-21 746,-21 746,-5 727,-5"/>
+<text text-anchor="start" x="730" y="-10.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="746,-5 746,-21 762,-21 762,-5 746,-5"/>
+<polygon fill="none" stroke="black" points="655,-4 655,-54 763,-54 763,-4 655,-4"/>
 </g>
 <!-- Measure Conditions&#45;&gt;Certificates -->
-<g id="database_124_edge5" class="edge">
+<g id="database_525_edge5" class="edge">
 <title>Measure Conditions:e&#45;&gt;Certificates:w</title>
-<path fill="none" stroke="black" d="M565,-181C636.8,-181 567.03,-40.07 628.31,-29.61"/>
-<polygon fill="black" stroke="black" points="628.73,-32.21 636,-29 628.32,-26.98 628.73,-32.21"/>
+<path fill="none" stroke="black" d="M565,-223C637.04,-223 569.66,-127.35 609,-67 621.95,-47.13 627.32,-32.4 647.29,-29.52"/>
+<polygon fill="black" stroke="black" points="647.69,-32.12 655,-29 647.34,-26.88 647.69,-32.12"/>
 </g>
 <!-- Condition Codes -->
-<g id="table_206" class="node index6">
+<g id="table_493" class="node index6">
 <title>Condition Codes</title>
-<polygon fill="none" stroke="black" points="638,-417 638,-433 743,-433 743,-417 638,-417"/>
-<text text-anchor="start" x="655.5" y="-422.8" font-family="Arial" font-size="9.00">Condition Codes</text>
-<polygon fill="none" stroke="black" points="638,-401 638,-417 708,-417 708,-401 638,-401"/>
-<text text-anchor="start" x="641" y="-406.8" font-family="Arial" font-size="9.00">condition_code</text>
-<polygon fill="none" stroke="black" points="708,-401 708,-417 727,-417 727,-401 708,-401"/>
-<text text-anchor="start" x="712.5" y="-406.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="727,-401 727,-417 743,-417 743,-401 727,-401"/>
-<text text-anchor="start" x="730" y="-406.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="638,-385 638,-401 708,-401 708,-385 638,-385"/>
-<text text-anchor="start" x="669.5" y="-390.8" font-family="Arial" font-size="9.00">&hellip;</text>
-<polygon fill="none" stroke="black" points="708,-385 708,-401 727,-401 727,-385 708,-385"/>
-<text text-anchor="start" x="711" y="-390.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
-<polygon fill="none" stroke="black" points="727,-385 727,-401 743,-401 743,-385 727,-385"/>
-<polygon fill="none" stroke="black" points="636.5,-384 636.5,-434 743.5,-434 743.5,-384 636.5,-384"/>
+<polygon fill="none" stroke="black" points="657,-493 657,-509 762,-509 762,-493 657,-493"/>
+<text text-anchor="start" x="674.5" y="-498.8" font-family="Arial" font-size="9.00">Condition Codes</text>
+<polygon fill="none" stroke="black" points="657,-477 657,-493 727,-493 727,-477 657,-477"/>
+<text text-anchor="start" x="660" y="-482.8" font-family="Arial" font-size="9.00">condition_code</text>
+<polygon fill="none" stroke="black" points="727,-477 727,-493 746,-493 746,-477 727,-477"/>
+<text text-anchor="start" x="731.5" y="-482.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="746,-477 746,-493 762,-493 762,-477 746,-477"/>
+<text text-anchor="start" x="749" y="-482.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="657,-461 657,-477 727,-477 727,-461 657,-461"/>
+<text text-anchor="start" x="688.5" y="-466.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="727,-461 727,-477 746,-477 746,-461 727,-461"/>
+<text text-anchor="start" x="730" y="-466.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="746,-461 746,-477 762,-477 762,-461 746,-461"/>
+<polygon fill="none" stroke="black" points="655.5,-460 655.5,-510 762.5,-510 762.5,-460 655.5,-460"/>
 </g>
 <!-- Measure Conditions&#45;&gt;Condition Codes -->
-<g id="database_124_edge6" class="edge">
+<g id="database_525_edge6" class="edge">
 <title>Measure Conditions:e&#45;&gt;Condition Codes:w</title>
-<path fill="none" stroke="black" d="M565,-309C616.98,-309 585.81,-399.1 629.35,-408.25"/>
-<polygon fill="black" stroke="black" points="629.28,-410.88 637,-409 629.79,-405.66 629.28,-410.88"/>
+<path fill="none" stroke="black" d="M565,-351C611.93,-351 580.21,-409.93 609,-447 623.8,-466.06 628.26,-481.54 648.5,-484.49"/>
+<polygon fill="black" stroke="black" points="648.34,-487.11 656,-485 648.69,-481.88 648.34,-487.11"/>
 </g>
 <!-- Monetary Units -->
-<g id="table_22" class="node index7">
+<g id="table_104" class="node index7">
 <title>Monetary Units</title>
-<polygon fill="none" stroke="black" points="627,-341 627,-357 753,-357 753,-341 627,-341"/>
-<text text-anchor="start" x="659" y="-346.8" font-family="Arial" font-size="9.00">Monetary Units</text>
-<polygon fill="none" stroke="black" points="627,-325 627,-341 718,-341 718,-325 627,-325"/>
-<text text-anchor="start" x="630" y="-330.8" font-family="Arial" font-size="9.00">monetary_unit_code</text>
-<polygon fill="none" stroke="black" points="718,-325 718,-341 737,-341 737,-325 718,-325"/>
-<text text-anchor="start" x="722.5" y="-330.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="737,-325 737,-341 753,-341 753,-325 737,-325"/>
-<text text-anchor="start" x="740" y="-330.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="627,-309 627,-325 718,-325 718,-309 627,-309"/>
-<text text-anchor="start" x="669" y="-314.8" font-family="Arial" font-size="9.00">&hellip;</text>
-<polygon fill="none" stroke="black" points="718,-309 718,-325 737,-325 737,-309 718,-309"/>
-<text text-anchor="start" x="721" y="-314.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
-<polygon fill="none" stroke="black" points="737,-309 737,-325 753,-325 753,-309 737,-309"/>
-<polygon fill="none" stroke="black" points="626,-308 626,-358 754,-358 754,-308 626,-308"/>
+<polygon fill="none" stroke="black" points="646,-341 646,-357 772,-357 772,-341 646,-341"/>
+<text text-anchor="start" x="678" y="-346.8" font-family="Arial" font-size="9.00">Monetary Units</text>
+<polygon fill="none" stroke="black" points="646,-325 646,-341 737,-341 737,-325 646,-325"/>
+<text text-anchor="start" x="649" y="-330.8" font-family="Arial" font-size="9.00">monetary_unit_code</text>
+<polygon fill="none" stroke="black" points="737,-325 737,-341 756,-341 756,-325 737,-325"/>
+<text text-anchor="start" x="741.5" y="-330.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="756,-325 756,-341 772,-341 772,-325 756,-325"/>
+<text text-anchor="start" x="759" y="-330.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="646,-309 646,-325 737,-325 737,-309 646,-309"/>
+<text text-anchor="start" x="688" y="-314.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="737,-309 737,-325 756,-325 756,-309 737,-309"/>
+<text text-anchor="start" x="740" y="-314.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="756,-309 756,-325 772,-325 772,-309 756,-309"/>
+<polygon fill="none" stroke="black" points="645,-308 645,-358 773,-358 773,-308 645,-308"/>
 </g>
 <!-- Measure Conditions&#45;&gt;Monetary Units -->
-<g id="database_124_edge7" class="edge">
+<g id="database_525_edge7" class="edge">
 <title>Measure Conditions:e&#45;&gt;Monetary Units:w</title>
-<path fill="none" stroke="black" d="M565,-261C604.16,-261 586.81,-323.76 618.46,-332.09"/>
-<polygon fill="black" stroke="black" points="618.24,-334.71 626,-333 618.87,-329.49 618.24,-334.71"/>
+<path fill="none" stroke="black" d="M565,-303C600.3,-303 606.29,-328.93 637.47,-332.58"/>
+<polygon fill="black" stroke="black" points="637.36,-335.2 645,-333 637.66,-329.96 637.36,-335.2"/>
 </g>
 <!-- Measurement Units -->
-<g id="table_646" class="node index8">
+<g id="table_48" class="node index8">
 <title>Measurement Units</title>
-<polygon fill="none" stroke="black" points="618,-265 618,-281 762,-281 762,-265 618,-265"/>
-<text text-anchor="start" x="650" y="-270.8" font-family="Arial" font-size="9.00">Measurement Units</text>
-<polygon fill="none" stroke="black" points="618,-249 618,-265 727,-265 727,-249 618,-249"/>
-<text text-anchor="start" x="621" y="-254.8" font-family="Arial" font-size="9.00">measurement_unit_code</text>
-<polygon fill="none" stroke="black" points="727,-249 727,-265 746,-265 746,-249 727,-249"/>
-<text text-anchor="start" x="731.5" y="-254.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="746,-249 746,-265 762,-265 762,-249 746,-249"/>
-<text text-anchor="start" x="749" y="-254.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="618,-233 618,-249 727,-249 727,-233 618,-233"/>
-<text text-anchor="start" x="669" y="-238.8" font-family="Arial" font-size="9.00">&hellip;</text>
-<polygon fill="none" stroke="black" points="727,-233 727,-249 746,-249 746,-233 727,-233"/>
-<text text-anchor="start" x="730" y="-238.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
-<polygon fill="none" stroke="black" points="746,-233 746,-249 762,-249 762,-233 746,-233"/>
-<polygon fill="none" stroke="black" points="617,-232 617,-282 763,-282 763,-232 617,-232"/>
+<polygon fill="none" stroke="black" points="637,-265 637,-281 781,-281 781,-265 637,-265"/>
+<text text-anchor="start" x="669" y="-270.8" font-family="Arial" font-size="9.00">Measurement Units</text>
+<polygon fill="none" stroke="black" points="637,-249 637,-265 746,-265 746,-249 637,-249"/>
+<text text-anchor="start" x="640" y="-254.8" font-family="Arial" font-size="9.00">measurement_unit_code</text>
+<polygon fill="none" stroke="black" points="746,-249 746,-265 765,-265 765,-249 746,-249"/>
+<text text-anchor="start" x="750.5" y="-254.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="765,-249 765,-265 781,-265 781,-249 765,-249"/>
+<text text-anchor="start" x="768" y="-254.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="637,-233 637,-249 746,-249 746,-233 637,-233"/>
+<text text-anchor="start" x="688" y="-238.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="746,-233 746,-249 765,-249 765,-233 746,-233"/>
+<text text-anchor="start" x="749" y="-238.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="765,-233 765,-249 781,-249 781,-233 765,-233"/>
+<polygon fill="none" stroke="black" points="636,-232 636,-282 782,-282 782,-232 636,-232"/>
 </g>
 <!-- Measure Conditions&#45;&gt;Measurement Units -->
-<g id="database_124_edge8" class="edge">
+<g id="database_525_edge8" class="edge">
 <title>Measure Conditions:e&#45;&gt;Measurement Units:w</title>
-<path fill="none" stroke="black" d="M565,-245C585.94,-245 591.95,-254.35 609.39,-256.54"/>
-<polygon fill="black" stroke="black" points="609.36,-259.17 617,-257 609.67,-253.93 609.36,-259.17"/>
-</g>
-<!-- Measure Conditions&#45;&gt;Measurement Units -->
-<g id="database_124_edge9" class="edge">
-<title>Measure Conditions:e&#45;&gt;Measurement Units:w</title>
-<path fill="none" stroke="black" d="M573.07,-262.35C582.59,-261.91 592,-261.48 601.11,-261.06"/>
-<polygon fill="black" stroke="black" points="601.32,-263.67 608.69,-260.71 601.07,-258.43 601.32,-263.67"/>
-</g>
-<!-- Measure Condition Components -->
-<g id="table_103" class="node index2">
-<title>Measure Condition Components</title>
-<polygon fill="none" stroke="black" points="9.5,-349 9.5,-365 238.5,-365 238.5,-349 9.5,-349"/>
-<text text-anchor="start" x="57.5" y="-354.8" font-family="Arial" font-size="9.00">Measure Condition Components</text>
-<polygon fill="none" stroke="black" points="9.5,-333 9.5,-349 156.5,-349 156.5,-333 9.5,-333"/>
-<text text-anchor="start" x="34.5" y="-338.8" font-family="Arial" font-size="9.00">measure_condition_sid</text>
-<polygon fill="none" stroke="black" points="156.5,-333 156.5,-349 205.5,-349 205.5,-333 156.5,-333"/>
-<text text-anchor="start" x="176" y="-338.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="205.5,-333 205.5,-349 238.5,-349 238.5,-333 205.5,-333"/>
-<text text-anchor="start" x="211" y="-338.8" font-family="Arial" font-size="9.00">pk, fk</text>
-<polygon fill="none" stroke="black" points="9.5,-317 9.5,-333 156.5,-333 156.5,-317 9.5,-317"/>
-<text text-anchor="start" x="42.5" y="-322.8" font-family="Arial" font-size="9.00">duty_expression_id</text>
-<polygon fill="none" stroke="black" points="156.5,-317 156.5,-333 205.5,-333 205.5,-317 156.5,-317"/>
-<text text-anchor="start" x="176" y="-322.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="205.5,-317 205.5,-333 238.5,-333 238.5,-317 205.5,-317"/>
-<text text-anchor="start" x="211" y="-322.8" font-family="Arial" font-size="9.00">pk, fk</text>
-<polygon fill="none" stroke="black" points="9.5,-301 9.5,-317 156.5,-317 156.5,-301 9.5,-301"/>
-<text text-anchor="start" x="56" y="-306.8" font-family="Arial" font-size="9.00">duty_amount</text>
-<polygon fill="none" stroke="black" points="156.5,-301 156.5,-317 205.5,-317 205.5,-301 156.5,-301"/>
-<text text-anchor="start" x="172" y="-306.8" font-family="Arial" font-size="9.00">float</text>
-<polygon fill="none" stroke="black" points="205.5,-301 205.5,-317 238.5,-317 238.5,-301 205.5,-301"/>
-<text text-anchor="start" x="214" y="-306.8" font-family="Arial" font-size="9.00">null</text>
-<polygon fill="none" stroke="black" points="9.5,-285 9.5,-301 156.5,-301 156.5,-285 9.5,-285"/>
-<text text-anchor="start" x="40.5" y="-290.8" font-family="Arial" font-size="9.00">monetary_unit_code</text>
-<polygon fill="none" stroke="black" points="156.5,-285 156.5,-301 205.5,-301 205.5,-285 156.5,-285"/>
-<text text-anchor="start" x="159.5" y="-290.8" font-family="Arial" font-size="9.00">varchar(3)</text>
-<polygon fill="none" stroke="black" points="205.5,-285 205.5,-301 238.5,-301 238.5,-285 205.5,-285"/>
-<text text-anchor="start" x="208.5" y="-290.8" font-family="Arial" font-size="9.00">fk, null</text>
-<polygon fill="none" stroke="black" points="9.5,-269 9.5,-285 156.5,-285 156.5,-269 9.5,-269"/>
-<text text-anchor="start" x="31.5" y="-274.8" font-family="Arial" font-size="9.00">measurement_unit_code</text>
-<polygon fill="none" stroke="black" points="156.5,-269 156.5,-285 205.5,-285 205.5,-269 156.5,-269"/>
-<text text-anchor="start" x="159.5" y="-274.8" font-family="Arial" font-size="9.00">varchar(3)</text>
-<polygon fill="none" stroke="black" points="205.5,-269 205.5,-285 238.5,-285 238.5,-269 205.5,-269"/>
-<text text-anchor="start" x="208.5" y="-274.8" font-family="Arial" font-size="9.00">fk, null</text>
-<polygon fill="none" stroke="black" points="9.5,-253 9.5,-269 156.5,-269 156.5,-253 9.5,-253"/>
-<text text-anchor="start" x="12.5" y="-258.8" font-family="Arial" font-size="9.00">meausrement_unit_qualifier_code</text>
-<polygon fill="none" stroke="black" points="156.5,-253 156.5,-269 205.5,-269 205.5,-253 156.5,-253"/>
-<text text-anchor="start" x="159.5" y="-258.8" font-family="Arial" font-size="9.00">varchar(1)</text>
-<polygon fill="none" stroke="black" points="205.5,-253 205.5,-269 238.5,-269 238.5,-253 205.5,-253"/>
-<text text-anchor="start" x="208.5" y="-258.8" font-family="Arial" font-size="9.00">fk, null</text>
-<polygon fill="none" stroke="black" points="8,-252 8,-366 239,-366 239,-252 8,-252"/>
-</g>
-<!-- Measure Condition Components&#45;&gt;Measure Conditions -->
-<g id="database_124_edge1" class="edge">
-<title>Measure Condition Components:e&#45;&gt;Measure Conditions:w</title>
-<path fill="none" stroke="black" d="M239.5,-341C259.53,-341 266.41,-341 283.15,-341"/>
-<polygon fill="black" stroke="black" points="283.5,-343.63 291,-341 283.5,-338.38 283.5,-343.63"/>
+<path fill="none" stroke="black" d="M565,-287C596.45,-287 601.12,-261.72 628.18,-257.57"/>
+<polygon fill="black" stroke="black" points="628.71,-260.17 636,-257 628.33,-254.93 628.71,-260.17"/>
 </g>
 <!-- Measurement Unit Qualifiers -->
-<g id="table_350" class="node index9">
+<g id="table_292" class="node index9">
 <title>Measurement Unit Qualifiers</title>
-<polygon fill="none" stroke="black" points="32.5,-425 32.5,-441 214.5,-441 214.5,-425 32.5,-425"/>
-<text text-anchor="start" x="65" y="-430.8" font-family="Arial" font-size="9.00">Measurement Unit Qualifiers</text>
-<polygon fill="none" stroke="black" points="32.5,-409 32.5,-425 179.5,-425 179.5,-409 32.5,-409"/>
-<text text-anchor="start" x="35.5" y="-414.8" font-family="Arial" font-size="9.00">measurement_unit_qualifier_code</text>
-<polygon fill="none" stroke="black" points="179.5,-409 179.5,-425 198.5,-425 198.5,-409 179.5,-409"/>
-<text text-anchor="start" x="184" y="-414.8" font-family="Arial" font-size="9.00">int</text>
-<polygon fill="none" stroke="black" points="198.5,-409 198.5,-425 214.5,-425 214.5,-409 198.5,-409"/>
-<text text-anchor="start" x="201.5" y="-414.8" font-family="Arial" font-size="9.00">pk</text>
-<polygon fill="none" stroke="black" points="32.5,-393 32.5,-409 179.5,-409 179.5,-393 32.5,-393"/>
-<text text-anchor="start" x="102.5" y="-398.8" font-family="Arial" font-size="9.00">&hellip;</text>
-<polygon fill="none" stroke="black" points="179.5,-393 179.5,-409 198.5,-409 198.5,-393 179.5,-393"/>
-<text text-anchor="start" x="182.5" y="-398.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
-<polygon fill="none" stroke="black" points="198.5,-393 198.5,-409 214.5,-409 214.5,-393 198.5,-393"/>
-<polygon fill="none" stroke="black" points="31.5,-392 31.5,-442 215.5,-442 215.5,-392 31.5,-392"/>
+<polygon fill="none" stroke="black" points="618,-417 618,-433 800,-433 800,-417 618,-417"/>
+<text text-anchor="start" x="650.5" y="-422.8" font-family="Arial" font-size="9.00">Measurement Unit Qualifiers</text>
+<polygon fill="none" stroke="black" points="618,-401 618,-417 765,-417 765,-401 618,-401"/>
+<text text-anchor="start" x="621" y="-406.8" font-family="Arial" font-size="9.00">measurement_unit_qualifier_code</text>
+<polygon fill="none" stroke="black" points="765,-401 765,-417 784,-417 784,-401 765,-401"/>
+<text text-anchor="start" x="769.5" y="-406.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="784,-401 784,-417 800,-417 800,-401 784,-401"/>
+<text text-anchor="start" x="787" y="-406.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="618,-385 618,-401 765,-401 765,-385 618,-385"/>
+<text text-anchor="start" x="688" y="-390.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="765,-385 765,-401 784,-401 784,-385 765,-385"/>
+<text text-anchor="start" x="768" y="-390.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="784,-385 784,-401 800,-401 800,-385 784,-385"/>
+<polygon fill="none" stroke="black" points="617,-384 617,-434 801,-434 801,-384 617,-384"/>
+</g>
+<!-- Measure Conditions&#45;&gt;Measurement Unit Qualifiers -->
+<g id="database_525_edge9" class="edge">
+<title>Measure Conditions:e&#45;&gt;Measurement Unit Qualifiers:w</title>
+<path fill="none" stroke="black" d="M573.22,-402.57C585.1,-405.91 597.23,-408.13 609.41,-408.79"/>
+<polygon fill="black" stroke="black" points="609.43,-411.42 617,-409 609.57,-406.17 609.43,-411.42"/>
+</g>
+<!-- Measure Condition Components -->
+<g id="table_692" class="node index2">
+<title>Measure Condition Components</title>
+<polygon fill="none" stroke="black" points="9.5,-391 9.5,-407 238.5,-407 238.5,-391 9.5,-391"/>
+<text text-anchor="start" x="57.5" y="-396.8" font-family="Arial" font-size="9.00">Measure Condition Components</text>
+<polygon fill="none" stroke="black" points="9.5,-375 9.5,-391 156.5,-391 156.5,-375 9.5,-375"/>
+<text text-anchor="start" x="34.5" y="-380.8" font-family="Arial" font-size="9.00">measure_condition_sid</text>
+<polygon fill="none" stroke="black" points="156.5,-375 156.5,-391 205.5,-391 205.5,-375 156.5,-375"/>
+<text text-anchor="start" x="176" y="-380.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="205.5,-375 205.5,-391 238.5,-391 238.5,-375 205.5,-375"/>
+<text text-anchor="start" x="211" y="-380.8" font-family="Arial" font-size="9.00">pk, fk</text>
+<polygon fill="none" stroke="black" points="9.5,-359 9.5,-375 156.5,-375 156.5,-359 9.5,-359"/>
+<text text-anchor="start" x="42.5" y="-364.8" font-family="Arial" font-size="9.00">duty_expression_id</text>
+<polygon fill="none" stroke="black" points="156.5,-359 156.5,-375 205.5,-375 205.5,-359 156.5,-359"/>
+<text text-anchor="start" x="176" y="-364.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="205.5,-359 205.5,-375 238.5,-375 238.5,-359 205.5,-359"/>
+<text text-anchor="start" x="211" y="-364.8" font-family="Arial" font-size="9.00">pk, fk</text>
+<polygon fill="none" stroke="black" points="9.5,-343 9.5,-359 156.5,-359 156.5,-343 9.5,-343"/>
+<text text-anchor="start" x="56" y="-348.8" font-family="Arial" font-size="9.00">duty_amount</text>
+<polygon fill="none" stroke="black" points="156.5,-343 156.5,-359 205.5,-359 205.5,-343 156.5,-343"/>
+<text text-anchor="start" x="172" y="-348.8" font-family="Arial" font-size="9.00">float</text>
+<polygon fill="none" stroke="black" points="205.5,-343 205.5,-359 238.5,-359 238.5,-343 205.5,-343"/>
+<text text-anchor="start" x="214" y="-348.8" font-family="Arial" font-size="9.00">null</text>
+<polygon fill="none" stroke="black" points="9.5,-327 9.5,-343 156.5,-343 156.5,-327 9.5,-327"/>
+<text text-anchor="start" x="40.5" y="-332.8" font-family="Arial" font-size="9.00">monetary_unit_code</text>
+<polygon fill="none" stroke="black" points="156.5,-327 156.5,-343 205.5,-343 205.5,-327 156.5,-327"/>
+<text text-anchor="start" x="159.5" y="-332.8" font-family="Arial" font-size="9.00">varchar(3)</text>
+<polygon fill="none" stroke="black" points="205.5,-327 205.5,-343 238.5,-343 238.5,-327 205.5,-327"/>
+<text text-anchor="start" x="208.5" y="-332.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="9.5,-311 9.5,-327 156.5,-327 156.5,-311 9.5,-311"/>
+<text text-anchor="start" x="31.5" y="-316.8" font-family="Arial" font-size="9.00">measurement_unit_code</text>
+<polygon fill="none" stroke="black" points="156.5,-311 156.5,-327 205.5,-327 205.5,-311 156.5,-311"/>
+<text text-anchor="start" x="159.5" y="-316.8" font-family="Arial" font-size="9.00">varchar(3)</text>
+<polygon fill="none" stroke="black" points="205.5,-311 205.5,-327 238.5,-327 238.5,-311 205.5,-311"/>
+<text text-anchor="start" x="208.5" y="-316.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="9.5,-295 9.5,-311 156.5,-311 156.5,-295 9.5,-295"/>
+<text text-anchor="start" x="12.5" y="-300.8" font-family="Arial" font-size="9.00">meausrement_unit_qualifier_code</text>
+<polygon fill="none" stroke="black" points="156.5,-295 156.5,-311 205.5,-311 205.5,-295 156.5,-295"/>
+<text text-anchor="start" x="159.5" y="-300.8" font-family="Arial" font-size="9.00">varchar(1)</text>
+<polygon fill="none" stroke="black" points="205.5,-295 205.5,-311 238.5,-311 238.5,-295 205.5,-295"/>
+<text text-anchor="start" x="208.5" y="-300.8" font-family="Arial" font-size="9.00">fk, null</text>
+<polygon fill="none" stroke="black" points="8,-294 8,-408 239,-408 239,-294 8,-294"/>
+</g>
+<!-- Measure Condition Components&#45;&gt;Measure Conditions -->
+<g id="database_525_edge1" class="edge">
+<title>Measure Condition Components:e&#45;&gt;Measure Conditions:w</title>
+<path fill="none" stroke="black" d="M239.5,-383C259.53,-383 266.41,-383 283.15,-383"/>
+<polygon fill="black" stroke="black" points="283.5,-385.63 291,-383 283.5,-380.38 283.5,-385.63"/>
 </g>
 </g>
 </svg><div class="table-container">
@@ -1313,151 +1321,102 @@
 <li>Is the documentation correct</li>
 <li>Is the price higher than a reference price</li>
 </ol>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Does the trader have the right documentation?</th>
-<th></th>
-</tr><tr>
-<td>A</td>
-<td>Presentation   of an anti-dumping/countervailing document</td>
-</tr><tr>
-<td>B</td>
-<td>Presentation   of a certificate/licence/document</td>
-</tr><tr>
-<td>C</td>
-<td>Presentation   of a certificate/licence/document</td>
-</tr><tr>
-<td>H</td>
-<td>Presentation   of a certificate/licence/document</td>
-</tr><tr>
-<td>Q</td>
-<td>Presentation   of an endorsed certificate/licence</td>
-</tr><tr>
-<td>Y</td>
-<td>Other   conditions</td>
-</tr><tr>
-<td>Z</td>
-<td>Presentation   of more than one certificate</td>
-</tr>
-        </table>
-      </div><div class="table-container">
-        <table>
-          <tr>
-<th>Is the price higher than a reference price?</th>
-<th></th>
-</tr><tr>
-<td>E</td>
-<td>The   quantity or the price per unit declared, as appropriate, is equal or less   than the specified maximum, or presentation of the required document</td>
-</tr><tr>
-<td>I</td>
-<td>The   quantity or the price per unit declared, as appropriate, is equal or less   than the specified maximum, or presentation of the required document</td>
-</tr><tr>
-<td>F</td>
-<td>The   net free at frontier price before duty must be equal to or greater than the   minimum price (see components)</td>
-</tr><tr>
-<td>L</td>
-<td>CIF   price must be higher than the minimum price (see components)</td>
-</tr><tr>
-<td>M</td>
-<td>Declared   price must be equal to or greater than the minimum price/reference price (see   components)</td>
-</tr><tr>
-<td>R</td>
-<td>Ratio   &ldquo;net weight/supplementary unit&rdquo; is equal to or higher than the   condition amount</td>
-</tr><tr>
-<td>U</td>
-<td>Ratio   &ldquo;declared value/supplementary unit&rdquo; should be higher than the   condition amount</td>
-</tr><tr>
-<td>V</td>
-<td>Import   price must be equal to or greater than the entry price (see components)</td>
-</tr>
-        </table>
-      </div><h2 id="action-codes">Action codes</h2>
+<p>Note that some condition codes may fall into both of these types, and can require either documentation or a price.</p>
+<h3 id="does-the-trader-have-the-right-documentation">Does the trader have the right documentation?</h3>
+<table>
+    <thead>
+      <tr>
+        <th>Condition Code</th><th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>A</td><td>Presentation of an anti-dumping/countervailing document</td></tr><tr><td>B</td><td>Presentation of a certificate/licence/document</td></tr><tr><td>C</td><td>Presentation of a certificate/licence/document</td></tr><tr><td>E</td><td>The quantity or the price per unit declared, as appropriate, is equal or less than the specified maximum, or presentation of the required document</td></tr><tr><td>H</td><td>Presentation of a certificate/licence/document</td></tr><tr><td>I</td><td>The quantity or the price per unit declared, as appropriate, is equal or less than the specified maximum, or presentation of the required document</td></tr><tr><td>K</td><td>Also applicable simultaneously with tariff quota shown in the field &ldquo;certificates&rdquo;</td></tr><tr><td>P</td><td>Only particular ingredients are eligible for export refund</td></tr><tr><td>Q</td><td>Presentation of an endorsed certificate/licence</td></tr><tr><td>Y</td><td>Other conditions</td></tr><tr><td>Z</td><td>Presentation of more than one certificate</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=2>
+          Last updated 30 Oct 2023
+        </td>
+      </tr>
+      <tr>
+        <td colspan=2>
+          <details>
+            <summary>See the SQL query that generated this table</summary>
+            <p>This table was automatically generated from the open SQLite database providing the UK Tariff.</p>
+            <p>The following query was used to generate the table:</p>
+            <pre>SELECT code AS "Condition Code",
+    description AS "Description"
+FROM measure_condition_codes
+WHERE accepts_certificate = 1
+ORDER BY code</pre>
+          </details>
+        </td>
+      </tr>
+    </tfoot>
+  </table><h3 id="is-the-price-higher-than-a-reference-price">Is the price higher than a reference price?</h3>
+<table>
+    <thead>
+      <tr>
+        <th>Condition Code</th><th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>E</td><td>The quantity or the price per unit declared, as appropriate, is equal or less than the specified maximum, or presentation of the required document</td></tr><tr><td>F</td><td>The net free at frontier price before duty must be equal to or greater than the minimum price (see components)</td></tr><tr><td>G</td><td>The CIF price plus the duty to be paid/ton must be equal to or greater than the minimum price (see components)</td></tr><tr><td>I</td><td>The quantity or the price per unit declared, as appropriate, is equal or less than the specified maximum, or presentation of the required document</td></tr><tr><td>L</td><td>CIF price must be higher than the minimum price (see components)</td></tr><tr><td>M</td><td>Declared price must be equal to or greater than the minimum price/reference price (see components)</td></tr><tr><td>N</td><td>The CIF price before duty must be equal to or greater than the minimum price (see components)</td></tr><tr><td>R</td><td>Ratio &ldquo;net weight/supplementary unit&rdquo; is equal to or higher than the condition amount</td></tr><tr><td>S</td><td>Lodgement of a security</td></tr><tr><td>U</td><td>Ratio &ldquo;declared value/supplementary unit&rdquo; should be higher than the condition amount</td></tr><tr><td>V</td><td>Import price must be equal to or greater than the entry price (see components)</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=2>
+          Last updated 30 Oct 2023
+        </td>
+      </tr>
+      <tr>
+        <td colspan=2>
+          <details>
+            <summary>See the SQL query that generated this table</summary>
+            <p>This table was automatically generated from the open SQLite database providing the UK Tariff.</p>
+            <p>The following query was used to generate the table:</p>
+            <pre>SELECT code AS "Condition Code",
+    description AS "Description"
+FROM measure_condition_codes
+WHERE accepts_price = 1
+ORDER BY code</pre>
+          </details>
+        </td>
+      </tr>
+    </tfoot>
+  </table><h2 id="action-codes">Action codes</h2>
 <p>Action codes identify the type of action that will be taken in response to a condition code.</p>
 <p>The following table lists the action codes that can be associated with a condition. The action code is mandatory – there is no value in a condition if no subsequent action is taken.</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>ID</th>
-<th>Description</th>
-</tr><tr>
-<td>01</td>
-<td>Apply the amount of the action (see components)</td>
-</tr><tr>
-<td>02</td>
-<td>Apply the difference between the amount of the action (see components) and the price at import</td>
-</tr><tr>
-<td>03</td>
-<td>Apply the difference between the amount of the action (see components) and CIF price</td>
-</tr><tr>
-<td>04</td>
-<td>The entry into free circulation is not allowed</td>
-</tr><tr>
-<td>05</td>
-<td>Export is not allowed</td>
-</tr><tr>
-<td>06</td>
-<td>Import is not allowed</td>
-</tr><tr>
-<td>07</td>
-<td>Measure not applicable</td>
-</tr><tr>
-<td>08</td>
-<td>Declared subheading not allowed</td>
-</tr><tr>
-<td>09</td>
-<td>Import/export not allowed after control</td>
-</tr><tr>
-<td>10</td>
-<td>Declaration to be corrected - box 33, 37, 38, 41 or 46 incorrect</td>
-</tr><tr>
-<td>11</td>
-<td>Apply the difference between the amount of the action (see components) and the free at frontier price before duty</td>
-</tr><tr>
-<td>12</td>
-<td>Apply the difference between the amount of the action (see components) and the CIF price before duty</td>
-</tr><tr>
-<td>13</td>
-<td>Apply the difference between the amount of the action (see components) and the CIF price augmented with the duty to be paid per tonne</td>
-</tr><tr>
-<td>14</td>
-<td>The exemption/reduction of the anti-dumping duty is not applicable</td>
-</tr><tr>
-<td>15</td>
-<td>Apply the difference between the amount of the action (see components) and the price augmented with the countervailing duty (3,8%)</td>
-</tr><tr>
-<td>16</td>
-<td>Export refund not applicable</td>
-</tr><tr>
-<td>24</td>
-<td>Entry into free circulation allowed</td>
-</tr><tr>
-<td>25</td>
-<td>Export allowed</td>
-</tr><tr>
-<td>26</td>
-<td>Import allowed</td>
-</tr><tr>
-<td>27</td>
-<td>Apply the mentioned duty</td>
-</tr><tr>
-<td>28</td>
-<td>Declared subheading allowed</td>
-</tr><tr>
-<td>29</td>
-<td>Import/export allowed after control</td>
-</tr><tr>
-<td>30</td>
-<td>Suspicious case</td>
-</tr><tr>
-<td>34</td>
-<td>Apply exemption/reduction of the anti-dumping duty</td>
-</tr><tr>
-<td>36</td>
-<td>Apply export refund</td>
-</tr>
-        </table>
-      </div><h3 id="action-codes-that-go-together">Action codes that go together</h3>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>01</td><td>Apply the amount of the action (see components)</td></tr><tr><td>02</td><td>Apply the difference between the amount of the action (see components) and the price at import</td></tr><tr><td>03</td><td>Apply the difference between the amount of the action (see components) and CIF price</td></tr><tr><td>04</td><td>The entry into free circulation is not allowed</td></tr><tr><td>05</td><td>Export is not allowed</td></tr><tr><td>06</td><td>Import is not allowed</td></tr><tr><td>07</td><td>Measure not applicable</td></tr><tr><td>08</td><td>Declared subheading not allowed</td></tr><tr><td>09</td><td>Import/export not allowed after control</td></tr><tr><td>10</td><td>Declaration to be corrected  - box 33, 37, 38, 41 or 46 incorrect</td></tr><tr><td>11</td><td>Apply the difference between the amount of the action (see components) and the free at frontier price before duty</td></tr><tr><td>12</td><td>Apply the difference between the amount of the action (see components) and the CIF price before duty</td></tr><tr><td>13</td><td>Apply the difference between the amount of the action (see components) and the CIF price augmented with the duty to be paid per tonne</td></tr><tr><td>14</td><td>The exemption/reduction of the anti-dumping duty is not applicable</td></tr><tr><td>15</td><td>Apply the difference between the amount of the action (see components) and the price augmented with the countervailing duty (3,8%)</td></tr><tr><td>16</td><td>Export refund not applicable</td></tr><tr><td>24</td><td>Entry into free circulation allowed</td></tr><tr><td>25</td><td>Export allowed</td></tr><tr><td>26</td><td>Import allowed</td></tr><tr><td>27</td><td>Apply the mentioned duty</td></tr><tr><td>28</td><td>Declared subheading allowed</td></tr><tr><td>29</td><td>Import/export allowed after control</td></tr><tr><td>30</td><td>Suspicious case</td></tr><tr><td>34</td><td>Apply exemption/reduction of the anti-dumping duty</td></tr><tr><td>36</td><td>Apply export refund</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=2>
+          Last updated 30 Oct 2023
+        </td>
+      </tr>
+      <tr>
+        <td colspan=2>
+          <details>
+            <summary>See the SQL query that generated this table</summary>
+            <p>This table was automatically generated from the open SQLite database providing the UK Tariff.</p>
+            <p>The following query was used to generate the table:</p>
+            <pre>SELECT code AS "ID",
+    description AS "Description"
+FROM measure_actions
+ORDER BY code</pre>
+          </details>
+        </td>
+      </tr>
+    </tfoot>
+  </table><h3 id="action-codes-that-go-together">Action codes that go together</h3>
 <p>Many of the action codes are part of an action code pair. The smaller of the 2 is usually the negative action. The larger is the complementary positive action.</p>
 <p>The following table shows the pairs of action codes that always go together.</p>
 <div class="table-container">
@@ -1661,8 +1620,7 @@
 </svg><h2 id="grouping-condition-codes">Grouping condition codes</h2>
 <p>Conditions are grouped together according to their condition code.</p>
 <p>Within that group, the individual conditions are grouped together in an &lsquo;or&rsquo; relationship.</p>
-<p>In the following diagram, one of the 2 conditions in condition set B needs to be provided, alongside one of the 2 conditions in condition set E.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93788967-2b632d00-fc29-11ea-8ebf-af4fafc689d7.png" alt="image" /></a></p>
+<p>For example, a measure has four conditions. Two in condition group B (B1 and B2), and two in condition group E (E1 and E2). At least one condition in each group needs to be met, but within the group it does not matter which condition is met, so long as one of them is. Thus the satisfation requirements are <code>(Condition B1 OR Condition B2) AND (Condition E1 or Condition E2)</code></p>
 <h2 id="condition-codes-in-detail">Condition codes in detail</h2>
 <h3 id="condition-code-a-presentation-of-an-anti-dumping-countervailing-document">Condition code A: Presentation of an anti-dumping/countervailing document</h3>
 <p>Condition code A modifies the circumstances of an anti-dumping or anti-subsidy duty depending on the conditions stated.</p>
