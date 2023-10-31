@@ -257,7 +257,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/transactions.html#transactions-are-atomic"><span>Transactions are atomic</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/transactions.html#validation-rules"><span>Validation rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/transactions.html#transactions-validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
   </li>
@@ -421,7 +421,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-component-data-structure-entity-relationship-diagram"><span>Measure component data structure entity-relationship diagram</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-components-business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#business-rules"><span>Business rules</span></a>
       </li>
     </ul>
   </li>
@@ -536,7 +536,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#list-of-active-measure-types"><span>List of active measure types</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-types.html#validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
   </li>
@@ -917,7 +917,7 @@
 <a href="#list-of-active-measure-types">List of active measure types</a>
 </li>
 <li>
-<a href="#business-rules">Business rules</a>
+<a href="#validation-rules">Validation rules</a>
 </li>
 </ul></p>
 <h2 id="what-measure-types-are">What measure types are</h2>
@@ -1785,8 +1785,43 @@ ORDER BY sid</pre>
         </td>
       </tr>
     </tfoot>
-  </table><h2 id="business-rules">Business rules</h2>
-<p>Read the business rules for measure types in the <a href="https://uktrade.github.io/tamato/html/business_rules/measures.html">system documentation</a>.</p>
+  </table><h2 id="validation-rules">Validation rules</h2>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Code</th>
+<th>Description</th>
+</tr><tr>
+<td>MT1</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for measure type code.</td>
+</tr><tr>
+<td>MT10</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for measure type series used by measure types.</td>
+</tr><tr>
+<td>MT3</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for measure types used by measures.</td>
+</tr><tr>
+<td>MT4</td>
+<td>
+<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for referenced measure type series.</td>
+</tr><tr>
+<td>MT7</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for measure types used in measures.</td>
+</tr><tr>
+<td>MTS1</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for measure type series.</td>
+</tr><tr>
+<td>MTS2</td>
+<td>
+<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for measure type series used in measure types.</td>
+</tr>
+        </table>
+      </div><p>Read more in the <a href="https://uktrade.github.io/tamato/html/business_rules/measures.html">system documentation</a>.</p>
 
             
           </main>
