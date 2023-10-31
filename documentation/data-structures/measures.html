@@ -490,7 +490,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#condition-codes-in-detail"><span>Condition codes in detail</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#business-rules"><span>Business rules</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html#measure-conditions-validation-rules"><span>Validation rules</span></a>
       </li>
     </ul>
   </li>
@@ -1062,38 +1062,13 @@
 <th>Code</th>
 <th>Description</th>
 </tr><tr>
-<td>ActionRequiresDuty</td>
-<td>If a condition’s action code requires a duty, then an associated condition component must be created with a duty amount.</td>
-</tr><tr>
-<td>ComponentApplicability</td>
-<td>Rule enforcing component applicability.</td>
-</tr><tr>
-<td>ConditionCodeAcceptance</td>
-<td>If a condition has a certificate, then the condition’s code must accept a certificate. If a condition has a duty amount, then the condition’s code must accept a price.</td>
-</tr><tr>
 <td>MA1</td>
 <td>
 <a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for codes of measure actions.</td>
 </tr><tr>
-<td>MA2</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for measure actions that are used in a measure condition component.</td>
-</tr><tr>
 <td>MA4</td>
 <td>
 <a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for measure actions used in measures.</td>
-</tr><tr>
-<td>MC1</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for codes of measure conditions.</td>
-</tr><tr>
-<td>MC3</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for measure condition codes used in measures.</td>
-</tr><tr>
-<td>MC4</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for measure condition codes that are used in a measure condition component.</td>
 </tr><tr>
 <td>ME1</td>
 <td>
@@ -1104,26 +1079,6 @@
 </tr><tr>
 <td>ME104</td>
 <td>The justification regulation must be either: the measure’s measure-generating regulation, or a measure-generating regulation, valid on the day after the measure’s (explicit) end date. If the measure’s measure-generating regulation is ‘approved’, then so must be the justification regulation.</td>
-</tr><tr>
-<td>ME105</td>
-<td>
-<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for referenced duty expressions.</td>
-</tr><tr>
-<td>ME106</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for duty expressions used in measures.</td>
-</tr><tr>
-<td>ME108</td>
-<td>The same duty expression can only be used once within condition components of the same condition of the same measure. (i.e. it can be re-used in other conditions, no matter what condition type, of the same measure).</td>
-</tr><tr>
-<td>ME109</td>
-<td>If the flag ‘amount’ on duty expression is ‘mandatory’ then an amount must be specified. If the flag is set to ‘not permitted’ then no amount may be entered.</td>
-</tr><tr>
-<td>ME110</td>
-<td>If the flag ‘monetary unit’ on duty expression is ‘mandatory’ then a monetary unit must be specified. If the flag is set to ‘not permitted’ then no monetary unit may be entered.</td>
-</tr><tr>
-<td>ME111</td>
-<td>If the flag ‘measurement unit’ on duty expression is ‘mandatory’ then a measurement unit must be specified. If the flag is set to ‘not permitted’ then no measurement unit may be entered.</td>
 </tr><tr>
 <td>ME115</td>
 <td>
@@ -1155,9 +1110,6 @@
 <td>ME24</td>
 <td>The role + regulation id must exist. If no measure start date is specified it defaults to the regulation start date.</td>
 </tr><tr>
-<td></td>
-<td></td>
-</tr><tr>
 <td>ME25</td>
 <td>If the measure’s end date is specified (implicitly or explicitly) then the start date of the measure must be less than or equal to the end date.</td>
 </tr><tr>
@@ -1170,9 +1122,6 @@
 </tr><tr>
 <td>ME32</td>
 <td>There may be no overlap in time with other measure occurrences with a goods code in the same nomenclature hierarchy which references the same measure type, geo area, order number, additional code and reduction indicator. This rule is not applicable for Meursing additional codes.</td>
-</tr><tr>
-<td></td>
-<td></td>
 </tr><tr>
 <td>ME33</td>
 <td>A justification regulation may not be entered if the measure end date is not filled in.</td>
@@ -1187,89 +1136,17 @@
 <td>ME40</td>
 <td>If the flag “duty expression” on measure type is “mandatory” then at least one measure component or measure condition component record must be specified. If the flag is set “not permitted” then no measure component or measure condition component must exist. Measure components and measure condition components are mutually exclusive. A measure can have either components or condition components (if the “duty expression” flag is “mandatory” or “optional”) but not both. This describes the fact that measures of certain types MUST have components (duties) assigned to them, whereas others must not. Note the sub-clause also – if the value of the field “Component applicable” is set to 1 (mandatory) on a measure type, then when the measure is created, there must be either measure components or measure condition components assigned to the measure, but not both. CDS will generate errors if either of these conditions are not met.</td>
 </tr><tr>
-<td>ME41</td>
-<td>
-<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for referenced duty expressions.</td>
-</tr><tr>
-<td>ME42</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for duty expressions referenced by measures.</td>
-</tr><tr>
-<td>ME43</td>
-<td>The same duty expression can only be used once with the same measure.</td>
-</tr><tr>
-<td>ME45</td>
-<td>If the flag “amount” on duty expression is “mandatory” then an amount must be specified. If the flag is set “not permitted” then no amount may be entered.</td>
-</tr><tr>
-<td>ME46</td>
-<td>If the flag “monetary unit” on duty expression is “mandatory” then a monetary unit must be specified. If the flag is set “not permitted” then no monetary unit may be entered.</td>
-</tr><tr>
-<td>ME47</td>
-<td>If the flag “measurement unit” on duty expression is “mandatory” then a measurement unit must be specified. If the flag is set “not permitted” then no measurement unit may be entered.</td>
-</tr><tr>
-<td>ME48</td>
-<td>The referenced monetary unit must exist.</td>
-</tr><tr>
-<td>ME49</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for referenced monetary units.</td>
-</tr><tr>
 <td>ME5</td>
 <td>
 <a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for geographical areas referenced by measures.</td>
-</tr><tr>
-<td>ME50</td>
-<td>The combination measurement unit + measurement unit qualifier must exist.</td>
-</tr><tr>
-<td>ME51</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for measurement units referenced by measures.</td>
-</tr><tr>
-<td>ME52</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for measurement unit qualifiers referenced by measures.</td>
 </tr><tr>
 <td>ME53</td>
 <td>
 <a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for referenced measure conditions.</td>
 </tr><tr>
-<td>ME56</td>
-<td>
-<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for referenced certificates.</td>
-</tr><tr>
-<td>ME57</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for certificates referenced by measures.</td>
-</tr><tr>
-<td>ME58</td>
-<td>The same certificate, volume or price can only be referenced once by the same measure and the same condition type.</td>
-</tr><tr>
-<td>ME59</td>
-<td>
-<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for referenced action codes.</td>
-</tr><tr>
 <td>ME6</td>
 <td>
 <a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for the referenced goods code.</td>
-</tr><tr>
-<td>ME60</td>
-<td>
-<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for referenced monetary units.</td>
-</tr><tr>
-<td>ME61</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for referenced monetary units.</td>
-</tr><tr>
-<td>ME62</td>
-<td>The combination measurement unit + measurement unit qualifier must exist.</td>
-</tr><tr>
-<td>ME63</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for referenced measurement units.</td>
-</tr><tr>
-<td>ME64</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for referenced measurement unit qualifiers.</td>
 </tr><tr>
 <td>ME65</td>
 <td>An exclusion can only be entered if the measure is applicable to a geographical area group (area code = 1).</td>
@@ -1313,40 +1190,6 @@
 </tr><tr>
 <td>ME9</td>
 <td>If no additional code is specified then the goods code is mandatory.</td>
-</tr><tr>
-<td>MT1</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for measure type code.</td>
-</tr><tr>
-<td>MT10</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for measure type series used by measure types.</td>
-</tr><tr>
-<td>MT3</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/validity-contained.html">Validity contained</a> rule for measure types used by measures.</td>
-</tr><tr>
-<td>MT4</td>
-<td>
-<a href="/tariff-data-manual/documentation/validation-rules/mandatory-subrecord.html">Mandatory subrecord</a> rule for referenced measure type series.</td>
-</tr><tr>
-<td>MT7</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for measure types used in measures.</td>
-</tr><tr>
-<td>MTS1</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/uniqueness.html">Uniqueness</a> rule for measure type series.</td>
-</tr><tr>
-<td>MTS2</td>
-<td>
-<a href="/tariff-data-manual/documentation/validity-rules/deletion-while-in-use.html">Deletion while in use</a> rule for measure type series used in measure types.</td>
-</tr><tr>
-<td>MeasureComponentApplicability</td>
-<td></td>
-</tr><tr>
-<td>MeasureConditionComponentApplicability</td>
-<td></td>
 </tr><tr>
 <td>QuotaOriginMatchingArea</td>
 <td>When a quota order number is used in a measure then the quota order number origin’s geographical area(s) must match those of the measure.</td>
