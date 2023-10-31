@@ -415,19 +415,10 @@
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#duty-expressions"><span>Duty expressions</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#duty-expression-sequencing-and-duality"><span>Duty expression sequencing and duality</span></a>
-      </li>
-      <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#how-to-group-duty-expressions"><span>How to group duty expressions</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measurement-units-and-abbreviations"><span>Measurement units and abbreviations</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
-      </li>
-      <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-component-data-structures"><span>Measure component data structures</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#measure-component-data-structure-entity-relationship-diagram"><span>Measure component data structure entity-relationship diagram</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measure-components.html#business-rules"><span>Business rules</span></a>
@@ -644,7 +635,7 @@
         <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#measurement-unit-codes-and-abbreviations"><span>Measurement unit codes and abbreviations</span></a>
       </li>
       <li>
-        <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#measurement-units-measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
+        <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#measurement-unit-qualifiers"><span>Measurement unit qualifiers</span></a>
       </li>
       <li>
         <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html#entity-relationship-diagram-for-measurement-units"><span>Entity-relationship diagram for measurement units</span></a>
@@ -873,16 +864,7 @@
 <a href="#duty-expressions">Duty expressions</a>
 </li>
 <li>
-<a href="#duty-expression-sequencing-and-duality">Duty expression sequencing and duality</a>
-</li>
-<li>
 <a href="#how-to-group-duty-expressions">How to group duty expressions</a>
-</li>
-<li>
-<a href="#measurement-units-and-abbreviations">Measurement units and abbreviations</a>
-</li>
-<li>
-<a href="#measurement-unit-qualifiers">Measurement unit qualifiers</a>
 <ul>
 <li>
 <a href="#managing-duties">Managing duties</a>
@@ -890,7 +872,7 @@
 </ul>
 <p></li>
 <li>
-<a href="#measure-component-data-structures">Measure component data structures</a>
+<a href="#measure-component-data-structure-entity-relationship-diagram">Measure component data structure entity-relationship diagram</a>
 <ul>
 <li>
 <a href="#measure-condition-components">Measure condition components</a>
@@ -920,18 +902,93 @@
 <li>compound duty - a combination of ad valorem and specific duties</li>
 </ul>
 <h2 id="breaking-down-a-duty-string">Breaking down a duty string</h2>
-<p><a href="https://user-images.githubusercontent.com/61055197/93507767-124f3900-f916-11ea-994c-21ebb8b2a923.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93507767-124f3900-f916-11ea-994c-21ebb8b2a923.png" alt="image" /></a></p>
+<p>Note: the below is an example and does not use real duty amounts</p>
+
+<ul>
+<li>The full duty applicable to the import of white chocolate is as follows:
+<code>9.10%</code> + <code>45.10 GBP / 100 KG</code>  <code>MAX 18.90%</code> + <code>16.50 GBP / 100 KG</code></li>
+<li>This is actually made up of four measure components, with breaks as per the grey boxes.</li>
+<li>The table below indicates what makes up the individual measure components:</li>
+</ul>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Duty Expression ID</th>
+<th>Duty Amount</th>
+<th>Monetary Unit Code</th>
+<th>Measurement Unit Code</th>
+</tr><tr>
+<td>01</td>
+<td>9.1</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>04</td>
+<td>45.1</td>
+<td>GBP</td>
+<td>DTN</td>
+</tr><tr>
+<td>17</td>
+<td>18.9</td>
+<td></td>
+<td></td>
+</tr><tr>
+<td>19</td>
+<td>16.5</td>
+<td>GBP</td>
+<td>DTN</td>
+</tr>
+        </table>
+      </div>
+<ul>
+<li>These fields are discussed in detail below, for now recognise that the numbers in the table rows matches up with the four sections of the duty expression. Note that this is a compound duty, specifying an ad valorem duty (9.1%) and a specific duty (£45.10/100kg) up to a maximum value equal to another compound duty (18.9% + £16.50/100kg).</li>
+</ul>
 <h2 id="duty-expressions">Duty expressions</h2>
 <p>Duty expressions indicate to the border system how the values that are attributed to the other columns in the measure component table should be treated.</p>
 <p>Duty expressions cannot be changed, appended or deleted.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93519105-b391bb80-f925-11ea-8ce6-31761d89017c.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519105-b391bb80-f925-11ea-8ce6-31761d89017c.png" alt="image" /></a></p>
-<h2 id="duty-expression-sequencing-and-duality">Duty expression sequencing and duality</h2>
-<p><a href="https://user-images.githubusercontent.com/61055197/93519438-2c911300-f926-11ea-94d3-e60cb9a3c569.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519438-2c911300-f926-11ea-94d3-e60cb9a3c569.png" alt="image" /></a></p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93519449-3155c700-f926-11ea-9ff6-926aa8f00b63.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93519449-3155c700-f926-11ea-9ff6-926aa8f00b63.png" alt="image" /></a></p>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>% or amount</td></tr><tr><td>2</td><td>minus % or amount</td></tr><tr><td>3</td><td>The rate is replaced by the levy</td></tr><tr><td>4</td><td>+ % or amount</td></tr><tr><td>5</td><td>The rate is replaced by the reduced levy</td></tr><tr><td>6</td><td>+ Suplementary amount</td></tr><tr><td>7</td><td>+ Levy</td></tr><tr><td>9</td><td>+ Reduced levy</td></tr><tr><td>11</td><td>+ Variable component</td></tr><tr><td>12</td><td>+ agricultural component</td></tr><tr><td>13</td><td>+ Reduced variable component</td></tr><tr><td>14</td><td>+ reduced agricultural component</td></tr><tr><td>15</td><td>Minimum</td></tr><tr><td>17</td><td>Maximum</td></tr><tr><td>19</td><td>+ % or amount</td></tr><tr><td>20</td><td>+ % or amount</td></tr><tr><td>21</td><td>+ additional duty on sugar</td></tr><tr><td>23</td><td>+ 2 % Additional duty on sugar</td></tr><tr><td>25</td><td>+ reduced additional duty on sugar</td></tr><tr><td>27</td><td>+ additional duty on flour</td></tr><tr><td>29</td><td>+ reduced additional duty on flour</td></tr><tr><td>31</td><td>Accession compensatory amount</td></tr><tr><td>33</td><td>+ Accession compensatory amount</td></tr><tr><td>35</td><td>Maximum</td></tr><tr><td>36</td><td>minus % CIF</td></tr><tr><td>37</td><td>(nothing)</td></tr><tr><td>40</td><td>Export refunds for cereals</td></tr><tr><td>41</td><td>Export refunds for rice</td></tr><tr><td>42</td><td>Export refunds for eggs</td></tr><tr><td>43</td><td>Export refunds for sugar</td></tr><tr><td>44</td><td>Export refunds for milk products</td></tr><tr><td>99</td><td>Supplementary unit</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan=2>
+          Last updated 31 Oct 2023
+        </td>
+      </tr>
+      <tr>
+        <td colspan=2>
+          <details>
+            <summary>See the SQL query that generated this table</summary>
+            <p>This table was automatically generated from the open SQLite database providing the UK Tariff.</p>
+            <p>The following query was used to generate the table:</p>
+            <pre>SELECT sid AS 'ID',
+    description AS 'Description'
+FROM measure_duty_expressions
+INNER JOIN common_tracked_models ON measure_duty_expressions.trackedmodel_ptr_id = common_tracked_models.id
+INNER JOIN common_version_groups ON common_tracked_models.id = common_version_groups.current_version_id
+ORDER BY sid</pre>
+          </details>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+<ul>
+<li>The sequence of the duty expression IDs is critical.</li>
+<li>Individual measure components are added to measures and ordered by their duty expression ID, there is no separate sequence identifier that tells border systems the order in which to apply the components. They are applied in ascending order according to their duty expression ID.</li>
+<li>In the white chocolate example, the duty expressions were in ascending sequence, there is no way to influence this.</li>
+<li>Many of these duty expressions are duplicates of each other, both so that they can be assigned in the correct sequence, and because measures may be assigned measure components of a given duty expression ID once only. THus having duplicates also allows for similar duty expressions to be applied later in the sequence.</li>
+<li>Despite their descriptions being not quite identical, duty expressions 1, 4, 19 and 20 are treated identically by border systems. The same applies to 17 and 35, these are functionally identical.</li>
+</ul>
 <h2 id="how-to-group-duty-expressions">How to group duty expressions</h2>
 <p>You cannot choose which of the grouped duty expressions to select. You must use 01 on all occasions for an ad valorem duty or specific duties unless there is a compound duty. If there&rsquo;s a compound duty, use 01 followed by 04.</p>
-<p>For standard duty expressions (excluding <a href="https://uktrade.github.io/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#meursing-code">Meursing</a> and <a href="https://uktrade.github.io/tariff-data-manual/documentation/trade-policies/supplementary-units.html#supplementary-units">supplementary units</a>) there&rsquo;s a specific duty for a set monetary unit. If there is no value, then it is an ad valorem duty. This is why the duty expression description is &lsquo;% or amount&rsquo;.</p>
-<p>For a specified monetary unit, there must be a measurement unit. For a specified measurement unit, you can also apply a qualifier which is used to specify measurement units such as &lsquo;kg net weight&rsquo; or &lsquo;kg gross weight&rsquo;.</p>
+<p>For standard duty expressions (excluding <a href="/tariff-data-manual/documentation/trade-policies/agricultural-instruments.html#Meursing-code">Meursing</a> and <a href="/tariff-data-manual/documentation/trade-policies/supplementary-units.html">supplementary units</a>) there&rsquo;s a specific duty for a set monetary unit. If there is no value, then it is an ad valorem duty. This is why the duty expression description is &lsquo;% or amount&rsquo;.</p>
+<p>For a specified monetary unit, there must be a measurement unit. For a specified measurement unit, you can also apply a qualifier which is used to specify measurement units such as &lsquo;kg net weight&rsquo; or &lsquo;kg gross weight&rsquo;. Read more about <a href="/tariff-data-manual/documentation/data-structures/measurement-units.html">measurement units</a></p>
 <div class="table-container">
         <table>
           <tr>
@@ -954,347 +1011,6 @@
 <td>99</td>
 </tr>
         </table>
-      </div><h2 id="measurement-units-and-abbreviations">Measurement units and abbreviations</h2>
-<p>Duty rates can vary based on the weight or other measurement of a commodity. For example, a duty rate of 33 GBP per 100kg.</p>
-<p>In the Tariff Management Tool (TaMaTo), you should use the following abbreviations to add measurement units:</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Code</th>
-<th>Unit</th>
-<th>Abbreviation</th>
-</tr><tr>
-<td>GRT</td>
-<td>Gross tonnage</td>
-<td></td>
-</tr><tr>
-<td>TJO</td>
-<td>Terajoule (gross calorific value)</td>
-<td>TJ</td>
-</tr><tr>
-<td>NAR</td>
-<td>Number of items</td>
-<td>p/st</td>
-</tr><tr>
-<td>MWH</td>
-<td>1000 kilowatt hours</td>
-<td>1,000 kWh</td>
-</tr><tr>
-<td>MIL</td>
-<td>1000 items</td>
-<td>1,000 p/st</td>
-</tr><tr>
-<td>KAC</td>
-<td>Kilogram net of acesulfame potassium</td>
-<td></td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>kg</td>
-</tr><tr>
-<td>MTR</td>
-<td>Metre</td>
-<td>m</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>1,000 kg</td>
-</tr><tr>
-<td>KNI</td>
-<td>Kilogram of nitrogen</td>
-<td>kg N</td>
-</tr><tr>
-<td>GFI</td>
-<td>Gram of fissile isotopes</td>
-<td>gi F/S</td>
-</tr><tr>
-<td>KMA</td>
-<td>Kilogram of methylamines</td>
-<td>kg met.am.</td>
-</tr><tr>
-<td>LPA</td>
-<td>Litre pure (100%) alcohol</td>
-<td>l alc. 100%</td>
-</tr><tr>
-<td>MTK</td>
-<td>Square metre</td>
-<td>m2</td>
-</tr><tr>
-<td>HLT</td>
-<td>Hectolitre</td>
-<td>hl</td>
-</tr><tr>
-<td>KUR</td>
-<td>Kilogram of uranium</td>
-<td>kg U</td>
-</tr><tr>
-<td>MPR</td>
-<td>1000 pairs (used for statistical surveillance)</td>
-<td></td>
-</tr><tr>
-<td>NCL</td>
-<td>Number of cells</td>
-<td>ce/el</td>
-</tr><tr>
-<td>KLT</td>
-<td>1000 litres</td>
-<td>1,000 l</td>
-</tr><tr>
-<td>NPR</td>
-<td>Number of pairs</td>
-<td>pa</td>
-</tr><tr>
-<td>KPO</td>
-<td>Kilogram of potassium oxide</td>
-<td>kg K2O</td>
-</tr><tr>
-<td>WAT</td>
-<td>Number of Watt</td>
-<td></td>
-</tr><tr>
-<td>KMT</td>
-<td>Kilometre</td>
-<td></td>
-</tr><tr>
-<td>EUR</td>
-<td>Euro (used for statistical surveillance)</td>
-<td></td>
-</tr><tr>
-<td>DAP</td>
-<td>Decatonne, corrected according to polarisation</td>
-<td>10,000 kg/polar</td>
-</tr><tr>
-<td>KCC</td>
-<td>Kilogram of choline chloride</td>
-<td></td>
-</tr><tr>
-<td>KPH</td>
-<td>Kilogram of potassium hydroxide (caustic potash)</td>
-<td>kg KOH</td>
-</tr><tr>
-<td>KSD</td>
-<td>Kilogram of substance 90Â % dry</td>
-<td>kg 90 % sdt</td>
-</tr><tr>
-<td>HMT</td>
-<td>Hectometre</td>
-<td>100 m</td>
-</tr><tr>
-<td>DHS</td>
-<td>Kilogram of dihydrostreptomycin</td>
-<td></td>
-</tr><tr>
-<td>CEN</td>
-<td>Hundred items</td>
-<td>100 p/st</td>
-</tr><tr>
-<td>KCL</td>
-<td>Tonne of potassium chloride</td>
-<td></td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>100 kg</td>
-</tr><tr>
-<td>GRM</td>
-<td>Gram</td>
-<td>g</td>
-</tr><tr>
-<td>CTM</td>
-<td>Carats (one metric carat = 2 x 10$-<sup>4</sup>kg)</td>
-<td>c/k</td>
-</tr><tr>
-<td>CCT</td>
-<td>Carrying capacity in metric tonnes</td>
-<td>ct/l</td>
-</tr><tr>
-<td>KPP</td>
-<td>Kilogram of diphosphorus pentaoxide</td>
-<td>kg P2O5</td>
-</tr><tr>
-<td>MTQ</td>
-<td>Cubic meter</td>
-<td>m3</td>
-</tr><tr>
-<td>ASV</td>
-<td>%vol</td>
-<td>% vol</td>
-</tr><tr>
-<td>KNS</td>
-<td>Kilogram of hydrogen peroxide</td>
-<td>kg H2O2</td>
-</tr><tr>
-<td>KSH</td>
-<td>Kilogram of sodium hydroxide (caustic soda)</td>
-<td>kg NaOH</td>
-</tr><tr>
-<td>LTR</td>
-<td>Litre</td>
-<td>l</td>
-</tr><tr>
-<td>MGM</td>
-<td>Milligram</td>
-<td></td>
-</tr><tr>
-<td>MCG</td>
-<td>Microgram</td>
-<td></td>
-</tr><tr>
-<td>MLT</td>
-<td>Millilitre</td>
-<td></td>
-</tr><tr>
-<td>MCL</td>
-<td>Microlitre</td>
-<td></td>
-</tr>
-        </table>
-      </div><h2 id="measurement-unit-qualifiers">Measurement unit qualifiers</h2>
-<p>Measurement unit qualifiers can only be applied to some measurement units.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93520800-f56f3180-f926-11ea-9788-82ad0ec18110.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93520800-f56f3180-f926-11ea-9788-82ad0ec18110.png" alt="image" /></a></p>
-<p>The measurement units that are commonly used are Number of Articles (NAR), which are also referred to as:</p>
-
-<ul>
-<li>&lsquo;p/s&rsquo; for items in French or German, or</li>
-<li>&lsquo;heads&rsquo; in reference to livestock</li>
-</ul>
-<p>The following table identifies the measurement unit qualifiers that can be used. Those highlighted in yellow are those that have been used since Jan 2021.</p>
-<p><a href="https://user-images.githubusercontent.com/61055197/93520975-3d8e5400-f927-11ea-9619-752b32412f5e.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93520975-3d8e5400-f927-11ea-9619-752b32412f5e.png" alt="image" /></a></p>
-<p>The following table is used to identify which qualifiers can be used alongside which measurement codes. It’s vital that the Tariff Application Platform does not allow any combination of unit and qualifier not specified in the measurements table.</p>
-<div class="table-container">
-        <table>
-          <tr>
-<th>Measurement unit</th>
-<th>Description</th>
-<th>Measurement unit qualifier</th>
-<th>Description</th>
-</tr><tr>
-<td>ASV</td>
-<td>%vol</td>
-<td>X</td>
-<td>Hectolitre</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>E</td>
-<td>net of drained weight</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>F</td>
-<td>of common wheat</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>G</td>
-<td>Gross</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>L</td>
-<td>of live weight</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>M</td>
-<td>net of dry matter</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>R</td>
-<td>of the standard quality</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>S</td>
-<td>of sugar with a yield in white sugar of 92%</td>
-</tr><tr>
-<td>DTN</td>
-<td>Hectokilogram</td>
-<td>Z</td>
-<td>per 1% by weight of sucrose</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>A</td>
-<td>Total alcohol</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>E</td>
-<td>net of drained weight</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>G</td>
-<td>Gross</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>P</td>
-<td>of lactic matter</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>S</td>
-<td>of sugar with a yield in white sugar of 92%</td>
-</tr><tr>
-<td>KGM</td>
-<td>Kilogram</td>
-<td>T</td>
-<td>of dry lactic matter</td>
-</tr><tr>
-<td>LTR</td>
-<td>Litre</td>
-<td>A</td>
-<td>Total alcohol</td>
-</tr><tr>
-<td>MTQ</td>
-<td>Cubic meter</td>
-<td>C</td>
-<td>1 000</td>
-</tr><tr>
-<td>NAR</td>
-<td>Number of items</td>
-<td>B</td>
-<td>per flask</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>E</td>
-<td>net of drained weight</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>I</td>
-<td>of biodiesel content</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>J</td>
-<td>of fuel content (usually in form of tallow, stearin, paraffin wax or   other waxes, including the wick)</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>K</td>
-<td>of bioethanol content</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>M</td>
-<td>net of dry matter</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>R</td>
-<td>of the standard quality</td>
-</tr><tr>
-<td>TNE</td>
-<td>Tonne</td>
-<td>Z</td>
-<td>per 1% by weight of sucrose</td>
-</tr>
-        </table>
       </div><h3 id="managing-duties">Managing duties</h3>
 <p>When a trader declares goods for import, they usually have to declare the weight of their goods in kilograms (KGM), but goods may also be measured in:</p>
 
@@ -1304,14 +1020,183 @@
 <li>number of pairs for socks</li>
 </ul>
 <p>The trader is asked to complete Box 41 on the single administrative document (SAD) form. The trader must enter the numeric value and the supplementary unit, for example 247 items (NAR) or 15,000 litres of pure alcohol (LPA).</p>
-<h2 id="measure-component-data-structures">Measure component data structures</h2>
-<p><a href="https://user-images.githubusercontent.com/61055197/93506190-d4511580-f913-11ea-878a-924132f86482.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93506190-d4511580-f913-11ea-878a-924132f86482.png" alt="image" /></a></p>
+<h2 id="measure-component-data-structure-entity-relationship-diagram">Measure component data structure entity-relationship diagram</h2>
+<svg width="475pt" height="370pt"
+ viewBox="0.00 0.00 475.00 370.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="database_322" class="graph" transform="scale(1 1) rotate(0) translate(4 366)">
+<title>Database</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-366 471,-366 471,4 -4,4"/>
+<!-- Measure Components -->
+<g id="table_427" class="node index0">
+<title>Measure Components</title>
+<polygon fill="none" stroke="black" points="9.5,-237 9.5,-253 208.5,-253 208.5,-237 9.5,-237"/>
+<text text-anchor="start" x="63.5" y="-242.8" font-family="Arial" font-size="9.00">Measure Components</text>
+<polygon fill="none" stroke="black" points="9.5,-221 9.5,-237 156.5,-237 156.5,-221 9.5,-221"/>
+<text text-anchor="start" x="56" y="-226.8" font-family="Arial" font-size="9.00">measure_sid</text>
+<polygon fill="none" stroke="black" points="156.5,-221 156.5,-237 195.5,-237 195.5,-221 156.5,-221"/>
+<text text-anchor="start" x="171" y="-226.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="195.5,-221 195.5,-237 208.5,-237 208.5,-221 195.5,-221"/>
+<text text-anchor="start" x="198.5" y="-226.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="9.5,-205 9.5,-221 156.5,-221 156.5,-205 9.5,-205"/>
+<text text-anchor="start" x="42.5" y="-210.8" font-family="Arial" font-size="9.00">duty_expression_id</text>
+<polygon fill="none" stroke="black" points="156.5,-205 156.5,-221 195.5,-221 195.5,-205 156.5,-205"/>
+<text text-anchor="start" x="171" y="-210.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="195.5,-205 195.5,-221 208.5,-221 208.5,-205 195.5,-205"/>
+<text text-anchor="start" x="198.5" y="-210.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="9.5,-189 9.5,-205 156.5,-205 156.5,-189 9.5,-189"/>
+<text text-anchor="start" x="56" y="-194.8" font-family="Arial" font-size="9.00">duty_amount</text>
+<polygon fill="none" stroke="black" points="156.5,-189 156.5,-205 195.5,-205 195.5,-189 156.5,-189"/>
+<text text-anchor="start" x="159.5" y="-194.8" font-family="Arial" font-size="9.00">decimal</text>
+<polygon fill="none" stroke="black" points="195.5,-189 195.5,-205 208.5,-205 208.5,-189 195.5,-189"/>
+<polygon fill="none" stroke="black" points="9.5,-173 9.5,-189 156.5,-189 156.5,-173 9.5,-173"/>
+<text text-anchor="start" x="40.5" y="-178.8" font-family="Arial" font-size="9.00">monetary_unit_code</text>
+<polygon fill="none" stroke="black" points="156.5,-173 156.5,-189 195.5,-189 195.5,-173 156.5,-173"/>
+<text text-anchor="start" x="161" y="-178.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="195.5,-173 195.5,-189 208.5,-189 208.5,-173 195.5,-173"/>
+<text text-anchor="start" x="198.5" y="-178.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="9.5,-157 9.5,-173 156.5,-173 156.5,-157 9.5,-157"/>
+<text text-anchor="start" x="31.5" y="-162.8" font-family="Arial" font-size="9.00">measurement_unit_code</text>
+<polygon fill="none" stroke="black" points="156.5,-157 156.5,-173 195.5,-173 195.5,-157 156.5,-157"/>
+<text text-anchor="start" x="161" y="-162.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="195.5,-157 195.5,-173 208.5,-173 208.5,-157 195.5,-157"/>
+<text text-anchor="start" x="198.5" y="-162.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="9.5,-141 9.5,-157 156.5,-157 156.5,-141 9.5,-141"/>
+<text text-anchor="start" x="12.5" y="-146.8" font-family="Arial" font-size="9.00">measurement_unit_qualifier_code</text>
+<polygon fill="none" stroke="black" points="156.5,-141 156.5,-157 195.5,-157 195.5,-141 156.5,-141"/>
+<text text-anchor="start" x="161" y="-146.8" font-family="Arial" font-size="9.00">char(1)</text>
+<polygon fill="none" stroke="black" points="195.5,-141 195.5,-157 208.5,-157 208.5,-141 195.5,-141"/>
+<text text-anchor="start" x="198.5" y="-146.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="8,-140 8,-254 209,-254 209,-140 8,-140"/>
+</g>
+<!-- Measures -->
+<g id="table_655" class="node index1">
+<title>Measures</title>
+<polygon fill="none" stroke="black" points="313,-341 313,-357 408,-357 408,-341 313,-341"/>
+<text text-anchor="start" x="340" y="-346.8" font-family="Arial" font-size="9.00">Measures</text>
+<polygon fill="none" stroke="black" points="313,-325 313,-341 373,-341 373,-325 313,-325"/>
+<text text-anchor="start" x="316" y="-330.8" font-family="Arial" font-size="9.00">measure_sid</text>
+<polygon fill="none" stroke="black" points="373,-325 373,-341 392,-341 392,-325 373,-325"/>
+<text text-anchor="start" x="377.5" y="-330.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="392,-325 392,-341 408,-341 408,-325 392,-325"/>
+<text text-anchor="start" x="395" y="-330.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="313,-309 313,-325 373,-325 373,-309 313,-309"/>
+<text text-anchor="start" x="339.5" y="-314.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="373,-309 373,-325 392,-325 392,-309 373,-309"/>
+<text text-anchor="start" x="376" y="-314.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="392,-309 392,-325 408,-325 408,-309 392,-309"/>
+<polygon fill="none" stroke="black" points="311.5,-308 311.5,-358 408.5,-358 408.5,-308 311.5,-308"/>
+</g>
+<!-- Measure Components&#45;&gt;Measures -->
+<g id="database_322_edge1" class="edge">
+<title>Measure Components:e&#45;&gt;Measures:w</title>
+<path fill="none" stroke="black" d="M209.5,-229C244.63,-229 228.03,-270.29 253,-295 273.27,-315.05 279.72,-330.2 304.5,-332.65"/>
+<polygon fill="black" stroke="black" points="304.39,-335.27 312,-333 304.63,-330.03 304.39,-335.27"/>
+</g>
+<!-- Duty Expressions -->
+<g id="table_600" class="node index2">
+<title>Duty Expressions</title>
+<polygon fill="none" stroke="black" points="299,-265 299,-281 421,-281 421,-265 299,-265"/>
+<text text-anchor="start" x="324" y="-270.8" font-family="Arial" font-size="9.00">Duty Expressions</text>
+<polygon fill="none" stroke="black" points="299,-249 299,-265 386,-265 386,-249 299,-249"/>
+<text text-anchor="start" x="302" y="-254.8" font-family="Arial" font-size="9.00">duty_expression_id</text>
+<polygon fill="none" stroke="black" points="386,-249 386,-265 405,-265 405,-249 386,-249"/>
+<text text-anchor="start" x="390.5" y="-254.8" font-family="Arial" font-size="9.00">int</text>
+<polygon fill="none" stroke="black" points="405,-249 405,-265 421,-265 421,-249 405,-249"/>
+<text text-anchor="start" x="408" y="-254.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="299,-233 299,-249 386,-249 386,-233 299,-233"/>
+<text text-anchor="start" x="339" y="-238.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="386,-233 386,-249 405,-249 405,-233 386,-233"/>
+<text text-anchor="start" x="389" y="-238.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="405,-233 405,-249 421,-249 421,-233 405,-233"/>
+<polygon fill="none" stroke="black" points="298,-232 298,-282 422,-282 422,-232 298,-232"/>
+</g>
+<!-- Measure Components&#45;&gt;Duty Expressions -->
+<g id="database_322_edge2" class="edge">
+<title>Measure Components:e&#45;&gt;Duty Expressions:w</title>
+<path fill="none" stroke="black" d="M209.5,-213C250.68,-213 253.82,-251.67 290.25,-256.51"/>
+<polygon fill="black" stroke="black" points="290.35,-259.14 298,-257 290.68,-253.9 290.35,-259.14"/>
+</g>
+<!-- Monetary Units -->
+<g id="table_961" class="node index3">
+<title>Monetary Units</title>
+<polygon fill="none" stroke="black" points="289,-189 289,-205 432,-205 432,-189 289,-189"/>
+<text text-anchor="start" x="329.5" y="-194.8" font-family="Arial" font-size="9.00">Monetary Units</text>
+<polygon fill="none" stroke="black" points="289,-173 289,-189 380,-189 380,-173 289,-173"/>
+<text text-anchor="start" x="292" y="-178.8" font-family="Arial" font-size="9.00">monetary_unit_code</text>
+<polygon fill="none" stroke="black" points="380,-173 380,-189 416,-189 416,-173 380,-173"/>
+<text text-anchor="start" x="383" y="-178.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="416,-173 416,-189 432,-189 432,-173 416,-173"/>
+<text text-anchor="start" x="419" y="-178.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="289,-157 289,-173 380,-173 380,-157 289,-157"/>
+<text text-anchor="start" x="331" y="-162.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="380,-157 380,-173 416,-173 416,-157 380,-157"/>
+<text text-anchor="start" x="391.5" y="-162.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="416,-157 416,-173 432,-173 432,-157 416,-157"/>
+<polygon fill="none" stroke="black" points="287.5,-156 287.5,-206 432.5,-206 432.5,-156 287.5,-156"/>
+</g>
+<!-- Measure Components&#45;&gt;Monetary Units -->
+<g id="database_322_edge3" class="edge">
+<title>Measure Components:e&#45;&gt;Monetary Units:w</title>
+<path fill="none" stroke="black" d="M209.5,-181C241.66,-181 251.59,-181 280.28,-181"/>
+<polygon fill="black" stroke="black" points="280.5,-183.63 288,-181 280.5,-178.38 280.5,-183.63"/>
+</g>
+<!-- Measurement Units -->
+<g id="table_494" class="node index4">
+<title>Measurement Units</title>
+<polygon fill="none" stroke="black" points="280,-113 280,-129 441,-129 441,-113 280,-113"/>
+<text text-anchor="start" x="320.5" y="-118.8" font-family="Arial" font-size="9.00">Measurement Units</text>
+<polygon fill="none" stroke="black" points="280,-97 280,-113 389,-113 389,-97 280,-97"/>
+<text text-anchor="start" x="283" y="-102.8" font-family="Arial" font-size="9.00">measurement_unit_code</text>
+<polygon fill="none" stroke="black" points="389,-97 389,-113 425,-113 425,-97 389,-97"/>
+<text text-anchor="start" x="392" y="-102.8" font-family="Arial" font-size="9.00">char(3)</text>
+<polygon fill="none" stroke="black" points="425,-97 425,-113 441,-113 441,-97 425,-97"/>
+<text text-anchor="start" x="428" y="-102.8" font-family="Arial" font-size="9.00">pk</text>
+<polygon fill="none" stroke="black" points="280,-81 280,-97 389,-97 389,-81 280,-81"/>
+<text text-anchor="start" x="331" y="-86.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="389,-81 389,-97 425,-97 425,-81 389,-81"/>
+<text text-anchor="start" x="400.5" y="-86.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="425,-81 425,-97 441,-97 441,-81 425,-81"/>
+<polygon fill="none" stroke="black" points="278.5,-80 278.5,-130 441.5,-130 441.5,-80 278.5,-80"/>
+</g>
+<!-- Measure Components&#45;&gt;Measurement Units -->
+<g id="database_322_edge4" class="edge">
+<title>Measure Components:e&#45;&gt;Measurement Units:w</title>
+<path fill="none" stroke="black" d="M209.5,-165C247.44,-165 239.63,-113.14 271.14,-105.85"/>
+<polygon fill="black" stroke="black" points="271.82,-108.41 279,-105 271.26,-103.19 271.82,-108.41"/>
+</g>
+<!-- Measurement Unit Qualifiers -->
+<g id="table_759" class="node index5">
+<title>Measurement Unit Qualifiers</title>
+<polygon fill="none" stroke="black" points="262,-37 262,-53 458,-53 458,-37 262,-37"/>
+<text text-anchor="start" x="301.5" y="-42.8" font-family="Arial" font-size="9.00">Measurement Unit Qualifiers</text>
+<polygon fill="none" stroke="black" points="262,-21 262,-37 409,-37 409,-21 262,-21"/>
+<text text-anchor="start" x="265" y="-26.8" font-family="Arial" font-size="9.00">measurement_unit_qualifier_code</text>
+<polygon fill="none" stroke="black" points="409,-21 409,-37 445,-37 445,-21 409,-21"/>
+<text text-anchor="start" x="412" y="-26.8" font-family="Arial" font-size="9.00">char(1)</text>
+<polygon fill="none" stroke="black" points="445,-21 445,-37 458,-37 458,-21 445,-21"/>
+<text text-anchor="start" x="448" y="-26.8" font-family="Arial" font-size="9.00">fk</text>
+<polygon fill="none" stroke="black" points="262,-5 262,-21 409,-21 409,-5 262,-5"/>
+<text text-anchor="start" x="332" y="-10.8" font-family="Arial" font-size="9.00">&hellip;</text>
+<polygon fill="none" stroke="black" points="409,-5 409,-21 445,-21 445,-5 409,-5"/>
+<text text-anchor="start" x="420.5" y="-10.8" font-family="Arial" font-size="9.00">&ldquo;&hellip;&rdquo;</text>
+<polygon fill="none" stroke="black" points="445,-5 445,-21 458,-21 458,-5 445,-5"/>
+<polygon fill="none" stroke="black" points="261,-4 261,-54 459,-54 459,-4 261,-4"/>
+</g>
+<!-- Measure Components&#45;&gt;Measurement Unit Qualifiers -->
+<g id="database_322_edge5" class="edge">
+<title>Measure Components:e&#45;&gt;Measurement Unit Qualifiers:w</title>
+<path fill="none" stroke="black" d="M209.5,-149C264.7,-149 208.98,-40.43 253.35,-29.83"/>
+<polygon fill="black" stroke="black" points="253.83,-32.42 261,-29 253.26,-27.2 253.83,-32.42"/>
+</g>
+</g>
+</svg><p><a href="https://user-images.githubusercontent.com/61055197/93506190-d4511580-f913-11ea-878a-924132f86482.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93506190-d4511580-f913-11ea-878a-924132f86482.png" alt="image" /></a></p>
 <h3 id="measure-condition-components">Measure condition components</h3>
-<p><a href="https://user-images.githubusercontent.com/61055197/93506182-cf8c6180-f913-11ea-8a06-49b983015b3d.png" rel="noopener noreferrer"><img src="https://user-images.githubusercontent.com/61055197/93506182-cf8c6180-f913-11ea-8a06-49b983015b3d.png" alt="image" /></a></p>
-<p>Measure conditions may be attached to conditions instead of to measures themselves. Measure condition components differ from measure components only in that they are attached to the condition and not the measure itself.</p>
+<p>Measure conditions may be attached to conditions instead of to measures themselves. Measure condition components differ from measure components only in that they are attached to the condition and not the measure itself. Hence the E-R diagram is almost identical to the one above, with &ldquo;Measure Condition Components&rdquo; in place of the &ldquo;Measure Components&rdquo; entity and &ldquo;Measure Conditions&rdquo; in place of the &ldquo;Measures&rdquo; entity.</p>
 <p>Measure condition components and measure components must not be applied together.</p>
+<p>Read more about <a href="/tariff-data-manual/documentation/data-structures/measure-conditions.html">measure conditions</a></p>
 <h2 id="business-rules">Business rules</h2>
-<p>Read the business rules for measure components in the <a href="https://uktrade.github.io/tamato/html/business_rules/measures.html">system documentation</a>.</p>
+<p>Read the business rules for measure components in the <a href="https://uktrade.github.io/tamato/html/business_rules/measures.html">system documentation</a>.
+<link href="/tariff-data-manual/stylesheets/dot.css" rel="stylesheet" /></p>
 
             
           </main>
