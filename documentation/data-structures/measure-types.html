@@ -1009,7 +1009,7 @@ ORDER BY sid</pre>
       </tr>
     </thead>
     <tbody>
-      <tr><td>A</td><td>Importation and/or exportation prohibited</td><td>277, 278, 481, 485</td><td>4</td></tr><tr><td>B</td><td>Entry into free circulation or exportation subject to conditions</td><td>350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 410, 420, 464, 465, 467, 473, 474, 475, 476, 477, 478, 479, 482, 483, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 722, 724, 725, 728, 730, 735, 740, 745, 746, 747, 748, 749, 750, 751, 755, 760, 761, 766, 770, 771, 772, 773, 774</td><td>66</td></tr><tr><td>C</td><td>Applicable duty</td><td>103, 105, 106, 112, 115, 117, 119, 122, 123, 140, 141, 142, 143, 144, 145, 146, 147</td><td>17</td></tr><tr><td>D</td><td>Anti-dumping or countervailing duties</td><td>551, 552, 553, 554, 555, 561, 562, 564, 565, 566, 570</td><td>11</td></tr><tr><td>E</td><td>Levies, export refunds and other agricultural amounts</td><td>674, 680, 681, 683, 684, 685, 686, 687, 688</td><td>9</td></tr><tr><td>F</td><td>Additional duty on sugar, flour</td><td>672, 673</td><td>2</td></tr><tr><td>J</td><td>Countervailing charge</td><td>690, 695, 696</td><td>3</td></tr><tr><td>M</td><td>Unit price, standard import value, representative price (poultry, sugar)</td><td>488, 489, 490</td><td>3</td></tr><tr><td>N</td><td>Posterior surveillance</td><td>430, 431, 440, 442, 445, 447, 450, 455, 456, 457, 460, 461, 462, 463, 468, 469, 470, 471, 472</td><td>19</td></tr><tr><td>O</td><td>Supplementary unit</td><td>109, 110</td><td>2</td></tr><tr><td>P</td><td>VAT</td><td>305</td><td>1</td></tr><tr><td>Q</td><td>Excises</td><td>306</td><td>1</td></tr><tr><td>S</td><td>Supplementary amount</td><td>651, 652, 653, 654, 655, 656, 657, 658</td><td>8</td></tr><tr><td>Z</td><td>Archived measure type</td><td></td><td>0</td></tr>
+      <tr><td>A</td><td>Importation and/or exportation prohibited</td><td>278, 277, 481, 485</td><td>4</td></tr><tr><td>B</td><td>Entry into free circulation or exportation subject to conditions</td><td>473, 476, 467, 475, 483, 474, 477, 465, 478, 760, 755, 710, 751, 706, 707, 482, 771, 722, 724, 750, 717, 770, 705, 748, 711, 714, 410, 774, 735, 747, 708, 420, 713, 749, 712, 740, 745, 718, 725, 479, 716, 773, 730, 715, 709, 746, 728, 772, 761, 766, 350, 351, 352, 354, 355, 356, 357, 358, 360, 361, 362, 363, 464, 353, 719, 359</td><td>66</td></tr><tr><td>C</td><td>Applicable duty</td><td>143, 103, 144, 122, 142, 112, 140, 141, 106, 117, 147, 119, 145, 115, 105, 146, 123</td><td>17</td></tr><tr><td>D</td><td>Anti-dumping or countervailing duties</td><td>570, 564, 553, 561, 551, 562, 554, 552, 566, 565, 555</td><td>11</td></tr><tr><td>E</td><td>Levies, export refunds and other agricultural amounts</td><td>681, 683, 680, 674, 686, 685, 688, 687, 684</td><td>9</td></tr><tr><td>F</td><td>Additional duty on sugar, flour</td><td>673, 672</td><td>2</td></tr><tr><td>J</td><td>Countervailing charge</td><td>690, 695, 696</td><td>3</td></tr><tr><td>M</td><td>Unit price, standard import value, representative price (poultry, sugar)</td><td>489, 488, 490</td><td>3</td></tr><tr><td>N</td><td>Posterior surveillance</td><td>471, 469, 460, 455, 461, 463, 450, 456, 468, 470, 462, 440, 472, 447, 431, 457, 430, 442, 445</td><td>19</td></tr><tr><td>O</td><td>Supplementary unit</td><td>110, 109</td><td>2</td></tr><tr><td>P</td><td>VAT</td><td>305</td><td>1</td></tr><tr><td>Q</td><td>Excises</td><td>306</td><td>1</td></tr><tr><td>S</td><td>Supplementary amount</td><td>655, 652, 657, 651, 654, 658, 653, 656</td><td>8</td></tr><tr><td>Z</td><td>Archived measure type</td><td></td><td>0</td></tr>
     </tbody>
     <tfoot>
       <tr>
@@ -1035,10 +1035,14 @@ SELECT measure_type_series.sid AS SID,
     measure_type_series.description AS Description,
     group_concat(live_measure_types.sid, ', ') AS 'List of Active Measure Types',
     COUNT(live_measure_types.sid) AS 'Number of Active Measure Types'
-FROM measure_type_series
-        INNER JOIN common_version_groups
-            ON measure_type_series.trackedmodel_ptr_id = common_version_groups.current_version_id
-LEFT OUTER JOIN live_measure_types ON live_measure_types.measure_type_series_id = measure_type_series.trackedmodel_ptr_id
+FROM live_measure_types
+    INNER JOIN common_tracked_models
+        ON live_measure_types.measure_type_series_id = common_tracked_models.id
+    INNER JOIN common_version_groups AS cvg1
+        ON common_tracked_models.version_group_id = cvg1.id
+    RIGHT OUTER JOIN measure_type_series
+        ON cvg1.current_version_id = measure_type_series.trackedmodel_ptr_id
+    INNER JOIN common_version_groups AS cvg2 ON measure_type_series.trackedmodel_ptr_id = cvg2.current_version_id
 WHERE (measure_type_series.validity_end IS NULL OR measure_type_series.validity_end > DATE('now'))
 GROUP BY live_measure_types.measure_type_series_id
 ORDER BY sid</pre>
