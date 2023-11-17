@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Home - Tariff Data Manual</title>
+    <title>Description records - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/description-records.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Home - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta name="twitter:title" content="Description records - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/description-records.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Home" />
+      <meta property="og:title" content="Description records" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/description-records.html" />
 
     
   </head>
@@ -864,47 +864,17 @@
 
         <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="the-uk-tariff-data-standard">The UK Tariff Data Standard</h1>
-
-<ul>
-<li>
-<a href="#the-uk-s-import-and-export-tariff">The UK&rsquo;s Import and Export Tariff</a>
-</li>
-<li>
-<a href="#about-the-standard">About the standard</a>
-</li>
-</ul>
-<p>The UK Tariff Data Standard describes how to store and exchange data about trade policy. It is used to share the United Kingdom&rsquo;s Import and Export Tariff between government departments and the international trade industry.</p>
-<h2 id="the-uk-39-s-import-and-export-tariff">The UK&rsquo;s Import and Export Tariff</h2>
-<p>The Tariff sets the rules for trading with the UK.</p>
-<p>It includes:</p>
-
-<ul>
-<li>Duties that apply to goods imported from other countries and territories</li>
-<li>Conditions that need to be met to import or export certain goods </li>
-<li>Quantities of goods that can be imported with reduced rates</li>
-<li>The legislative basis for these duties, conditions and quotas</li>
-</ul>
-<p>The Tariff is created by trade policy teams across government and is ratified by Parliament. The Department for Business and Trade convert the legislation into data which is published via <a href="https://data.gov.uk/dataset/3bee9a8a-e69c-400e-add5-3345a87a8e25/tariffs-to-trade-with-the-uk-from-1-january-2021">data.gov.uk</a> and Her Majesty’s Revenue and Customs.</p>
-<p>Tariff data is used by:</p>
-
-<ul>
-<li>other government departments (such as the Department for Food, Environment and Rural Affairs)</li>
-<li>crown dependencies Jersey and Guernsey</li>
-<li>private sector trade bodies such as logistics providers</li>
-</ul>
-<h2 id="about-the-standard">About the standard</h2>
-<p>This standard is the authority on the structure and meaning of tariff data and associated code lists. It is derived from <a href="/tariff-data-manual/documentation/about-the-standard/relationship-with-taric.html">TARIC</a> used by the European Union to share trade policy information.</p>
-<p>The standard is managed by an open working group. You can <a href="https://github.com/uktrade/tariff-data-manual/discussions">get involved with the open group discussions</a> if you find problems with the standard or wish to contribute to it.</p>
-<p>It is made available freely under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government License v3</a>.</p>
+            <h1 id="description-records">Description records</h1>
+<p>Within the tariff data standard, description records are typically reated as subrecords, within their own entity/table, which has a foreign key linking them to the object that they are describing. Descriptions will also have their own validity periods (or at least validity start dates).</p>
+<p>Such separation allows for updating descriptions without having to make modfications or updates to the records themselves.</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Home">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Home%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2F%29&amp;labels=bug&amp;title=Re%3A+%27Home%27">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Description-records">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Description+records%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fdescription-records.html%29&amp;labels=bug&amp;title=Re%3A+%27Description+records%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
