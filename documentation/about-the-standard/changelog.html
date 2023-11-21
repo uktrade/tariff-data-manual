@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Validity overlaps with self - Tariff Data Manual</title>
+    <title>Changelog - Tariff Data Manual</title>
 
     <link href="/tariff-data-manual/stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/validation-rules/validity-overlaps-with-self.html">
+    <link rel="canonical" href="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/changelog.html">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:domain" content="uktrade.github.io" />
       <meta name="twitter:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
-      <meta name="twitter:title" content="Validity overlaps with self - Tariff Data Manual" />
-      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/validation-rules/validity-overlaps-with-self.html" />
+      <meta name="twitter:title" content="Changelog - Tariff Data Manual" />
+      <meta name="twitter:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/changelog.html" />
 
       <meta property="og:image" content="https://uktrade.github.io/tariff-data-manual/images/govuk-large.png" />
       <meta property="og:site_name" content="Tariff Data Manual" />
-      <meta property="og:title" content="Validity overlaps with self" />
+      <meta property="og:title" content="Changelog" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/validation-rules/validity-overlaps-with-self.html" />
+      <meta property="og:url" content="https://uktrade.github.io/tariff-data-manual/tariff-data-manual/documentation/about-the-standard/changelog.html" />
 
     
   </head>
@@ -659,7 +659,7 @@
     <a href="/tariff-data-manual/documentation/validation-rules/validity-contained.html"><span>Validity contained</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/validation-rules/validity-contained.html#validity-contained-examples"><span>Examples</span></a>
+        <a href="/tariff-data-manual/documentation/validation-rules/validity-contained.html#examples"><span>Examples</span></a>
       </li>
     </ul>
   </li>
@@ -694,7 +694,7 @@
     <a href="/tariff-data-manual/documentation/validation-rules/validity-overlaps-with-self.html"><span>Validity overlaps with self</span></a>
     <ul>
       <li>
-        <a href="/tariff-data-manual/documentation/validation-rules/validity-overlaps-with-self.html#examples"><span>Examples</span></a>
+        <a href="/tariff-data-manual/documentation/validation-rules/validity-overlaps-with-self.html#validity-overlaps-with-self-examples"><span>Examples</span></a>
       </li>
     </ul>
   </li>
@@ -909,27 +909,34 @@
 
         <div class="app-pane__content toc-open-disabled" aria-label="Content" tabindex="0">
           <main id="content" class="technical-documentation" data-module="anchored-headings">
-            <h1 id="validity-overlaps-with-self">Validity overlaps with self</h1>
+            <h1 id="changelog">Changelog</h1>
 
 <ul>
 <li>
-<a href="#examples">Examples</a>
+<a href="#changelog-v1-0">Changelog - v1.0</a>
 </li>
 </ul>
-<p>This rule is used to ensure that there is no overlap in validity periods between differenct objects with the same identifying fields, except when they are other versions of the same object.</p>
-<p>There are times when the same identifiers (or set of identifiers) are used more than once for different objects (i.e. &lsquo;old&rsquo; identifiers are sometimes reused on new objects). This rule ensures that when this occurs, there can be no overlap between the validity period, i.e. the validity period of the object that previously used that identifier must come to an end before the validity period of an object that uses the same identifier begins.</p>
-<p>In cases where records with the same identifier are different versions of the same object, rather than different objects, such overlap is allowed.</p>
-<h2 id="examples">Examples</h2>
-<p>Let us look at additional codes. Additional code 950 has six entries in the data, four under code type 106, and one under each code type 9 and 63. In the case of additional codes the full set of identifiers that need to be considered are code and code type (i.e. the same codes can be used under different code types regardless), as such the codes under code types 9 and 63 are considered as having different identifiers for the implementation of this rule (the full set of identifiers will be detailed in the specific validity rule).</p>
-<p>The addional code 950 entries under code type 106 are considered to have the same identifiers. From the data we can see that one of these is an updated version of an existing record, and so does not need to be considrered under this rule. For the remaining three, let us look at their validity periods, they are: 2009-04-09 to 2009-10-06, 2009-10-07 to 2009-12-18, and 2009-12-19 to 2020-12-09. We can see that all three of these periods are mutually exclusive, and as such the rule is obeyed. If that were not the case, e.g. if the first period ended on 2009-10-07 and the second started on 2009-10-06, the rule would be violated as there would be an overlap in the validity.</p>
+<p>The standard provides mechanisms to upgrade the standard over time. All changes to the standard shall be listed in this changelog to keep users up to date on the current version of the standard and what changes have been made from previous versions.</p>
+<p>The current version is 1.0</p>
+<h2 id="changelog-v1-0">Changelog - v1.0</h2>
+<p>This is the first version of the standard, as such this changelog does not detail changes from a previous version of the standard, but from the EU&rsquo;s TARIC3 standard, which was in use before. For more detail <a href="/tariff-data-manual/documentation/about-the-standard/relationship-with-taric.html">see here</a>.</p>
+
+<ul>
+<li>Simplification of regulations. Only the base regulation records are used and EU-specific fields such as Official Journal numbers are not populated. UK-specific information is included in other fields instead. Other regulation records are maintained for historical data and compatibility.</li>
+<li>Some fields that previously only allowed alphabet or numeral characters have had their format expanded to include both alphabet and numeral characters.</li>
+<li>Some extra validity rules have been added to more tightly constrain data. For example, in most cases descriptions are no longer allowed to be blank or missing.</li>
+<li>Languages other than English are possible to represent but are not used.</li>
+<li>A number of features are no longer used, such as publication sigles, exchange rates, nomenclature groups and geographical group parents.</li>
+<li>Addition of the tariff data standard manual, to detail the data structures of the standard, the trade policies that underpin it and the validation rules that constrain it.</li>
+</ul>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/Validation-rules;-Validity-overlaps-with-self">View source</a></li>
-                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Validity+overlaps+with+self%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fvalidation-rules%2Fvalidity-overlaps-with-self.html%29&amp;labels=bug&amp;title=Re%3A+%27Validity+overlaps+with+self%27">Report problem</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/wiki/About-the-standard;-Changelog">View source</a></li>
+                <li><a href="https://github.com/uktrade/tariff-data-manual/issues/new?body=Problem+with+%27Changelog%27+%28https%3A%2F%2Fuktrade.github.io%2Ftariff-data-manual%2Ftariff-data-manual%2Fdocumentation%2Fabout-the-standard%2Fchangelog.html%29&amp;labels=bug&amp;title=Re%3A+%27Changelog%27">Report problem</a></li>
                 <li><a href="https://github.com/uktrade/tariff-data-manual">GitHub Repo</a></li>
               </ul>
           </aside>
