@@ -458,6 +458,9 @@
     <a href="/tariff-data-manual/documentation/data-structures/approved-data-sources.html"><span>Approved data sources</span></a>
     <ul>
       <li>
+        <a href="/tariff-data-manual/documentation/data-structures/approved-data-sources.html#commodity-codes-goods-nomenclature"><span>Commodity codes (Goods nomenclature)</span></a>
+      </li>
+      <li>
         <a href="/tariff-data-manual/documentation/data-structures/approved-data-sources.html#geographical-area-names"><span>Geographical area names</span></a>
       </li>
     </ul>
@@ -902,12 +905,19 @@
 
 <ul>
 <li>
+<a href="#commodity-codes-goods-nomenclature">Commodity codes (Goods nomenclature)</a>
+</li>
+<li>
 <a href="#geographical-area-names">Geographical area names</a>
 </li>
 </ul>
 <p>The Tariff includes reference data lists that ensure correctness and maintain referential quality in the data. In some cases, these lists are sourced from external sources because they are best defined by someone other than this standards group. The definition of these lists are covered by this standard.</p>
 <p>The data list is expected to match the external source and be updated to reflect updates in that source. Deviating from the source or changing the definition of the list requires an approved change to this standard.</p>
 <p>These sources are listed on the individual data structure pages but are also repeated here for convenience.</p>
+<h2 id="commodity-codes-goods-nomenclature">Commodity codes (Goods nomenclature)</h2>
+<p><a href="/tariff-data-manual/documentation/data-structures/commodity-codes.html">Commodity codes</a> are sourced from the World Customs Organisation&rsquo;s (WCO&rsquo;s) <a href="https://www.wcoomd.org/en/topics/nomenclature/overview/what-is-the-harmonized-system.aspx">Harmonised System</a>.</p>
+<p>The first six digits of commodity codes are set and regulated by the Harmonised System. The system is used by more than 200 countries and economies as a basis for their Customs tariffs and for the collection of international trade statistics. HS codes are revised every five years, with the last revision being in January 2022.</p>
+<p>The latter four digits are set by coutries and trading blocks to further sub-classify goods. In the UK these last four digits are set by HMRC.</p>
 <h2 id="geographical-area-names">Geographical area names</h2>
 <p><a href="/tariff-data-manual/documentation/data-structures/geographical-areas.html">Area names</a> are sourced from the <a href="https://www.gov.uk/government/publications/geographical-names-and-information">FCDO Geographical names index</a>.</p>
 <p>Geographical areas that appear in the &lsquo;Country names&rsquo; list should have an area type of <code>country</code> and should have a geographical area description matching the approved name. If the FCDO updates the list to change the name, a new description period should be added starting from the update date of the FCDO list.</p>
