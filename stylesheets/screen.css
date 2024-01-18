@@ -3942,3 +3942,14 @@ table code {
 
 .technical-documentation summary + p {
   margin-top: 10px; }
+
+main > details summary {
+  margin-bottom: 1em;
+  color: #0e6013;
+  -webkit-text-decoration: underline #0e6013;
+          text-decoration: underline #0e6013;
+  cursor: pointer; }
+
+main > details .govuk-details__text {
+  border-left: 10px solid #b1b4b6;
+  padding-left: 20px; }
