@@ -1148,7 +1148,7 @@ authored by teams in at least 30 different policy areas across 11 public
 administrations.</p>
 <h3 id="5-is-it-largely-independent-from-products-of-single-providers-either-open-source-or-proprietary">5: Is it largely independent from products of single providers, either open source or proprietary?</h3>
 <p>✅ <strong>Yes</strong>. The standard is based on and remains compatible with a European Union
-standard with the same purpose that has been in use for a number of decades.
+database with the same purpose that has been in use for a number of decades.
 Each Member State of the European Union needs a system that is capable of
 consuming data in this format. As such there are a number of providers with
 expertise in the standard.</p>
@@ -1206,8 +1206,10 @@ logic.</p>
 <h3 id="13-does-it-address-backwards-compatibility-with-previous-versions">13: Does it address backwards compatibility with previous versions?</h3>
 <p>✅ <strong>Yes</strong>. Places where the UK standard differs from TARIC3 as defined by the EU
 (mostly in areas where the UK requires stricter conformance or is no longer
-using the full expressivity of the EU model) have been clearly documented.
-Historical data continues to be allowed to ensure backwards compatibility.</p>
+using the full expressivity of the EU model) have been clearly documented.</p>
+<p>Historical data continues to be allowed to ensure backwards compatibility. Where
+validation rules have been added which historical data would fail, the rules
+have been explicitly scoped to only take effect from a certain date.</p>
 <h3 id="14-are-the-underlying-technologies-for-implementing-it-proven-stable-and-clearly-defined">14:. Are the underlying technologies for implementing it proven, stable and clearly defined?</h3>
 <p>✅ <strong>Yes</strong>. The standard is a data standard and as such is mainly concerned with
 semantic meaning and data formats that can be implemented in a number of
@@ -1295,10 +1297,10 @@ integrations or access to data feeds</li>
 <p>✅ <strong>Yes</strong>. All of the above groups mentioned in question 30 are taking part in
 the evolution of the data standard.</p>
 <h3 id="32-is-there-evidence-that-the-adoption-of-it-supports-improving-efficiency-and-effectiveness-of-organisational-process">32: Is there evidence that the adoption of it supports improving efficiency and effectiveness of organisational process?</h3>
-<p>✅ <strong>Yes</strong>, anecdotally. The UK&rsquo;s legacy customs system CHIEF previously required
-a large data entry team to manually update European Union and UK trade policy.
-Since the retirement of CHIEF and the switchover to CDS, this team has largely
-been redeployed on higher value functions such as policy support and quality
+<p>✅ <strong>Yes</strong>. The UK&rsquo;s legacy customs system CHIEF previously required a large data
+entry team to manually update European Union and UK trade policy. Since the
+retirement of CHIEF and the switchover to CDS, this team has largely been
+redeployed on higher value functions such as policy support and quality
 assurance.</p>
 <h3 id="33-is-there-evidence-that-the-adoption-of-it-makes-it-easier-to-migrate-between-different-solutions-from-different-providers">33: Is there evidence that the adoption of it makes it easier to migrate between different solutions from different providers?</h3>
 <p>✅ <strong>Yes</strong>. DBT&rsquo;s Tariff Management Tool was created to provide a UK equivalent
@@ -1311,28 +1313,43 @@ the EU system.</p>
 streamlined communication, there is little impact that is possible for a
 standard of this kind in this domain.</p>
 <h3 id="35-is-there-evidence-that-the-adoption-of-it-positively-impacts-financial-costs">35: Is there evidence that the adoption of it positively impacts financial costs?</h3>
-<p>✅ <strong>Yes</strong>, anecdotally, as discussed in question 32.</p>
+<p>✅ <strong>Yes</strong>, as discussed in question 32.</p>
 <h3 id="36-is-there-evidence-that-the-adoption-of-it-positively-impacts-security">36: Is there evidence that the adoption of it positively impacts security?</h3>
-<p>✅ <strong>Yes</strong>. The data model includes a number of security protections such as an
-audit log that makes visible all data changes. This mechanism significantly
-increases the likelihood of malicious actors being caught and any malicious
-changes being removed.</p>
+<p>✅ <strong>Yes</strong>. The standard includes a number of security protections that make it
+more difficult to perform temporary, invisible attacks against systems:</p>
+
+<ul>
+<li>The standard includes a transmission protocol which communicates changes to
+the data in an append-only log. This means that all changes to the data are
+permanently recorded and any malicious action designed to temporarily modify
+the data will remain visible even if the action is reversed. This
+significantly increases the ability to detect and undo malicious actions.</li>
+<li>The transmission protocol numbers data updates in a global sequence and
+requires that new data has a higher sequence number than old data. This means
+that an attacker attempting to insert data into the sequence will also need to
+rewrite all subsequent transactions to avoid validation errors. This means
+that any data insertion requires a permanent attack and if the attack ends the
+mismatch in sequence numbers will be made visible.</li>
+</ul>
 <h3 id="37-is-there-evidence-that-the-adoption-of-it-can-be-implemented-alongside-enterprise-security-technologies">37: Is there evidence that the adoption of it can be implemented alongside enterprise security technologies?</h3>
 <p>✅ <strong>Yes</strong>. The implementing systems discussed in 5 make use of enterprise
 security technologies as part of their cloud deployments.</p>
 <h3 id="38-is-there-evidence-that-the-adoption-of-it-positively-impacts-privacy">38: Is there evidence that the adoption of it positively impacts privacy?</h3>
 <p>⚪️ <strong>Not applicable</strong>. There is no personal data included in the data governed
 by the standard.</p>
+<p>Where the data governed by the standard is mixed with personal data, it is up to
+downstream consumers of the standard to perform a privacy impact assessment for
+that usage.</p>
 <h3 id="39-is-it-largely-compatible-with-related-not-alternative-formal-specifications-in-the-same-area-of-application">39: Is it largely compatible with related (not alternative) formal specifications in the same area of application?</h3>
-<p>✅ <strong>Yes</strong>. This data standard remains compatible with the EU standard from which
-it is derived. Both standards include a number of external sources such as ISO
-standards for measurement units and nationally recognised lists of countries.</p>
+<p>✅ <strong>Yes</strong>. This data standard remains compatible with the closed EU
+specification from which it is derived. A system designed to consume data to the
+EU specification can also consume data encoded to this standard.</p>
 <h3 id="40-is-there-evidence-that-the-adoption-of-it-positively-impacts-accessibility-and-inclusion">40: Is there evidence that the adoption of it positively impacts accessibility and inclusion?</h3>
-<p>✅ <strong>Yes</strong>, anecdotally. The canonical source for data encoded in this standard
-is tariff legislation encoded as PDF. Using this standard to provide a more
-granular and structured representation should contribute positively to
-accessibility because services like the Online Tariff Service can provided more
-accessible views of the data.</p>
+<p>✅ <strong>Yes</strong>. The canonical source for data encoded in this standard is tariff
+legislation encoded as PDF. Using this standard to provide a more granular and
+structured representation should contribute positively to accessibility because
+services like the Online Tariff Service can provided more accessible views of
+the data.</p>
 <h2 id="maintenance-of-the-formal-specification">Maintenance of the formal specification</h2>
 <h3 id="41-does-it-have-a-defined-maintenance-organisation">41: Does it have a defined maintenance organisation?</h3>
 <p>✅ <strong>Yes</strong>. The Secretariat is provided by the Department for Business and Trade
@@ -1341,26 +1358,32 @@ and is responsible for maintenance of the standard.</p>
 <p>✅ <strong>Yes</strong>. Tariff management remains a business function with budgetary approval
 for DBT with no plans for this to change.</p>
 <h3 id="43-does-the-maintenance-organisation-have-a-public-statement-on-intention-to-transfer-responsibility-for-maintenance-of-it-if-the-organisation-were-no-longer-able-to-continue">43: Does the maintenance organisation have a public statement on intention to transfer responsibility for maintenance of it, if the organisation were no longer able to continue?</h3>
-<p>✅ <strong>Yes</strong>. We have defined that stewardship of the standard is always the responsibility of the unit that leads on enacting trade policy legislation. Today this is DBT, but if in the future this function moves to another Department, the responsibility and incentive for maintenance of the standard would move to that Department too.</p>
-<p>If that Department no longer sees value in maintaining a standard, then it would be up to that Department to find a new home for it, potentially by establishing a separate body to take over governance.</p>
+<p>✅ <strong>Yes</strong>. We have defined that stewardship of the standard is always the
+responsibility of the unit that leads on enacting trade policy legislation.
+Today this is DBT, but if in the future this function moves to another
+Department, the responsibility and incentive for maintenance of the standard
+would move to that Department too.</p>
+<p>If that Department no longer sees value in maintaining a standard, then it would
+be up to that Department to find a new home for it, potentially by establishing
+a separate body to take over governance.</p>
 <h3 id="44-does-it-have-a-defined-maintenance-and-support-process">44: Does it have a defined maintenance and support process?</h3>
 <p>✅ <strong>Yes</strong>. DBT maintains the open discussion forum and email inbox to provide
 support for standards users. There are already examples of this support being
 provided.</p>
 <h3 id="45-does-it-have-a-defined-policy-for-version-management">45: Does it have a defined policy for version management?</h3>
-<p>✅ <strong>Yes</strong>. A standards changelog is maintained as part of the documentation
-repository.</p>
+<p>✅ <strong>Yes</strong>. A <a href="/tariff-data-manual/documentation/./about-the-standard/changelog.html">standards changelog</a> is
+maintained as part of the documentation repository.</p>
 <h2 id="related-european-standards">Related European standards</h2>
 <h3 id="46-is-this-an-existing-european-standard-or-an-identified-technical-specification-in-europe-note-cen-cenelec-or-etsi-are-the-european-standards-bodies-technical-specifications-provided-by-organisations-other-than-cen-cenelec-or-etsi-can-be-under-consideration-to-become-a-european-standard-or-an-identified-technical-specification-in-europe">46: Is this an existing European standard or an identified technical specification in Europe? (Note: CEN, CENELEC or ETSI are the European standards bodies. Technical specifications provided by organisations other than CEN, CENELEC or ETSI can be under consideration to become a European standard or an identified technical specification in Europe.)</h3>
-<p>❌ <strong>No</strong>. Whilst this standard is based on an EU standard (TARIC) it is not
-standardised at any of the above bodies.</p>
+<p>❌ <strong>No</strong>. Whilst this standard is based on a long-standing EU database (TARIC)
+it is not standardised by the EU for public use at any of the above bodies.</p>
 <h3 id="47-does-this-specification-or-standard-cover-an-area-different-from-those-already-identified-or-currently-under-consideration-as-an-identified-european-standard-or-specification">47: Does this specification or standard cover an area different from those already identified or currently under consideration as an identified European standard or specification?</h3>
-<p>✅ <strong>Yes</strong>. Whilst this standard is based on an EU standard (TARIC), the UK&rsquo;s use
+<p>✅ <strong>Yes</strong>. Whilst this standard is based on an EU database (TARIC), the UK&rsquo;s use
 of the standard has diverged from the EU. Whilst there remains compatibility on
 a technical level (such that any system that can consume EU data can also
 consume UK data), there are some important semantic differences. Further, this
 standard is now governed by a UK group who will assess the relevance of upstream
-EU standards changes.</p>
+EU changes.</p>
 
             
           </main>
