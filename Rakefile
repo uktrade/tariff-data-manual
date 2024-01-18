@@ -63,7 +63,7 @@ task build: [:pages, :images, :patches, LOCAL_DATABASE] do
   sh 'sed', '-i', "s:url(\"/images/:url(\"#{PREFIX}/images/:", *Dir.glob('build/stylesheets/*.css')
 end
 
-OUTPUT_FILES.zip(WIKI_FILES).each do |output, input|
+OUTPUT_FILES.zip(WIKI_FILES).sort_by(&:first).each_with_index do |(output, input), index|
   directory File.dirname output
   file output => [input, File.dirname(output)] do
     title = output.pathmap('%f').split('.').first.gsub('-',' ').capitalize
@@ -77,7 +77,7 @@ OUTPUT_FILES.zip(WIKI_FILES).each do |output, input|
       o.puts "title: \"#{title}\""
       o.puts "source_url: \"#{File.join 'https://github.com', GITHUB_REPO, 'wiki', input.pathmap('%n')}\""
       o.puts 'weight: 0' if output == INDEX_FILE
-      o.puts 'weight: 1' if not (front_matter.include?("weight: ") || output == INDEX_FILE)
+      o.puts "weight: #{index}" if not (front_matter.include?("weight: ") || output == INDEX_FILE)
       o.puts front_matter
       o.puts '---'
       o.puts header_line
