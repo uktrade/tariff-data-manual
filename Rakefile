@@ -31,6 +31,22 @@ OUTPUT_IMAGES = IMAGE_FILES.map {|n| File.join IMAGES_DIR, n.pathmap('%f') }
 TOP_LEVEL_HEADER = /^#\s+.*$/
 FRONT_MATTER = /---\n(.*)\n---\n/m
 
+INFORMATIVE_BLOCK = '''
+<% if current_page.data.normative == false %>
+  <details>
+    <summary>This section is not part of the standard</summary>
+    <div class="govuk-details__text">
+      <p>The content in this section is only included to help explain the standard,
+      provide examples or make recommendations about use.</p>
+      <p>It does not contain requirements for complying with the standard
+      and is not governed by the formal standards process.</p>
+      <p>The information may not have been updated to accurately reflect
+      Government policy.</p>
+    </div>
+  </details>
+<% end %>
+'''
+
 def patch relative_path, patch_filename
   begin
     full_path = Gem.find_files(relative_path).first
@@ -81,6 +97,7 @@ OUTPUT_FILES.zip(WIKI_FILES).sort_by(&:first).each_with_index do |(output, input
       o.puts front_matter
       o.puts '---'
       o.puts header_line
+      o.puts INFORMATIVE_BLOCK
       o.puts '<%= toc(current_page) %>'
       o.puts contents.gsub(TOP_LEVEL_HEADER, '').gsub(FRONT_MATTER, '')
       o.puts '<%= stylesheet_link_tag :dot %>' if contents =~ /^```dot/ || contents =~ /^```dbml/

@@ -62,3 +62,16 @@ table code {
 .technical-documentation summary + p {
   margin-top: 10px;
 }
+
+// Colour the summary in a details block.
+main > details summary {
+	margin-bottom: 1em;
+	color: rgb(14, 96, 19);
+	text-decoration: underline rgb(14, 96, 19);
+	cursor: pointer;
+}
+
+main > details .govuk-details__text {
+	border-left: 10px solid #b1b4b6;
+	padding-left: 20px;
+}
