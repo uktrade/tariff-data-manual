@@ -3,7 +3,7 @@ host: https://uktrade.github.io/tariff-data-manual
 
 # Header-related options
 show_govuk_logo: false
-service_name: Tariff Data Manual
+service_name: UK Tariff Data Standard
 service_link: https://uktrade.github.io/tariff-data-manual/
 phase: Alpha
 
