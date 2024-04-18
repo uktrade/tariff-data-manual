@@ -18,3 +18,6 @@ gem 'dbml', '>= 0.2'
 gem 'rake'
 
 gem "sqlite3", "~> 1.6"
+
+gem "nokogiri", ">= 1.15.6"
+gem "rack", ">= 2.2.8.1"
