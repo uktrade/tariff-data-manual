@@ -130,6 +130,8 @@ GEM
     multi_json (1.15.0)
     nokogiri (1.16.4-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.16.4-x86_64-linux)
+      racc (~> 1.4)
     openapi3_parser (0.9.2)
       commonmarker (~> 0.17)
     padrino-helpers (0.15.3)
@@ -160,6 +162,7 @@ GEM
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
     sqlite3 (1.7.3-x86_64-darwin)
+    sqlite3 (1.7.3-x86_64-linux)
     temple (0.10.3)
     thor (1.2.2)
     tilt (2.0.11)
@@ -173,6 +176,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   dbml (>= 0.2)
