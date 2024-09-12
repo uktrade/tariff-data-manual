@@ -85,7 +85,7 @@ Requires:
 
 * graphviz
 * node (supported major versions: 10, 12, 14)
-* ruby 2.7.2
+* ruby 3.2.0
 
 On Mac these can be installed with:
 
