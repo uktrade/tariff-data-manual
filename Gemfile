@@ -19,5 +19,5 @@ gem 'rake'
 
 gem "sqlite3", "~> 1.6"
 
-gem "nokogiri", ">= 1.15.6"
+gem "nokogiri", ">= 1.16.7"
 gem "rack", ">= 2.2.8.1"
